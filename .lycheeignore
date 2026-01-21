@@ -1,0 +1,46 @@
+# GitHub edit links (rate limited)
+github.com.*edit
+
+# Known broken company websites (as of 2026-01-22)
+# SSL/TLS issues
+www.geng.com
+www.phase.au
+www.profluid.com.au
+www.scopeengineering.com
+www.zellabox.com
+www.aerospacendi.com
+www.airoboticsdrones.com.au
+
+# Connection failures
+jfdglobal.com
+www.nihar.com.au
+www.nwfuturesgroup.com.au
+www.securesystems.com.au
+beachheadlogistics.com.au
+www.belux.com.au
+
+# 403 Forbidden (likely bot protection)
+www.stahl.com.au
+www.segnut.com
+www.specialtymetals.com.au
+tristar-au.com
+www.calibregroup.com
+researchbriefings.files.parliament.uk
+www.ecu.edu.au
+www.asc.com.au
+www.baesystems.com
+
+# 404 Not Found
+www.l3oceania.com
+www.jtsi.wa.gov.au
+www.doricgroup.com.au
+
+# 500 Server Error
+www.success5.com.au
+www.abandh.com.au
+
+# Timeout
+www.leisurecat.com.au
+
+# Other
+johntedesco.com.au

@@ -31,7 +31,13 @@ run = "uv run python scripts/lint.py"
 [tasks.links]
 description = "Check links in built site"
 depends = ["build"]
-run = "lychee dist/ --root-dir dist --no-progress"
+run = """
+if [ "$GITHUB_ACTIONS" = "true" ]; then
+  lychee dist/ --root-dir dist --no-progress --remap '/defencewest-site/(.*) /$1'
+else
+  lychee dist/ --root-dir dist --no-progress
+fi
+"""
 
 [tasks.scrape]
 description = "Scrape company data from source"
