@@ -1,0 +1,13 @@
+---
+const base = import.meta.env.BASE_URL;
+---
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="refresh" content={`0;url=${base}?admin=1`} />
+  <title>Redirecting...</title>
+</head>
+<body>
+  <p>Redirecting to <a href={`${base}?admin=1`}>admin mode</a>...</p>
+</body>
+</html>

@@ -1,0 +1,283 @@
+/* Site header */
+.site-header {
+  background: var(--pico-primary-background);
+  padding: var(--pico-spacing);
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+  gap: var(--pico-spacing);
+}
+
+.logo-wrapper img {
+  height: 50px;
+}
+
+.gov-logo img {
+  height: 40px;
+}
+
+/* Reduce border radius for sharper civic style */
+:root {
+  --pico-border-radius: 0.25rem;
+}
+
+[type="search"] {
+  --pico-border-radius: 0.25rem;
+}
+
+/* Header view toggle */
+.header-container .view-toggle {
+  flex: 0;
+}
+
+.header-container .view-toggle button,
+.header-container .view-toggle a[role="button"] {
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  width: auto;
+}
+
+/* Filter tags */
+.filter-tag {
+  font-size: 0.875rem;
+  padding: 0.15rem 0.5rem;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+/* Filter status card in sidebar */
+.filter-status-card {
+  background: var(--pico-muted-border-color);
+  margin-bottom: var(--pico-spacing);
+}
+
+.filter-status-card p {
+  margin: 0;
+}
+
+/* Admin controls in sidebar */
+.admin-controls {
+  background: var(--pico-primary);
+  margin-bottom: var(--pico-spacing);
+}
+
+.admin-controls .sidebar-section {
+  color: var(--pico-primary-inverse);
+  margin-bottom: calc(var(--pico-spacing) * 0.5);
+}
+
+.admin-controls a.outline {
+  --pico-color: var(--pico-primary-inverse);
+  --pico-border-color: var(--pico-primary-inverse);
+}
+
+.admin-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.admin-buttons a,
+.admin-buttons button {
+  width: 100%;
+  margin: 0;
+}
+
+/* Edit button on cards (admin mode) */
+.company-item .edit-btn {
+  position: absolute;
+  bottom: 0.5rem;
+  right: 0.5rem;
+  font-size: 0.7rem;
+  padding: 0.15rem 0.4rem;
+  background: var(--pico-primary);
+  color: var(--pico-primary-inverse);
+  border-radius: var(--pico-border-radius);
+  text-decoration: none;
+}
+
+.company-item .edit-btn:hover {
+  opacity: 0.8;
+}
+
+#active-filters-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: calc(var(--pico-spacing) * 0.5);
+  margin-top: calc(var(--pico-spacing) * 0.5);
+}
+
+#active-filters-container:empty {
+  display: none;
+  margin-top: 0;
+}
+
+#active-filters-container a {
+  font-size: 0.875rem;
+}
+
+/* Directory page layout */
+.directory-layout {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: var(--pico-spacing);
+  margin: calc(-1 * var(--pico-spacing));
+  min-height: calc(100vh - 100px);
+}
+
+.directory-layout > aside {
+  position: sticky;
+  top: 0;
+  max-height: 100vh;
+  overflow-y: auto;
+  padding: var(--pico-spacing);
+  background: var(--pico-card-background-color);
+}
+
+.directory-layout > aside ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.directory-layout > aside li {
+  margin: 0;
+  padding: 0;
+}
+
+.directory-layout > aside a {
+  display: block;
+  padding: calc(var(--pico-spacing) * 0.25) 0;
+  text-decoration: none;
+}
+
+.directory-layout > aside small {
+  opacity: 0.6;
+}
+
+.directory-layout > main {
+  padding: var(--pico-spacing);
+}
+
+@media (max-width: 768px) {
+  .directory-layout {
+    grid-template-columns: 1fr;
+    margin: 0;
+    min-height: auto;
+  }
+}
+
+/* Company card grid */
+.company-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: var(--pico-spacing);
+}
+
+.company-item {
+  display: flex;
+}
+
+.company-item > article {
+  flex: 1;
+}
+
+/* Map - high specificity overrides */
+#map-host {
+  flex: 1;
+  min-height: calc(100vh - 200px);
+  border-radius: var(--pico-border-radius);
+}
+
+#map-host .map-marker,
+.map-marker.map-marker {
+  width: 12px;
+  height: 12px;
+  min-width: unset;
+  min-height: unset;
+  padding: 0;
+  margin: 0;
+  background: #0172ad;
+  border: 2px solid white;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#map-host .map-marker:hover,
+.map-marker.map-marker:hover {
+  transform: scale(1.2);
+}
+
+#map-host .maplibregl-popup-content,
+.maplibregl-popup-content.maplibregl-popup-content {
+  padding: 0;
+  border-radius: 0.25rem;
+  overflow: hidden;
+}
+
+#map-host .maplibregl-popup-close-button,
+.maplibregl-popup-close-button.maplibregl-popup-close-button {
+  font-size: 1.25rem;
+  padding: 0.25rem 0.5rem;
+  color: var(--pico-muted-color);
+}
+
+/* Fix attribution */
+.maplibregl-ctrl-attrib.maplibregl-ctrl-attrib {
+  font-size: 0.65rem;
+}
+
+.maplibregl-ctrl-attrib.maplibregl-ctrl-attrib summary {
+  list-style: none;
+}
+
+.maplibregl-ctrl-attrib.maplibregl-ctrl-attrib summary::after,
+.maplibregl-ctrl-attrib.maplibregl-ctrl-attrib summary::marker {
+  content: none;
+  display: none;
+}
+
+/* Fix default marker on detail page */
+.maplibregl-marker.maplibregl-marker {
+  box-shadow: none;
+  background: none;
+  outline: none;
+  border: none;
+}
+
+/* Stream icons in sidebar */
+.stream-icons {
+  display: flex;
+  gap: calc(var(--pico-spacing) * 0.5);
+  flex-wrap: wrap;
+}
+
+.stream-icons img {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--pico-border-radius);
+  object-fit: cover;
+}
+
+.sidebar-section {
+  display: block;
+  margin: var(--pico-spacing) 0 calc(var(--pico-spacing) * 0.5) 0;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  opacity: 0.6;
+}
+
+.sidebar-section:first-child {
+  margin-top: 0;
+}
+
+/* Utilities */
+.hidden {
+  display: none !important;
+}

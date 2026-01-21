@@ -1,0 +1,362 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+import { getTaxonomies } from '../../lib/taxonomies';
+import yaml from 'yaml';
+
+const base = import.meta.env.BASE_URL;
+const githubRepo = import.meta.env.GITHUB_REPO || 'wagov-dtt/defencewest-site';
+const githubBranch = import.meta.env.GITHUB_BRANCH || 'main';
+
+const { slug } = Astro.params;
+const isNew = slug === 'new';
+
+export async function getStaticPaths() {
+  const companies = await getCollection('companies');
+  const paths = companies.map(entry => ({
+    params: { slug: entry.data.slug },
+    props: { company: entry.data },
+  }));
+  // Add 'new' route for creating new companies
+  paths.push({ params: { slug: 'new' }, props: { company: null } });
+  return paths;
+}
+
+const { company } = Astro.props;
+const taxonomies = getTaxonomies();
+
+// Generate YAML for current company
+const companyYaml = company ? yaml.stringify(company, { lineWidth: 0 }) : `name: New Company
+slug: new-company
+overview: |
+  Company description here.
+website: https://example.com
+# address: 
+# phone: 
+# email: 
+# latitude: 
+# longitude: 
+# logo_url: /logos/new-company.png
+is_prime: false
+is_sme: true
+stakeholders:
+  - Defence Industry
+capability_streams: []
+capability_domains: []
+industrial_capabilities: []
+regions:
+  - Perth Metropolitan
+`;
+
+// GitHub URLs
+const githubEditUrl = isNew 
+  ? `https://github.com/${githubRepo}/new/${githubBranch}/data/companies`
+  : `https://github.com/${githubRepo}/edit/${githubBranch}/data/companies/${slug}.yaml`;
+---
+
+<Layout title={isNew ? 'Add Company' : `Edit: ${company?.name}`}>
+  <div class="editor-layout">
+    <header class="editor-header">
+      <a href={`${base}?admin=1`} class="back-link">← Back to Directory</a>
+      <h1>{isNew ? 'Add Company' : `Edit: ${company?.name}`}</h1>
+    </header>
+
+    <div class="editor-content">
+      <div class="editor-main">
+        <textarea id="yaml-editor" rows="30" spellcheck="false">{companyYaml}</textarea>
+      </div>
+
+      <aside class="editor-sidebar">
+        <article>
+          <header>Actions</header>
+          <button id="copy-btn" class="contrast">1. Copy YAML</button>
+          <a id="github-btn" href={githubEditUrl} target="_blank" rel="noopener" role="button" class="outline">2. Edit <code id="github-path">{slug}.yaml</code></a>
+        </article>
+
+        <article>
+          <div id="validation-status">
+            <p class="valid hidden">Valid YAML</p>
+            <p class="invalid hidden">Validation Error</p>
+            <pre id="validation-error" class="hidden"></pre>
+          </div>
+        </article>
+
+        <article>
+          <header>Taxonomy Reference</header>
+          <details>
+            <summary>Stakeholders ({taxonomies.stakeholders.length})</summary>
+            <ul class="taxonomy-list">
+              {taxonomies.stakeholders.map((s: string) => <li><code>{s}</code></li>)}
+            </ul>
+          </details>
+          <details>
+            <summary>Capability Streams ({Object.keys(taxonomies.capability_streams).length})</summary>
+            <ul class="taxonomy-list">
+              {Object.keys(taxonomies.capability_streams).map((s: string) => <li><code>{s}</code></li>)}
+            </ul>
+          </details>
+          <details>
+            <summary>Regions ({taxonomies.regions.length})</summary>
+            <ul class="taxonomy-list">
+              {taxonomies.regions.map((s: string) => <li><code>{s}</code></li>)}
+            </ul>
+          </details>
+        </article>
+      </aside>
+    </div>
+  </div>
+</Layout>
+
+<script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
+
+<script is:inline define:vars={{ slug, isNew, taxonomies, githubRepo, githubBranch }}>
+  document.addEventListener('DOMContentLoaded', () => {
+    const editor = document.getElementById('yaml-editor');
+    const validStatus = document.querySelector('#validation-status .valid');
+    const invalidStatus = document.querySelector('#validation-status .invalid');
+    const errorPre = document.getElementById('validation-error');
+    const copyBtn = document.getElementById('copy-btn');
+    const githubBtn = document.getElementById('github-btn');
+    const githubPath = document.getElementById('github-path');
+
+    // Schema definition
+    const schema = {
+      required: ['name', 'slug'],
+      strings: ['name', 'slug', 'overview', 'website', 'logo_url', 'contact_name', 'contact_title', 'address', 'phone', 'email', 'capabilities', 'discriminators'],
+      numbers: ['latitude', 'longitude'],
+      booleans: ['is_prime', 'is_sme'],
+      arrays: ['stakeholders', 'capability_streams', 'capability_domains', 'industrial_capabilities', 'regions'],
+      taxonomyFields: {
+        stakeholders: taxonomies.stakeholders,
+        capability_streams: Object.keys(taxonomies.capability_streams),
+        capability_domains: taxonomies.capability_domains,
+        industrial_capabilities: taxonomies.industrial_capabilities,
+        regions: taxonomies.regions
+      }
+    };
+
+    function getSlugFromYaml() {
+      const match = editor.value.match(/^slug:\s*(.+)$/m);
+      return match ? match[1].trim() : (isNew ? 'new-company' : slug);
+    }
+
+    function updateGithubLink() {
+      const currentSlug = getSlugFromYaml();
+      const filePath = `data/companies/${currentSlug}.yaml`;
+      
+      let url;
+      if (isNew) {
+        url = `https://github.com/${githubRepo}/new/${githubBranch}/data/companies?filename=${currentSlug}.yaml`;
+      } else {
+        url = `https://github.com/${githubRepo}/edit/${githubBranch}/${filePath}`;
+      }
+      githubBtn.href = url;
+      githubPath.textContent = `${currentSlug}.yaml`;
+    }
+
+    function validateYaml() {
+      const errors = [];
+      
+      try {
+        // Parse YAML
+        const data = jsyaml.load(editor.value);
+        
+        if (!data || typeof data !== 'object') {
+          throw new Error('YAML must be an object');
+        }
+
+        // Check required fields
+        for (const field of schema.required) {
+          if (!data[field]) {
+            errors.push(`Missing required field: ${field}`);
+          }
+        }
+
+        // Check slug format
+        if (data.slug && !/^[a-z0-9-]+$/.test(data.slug)) {
+          errors.push('slug must be lowercase alphanumeric with hyphens only');
+        }
+
+        // Check field types
+        for (const field of schema.strings) {
+          if (data[field] !== undefined && typeof data[field] !== 'string') {
+            errors.push(`${field} must be a string`);
+          }
+        }
+
+        for (const field of schema.numbers) {
+          if (data[field] !== undefined && typeof data[field] !== 'number') {
+            errors.push(`${field} must be a number`);
+          }
+        }
+
+        for (const field of schema.booleans) {
+          if (data[field] !== undefined && typeof data[field] !== 'boolean') {
+            errors.push(`${field} must be true or false`);
+          }
+        }
+
+        for (const field of schema.arrays) {
+          if (data[field] !== undefined) {
+            if (!Array.isArray(data[field])) {
+              errors.push(`${field} must be an array`);
+            } else {
+              // Check taxonomy values
+              const validValues = schema.taxonomyFields[field];
+              if (validValues) {
+                for (const val of data[field]) {
+                  if (!validValues.includes(val)) {
+                    errors.push(`${field}: "${val}" is not a valid option`);
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        // Check for unknown fields
+        const knownFields = [...schema.strings, ...schema.numbers, ...schema.booleans, ...schema.arrays];
+        for (const key of Object.keys(data)) {
+          if (!knownFields.includes(key)) {
+            errors.push(`Unknown field: ${key}`);
+          }
+        }
+
+      } catch (e) {
+        errors.push(`YAML Parse Error: ${e.message}`);
+      }
+
+      if (errors.length === 0) {
+        validStatus.classList.remove('hidden');
+        invalidStatus.classList.add('hidden');
+        errorPre.classList.add('hidden');
+        return true;
+      } else {
+        validStatus.classList.add('hidden');
+        invalidStatus.classList.remove('hidden');
+        errorPre.classList.remove('hidden');
+        errorPre.textContent = errors.join('\n');
+        return false;
+      }
+    }
+
+    // Debounce validation
+    let timeout;
+    editor.addEventListener('input', () => {
+      clearTimeout(timeout);
+      timeout = setTimeout(() => {
+        validateYaml();
+        updateGithubLink();
+      }, 300);
+    });
+    validateYaml();
+    updateGithubLink();
+
+    copyBtn.addEventListener('click', () => {
+      navigator.clipboard.writeText(editor.value);
+      copyBtn.textContent = 'Copied!';
+      setTimeout(() => copyBtn.textContent = '1. Copy YAML', 2000);
+    });
+  });
+</script>
+
+<style>
+  .editor-layout {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .editor-header {
+    margin-bottom: 1.5rem;
+  }
+
+  .back-link {
+    font-size: 0.9rem;
+    text-decoration: none;
+  }
+
+  .editor-header h1 {
+    margin: 0.5rem 0 0 0;
+  }
+
+  .editor-content {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 1.5rem;
+    align-items: start;
+  }
+
+  @media (max-width: 900px) {
+    .editor-content {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  #yaml-editor {
+    font-family: monospace;
+    font-size: 0.85rem;
+    line-height: 1.4;
+    resize: vertical;
+  }
+
+  .editor-sidebar article {
+    margin-bottom: 1rem;
+  }
+
+  .editor-sidebar article header {
+    font-weight: 600;
+    font-size: 0.85rem;
+    padding: 0.5rem;
+    margin: -1rem -1rem 0.75rem -1rem;
+    background: var(--pico-muted-border-color);
+  }
+
+  .editor-sidebar button,
+  .editor-sidebar a[role="button"] {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+
+  .editor-sidebar a[role="button"] code {
+    background: transparent;
+    padding: 0;
+    font-size: 0.85em;
+  }
+
+  #validation-status .valid {
+    color: #22c55e;
+    margin: 0;
+  }
+
+  #validation-status .invalid {
+    color: #ef4444;
+    margin: 0;
+  }
+
+  #validation-error {
+    font-size: 0.8rem;
+    background: #fef2f2;
+    color: #dc2626;
+    padding: 0.5rem;
+    border-radius: 4px;
+    margin-top: 0.5rem;
+    white-space: pre-wrap;
+  }
+
+  .taxonomy-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    max-height: 150px;
+    overflow-y: auto;
+    font-size: 0.8rem;
+  }
+
+  .taxonomy-list li {
+    padding: 0.1rem 0;
+  }
+
+  .taxonomy-list code {
+    font-size: 0.75rem;
+  }
+</style>

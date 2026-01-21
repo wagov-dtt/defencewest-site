@@ -1,0 +1,489 @@
+---
+import Layout from '../layouts/Layout.astro';
+import CompanyCard from '../components/CompanyCard.astro';
+import MapPopup from '../components/MapPopup.astro';
+import { getCollection } from 'astro:content';
+import { getTaxonomies, getStreamIcons } from '../lib/taxonomies';
+
+const base = import.meta.env.BASE_URL;
+
+// Load companies from Content Collection
+const companyEntries = await getCollection('companies');
+const companies = companyEntries
+  .map(entry => entry.data)
+  .sort((a, b) => a.name.localeCompare(b.name));
+
+// Companies with coordinates for the map
+const mappedCompanies = companies.filter(c => c.latitude && c.longitude);
+
+// Load taxonomies
+const taxonomies = getTaxonomies();
+const streamIcons = getStreamIcons();
+
+// Count companies per taxonomy value
+function countByTaxonomy(field: string): Map<string, number> {
+  const counts = new Map<string, number>();
+  companies.forEach(c => {
+    const values = c[field] || [];
+    values.forEach((val: string) => {
+      counts.set(val, (counts.get(val) || 0) + 1);
+    });
+  });
+  return counts;
+}
+
+const stakeholderCounts = countByTaxonomy('stakeholders');
+const streamCounts = countByTaxonomy('capability_streams');
+const domainCounts = countByTaxonomy('capability_domains');
+const industrialCounts = countByTaxonomy('industrial_capabilities');
+const regionCounts = countByTaxonomy('regions');
+
+// Prepare marker data for map (coordinates only, popup HTML is in DOM)
+const markers = mappedCompanies.map(c => ({
+  slug: c.slug,
+  coords: [c.longitude, c.latitude]
+}));
+
+// Prepare search data for Fuse.js
+const searchData = companies.map(c => ({
+  slug: c.slug,
+  name: c.name,
+  overview: c.overview || '',
+  capabilities: [
+    ...(c.capability_streams || []),
+    ...(c.capability_domains || []),
+    ...(c.industrial_capabilities || [])
+  ].join(' ')
+}));
+---
+
+<Layout title="WA Defence Industry and Science Capability Directory">
+  <div class="directory-layout">
+    <!-- Filters Sidebar -->
+    <aside>
+      <!-- Admin Controls (hidden by default, shown via ?admin=1) -->
+      <article class="admin-controls hidden" id="admin-controls">
+        <strong class="sidebar-section">Admin</strong>
+        <div class="admin-buttons">
+          <a href={`${base}admin/new`} role="button" class="outline">+ Add Company</a>
+          <a href={`${base}companies.csv`} role="button" class="outline" download>Export CSV</a>
+        </div>
+      </article>
+
+      <!-- Active Filters & Count Card -->
+      <article class="filter-status-card">
+        <p>
+          <strong id="result-count">{companies.length}</strong> of {companies.length} companies
+        </p>
+        <div id="active-filters-container"></div>
+      </article>
+
+      <!-- Capability Streams with icons -->
+      <details open>
+        <summary>Capability Streams</summary>
+        <div class="stream-icons">
+          {Object.entries(streamIcons).map(([name, icon]) => {
+            const count = streamCounts.get(name) || 0;
+            if (count === 0) return null;
+            return (
+              <a href={`${base}?capability_streams=${encodeURIComponent(name)}`} title={name}>
+                <img src={`${base}${(icon as string).slice(1)}`} alt={name} />
+              </a>
+            );
+          })}
+        </div>
+      </details>
+
+      <details>
+        <summary>Stakeholders</summary>
+        <ul>
+          {taxonomies.stakeholders.map((name: string) => {
+            const count = stakeholderCounts.get(name) || 0;
+            if (count === 0) return null;
+            return <li><a href={`${base}?stakeholders=${encodeURIComponent(name)}`}>{name} <small>({count})</small></a></li>;
+          })}
+        </ul>
+      </details>
+
+      <details>
+        <summary>Capability Domains</summary>
+        <ul>
+          {taxonomies.capability_domains.map((name: string) => {
+            const count = domainCounts.get(name) || 0;
+            if (count === 0) return null;
+            return <li><a href={`${base}?capability_domains=${encodeURIComponent(name)}`}>{name} <small>({count})</small></a></li>;
+          })}
+        </ul>
+      </details>
+
+      <details>
+        <summary>Industrial Capabilities</summary>
+        <ul>
+          {taxonomies.industrial_capabilities.map((name: string) => {
+            const count = industrialCounts.get(name) || 0;
+            if (count === 0) return null;
+            return <li><a href={`${base}?industrial_capabilities=${encodeURIComponent(name)}`}>{name} <small>({count})</small></a></li>;
+          })}
+        </ul>
+      </details>
+
+      <details>
+        <summary>Regions</summary>
+        <ul>
+          {taxonomies.regions.map((name: string) => {
+            const count = regionCounts.get(name) || 0;
+            if (count === 0) return null;
+            return <li><a href={`${base}?regions=${encodeURIComponent(name)}`}>{name} <small>({count})</small></a></li>;
+          })}
+        </ul>
+      </details>
+    </aside>
+
+    <!-- Main Content -->
+    <main>
+      <input type="search" id="search-input" placeholder="Search companies..." />
+
+      <div id="company-grid" class="company-grid" data-pagefind-ignore="all">
+        {companies.map((company) => (
+          <div 
+            class="company-item" 
+            data-slug={company.slug}
+            data-stakeholders={JSON.stringify(company.stakeholders || [])}
+            data-capability-streams={JSON.stringify(company.capability_streams || [])}
+            data-capability-domains={JSON.stringify(company.capability_domains || [])}
+            data-industrial-capabilities={JSON.stringify(company.industrial_capabilities || [])}
+            data-regions={JSON.stringify(company.regions || [])}
+          >
+            <CompanyCard company={company} />
+          </div>
+        ))}
+      </div>
+
+      <div id="map-host" class="hidden"></div>
+      <p id="no-results" class="hidden">No companies match your search criteria.</p>
+    </main>
+  </div>
+
+  <!-- Pre-rendered map popups (hidden, cloned by JS) -->
+  <div id="map-popups" style="display: none;">
+    {mappedCompanies.map((company) => (
+      <template data-slug={company.slug}>
+        <MapPopup company={company} />
+      </template>
+    ))}
+  </div>
+
+  <!-- Anchor for map navigation -->
+  <div id="map"></div>
+</Layout>
+
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@7.1.0"></script>
+
+<script is:inline define:vars={{ markers, base, searchData }}>
+  window.mapMarkers = markers;
+  window.baseUrl = base;
+  
+  document.addEventListener('DOMContentLoaded', async () => {
+    const grid = document.getElementById('company-grid');
+    const mapHost = document.getElementById('map-host');
+    const resultCount = document.getElementById('result-count');
+    const noResults = document.getElementById('no-results');
+    const popupTemplates = document.getElementById('map-popups');
+    
+    const allCards = Array.from(document.querySelectorAll('.company-item'));
+    const searchInput = document.getElementById('search-input');
+    
+    // Taxonomy filter map: URL param -> data attribute
+    const taxonomyMap = {
+      'stakeholders': 'stakeholders',
+      'capability_streams': 'capabilityStreams',
+      'capability_domains': 'capabilityDomains',
+      'industrial_capabilities': 'industrialCapabilities',
+      'regions': 'regions'
+    };
+    
+    // Initialize Fuse.js for fuzzy search
+    const fuse = new Fuse(searchData, {
+      keys: [
+        { name: 'name', weight: 3 },
+        { name: 'overview', weight: 1 },
+        { name: 'capabilities', weight: 1 }
+      ],
+      threshold: 0.3,
+      distance: 100,
+      minMatchCharLength: 3,
+      findAllMatches: false,
+      shouldSort: true
+    });
+
+    // Map state
+    let map = null;
+    let mapMarkerObjects = [];
+
+    // Get all active filters from URL (supports multiple)
+    function getUrlFilters() {
+      const params = new URLSearchParams(window.location.search);
+      const filters = [];
+      for (const [param, dataAttr] of Object.entries(taxonomyMap)) {
+        const values = params.getAll(param);
+        values.forEach(value => {
+          if (value) filters.push({ param, dataAttr, value });
+        });
+      }
+      return filters;
+    }
+    
+    // Update URL with current filters
+    function updateUrl(filters) {
+      const params = new URLSearchParams();
+      filters.forEach(f => params.append(f.param, f.value));
+      const newUrl = filters.length > 0 
+        ? `${window.location.pathname}?${params.toString()}`
+        : window.location.pathname;
+      window.history.pushState({}, '', newUrl);
+    }
+    
+    // Filter cards by multiple taxonomy filters (AND logic)
+    function applyFilters(filters) {
+      if (filters.length === 0) {
+        allCards.forEach(card => card.classList.remove('hidden'));
+        updateResultCount(allCards.length);
+        updateMapMarkers(new Set(allCards.map(c => c.dataset.slug)));
+        updateFilterDisplay(filters);
+        return;
+      }
+      
+      let visibleCount = 0;
+      const visibleSlugs = new Set();
+      
+      allCards.forEach(card => {
+        // Card must match ALL filters (AND logic)
+        const matches = filters.every(filter => {
+          const values = JSON.parse(card.dataset[filter.dataAttr] || '[]');
+          return values.includes(filter.value);
+        });
+        
+        card.classList.toggle('hidden', !matches);
+        if (matches) {
+          visibleCount++;
+          visibleSlugs.add(card.dataset.slug);
+        }
+      });
+      
+      updateResultCount(visibleCount);
+      updateMapMarkers(visibleSlugs);
+      updateFilterDisplay(filters);
+    }
+    
+    // Update filter display with badges for each active filter
+    function updateFilterDisplay(filters) {
+      const filterContainer = document.getElementById('active-filters-container');
+      if (!filterContainer) return;
+      
+      if (filters.length > 0) {
+        filterContainer.innerHTML = filters.map((f, i) => `
+          <mark class="filter-tag" role="button" data-index="${i}">
+            ${f.value} ×
+          </mark>
+        `).join('') + `
+          <a href="#" id="clear-all-filters" class="secondary">Clear all</a>
+        `;
+        
+        // Add event listeners for removing individual filters
+        filterContainer.querySelectorAll('mark[data-index]').forEach(btn => {
+          btn.addEventListener('click', () => {
+            const index = parseInt(btn.dataset.index);
+            const newFilters = filters.filter((_, i) => i !== index);
+            updateUrl(newFilters);
+            applyFilters(newFilters);
+          });
+        });
+        
+        // Clear all button
+        document.getElementById('clear-all-filters')?.addEventListener('click', (e) => {
+          e.preventDefault();
+          updateUrl([]);
+          applyFilters([]);
+        });
+      } else {
+        filterContainer.innerHTML = '';
+      }
+    }
+    
+    // Intercept filter link clicks to stack filters
+    document.querySelectorAll('aside a[href*="?"]').forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const href = link.getAttribute('href');
+        const linkParams = new URLSearchParams(href.split('?')[1] || '');
+        
+        // Get the filter from the clicked link
+        let newFilter = null;
+        for (const [param, dataAttr] of Object.entries(taxonomyMap)) {
+          const value = linkParams.get(param);
+          if (value) {
+            newFilter = { param, dataAttr, value };
+            break;
+          }
+        }
+        
+        if (newFilter) {
+          const currentFilters = getUrlFilters();
+          // Check if this exact filter already exists
+          const exists = currentFilters.some(f => f.param === newFilter.param && f.value === newFilter.value);
+          
+          if (!exists) {
+            currentFilters.push(newFilter);
+          }
+          
+          updateUrl(currentFilters);
+          applyFilters(currentFilters);
+        }
+      });
+    });
+
+    function doSearch(query) {
+      // Clear URL filters when searching
+      const currentFilters = getUrlFilters();
+      if (query.trim() && currentFilters.length > 0) {
+        updateUrl([]);
+        updateFilterDisplay([]);
+      }
+      
+      if (!query.trim()) {
+        // No search query - apply URL filters or show all
+        const filters = getUrlFilters();
+        if (filters.length > 0) {
+          applyFilters(filters);
+          return;
+        }
+        allCards.forEach(card => card.classList.remove('hidden'));
+        updateResultCount(allCards.length);
+        updateMapMarkers(new Set(allCards.map(c => c.dataset.slug)));
+        return;
+      }
+      
+      // Fuse.js fuzzy search
+      const results = fuse.search(query);
+      const matchingSlugs = new Set(results.map(r => r.item.slug));
+
+      allCards.forEach(card => {
+        const slug = card.dataset.slug;
+        card.classList.toggle('hidden', !matchingSlugs.has(slug));
+      });
+
+      updateResultCount(matchingSlugs.size);
+      updateMapMarkers(matchingSlugs);
+    }
+
+    function updateResultCount(count) {
+      if (resultCount) resultCount.textContent = String(count);
+      if (noResults) noResults.classList.toggle('hidden', count > 0);
+    }
+
+    function updateMapMarkers(visibleSlugs) {
+      if (!map || mapMarkerObjects.length === 0) return;
+      mapMarkerObjects.forEach(marker => {
+        marker.getElement().classList.toggle('hidden', !visibleSlugs.has(marker._slug));
+      });
+    }
+
+    function getPopupHtml(slug) {
+      const template = popupTemplates?.querySelector('template[data-slug="' + slug + '"]');
+      return template ? template.innerHTML : '';
+    }
+
+    async function initMap() {
+      if (map) return;
+
+      const maplibregl = window.maplibregl;
+      
+      map = new maplibregl.Map({
+        container: mapHost,
+        zoom: 10,
+        center: [115.86, -31.95],
+        maxPitch: 85,
+        style: 'https://basemaps.cartocdn.com/gl/voyager-gl-style/style.json',
+        attributionControl: false
+      });
+
+      map.addControl(new maplibregl.AttributionControl({ compact: true }));
+
+      // Collapse attribution by default
+      map.on('load', () => {
+        const attrib = mapHost.querySelector('.maplibregl-ctrl-attrib');
+        if (attrib) attrib.removeAttribute('open');
+      });
+
+      markers.forEach(m => {
+        const el = document.createElement('div');
+        el.className = 'map-marker';
+
+        const popup = new maplibregl.Popup({ offset: 15, maxWidth: '260px' })
+          .setHTML(getPopupHtml(m.slug));
+
+        const marker = new maplibregl.Marker({ element: el })
+          .setLngLat(m.coords)
+          .setPopup(popup)
+          .addTo(map);
+
+        marker._slug = m.slug;
+        mapMarkerObjects.push(marker);
+      });
+    }
+
+    function showCards() {
+      grid?.classList.remove('hidden');
+      mapHost?.classList.add('hidden');
+    }
+
+    function showMap() {
+      grid?.classList.add('hidden');
+      mapHost?.classList.remove('hidden');
+      initMap().then(() => {
+        setTimeout(() => map?.resize(), 100);
+      });
+    }
+
+    // Event listeners
+    let debounceTimer;
+    searchInput.addEventListener('input', () => {
+      clearTimeout(debounceTimer);
+      debounceTimer = setTimeout(() => doSearch(searchInput.value), 200);
+    });
+
+    // Expose showMap for navbar button
+    window.showMap = showMap;
+    window.showCards = showCards;
+    
+    // Check for URL filters on load (supports multiple)
+    const urlFilters = getUrlFilters();
+    if (urlFilters.length > 0) {
+      applyFilters(urlFilters);
+    }
+    
+    // Check if map view requested via URL
+    const viewParam = new URLSearchParams(window.location.search).get('view');
+    if (viewParam === 'map') {
+      showMap();
+    }
+
+    // Admin mode: ?admin=1
+    const adminMode = new URLSearchParams(window.location.search).get('admin') === '1';
+    if (adminMode) {
+      // Show admin controls
+      document.getElementById('admin-controls')?.classList.remove('hidden');
+      
+      // Add edit buttons to all cards
+      allCards.forEach(card => {
+        const slug = card.dataset.slug;
+        const editBtn = document.createElement('a');
+        editBtn.href = `${base}admin/${slug}`;
+        editBtn.className = 'edit-btn';
+        editBtn.textContent = 'Edit';
+        editBtn.onclick = (e) => e.stopPropagation();
+        card.querySelector('article')?.appendChild(editBtn);
+      });
+    }
+  });
+</script>

@@ -1,0 +1,14 @@
+[project]
+name = "defencewest-scraper"
+version = "0.1.0"
+description = "Scraper for WA Defence Industry Directory"
+requires-python = ">=3.12"
+dependencies = [
+    "httpx>=0.28.0",
+    "selectolax>=0.4.0",
+    "html2text>=2024.0.0",
+    "pyyaml>=6.0",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["scripts"]
