@@ -409,6 +409,11 @@ const searchData = companies.map(c => ({
 
       map.addControl(new maplibregl.AttributionControl({ compact: true }));
 
+      // Enable globe projection
+      map.on('style.load', () => {
+        map.setProjection({ type: 'globe' });
+      });
+
       // Collapse attribution by default
       map.on('load', () => {
         const attrib = mapHost.querySelector('.maplibregl-ctrl-attrib');
