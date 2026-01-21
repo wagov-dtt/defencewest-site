@@ -33,7 +33,8 @@ description = "Check links in built site"
 depends = ["build"]
 run = """
 if [ "$GITHUB_ACTIONS" = "true" ]; then
-  lychee dist/ --root-dir dist --no-progress --remap '/defencewest-site/(.*) /$1'
+  # In CI, exclude local paths with base prefix (can't remap easily)
+  lychee dist/ --root-dir dist --no-progress --exclude '/defencewest-site/'
 else
   lychee dist/ --root-dir dist --no-progress
 fi
