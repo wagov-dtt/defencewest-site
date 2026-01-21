@@ -4,11 +4,12 @@ Scraper for WA Defence Industry and Science Capability Directory.
 Extracts company data and saves as YAML files.
 """
 
+import asyncio
 import json
 import re
 import sys
 from pathlib import Path
-from urllib.parse import urlparse
+from urllib.parse import urlparse, unquote, parse_qs
 
 import httpx
 import html2text
@@ -51,6 +52,9 @@ REMOVE_SUFFIXES = [
     "-and-new-zealand",
 ]
 
+# Semaphore to limit concurrent requests
+MAX_CONCURRENT = 20
+
 
 def clean_slug(slug: str) -> str:
     """Clean up a slug to be shorter and URL-friendly."""
@@ -91,29 +95,97 @@ def html_to_md(html: str) -> str:
     return re.sub(r"\n{3,}", "\n\n", text)
 
 
-def resolve_url(url: str) -> str:
-    """Follow redirects and return the final URL, ignoring SSL errors."""
+async def search_company_url(
+    client: httpx.AsyncClient, company_name: str
+) -> str | None:
+    """Search DuckDuckGo for company website as fallback."""
+    try:
+        query = f"{company_name} official website"
+        search_url = f"https://html.duckduckgo.com/html/?q={query.replace(' ', '+')}"
+
+        r = await client.get(search_url, headers={"User-Agent": "Mozilla/5.0"})
+        tree = HTMLParser(r.text)
+
+        # Get first result that looks like a company website
+        for result in tree.css("a.result__a"):
+            href = result.attributes.get("href")
+            if not href:
+                continue
+            # DuckDuckGo wraps URLs, extract the actual URL
+            if "uddg=" in href:
+                query_str = href.split("?")[1] if "?" in href else ""
+                parsed = parse_qs(query_str)
+                if "uddg" in parsed:
+                    url = unquote(parsed["uddg"][0])
+                    # Skip social media, directories, etc.
+                    skip = [
+                        "linkedin.com",
+                        "facebook.com",
+                        "twitter.com",
+                        "youtube.com",
+                        "yellowpages",
+                        "yelp.com",
+                        "wikipedia",
+                    ]
+                    if not any(s in url.lower() for s in skip):
+                        return url.rstrip("/")
+    except Exception as e:
+        print(f"    Search failed for {company_name}: {e}")
+    return None
+
+
+async def resolve_url(
+    client: httpx.AsyncClient,
+    url: str,
+    company_name: str = "",
+    search_fallback: bool = False,
+    semaphore: asyncio.Semaphore | None = None,
+) -> tuple[str, str | None]:
+    """Follow redirects and return the final URL, ignoring SSL errors.
+
+    Returns (resolved_url, potential_url) where potential_url is set if search
+    fallback found a different URL for an unreachable site.
+    """
     if not url:
-        return ""
+        return "", None
+
+    # Clean up malformed URLs (e.g., "https:// https://example.com")
+    url = url.strip()
+    url = re.sub(r"^https?://\s+", "", url)  # Remove leading "http:// " or "https:// "
 
     # Ensure URL has a scheme
+    original_url = url
     if not url.startswith(("http://", "https://")):
         url = f"https://{url}"
 
-    try:
-        # Use a separate client with SSL verification disabled
-        with httpx.Client(
-            timeout=10,
-            follow_redirects=True,
-            verify=False,  # Ignore SSL certificate errors
-        ) as client:
-            r = client.head(url, follow_redirects=True)
-            final_url = str(r.url)
-            # Remove trailing slashes for consistency
-            return final_url.rstrip("/")
-    except Exception:
-        # If we can't resolve, return the original with https
-        return url.rstrip("/")
+    # Use a dummy context manager if no semaphore provided
+    async def _resolve():
+        try:
+            r = await client.head(url, follow_redirects=True)
+            if r.status_code < 400:
+                final_url = str(r.url).rstrip("/")
+                return final_url, None
+        except Exception:
+            pass
+
+        # If we get here, the URL is unreachable
+        if search_fallback and company_name:
+            searched = await search_company_url(client, company_name)
+            if searched and searched != original_url:
+                # Return original URL but note the potential replacement
+                return original_url.rstrip("/"), searched
+
+        # Return original with https if nothing worked
+        clean_original = original_url.rstrip("/")
+        if not clean_original.startswith("http"):
+            clean_original = f"https://{clean_original}"
+        return clean_original, None
+
+    if semaphore:
+        async with semaphore:
+            return await _resolve()
+    else:
+        return await _resolve()
 
 
 def download_image(
@@ -249,24 +321,16 @@ def fetch_coordinates(
     return coords
 
 
-def normalize_company(
+def normalize_company_sync(
     raw: dict,
     client: httpx.Client,
     coords: dict[str, tuple[float, float]],
-    resolve_urls: bool = False,
 ) -> dict:
-    """Normalize company data into clean YAML structure."""
+    """Normalize company data into clean YAML structure (sync version, no URL resolution)."""
     d = raw.get("details", {})
     slug = clean_slug(raw.get("slug", ""))
     name = d.get("CompanyName", raw.get("name", "")).strip()
-
-    # Optionally resolve website URL to follow redirects
     website = d.get("Website", "")
-    if website and resolve_urls:
-        resolved = resolve_url(website)
-        if resolved != website:
-            print(f"  {slug}: {website} -> {resolved}")
-        website = resolved
 
     company = {
         "name": name,
@@ -330,6 +394,74 @@ def normalize_company(
     return {k: v for k, v in company.items() if v not in (None, "", [], False)}
 
 
+async def resolve_all_urls(
+    companies: list[dict], search_fallback: bool = False
+) -> dict[str, tuple[str, str | None]]:
+    """Resolve all company URLs concurrently.
+
+    Returns dict mapping slug -> (resolved_url, potential_url)
+    """
+    semaphore = asyncio.Semaphore(MAX_CONCURRENT)
+
+    async with httpx.AsyncClient(
+        timeout=10,
+        follow_redirects=True,
+        verify=False,  # Ignore SSL certificate errors
+    ) as client:
+        tasks = []
+        slugs = []
+
+        for c in companies:
+            slug = c["slug"]
+            website = c.get("website", "")
+            name = c.get("name", "")
+
+            if website:
+                tasks.append(
+                    resolve_url(client, website, name, search_fallback, semaphore)
+                )
+                slugs.append(slug)
+
+        print(f"  Resolving {len(tasks)} URLs concurrently...")
+        results = await asyncio.gather(*tasks, return_exceptions=True)
+
+        url_map = {}
+        for slug, result in zip(slugs, results):
+            if isinstance(result, Exception):
+                print(f"    {slug}: Error - {result}")
+                url_map[slug] = (None, None)
+            else:
+                url_map[slug] = result
+
+        return url_map
+
+
+def save_yaml_with_potential(data: dict, path: Path, potential_website: str | None):
+    """Save data as YAML, with potential_website as a comment if provided."""
+    path.parent.mkdir(parents=True, exist_ok=True)
+
+    yaml_str = yaml.dump(
+        data,
+        default_flow_style=False,
+        allow_unicode=True,
+        sort_keys=False,
+        width=1000,
+    )
+
+    # If there's a potential website, add it as a comment after the website line
+    if potential_website:
+        lines = yaml_str.split("\n")
+        new_lines = []
+        for line in lines:
+            new_lines.append(line)
+            if line.startswith("website:"):
+                new_lines.append(f"# potential_website: {potential_website}")
+        yaml_str = "\n".join(new_lines)
+
+    with open(path, "w") as f:
+        f.write(yaml_str)
+
+
 def save_yaml(data: dict, path: Path):
     """Save data as YAML."""
     path.parent.mkdir(parents=True, exist_ok=True)
@@ -344,9 +476,10 @@ def save_yaml(data: dict, path: Path):
         )
 
 
-def main():
+async def main_async():
     fresh = "--fresh" in sys.argv
-    resolve_urls = "--resolve-urls" in sys.argv
+    resolve_urls = "--no-resolve-urls" not in sys.argv  # Default: True
+    search_fallback = "--no-search-fallback" not in sys.argv  # Default: True
     cache_file = DATA_DIR / "cache" / "directory.html"
 
     with httpx.Client(timeout=60) as client:
@@ -369,45 +502,75 @@ def main():
         print("Downloading capability stream icons...")
         stream_icons = extract_stream_icons(raw, client)
 
-        # Normalize companies
-        if resolve_urls:
-            print("Processing companies (resolving URLs - this may take a while)...")
-        else:
-            print("Processing companies...")
-        companies = [normalize_company(c, client, coords, resolve_urls) for c in raw]
+        # Normalize companies (sync, without URL resolution)
+        print("Processing companies...")
+        companies = [normalize_company_sync(c, client, coords) for c in raw]
 
-        # Check for slug conflicts
-        slugs = [c["slug"] for c in companies]
-        dupes = [s for s in set(slugs) if slugs.count(s) > 1]
-        if dupes:
-            print(f"WARNING: Duplicate slugs: {dupes}")
+    # Resolve URLs asynchronously if requested
+    url_map = {}
+    if resolve_urls:
+        msg = "Resolving URLs"
+        if search_fallback:
+            msg += " (with search fallback for broken sites)"
+        print(f"{msg}...")
+        url_map = await resolve_all_urls(companies, search_fallback)
 
-        # Save companies
+        # Update companies with resolved URLs
+        updated = 0
+        potential_updates = 0
         for c in companies:
-            save_yaml(c, DATA_DIR / "companies" / f"{c['slug']}.yaml")
-        print(f"Saved {len(companies)} companies")
+            slug = c["slug"]
+            if slug in url_map:
+                resolved, potential = url_map[slug]
+                if resolved and resolved != c.get("website"):
+                    print(f"  {slug}: {c.get('website', '')} -> {resolved}")
+                    c["website"] = resolved
+                    updated += 1
+                if potential:
+                    potential_updates += 1
 
-        # Save taxonomies with stream icons
-        taxonomies = {
-            "stakeholders": sorted(
-                {v for c in companies for v in c.get("stakeholders", [])}
-            ),
-            "capability_streams": {
-                title: stream_icons.get(title, "")
-                for title in sorted(
-                    {v for c in companies for v in c.get("capability_streams", [])}
-                )
-            },
-            "capability_domains": sorted(
-                {v for c in companies for v in c.get("capability_domains", [])}
-            ),
-            "industrial_capabilities": sorted(
-                {v for c in companies for v in c.get("industrial_capabilities", [])}
-            ),
-            "regions": sorted({v for c in companies for v in c.get("regions", [])}),
-        }
-        save_yaml(taxonomies, DATA_DIR / "taxonomies.yaml")
-        print("Saved taxonomies.yaml")
+        print(
+            f"  Updated {updated} URLs, found {potential_updates} potential replacements"
+        )
+
+    # Check for slug conflicts
+    slugs = [c["slug"] for c in companies]
+    dupes = [s for s in set(slugs) if slugs.count(s) > 1]
+    if dupes:
+        print(f"WARNING: Duplicate slugs: {dupes}")
+
+    # Save companies
+    for c in companies:
+        slug = c["slug"]
+        potential = url_map.get(slug, (None, None))[1] if url_map else None
+        save_yaml_with_potential(c, DATA_DIR / "companies" / f"{slug}.yaml", potential)
+    print(f"Saved {len(companies)} companies")
+
+    # Save taxonomies with stream icons
+    taxonomies = {
+        "stakeholders": sorted(
+            {v for c in companies for v in c.get("stakeholders", [])}
+        ),
+        "capability_streams": {
+            title: stream_icons.get(title, "")
+            for title in sorted(
+                {v for c in companies for v in c.get("capability_streams", [])}
+            )
+        },
+        "capability_domains": sorted(
+            {v for c in companies for v in c.get("capability_domains", [])}
+        ),
+        "industrial_capabilities": sorted(
+            {v for c in companies for v in c.get("industrial_capabilities", [])}
+        ),
+        "regions": sorted({v for c in companies for v in c.get("regions", [])}),
+    }
+    save_yaml(taxonomies, DATA_DIR / "taxonomies.yaml")
+    print("Saved taxonomies.yaml")
+
+
+def main():
+    asyncio.run(main_async())
 
 
 if __name__ == "__main__":
