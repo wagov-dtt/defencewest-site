@@ -1,0 +1,40 @@
+name: Allship Engineering
+slug: allship
+overview: "Allship Engineering is an agile, dynamic, and trusted provider of specialist repair services to the Defence Maritime sector; providing customer focused, cost-effective, and high-quality solutions to meet Defence capability.\n\n**Origins**\n\nEstablished in 2016 by Andrew Neaves and Chris Demos (Managing Directors), Allship Engineering is proudly 100% Australian owned. Since those humble beginnings, Allship has rapidly grown into a repair agent of choice to multiple Defence Projects and Prime Contractors and employs over 60 personnel with offices in Tempe (Eora country), New South Wales and Henderson (Beeliar Nyungar country), Western Australia.\n\n**Key Services**\n\n  * Mechanical Repairs\n  * Marine Insulation\n  * High Risk Work\n  * Domestic Fit-out\n  * Import of parts\n  * Galley Equipment\n  * Coded Welding\n  * Load Testing\n  * HVAC\n  * Critical Response Management Team\n  * OEM Representative\n  * Thermal Blanket Systems\n  * Sewerage Systems\n  * Refrigeration\n  *\
+  \ Docking\n\n**Key Stakeholders**\n\nAllship Engineering has created and maintains key relationships with repair agents, manufacturers, OEM's and logistics providers throughout Australia in key locations to support Clients in need of repair in these regions. Allship is a proud contributor to sustainment activities under the Warship Asset Management Agreement (WAMA), LHD Asset Class Prime Contractor (ACPC), Auxiliary Oiler Replenishments (AOR) and Offshore Patrol Vessel (OPV) projects. Allship staff maintain Defence clearances and to access Defence precincts and sites to optimise the availability and response of short-notice repairs.\n\n**Certification & Membership**\n\n  * ISO 9001:2015 - 273811\n  * ISO 14001:2015 - 273810\n  * ISO 45001:2018 - 273813\n  * DNV Welding Workshop Approval\n  * Defence Industry Security Program (DISP) Membership\n  * Prime Minister's Veteran Employment Program"
+website: https://allship.com.au/
+contact_name: Andrew Neaves
+contact_title: Managing Director
+address: 19 Success Way
+phone: +61 457 759 697
+email: aneaves@allship.com.au
+is_sme: true
+stakeholders:
+- Defence Industry
+capability_streams:
+- MASW - Maritime and Anti-Submarine Warfare
+- LCAW - Land Combat and Amphibious Warfare
+capability_domains:
+- Amphibious Elements
+- Destroyers
+- Frigates
+- Minor War Vessels
+- Multi-Purpose Vessels
+- Replenishment/Supply Ships
+industrial_capabilities:
+- Aluminium Fabrication
+- Decking; Flooring & Furnishing
+- Design & Engineering Services
+- Fuel & Exhaust Systems
+- Mechanical & Electrical
+- Propulsion & Engine Systems
+- Protective & Safety Systems
+- Refrigeration; Air Conditioning & Heating
+- Steel Fabrication
+- Welding
+regions:
+- Australian Marine Complex
+latitude: -32.1462155
+longitude: 115.7816509
+logo_url: /logos/allship.png
+capabilities: Allship Engineering has created and maintains key relationships with repair agents, manufacturers, OEM's and logistics providers throughout Australia in key locations to support Clients in need of repair in these regions. Allship is a proud contributor to sustainment activities under the Warship Asset Management Agreement (WAMA), LHD Asset Class Prime Contractor (ACPC), Auxiliary Oiler Replenishments (AOR) and Offshore Patrol Vessel (OPV) projects. Allship staff maintain Defence clearances and to access Defence precincts and sites to optimise the availability and response of short-notice repairs.

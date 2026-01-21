@@ -1,0 +1,108 @@
+stakeholders:
+- Academic Institutions
+- Defence Industry
+- Defence Science Centre
+- Defence West
+capability_streams:
+  AASL - Air and Sea Lift: /icons/aasl-air-and-sea-lift.jpg
+  Aerial; Strike and Air Combat: /icons/aerial-strike-and-air-combat.jpg
+  Base Support: /icons/base-support.jpg
+  Education and Training: /icons/education-and-training.png
+  Electronic Warfare and Cyber: /icons/electronic-warfare-and-cyber.jpg
+  ISCW - Intelligence, Surveillance, Reconnaissance, Space, Electronic Warfare and Cyber: /icons/iscw-intelligence-surveillance-reconnaissance-space-electronic-warfare-and-cyber.jpg
+  Intelligence; Surveillance and Reconnaissance: /icons/intelligence-surveillance-and-reconnaissance.jpg
+  KEYN - Key Enablers: /icons/keyn-key-enablers.jpg
+  LCAW - Land Combat and Amphibious Warfare: /icons/lcaw-land-combat-and-amphibious-warfare.jpg
+  Land Forces: /icons/land-forces.jpg
+  Logistics and Supply Chain: /icons/logistics-and-supply-chain.jpg
+  MASW - Maritime and Anti-Submarine Warfare: /icons/masw-maritime-and-anti-submarine-warfare.jpg
+  Maritime and Sub-Sea Forces: /icons/maritime-and-sub-sea-forces.jpg
+  Research and Technology Development: /icons/research-and-technology-development.jpg
+  SAAC - Strike and Air Combat: /icons/saac-strike-and-air-combat.jpg
+  Space: /icons/space.jpg
+capability_domains:
+- AI & Autonomy
+- Air Bases
+- Air Traffic Management
+- Airborne Early Warning and Control
+- Amphibious Elements
+- Armour and Vehicles
+- Barracks and Training Ranges
+- Base Support and Redevelopment
+- C2 & Common Operating Picture
+- CBRN (Chemical; Radiological; Biological and Nuclear)
+- Communications
+- Cyber Security
+- Cyber and Information Operations
+- Destroyers
+- Electronic Warfare
+- Fighter Aircraft
+- Frigates
+- Ground Combat
+- ICT for Operations
+- Intelligence
+- Land Communications
+- Light Helicopters
+- Maritime Support
+- Minor War Vessels
+- Missile Defence
+- Multi-Purpose Vessels
+- New Energy/Power
+- Quantum
+- Reconnaissance Aircraft
+- Refuelling Aircraft
+- Replenishment/Supply Ships
+- Robotics
+- Science & Technology
+- Search & Rescue
+- Space
+- Special Operations
+- Stable Defence ICT
+- Submarines
+- Surveillance
+- Sustainment and maintenance
+- Testing Ranges
+- Training & Simulation
+- Training Platforms
+- Training Ranges
+- Transport Aircraft
+- US Force Posture Initiative
+- Uncrewed/Autonomous vehicles
+- Under Sea Capabilities
+- Utility Helicopters
+industrial_capabilities:
+- Adaptive Manufacturing
+- Aluminium Fabrication
+- Blasting & Painting
+- CNC Machining
+- Chemical; Marine Coating; Anti-Corrosion; Varnish & Biofouling
+- Composites & Components
+- Decking; Flooring & Furnishing
+- Design & Engineering Services
+- Electronics & Instrumentation
+- Fuel & Exhaust Systems
+- High Performance Computing (HPC)/Data Analytic
+- Hydraulics and Pneumatics
+- Mechanical & Electrical
+- None
+- Propulsion & Engine Systems
+- Protective & Safety Systems
+- Refrigeration; Air Conditioning & Heating
+- Steel Fabrication
+- Welding
+regions:
+- Australian Marine Complex
+- Gascoyne
+- Goldfields-Esperance
+- Great Southern
+- Kimberley
+- Mid West
+- Naval Base
+- North Regional WA
+- Peel
+- Perth
+- Perth Metropolitan
+- Pilbara
+- South Regional WA
+- South West
+- Wheatbelt

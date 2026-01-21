@@ -1,0 +1,38 @@
+name: Secure Systems Limited
+slug: secure-systems
+overview: Secure Systems Limited specialises in the design and manufacture of secure portable storage technology for high assurance applications. The company has developed the award winning Silicon Data Vault® secure data storage and execution technology. This technology has been commercialised into an Australian Signals Directorate (ASD) certified high assurance portable data storage device that is approved for use in the protection of Defence’s most highly classified data.
+website: www.securesystems.com.au
+contact_name: Peter James
+contact_title: Managing Director
+address: Unit 3, 128 Main Street
+phone: +61 8 9240 8708
+email: pjames@securesystems.com.au
+is_sme: true
+stakeholders:
+- Defence Industry
+capability_streams:
+- ISCW - Intelligence, Surveillance, Reconnaissance, Space, Electronic Warfare and Cyber
+- KEYN - Key Enablers
+- AASL - Air and Sea Lift
+- MASW - Maritime and Anti-Submarine Warfare
+- SAAC - Strike and Air Combat
+- LCAW - Land Combat and Amphibious Warfare
+capability_domains:
+- Armour and Vehicles
+- Cyber Security
+- Destroyers
+- Electronic Warfare
+- Frigates
+- ICT for Operations
+- Land Communications
+- Multi-Purpose Vessels
+- Science & Technology
+- Special Operations
+- Stable Defence ICT
+- Submarines
+regions:
+- Perth Metropolitan
+latitude: -31.9019749
+longitude: 115.8287464
+logo_url: /logos/secure-systems.jpg
+capabilities: 'Our Silicon Data Vault - High Assurance (SDV-HA) product is the only secure portable storage device certified by the ASD to store Top Secret data, yet it can also be handled as an Unclassified device when not powered on. Highly-sensitive data can therefore be transported by personnel without the need for a safe-hand courier. Unique features of the SDV-HA include: a tamper detection and response sub-system that continuously monitors and cryptographically deletes all data upon detecting a tamper event; strong encryption of all stored data; strong 2-factor authentication; two modes of operation; and small form factor to enable portability.'

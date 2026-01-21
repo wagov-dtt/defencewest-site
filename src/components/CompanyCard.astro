@@ -1,0 +1,111 @@
+---
+interface Props {
+  company: {
+    slug: string;
+    name: string;
+    overview?: string;
+    logo_url?: string;
+    is_prime?: boolean;
+    is_sme?: boolean;
+  };
+}
+
+const { company } = Astro.props;
+const base = import.meta.env.BASE_URL;
+
+const logoSrc = company.logo_url?.startsWith('/') 
+  ? `${base}${company.logo_url.slice(1)}` 
+  : company.logo_url;
+
+const shortOverview = company.overview?.slice(0, 100);
+---
+
+<a href={`${base}company/${company.slug}`} class="card-link">
+  <article>
+    {(company.is_prime || company.is_sme) && (
+      <div class="badges">
+        {company.is_prime && <small>Prime</small>}
+        {company.is_sme && <small>SME</small>}
+      </div>
+    )}
+    
+    <div class="logo-area">
+      {logoSrc ? (
+        <img src={logoSrc} alt="" loading="lazy" />
+      ) : (
+        <span class="initials">{company.name.slice(0, 2).toUpperCase()}</span>
+      )}
+    </div>
+    
+    <h4>{company.name}</h4>
+    
+    {shortOverview && <p class="overview"><small>{shortOverview}{company.overview && company.overview.length > 100 ? '...' : ''}</small></p>}
+  </article>
+</a>
+
+<style>
+  .card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    height: 100%;
+  }
+
+  .card-link:hover article {
+    background-color: var(--pico-muted-border-color);
+  }
+
+  article {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    padding: 1rem;
+    transition: background-color 0.15s;
+  }
+
+  .badges {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    display: flex;
+    gap: 0.25rem;
+  }
+
+  .badges small {
+    opacity: 0.5;
+  }
+
+  .logo-area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    margin-bottom: 0.75rem;
+  }
+
+  .logo-area img {
+    max-width: 100%;
+    max-height: 60px;
+    object-fit: contain;
+  }
+
+  .initials {
+    font-size: 1.5rem;
+    font-weight: bold;
+    opacity: 0.4;
+  }
+
+  h4 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1rem;
+  }
+
+  .overview {
+    margin: 0;
+    flex: 1;
+    opacity: 0.7;
+  }
+</style>

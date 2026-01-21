@@ -1,0 +1,24 @@
+name: AB&H Pty Ltd
+slug: ab-h
+overview: "AB&H Pty Ltd is a Technology Services company specialising in Agile Program and Project Management. Our project managers are PRINCE2 and PMI certified.  \nAB&H Pty Ltd also provides professional services for ICT Technology planning - including:,\n\n  * Cyber Security \n  * Applications Requirements Planning \n  * Infrastructure Planning\n  * Web Design\n\nFor eligible companies, AB&H Pty Ltd can facilitate R&D Project funding by registering eligible companies with The Department of Industry, Science, Energy & Resources, to enable companies to claim the R&D Tax Incentive, providing (up to) 43.5% of R&D Expenditure that has already been spent in a Financial Year."
+website: www.abandh.com.au
+contact_name: Russell Ascott
+contact_title: Director
+address: PO Box 130
+phone: +61 413 819 715
+email: russell.ascott@abandh.com.au
+is_sme: true
+stakeholders:
+- Defence Industry
+capability_streams:
+- MASW - Maritime and Anti-Submarine Warfare
+capability_domains:
+- ICT for Operations
+- Science & Technology
+- Submarines
+regions:
+- Perth Metropolitan
+latitude: -32.0135412
+longitude: 115.7634366
+logo_url: /logos/ab-h.png
+capabilities: AB&H Pty Ltd staff have first hand experience working on Defence projects, including the Collins Class submarine Usage & Upkeep Cycle and the Configuration Management System (SIMS/SIS) and the Through Life Support (TLS) contract.

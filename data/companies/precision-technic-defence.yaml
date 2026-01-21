@@ -1,0 +1,37 @@
+name: Precision Technic Defence
+slug: precision-technic-defence
+overview: As a systems integrator and capability developer, Precision Technic Defence brings together world leading products to design and deliver custom tactical solutions to the warfighter, and to first responders around the globe. Through years of military experience coupled with engineering and scientific knowledge, we provide capability to customers that is high-quality, secure, flexible and scaleable from a single credible company.
+website: www.ptdefence.com/aus
+contact_name: Greg Whitehouse
+contact_title: Managing Director
+address: 15/25 Rawlinson St
+phone: +61 8 9316 1798
+email: gw@ptdefence.com
+is_sme: true
+stakeholders:
+- Defence Industry
+capability_streams:
+- ISCW - Intelligence, Surveillance, Reconnaissance, Space, Electronic Warfare and Cyber
+- KEYN - Key Enablers
+- SAAC - Strike and Air Combat
+- LCAW - Land Combat and Amphibious Warfare
+capability_domains:
+- Armour and Vehicles
+- C2 & Common Operating Picture
+- Communications
+- Cyber Security
+- Electronic Warfare
+- ICT for Operations
+- Land Communications
+- Light Helicopters
+- Science & Technology
+- Special Operations
+- Stable Defence ICT
+- Surveillance
+- Training & Simulation
+regions:
+- Perth Metropolitan
+latitude: -32.058955
+longitude: 115.8026256
+logo_url: /logos/precision-technic-defence.png
+capabilities: We differentiate ourselves from other companies by building relationships with the end-users, acquisition teams, commanders and industry partners to bring together complete capability solutions. We are not a shopfront for disparate pieces of equipment. We seek to engineer capability solutions customised to the requirements of individual mission sets. We complete capability delivery through training, supply, support, advice on organisational requirements, facilities and contracting of personnel where ever in the world it is required.

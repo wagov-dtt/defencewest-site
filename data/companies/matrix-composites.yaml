@@ -1,0 +1,30 @@
+name: Matrix Composites & Engineering
+slug: matrix-composites
+overview: Matrix Composites and Engineering Ltd produces engineered products, functional additives and advanced materials for the mining, energy, infrastructure and Defence industries.
+website: www.matrixengineered.com
+contact_name: Jim Kingston
+contact_title: Technical Lead - Defence
+address: 150 Quill Way
+phone: +61 408 950 652
+email: jim.kingston@matrixengineered.com
+is_sme: true
+stakeholders:
+- Defence Industry
+capability_streams:
+- AASL - Air and Sea Lift
+- MASW - Maritime and Anti-Submarine Warfare
+- LCAW - Land Combat and Amphibious Warfare
+capability_domains:
+- Amphibious Elements
+- Armour and Vehicles
+- Destroyers
+- Frigates
+- Minor War Vessels
+- Science & Technology
+- Submarines
+regions:
+- Australian Marine Complex
+latitude: -32.1596738
+longitude: 115.7731439
+logo_url: /logos/matrix-composites.png
+capabilities: When designing our Henderson facility, Matrix drew from the latest manufacturing concepts including lean production and one-piece flow. We have also adopted highly automated manufacturing processes including moving work cells and production lines, automated chemical processing, robotics and Scada-based control systems.

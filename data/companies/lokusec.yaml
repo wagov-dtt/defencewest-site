@@ -1,0 +1,29 @@
+name: LokuSec Pty Ltd
+slug: lokusec
+overview: 'We are a Cyber Security Consultancy providing a range of expertise from supply chain security through to security assessments and cloud architecture support.
+
+
+  We have developed the _Loku7_ Security Rating Platform to fix a problem.
+
+
+  Enterprise ratings platforms can cost upwards of $100,000 USD (per year). Our platform is free.
+
+
+  Supply Chain Security is important to all organisations, regardless of budget.
+
+
+  We want to help organisations identify and reduce risk.
+
+
+  Cyber Security is our passion.'
+website: https://www.lokusec.com/
+contact_name: Sudesh Ranasinghe
+contact_title: Co-Founder/Director
+address: 123B Colin Street
+phone: 0428155677
+email: Sudesh@lokusec.com
+is_prime: true
+latitude: -31.9454884
+longitude: 115.8427873
+logo_url: /logos/lokusec.png
+capabilities: "100% Australian, incepted in WA (At our local pub - Raffles) \n\nWe are direct, no fluff cyber security experts.\n\nOur services include:\n\n  * Supply Chain Risk Management.\n  * Consulting & Professional Services.\n  * Security Rating Platform.\n\nMore details here - https://www.lokusec.com/services/"

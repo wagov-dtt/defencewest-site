@@ -1,0 +1,29 @@
+name: Innovaero Pty Ltd
+slug: innovaero
+overview: "Innovaero's extensive CASA approvals and AS9100D quality management system underpin our whole of life-cycle capability for  \ndevelopment, flight test and sustainment of complex aeronautical systems."
+website: www.innov.aero
+contact_name: Dave Tomkinson
+contact_title: Operations Manager
+address: 20 Weatherburn Way
+phone: +61 8 6365 9179
+email: info@innov.aero
+is_sme: true
+capability_streams:
+- ISCW - Intelligence, Surveillance, Reconnaissance, Space, Electronic Warfare and Cyber
+- SAAC - Strike and Air Combat
+- LCAW - Land Combat and Amphibious Warfare
+capability_domains:
+- Intelligence
+- Light Helicopters
+- Maritime Support
+- Reconnaissance Aircraft
+- Special Operations
+- Surveillance
+industrial_capabilities:
+- Composites & Components
+- Design & Engineering Services
+- Electronics & Instrumentation
+latitude: -32.05704
+longitude: 115.80549
+logo_url: /logos/innovaero.png
+capabilities: "Design:  \nCASR Part 21J Design Organisation Approval  \nCASR Part 21M approvals for minor and (with CASA's consent) major changes  \nCASR Part 21E STC amendment approvals  \nFAA 8110-3 approvals for both minor and major changes to FAA registered aircraft  \n  \nManufacturing:  \nCASR Part 21G Production Certificate  \nCASR Part 21K Part Manufacturing Authority  \n  \nMaintenance:  \nCASA Part 145 maintenance approval  \nCASA CAR 30 maintenance approval"

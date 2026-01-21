@@ -1,0 +1,36 @@
+name: Chironix
+slug: chironix
+overview: Chironix was established with a vision to embrace the new technologies of Industry 4.0 to create human-centred systems to make work safer and more efficient, and to make workers more effective. We are specialists in software engineering and robotics systems integration.
+website: https://www.chironix.com/
+contact_name: Daniel Milford
+contact_title: CEO
+address: Chironix Labs, Unit 3/33 Millrose Drive
+phone: '+61862449030'
+email: sales@chironix.com
+is_sme: true
+stakeholders:
+- Defence Industry
+- Academic Institutions
+- Defence West
+- Defence Science Centre
+capability_streams:
+- Intelligence; Surveillance and Reconnaissance
+- Land Forces
+- Research and Technology Development
+- Space
+capability_domains:
+- Science & Technology
+- Surveillance
+- Uncrewed/Autonomous vehicles
+- AI & Autonomy
+- Robotics
+industrial_capabilities:
+- Design & Engineering Services
+- Mechanical & Electrical
+regions:
+- Perth
+latitude: -31.902301
+longitude: 115.8155055
+logo_url: /logos/chironix.png
+capabilities: The Chironix team possess deep knowledge and expertise in software and automation including machine learning, computer vision and perception, edge computing and big data. Chironix team members have a diverse range of qualifications up to and including postgraduate level. We are a vibrant, innovative organisation comprising mechatronics engineers, software developers, roboticists and business specialists. We have a strong commitment to lifelong learning and place great importance on professional development to remain on the cutting edge of software technology.
+discriminators: "* DISP accredited (Secret)\n  * Partners include Boston Dynamics, Clearpath, Husarion, Nvidia, Intel and others."

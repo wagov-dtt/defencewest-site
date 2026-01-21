@@ -1,0 +1,27 @@
+name: Newton Labs
+slug: newton-labs
+overview: The prime focus of Newton Labs is on the Internet of Things (IoT), machine learning and real-time data analytics for heavy industry applications.
+website: www.newtonlabs.com.au
+contact_name: Simon Vincent
+contact_title: Managing Director
+address: 191 St Georges Terrace
+phone: +61 435 112 224
+email: simon@newtonlabs.com.au
+is_sme: true
+stakeholders:
+- Defence Industry
+capability_streams:
+- ISCW - Intelligence, Surveillance, Reconnaissance, Space, Electronic Warfare and Cyber
+- KEYN - Key Enablers
+- AASL - Air and Sea Lift
+- SAAC - Strike and Air Combat
+capability_domains:
+- Cyber Security
+- Intelligence
+- Science & Technology
+regions:
+- Perth Metropolitan
+latitude: -31.9539836
+longitude: 115.8532393
+logo_url: /logos/newton-labs.jpg
+capabilities: We are an award-winning and leading Australian IoT company that builds real-time solutions for the global mining industry, although our capabilites also have promising applications to defence requirements.

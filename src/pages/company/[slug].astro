@@ -1,0 +1,370 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+import type { Company } from '../../content.config';
+import { marked } from 'marked';
+import { getStreamIcons } from '../../lib/taxonomies';
+import { withBase, googleMapsUrl, normalizeWebsiteUrl, displayWebsite } from '../../lib/urls';
+
+const base = import.meta.env.BASE_URL;
+
+export async function getStaticPaths() {
+  const companies = await getCollection('companies');
+  return companies.map(entry => ({
+    params: { slug: entry.data.slug },
+    props: { company: entry.data },
+  }));
+}
+
+const streamIcons = getStreamIcons();
+const { company } = Astro.props as { company: Company };
+
+// Render markdown fields to HTML
+const overviewHtml = company.overview ? marked.parse(company.overview) : '';
+const capabilitiesHtml = company.capabilities ? marked.parse(company.capabilities) : '';
+const discriminatorsHtml = company.discriminators ? marked.parse(company.discriminators) : '';
+
+const websiteUrl = normalizeWebsiteUrl(company.website);
+const logoSrc = withBase(company.logo_url, base);
+const hasLocation = company.latitude && company.longitude;
+const mapsUrl = googleMapsUrl(company.latitude, company.longitude, company.address);
+
+const siteUrl = 'https://defencewest.wa.gov.au';
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: company.name,
+  url: company.website ? websiteUrl : `${siteUrl}/company/${company.slug}`,
+  description: company.overview?.slice(0, 300),
+  ...(company.logo_url && { logo: company.logo_url.startsWith('/') ? `${siteUrl}${company.logo_url}` : company.logo_url }),
+  ...(company.address && { 
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: company.address,
+      addressRegion: 'Western Australia',
+      addressCountry: 'AU'
+    }
+  }),
+  ...(company.phone && { telephone: company.phone }),
+  ...(company.email && { email: company.email }),
+};
+---
+
+<Layout 
+  title={`${company.name} - WA Defence Directory`}
+  description={company.overview?.slice(0, 160)}
+  jsonLd={jsonLd}
+>
+  <div class="company-page">
+    <!-- Main Content Area - Two Column Layout -->
+    <main data-pagefind-body class="company-content">
+      <!-- Left Column: Content -->
+      <div class="content-column">
+        {company.overview && (
+          <section>
+            <h2>Overview</h2>
+            <div set:html={overviewHtml} />
+          </section>
+        )}
+
+        {company.capabilities && (
+          <section>
+            <h2>Capabilities</h2>
+            <div set:html={capabilitiesHtml} />
+          </section>
+        )}
+
+        {company.discriminators && (
+          <section>
+            <h2>Discriminators</h2>
+            <div set:html={discriminatorsHtml} />
+          </section>
+        )}
+      </div>
+
+      <!-- Right Column: Company Info -->
+      <aside class="info-column">
+        <!-- Company Header -->
+        <div class="company-header">
+          {logoSrc && (
+            <img src={logoSrc} alt="" class="company-logo" />
+          )}
+          <hgroup>
+            <h1 data-pagefind-meta="title">{company.name}</h1>
+            {(company.is_prime || company.is_sme) && (
+              <p>
+                {company.is_prime && <small>Prime Contractor</small>}
+                {company.is_prime && company.is_sme && <small> · </small>}
+                {company.is_sme && <small>SME</small>}
+              </p>
+            )}
+          </hgroup>
+        </div>
+          
+        {(company.phone || company.email || company.address || company.website) && (
+          <div class="contact-info">
+            {company.website && <p><a href={websiteUrl} target="_blank" rel="noopener">{displayWebsite(company.website)}</a></p>}
+            {company.phone && <p><a href={`tel:${company.phone}`}>{company.phone}</a></p>}
+            {company.email && <p><a href={`mailto:${company.email}`}>{company.email}</a></p>}
+            {company.address && (
+              <p>
+                {mapsUrl ? (
+                  <a href={mapsUrl} target="_blank" rel="noopener"><small>{company.address}</small></a>
+                ) : (
+                  <small>{company.address}</small>
+                )}
+              </p>
+            )}
+          </div>
+        )}
+
+        <!-- Map -->
+        {hasLocation && (
+          <a href={mapsUrl} target="_blank" rel="noopener" class="map-wrapper">
+            <div id="mini-map" data-lat={company.latitude} data-lng={company.longitude}></div>
+          </a>
+        )}
+
+        <!-- Taxonomy -->
+        <div class="taxonomy-section">
+          {company.capability_streams && company.capability_streams.length > 0 && (
+            <>
+              <strong class="sidebar-section">Capability Streams</strong>
+              <div class="stream-icons">
+                {company.capability_streams.map(stream => {
+                  const iconUrl = withBase(streamIcons[stream], base);
+                  return iconUrl ? (
+                    <a href={`${base}?capability_streams=${encodeURIComponent(stream)}`} title={stream}>
+                      <img src={iconUrl} alt={stream} />
+                    </a>
+                  ) : null;
+                })}
+              </div>
+            </>
+          )}
+
+          {company.stakeholders && company.stakeholders.length > 0 && (
+            <>
+              <strong class="sidebar-section">Stakeholders</strong>
+              <ul>
+                {company.stakeholders.map(item => (
+                  <li><a href={`${base}?stakeholders=${encodeURIComponent(item)}`}>{item}</a></li>
+                ))}
+              </ul>
+            </>
+          )}
+
+          {company.capability_domains && company.capability_domains.length > 0 && (
+            <>
+              <strong class="sidebar-section">Capability Domains</strong>
+              <ul>
+                {company.capability_domains.map(item => (
+                  <li><a href={`${base}?capability_domains=${encodeURIComponent(item)}`}>{item}</a></li>
+                ))}
+              </ul>
+            </>
+          )}
+
+          {company.industrial_capabilities && company.industrial_capabilities.length > 0 && (
+            <>
+              <strong class="sidebar-section">Industrial Capabilities</strong>
+              <ul>
+                {company.industrial_capabilities.map(item => (
+                  <li><a href={`${base}?industrial_capabilities=${encodeURIComponent(item)}`}>{item}</a></li>
+                ))}
+              </ul>
+            </>
+          )}
+
+          {company.regions && company.regions.length > 0 && (
+            <>
+              <strong class="sidebar-section">Regions</strong>
+              <ul>
+                {company.regions.map(item => (
+                  <li><a href={`${base}?regions=${encodeURIComponent(item)}`}>{item}</a></li>
+                ))}
+              </ul>
+            </>
+          )}
+        </div>
+      </aside>
+    </main>
+  </div>
+</Layout>
+
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', () => {
+    // Initialize map
+    const mapEl = document.getElementById('mini-map');
+    if (!mapEl || !window.maplibregl) return;
+    
+    const lat = parseFloat(mapEl.dataset.lat);
+    const lng = parseFloat(mapEl.dataset.lng);
+    if (isNaN(lat) || isNaN(lng)) return;
+
+    const map = new maplibregl.Map({
+      container: mapEl,
+      style: 'https://basemaps.cartocdn.com/gl/voyager-gl-style/style.json',
+      center: [lng, lat],
+      zoom: 14,
+      interactive: false,
+      attributionControl: false
+    });
+
+    new maplibregl.Marker({ color: '#0172ad' })
+      .setLngLat([lng, lat])
+      .addTo(map);
+  });
+</script>
+
+<style>
+  /* Two Column Layout */
+  .company-content {
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: calc(var(--pico-spacing) * 2);
+    align-items: start;
+  }
+
+  @media (max-width: 992px) {
+    .company-content {
+      grid-template-columns: 1fr;
+      gap: var(--pico-spacing);
+    }
+
+    .info-column {
+      order: -1;
+    }
+  }
+
+  /* Content Column - clean, no cards */
+  .content-column section {
+    margin-bottom: calc(var(--pico-spacing) * 1.5);
+  }
+
+  .content-column section:last-child {
+    margin-bottom: 0;
+  }
+
+  .content-column h2 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: calc(var(--pico-spacing) * 0.75);
+    padding-bottom: calc(var(--pico-spacing) * 0.5);
+    border-bottom: 1px solid var(--pico-muted-border-color);
+  }
+
+  /* Info Column - visible background */
+  .info-column {
+    display: flex;
+    flex-direction: column;
+    gap: var(--pico-spacing);
+    background: var(--pico-muted-border-color);
+    border-radius: var(--pico-border-radius);
+    padding: var(--pico-spacing);
+  }
+
+  /* Company Header */
+  .company-header {
+    text-align: center;
+  }
+
+  .company-logo {
+    max-height: 80px;
+    max-width: 180px;
+    object-fit: contain;
+    margin-bottom: var(--pico-spacing);
+  }
+
+  .company-header hgroup {
+    margin-bottom: 0;
+  }
+
+  .company-header hgroup h1 {
+    font-size: 1.25rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .company-header hgroup p {
+    margin: 0;
+    opacity: 0.7;
+  }
+
+  .contact-info {
+    text-align: left;
+    border-top: 1px solid var(--pico-muted-border-color);
+    padding-top: var(--pico-spacing);
+  }
+
+  .contact-info p {
+    margin: 0 0 0.5rem 0;
+  }
+
+  .contact-info p:last-child {
+    margin-bottom: 0;
+  }
+
+  /* Map */
+  .map-wrapper {
+    display: block;
+    border-radius: var(--pico-border-radius);
+    overflow: hidden;
+    cursor: pointer;
+  }
+
+  .map-wrapper:hover {
+    opacity: 0.9;
+  }
+
+  .map-wrapper #mini-map {
+    height: 180px;
+    width: 100%;
+  }
+
+  /* Taxonomy Section */
+  .taxonomy-section ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .taxonomy-section li {
+    margin: 0;
+    padding: 0;
+  }
+
+  .taxonomy-section a {
+    display: block;
+    padding: calc(var(--pico-spacing) * 0.25) 0;
+    text-decoration: none;
+  }
+
+  /* Sidebar section headers */
+  .sidebar-section {
+    display: block;
+    margin: var(--pico-spacing) 0 calc(var(--pico-spacing) * 0.5) 0;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    opacity: 0.7;
+  }
+
+  .sidebar-section:first-child,
+  .taxonomy-section .sidebar-section:first-child {
+    margin-top: 0;
+  }
+
+  /* Stream icons */
+  .stream-icons {
+    display: flex;
+    gap: calc(var(--pico-spacing) * 0.5);
+    flex-wrap: wrap;
+  }
+
+  .stream-icons img {
+    width: 36px;
+    height: 36px;
+    border-radius: var(--pico-border-radius);
+    object-fit: cover;
+  }
+</style>

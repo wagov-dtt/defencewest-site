@@ -1,0 +1,50 @@
+[tools]
+python = "3.12"
+uv = "latest"
+node = "22"
+pnpm = "latest"
+lychee = "latest"
+
+[env]
+PYTHONDONTWRITEBYTECODE = "1"
+
+[tasks.setup]
+description = "Install all dependencies"
+run = ["uv sync", "pnpm install"]
+
+[tasks.dev]
+description = "Start dev server"
+run = "pnpm exec astro dev"
+
+[tasks.build]
+description = "Build static site"
+run = "pnpm exec astro build"
+
+[tasks.preview]
+description = "Preview built site"
+run = "pnpm exec astro preview"
+
+[tasks.lint]
+description = "Lint YAML data files"
+run = "uv run python scripts/lint.py"
+
+[tasks.links]
+description = "Check links in built site"
+depends = ["build"]
+run = "lychee dist/ --root-dir dist --no-progress"
+
+[tasks.scrape]
+description = "Scrape company data from source"
+run = "uv run python scripts/scrape.py"
+
+[tasks."sync:export"]
+description = "Export YAML companies to JSON"
+run = "uv run python scripts/sync.py --export"
+
+[tasks."sync:import"]
+description = "Import JSON back to YAML files"
+run = "uv run python scripts/sync.py --import"
+
+[tasks.ci]
+description = "Lint, build, and check links"
+depends = ["lint", "build", "links"]

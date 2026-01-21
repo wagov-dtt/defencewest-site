@@ -1,0 +1,33 @@
+name: AMI Sales
+slug: ami-sales
+overview: 'Versatile and experienced, AMI Sales is a long established company offering both supply, integration and service capability across naval and defence marine requirements. We offer a logistical and technical network across Australasia, partner with suppliers offering the highest approvals and conformities, and employ specialist engineers and technicians to maintain support from project start to finish. Our primary offerings include: system Integration; navigation satcom and radio; desalination and water filtration; sewage treatment and environmental systems; and marine equipment. AMI offer complete project management from start to finish, and partner with many major shipbuilders and facilities in the region.'
+website: www.defence.amisales.com.au
+contact_name: Aaron Smith
+contact_title: 'Australasian Business Development Manager '
+address: 107 Forsyth Street
+phone: +61 8 9331 0000
+email: aarons@amigroup.co
+is_sme: true
+stakeholders:
+- Defence Industry
+capability_streams:
+- ISCW - Intelligence, Surveillance, Reconnaissance, Space, Electronic Warfare and Cyber
+- AASL - Air and Sea Lift
+- MASW - Maritime and Anti-Submarine Warfare
+capability_domains:
+- Communications
+- Destroyers
+- Frigates
+- Maritime Support
+- Minor War Vessels
+- Reconnaissance Aircraft
+- Search & Rescue
+- Submarines
+- Surveillance
+- Training & Simulation
+regions:
+- Perth Metropolitan
+latitude: -32.0559885
+longitude: 115.7925576
+logo_url: /logos/ami-sales.png
+capabilities: We are a member of the AMI Group, a multifaceted portfolio of companies including marine sales and equipment service, safety products, electronics manufacture, satellite communications and airtime, navigation charts, and water treatment and purification for leisure, commercial, defence and offshore marine interests. AMI Group partners benefit from extensive service coverage across Australasia, combined buying power, inter-agency support and an established logistical network.

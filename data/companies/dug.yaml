@@ -1,0 +1,44 @@
+name: DUG Technology Ltd
+slug: dug
+overview: "DUG Technology represents the convergence of scientific excellence and sustainable computing innovation. The company's journey from applied physics specialists to global technology leaders has been marked by continuous breakthroughs in geoscientific computing. \n\nDUG enables organisations worldwide to tackle their most complex data challenges through its reliable cloud-based network of high performance computing facilities, proprietary software solutions, energy-efficient immersion cooling systems and tailored services.\n\nThe company's novel immersion cooling technology is sold globally as part of an exclusive licence agreement and is the cornerstone of DUG's mobile, edge-computing solution, the Nomad."
+website: https://dug.com/
+contact_name: Ron Schop
+contact_title: Executive Vice President
+address: 76 Kings Park Road
+phone: 0417 696 674
+email: rons@dug.com
+is_sme: true
+stakeholders:
+- Defence Industry
+- Academic Institutions
+- Defence West
+- Defence Science Centre
+capability_streams:
+- Base Support
+- Education and Training
+- Electronic Warfare and Cyber
+- Land Forces
+- Maritime and Sub-Sea Forces
+- Research and Technology Development
+capability_domains:
+- Electronic Warfare
+- ICT for Operations
+- Science & Technology
+- Cyber and Information Operations
+- AI & Autonomy
+industrial_capabilities:
+- Adaptive Manufacturing
+- High Performance Computing (HPC)/Data Analytic
+regions:
+- Perth
+latitude: -31.95038
+longitude: 115.83438
+logo_url: /logos/dug.png
+capabilities: 'DUG Nomad is HPC on the edge--a mobile, modular, data-centre solution, engineered for resilience. DUG Nomad puts HPC where you need it. No location too remote. No environment too harsh. No costly and complex set up.
+
+
+  DUG Nomad was showcased at the 2024 Defence Supercomputing Summit in DST Edinburgh.
+
+
+  DUG Nomad is forged from decades of experience--an innovative combination of tried-and-tested hardware, software and infrastructure. DUG''s patented, immersion-cooling technology, DUG Cool, enables sustainable, reliable compute and storage capabilities.'
+discriminators: "* DISP membership since 19 September 2024\n  * ISO 9001\n  * ISO 27001"

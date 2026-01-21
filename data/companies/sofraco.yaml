@@ -1,0 +1,43 @@
+name: Sofraco Engineering Services
+slug: sofraco
+overview: 'Sofraco is a wholly Australian owned engineering consultancy & service provider that has been providing innovative, practical & professional services to Department of Defence and other government, marine, and commercial clients since foundation in 1988.
+
+
+  Sofraco''s emphasis is on providing a holistic, turn-key solution for the support of capital equipment, spanning pre-acquisition, through-life-support to decommissioning and disposal.'
+website: https://sofraco.com.au
+contact_name: ben gillard
+contact_title: Operations Manager
+address: U2 7 Garston Way
+phone: 0491050014
+email: ben.gillard@sofraco.com.au
+is_sme: true
+stakeholders:
+- Defence Industry
+capability_streams:
+- AASL - Air and Sea Lift
+- MASW - Maritime and Anti-Submarine Warfare
+- LCAW - Land Combat and Amphibious Warfare
+capability_domains:
+- Amphibious Elements
+- Destroyers
+- Frigates
+- Maritime Support
+- Refuelling Aircraft
+- Replenishment/Supply Ships
+- Training & Simulation
+industrial_capabilities:
+- Design & Engineering Services
+- Fuel & Exhaust Systems
+- Hydraulics and Pneumatics
+- Mechanical & Electrical
+- Propulsion & Engine Systems
+regions:
+- Perth Metropolitan
+- Australian Marine Complex
+- North Regional WA
+- South Regional WA
+- Naval Base
+latitude: -32.0841755
+longitude: 115.7599744
+logo_url: /logos/sofraco.jpg
+capabilities: "Sofraco's capabilities are comprised of two interoperating departments: Professional Engineering and  \nEngineering Support Services. A key differentiator for Sofraco is the versatility of the team combining   \nthe capabilities these two departments possess in turn enabling the delivery of turnkey, system-wide  \nengineering solutions."

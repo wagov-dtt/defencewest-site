@@ -1,0 +1,34 @@
+name: Dongara Marine
+slug: dongara-marine
+overview: Since being formed in 1975, the company has consistently demonstrated the technical, commercial, project management, customer service, and financial performance that underpins our long standing success in boat building, maintenance (refit, repair, modification) and other marine services and advice. This includes working on vessels constructed from aluminium, fibreglass / composites, and timber and used for commercial, government, and recreational pursuits.
+website: www.dongaramarine.com.au
+contact_name: Rohan Warr
+contact_title: Managing Director
+address: 2 Carrol Street
+phone: 0429 383 242
+email: rohan@dongaramarine.com.au
+is_sme: true
+stakeholders:
+- Defence Industry
+capability_streams:
+- AASL - Air and Sea Lift
+- MASW - Maritime and Anti-Submarine Warfare
+- LCAW - Land Combat and Amphibious Warfare
+capability_domains:
+- Amphibious Elements
+- Maritime Support
+- Minor War Vessels
+- Multi-Purpose Vessels
+industrial_capabilities:
+- Aluminium Fabrication
+- Blasting & Painting
+- CNC Machining
+- Composites & Components
+- Decking; Flooring & Furnishing
+- Welding
+regions:
+- North Regional WA
+latitude: -29.27198
+longitude: 114.92458
+logo_url: /logos/dongara-marine.jpg
+capabilities: 'We have in-house capabilities to include virtually all trades and skills relevant to our activities. This includes: Structural fabrication in aluminium, composites / fibreglass, and other materials; Engineering (mechanical, hydraulic, liquid systems); Interior fitout; Electrical and electronics installation; Marine glazing (windows); Blasting, painting and antifouling; System commissioning and testing; and Sea trials and delivery.'

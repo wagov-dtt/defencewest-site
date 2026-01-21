@@ -1,0 +1,18 @@
+{
+  "name": "defencewest-site",
+  "type": "module",
+  "version": "0.1.0",
+  "dependencies": {
+    "@astrojs/sitemap": "^3.7.0",
+    "astro": "^5.16.11",
+    "fuse.js": "^7.1.0",
+    "marked": "^15.0.12",
+    "pagefind": "^1.4.0",
+    "yaml": "^2.8.2"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.57.0",
+    "playwright": "^1.57.0",
+    "tsx": "^4.21.0"
+  }
+}

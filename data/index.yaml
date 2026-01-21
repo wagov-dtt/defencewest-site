@@ -1,0 +1,1632 @@
+companies:
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: 4Z PTY. LTD
+  slug: 4z-pty.-ltd
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: AB&H Pty Ltd
+  slug: ab-h-pty-ltd
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: ABS PTY LTD
+  slug: abs-pty-ltd
+- is_featured: false
+  is_prime: false
+  is_sme: false
+  name: Acting Consulting Training Australia and New Zealand Pty Ltd
+  slug: acting-consulting-training-australia-and-new-zealand-pty-ltd
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Actus Associates Party Limited
+  slug: actus-associates-party-limited
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Adarsh Australia
+  slug: adarsh-australia
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: ADENCO
+  slug: adenco
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Adisyn
+  slug: adisyn
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Advanced Braking Technology
+  slug: advanced-braking-technology
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Adwest Group
+  slug: adwest-group
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Aerospace NDI
+  slug: aerospace-ndi
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Agili8
+  slug: agili8
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Airflite
+  slug: airflite
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Airobotics
+  slug: airobotics
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: ALARP Solutions Pty Ltd
+  slug: alarp-solutions-pty-ltd
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Alcolizer Pty Ltd
+  slug: alcolizer-pty-ltd
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Alemlube PTY Ltd
+  slug: alemlube-pty-ltd
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Allied Heat Transfer
+  slug: allied-heat-transfer
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Allship Engineering
+  slug: allship-engineering
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Alltools WA Pty Ltd
+  slug: alltools-wa-pty-ltd
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Alltype Engineering
+  slug: alltype-engineering
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Altrad Services
+  slug: altrad-services
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: AMI Sales
+  slug: ami-sales
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: AMOG Consulting (AMOG Pty Ltd)
+  slug: amog-consulting-amog-pty-ltd-
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Amristar Solutions
+  slug: amristar-solutions
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Andvare VI Defence Industries
+  slug: andvare-vi-defence-industries
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: APEX Utilities Pty Ltd
+  slug: apex-utilities-pty-ltd
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: ARA Marine Pty Ltd
+  slug: ara-marine-pty-ltd
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: AROSE
+  slug: arose
+- is_featured: true
+  is_prime: false
+  is_sme: true
+  name: ASC
+  slug: asc
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Asset Reliability Inspections Pty Ltd
+  slug: asset-reliability-inspections-pty-ltd
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Aurora Labs Ltd
+  slug: aurora-labs-ltd
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Ausco Products
+  slug: ausco-products
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Aussie Fluid Power
+  slug: aussie-fluid-power
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Austal
+  slug: austal
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Austral Construction
+  slug: austral-construction
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Australian Marine Complex Common User Facility
+  slug: australian-marine-complex-common-user-facility
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: AVI
+  slug: avi
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Avtech Pacific
+  slug: avtech-pacific
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Babcock Australia Pty Ltd
+  slug: babcock-australia-pty-ltd
+- is_featured: false
+  is_prime: true
+  is_sme: false
+  name: BAE Systems Australia – Henderson Facility
+  slug: bae-systems-australia-henderson-facility
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Barclay Engineering
+  slug: barclay-engineering
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Barrett Communications
+  slug: barrett-communications
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Bastion Defence Consulting
+  slug: bastion-defence-consulting
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Beachhead Logistics
+  slug: beachhead-logistics
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Bee Sting Robotics Pty Ltd
+  slug: bee-sting-robotics-pty-ltd
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: BELUX Engineering
+  slug: belux-engineering
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Bend-tech Group
+  slug: bend-tech-group
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Bennett + Co
+  slug: bennett-co
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: BG&E Pty Limited
+  slug: bg-e-pty-limited
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Bhagwan Marine Limited
+  slug: bhagwan-marine-limited
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Bid Write
+  slug: bid-write
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Blacktree Technology
+  slug: blacktree-technology
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: BlueZone Group
+  slug: bluezone-group
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: BMD Constructions Pty Ltd
+  slug: bmd-constructions-pty-ltd
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: BRE Engineering
+  slug: bre-engineering
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Bunbara
+  slug: bunbara
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Bushcomm Antenna and Tower Systems
+  slug: bushcomm-antenna-and-tower-systems
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Business Innovation Services
+  slug: business-innovation-services
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: CADDS Group Pty Ltd
+  slug: cadds-group-pty-ltd
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Calibre Group
+  slug: calibre-group
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Calytrix Technologies Pty Ltd
+  slug: calytrix-technologies-pty-ltd
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Cambridge Gulf Limited
+  slug: cambridge-gulf-limited
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Camco Engineering
+  slug: camco-engineering
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Capability X
+  slug: capability-x
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Capital Equipment
+  slug: capital-equipment
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: CareyMC Pty Ltd
+  slug: careymc-pty-ltd
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Carnegie Clean Energy Limited
+  slug: carnegie-clean-energy-limited
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Castledex
+  slug: castledex
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: CDMS Consulting Engineers
+  slug: cdms-consulting-engineers
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: CHC Helicopters (Australia)
+  slug: chc-helicopters-australia-
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: ChemCentre
+  slug: chemcentre
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Chess Engineering
+  slug: chess-engineering
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Chillflow Solutions
+  slug: chillflow-solutions
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Chironix
+  slug: chironix
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Civmec
+  slug: civmec
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: CleanSubSea
+  slug: cleansubsea
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Cleard Life Vetting Agency
+  slug: cleard-life-vetting-agency
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Clough Projects Australia
+  slug: clough-projects-australia
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Composite Components
+  slug: composite-components
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Consolidated Group
+  slug: consolidated-group
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Constructive Media
+  slug: constructive-media
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: COREIOT PTY LTD
+  slug: coreiot-pty-ltd
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Cullys
+  slug: cullys
+- is_featured: false
+  is_prime: false
+  is_sme: false
+  name: Curtin University
+  slug: curtin-university
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: CyberCX
+  slug: cybercx
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Damogran
+  slug: damogran
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: DC Two Limited
+  slug: dc-two-limited
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: DCL Contracting
+  slug: dcl-contracting
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: De Stefano & Co
+  slug: de-stefano-co
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Deacon Engineers
+  slug: deacon-engineers
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Decem
+  slug: decem
+- is_featured: true
+  is_prime: false
+  is_sme: true
+  name: Decmil
+  slug: decmil
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Deep Supplies
+  slug: deep-supplies
+- is_featured: false
+  is_prime: true
+  is_sme: false
+  name: Defence Science Centre
+  slug: defence-science-centre
+- is_featured: false
+  is_prime: true
+  is_sme: false
+  name: Defence West
+  slug: defence-west
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Deloitte
+  slug: deloitte
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Digital Matter
+  slug: digital-matter
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Directions Workforce Solutions
+  slug: directions-workforce-solutions
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Diverse Engineering (WA)
+  slug: diverse-engineering-wa-
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Dobbie
+  slug: dobbie
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Dongara Marine
+  slug: dongara-marine
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Doric Contractors Pty Ltd
+  slug: doric-contractors-pty-ltd
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: DUG Technology Ltd
+  slug: dug-technology-ltd
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: DXN
+  slug: dxn
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Echo Marine Group Pty Ltd
+  slug: echo-marine-group-pty-ltd
+- is_featured: false
+  is_prime: false
+  is_sme: false
+  name: Edith Cowan University
+  slug: edith-cowan-university
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: EIG Australia
+  slug: eig-australia
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: EJ ELECTRICAL ENGINEERING CONTRACTORS
+  slug: ej-electrical-engineering-contractors
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: EK Contracting
+  slug: ek-contracting
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Electro Base Pty Ltd
+  slug: electro-base-pty-ltd
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Energy Power Systems Australia Pty. Ltd.
+  slug: energy-power-systems-australia-pty.-ltd.
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Engine Protection Equipment Pty Ltd
+  slug: engine-protection-equipment-pty-ltd
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Engineering Institute of Technology
+  slug: engineering-institute-of-technology
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Enviropacific Services
+  slug: enviropacific-services
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Epichemistry Pty Limited
+  slug: epichemistry-pty-limited
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Ethan Indigenous Pty Ltd
+  slug: ethan-indigenous-pty-ltd
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Eurofins
+  slug: eurofins
+- is_featured: false
+  is_prime: true
+  is_sme: false
+  name: EVERETT SMITH & CO. PTY. LTD.
+  slug: everett-smith-co.-pty.-ltd.
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Exgroup Pty Ltd
+  slug: exgroup-pty-ltd
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: EXTAG Pty Ltd
+  slug: extag-pty-ltd
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Falcon Engineering 95 Pty Ltd
+  slug: falcon-engineering-95-pty-ltd
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: First Nations Strategic Alliance
+  slug: first-nations-strategic-alliance
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Fortuna CFO Services Pty Ltd
+  slug: fortuna-cfo-services-pty-ltd
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Franmarine
+  slug: franmarine
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Fremantle Steel
+  slug: fremantle-steel
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Fugro Remote Systems Technology
+  slug: fugro-remote-systems-technology
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Fujitsu Australia Limited
+  slug: fujitsu-australia-limited
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Future Engineering
+  slug: future-engineering
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Fuze
+  slug: fuze
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Garli Group
+  slug: garli-group
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Geng
+  slug: geng
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Geo Oceans Pty Ltd
+  slug: geo-oceans-pty-ltd
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Georgiou Group
+  slug: georgiou-group
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: GHD
+  slug: ghd
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Ghost Fire Systems
+  slug: ghost-fire-systems
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Global Coating Systems Pty Ltd
+  slug: global-coating-systems-pty-ltd
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Global Marine Design
+  slug: global-marine-design
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Global Spill & Safety
+  slug: global-spill-safety
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Global Unmanned Systems
+  slug: global-unmanned-systems
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Grant Transformers
+  slug: grant-transformers
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Green Light
+  slug: green-light
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Greenroom Robotics
+  slug: greenroom-robotics
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Griffin Marine Services Pty Ltd
+  slug: griffin-marine-services-pty-ltd
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: H-E Parts Engineering
+  slug: h-e-parts-engineering
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Halo Civil Engineering Pty Ltd
+  slug: halo-civil-engineering-pty-ltd
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Harvest Technology Group
+  slug: harvest-technology-group
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Haymac Engineering Pty Ltd
+  slug: haymac-engineering-pty-ltd
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: HEAVY DUTY HIRE
+  slug: heavy-duty-hire
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: HIFraser
+  slug: hifraser
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: High Pressure Plus
+  slug: high-pressure-plus
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Hofmann Engineering
+  slug: hofmann-engineering
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Hoppers Asia Pacific Solutions Pty Ltd
+  slug: hoppers-asia-pacific-solutions-pty-ltd
+- is_featured: false
+  is_prime: true
+  is_sme: false
+  name: HoseCo
+  slug: hoseco
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Hydraulic Energy Australia
+  slug: hydraulic-energy-australia
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: iCetana
+  slug: icetana
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: ICM Group
+  slug: icm-group
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Iconic Water Solutions
+  slug: iconic-water-solutions
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Ikad Engineering
+  slug: ikad-engineering
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Indianic Group
+  slug: indianic-group
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Indigenous Managed Services Pty Ltd
+  slug: indigenous-managed-services-pty-ltd
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Indrus
+  slug: indrus
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Industry OneCARD
+  slug: industry-onecard
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Infinitum Technologies
+  slug: infinitum-technologies
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Innovaero Pty Ltd
+  slug: innovaero-pty-ltd
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Innovative Asset Solutions
+  slug: innovative-asset-solutions
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Intercept Australia
+  slug: intercept-australia
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: International Maritime Consultants Pty Ltd T/A IMC Naval Architects
+  slug: international-maritime-consultants-pty-ltd-t-a-imc-naval-architects
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: International Maritime Services (IMS)
+  slug: international-maritime-services-ims-
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Intertek
+  slug: intertek
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Ironmonger Fabrications
+  slug: ironmonger-fabrications
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Jeyco Australia
+  slug: jeyco-australia
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: JFD Australia
+  slug: jfd-australia
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: JMH Group
+  slug: jmh-group
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: John Morris Scientific Pty Ltd
+  slug: john-morris-scientific-pty-ltd
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Juicebox Creative Pty Ltd
+  slug: juicebox-creative-pty-ltd
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: KAEFER
+  slug: kaefer
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Kanyana Engineering Pty Ltd
+  slug: kanyana-engineering-pty-ltd
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: KAW Engineering Pty Ltd
+  slug: kaw-engineering-pty-ltd
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: KBR
+  slug: kbr
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Kerman Contracting
+  slug: kerman-contracting
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Kinetic IT
+  slug: kinetic-it
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: L3 Harris - Oceania
+  slug: l3-harris-oceania
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: L3Harris IMSA
+  slug: l3harris-imsa
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Lalli Consulting Engineers
+  slug: lalli-consulting-engineers
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Land Surveys
+  slug: land-surveys
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: LatConnect 60
+  slug: latconnect-60
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Law Castings
+  slug: law-castings
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Leisurecat Australia
+  slug: leisurecat-australia
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Lighthouse Engineering Pty Ltd
+  slug: lighthouse-engineering-pty-ltd
+- is_featured: false
+  is_prime: true
+  is_sme: false
+  name: LokuSec Pty Ltd
+  slug: lokusec-pty-ltd
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Lucid Consulting Engineers (WA)
+  slug: lucid-consulting-engineers-wa-
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Mainz Pty Ltd
+  slug: mainz-pty-ltd
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Major Security Services
+  slug: major-security-services
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Malcolm Thompson Pumps
+  slug: malcolm-thompson-pumps
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Marine Technicians Australia
+  slug: marine-technicians-australia
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Matera Electrical Services
+  slug: matera-electrical-services
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Matrix Composites & Engineering
+  slug: matrix-composites-engineering
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Melchor Contracting Pty Ltd
+  slug: melchor-contracting-pty-ltd
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Meneghello Industrial Group
+  slug: meneghello-industrial-group
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: MI Plumbers
+  slug: mi-plumbers
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Mig-Co Engineering
+  slug: mig-co-engineering
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Mining & Hydraulic Supplies
+  slug: mining-hydraulic-supplies
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: MKA Electrical Design Consultants
+  slug: mka-electrical-design-consultants
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Multiplan
+  slug: multiplan
+- is_featured: false
+  is_prime: false
+  is_sme: false
+  name: Murdoch University
+  slug: murdoch-university
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: NAUTIC Technologies
+  slug: nautic-technologies
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Nauticraft
+  slug: nauticraft
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: NB Consulting
+  slug: nb-consulting
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Newton Labs
+  slug: newton-labs
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Ngalima
+  slug: ngalima
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: NGIS Australia
+  slug: ngis-australia
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Nihar
+  slug: nihar
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Nilsen WA
+  slug: nilsen-wa
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Novel Management Pty Ltd
+  slug: novel-management-pty-ltd
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: NW Futures Group Pty Ltd
+  slug: nw-futures-group-pty-ltd
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: OFI Group Holdings Pty Ltd
+  slug: ofi-group-holdings-pty-ltd
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: OLEOLOGY Pty Ltd
+  slug: oleology-pty-ltd
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: OLP Robotics
+  slug: olp-robotics
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Omni Executive Pty Ltd
+  slug: omni-executive-pty-ltd
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: One Mob - Trading as Mob Contracting and Event Personnel Australia
+  slug: one-mob-trading-as-mob-contracting-and-event-personnel-australia
+- is_featured: true
+  is_prime: false
+  is_sme: true
+  name: Onetide Modular Systems Pty Ltd
+  slug: onetide-modular-systems-pty-ltd
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Orbital UAV
+  slug: orbital-uav
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Orontide Group Ltd
+  slug: orontide-group-ltd
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Oropesa Port Management
+  slug: oropesa-port-management
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Otonoma
+  slug: otonoma
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Pacific Industrial Company
+  slug: pacific-industrial-company
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Pedco Engineering
+  slug: pedco-engineering
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Peritas Consulting Pty Ltd
+  slug: peritas-consulting-pty-ltd
+- is_featured: false
+  is_prime: true
+  is_sme: false
+  name: Petritek
+  slug: petritek
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Phase 'Phase Zero Aus Pty Ltd'
+  slug: phase-phase-zero-aus-pty-ltd-
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Pinnacle QM
+  slug: pinnacle-qm
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Pixelcase Group
+  slug: pixelcase-group
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: PMV ENGINEERING
+  slug: pmv-engineering
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: PQR Quality Solutions
+  slug: pqr-quality-solutions
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Precision Technic Defence
+  slug: precision-technic-defence
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Pressure Dynamics International
+  slug: pressure-dynamics-international
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: PRF Industries Pty Ltd
+  slug: prf-industries-pty-ltd
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: PROFLUID PTY LTD
+  slug: profluid-pty-ltd
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Protective Cases
+  slug: protective-cases
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Qube
+  slug: qube
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: R Stahl Australia Pty Ltd
+  slug: r-stahl-australia-pty-ltd
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Radlink Communications
+  slug: radlink-communications
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Rare Care - Clinical Centre of Expertise for Rare and Undiagnosed Diseases,
+    Perth Children's Hospital
+  slug: rare-care-clinical-centre-of-expertise-for-rare-and-undiagnosed-diseases-perth-children-s-hospital
+- is_featured: false
+  is_prime: true
+  is_sme: false
+  name: Raytheon Australia
+  slug: raytheon-australia
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: RCR Advanced Technologies
+  slug: rcr-advanced-technologies
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: RCT
+  slug: rct
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Red Piranha Limited
+  slug: red-piranha-limited
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Red Tail Group Pty Ltd
+  slug: red-tail-group-pty-ltd
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Regal Engineering
+  slug: regal-engineering
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Renewable.bio Pty Ltd
+  slug: renewable.bio-pty-ltd
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Rollwell Engineering
+  slug: rollwell-engineering
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Royston Australia
+  slug: royston-australia
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: RPS Group
+  slug: rps-group
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: RSM Australia Pty Ltd
+  slug: rsm-australia-pty-ltd
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: RUD
+  slug: rud
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: SAGE Automation Pty Ltd
+  slug: sage-automation-pty-ltd
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Sapien Cyber Limited
+  slug: sapien-cyber-limited
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: SAS Project Services WA
+  slug: sas-project-services-wa
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Scancam
+  slug: scancam
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Scope Engineering
+  slug: scope-engineering
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Secure Systems Limited
+  slug: secure-systems-limited
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Security Consulting Group
+  slug: security-consulting-group
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Segnut
+  slug: segnut
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Sensear Pty Ltd
+  slug: sensear-pty-ltd
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Sentient Computing
+  slug: sentient-computing
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Seymour Whyte Constructions
+  slug: seymour-whyte-constructions
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: SFDesign
+  slug: sfdesign
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Sign Here Signs
+  slug: sign-here-signs
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: SIMPEC Pty Ltd
+  slug: simpec-pty-ltd
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Sirius Geopolitics Pty Ltd
+  slug: sirius-geopolitics-pty-ltd
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Sitep Australia
+  slug: sitep-australia
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Skill Hire WA PTY LTD
+  slug: skill-hire-wa-pty-ltd
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: SME Gateway Pty Ltd
+  slug: sme-gateway-pty-ltd
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: SMS Group Services
+  slug: sms-group-services
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Sofraco Engineering Services
+  slug: sofraco-engineering-services
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Solid Concepts
+  slug: solid-concepts
+- is_featured: false
+  is_prime: false
+  is_sme: false
+  name: South Metropolitan TAFE
+  slug: south-metropolitan-tafe
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Spartan First
+  slug: spartan-first
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Specialty Metals
+  slug: specialty-metals
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: St John Ambulance WA
+  slug: st-john-ambulance-wa
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Stowe Australia Pty Ltd
+  slug: stowe-australia-pty-ltd
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Stratosfear
+  slug: stratosfear
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Success 5 Engineering
+  slug: success-5-engineering
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Taylor Marine
+  slug: taylor-marine
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Tetra Tech Coffey Pty Ltd
+  slug: tetra-tech-coffey-pty-ltd
+- is_featured: false
+  is_prime: true
+  is_sme: false
+  name: Thales Australia
+  slug: thales-australia
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Thomas Fabrication Pty Ltd
+  slug: thomas-fabrication-pty-ltd
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Thornton Tomasetti
+  slug: thornton-tomasetti
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: TIPT
+  slug: tipt
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: TL Engineering
+  slug: tl-engineering
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Total Marine Technology Pty Ltd (TMT)
+  slug: total-marine-technology-pty-ltd-tmt-
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Touchtech Australia
+  slug: touchtech-australia
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Tradesales
+  slug: tradesales
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: TraumaSim
+  slug: traumasim
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Trident Australia PTY LTD
+  slug: trident-australia-pty-ltd
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Tristar Australia Pty Ltd
+  slug: tristar-australia-pty-ltd
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Uni Power
+  slug: uni-power
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Unique Metals Laser
+  slug: unique-metals-laser
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: United Safety and Survivability Corporation
+  slug: united-safety-and-survivability-corporation
+- is_featured: false
+  is_prime: false
+  is_sme: false
+  name: University of Western Australia
+  slug: university-of-western-australia
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: UXMachines Pty Ltd
+  slug: uxmachines-pty-ltd
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Vection Technologies
+  slug: vection-technologies
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Veem
+  slug: veem
+- is_featured: false
+  is_prime: true
+  is_sme: false
+  name: Ventia
+  slug: ventia
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Versatile Defence
+  slug: versatile-defence
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Vertech Group Pty Ltd
+  slug: vertech-group-pty-ltd
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Vertical Lift Machines
+  slug: vertical-lift-machines
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Vescient
+  slug: vescient
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Volz Australia Pty Ltd
+  slug: volz-australia-pty-ltd
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Waalitj Foundation
+  slug: waalitj-foundation
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Watmar
+  slug: watmar
+- is_featured: false
+  is_prime: true
+  is_sme: false
+  name: Wedgetail Aerospace
+  slug: wedgetail-aerospace
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Weldtech Oilfield Services
+  slug: weldtech-oilfield-services
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: WEST COAST MACHINING SERVICES
+  slug: west-coast-machining-services
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Western Advance
+  slug: western-advance
+- is_featured: false
+  is_prime: false
+  is_sme: false
+  name: Western Australian Defence Industry Workforce Office
+  slug: western-australian-defence-industry-workforce-office
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Western Australian Specialty Alloys
+  slug: western-australian-specialty-alloys
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Whittens Pty Limited
+  slug: whittens-pty-limited
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Wiltrading STACE
+  slug: wiltrading-stace
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Winya Indigenous Office Furniture Pty Ltd
+  slug: winya-indigenous-office-furniture-pty-ltd
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: WireAid Pty Ltd
+  slug: wireaid-pty-ltd
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Wittenbaker Engineering Services PTY LTD
+  slug: wittenbaker-engineering-services-pty-ltd
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Wood
+  slug: wood
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Zagul Biri
+  slug: zagul-biri
+- is_featured: false
+  is_prime: false
+  is_sme: true
+  name: Zellabox
+  slug: zellabox

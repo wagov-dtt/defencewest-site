@@ -1,0 +1,31 @@
+name: Royston Australia
+slug: royston
+overview: Royston diesel power is a dynamic and expanding diesel engine supply, service and repair company that has operated successfully with the global marine and offshore market for more than 30 years. With bases in the UK and Perth the company has gained an excellent reputation in the marine industry by offering customers comprehensive drydock and on-board engine repair and maintenance services as an affordable alternative to the OEM’s. The base in Perth was established in 2008 and operates a fully equipped engineering workshop in Henderson.
+website: https://roystonaustralia.com.au/
+contact_name: Matty Burbidge
+contact_title: General Manager
+address: 13 Redemptora Road
+phone: 08 9410 2288
+email: matty.burbidge@roystonaustralia.com.au
+is_sme: true
+stakeholders:
+- Defence Industry
+capability_streams:
+- MASW - Maritime and Anti-Submarine Warfare
+- LCAW - Land Combat and Amphibious Warfare
+capability_domains:
+- Air Bases
+- Armour and Vehicles
+- Maritime Support
+- Minor War Vessels
+- Multi-Purpose Vessels
+industrial_capabilities:
+- Fuel & Exhaust Systems
+- Mechanical & Electrical
+- Propulsion & Engine Systems
+regions:
+- Australian Marine Complex
+latitude: -32.1540278
+longitude: 115.7739067
+logo_url: /logos/royston.png
+capabilities: Royston engineers are OEM trained and the Australian division represents GE Marine, Niigata (service) and Napier Turbochargers offering fleetwide/worldwide support.

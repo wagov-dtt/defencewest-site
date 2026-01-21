@@ -1,0 +1,32 @@
+name: Damogran
+slug: damogran
+overview: "Currently developing Robodock, a floating dry dock that undertakes blasting and painting services. Like a car wash for ships. The ship sails  in, is lifted out of water and robotic arms undertake repairs, blasting, painting, welding.\n\n**Stage 1: Land-based services.**\n\nRobots to undertake blasting and painting on ships on hardstand\n\n  * Very large robotic arm of up to 32m long with blasting head that allows for painting preparation of ships and submarines.\n  * Vacuum extraction to eliminate waste and hazardous dust\n  * Painting capability\n\n**Stage 2: Robodock.**\n\nMounting of proven technology into a floating dry dock and adding extra capabilities. independent of land based facilities.\n\n  * Full ship robotic blasting and painting\n  * Robotic welding\n  * Largely automated assembly of ship modules."
+website: https://damogran.com.au/
+contact_name: Dale Jordan
+contact_title: Director
+address: 14 mohan loop
+phone: '0450107723'
+email: dale.jordan@damogran.com.au
+is_sme: true
+stakeholders:
+- Defence Industry
+- Defence West
+capability_streams:
+- Logistics and Supply Chain
+- Maritime and Sub-Sea Forces
+capability_domains:
+- Maritime Support
+- Sustainment and maintenance
+- AI & Autonomy
+- Robotics
+industrial_capabilities:
+- Blasting & Painting
+- Welding
+regions:
+- Perth
+latitude: -32.1674076
+longitude: 115.8544416
+logo_url: /logos/damogran.png
+capabilities: "* High pressure washdown for fouling removal with waste management system.\n  * Robotic blasting and painting services that speed up the painting process for ships.\n  * Reduced skills and labour required to operate\n  * Future development of welding and block assembly\n\nNote: too early to list quantitative measures of our capabilities."
+discriminators: "What is it that sets your capabilities apart from other providers?\n\n  * Currently processes are done by hand because the setup time and cost of using semi-autonomous robotics does not stack up for smaller vessels or vessels with odd shapes.  Our robot will be free standing not requiring long setup work, use intelligent software and AI to understand what work needs to be done.\n\nHow do your capabilities provide value to customers?\n\n  * Significant savings in time and money. Ability to reduce required labour and the skill level of labour required. Allowing economical and practical 24-hour operation. \n  * Faster turnaround time and reduced downtime\n  * Reduced dependency on land based docks for repairs, if the port is out of action due to bombing etc. Robodock will remain as backup redundant capability.\n  * Robodock will also be able to be relocated anywhere in the world if AUSUK partners require the capability.\n\nWhat are the innovative features?\n\n  * World leading\
+  \ technology robotic dock that can do ship construction services and repair work that is mobile opens up new capability.\n\nWhat benefits would it provide?\n\n  * Expected to significantly reduce turnaround times of ships in port.\n  * Cost reduction and increased global competitiveness compared to other locations, Robodock should make it attractive to retain larger ships in WA for works rather than have the work done in Singapore. For longer naval assets such as the frigates at 120m, Robodock could allow works to be done at alternative locations. Not requiring much land-based support.\n\nSupports sustainable ship industries as technology will make local industry more competitive"

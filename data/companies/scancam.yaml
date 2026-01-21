@@ -1,0 +1,25 @@
+name: Scancam
+slug: scancam
+overview: Scancam specialises in vehicle licence plate recognition and CCTV Security surveillance. Scancam has identified the latest in camera technology and is powered by one of the world’s most advanced optical character recognition engines delivering accurate licence plate capture day and night. Recordings are in HD clarity, which is uncontestable.
+website: www.scancam.com.au
+contact_name: Eoin Byrne
+contact_title: Director
+address: 55 Lindsay Street
+phone: +61 423 535 539
+email: eoin@scancam.com.au
+is_sme: true
+stakeholders:
+- Defence Industry
+capability_streams:
+- ISCW - Intelligence, Surveillance, Reconnaissance, Space, Electronic Warfare and Cyber
+- AASL - Air and Sea Lift
+capability_domains:
+- Base Support and Redevelopment
+- ICT for Operations
+- Intelligence
+regions:
+- Perth Metropolitan
+latitude: -31.9451984
+longitude: 115.8640639
+logo_url: /logos/scancam.png
+capabilities: Our product has utilised the latest advancements in technology and cloud-based platforms to become a leader in automated number plate recognition in Australia.

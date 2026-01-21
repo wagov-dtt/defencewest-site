@@ -1,0 +1,29 @@
+name: Global Unmanned Systems
+slug: global-unmanned-systems
+overview: 'Global Unmanned Systems provides organisational capacity building and data acquisition with an emphasis on Remotely Piloted Aircraft Systems (RPAS) and related media processing and analysis technologies. Particular competencies include: consultancy related to RPAS (drone) operations; training and capacity building; and data acquisition, processing and analysis.'
+website: www.gus-uav.com
+contact_name: Robert Lednor
+contact_title: Operations Manager
+address: 2/153 Rockingham Road
+phone: +61 8 6188 1226
+email: robert.lednor@gus-uav.com
+is_sme: true
+stakeholders:
+- Defence Industry
+capability_streams:
+- ISCW - Intelligence, Surveillance, Reconnaissance, Space, Electronic Warfare and Cyber
+- KEYN - Key Enablers
+- AASL - Air and Sea Lift
+- LCAW - Land Combat and Amphibious Warfare
+capability_domains:
+- C2 & Common Operating Picture
+- Intelligence
+- Land Communications
+- Science & Technology
+- Special Operations
+regions:
+- Perth Metropolitan
+latitude: -32.0874823
+longitude: 115.7787602
+logo_url: /logos/global-unmanned-systems.png
+capabilities: We have a deep level of understanding of the RPAS market. We maintain relationships with many technology manufacturers and have the ability to generate custom solutions/ modifications in-house. Drawing on this base of understanding and relationships, we provide tailored training and ongoing support to ensure that any RPAS program is sustainable and generates value for customers.

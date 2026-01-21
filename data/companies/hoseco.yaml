@@ -1,0 +1,44 @@
+name: HoseCo
+slug: hoseco
+overview: HoseCo Australia specialise in the supply, maintenance and management of Flexible Hose Assemblies for a wide range of applications. HoseCo have a market leading scope of certifications to support the Defence Forces right around Australia.
+website: www.hoseco.com.au
+contact_name: John McGill
+contact_title: Group Sales & Product Manager
+address: '37 Magnet Road '
+phone: 0408 922 371
+email: john.mcgill@hoseco.com.au
+is_prime: true
+stakeholders:
+- Defence Industry
+capability_streams:
+- ISCW - Intelligence, Surveillance, Reconnaissance, Space, Electronic Warfare and Cyber
+- KEYN - Key Enablers
+- AASL - Air and Sea Lift
+- MASW - Maritime and Anti-Submarine Warfare
+- SAAC - Strike and Air Combat
+- LCAW - Land Combat and Amphibious Warfare
+capability_domains:
+- Air Bases
+- Amphibious Elements
+- Armour and Vehicles
+- Barracks and Training Ranges
+- Base Support and Redevelopment
+- Destroyers
+- Fighter Aircraft
+- Frigates
+- Light Helicopters
+- Maritime Support
+- Minor War Vessels
+- Refuelling Aircraft
+- Replenishment/Supply Ships
+- Submarines
+- Utility Helicopters
+industrial_capabilities:
+- Fuel & Exhaust Systems
+- Hydraulics and Pneumatics
+regions:
+- Perth Metropolitan
+latitude: -32.0610363
+longitude: 115.9263348
+logo_url: /logos/hoseco.jpg
+capabilities: HoseCo Australia specialise in the supply, maintenance and management of Flexible Hose Assemblies for a wide range of applications. HoseCo have a market leading scope of certifications to support the Defence Forces right around Australia.

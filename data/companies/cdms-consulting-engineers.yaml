@@ -1,0 +1,31 @@
+name: CDMS Consulting Engineers
+slug: cdms-consulting-engineers
+overview: CDMS Consulting Engineers provides engineering services specialising in innovative product development, pressure vessel equipment, heat exchangers, steel and concrete structures, piping and pumping, maintenance, storage tanks and thickeners, major projects, lifting design, bulk materials handling, fuel handling and storage and specialist services. Our wider activities across the Midas Group also include mechanical, civil and structural, electrical, building services and process engineering.
+website: www.cdmsengineering.com
+contact_name: Damian Connelly
+contact_title: Director, Principal Consulting Engineer
+address: Level 3, 44 Parliament Place
+phone: +61 8 9421 9060
+email: damian.connelly@cdmsengineering.com
+is_sme: true
+stakeholders:
+- Defence Industry
+capability_streams:
+- AASL - Air and Sea Lift
+- SAAC - Strike and Air Combat
+- LCAW - Land Combat and Amphibious Warfare
+capability_domains:
+- Air Bases
+- Barracks and Training Ranges
+- Base Support and Redevelopment
+- Science & Technology
+- Testing Ranges
+- Training & Simulation
+- Training Platforms
+- Training Ranges
+regions:
+- Perth Metropolitan
+latitude: -31.9504
+longitude: 115.84438
+logo_url: /logos/cdms-consulting-engineers.png
+capabilities: Our reputation for delivering innovative and quality engineering services for 31 years to WA companies and other customers.

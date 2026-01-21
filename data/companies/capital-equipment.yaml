@@ -1,0 +1,40 @@
+name: Capital Equipment
+slug: capital-equipment
+overview: Capital currently supply ASC, BAE both fabrication equipment and machine tools
+website: https://www.capitalequipment.net.au
+contact_name: Jim Harding
+contact_title: Director
+address: 1/10 Renewable Chase Bibra Lake
+phone: '0421624436'
+email: jim@capitalequipment.net.au
+is_sme: true
+capability_streams:
+- Base Support
+- Education and Training
+- Logistics and Supply Chain
+industrial_capabilities:
+- Aluminium Fabrication
+- Blasting & Painting
+- CNC Machining
+- Design & Engineering Services
+- Hydraulics and Pneumatics
+- Mechanical & Electrical
+- Steel Fabrication
+- Welding
+- Adaptive Manufacturing
+regions:
+- Gascoyne
+- Goldfields-Esperance
+- Great Southern
+- Kimberley
+- Mid West
+- Peel
+- Perth
+- Pilbara
+- South West
+- Wheatbelt
+latitude: -32.10218
+longitude: 115.80832
+logo_url: /logos/capital-equipment.jpg
+capabilities: "We supply various machine tools such as Lathes, Mills, Grinders, Slotters, Vertical - Horizontal Borers, Drills \n\nFabrication Equipment Bandsaws, Pipe Benders, Press Brakes, Guillotines, Punch and Shears, Mag Base Drills, Belt Grinders, Laser Cutters, F- Clamps, Part Marking Machines, Plate Bevellers, Cold saws       \n\nCleaning Equipment Vacuum cleaners, Floor sweepers , Floor scrubbers, Pressure Cleaners"
+discriminators: Capital is a small local business based in Bibra Lake WA . We stock and service machine we sell

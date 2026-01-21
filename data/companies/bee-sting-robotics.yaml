@@ -1,0 +1,42 @@
+name: Bee Sting Robotics Pty Ltd
+slug: bee-sting-robotics
+overview: Bee Sting Robotics major shareholder Andrii Biletskyi was a medium level supplier of drones to the Ukrainian military for over 3 years, initially manufacturing in China, we have brought the technology and know-how over to Australia. Our drones are NATO-specification, Front line battle tested units.
+website: https://www.beestingrobotics.com
+contact_name: Callum Gillespie Misich
+contact_title: Director
+address: 10/30 deviation way
+phone: '0420767550'
+email: info@beestingrobotics.com
+is_sme: true
+capability_streams:
+- Aerial; Strike and Air Combat
+- Base Support
+- Education and Training
+- Intelligence; Surveillance and Reconnaissance
+- Logistics and Supply Chain
+- Research and Technology Development
+capability_domains:
+- Air Bases
+- Intelligence
+- Reconnaissance Aircraft
+- Search & Rescue
+- Special Operations
+- Surveillance
+- Training & Simulation
+- Training Platforms
+- Uncrewed/Autonomous vehicles
+- AI & Autonomy
+- Robotics
+industrial_capabilities:
+- CNC Machining
+- Composites & Components
+- Design & Engineering Services
+- Welding
+- Adaptive Manufacturing
+regions:
+- Perth
+latitude: -31.6788774
+longitude: 115.782672
+logo_url: /logos/bee-sting-robotics.png
+capabilities: "* Manufacturing 7 inch, 10 inch, 12 inch, 15 inch FPV drones using Australian and allied country supply chains.\n  * FPV and line of sight drone training with radio and fiber-optic\n  * War-time system set up"
+discriminators: "* CASA registration\n  * Begun Defense Industry Security Program (DISP) membership requirements\n  * ISO implementation"

@@ -1,0 +1,30 @@
+name: Geng
+slug: geng
+overview: Geng comprise a group of consulting design engineers within the product, mechanical and manufacturing sector that is focused on Defence force training facilities and equipment requirements around Australia.
+website: www.geng.com
+contact_name: Cliff Green FIEAust, CPEng, NER, APEC Engineer, IntPE(Aust), Past MDIA
+contact_title: Principal & CEO
+address: 223 Walnut Rd
+phone: +61 414 823 065
+email: Cliff.Green@geng.com
+is_sme: true
+stakeholders:
+- Defence Industry
+capability_streams:
+- LCAW - Land Combat and Amphibious Warfare
+capability_domains:
+- Armour and Vehicles
+- Barracks and Training Ranges
+- Base Support and Redevelopment
+- Science & Technology
+- Special Operations
+- Testing Ranges
+- Training & Simulation
+- Training Platforms
+- Training Ranges
+regions:
+- Perth Metropolitan
+latitude: -32.00044
+longitude: 116.12332
+logo_url: /logos/geng.png
+capabilities: We possess unique knowledge and experience of live fire training requirements, ballistic safety and fire hazard reduction, particularly through the appropriate use and design of special plastics and rubbers, together with an extensive knowledge of testing approaches.

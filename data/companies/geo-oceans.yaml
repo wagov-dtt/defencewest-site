@@ -1,0 +1,56 @@
+name: Geo Oceans Pty Ltd
+slug: geo-oceans
+overview: 'Founded in Perth in 2010, Geo Oceans has grown to service clients globally with main headquarters in Perth and offices in Houston and Aberdeen.
+
+
+  Geo Oceans is recognized for delivering innovative and disruptive subsea IRM (Inspection, Repair, and Maintenance) methodologies. The company has a team of over 100 personnel globally (10% of whom are defence veterans) and has received several awards, including the 2020 Australian Subsea Company of the Year and the 2024 Subsea UK and Australian Innovation / Technology Development Award amongst others.
+
+
+  Key benefits provided by Geo Oceans include reduced costs, reduced carbon emissions (up to 95% CO2 reduction), and reduced HSE (Health, Safety, and Environment) exposure. The company has also developed remote inspection methodologies for Floating Production Storage and Offloading (FPSO) facilities, enhancing safety by reducing the need for manned entry into confined spaces.
+
+
+  Geo Oceans’ expertise and innovative approaches make it a valuable partner for defense-related projects, offering reliable and high-quality deliverables while ensuring safety and efficiency in subsea operations.'
+website: https://www.geooceans.com.au
+contact_name: Nick Veitch
+contact_title: Managing Director
+address: 8 Gould Street
+phone: '0400352134'
+email: nick.veitch@geooceans.com.au
+is_sme: true
+stakeholders:
+- Defence West
+- Defence Science Centre
+capability_streams:
+- Base Support
+- Education and Training
+- Intelligence; Surveillance and Reconnaissance
+- Research and Technology Development
+capability_domains:
+- Maritime Support
+- Science & Technology
+- Search & Rescue
+- Training & Simulation
+- Sustainment and maintenance
+- Uncrewed/Autonomous vehicles
+- AI & Autonomy
+- Robotics
+- Under Sea Capabilities
+industrial_capabilities:
+- Design & Engineering Services
+- Electronics & Instrumentation
+regions:
+- Perth
+latitude: -31.9143893
+longitude: 115.8152666
+logo_url: /logos/geo-oceans.jpg
+capabilities: 'Geo Oceans is a specialist subsea inspection, survey and marine science company. We specilise in diverless robotic technologies to capture and process subsea data for our clients and support them in making informed decisions. We utilise small ROVs (Remotely Operated Vehicle) and AUV (Autonomous Underwater Vehicle) inspection technology and software disruptively to eliminate the need for using commercial divers, work class ROVs and vessels where possible.
+
+
+  Geo Oceans owns and operates a fleet of over 40 small ROV systems and AUVs, including Falcons, Falcons X, Video Ray Defenders, vLBVs, SRV8s, GO ROV, i-COT ROV, and L3Harris Iver3 AUVs.
+
+
+  We have deployed underwater camera systems and software to assist in monitoring seagrass habitats for HMAS Coonawara maintenance dredging programs.
+
+
+  We regularly deploy small ROVs to perform class surveys for resources clients on FPSO hulls and inside their water ballast tanks.'
+discriminators: "* Fleet of 40 small ROVs and AUVS\n  * Team of 100 subsea industry professionals globally with deep experience developing, maintaining and operating subsea robotics, as well as subsea inspection professionals. \n  * Class Accreditations for all major vessel class societies for performing ROV UWILD and Water Ballast Tank inspection on vessels\n  * Bespoke subsea engineering capability with experience in development of tooling to solve problems for clients quickly and very effectively using small ROVs and tooling\n  * Ability to eliminate the need for diving or confined space entries in many applications."

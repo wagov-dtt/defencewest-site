@@ -1,0 +1,46 @@
+name: Otonoma
+slug: otonoma
+overview: We are in discussions with defence agencies in the US and defence contractors in Australia about the integration of our platform.
+website: https://www.otonoma.com
+contact_name: Peta Chirgwin
+contact_title: VP Global Industrial Markets
+address: Carey pl
+phone: 0404871014
+email: peta.chirgwin@otonoma.com
+is_sme: true
+capability_streams:
+- Aerial; Strike and Air Combat
+- Base Support
+- Electronic Warfare and Cyber
+- Intelligence; Surveillance and Reconnaissance
+- Logistics and Supply Chain
+- Research and Technology Development
+- Space
+capability_domains:
+- Air Traffic Management
+- Airborne Early Warning and Control
+- ICT for Operations
+- Intelligence
+- Science & Technology
+- Stable Defence ICT
+- Cyber and Information Operations
+- AI & Autonomy
+- Robotics
+industrial_capabilities:
+- None
+regions:
+- Gascoyne
+- Goldfields-Esperance
+- Great Southern
+- Kimberley
+- Mid West
+- Peel
+- Perth
+- Pilbara
+- South West
+- Wheatbelt
+latitude: -31.30005
+longitude: 115.75226
+logo_url: /logos/otonoma.png
+capabilities: Seamless collaboration between people and intelligent machines, empowering secure and efficient workflow.
+discriminators: "* Negative trust security \n  * New ai language\n  * Breaking down silos across a supply chain through intelligent orchestration integrating multiple vendors securely.\n  * Member of Robotics Australia Group"

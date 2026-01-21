@@ -1,0 +1,43 @@
+name: R Stahl Australia Pty Ltd
+slug: r-stahl
+overview: 'R.Stahl Australia was established in 2011 as a full local subsidiary of R.Stahl GmbH of Germany to service the needs of the local electrical industry in relation to the supply of equipment for explosive atmospheres. The company now designs and manufactures electrical products for the defence, aviation, marine and manufacturing industries including: lighting; installation equipment; control stations and control devices; accessories; signalling devices; load disconnect switches and motor starters; power applications and low voltage systems; remote input/ output systems; components for heating systems; wireless devices and marine solutions.'
+website: www.stahl.com.au
+contact_name: John Zagame
+contact_title: Managing Director
+address: Level 1, 100 Havelock Street
+phone: +61 477 295 111
+email: john.zagame@stahl.com.au
+is_sme: true
+stakeholders:
+- Defence Industry
+capability_streams:
+- ISCW - Intelligence, Surveillance, Reconnaissance, Space, Electronic Warfare and Cyber
+- KEYN - Key Enablers
+- AASL - Air and Sea Lift
+- MASW - Maritime and Anti-Submarine Warfare
+- LCAW - Land Combat and Amphibious Warfare
+capability_domains:
+- Air Bases
+- Amphibious Elements
+- Armour and Vehicles
+- Barracks and Training Ranges
+- Base Support and Redevelopment
+- Destroyers
+- Frigates
+- Light Helicopters
+- Maritime Support
+- Minor War Vessels
+- Multi-Purpose Vessels
+- Reconnaissance Aircraft
+- Replenishment/Supply Ships
+- Search & Rescue
+- Submarines
+- Surveillance
+- Transport Aircraft
+- Utility Helicopters
+regions:
+- Perth Metropolitan
+latitude: -31.9474376
+longitude: 115.8455144
+logo_url: /logos/r-stahl.png
+capabilities: 'Our system solution service includes a total package of electrical engineering, consulting, manufacturing, testing (including Factory Acceptance Testing (FAT)) and certifying services, including: documentation, setting into operation, on-site service and maintenance for the defence industries. Our products are suitable for hazardous area applications to meet IEC Ex, ATEX, DNV, Lloyds and other certifications.'

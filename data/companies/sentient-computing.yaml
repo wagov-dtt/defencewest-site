@@ -1,0 +1,27 @@
+name: Sentient Computing
+slug: sentient-computing
+overview: "Sentient is\n\n• 100% Australian owned and self funded  \n• Small, passionate and experienced local Australian team comprising instructional designers, engineers, developers and artists  \n• 15 years experience providing reliable and scalable technology solutions  \n• One of Unity's only two Managed Development Partners in Australia  \n• Automated digital 3D model pipeline converting complex CAD models to Unity-ready models with best-in-class optimisation  \n• Proprietary large model renderer to handle massive site environments on constrained hardware  \n• 24/7 local support available"
+website: https://sencom.com.au/
+contact_name: Craig Mitchell
+contact_title: Training Lead and Product Manager
+address: L1, 30 The Esplanade
+phone: '+61892407888'
+email: info@sencom.com.au
+is_sme: true
+stakeholders:
+- Defence Industry
+- Academic Institutions
+capability_streams:
+- KEYN - Key Enablers
+- MASW - Maritime and Anti-Submarine Warfare
+capability_domains:
+- Science & Technology
+- Training & Simulation
+industrial_capabilities:
+- Design & Engineering Services
+regions:
+- Perth Metropolitan
+latitude: -31.9561
+longitude: 115.85721
+logo_url: /logos/sentient-computing.png
+capabilities: "* Custom interactive training solutions comprising:  \n• Virtual Reality (VR), Augmented Reality (AR) and eLearning  \n• Instructional Design  \n• 3D Animations and Flythroughs\n  * Visual and interactive consultation tool supporting stakeholder engagement\n  * Productised Immersive Digital Twin solution bridging data visibility across traditional silos in a real-time, easy to use virtual environment\n  * Design, implementation and maintenance of control systems, historians and industrial internet of things (IIoT) systems"

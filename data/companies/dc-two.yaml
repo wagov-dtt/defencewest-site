@@ -1,0 +1,30 @@
+name: DC Two Limited
+slug: dc-two
+overview: 'DC Two is an Australian public company listed on the Australian Stock Exchange (**ASX**) which conducts a vertically integrated data centre and cloud services hosting business with multiple offerings based around physical data centre colocation, modular data centres, managed cloud computing platforms and software systems to manage and control the automation and self-service of the entire data centre systems
+
+
+  Since 2012, DC TWO has been building Cloud services in consultation with partners and clients alike. With the required significant skillsets and technical personnel located in WA primarily and nationally, we work with partners/clients alike to deliver best-in-breed solutions that further encompass security and governance via ISO 27001 (ISMS) frameworks'
+website: www.dctwo.com.au
+contact_name: David May
+contact_title: Business Director
+address: 27 Aspiration Circuit
+phone: 0422 860 544
+email: David.may@dctwo.com.au
+is_sme: true
+capability_streams:
+- ISCW - Intelligence, Surveillance, Reconnaissance, Space, Electronic Warfare and Cyber
+- KEYN - Key Enablers
+capability_domains:
+- Communications
+- Cyber Security
+- ICT for Operations
+- Land Communications
+- Science & Technology
+- Stable Defence ICT
+industrial_capabilities:
+- Electronics & Instrumentation
+latitude: -32.0971418
+longitude: 115.8138797
+logo_url: /logos/dc-two.png
+capabilities: "DC Two Limited provides Managed cloud services and Data Centre co-location, with services delivered from our owned ISO 27001 Cloud accredited data centres in Perth (3) and Darwin (1).\n\nThe Company delivers this via a suite of vertically integrated services covering a large range of data centre and cloud technologies, from the physical infrastructure and services, through to cloud hosted client servers and virtual desktops. All controlled, connected, accessed and managed via DC Two's in-house developed hardware and software-based self-service and automation focused products, enabling flexible and compliant control and management of the entire stack.\n\nDC Two has developed a high density and transportable modular data centre that can be deployed with agility based on durable ISO standard sea containers and non ruggedized insulated variants\n\n  * Quick and easy deployment in any location\n  * Small sized and highly transportable\n  * Only requires power and data connectivity\n\
+  \  * Very high density - up to 40kw per rack for ALL racks\n  * Suitable for cost effective, high performance or supercomputing specific workloads"

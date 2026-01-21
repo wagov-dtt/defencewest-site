@@ -1,0 +1,32 @@
+name: Marine Technicians Australia
+slug: marine-technicians
+overview: Marine Technicians Australia (MTA) is an Australian owned and operated marine- electrical company, with a major focus on defence (and related government) platforms and shore-based infrastructure. We have operations in WA, SA and NSW. We are specialists in defence maritime electrical installation, maintenance and urgent defect rectification. We are highly acclaimed and sought after by our customers for our urgent response deployment capability, and the provision of innovative solutions. Our team of dedicated technicians and electricians have earned a reputation for delivering the highest quality electrical system solutions for complex problems.
+website: www.marinetechniciansaustralia.com.au
+contact_name: Mark Brown
+contact_title: National Operations Manager
+address: 28 Stuart Drive
+phone: +61 424 439 241
+email: mark@marinetechniciansaustralia.com.au
+is_sme: true
+stakeholders:
+- Defence Industry
+capability_streams:
+- KEYN - Key Enablers
+- AASL - Air and Sea Lift
+- MASW - Maritime and Anti-Submarine Warfare
+capability_domains:
+- Communications
+- Destroyers
+- Frigates
+- Maritime Support
+- Minor War Vessels
+- Multi-Purpose Vessels
+- Replenishment/Supply Ships
+- Training & Simulation
+- Training Platforms
+regions:
+- Australian Marine Complex
+latitude: -32.1643013
+longitude: 115.7775352
+logo_url: /logos/marine-technicians.png
+capabilities: 'We provide marine electrical support to the System Program Offices and Defence prime contractors, and have become the largest specialised electrical contractor in the defence maritime industry. Our multi-disciplinary skills include: electrical installations, urgent defect repairs, maintenance, engineering changes, project management. We are sought after for first of class engineering changes and have become the preferred electrical contractor across a range of surface platforms for through-life-support. We employ highly- qualified technicians in a range of disciplines who have accumulated a depth of experience in Australian, US and other naval platforms. Our facilities are leading edge and include comprehensive maritime workshops with full product, equipment and testing capabilities, including MILSPEC fibre optics, MILSPEC cabling and termination.'

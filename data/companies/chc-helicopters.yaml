@@ -1,0 +1,25 @@
+name: CHC Helicopters (Australia)
+slug: chc-helicopters
+overview: "CHC Helicopters (Australia) started operations in 1969 and grew to become the largest commercial helicopter operator in the country. Now headquartered in Perth and part of the global CHC Helicopter group, we provide helicopter services to the technically demanding Oil & Gas (O&G), Search and Rescue (SAR) and Emergency Medical Services (EMS) sectors on behalf of leading resource companies, state and federal governments.   \n  \nWe are dedicated to getting our customers where they need to be, when they need to be there, anywhere in the world - safely and reliably."
+website: www.chcheli.com
+contact_name: David Irvine
+contact_title: Commercial Manager
+address: Level 4, 1060 Hay St
+phone: 08 6217 7401
+email: david.irvine@chcheli.com
+is_sme: true
+stakeholders:
+- Defence Industry
+capability_streams:
+- ISCW - Intelligence, Surveillance, Reconnaissance, Space, Electronic Warfare and Cyber
+- AASL - Air and Sea Lift
+capability_domains:
+- Search & Rescue
+- Special Operations
+- Utility Helicopters
+regions:
+- Perth Metropolitan
+latitude: -31.9499453
+longitude: 115.8483871
+logo_url: /logos/chc-helicopters.png
+capabilities: CHC have been supporting the Australian Defence Force since 1989 and currently support all three services with Search and Rescue (SAR) and Emergency Medical Services (EMS). We can supply innovative, flexible helicopter solutions to meet the technically demanding missions of defence with industry leading availability.
