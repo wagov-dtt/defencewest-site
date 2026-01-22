@@ -19,21 +19,34 @@ const shortOverview = company.overview?.slice(0, 80);
 
 <a href={`/company/${company.slug}`} class="map-popup-link">
   <article class="map-popup">
-    {(company.is_prime || company.is_sme) && (
-      <div class="badges">
-        {company.is_prime && <small>Prime</small>}
-        {company.is_sme && <small>SME</small>}
-      </div>
-    )}
+    {
+      (company.is_prime || company.is_sme) && (
+        <div class="badges">
+          {company.is_prime && <small>Prime</small>}
+          {company.is_sme && <small>SME</small>}
+        </div>
+      )
+    }
     <header>
-      {logoSrc ? (
-        <img src={logoSrc} alt="" />
-      ) : (
-        <span>{company.name.slice(0, 2).toUpperCase()}</span>
-      )}
+      {
+        logoSrc ? (
+          <img src={logoSrc} alt="" />
+        ) : (
+          <span>{company.name.slice(0, 2).toUpperCase()}</span>
+        )
+      }
     </header>
     <h6>{company.name}</h6>
-    {shortOverview && <p><small>{shortOverview}{company.overview && company.overview.length > 80 ? '...' : ''}</small></p>}
+    {
+      shortOverview && (
+        <p>
+          <small>
+            {shortOverview}
+            {company.overview && company.overview.length > 80 ? "..." : ""}
+          </small>
+        </p>
+      )
+    }
   </article>
 </a>
 

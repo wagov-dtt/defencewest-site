@@ -4,16 +4,24 @@
   "version": "0.1.0",
   "dependencies": {
     "@astrojs/sitemap": "^3.7.0",
-    "astro": "^5.16.11",
+    "astro": "^5.16.12",
     "astro-relative-links": "^0.4.2",
-    "fuse.js": "^7.1.0",
-    "marked": "^15.0.12",
+    "marked": "^17.0.1",
     "pagefind": "^1.4.0",
     "yaml": "^2.8.2"
   },
   "devDependencies": {
+    "@astrojs/check": "^0.9.6",
     "@playwright/test": "^1.57.0",
     "playwright": "^1.57.0",
-    "tsx": "^4.21.0"
+    "prettier": "^3.8.1",
+    "prettier-plugin-astro": "^0.14.1",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3"
+  },
+  "pnpm": {
+    "overrides": {
+      "lodash": ">=4.17.23"
+    }
   }
 }

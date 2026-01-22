@@ -1,0 +1,497 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { getCollection } from "astro:content";
+import { getTaxonomies } from "../../lib/taxonomies";
+import type { Company } from "../../content.config";
+import yaml from "yaml";
+
+const githubRepo = import.meta.env.GITHUB_REPO || "wagov-dtt/defencewest-site";
+const githubBranch = import.meta.env.GITHUB_BRANCH || "main";
+
+const { slug } = Astro.params;
+const isNew = slug === "new";
+
+export async function getStaticPaths() {
+  const companies = await getCollection("companies");
+  const paths = companies.map((entry) => ({
+    params: { slug: entry.data.slug },
+    props: { company: entry.data as Company | null },
+  }));
+  // Add 'new' route for creating new companies
+  paths.push({ params: { slug: "new" }, props: { company: null } });
+  return paths;
+}
+
+const { company } = Astro.props as { company: Company | null };
+const taxonomies = getTaxonomies();
+
+// Generate YAML for current company
+const companyYaml = company
+  ? yaml.stringify(company, { lineWidth: 0 })
+  : `name: Acme Defence Solutions
+slug: acme-defence-solutions
+overview: |
+  Provide a brief description of your company, including your core business 
+  focus, history, and key strengths in the defence and science sectors.
+website: https://www.acme-defence.example
+logo_url: /logos/acme-defence-solutions.png
+
+# Contact Information
+address: 123 Innovation Drive, Perth WA 6000
+phone: (08) 9123 4567
+email: wile.e.coyote@acme-defence.example
+
+# Location (for map display - use Google Maps to find coordinates)
+latitude: -31.9505
+longitude: 115.8605
+
+# Company Classification
+is_prime: false
+is_sme: true
+
+# Taxonomy (select from valid options shown in sidebar)
+stakeholders:
+  - Defence Industry
+capability_streams:
+  - Land Forces
+capability_domains:
+  - Cyber Security
+industrial_capabilities:
+  - Design & Engineering Services
+regions:
+  - Perth Metropolitan
+`;
+
+// GitHub URLs
+const githubEditUrl = isNew
+  ? `https://github.com/${githubRepo}/new/${githubBranch}/data/companies`
+  : `https://github.com/${githubRepo}/edit/${githubBranch}/data/companies/${slug}.yaml`;
+---
+
+<Layout title={isNew ? "Add New Company" : `Edit: ${company?.name}`}>
+  <div class="editor-layout">
+    <header class="editor-header">
+      {isNew ? (
+        <h1>Add Your Company</h1>
+        <p class="subtitle">Edit the template below with your company details.</p>
+      ) : (
+        <>
+          <h1><a href={`/company/${company?.slug}`}>{company?.name}</a></h1>
+          <p class="subtitle">Make your changes below.</p>
+        </>
+      )}
+    </header>
+
+    <div class="editor-content">
+      <div class="editor-main">
+        <textarea id="yaml-editor" rows="30" spellcheck="false"
+          >{companyYaml}</textarea
+        >
+      </div>
+
+      <aside class="editor-sidebar">
+        <article>
+          <header>Submit</header>
+          <p class="help-text">Once you're happy with your changes:</p>
+          <button id="copy-btn" class="contrast">Copy to Clipboard</button>
+          <a
+            id="github-btn"
+            href={githubEditUrl}
+            target="_blank"
+            rel="noopener"
+            role="button"
+            class="outline">Paste on GitHub</a
+          >
+          <p class="help-text" style="margin-top: 0.5rem;">
+            Or email to <a href="mailto:defencewest@dpc.wa.gov.au">defencewest@dpc.wa.gov.au</a>
+          </p>
+          <p class="help-text">
+            Include your logo if adding or updating.
+          </p>
+        </article>
+
+        <article>
+          <div id="validation-status">
+            <p class="valid hidden">Valid</p>
+            <p class="invalid hidden">Error</p>
+            <pre id="validation-error" class="hidden"></pre>
+          </div>
+        </article>
+
+        <article>
+          <header>Formatting</header>
+          <p class="help-text">
+            <code>overview</code>, <code>capabilities</code>, and <code>discriminators</code> support Markdown (links, lists, bold, etc).
+          </p>
+        </article>
+
+        <article>
+          <header>
+            <a href={`https://github.com/${githubRepo}/edit/${githubBranch}/data/taxonomies.yaml`} target="_blank" rel="noopener">
+              Valid Options
+            </a>
+          </header>
+          <details>
+            <summary>Stakeholders ({taxonomies.stakeholders.length})</summary>
+            <ul class="taxonomy-list">
+              {
+                taxonomies.stakeholders.map((s: string) => (
+                  <li>
+                    <code>{s}</code>
+                  </li>
+                ))
+              }
+            </ul>
+          </details>
+          <details>
+            <summary
+              >Capability Streams ({
+                Object.keys(taxonomies.capability_streams).length
+              })</summary
+            >
+            <ul class="taxonomy-list">
+              {
+                Object.keys(taxonomies.capability_streams).map((s: string) => (
+                  <li>
+                    <code>{s}</code>
+                  </li>
+                ))
+              }
+            </ul>
+          </details>
+          <details>
+            <summary>Capability Domains ({taxonomies.capability_domains.length})</summary>
+            <ul class="taxonomy-list">
+              {
+                taxonomies.capability_domains.map((s: string) => (
+                  <li>
+                    <code>{s}</code>
+                  </li>
+                ))
+              }
+            </ul>
+          </details>
+          <details>
+            <summary>Industrial Capabilities ({taxonomies.industrial_capabilities.length})</summary>
+            <ul class="taxonomy-list">
+              {
+                taxonomies.industrial_capabilities.map((s: string) => (
+                  <li>
+                    <code>{s}</code>
+                  </li>
+                ))
+              }
+            </ul>
+          </details>
+          <details>
+            <summary>Regions ({taxonomies.regions.length})</summary>
+            <ul class="taxonomy-list">
+              {
+                taxonomies.regions.map((s: string) => (
+                  <li>
+                    <code>{s}</code>
+                  </li>
+                ))
+              }
+            </ul>
+          </details>
+        </article>
+      </aside>
+    </div>
+  </div>
+</Layout>
+
+<script type="module" define:vars={{ slug, isNew, taxonomies, githubRepo, githubBranch }}>
+  import jsyaml from "https://esm.sh/js-yaml@4";
+
+  const editor = document.getElementById("yaml-editor");
+  const validStatus = document.querySelector("#validation-status .valid");
+  const invalidStatus = document.querySelector("#validation-status .invalid");
+  const errorPre = document.getElementById("validation-error");
+  const copyBtn = document.getElementById("copy-btn");
+  const githubBtn = document.getElementById("github-btn");
+
+  // Schema definition
+  const schema = {
+    required: ["name", "slug"],
+    strings: [
+      "name",
+      "slug",
+      "overview",
+      "website",
+      "logo_url",
+      "contact_name",
+      "contact_title",
+      "address",
+      "phone",
+      "email",
+      "capabilities",
+      "discriminators",
+    ],
+    numbers: ["latitude", "longitude"],
+    booleans: ["is_prime", "is_sme"],
+    arrays: [
+      "stakeholders",
+      "capability_streams",
+      "capability_domains",
+      "industrial_capabilities",
+      "regions",
+    ],
+    taxonomyFields: {
+      stakeholders: taxonomies.stakeholders,
+      capability_streams: Object.keys(taxonomies.capability_streams),
+      capability_domains: taxonomies.capability_domains,
+      industrial_capabilities: taxonomies.industrial_capabilities,
+      regions: taxonomies.regions,
+    },
+  };
+
+  function getSlugFromYaml() {
+    const match = editor.value.match(/^slug:\s*(.+)$/m);
+    return match ? match[1].trim() : isNew ? "new-company" : slug;
+  }
+
+  function updateGithubLink() {
+    const currentSlug = getSlugFromYaml();
+    const filePath = `data/companies/${currentSlug}.yaml`;
+
+    let url;
+    if (isNew) {
+      url = `https://github.com/${githubRepo}/new/${githubBranch}/data/companies?filename=${currentSlug}.yaml`;
+    } else {
+      url = `https://github.com/${githubRepo}/edit/${githubBranch}/${filePath}`;
+    }
+    githubBtn.href = url;
+  }
+
+  function validateYaml() {
+    const errors = [];
+
+    try {
+      // Parse YAML
+      const data = jsyaml.load(editor.value);
+
+      if (!data || typeof data !== "object") {
+        throw new Error("YAML must be an object");
+      }
+
+      // Check required fields
+      for (const field of schema.required) {
+        if (!data[field]) {
+          errors.push(`Missing required field: ${field}`);
+        }
+      }
+
+      // Check slug format
+      if (data.slug && !/^[a-z0-9-]+$/.test(data.slug)) {
+        errors.push("slug must be lowercase alphanumeric with hyphens only");
+      }
+
+      // Check field types
+      for (const field of schema.strings) {
+        if (data[field] !== undefined && typeof data[field] !== "string") {
+          errors.push(`${field} must be a string`);
+        }
+      }
+
+      for (const field of schema.numbers) {
+        if (data[field] !== undefined && typeof data[field] !== "number") {
+          errors.push(`${field} must be a number`);
+        }
+      }
+
+      for (const field of schema.booleans) {
+        if (data[field] !== undefined && typeof data[field] !== "boolean") {
+          errors.push(`${field} must be true or false`);
+        }
+      }
+
+      for (const field of schema.arrays) {
+        if (data[field] !== undefined) {
+          if (!Array.isArray(data[field])) {
+            errors.push(`${field} must be an array`);
+          } else {
+            // Check taxonomy values
+            const validValues = schema.taxonomyFields[field];
+            if (validValues) {
+              for (const val of data[field]) {
+                if (!validValues.includes(val)) {
+                  errors.push(`${field}: "${val}" is not a valid option`);
+                }
+              }
+            }
+          }
+        }
+      }
+
+      // Check for unknown fields
+      const knownFields = [
+        ...schema.strings,
+        ...schema.numbers,
+        ...schema.booleans,
+        ...schema.arrays,
+      ];
+      for (const key of Object.keys(data)) {
+        if (!knownFields.includes(key)) {
+          errors.push(`Unknown field: ${key}`);
+        }
+      }
+    } catch (e) {
+      errors.push(`YAML Parse Error: ${e.message}`);
+    }
+
+    if (errors.length === 0) {
+      validStatus.classList.remove("hidden");
+      invalidStatus.classList.add("hidden");
+      errorPre.classList.add("hidden");
+      return true;
+    } else {
+      validStatus.classList.add("hidden");
+      invalidStatus.classList.remove("hidden");
+      errorPre.classList.remove("hidden");
+      errorPre.textContent = errors.join("\n");
+      return false;
+    }
+  }
+
+  // Debounce validation
+  let timeout;
+  editor.addEventListener("input", () => {
+    clearTimeout(timeout);
+    timeout = setTimeout(() => {
+      validateYaml();
+      updateGithubLink();
+    }, 300);
+  });
+  validateYaml();
+  updateGithubLink();
+
+  copyBtn.addEventListener("click", () => {
+    navigator.clipboard.writeText(editor.value);
+    copyBtn.textContent = "Copied!";
+    setTimeout(() => (copyBtn.textContent = "Copy to Clipboard"), 2000);
+  });
+</script>
+
+<style>
+  .editor-layout {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .editor-header {
+    margin-bottom: 1.5rem;
+  }
+
+  .editor-header h1 {
+    margin: 0;
+  }
+
+  .editor-header h1 a {
+    text-decoration: none;
+  }
+
+  .editor-header h1 a:hover {
+    text-decoration: underline;
+  }
+
+  .editor-header .subtitle {
+    margin: 0.5rem 0 0 0;
+    opacity: 0.7;
+  }
+
+  .editor-content {
+    display: grid;
+    grid-template-columns: 1fr 340px;
+    gap: 1.5rem;
+    align-items: start;
+  }
+
+  @media (max-width: 900px) {
+    .editor-content {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  #yaml-editor {
+    font-family: monospace;
+    font-size: 0.85rem;
+    line-height: 1.4;
+    resize: vertical;
+  }
+
+  .editor-sidebar {
+    font-size: 0.85rem;
+  }
+
+  .editor-sidebar article {
+    margin-bottom: 1rem;
+  }
+
+  .editor-sidebar article header {
+    font-weight: 600;
+    font-size: 0.8rem;
+    padding: 0.5rem;
+    margin: -1rem -1rem 0.75rem -1rem;
+    background: var(--pico-muted-border-color);
+  }
+
+  .editor-sidebar button,
+  .editor-sidebar a[role="button"] {
+    width: 100%;
+    margin-bottom: 0.5rem;
+    font-size: 0.85rem;
+  }
+
+  .help-text {
+    display: block;
+    font-size: 0.8rem;
+    opacity: 0.7;
+    line-height: 1.4;
+  }
+
+  #validation-status .valid {
+    color: #22c55e;
+    margin: 0;
+  }
+
+  #validation-status .invalid {
+    color: #ef4444;
+    margin: 0;
+  }
+
+  #validation-error {
+    font-size: 0.75rem;
+    background: #fef2f2;
+    color: #dc2626;
+    padding: 0.5rem;
+    border-radius: 4px;
+    margin-top: 0.5rem;
+    white-space: pre-wrap;
+  }
+
+  .editor-sidebar details {
+    font-size: 0.8rem;
+  }
+
+  .editor-sidebar summary {
+    font-size: 0.8rem;
+    cursor: pointer;
+  }
+
+  .taxonomy-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    max-height: 150px;
+    overflow-y: auto;
+  }
+
+  .taxonomy-list li {
+    padding: 0.1rem 0;
+  }
+
+  .taxonomy-list code {
+    font-size: 0.7rem;
+  }
+</style>

@@ -9,37 +9,24 @@ lychee = "latest"
 PYTHONDONTWRITEBYTECODE = "1"
 
 [tasks.setup]
-description = "Install all dependencies"
 run = ["uv sync", "pnpm install"]
 
 [tasks.dev]
-description = "Start dev server"
 run = "pnpm exec astro dev"
 
 [tasks.build]
-description = "Build static site (with lint and link check)"
-run = """
-uv run python scripts/lint.py
-pnpm exec astro build
-lychee dist/ --no-progress || true
-"""
+run = ["uv run python scripts/lint.py", "pnpm exec astro build", "mise run linkcheck"]
 
-[tasks.preview]
-description = "Preview built site"
-run = "pnpm exec astro preview"
+[tasks.linkcheck]
+sources = ["data/**/*.yaml", "src/**/*.astro"]
+outputs = [".lycheecache"]
+run = "lychee dist/ src/**/*.astro --no-progress --cache --max-cache-age 7d || true"
 
 [tasks.lint]
-description = "Lint YAML data files"
 run = "uv run python scripts/lint.py"
 
-[tasks.scrape]
-description = "Scrape company data from source"
-run = "uv run python scripts/scrape.py"
+[tasks.format]
+run = "pnpm exec prettier --write 'src/**/*.{astro,ts,js,css}' 'public/**/*.css'"
 
-[tasks."sync:export"]
-description = "Export YAML companies to JSON"
-run = "uv run python scripts/sync.py --export"
-
-[tasks."sync:import"]
-description = "Import JSON back to YAML files"
-run = "uv run python scripts/sync.py --import"
+[tasks.check]
+run = "pnpm exec astro check"

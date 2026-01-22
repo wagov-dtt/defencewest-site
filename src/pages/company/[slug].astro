@@ -1,14 +1,18 @@
 ---
-import Layout from '../../layouts/Layout.astro';
-import { getCollection } from 'astro:content';
-import type { Company } from '../../content.config';
-import { marked } from 'marked';
-import { getStreamIcons } from '../../lib/taxonomies';
-import { googleMapsUrl, normalizeWebsiteUrl, displayWebsite } from '../../lib/urls';
+import Layout from "../../layouts/Layout.astro";
+import { getCollection } from "astro:content";
+import type { Company } from "../../content.config";
+import { marked } from "marked";
+import { getStreamIcons } from "../../lib/taxonomies";
+import {
+  googleMapsUrl,
+  normalizeWebsiteUrl,
+  displayWebsite,
+} from "../../lib/urls";
 
 export async function getStaticPaths() {
-  const companies = await getCollection('companies');
-  return companies.map(entry => ({
+  const companies = await getCollection("companies");
+  return companies.map((entry) => ({
     params: { slug: entry.data.slug },
     props: { company: entry.data },
   }));
@@ -18,37 +22,49 @@ const streamIcons = getStreamIcons();
 const { company } = Astro.props as { company: Company };
 
 // Render markdown fields to HTML
-const overviewHtml = company.overview ? marked.parse(company.overview) : '';
-const capabilitiesHtml = company.capabilities ? marked.parse(company.capabilities) : '';
-const discriminatorsHtml = company.discriminators ? marked.parse(company.discriminators) : '';
+const overviewHtml = company.overview ? marked.parse(company.overview) : "";
+const capabilitiesHtml = company.capabilities
+  ? marked.parse(company.capabilities)
+  : "";
+const discriminatorsHtml = company.discriminators
+  ? marked.parse(company.discriminators)
+  : "";
 
 const websiteUrl = normalizeWebsiteUrl(company.website);
 const logoSrc = company.logo_url;
 const hasLocation = company.latitude && company.longitude;
-const mapsUrl = googleMapsUrl(company.latitude, company.longitude, company.address);
+const mapsUrl = googleMapsUrl(
+  company.latitude,
+  company.longitude,
+  company.address,
+);
 
-const siteUrl = 'https://defencewest.wa.gov.au';
+const siteUrl = "https://defencewest.wa.gov.au";
 const jsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'Organization',
+  "@context": "https://schema.org",
+  "@type": "Organization",
   name: company.name,
   url: company.website ? websiteUrl : `${siteUrl}/company/${company.slug}`,
   description: company.overview?.slice(0, 300),
-  ...(company.logo_url && { logo: company.logo_url.startsWith('/') ? `${siteUrl}${company.logo_url}` : company.logo_url }),
-  ...(company.address && { 
+  ...(company.logo_url && {
+    logo: company.logo_url.startsWith("/")
+      ? `${siteUrl}${company.logo_url}`
+      : company.logo_url,
+  }),
+  ...(company.address && {
     address: {
-      '@type': 'PostalAddress',
+      "@type": "PostalAddress",
       streetAddress: company.address,
-      addressRegion: 'Western Australia',
-      addressCountry: 'AU'
-    }
+      addressRegion: "Western Australia",
+      addressCountry: "AU",
+    },
   }),
   ...(company.phone && { telephone: company.phone }),
   ...(company.email && { email: company.email }),
 };
 ---
 
-<Layout 
+<Layout
   title={`${company.name} - WA Defence Directory`}
   description={company.overview?.slice(0, 160)}
   jsonLd={jsonLd}
@@ -58,158 +74,238 @@ const jsonLd = {
     <main data-pagefind-body class="company-content">
       <!-- Left Column: Content -->
       <div class="content-column">
-        {company.overview && (
-          <section>
-            <h2>Overview</h2>
-            <div set:html={overviewHtml} />
-          </section>
-        )}
+        {
+          company.overview && (
+            <section>
+              <h2>Overview</h2>
+              <div set:html={overviewHtml} />
+            </section>
+          )
+        }
 
-        {company.capabilities && (
-          <section>
-            <h2>Capabilities</h2>
-            <div set:html={capabilitiesHtml} />
-          </section>
-        )}
+        {
+          company.capabilities && (
+            <section>
+              <h2>Capabilities</h2>
+              <div set:html={capabilitiesHtml} />
+            </section>
+          )
+        }
 
-        {company.discriminators && (
-          <section>
-            <h2>Discriminators</h2>
-            <div set:html={discriminatorsHtml} />
-          </section>
-        )}
+        {
+          company.discriminators && (
+            <section>
+              <h2>Discriminators</h2>
+              <div set:html={discriminatorsHtml} />
+            </section>
+          )
+        }
       </div>
 
       <!-- Right Column: Company Info -->
       <aside class="info-column">
         <!-- Company Header -->
         <div class="company-header">
-          {logoSrc && (
-            <img src={logoSrc} alt="" class="company-logo" />
-          )}
+          {logoSrc && <img src={logoSrc} alt="" class="company-logo" />}
           <hgroup>
             <h1 data-pagefind-meta="title">{company.name}</h1>
-            {(company.is_prime || company.is_sme) && (
-              <p>
-                {company.is_prime && <small>Prime Contractor</small>}
-                {company.is_prime && company.is_sme && <small> · </small>}
-                {company.is_sme && <small>SME</small>}
-              </p>
-            )}
+            {
+              (company.is_prime || company.is_sme) && (
+                <p>
+                  {company.is_prime && <small>Prime Contractor</small>}
+                  {company.is_prime && company.is_sme && <small> · </small>}
+                  {company.is_sme && <small>SME</small>}
+                </p>
+              )
+            }
           </hgroup>
         </div>
-          
-        {(company.phone || company.email || company.address || company.website) && (
-          <div class="contact-info">
-            {company.website && <p><a href={websiteUrl} target="_blank" rel="noopener">{displayWebsite(company.website)}</a></p>}
-            {company.phone && <p><a href={`tel:${company.phone}`}>{company.phone}</a></p>}
-            {company.email && <p><a href={`mailto:${company.email}`}>{company.email}</a></p>}
-            {company.address && (
-              <p>
-                {mapsUrl ? (
-                  <a href={mapsUrl} target="_blank" rel="noopener"><small>{company.address}</small></a>
-                ) : (
-                  <small>{company.address}</small>
-                )}
-              </p>
-            )}
-          </div>
-        )}
+
+        {
+          (company.phone ||
+            company.email ||
+            company.address ||
+            company.website) && (
+            <div class="contact-info">
+              {company.website && (
+                <p>
+                  <a href={websiteUrl} target="_blank" rel="noopener">
+                    {displayWebsite(company.website)}
+                  </a>
+                </p>
+              )}
+              {company.phone && (
+                <p>
+                  <a href={`tel:${company.phone}`}>{company.phone}</a>
+                </p>
+              )}
+              {company.email && (
+                <p>
+                  <a href={`mailto:${company.email}`}>{company.email}</a>
+                </p>
+              )}
+              {company.address && (
+                <p>
+                  {mapsUrl ? (
+                    <a href={mapsUrl} target="_blank" rel="noopener">
+                      <small>{company.address}</small>
+                    </a>
+                  ) : (
+                    <small>{company.address}</small>
+                  )}
+                </p>
+              )}
+            </div>
+          )
+        }
 
         <!-- Map -->
-        {hasLocation && (
-          <a href={mapsUrl} target="_blank" rel="noopener" class="map-wrapper">
-            <div id="mini-map" data-lat={company.latitude} data-lng={company.longitude}></div>
-          </a>
-        )}
+        {
+          hasLocation && (
+            <a
+              href={mapsUrl}
+              target="_blank"
+              rel="noopener"
+              class="map-wrapper"
+            >
+              <div
+                id="mini-map"
+                data-lat={company.latitude}
+                data-lng={company.longitude}
+              />
+            </a>
+          )
+        }
 
         <!-- Taxonomy -->
         <div class="taxonomy-section">
-          {company.capability_streams && company.capability_streams.length > 0 && (
-            <>
-              <strong class="sidebar-section">Capability Streams</strong>
-              <div class="stream-icons">
-                {company.capability_streams.map(stream => {
-                  const iconUrl = streamIcons[stream];
-                  return iconUrl ? (
-                    <a href={`/?capability_streams=${encodeURIComponent(stream)}`} title={stream}>
-                      <img src={iconUrl} alt={stream} />
-                    </a>
-                  ) : null;
-                })}
-              </div>
-            </>
-          )}
+          {
+            company.capability_streams &&
+              company.capability_streams.length > 0 && (
+                <>
+                  <strong class="sidebar-section">Capability Streams</strong>
+                  <div class="stream-icons">
+                    {company.capability_streams.map((stream) => {
+                      const iconUrl = streamIcons[stream];
+                      return iconUrl ? (
+                        <a
+                          href={`/?capability_streams=${encodeURIComponent(stream)}`}
+                          title={stream}
+                        >
+                          <img src={iconUrl} alt={stream} />
+                        </a>
+                      ) : null;
+                    })}
+                  </div>
+                </>
+              )
+          }
 
-          {company.stakeholders && company.stakeholders.length > 0 && (
-            <>
-              <strong class="sidebar-section">Stakeholders</strong>
-              <ul>
-                {company.stakeholders.map(item => (
-                  <li><a href={`/?stakeholders=${encodeURIComponent(item)}`}>{item}</a></li>
-                ))}
-              </ul>
-            </>
-          )}
+          {
+            company.stakeholders && company.stakeholders.length > 0 && (
+              <>
+                <strong class="sidebar-section">Stakeholders</strong>
+                <ul>
+                  {company.stakeholders.map((item) => (
+                    <li>
+                      <a href={`/?stakeholders=${encodeURIComponent(item)}`}>
+                        {item}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </>
+            )
+          }
 
-          {company.capability_domains && company.capability_domains.length > 0 && (
-            <>
-              <strong class="sidebar-section">Capability Domains</strong>
-              <ul>
-                {company.capability_domains.map(item => (
-                  <li><a href={`/?capability_domains=${encodeURIComponent(item)}`}>{item}</a></li>
-                ))}
-              </ul>
-            </>
-          )}
+          {
+            company.capability_domains &&
+              company.capability_domains.length > 0 && (
+                <>
+                  <strong class="sidebar-section">Capability Domains</strong>
+                  <ul>
+                    {company.capability_domains.map((item) => (
+                      <li>
+                        <a
+                          href={`/?capability_domains=${encodeURIComponent(item)}`}
+                        >
+                          {item}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </>
+              )
+          }
 
-          {company.industrial_capabilities && company.industrial_capabilities.length > 0 && (
-            <>
-              <strong class="sidebar-section">Industrial Capabilities</strong>
-              <ul>
-                {company.industrial_capabilities.map(item => (
-                  <li><a href={`/?industrial_capabilities=${encodeURIComponent(item)}`}>{item}</a></li>
-                ))}
-              </ul>
-            </>
-          )}
+          {
+            company.industrial_capabilities &&
+              company.industrial_capabilities.length > 0 && (
+                <>
+                  <strong class="sidebar-section">
+                    Industrial Capabilities
+                  </strong>
+                  <ul>
+                    {company.industrial_capabilities.map((item) => (
+                      <li>
+                        <a
+                          href={`/?industrial_capabilities=${encodeURIComponent(item)}`}
+                        >
+                          {item}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </>
+              )
+          }
 
-          {company.regions && company.regions.length > 0 && (
-            <>
-              <strong class="sidebar-section">Regions</strong>
-              <ul>
-                {company.regions.map(item => (
-                  <li><a href={`/?regions=${encodeURIComponent(item)}`}>{item}</a></li>
-                ))}
-              </ul>
-            </>
-          )}
+          {
+            company.regions && company.regions.length > 0 && (
+              <>
+                <strong class="sidebar-section">Regions</strong>
+                <ul>
+                  {company.regions.map((item) => (
+                    <li>
+                      <a href={`/?regions=${encodeURIComponent(item)}`}>
+                        {item}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </>
+            )
+          }
         </div>
       </aside>
     </main>
+
+    <footer class="company-footer">
+      <a href={`/edit/${company.slug}`} class="edit-link">Edit this listing</a>
+    </footer>
   </div>
 </Layout>
 
 <script is:inline>
-  document.addEventListener('DOMContentLoaded', () => {
+  document.addEventListener("DOMContentLoaded", () => {
     // Initialize map
-    const mapEl = document.getElementById('mini-map');
+    const mapEl = document.getElementById("mini-map");
     if (!mapEl || !window.maplibregl) return;
-    
+
     const lat = parseFloat(mapEl.dataset.lat);
     const lng = parseFloat(mapEl.dataset.lng);
     if (isNaN(lat) || isNaN(lng)) return;
 
     const map = new maplibregl.Map({
       container: mapEl,
-      style: 'https://basemaps.cartocdn.com/gl/voyager-gl-style/style.json',
+      style: "https://basemaps.cartocdn.com/gl/voyager-gl-style/style.json",
       center: [lng, lat],
       zoom: 14,
       interactive: false,
-      attributionControl: false
+      attributionControl: false,
     });
 
-    new maplibregl.Marker({ color: '#0172ad' })
+    new maplibregl.Marker({ color: "#0172ad" })
       .setLngLat([lng, lat])
       .addTo(map);
   });
@@ -364,5 +460,21 @@ const jsonLd = {
     height: 36px;
     border-radius: var(--pico-border-radius);
     object-fit: cover;
+  }
+
+  /* Footer with edit link */
+  .company-footer {
+    margin-top: calc(var(--pico-spacing) * 2);
+    text-align: right;
+  }
+
+  .edit-link {
+    font-size: 0.8rem;
+    color: var(--pico-muted-color);
+    text-decoration: none;
+  }
+
+  .edit-link:hover {
+    text-decoration: underline;
   }
 </style>
