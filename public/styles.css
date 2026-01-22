@@ -263,6 +263,16 @@
   cursor: pointer;
 }
 
+/* Larger touch targets on mobile */
+@media (max-width: 768px) {
+  #map-host .map-marker,
+  .map-marker.map-marker {
+    width: 24px;
+    height: 24px;
+    border-width: 3px;
+  }
+}
+
 #map-host .map-marker:hover,
 .map-marker.map-marker:hover {
   transform: scale(1.2);
@@ -280,6 +290,25 @@
   font-size: 1.25rem;
   padding: 0.25rem 0.5rem;
   color: var(--pico-muted-color);
+}
+
+/* Mobile-friendly map popups */
+@media (max-width: 768px) {
+  #map-host .maplibregl-popup,
+  .maplibregl-popup.maplibregl-popup {
+    max-width: 85vw !important;
+  }
+
+  #map-host .maplibregl-popup-close-button,
+  .maplibregl-popup-close-button.maplibregl-popup-close-button {
+    font-size: 1.5rem;
+    padding: 0.5rem 0.75rem;
+  }
+
+  #map-host .maplibregl-popup-content .company-card article,
+  .maplibregl-popup-content .company-card article {
+    padding: 1rem;
+  }
 }
 
 /* Fix attribution */
