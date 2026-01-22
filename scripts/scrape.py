@@ -7,22 +7,32 @@ Extracts company data and saves as YAML files.
 import asyncio
 import json
 import re
+import shutil
+import subprocess
 import sys
 from pathlib import Path
-from urllib.parse import urlparse, unquote, parse_qs
+from urllib.parse import urlparse
 
+import diskcache
 import httpx
 import html2text
 import yaml
 from selectolax.parser import HTMLParser
+
+# Check if mogrify (ImageMagick) is available for image optimization
+HAS_MOGRIFY = shutil.which("mogrify") is not None
 
 BASE_URL = (
     "https://www.deed.wa.gov.au/wa-defence-industry-and-science-capability-directory"
 )
 MAP_URL = "https://www.deed.wa.gov.au/defence-map"
 DATA_DIR = Path(__file__).parent.parent / "data"
+CACHE_DIR = DATA_DIR / "cache"
 LOGOS_DIR = Path(__file__).parent.parent / "public" / "logos"
 ICONS_DIR = Path(__file__).parent.parent / "public" / "icons"
+
+# Initialize disk cache (no expiry by default)
+cache = diskcache.Cache(CACHE_DIR / "diskcache")
 
 # HTML to markdown converter
 H2T = html2text.HTML2Text()
@@ -92,62 +102,104 @@ def html_to_md(html: str) -> str:
     if not html:
         return ""
     text = H2T.handle(html).strip()
-    return re.sub(r"\n{3,}", "\n\n", text)
+    # Collapse multiple newlines
+    text = re.sub(r"\n{3,}", "\n\n", text)
+    # Fix arrow bullets (-> or –>) to proper markdown lists
+    text = re.sub(r"^[\-–]>\s*", "- ", text, flags=re.MULTILINE)
+    # Fix inconsistent list markers (* to -)
+    text = re.sub(r"^\*\s+", "- ", text, flags=re.MULTILINE)
+    # Remove trailing backslashes (HTML line break artifacts)
+    text = re.sub(r"\\\s*$", "", text, flags=re.MULTILINE)
+    # Clean up excessive trailing whitespace on lines
+    text = re.sub(r"[ \t]+$", "", text, flags=re.MULTILINE)
+    return text.strip()
 
 
-async def search_company_url(
-    client: httpx.AsyncClient, company_name: str
-) -> str | None:
-    """Search DuckDuckGo for company website as fallback."""
+def build_full_address(d: dict) -> str:
+    """Combine Address, Suburb, State, Postcode into a full address string."""
+    parts = []
+
+    address = d.get("Address", "").strip()
+    if address:
+        parts.append(address)
+
+    suburb = d.get("Suburb", "").strip()
+    state = d.get("State", "").strip()
+    postcode = d.get("Postcode", "").strip()
+
+    # Some suburbs already include state (e.g., "Rockingham WA"), so avoid duplication
+    if suburb:
+        # Remove state from suburb if it's already there
+        if state and suburb.endswith(f" {state}"):
+            suburb = suburb[: -len(f" {state}")]
+
+        location_parts = [suburb]
+        if state:
+            location_parts.append(state)
+        if postcode:
+            location_parts.append(postcode)
+
+        parts.append(" ".join(location_parts))
+
+    return ", ".join(parts)
+
+
+def optimize_image(filepath: Path) -> Path:
+    """Optimize image with mogrify if available. Returns final path (may change extension)."""
+    if not HAS_MOGRIFY or not filepath.exists():
+        return filepath
+
     try:
-        query = f"{company_name} official website"
-        search_url = f"https://html.duckduckgo.com/html/?q={query.replace(' ', '+')}"
+        # Convert to PNG and optimize (strip metadata, reasonable quality)
+        # This handles various input formats and normalizes to PNG
+        new_path = filepath.with_suffix(".png")
+        subprocess.run(
+            [
+                "mogrify",
+                "-format",
+                "png",
+                "-strip",  # Remove metadata
+                "-resize",
+                "400x400>",  # Resize if larger than 400x400, keep aspect
+                str(filepath),
+            ],
+            check=True,
+            capture_output=True,
+        )
+        # If original wasn't PNG, mogrify creates new file and keeps old one
+        if filepath.suffix.lower() != ".png" and new_path.exists():
+            filepath.unlink()  # Remove original
+            filepath = new_path
+    except subprocess.CalledProcessError as e:
+        print(
+            f"  Warning: mogrify failed for {filepath.name}: {e.stderr.decode()[:100]}"
+        )
 
-        r = await client.get(search_url, headers={"User-Agent": "Mozilla/5.0"})
-        tree = HTMLParser(r.text)
+    return filepath
 
-        # Get first result that looks like a company website
-        for result in tree.css("a.result__a"):
-            href = result.attributes.get("href")
-            if not href:
-                continue
-            # DuckDuckGo wraps URLs, extract the actual URL
-            if "uddg=" in href:
-                query_str = href.split("?")[1] if "?" in href else ""
-                parsed = parse_qs(query_str)
-                if "uddg" in parsed:
-                    url = unquote(parsed["uddg"][0])
-                    # Skip social media, directories, etc.
-                    skip = [
-                        "linkedin.com",
-                        "facebook.com",
-                        "twitter.com",
-                        "youtube.com",
-                        "yellowpages",
-                        "yelp.com",
-                        "wikipedia",
-                    ]
-                    if not any(s in url.lower() for s in skip):
-                        return url.rstrip("/")
-    except Exception as e:
-        print(f"    Search failed for {company_name}: {e}")
-    return None
+
+def fetch_html(
+    client: httpx.Client, url: str, cache_key: str, fresh: bool = False
+) -> str:
+    """Fetch HTML from URL, using cache unless fresh=True."""
+    if not fresh and cache_key in cache:
+        print(f"Using cached {cache_key}")
+        return cache[cache_key]
+
+    print(f"Fetching {url}...")
+    html = client.get(url).text
+    cache[cache_key] = html
+    return html
 
 
 async def resolve_url(
     client: httpx.AsyncClient,
     url: str,
-    company_name: str = "",
-    search_fallback: bool = False,
-    semaphore: asyncio.Semaphore | None = None,
-) -> tuple[str, str | None]:
-    """Follow redirects and return the final URL, ignoring SSL errors.
-
-    Returns (resolved_url, potential_url) where potential_url is set if search
-    fallback found a different URL for an unreachable site.
-    """
+    semaphore: asyncio.Semaphore,
+) -> str:
+    """Follow redirects and return the final URL, ignoring SSL errors."""
     if not url:
-        return "", None
+        return ""
 
     # Clean up malformed URLs (e.g., "https:// https://example.com")
     url = url.strip()
@@ -158,63 +210,72 @@ async def resolve_url(
     if not url.startswith(("http://", "https://")):
         url = f"https://{url}"
 
-    # Use a dummy context manager if no semaphore provided
-    async def _resolve():
+    async with semaphore:
         try:
             r = await client.head(url, follow_redirects=True)
             if r.status_code < 400:
-                final_url = str(r.url).rstrip("/")
-                return final_url, None
+                return str(r.url).rstrip("/")
         except Exception:
             pass
 
-        # If we get here, the URL is unreachable
-        if search_fallback and company_name:
-            searched = await search_company_url(client, company_name)
-            if searched and searched != original_url:
-                # Return original URL but note the potential replacement
-                return original_url.rstrip("/"), searched
-
         # Return original with https if nothing worked
-        clean_original = original_url.rstrip("/")
-        if not clean_original.startswith("http"):
-            clean_original = f"https://{clean_original}"
-        return clean_original, None
-
-    if semaphore:
-        async with semaphore:
-            return await _resolve()
-    else:
-        return await _resolve()
+        if not original_url.startswith("http"):
+            return f"https://{original_url.rstrip('/')}"
+        return original_url.rstrip("/")
 
 
 def download_image(
     client: httpx.Client, url: str, dest_dir: Path, filename: str
-) -> str | None:
-    """Download an image and return the local path."""
+) -> tuple[str | None, bool]:
+    """Download an image, optimize it, and return (local_path, was_downloaded).
+
+    Returns tuple of (path, downloaded) where downloaded is True if freshly downloaded.
+    """
     if not url:
-        return None
+        return None, False
     if url.startswith("/"):
         url = f"https://deed.wa.gov.au{url}"
 
-    try:
-        r = client.get(url, follow_redirects=True)
-        r.raise_for_status()
+    # Determine extension from URL
+    path = urlparse(url).path.lower()
+    ext = ".png"
+    for e in [".png", ".jpg", ".jpeg", ".gif", ".svg", ".webp"]:
+        if e in path:
+            ext = ".jpg" if e == ".jpeg" else e
+            break
 
-        path = urlparse(url).path.lower()
-        ext = ".png"
-        for e in [".png", ".jpg", ".jpeg", ".gif", ".svg", ".webp"]:
-            if e in path:
-                ext = ".jpg" if e == ".jpeg" else e
-                break
+    dest_dir.mkdir(parents=True, exist_ok=True)
 
-        dest_dir.mkdir(parents=True, exist_ok=True)
-        filepath = dest_dir / f"{filename}{ext}"
-        filepath.write_bytes(r.content)
-        return f"/{dest_dir.name}/{filename}{ext}"
-    except httpx.HTTPError as e:
-        print(f"  Warning: download failed for {filename}: {e}")
-        return None
+    # Check if optimized PNG already exists (mogrify converts to PNG)
+    png_path = dest_dir / f"{filename}.png"
+    if png_path.exists():
+        return f"/{dest_dir.name}/{png_path.name}", False
+
+    # Check if file with original extension exists
+    filepath = dest_dir / f"{filename}{ext}"
+    if filepath.exists():
+        return f"/{dest_dir.name}/{filepath.name}", False
+
+    # Check cache for image bytes
+    cache_key = f"image:{url}"
+    if cache_key in cache:
+        image_bytes = cache[cache_key]
+    else:
+        try:
+            r = client.get(url, follow_redirects=True)
+            r.raise_for_status()
+            image_bytes = r.content
+            cache[cache_key] = image_bytes
+        except httpx.HTTPError as e:
+            print(f"  Warning: download failed for {filename}: {e}")
+            return None, False
+
+    filepath.write_bytes(image_bytes)
+
+    # Optimize with mogrify if available (may change extension to .png)
+    filepath = optimize_image(filepath)
+
+    return f"/{dest_dir.name}/{filepath.name}", True
 
 
 def extract_companies(html: str) -> list[dict]:
@@ -266,32 +327,22 @@ def extract_stream_icons(companies: list[dict], client: httpx.Client) -> dict[st
             if title and icon_url and title not in stream_icons:
                 # Create slug from title for filename
                 slug = re.sub(r"[^a-z0-9]+", "-", title.lower()).strip("-")
-                local_path = download_image(client, icon_url, ICONS_DIR, slug)
+                local_path, downloaded = download_image(
+                    client, icon_url, ICONS_DIR, slug
+                )
                 if local_path:
                     stream_icons[title] = local_path
-                    print(f"  Downloaded icon: {title}")
+                    if downloaded:
+                        print(f"  Downloaded icon: {title}")
 
     return stream_icons
 
 
-def fetch_coordinates(
-    client: httpx.Client, fresh: bool = False
-) -> dict[str, tuple[float, float]]:
-    """Fetch company coordinates from the defence-map page.
+def extract_coordinates(html: str) -> dict[str, tuple[float, float]]:
+    """Extract company coordinates from the defence-map HTML.
 
     Returns dict mapping company name -> (latitude, longitude)
     """
-    cache_file = DATA_DIR / "cache" / "map.html"
-
-    if cache_file.exists() and not fresh:
-        print(f"Using cached map HTML from {cache_file}")
-        html = cache_file.read_text()
-    else:
-        print(f"Fetching {MAP_URL}...")
-        html = client.get(MAP_URL).text
-        cache_file.parent.mkdir(parents=True, exist_ok=True)
-        cache_file.write_text(html)
-
     # Extract the jsonAddresses JSON from the page
     match = re.search(r'var jsonAddresses = JSON\.parse\("(.*?)"\);', html, re.DOTALL)
     if not match:
@@ -317,16 +368,15 @@ def fetch_coordinates(
             except (ValueError, TypeError):
                 pass
 
-    print(f"Found coordinates for {len(coords)} companies")
     return coords
 
 
-def normalize_company_sync(
+def normalize_company(
     raw: dict,
     client: httpx.Client,
     coords: dict[str, tuple[float, float]],
 ) -> dict:
-    """Normalize company data into clean YAML structure (sync version, no URL resolution)."""
+    """Normalize company data into clean YAML structure."""
     d = raw.get("details", {})
     slug = clean_slug(raw.get("slug", ""))
     name = d.get("CompanyName", raw.get("name", "")).strip()
@@ -339,12 +389,18 @@ def normalize_company_sync(
         "website": website,
         "contact_name": d.get("ContactName", ""),
         "contact_title": d.get("Position", ""),
-        "address": d.get("Address", ""),
+        "address": build_full_address(d),
         "phone": d.get("Phone", ""),
         "email": d.get("Email", ""),
         "is_prime": raw.get("is_prime", False),
         "is_sme": raw.get("is_sme", False),
         "is_featured": raw.get("is_featured", False),
+        "is_indigenous_owned": any(
+            o.get("Title") == "Indigenous Owned" for o in d.get("Ownerships", [])
+        ),
+        "is_veteran_owned": any(
+            o.get("Title") == "Veteran Owned" for o in d.get("Ownerships", [])
+        ),
         "stakeholders": [
             s["Title"] for s in d.get("WADefenceKeyStakeholders", []) if s.get("Title")
         ],
@@ -368,7 +424,7 @@ def normalize_company_sync(
 
     # Logo
     if d.get("CompanyLogoUrl"):
-        logo = download_image(client, d["CompanyLogoUrl"], LOGOS_DIR, slug)
+        logo, _ = download_image(client, d["CompanyLogoUrl"], LOGOS_DIR, slug)
         if logo:
             company["logo_url"] = logo
 
@@ -394,12 +450,10 @@ def normalize_company_sync(
     return {k: v for k, v in company.items() if v not in (None, "", [], False)}
 
 
-async def resolve_all_urls(
-    companies: list[dict], search_fallback: bool = False
-) -> dict[str, tuple[str, str | None]]:
+async def resolve_all_urls(companies: list[dict]) -> dict[str, str]:
     """Resolve all company URLs concurrently.
 
-    Returns dict mapping slug -> (resolved_url, potential_url)
+    Returns dict mapping slug -> resolved_url
     """
     semaphore = asyncio.Semaphore(MAX_CONCURRENT)
 
@@ -414,12 +468,9 @@ async def resolve_all_urls(
         for c in companies:
             slug = c["slug"]
             website = c.get("website", "")
-            name = c.get("name", "")
 
             if website:
-                tasks.append(
-                    resolve_url(client, website, name, search_fallback, semaphore)
-                )
+                tasks.append(resolve_url(client, website, semaphore))
                 slugs.append(slug)
 
         print(f"  Resolving {len(tasks)} URLs concurrently...")
@@ -429,37 +480,10 @@ async def resolve_all_urls(
         for slug, result in zip(slugs, results):
             if isinstance(result, Exception):
                 print(f"    {slug}: Error - {result}")
-                url_map[slug] = (None, None)
             else:
                 url_map[slug] = result
 
         return url_map
-
-
-def save_yaml_with_potential(data: dict, path: Path, potential_website: str | None):
-    """Save data as YAML, with potential_website as a comment if provided."""
-    path.parent.mkdir(parents=True, exist_ok=True)
-
-    yaml_str = yaml.dump(
-        data,
-        default_flow_style=False,
-        allow_unicode=True,
-        sort_keys=False,
-        width=1000,
-    )
-
-    # If there's a potential website, add it as a comment after the website line
-    if potential_website:
-        lines = yaml_str.split("\n")
-        new_lines = []
-        for line in lines:
-            new_lines.append(line)
-            if line.startswith("website:"):
-                new_lines.append(f"# potential_website: {potential_website}")
-        yaml_str = "\n".join(new_lines)
-
-    with open(path, "w") as f:
-        f.write(yaml_str)
 
 
 def save_yaml(data: dict, path: Path):
@@ -478,60 +502,55 @@ def save_yaml(data: dict, path: Path):
 
 async def main_async():
     fresh = "--fresh" in sys.argv
-    resolve_urls = "--no-resolve-urls" not in sys.argv  # Default: True
-    search_fallback = "--no-search-fallback" not in sys.argv  # Default: True
-    cache_file = DATA_DIR / "cache" / "directory.html"
+
+    if HAS_MOGRIFY:
+        print("ImageMagick detected - will optimize images")
+    else:
+        print("ImageMagick not found - skipping image optimization")
 
     with httpx.Client(timeout=60) as client:
-        if cache_file.exists() and not fresh:
-            print(f"Using cached HTML from {cache_file}")
-            html = cache_file.read_text()
-        else:
-            print(f"Fetching {BASE_URL}...")
-            html = client.get(BASE_URL).text
-            cache_file.parent.mkdir(parents=True, exist_ok=True)
-            cache_file.write_text(html)
+        # Fetch directory and map HTML (cached)
+        directory_html = fetch_html(client, BASE_URL, "directory_html", fresh)
+        map_html = fetch_html(client, MAP_URL, "map_html", fresh)
 
-        raw = extract_companies(html)
+        # Extract raw company data
+        raw = extract_companies(directory_html)
         print(f"Found {len(raw)} companies")
 
-        # Fetch coordinates from the map page
-        coords = fetch_coordinates(client, fresh)
+        # Cache raw data for reprocessing
+        cache["companies_raw"] = raw
+
+        # Extract coordinates
+        coords = extract_coordinates(map_html)
+        print(f"Found coordinates for {len(coords)} companies")
+        cache["coordinates"] = {k: list(v) for k, v in coords.items()}
 
         # Extract and download stream icons
         print("Downloading capability stream icons...")
         stream_icons = extract_stream_icons(raw, client)
+        cache["stream_icons"] = stream_icons
 
-        # Normalize companies (sync, without URL resolution)
+        # Normalize companies
         print("Processing companies...")
-        companies = [normalize_company_sync(c, client, coords) for c in raw]
+        companies = [normalize_company(c, client, coords) for c in raw]
+        cache["companies_normalized"] = companies
 
-    # Resolve URLs asynchronously if requested
-    url_map = {}
-    if resolve_urls:
-        msg = "Resolving URLs"
-        if search_fallback:
-            msg += " (with search fallback for broken sites)"
-        print(f"{msg}...")
-        url_map = await resolve_all_urls(companies, search_fallback)
+    # Resolve URLs asynchronously
+    print("Resolving URLs...")
+    url_map = await resolve_all_urls(companies)
 
-        # Update companies with resolved URLs
-        updated = 0
-        potential_updates = 0
-        for c in companies:
-            slug = c["slug"]
-            if slug in url_map:
-                resolved, potential = url_map[slug]
-                if resolved and resolved != c.get("website"):
-                    print(f"  {slug}: {c.get('website', '')} -> {resolved}")
-                    c["website"] = resolved
-                    updated += 1
-                if potential:
-                    potential_updates += 1
+    # Update companies with resolved URLs
+    updated = 0
+    for c in companies:
+        slug = c["slug"]
+        if slug in url_map:
+            resolved = url_map[slug]
+            if resolved and resolved != c.get("website"):
+                print(f"  {slug}: {c.get('website', '')} -> {resolved}")
+                c["website"] = resolved
+                updated += 1
 
-        print(
-            f"  Updated {updated} URLs, found {potential_updates} potential replacements"
-        )
+    print(f"  Updated {updated} URLs")
 
     # Check for slug conflicts
     slugs = [c["slug"] for c in companies]
@@ -541,9 +560,7 @@ async def main_async():
 
     # Save companies
     for c in companies:
-        slug = c["slug"]
-        potential = url_map.get(slug, (None, None))[1] if url_map else None
-        save_yaml_with_potential(c, DATA_DIR / "companies" / f"{slug}.yaml", potential)
+        save_yaml(c, DATA_DIR / "companies" / f"{c['slug']}.yaml")
     print(f"Saved {len(companies)} companies")
 
     # Save taxonomies with stream icons

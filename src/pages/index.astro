@@ -1,7 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import CompanyCard from "../components/CompanyCard.astro";
-import MapPopup from "../components/MapPopup.astro";
 import { getCollection } from "astro:content";
 import { getTaxonomies, getStreamIcons } from "../lib/taxonomies";
 import type { Company } from "../content.config";
@@ -31,15 +30,53 @@ function countByTaxonomy(field: keyof Company): Map<string, number> {
   return counts;
 }
 
-const stakeholderCounts = countByTaxonomy("stakeholders");
-const streamCounts = countByTaxonomy("capability_streams");
-const domainCounts = countByTaxonomy("capability_domains");
-const industrialCounts = countByTaxonomy("industrial_capabilities");
-const regionCounts = countByTaxonomy("regions");
+// Build filter sections config for cleaner template
+const filterSections = [
+  { 
+    key: "capability_streams", 
+    label: "Capability Streams", 
+    items: Object.keys(taxonomies.capability_streams),
+    counts: countByTaxonomy("capability_streams"),
+    icons: streamIcons,
+  },
+  { 
+    key: "stakeholders", 
+    label: "Stakeholders", 
+    items: taxonomies.stakeholders,
+    counts: countByTaxonomy("stakeholders"),
+  },
+  { 
+    key: "capability_domains", 
+    label: "Domains", 
+    items: taxonomies.capability_domains,
+    counts: countByTaxonomy("capability_domains"),
+  },
+  { 
+    key: "industrial_capabilities", 
+    label: "Industrial", 
+    items: taxonomies.industrial_capabilities,
+    counts: countByTaxonomy("industrial_capabilities"),
+  },
+  { 
+    key: "regions", 
+    label: "Regions", 
+    items: taxonomies.regions,
+    counts: countByTaxonomy("regions"),
+  },
+];
+
+// Count companies with boolean flags
+const booleanFilters = [
+  { key: "is_prime", label: "Prime Contractor", count: companies.filter(c => c.is_prime).length },
+  { key: "is_sme", label: "SME", count: companies.filter(c => c.is_sme).length },
+  { key: "is_indigenous_owned", label: "Indigenous Owned", count: companies.filter(c => c.is_indigenous_owned).length },
+  { key: "is_veteran_owned", label: "Veteran Owned", count: companies.filter(c => c.is_veteran_owned).length },
+].filter(f => f.count > 0);
 
 // Prepare marker data for map (coordinates only, popup HTML is in DOM)
 const markers = mappedCompanies.map((c) => ({
   slug: c.slug,
+  name: c.name,
   coords: [c.longitude, c.latitude],
 }));
 
@@ -57,143 +94,96 @@ const searchData = companies.map((c) => ({
 
 // Prepare filter suggestions (all taxonomy terms with counts)
 const filterSuggestions = [
-  ...taxonomies.stakeholders.map((t: string) => ({ 
-    term: t, param: "stakeholders", count: stakeholderCounts.get(t) || 0 
+  // Boolean filters (Prime, SME, Indigenous, Veteran)
+  ...booleanFilters.map(f => ({
+    term: f.label,
+    param: f.key,
+    count: f.count,
+    type: "boolean" as const,
   })),
-  ...Object.keys(taxonomies.capability_streams).map((t: string) => ({ 
-    term: t, param: "capability_streams", count: streamCounts.get(t) || 0 
-  })),
-  ...taxonomies.capability_domains.map((t: string) => ({ 
-    term: t, param: "capability_domains", count: domainCounts.get(t) || 0 
-  })),
-  ...taxonomies.industrial_capabilities.map((t: string) => ({ 
-    term: t, param: "industrial_capabilities", count: industrialCounts.get(t) || 0 
-  })),
-  ...taxonomies.regions.map((t: string) => ({ 
-    term: t, param: "regions", count: regionCounts.get(t) || 0 
-  })),
+  // Taxonomy filters
+  ...filterSections.flatMap(section =>
+    section.items.map((term: string) => ({
+      term,
+      param: section.key,
+      count: section.counts.get(term) || 0,
+      type: "taxonomy" as const,
+    }))
+  ),
 ].filter(s => s.count > 0);
 ---
 
 <Layout title="WA Defence Industry and Science Capability Directory">
+  <h1 class="visually-hidden">WA Defence Industry and Science Capability Directory</h1>
   <div class="directory-layout">
     <!-- Filters Sidebar -->
     <aside>
-      <!-- Active Filters & Count Card -->
+      <!-- Results Count & Active Filters -->
       <article class="filter-status-card">
-        <p>
-          <strong id="result-count">{companies.length}</strong> of {
-            companies.length
-          } companies
+        <p aria-live="polite" aria-atomic="true">
+          <strong id="result-count">{companies.length}</strong> of {companies.length} companies
         </p>
         <div id="active-filters-container"></div>
       </article>
 
-      <!-- Capability Streams with icons -->
-      <details open>
-        <summary>Capability Streams</summary>
-        <div class="stream-icons">
-          {
-            Object.entries(streamIcons).map(([name, icon]) => {
-              const count = streamCounts.get(name) || 0;
-              if (count === 0) return null;
-              return (
-                <a
-                  href={`/?capability_streams=${encodeURIComponent(name)}`}
-                  title={name}
-                >
-                  <img src={`${icon as string}`} alt={name} />
+      <!-- Boolean Filters (Prime, SME, Ownership) -->
+      {booleanFilters.length > 0 && (
+        <details open>
+          <summary>Company Type</summary>
+          <ul>
+            {booleanFilters.map(({ key, label, count }) => (
+              <li>
+                <a href={`/?${key}=true`}>
+                  {label} <small>({count})</small>
                 </a>
-              );
-            })
-          }
-        </div>
-      </details>
+              </li>
+            ))}
+          </ul>
+        </details>
+      )}
 
-      <details>
-        <summary>Stakeholders</summary>
-        <ul>
-          {
-            taxonomies.stakeholders.map((name: string) => {
-              const count = stakeholderCounts.get(name) || 0;
-              if (count === 0) return null;
-              return (
-                <li>
-                  <a href={`/?stakeholders=${encodeURIComponent(name)}`}>
-                    {name} <small>({count})</small>
-                  </a>
-                </li>
-              );
-            })
-          }
-        </ul>
-      </details>
-
-      <details>
-        <summary>Capability Domains</summary>
-        <ul>
-          {
-            taxonomies.capability_domains.map((name: string) => {
-              const count = domainCounts.get(name) || 0;
-              if (count === 0) return null;
-              return (
-                <li>
-                  <a href={`/?capability_domains=${encodeURIComponent(name)}`}>
-                    {name} <small>({count})</small>
-                  </a>
-                </li>
-              );
-            })
-          }
-        </ul>
-      </details>
-
-      <details>
-        <summary>Industrial Capabilities</summary>
-        <ul>
-          {
-            taxonomies.industrial_capabilities.map((name: string) => {
-              const count = industrialCounts.get(name) || 0;
-              if (count === 0) return null;
-              return (
-                <li>
-                  <a
-                    href={`/?industrial_capabilities=${encodeURIComponent(name)}`}
-                  >
-                    {name} <small>({count})</small>
-                  </a>
-                </li>
-              );
-            })
-          }
-        </ul>
-      </details>
-
-      <details>
-        <summary>Regions</summary>
-        <ul>
-          {
-            taxonomies.regions.map((name: string) => {
-              const count = regionCounts.get(name) || 0;
-              if (count === 0) return null;
-              return (
-                <li>
-                  <a href={`/?regions=${encodeURIComponent(name)}`}>
-                    {name} <small>({count})</small>
-                  </a>
-                </li>
-              );
-            })
-          }
-        </ul>
-      </details>
+      <!-- Taxonomy Filters -->
+      {filterSections.map((section, idx) => {
+        const hasIcons = section.icons;
+        const visibleItems = section.items.filter((name: string) => (section.counts.get(name) || 0) > 0);
+        if (visibleItems.length === 0) return null;
+        
+        return (
+          <details open={idx === 0}>
+            <summary>{section.label}</summary>
+            {hasIcons ? (
+              <div class="stream-icons">
+                {visibleItems.map((name: string) => {
+                  const icon = section.icons?.[name];
+                  return icon ? (
+                    <a href={`/?${section.key}=${encodeURIComponent(name)}`} title={name}>
+                      <img src={icon as string} alt={name} loading="lazy" />
+                    </a>
+                  ) : null;
+                })}
+              </div>
+            ) : (
+              <ul>
+                {visibleItems.map((name: string) => (
+                  <li>
+                    <a href={`/?${section.key}=${encodeURIComponent(name)}`}>
+                      {name} <small>({section.counts.get(name)})</small>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </details>
+        );
+      })}
     </aside>
 
     <!-- Main Content -->
     <main>
+      <label for="search-input" class="visually-hidden">Search companies</label>
       <input id="search-input" type="search" placeholder="Search companies..." autocomplete="off" />
 
-      <div id="company-grid" class="company-grid" data-pagefind-ignore="all">
+      <div id="company-grid" class="company-grid">
         {
           companies.map((company) => (
             <div
@@ -210,6 +200,10 @@ const filterSuggestions = [
                 company.industrial_capabilities || [],
               )}
               data-regions={JSON.stringify(company.regions || [])}
+              data-is-prime={company.is_prime || false}
+              data-is-sme={company.is_sme || false}
+              data-is-indigenous-owned={company.is_indigenous_owned || false}
+              data-is-veteran-owned={company.is_veteran_owned || false}
             >
               <CompanyCard company={company} />
             </div>
@@ -217,7 +211,7 @@ const filterSuggestions = [
         }
       </div>
 
-      <div id="map-host" class="hidden"></div>
+      <div id="map-host" class="hidden" role="application" aria-label="Interactive company location map"></div>
       <p id="no-results" class="hidden">
         No companies match your search criteria.
       </p>
@@ -229,7 +223,7 @@ const filterSuggestions = [
     {
       mappedCompanies.map((company) => (
         <template data-slug={company.slug}>
-          <MapPopup company={company} />
+          <CompanyCard company={company} compact />
         </template>
       ))
     }
@@ -260,6 +254,14 @@ const filterSuggestions = [
     capability_domains: "capabilityDomains",
     industrial_capabilities: "industrialCapabilities",
     regions: "regions",
+  };
+
+  // Boolean filter map: URL param -> data attribute
+  const booleanFilterMap = {
+    is_prime: "isPrime",
+    is_sme: "isSme",
+    is_indigenous_owned: "isIndigenousOwned",
+    is_veteran_owned: "isVeteranOwned",
   };
 
   // Initialize uFuzzy for company search (with typo tolerance)
@@ -310,8 +312,14 @@ const filterSuggestions = [
           // Apply as filter
           searchInput.value = "";
           searchInput.blur();
-          const dataAttr = taxonomyMap[selection.param];
-          const newFilter = { param: selection.param, dataAttr, value: selection.term };
+          const isBool = selection.type === "boolean";
+          const dataAttr = isBool ? booleanFilterMap[selection.param] : taxonomyMap[selection.param];
+          const newFilter = { 
+            param: selection.param, 
+            dataAttr, 
+            value: isBool ? selection.term : selection.term, 
+            type: selection.type 
+          };
           const currentFilters = getUrlFilters();
           const exists = currentFilters.some(f => f.param === newFilter.param && f.value === newFilter.value);
           if (!exists) currentFilters.push(newFilter);
@@ -342,11 +350,18 @@ const filterSuggestions = [
   function getUrlFilters() {
     const params = new URLSearchParams(window.location.search);
     const filters = [];
+    // Taxonomy filters (arrays)
     for (const [param, dataAttr] of Object.entries(taxonomyMap)) {
       const values = params.getAll(param);
       values.forEach((value) => {
-        if (value) filters.push({ param, dataAttr, value });
+        if (value) filters.push({ param, dataAttr, value, type: "taxonomy" });
       });
+    }
+    // Boolean filters
+    for (const [param, dataAttr] of Object.entries(booleanFilterMap)) {
+      if (params.get(param) === "true") {
+        filters.push({ param, dataAttr, value: param.replace("is_", "").replace("_", " "), type: "boolean" });
+      }
     }
     return filters;
   }
@@ -358,7 +373,13 @@ const filterSuggestions = [
   function updateUrl(filters, query = "") {
     const params = new URLSearchParams();
     if (query) params.set("q", query);
-    filters.forEach((f) => params.append(f.param, f.value));
+    filters.forEach((f) => {
+      if (f.type === "boolean") {
+        params.set(f.param, "true");
+      } else {
+        params.append(f.param, f.value);
+      }
+    });
     const newUrl = params.toString()
       ? `${window.location.pathname}?${params.toString()}`
       : window.location.pathname;
@@ -416,6 +437,9 @@ const filterSuggestions = [
     const visibleSlugs = new Set();
     allCards.forEach((card) => {
       const matches = filters.every((filter) => {
+        if (filter.type === "boolean") {
+          return card.dataset[filter.dataAttr] === "true";
+        }
         const values = JSON.parse(card.dataset[filter.dataAttr] || "[]");
         return values.includes(filter.value);
       });
@@ -435,9 +459,9 @@ const filterSuggestions = [
     if (!filterContainer) return;
     if (filters.length > 0) {
       filterContainer.innerHTML =
-        filters.map((f, i) => `<mark class="filter-tag" role="button" data-index="${i}">${f.value} ×</mark>`).join("") +
+        filters.map((f, i) => `<button type="button" class="filter-tag" data-index="${i}">${f.value} <span aria-hidden="true">×</span><span class="visually-hidden">Remove filter</span></button>`).join("") +
         `<a href="#" id="clear-all-filters" class="secondary">Clear all</a>`;
-      filterContainer.querySelectorAll("mark[data-index]").forEach((btn) => {
+      filterContainer.querySelectorAll("button[data-index]").forEach((btn) => {
         btn.addEventListener("click", () => {
           const newFilters = filters.filter((_, i) => i !== parseInt(btn.dataset.index));
           updateUrl(newFilters);
@@ -461,11 +485,21 @@ const filterSuggestions = [
       const href = link.getAttribute("href");
       const linkParams = new URLSearchParams(href.split("?")[1] || "");
       let newFilter = null;
+      // Check taxonomy filters
       for (const [param, dataAttr] of Object.entries(taxonomyMap)) {
         const value = linkParams.get(param);
         if (value) {
-          newFilter = { param, dataAttr, value };
+          newFilter = { param, dataAttr, value, type: "taxonomy" };
           break;
+        }
+      }
+      // Check boolean filters
+      if (!newFilter) {
+        for (const [param, dataAttr] of Object.entries(booleanFilterMap)) {
+          if (linkParams.get(param) === "true") {
+            newFilter = { param, dataAttr, value: param.replace("is_", "").replace(/_/g, " "), type: "boolean" };
+            break;
+          }
         }
       }
       if (newFilter) {
@@ -548,15 +582,17 @@ const filterSuggestions = [
     let activePopupMarker = null;
     
     markers.forEach((m) => {
-      const el = document.createElement("div");
+      const el = document.createElement("button");
       el.className = "map-marker";
+      el.type = "button";
+      el.setAttribute("aria-label", `View ${m.name} on map`);
       const popup = new maplibregl.Popup({ offset: 15, maxWidth: "260px", closeButton: true }).setHTML(getPopupHtml(m.slug));
       const marker = new maplibregl.Marker({ element: el }).setLngLat(m.coords).setPopup(popup).addTo(map);
       marker._slug = m.slug;
       mapMarkerObjects.push(marker);
       
-      // Show popup on hover, close previous
-      el.addEventListener("mouseenter", () => {
+      // Show popup on hover or focus
+      function openPopup() {
         if (activePopupMarker && activePopupMarker !== marker) {
           activePopupMarker.getPopup().remove();
         }
@@ -564,6 +600,19 @@ const filterSuggestions = [
           marker.togglePopup();
         }
         activePopupMarker = marker;
+      }
+      el.addEventListener("mouseenter", openPopup);
+      el.addEventListener("focus", openPopup);
+      
+      // Click toggles popup (close if open, open if closed)
+      el.addEventListener("click", (e) => {
+        e.stopPropagation();
+        if (marker.getPopup().isOpen()) {
+          marker.getPopup().remove();
+          activePopupMarker = null;
+        } else {
+          openPopup();
+        }
       });
     });
   }

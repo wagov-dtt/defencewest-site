@@ -4,22 +4,22 @@ stakeholders:
 - Defence Science Centre
 - Defence West
 capability_streams:
-  AASL - Air and Sea Lift: /icons/aasl-air-and-sea-lift.jpg
-  Aerial; Strike and Air Combat: /icons/aerial-strike-and-air-combat.jpg
-  Base Support: /icons/base-support.jpg
+  AASL - Air and Sea Lift: /icons/aasl-air-and-sea-lift.png
+  Aerial; Strike and Air Combat: /icons/aerial-strike-and-air-combat.png
+  Base Support: /icons/base-support.png
   Education and Training: /icons/education-and-training.png
-  Electronic Warfare and Cyber: /icons/electronic-warfare-and-cyber.jpg
-  ISCW - Intelligence, Surveillance, Reconnaissance, Space, Electronic Warfare and Cyber: /icons/iscw-intelligence-surveillance-reconnaissance-space-electronic-warfare-and-cyber.jpg
-  Intelligence; Surveillance and Reconnaissance: /icons/intelligence-surveillance-and-reconnaissance.jpg
-  KEYN - Key Enablers: /icons/keyn-key-enablers.jpg
-  LCAW - Land Combat and Amphibious Warfare: /icons/lcaw-land-combat-and-amphibious-warfare.jpg
-  Land Forces: /icons/land-forces.jpg
-  Logistics and Supply Chain: /icons/logistics-and-supply-chain.jpg
-  MASW - Maritime and Anti-Submarine Warfare: /icons/masw-maritime-and-anti-submarine-warfare.jpg
-  Maritime and Sub-Sea Forces: /icons/maritime-and-sub-sea-forces.jpg
-  Research and Technology Development: /icons/research-and-technology-development.jpg
-  SAAC - Strike and Air Combat: /icons/saac-strike-and-air-combat.jpg
-  Space: /icons/space.jpg
+  Electronic Warfare and Cyber: /icons/electronic-warfare-and-cyber.png
+  ISCW - Intelligence, Surveillance, Reconnaissance, Space, Electronic Warfare and Cyber: /icons/iscw-intelligence-surveillance-reconnaissance-space-electronic-warfare-and-cyber.png
+  Intelligence; Surveillance and Reconnaissance: /icons/intelligence-surveillance-and-reconnaissance.png
+  KEYN - Key Enablers: /icons/keyn-key-enablers.png
+  LCAW - Land Combat and Amphibious Warfare: /icons/lcaw-land-combat-and-amphibious-warfare.png
+  Land Forces: /icons/land-forces.png
+  Logistics and Supply Chain: /icons/logistics-and-supply-chain.png
+  MASW - Maritime and Anti-Submarine Warfare: /icons/masw-maritime-and-anti-submarine-warfare.png
+  Maritime and Sub-Sea Forces: /icons/maritime-and-sub-sea-forces.png
+  Research and Technology Development: /icons/research-and-technology-development.png
+  SAAC - Strike and Air Combat: /icons/saac-strike-and-air-combat.png
+  Space: /icons/space.png
 capability_domains:
 - AI & Autonomy
 - Air Bases

@@ -84,7 +84,8 @@ const githubEditUrl = isNew
 
     <div class="editor-content">
       <div class="editor-main">
-        <textarea id="yaml-editor" rows="30" spellcheck="false"
+        <label for="yaml-editor" class="visually-hidden">Company YAML data</label>
+        <textarea id="yaml-editor" rows="30" spellcheck="false" aria-describedby="validation-error"
           >{companyYaml}</textarea
         >
       </div>

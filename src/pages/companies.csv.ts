@@ -1,57 +1,43 @@
 import type { APIRoute } from "astro";
-import { getCollection } from "astro:content";
+import Papa from "papaparse";
+import { exportFields, exportHeaders, getExportData } from "../lib/export";
 
-export const GET: APIRoute = async () => {
-  const companyEntries = await getCollection("companies");
-  const companies = companyEntries
-    .map((entry) => entry.data)
-    .sort((a, b) => a.name.localeCompare(b.name));
+export const GET: APIRoute = async ({ site }) => {
+  const companies = await getExportData();
+  const baseUrl = site!.href.replace(/\/$/, "");
 
-  const headers = [
-    "name",
-    "slug",
-    "website",
-    "email",
-    "phone",
-    "address",
-    "contact_name",
-    "contact_title",
-    "logo_url",
-    "latitude",
-    "longitude",
-    "is_prime",
-    "is_sme",
-    "stakeholders",
-    "capability_streams",
-    "capability_domains",
-    "industrial_capabilities",
-    "regions",
-    "capabilities",
-    "discriminators",
-    "overview",
-  ];
+  // Transform data for CSV
+  const rows = companies.map((c) => {
+    const row: Record<string, string> = {};
+    for (const f of exportFields) {
+      // Computed URL field
+      if (f.key === "url") {
+        row[f.label] = `${baseUrl}/company/${(c as any).slug}/`;
+        continue;
+      }
 
-  function escapeCSV(val: any): string {
-    if (val === undefined || val === null) return "";
-    if (Array.isArray(val)) return `"${val.join("; ")}"`;
-    if (typeof val === "boolean") return val ? "true" : "false";
-    const str = String(val);
-    if (str.includes(",") || str.includes('"') || str.includes("\n")) {
-      return `"${str.replace(/"/g, '""')}"`;
+      const val = (c as any)[f.key];
+      if (val === undefined || val === null) {
+        row[f.label] = "";
+      } else if (Array.isArray(val)) {
+        row[f.label] = val.join("; ");
+      } else if (typeof val === "boolean") {
+        row[f.label] = val ? "Yes" : "No";
+      } else {
+        row[f.label] = String(val);
+      }
     }
-    return str;
-  }
+    return row;
+  });
 
-  const rows = companies.map((c) =>
-    headers.map((h) => escapeCSV((c as any)[h])).join(","),
-  );
-
-  const csv = [headers.join(","), ...rows].join("\n");
+  const csv = Papa.unparse(rows, {
+    columns: [...exportHeaders],
+  });
 
   return new Response(csv, {
     headers: {
       "Content-Type": "text/csv",
-      "Content-Disposition": 'attachment; filename="companies.csv"',
+      "Content-Disposition": 'attachment; filename="wa-defence-directory.csv"',
     },
   });
 };
