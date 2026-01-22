@@ -5,8 +5,6 @@ import MapPopup from '../components/MapPopup.astro';
 import { getCollection } from 'astro:content';
 import { getTaxonomies, getStreamIcons } from '../lib/taxonomies';
 
-const base = import.meta.env.BASE_URL;
-
 // Load companies from Content Collection
 const companyEntries = await getCollection('companies');
 const companies = companyEntries
@@ -65,8 +63,8 @@ const searchData = companies.map(c => ({
       <article class="admin-controls hidden" id="admin-controls">
         <strong class="sidebar-section">Admin</strong>
         <div class="admin-buttons">
-          <a href={`${base}admin/new`} role="button" class="outline">+ Add Company</a>
-          <a href={`${base}companies.csv`} role="button" class="outline" download>Export CSV</a>
+          <a href="/admin/new" role="button" class="outline">+ Add Company</a>
+          <a href="/companies.csv" role="button" class="outline" download>Export CSV</a>
         </div>
       </article>
 
@@ -86,8 +84,8 @@ const searchData = companies.map(c => ({
             const count = streamCounts.get(name) || 0;
             if (count === 0) return null;
             return (
-              <a href={`${base}?capability_streams=${encodeURIComponent(name)}`} title={name}>
-                <img src={`${base}${(icon as string).slice(1)}`} alt={name} />
+              <a href={`/?capability_streams=${encodeURIComponent(name)}`} title={name}>
+                <img src={`${(icon as string)}`} alt={name} />
               </a>
             );
           })}
@@ -100,7 +98,7 @@ const searchData = companies.map(c => ({
           {taxonomies.stakeholders.map((name: string) => {
             const count = stakeholderCounts.get(name) || 0;
             if (count === 0) return null;
-            return <li><a href={`${base}?stakeholders=${encodeURIComponent(name)}`}>{name} <small>({count})</small></a></li>;
+            return <li><a href={`/?stakeholders=${encodeURIComponent(name)}`}>{name} <small>({count})</small></a></li>;
           })}
         </ul>
       </details>
@@ -111,7 +109,7 @@ const searchData = companies.map(c => ({
           {taxonomies.capability_domains.map((name: string) => {
             const count = domainCounts.get(name) || 0;
             if (count === 0) return null;
-            return <li><a href={`${base}?capability_domains=${encodeURIComponent(name)}`}>{name} <small>({count})</small></a></li>;
+            return <li><a href={`/?capability_domains=${encodeURIComponent(name)}`}>{name} <small>({count})</small></a></li>;
           })}
         </ul>
       </details>
@@ -122,7 +120,7 @@ const searchData = companies.map(c => ({
           {taxonomies.industrial_capabilities.map((name: string) => {
             const count = industrialCounts.get(name) || 0;
             if (count === 0) return null;
-            return <li><a href={`${base}?industrial_capabilities=${encodeURIComponent(name)}`}>{name} <small>({count})</small></a></li>;
+            return <li><a href={`/?industrial_capabilities=${encodeURIComponent(name)}`}>{name} <small>({count})</small></a></li>;
           })}
         </ul>
       </details>
@@ -133,7 +131,7 @@ const searchData = companies.map(c => ({
           {taxonomies.regions.map((name: string) => {
             const count = regionCounts.get(name) || 0;
             if (count === 0) return null;
-            return <li><a href={`${base}?regions=${encodeURIComponent(name)}`}>{name} <small>({count})</small></a></li>;
+            return <li><a href={`/?regions=${encodeURIComponent(name)}`}>{name} <small>({count})</small></a></li>;
           })}
         </ul>
       </details>
@@ -179,9 +177,8 @@ const searchData = companies.map(c => ({
 
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.1.0"></script>
 
-<script is:inline define:vars={{ markers, base, searchData }}>
+<script is:inline define:vars={{ markers, searchData }}>
   window.mapMarkers = markers;
-  window.baseUrl = base;
   
   document.addEventListener('DOMContentLoaded', async () => {
     const grid = document.getElementById('company-grid');
@@ -483,7 +480,7 @@ const searchData = companies.map(c => ({
       allCards.forEach(card => {
         const slug = card.dataset.slug;
         const editBtn = document.createElement('a');
-        editBtn.href = `${base}admin/${slug}`;
+        editBtn.href = `/admin/${slug}`;
         editBtn.className = 'edit-btn';
         editBtn.textContent = 'Edit';
         editBtn.onclick = (e) => e.stopPropagation();

@@ -1,19 +1,15 @@
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
-
-// Use base path for GitHub Pages subdirectory deployment
-const isGitHubPages = process.env.GITHUB_ACTIONS === 'true';
+import relativeLinks from 'astro-relative-links';
 
 export default defineConfig({
-  site: isGitHubPages 
-    ? 'https://wagov-dtt.github.io' 
-    : 'https://deed.wa.gov.au',
-  base: isGitHubPages ? '/defencewest-site/' : '/',
+  site: 'https://deed.wa.gov.au',
   output: 'static',
   build: {
     format: 'directory',
   },
   integrations: [
+    relativeLinks(),
     sitemap({
       filter: (page) => !page.includes('/admin'),
     }),

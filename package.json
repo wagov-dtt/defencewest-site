@@ -5,6 +5,7 @@
   "dependencies": {
     "@astrojs/sitemap": "^3.7.0",
     "astro": "^5.16.11",
+    "astro-relative-links": "^0.4.2",
     "fuse.js": "^7.1.0",
     "marked": "^15.0.12",
     "pagefind": "^1.4.0",

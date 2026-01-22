@@ -19,6 +19,23 @@
 
 .gov-logo img {
   height: 40px;
+  width: auto;
+  object-fit: contain;
+}
+
+@media (max-width: 600px) {
+  .logo-wrapper img {
+    height: 40px;
+  }
+  
+  .gov-logo img {
+    height: 32px;
+  }
+  
+  .header-container .view-toggle a[role="button"] {
+    padding: 0.4rem 0.6rem;
+    font-size: 0.75rem;
+  }
 }
 
 /* Reduce border radius for sharper civic style */

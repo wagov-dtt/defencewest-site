@@ -1,31 +1,30 @@
 ---
-const base = import.meta.env.BASE_URL;
-const isHomepage = Astro.url.pathname === base || Astro.url.pathname === base.slice(0, -1);
+const isHomepage = Astro.url.pathname === '/' || Astro.url.pathname === '';
 const isContact = Astro.url.pathname.includes('/contact');
 ---
 
 <header class="site-header">
   <div class="header-container">
     <a href="https://www.wa.gov.au/organisation/department-of-the-premier-and-cabinet/defence-west" class="logo-wrapper">
-      <img src={`${base}defence-west-logo.svg`} alt="Defence West logo" />
+      <img src="/defence-west-logo.svg" alt="Defence West logo" />
     </a>
     <div role="group" class="view-toggle">
       {isHomepage ? (
         <>
-          <a href={base} role="button" id="view-directory" class="contrast">Directory</a>
-          <a href={`${base}?view=map`} role="button" id="view-map" class="contrast outline">Map</a>
-          <a href={`${base}contact`} role="button" class="contrast outline">Contact</a>
+          <a href="/" role="button" id="view-directory" class="contrast">Directory</a>
+          <a href="/?view=map" role="button" id="view-map" class="contrast outline">Map</a>
+          <a href="/contact" role="button" class="contrast outline">Contact</a>
         </>
       ) : (
         <>
-          <a href={base} role="button" class="contrast outline">Directory</a>
-          <a href={`${base}?view=map`} role="button" class="contrast outline">Map</a>
-          <a href={`${base}contact`} role="button" class={`contrast ${isContact ? '' : 'outline'}`}>Contact</a>
+          <a href="/" role="button" class="contrast outline">Directory</a>
+          <a href="/?view=map" role="button" class="contrast outline">Map</a>
+          <a href="/contact" role="button" class={`contrast ${isContact ? '' : 'outline'}`}>Contact</a>
         </>
       )}
     </div>
     <a href="https://www.wa.gov.au/organisation/department-of-energy-and-economic-diversification" class="gov-logo">
-      <img src={`${base}wa-gov-logo.png`} alt="Government of Western Australia logo" />
+      <img src="/wa-gov-logo.png" alt="Government of Western Australia logo" />
     </a>
   </div>
 </header>

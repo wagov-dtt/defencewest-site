@@ -4,9 +4,7 @@ import { getCollection } from 'astro:content';
 import type { Company } from '../../content.config';
 import { marked } from 'marked';
 import { getStreamIcons } from '../../lib/taxonomies';
-import { withBase, googleMapsUrl, normalizeWebsiteUrl, displayWebsite } from '../../lib/urls';
-
-const base = import.meta.env.BASE_URL;
+import { googleMapsUrl, normalizeWebsiteUrl, displayWebsite } from '../../lib/urls';
 
 export async function getStaticPaths() {
   const companies = await getCollection('companies');
@@ -25,7 +23,7 @@ const capabilitiesHtml = company.capabilities ? marked.parse(company.capabilitie
 const discriminatorsHtml = company.discriminators ? marked.parse(company.discriminators) : '';
 
 const websiteUrl = normalizeWebsiteUrl(company.website);
-const logoSrc = withBase(company.logo_url, base);
+const logoSrc = company.logo_url;
 const hasLocation = company.latitude && company.longitude;
 const mapsUrl = googleMapsUrl(company.latitude, company.longitude, company.address);
 
@@ -132,9 +130,9 @@ const jsonLd = {
               <strong class="sidebar-section">Capability Streams</strong>
               <div class="stream-icons">
                 {company.capability_streams.map(stream => {
-                  const iconUrl = withBase(streamIcons[stream], base);
+                  const iconUrl = streamIcons[stream];
                   return iconUrl ? (
-                    <a href={`${base}?capability_streams=${encodeURIComponent(stream)}`} title={stream}>
+                    <a href={`/?capability_streams=${encodeURIComponent(stream)}`} title={stream}>
                       <img src={iconUrl} alt={stream} />
                     </a>
                   ) : null;
@@ -148,7 +146,7 @@ const jsonLd = {
               <strong class="sidebar-section">Stakeholders</strong>
               <ul>
                 {company.stakeholders.map(item => (
-                  <li><a href={`${base}?stakeholders=${encodeURIComponent(item)}`}>{item}</a></li>
+                  <li><a href={`/?stakeholders=${encodeURIComponent(item)}`}>{item}</a></li>
                 ))}
               </ul>
             </>
@@ -159,7 +157,7 @@ const jsonLd = {
               <strong class="sidebar-section">Capability Domains</strong>
               <ul>
                 {company.capability_domains.map(item => (
-                  <li><a href={`${base}?capability_domains=${encodeURIComponent(item)}`}>{item}</a></li>
+                  <li><a href={`/?capability_domains=${encodeURIComponent(item)}`}>{item}</a></li>
                 ))}
               </ul>
             </>
@@ -170,7 +168,7 @@ const jsonLd = {
               <strong class="sidebar-section">Industrial Capabilities</strong>
               <ul>
                 {company.industrial_capabilities.map(item => (
-                  <li><a href={`${base}?industrial_capabilities=${encodeURIComponent(item)}`}>{item}</a></li>
+                  <li><a href={`/?industrial_capabilities=${encodeURIComponent(item)}`}>{item}</a></li>
                 ))}
               </ul>
             </>
@@ -181,7 +179,7 @@ const jsonLd = {
               <strong class="sidebar-section">Regions</strong>
               <ul>
                 {company.regions.map(item => (
-                  <li><a href={`${base}?regions=${encodeURIComponent(item)}`}>{item}</a></li>
+                  <li><a href={`/?regions=${encodeURIComponent(item)}`}>{item}</a></li>
                 ))}
               </ul>
             </>

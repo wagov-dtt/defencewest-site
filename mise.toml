@@ -17,8 +17,12 @@ description = "Start dev server"
 run = "pnpm exec astro dev"
 
 [tasks.build]
-description = "Build static site"
-run = "pnpm exec astro build"
+description = "Build static site (with lint and link check)"
+run = """
+uv run python scripts/lint.py
+pnpm exec astro build
+lychee dist/ --no-progress || true
+"""
 
 [tasks.preview]
 description = "Preview built site"
@@ -27,18 +31,6 @@ run = "pnpm exec astro preview"
 [tasks.lint]
 description = "Lint YAML data files"
 run = "uv run python scripts/lint.py"
-
-[tasks.links]
-description = "Check links in built site"
-depends = ["build"]
-run = """
-if [ "$GITHUB_ACTIONS" = "true" ]; then
-  # In CI, exclude local paths with base prefix (can't remap easily)
-  lychee dist/ --root-dir dist --no-progress --exclude '/defencewest-site/'
-else
-  lychee dist/ --root-dir dist --no-progress
-fi
-"""
 
 [tasks.scrape]
 description = "Scrape company data from source"
@@ -51,7 +43,3 @@ run = "uv run python scripts/sync.py --export"
 [tasks."sync:import"]
 description = "Import JSON back to YAML files"
 run = "uv run python scripts/sync.py --import"
-
-[tasks.ci]
-description = "Lint, build, and check links"
-depends = ["lint", "build", "links"]

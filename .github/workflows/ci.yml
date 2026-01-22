@@ -19,8 +19,8 @@ jobs:
       - name: Install dependencies
         run: mise run setup
       
-      - name: Lint and build
-        run: mise run ci
+      - name: Build
+        run: mise run build
       
       - name: Upload build artifact
         uses: actions/upload-pages-artifact@v3
