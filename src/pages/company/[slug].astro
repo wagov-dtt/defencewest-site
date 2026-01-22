@@ -5,7 +5,8 @@ import type { Company } from "../../content.config";
 import { marked } from "marked";
 import { getStreamIcons } from "../../lib/taxonomies";
 import {
-  googleMapsUrl,
+  googleMapsCoordUrl,
+  googleMapsSearchUrl,
   normalizeWebsiteUrl,
   displayWebsite,
 } from "../../lib/urls";
@@ -33,11 +34,8 @@ const discriminatorsHtml = company.discriminators
 const websiteUrl = normalizeWebsiteUrl(company.website);
 const logoSrc = company.logo_url;
 const hasLocation = company.latitude && company.longitude;
-const mapsUrl = googleMapsUrl(
-  company.latitude,
-  company.longitude,
-  company.address,
-);
+const mapCoordUrl = googleMapsCoordUrl(company.latitude, company.longitude);
+const addressSearchUrl = googleMapsSearchUrl(company.address);
 
 const siteUrl = "https://defencewest.wa.gov.au";
 const jsonLd = {
@@ -146,8 +144,8 @@ const jsonLd = {
               )}
               {company.address && (
                 <p>
-                  {mapsUrl ? (
-                    <a href={mapsUrl} target="_blank" rel="noopener">
+                  {addressSearchUrl ? (
+                    <a href={addressSearchUrl} target="_blank" rel="noopener">
                       <small>{company.address}</small>
                     </a>
                   ) : (
@@ -163,7 +161,7 @@ const jsonLd = {
         {
           hasLocation && (
             <a
-              href={mapsUrl}
+              href={mapCoordUrl}
               target="_blank"
               rel="noopener"
               class="map-wrapper"

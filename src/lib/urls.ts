@@ -1,14 +1,20 @@
 /**
- * Create Google Maps URL from coordinates or address
+ * Create Google Maps URL from coordinates (for map links)
  */
-export function googleMapsUrl(
+export function googleMapsCoordUrl(
   latitude?: number,
   longitude?: number,
-  address?: string,
 ): string | null {
   if (latitude && longitude) {
     return `https://www.google.com/maps?q=${latitude},${longitude}`;
   }
+  return null;
+}
+
+/**
+ * Create Google Maps search URL from address text
+ */
+export function googleMapsSearchUrl(address?: string): string | null {
   if (address) {
     return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`;
   }
