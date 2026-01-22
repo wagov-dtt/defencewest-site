@@ -75,14 +75,23 @@
         e.preventDefault();
         window.showCards?.();
         setActive(dirBtn);
-        history.pushState({}, "", window.location.pathname);
+        // Preserve existing filters/search, just remove view param
+        const params = new URLSearchParams(window.location.search);
+        params.delete("view");
+        const newUrl = params.toString()
+          ? `${window.location.pathname}?${params.toString()}`
+          : window.location.pathname;
+        history.pushState({}, "", newUrl);
       });
 
       mapBtn.addEventListener("click", (e) => {
         e.preventDefault();
         window.showMap?.();
         setActive(mapBtn);
-        history.pushState({}, "", window.location.pathname + "?view=map");
+        // Preserve existing filters/search, add view=map
+        const params = new URLSearchParams(window.location.search);
+        params.set("view", "map");
+        history.pushState({}, "", `${window.location.pathname}?${params.toString()}`);
       });
     }
   });
