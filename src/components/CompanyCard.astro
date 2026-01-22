@@ -15,7 +15,13 @@ interface Props {
 
 const { company, compact = false } = Astro.props;
 
-const hasBadges = company.is_prime || company.is_sme || company.is_indigenous_owned || company.is_veteran_owned;
+// Truncate overview server-side (enough for ~5 lines after CSS clamp)
+// Collapse newlines to spaces, then limit to ~400 chars
+const truncatedOverview = company.overview
+  ?.replace(/\n+/g, ' ')
+  .replace(/\s+/g, ' ')
+  .trim()
+  .slice(0, 400);
 ---
 
 <a href={`/company/${company.slug}`} class:list={["company-card", { compact }]}>
@@ -32,21 +38,17 @@ const hasBadges = company.is_prime || company.is_sme || company.is_indigenous_ow
 
     <div class="name">{company.name}</div>
 
-    {
-      hasBadges && (
-        <div class="badges">
-          {company.is_prime && <small>Prime</small>}
-          {company.is_sme && <small>SME</small>}
-          {company.is_indigenous_owned && <small class="highlight">Indigenous</small>}
-          {company.is_veteran_owned && <small class="highlight">Veteran</small>}
-        </div>
-      )
-    }
+    <div class="badges">
+      {company.is_prime && <small>Prime</small>}
+      {company.is_sme && <small>SME</small>}
+      {company.is_indigenous_owned && <small class="highlight">Indigenous</small>}
+      {company.is_veteran_owned && <small class="highlight">Veteran</small>}
+    </div>
 
     {
-      company.overview && (
+      truncatedOverview && (
         <p class="overview">
-          <small>{company.overview}</small>
+          <small>{truncatedOverview}</small>
         </p>
       )
     }
@@ -81,6 +83,7 @@ const hasBadges = company.is_prime || company.is_sme || company.is_indigenous_ow
     justify-content: center;
     gap: 0.2rem;
     margin-bottom: 0.35rem;
+    min-height: 1.2rem;
   }
 
   .badges small {
@@ -121,16 +124,26 @@ const hasBadges = company.is_prime || company.is_sme || company.is_indigenous_ow
     margin: 0 0 0.5rem 0;
     font-size: 1rem;
     font-weight: bold;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   .overview {
     margin: 0;
     flex: 1;
     opacity: 0.7;
+    font-size: 0.8rem;
+  }
+
+  .overview small {
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 3;
+    -webkit-line-clamp: 5;
     overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   /* Compact variant - less padding for map popups */
@@ -143,5 +156,9 @@ const hasBadges = company.is_prime || company.is_sme || company.is_indigenous_ow
     height: auto;
     box-shadow: none;
     margin: 0;
+  }
+
+  .compact .overview {
+    font-size: inherit;
   }
 </style>
