@@ -11,16 +11,11 @@ interface Props {
 }
 
 const { company } = Astro.props;
-const base = import.meta.env.BASE_URL;
-
-const logoSrc = company.logo_url?.startsWith('/') 
-  ? `${base}${company.logo_url.slice(1)}` 
-  : company.logo_url;
 
 const shortOverview = company.overview?.slice(0, 100);
 ---
 
-<a href={`${base}company/${company.slug}`} class="card-link">
+<a href={`/company/${company.slug}`} class="card-link">
   <article>
     {(company.is_prime || company.is_sme) && (
       <div class="badges">
@@ -30,8 +25,8 @@ const shortOverview = company.overview?.slice(0, 100);
     )}
     
     <div class="logo-area">
-      {logoSrc ? (
-        <img src={logoSrc} alt="" loading="lazy" />
+      {company.logo_url ? (
+        <img src={company.logo_url} alt="" loading="lazy" />
       ) : (
         <span class="initials">{company.name.slice(0, 2).toUpperCase()}</span>
       )}
@@ -89,6 +84,8 @@ const shortOverview = company.overview?.slice(0, 100);
   .logo-area img {
     max-width: 100%;
     max-height: 60px;
+    width: auto;
+    height: auto;
     object-fit: contain;
   }
 

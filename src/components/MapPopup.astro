@@ -11,16 +11,13 @@ interface Props {
 }
 
 const { company } = Astro.props;
-const base = import.meta.env.BASE_URL;
 
-const logoSrc = company.logo_url?.startsWith('/') 
-  ? `${base}${company.logo_url.slice(1)}` 
-  : company.logo_url;
+const logoSrc = company.logo_url;
 
 const shortOverview = company.overview?.slice(0, 80);
 ---
 
-<a href={`${base}company/${company.slug}`} class="map-popup-link">
+<a href={`/company/${company.slug}`} class="map-popup-link">
   <article class="map-popup">
     {(company.is_prime || company.is_sme) && (
       <div class="badges">
@@ -81,6 +78,8 @@ const shortOverview = company.overview?.slice(0, 80);
   .map-popup header img {
     max-width: 120px;
     max-height: 40px;
+    width: auto;
+    height: auto;
     object-fit: contain;
   }
 
