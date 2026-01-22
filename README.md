@@ -27,6 +27,20 @@ public/logos/           # Company logos
 public/icons/           # Capability stream icons
 ```
 
+## Logo Processing
+
+To batch-process logos and icons (trim whitespace, resize, strip metadata):
+
+```bash
+mogrify -trim -fuzz 1% -resize 400x400\> -strip public/logos/*.png
+mogrify -trim -fuzz 1% -resize 400x400\> -strip public/logos/*.jpg
+mogrify -colorspace sRGB -strip public/icons/*.jpg
+```
+
+Icon colors are adjusted via CSS filters in `public/styles.css`.
+
+Requires [ImageMagick](https://imagemagick.org/) (`apt install imagemagick` or `brew install imagemagick`).
+
 ## Tech
 
 [Astro](https://astro.build), [PicoCSS](https://picocss.com), [MapLibre GL JS](https://maplibre.org), [uFuzzy](https://github.com/leeoniya/uFuzzy). Tools: [mise](https://mise.jdx.dev), [pnpm](https://pnpm.io), [uv](https://docs.astral.sh/uv/).
