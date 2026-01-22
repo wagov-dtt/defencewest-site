@@ -545,13 +545,26 @@ const filterSuggestions = [
       const attrib = mapHost.querySelector(".maplibregl-ctrl-attrib");
       if (attrib) attrib.removeAttribute("open");
     });
+    let activePopupMarker = null;
+    
     markers.forEach((m) => {
       const el = document.createElement("div");
       el.className = "map-marker";
-      const popup = new maplibregl.Popup({ offset: 15, maxWidth: "260px" }).setHTML(getPopupHtml(m.slug));
+      const popup = new maplibregl.Popup({ offset: 15, maxWidth: "260px", closeButton: true }).setHTML(getPopupHtml(m.slug));
       const marker = new maplibregl.Marker({ element: el }).setLngLat(m.coords).setPopup(popup).addTo(map);
       marker._slug = m.slug;
       mapMarkerObjects.push(marker);
+      
+      // Show popup on hover, close previous
+      el.addEventListener("mouseenter", () => {
+        if (activePopupMarker && activePopupMarker !== marker) {
+          activePopupMarker.getPopup().remove();
+        }
+        if (!marker.getPopup().isOpen()) {
+          marker.togglePopup();
+        }
+        activePopupMarker = marker;
+      });
     });
   }
 

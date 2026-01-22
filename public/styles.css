@@ -279,6 +279,7 @@
   height: 36px;
   border-radius: var(--pico-border-radius);
   object-fit: cover;
+  filter: saturate(0.65) brightness(1.05);
 }
 
 .sidebar-section {
