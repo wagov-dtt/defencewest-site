@@ -13,10 +13,10 @@ overview: 'Chess Engineering is an Australian-owned fabrication and engineering 
 
 
   Our objective is to strengthen Australia’s sovereign industrial capability by offering defence primes and Tier 1 contractors a reliable, WA-based partner for high-quality steel fabrication and modular assembly. Chess Engineering stands ready to support future maritime, infrastructure, and land-based defence projects through precision, compliance, and local expertise.'
-website: https://chessindustries.com.au
+website: https://chessindustries.com.au/
 contact_name: Lachlan Kelly
 contact_title: 'General Manager '
-address: 100 Dowd St
+address: 100 Dowd St, Welshpool WA 6106
 phone: 0437 036 643
 email: l.kelly@chesseng.com.au
 is_sme: true
@@ -54,8 +54,21 @@ regions:
 - Wheatbelt
 latitude: -31.9931054
 longitude: 115.9602843
-logo_url: /logos/chess.jpg
-capabilities: "**Organisation Capabilities**  \nChess Engineering provides advanced steel fabrication, precision machining, modular assembly, and site installation services supporting Australia’s maritime, infrastructure, and defence industries. Our ISO 9001, 14001 and 45001-certified systems ensure consistent quality, safety, and environmental performance across every stage of manufacture and installation.\n\nWe specialise in complex CC3-grade fabrication, heavy plate and structural assemblies, and high-accuracy machining of components for defence and industrial applications. Our integrated delivery model covers design support, detailing, fabrication, coating, and testing under full traceability and documented QA control. We maintain segregated bays for stainless, carbon, and alloy materials and work closely with approved coating and NDT contractors to meet naval and defence specifications.\n\nRecent defence experience includes fabrication and modular works for Garden Island (NSW) naval\
-  \ base infrastructure supporting fleet maintenance and shore-based upgrade programs. Scope encompassed heavy structural modules, precision pipe supports, and mechanical frames manufactured under tight tolerances and progressive inspection regimes. Deliverables were completed in partnership with prime contractors and verified through third-party QA and surface-treatment conformance.\n\nChess Engineering’s capability is reinforced by qualified welding inspectors, in-house project management, and experience delivering to defence documentation standards, including material certificates, inspection test plans, and MDR compilation. Our workforce is trained in confined-space, working-at-heights, and site-induction procedures for secure and high-risk environments.\n\nBy combining precision fabrication, disciplined control, and ISO-aligned governance, Chess Engineering offers defence primes and Tier 1 contractors a trusted WA partner for local manufacture, modular assembly, and infrastructure support."
+logo_url: /logos/chess.png
+capabilities: '**Organisation Capabilities**
+
+  Chess Engineering provides advanced steel fabrication, precision machining, modular assembly, and site installation services supporting Australia’s maritime, infrastructure, and defence industries. Our ISO 9001, 14001 and 45001-certified systems ensure consistent quality, safety, and environmental performance across every stage of manufacture and installation.
+
+
+  We specialise in complex CC3-grade fabrication, heavy plate and structural assemblies, and high-accuracy machining of components for defence and industrial applications. Our integrated delivery model covers design support, detailing, fabrication, coating, and testing under full traceability and documented QA control. We maintain segregated bays for stainless, carbon, and alloy materials and work closely with approved coating and NDT contractors to meet naval and defence specifications.
+
+
+  Recent defence experience includes fabrication and modular works for Garden Island (NSW) naval base infrastructure supporting fleet maintenance and shore-based upgrade programs. Scope encompassed heavy structural modules, precision pipe supports, and mechanical frames manufactured under tight tolerances and progressive inspection regimes. Deliverables were completed in partnership with prime contractors and verified through third-party QA and surface-treatment conformance.
+
+
+  Chess Engineering’s capability is reinforced by qualified welding inspectors, in-house project management, and experience delivering to defence documentation standards, including material certificates, inspection test plans, and MDR compilation. Our workforce is trained in confined-space, working-at-heights, and site-induction procedures for secure and high-risk environments.
+
+
+  By combining precision fabrication, disciplined control, and ISO-aligned governance, Chess Engineering offers defence primes and Tier 1 contractors a trusted WA partner for local manufacture, modular assembly, and infrastructure support.'
 discriminators: "**Company Discriminators**\n\n  * **Australian-owned and operated:** Established WA and NSW presence providing sovereign fabrication and engineering capability.\n  * **ISO-certified systems:** Fully integrated management system accredited to ISO 9001 (Quality), ISO 14001 (Environment), and ISO 45001 (Safety).\n  * **CC3 fabrication compliance:** Certified capability to deliver complex structural, mechanical, and modular assemblies to AS 5131 CC3 and AS/NZS 1554 standards.\n  * **Proven defence experience:** Delivered critical steel and modular works for **Garden Island (NSW) Naval Base** supporting fleet maintenance and shore-based infrastructure upgrades.\n  * **Henderson Alliance member:** Actively engaged within WA’s defence industry network promoting local content and collaboration with primes and Tier 1 contractors.\n  * **Advanced facilities:** Two modern Welshpool workshops with segregated stainless, carbon, and alloy bays; heavy-lift cranes; precision machining;\
   \ and integrated QA tracking.\n  * **Documented quality control:** End-to-end traceability through Inspection Test Plans (ITPs), Material Data Reports (MDRs), and third-party inspection sign-off.\n  * **Experienced workforce:** Qualified welding inspectors, coded welders, and project managers trained for high-security and confined-space works.\n  * **Key customers and partners:** Defence primes and Tier 1 EPCMs supporting naval, mining, and infrastructure programs.\n  * **Strong safety and environmental record:** Zero LTI performance and proactive sustainability initiatives aligned with Commonwealth and Defence ESG priorities.\n  * **Defence-ready posture:** DISP-aligned policies, secure data handling, and controlled workshop zones to support classified and sensitive projects."

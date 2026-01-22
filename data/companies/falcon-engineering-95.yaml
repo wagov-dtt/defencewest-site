@@ -4,7 +4,7 @@ overview: Falcon Engineering has not had the opportunity to engage with the Defe
 website: https://www.falconeng95.com.au
 contact_name: Andrew Marriott
 contact_title: Office-Coordinator
-address: 42 Cocos Drive
+address: 42 Cocos Drive, Bibra Lake WA 6163
 phone: 08 9393 0095
 email: sales@falconeng95.com.au
 is_sme: true
@@ -66,4 +66,4 @@ latitude: -32.11067
 longitude: 115.81802
 logo_url: /logos/falcon-engineering-95.png
 capabilities: Falcon Engineering takes care of a few different processes of fabrication under the one roof, and has an extensive supply chain of approved suppliers.  Our capabilities include but are not limited to, Steel Fabrication (Ferrous & Non-Ferrous), Welded fabrication, Processing, Machining, Warehouse facilities, assembly work, drafting and reverse engineering.
-discriminators: "* Quality Accredited (ISO9001, ISO14001, ISO45001 and AS5131 CC3) \n  * Innovative Manufacturing Solutions\n  * Extensive Resource Availability\n  * Proven Supplier to Multiple State Government own Utilities and National Tier 1 contractors\n  * SME"
+discriminators: "- Quality Accredited (ISO9001, ISO14001, ISO45001 and AS5131 CC3)\n  * Innovative Manufacturing Solutions\n  * Extensive Resource Availability\n  * Proven Supplier to Multiple State Government own Utilities and National Tier 1 contractors\n  * SME"

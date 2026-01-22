@@ -4,7 +4,7 @@ overview: Operating since 2009, ARI is an Australian Owned  NDT and Inspection c
 website: https://ari.com.au
 contact_name: Colm Kinsella
 contact_title: Chief Commercial Officer
-address: 5/437 Yangebup Rd
+address: 5/437 Yangebup Rd, Cockburn Central WA 6164
 phone: 0414858197
 email: colm.kinsella@ari.com.au
 is_sme: true
@@ -29,6 +29,6 @@ regions:
 - South West
 latitude: -32.12332
 longitude: 115.83698
-logo_url: /logos/asset-reliability-inspections.jpg
+logo_url: /logos/asset-reliability-inspections.png
 capabilities: Key capabilities include Digital Radiography, Film Radiography, Ultrasonics, Magnetic Particle Inspection, Dye Penetrant Inspection, Phased Array Ultrasonics, Weld Inspection, Welding QC/QA, Pressure Vessel Inspection to AS3788, Pressure Vessel Design as well as Risk Based Inspection (RBI), Non Intrusive Inspection (NII), 3D Photogrammetry and Digital Twins.
-discriminators: "* ISO17025, ISO9001,  ISO14001, ISO45001\n  * Certified Carbon Neutral business\n  * Active partnership and involvement with peak bodies (AICIP and AINDT) for future standard and specification development"
+discriminators: "- ISO17025, ISO9001,  ISO14001, ISO45001\n  * Certified Carbon Neutral business\n  * Active partnership and involvement with peak bodies (AICIP and AINDT) for future standard and specification development"

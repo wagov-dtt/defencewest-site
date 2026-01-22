@@ -7,7 +7,7 @@ overview: 'Sofraco is a wholly Australian owned engineering consultancy & servic
 website: https://sofraco.com.au
 contact_name: ben gillard
 contact_title: Operations Manager
-address: U2 7 Garston Way
+address: U2 7 Garston Way, North Coogee Western Australia 6163 WA 6163
 phone: 0491050014
 email: ben.gillard@sofraco.com.au
 is_sme: true
@@ -39,5 +39,11 @@ regions:
 - Naval Base
 latitude: -32.0841755
 longitude: 115.7599744
-logo_url: /logos/sofraco.jpg
-capabilities: "Sofraco's capabilities are comprised of two interoperating departments: Professional Engineering and  \nEngineering Support Services. A key differentiator for Sofraco is the versatility of the team combining   \nthe capabilities these two departments possess in turn enabling the delivery of turnkey, system-wide  \nengineering solutions."
+logo_url: /logos/sofraco.png
+capabilities: 'Sofraco''s capabilities are comprised of two interoperating departments: Professional Engineering and
+
+  Engineering Support Services. A key differentiator for Sofraco is the versatility of the team combining
+
+  the capabilities these two departments possess in turn enabling the delivery of turnkey, system-wide
+
+  engineering solutions.'

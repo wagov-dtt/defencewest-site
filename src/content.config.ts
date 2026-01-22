@@ -2,42 +2,54 @@ import { defineCollection, z } from "astro:content";
 import { glob } from "astro/loaders";
 
 // Company schema matching the YAML structure
-const companySchema = z.object({
-  name: z.string(),
-  slug: z.string(),
-  overview: z.string().optional(),
-  website: z.string().optional(),
-  logo_url: z.string().optional(),
+// Using .strict() to catch unknown fields (typos)
+const companySchema = z
+  .object({
+    name: z.string(),
+    slug: z.string(),
+    overview: z.string().optional(),
+    website: z.string().optional(),
+    logo_url: z.string().optional(),
 
-  // Contact info
-  contact_name: z.string().optional(),
-  contact_title: z.string().optional(),
-  address: z.string().optional(),
-  phone: z
-    .union([z.string(), z.number()])
-    .transform((v) => String(v))
-    .optional(),
-  email: z.string().optional(),
+    // Contact info
+    contact_name: z.string().optional(),
+    contact_title: z.string().optional(),
+    address: z.string().optional(),
+    phone: z
+      .union([z.string(), z.number()])
+      .transform((v) => String(v))
+      .optional(),
+    email: z.string().optional(),
 
-  // Location
-  latitude: z.number().optional(),
-  longitude: z.number().optional(),
+    // Location
+    latitude: z.number().optional(),
+    longitude: z.number().optional(),
 
-  // Company type flags
-  is_prime: z.boolean().optional().default(false),
-  is_sme: z.boolean().optional().default(false),
+    // Company type flags
+    is_prime: z.boolean().optional().default(false),
+    is_sme: z.boolean().optional().default(false),
+    is_featured: z.boolean().optional().default(false),
+    is_indigenous_owned: z.boolean().optional().default(false),
+    is_veteran_owned: z.boolean().optional().default(false),
 
-  // Taxonomy arrays
-  stakeholders: z.array(z.string()).optional().default([]),
-  capability_streams: z.array(z.string()).optional().default([]),
-  capability_domains: z.array(z.string()).optional().default([]),
-  industrial_capabilities: z.array(z.string()).optional().default([]),
-  regions: z.array(z.string()).optional().default([]),
+    // Taxonomy arrays
+    stakeholders: z.array(z.string()).optional().default([]),
+    capability_streams: z.array(z.string()).optional().default([]),
+    capability_domains: z.array(z.string()).optional().default([]),
+    industrial_capabilities: z.array(z.string()).optional().default([]),
+    regions: z.array(z.string()).optional().default([]),
 
-  // Extended content
-  capabilities: z.string().optional(),
-  discriminators: z.string().optional(),
-});
+    // Extended content
+    capabilities: z.string().optional(),
+    discriminators: z.string().optional(),
+
+    // Social links
+    linkedin: z.string().optional(),
+    facebook: z.string().optional(),
+    twitter: z.string().optional(),
+    youtube: z.string().optional(),
+  })
+  .strict();
 
 const companies = defineCollection({
   loader: glob({ pattern: "**/*.yaml", base: "./data/companies" }),

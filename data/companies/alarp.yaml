@@ -4,10 +4,10 @@ overview: 'ALARP Solutions is a specialist Risk and Safety Management consultanc
 
 
   Established in 2011 we are a wholly owned Australian business with offices and footprints in Perth, Adelaide and Canberra. Our consultants have extensive experience in the Air, Land and Maritime (Sub-sea and Surface) sectors covering a wide range of disciplines within those sectors, including navigation, communications, weapons and propulsion (Diesel, Gas and Nuclear).'
-website: https://www.alarpsolutions.com.au
+website: www.alarpsolutions.com.au
 contact_name: Rod Brown
 contact_title: WA Manager
-address: U6/7 Cessnock Way
+address: U6/7 Cessnock Way, Rockingham WA 6168
 phone: +61 (0)447 738 113
 email: rod.brown@alarpsolutions.com.au
 is_sme: true
@@ -61,7 +61,7 @@ regions:
 - Perth Metropolitan
 latitude: -32.366952
 longitude: 115.749684
-logo_url: /logos/alarp.jpg
+logo_url: /logos/alarp.png
 capabilities: 'ALARP Solutions is an experienced management consultancy that provides services to both defence and industry. We specialise in the following areas and domains:
 
 

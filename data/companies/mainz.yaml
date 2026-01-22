@@ -7,10 +7,10 @@ overview: 'We are specialist in stainless steel cables and related hardware. We 
 
 
   We have previously supplied stainless eye bolts to the navy for use on existing submarines.'
-website: https://www.wirebalustrades.com.au
+website: https://www.wirebalustrades.com.au/
 contact_name: Graeme Eastman
 contact_title: Managing Director
-address: 209 Shaftesbury Ave
+address: 209 Shaftesbury Ave, Bedford WA 6052
 phone: '92756246'
 email: sales@wirebalustrades.com.au
 is_sme: true
@@ -52,6 +52,6 @@ regions:
 - Wheatbelt
 latitude: -31.90504
 longitude: 115.88664
-logo_url: /logos/mainz.jpg
-capabilities: "We have previously supplied stainless eye bolts to the navy for use on existing submarines.\n\nWe have also supplies a wide range of stainless cable and hardware to other contractors who may have then supplied to the defence industry. Examples are:\n\n  * wire balustrades\n  * stainless wire and ferrules for industrial tagging\n  * stainless wire and ferrules for low frequency antenna \n  * cable, grippers and assemblies for hanging signs, pipes, etc\n  * safety cables and lanyards"
-discriminators: "* Over 10 years experience\n  * Large range of cables and fitting held in stock here in Perth\n  * Cable assemblies are made here in our workshop\n  * Advice on cable requirements and specifications"
+logo_url: /logos/mainz.png
+capabilities: "We have previously supplied stainless eye bolts to the navy for use on existing submarines.\n\nWe have also supplies a wide range of stainless cable and hardware to other contractors who may have then supplied to the defence industry. Examples are:\n\n  * wire balustrades\n  * stainless wire and ferrules for industrial tagging\n  * stainless wire and ferrules for low frequency antenna\n  * cable, grippers and assemblies for hanging signs, pipes, etc\n  * safety cables and lanyards"
+discriminators: "- Over 10 years experience\n  * Large range of cables and fitting held in stock here in Perth\n  * Cable assemblies are made here in our workshop\n  * Advice on cable requirements and specifications"

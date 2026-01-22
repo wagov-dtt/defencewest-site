@@ -10,10 +10,10 @@ overview: '**Capability X was established in 2023 and has grown rapidly, securin
 
 
   CX has also hosted defence primes at its remote operations facility, showcasing the company’s remote operations and subsea capability.'
-website: https://www.capabilityx.com
+website: https://www.capabilityx.com/
 contact_name: Lex Simons
 contact_title: 'Manager Strategy and Commercial '
-address: 620 Gnangara Road
+address: 620 Gnangara Road, Cullacabardee WA 6011
 phone: '04017524320'
 email: lsimons@capabilityx.com
 is_sme: true
@@ -57,7 +57,7 @@ regions:
 - Perth
 latitude: -31.8051617
 longitude: 115.8880338
-logo_url: /logos/capability-x.jpg
+logo_url: /logos/capability-x.png
 capabilities: 'At **CX** , we’re redefining how defence forces see, manage, and control complex and high-risk operations — in real time, across any theatre of operation.
 
 
@@ -68,5 +68,5 @@ capabilities: 'At **CX** , we’re redefining how defence forces see, manage, an
 
 
   Together, these technologies provide defence leaders with full operational visibility, heightened safety, and true remote capability — bridging the gap between the physical battlespace and the digital command environment, and giving forces a decisive operational advantage.'
-discriminators: "* **Advanced AI, Automation & Robotics Expertise** – CX designs, manufactures, and operates cutting-edge AI, automation, and robotics systems entirely from its headquarters in Perth, ensuring sovereign capability and full local lifecycle control.\n  * **Purpose-Built National Infrastructure** – CX has developed its operational infrastructure from the ground up, including a remote operations base located at the Perth International Telecommunications Centre—one of the largest satellite communication facilities in the Southern Hemisphere—providing unparalleled connectivity, resilience, and security for remote and autonomous systems.\n  * **Industry Recognition & Awards** – CX was recognised for excellence in robotics and artificial intelligence as the winner of the **2025 Robopoolza Robotics & AI Award**, demonstrating industry-leading innovation and technical capability.\n  * **Strong Academic & Research Partnerships** – CX maintains a strategic alliance with the University\
+discriminators: "- **Advanced AI, Automation & Robotics Expertise** – CX designs, manufactures, and operates cutting-edge AI, automation, and robotics systems entirely from its headquarters in Perth, ensuring sovereign capability and full local lifecycle control.\n  * **Purpose-Built National Infrastructure** – CX has developed its operational infrastructure from the ground up, including a remote operations base located at the Perth International Telecommunications Centre—one of the largest satellite communication facilities in the Southern Hemisphere—providing unparalleled connectivity, resilience, and security for remote and autonomous systems.\n  * **Industry Recognition & Awards** – CX was recognised for excellence in robotics and artificial intelligence as the winner of the **2025 Robopoolza Robotics & AI Award**, demonstrating industry-leading innovation and technical capability.\n  * **Strong Academic & Research Partnerships** – CX maintains a strategic alliance with the University\
   \ of Western Australia (UWA), collaborating across multiple applied research programs in generative AI and advanced robotics. This partnership combines academic depth, leading-edge research, SME agility, and the extensive industry experience of the CX engineering and operations team.\n  * **Established Defence & Industry Engagement** – CX is actively engaged with defence primes, ASX-listed companies, and major government agencies, providing proven technology solutions across marine, subsea, oil and gas, logistics, and law enforcement sectors, with MOUs in place with companies supplying to the Australian Defence Force."

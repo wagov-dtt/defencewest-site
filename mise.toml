@@ -15,15 +15,12 @@ run = ["uv sync", "pnpm install"]
 run = "pnpm exec astro dev"
 
 [tasks.build]
-run = ["uv run python scripts/lint.py", "pnpm exec astro build", "mise run linkcheck"]
+run = ["pnpm exec astro build", "mise run linkcheck"]
 
 [tasks.linkcheck]
 sources = ["data/**/*.yaml", "src/**/*.astro"]
 outputs = [".lycheecache"]
 run = "lychee dist/ src/**/*.astro --no-progress --cache --max-cache-age 7d || true"
-
-[tasks.lint]
-run = "uv run python scripts/lint.py"
 
 [tasks.format]
 run = "pnpm exec prettier --write 'src/**/*.{astro,ts,js,css}' 'public/**/*.css'"

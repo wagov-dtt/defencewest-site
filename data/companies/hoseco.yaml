@@ -1,10 +1,10 @@
 name: HoseCo
 slug: hoseco
 overview: HoseCo Australia specialise in the supply, maintenance and management of Flexible Hose Assemblies for a wide range of applications. HoseCo have a market leading scope of certifications to support the Defence Forces right around Australia.
-website: https://hoseco.com.au
+website: www.hoseco.com.au
 contact_name: John McGill
 contact_title: Group Sales & Product Manager
-address: '37 Magnet Road '
+address: 37 Magnet Road, Canning Vale WA 6155
 phone: 0408 922 371
 email: john.mcgill@hoseco.com.au
 is_prime: true
@@ -40,5 +40,5 @@ regions:
 - Perth Metropolitan
 latitude: -32.0610363
 longitude: 115.9263348
-logo_url: /logos/hoseco.jpg
+logo_url: /logos/hoseco.png
 capabilities: HoseCo Australia specialise in the supply, maintenance and management of Flexible Hose Assemblies for a wide range of applications. HoseCo have a market leading scope of certifications to support the Defence Forces right around Australia.

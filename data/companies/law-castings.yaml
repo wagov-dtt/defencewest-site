@@ -13,7 +13,7 @@ overview: 'Law Castings was established in 1976, and we are a proud Australian (
 website: https://www.lawcastings.com.au
 contact_name: Rodney Luck
 contact_title: Managing Director
-address: 12 Williams road
+address: 12 Williams road, Kelmscott WA 6111
 phone: 0894971044
 email: production@lawcastings.com.au
 is_sme: true
@@ -41,8 +41,8 @@ regions:
 - Perth
 latitude: -32.1327872
 longitude: 116.0074461
-logo_url: /logos/law-castings.jpg
-capabilities: "* Induction furnace capacity 400kg and 100kg\n  * Hard sand moulding and die casting\n  * Induction melting of steels, cast & SG irons, wear resistant- white irons, stainless steels and zinc anodes\n  * Chemical analysis, (Spectrometer)\n  * Grinding, sand blasting and inspection\n  * Heat Treatment\n  * Non destructive test:- including brinell hardness, magnetic particle and dye penetrate testing\n  * Quotes returned within two days\n  * Delivery of casting on time\n  * Weekly updates on order progress\n  * Acknowledgement of order & confirm delivery date within two days"
+logo_url: /logos/law-castings.png
+capabilities: "- Induction furnace capacity 400kg and 100kg\n  * Hard sand moulding and die casting\n  * Induction melting of steels, cast & SG irons, wear resistant- white irons, stainless steels and zinc anodes\n  * Chemical analysis, (Spectrometer)\n  * Grinding, sand blasting and inspection\n  * Heat Treatment\n  * Non destructive test:- including brinell hardness, magnetic particle and dye penetrate testing\n  * Quotes returned within two days\n  * Delivery of casting on time\n  * Weekly updates on order progress\n  * Acknowledgement of order & confirm delivery date within two days"
 discriminators: 'At Law Castings we are focused on building customer relationships by treating each customer as an individual. We understand that your growth is our growth, and working together, we can understand and satisfy your requirements.
 
 

@@ -4,7 +4,7 @@ overview: The collectively common rare diseases are a global crisis. Locally the
 website: https://pch.health.wa.gov.au/Our-services/Rare-Care-Centre
 contact_name: Gareth S Baynam
 contact_title: Medical Director
-address: Hospital Avenue Nedlands
+address: Hospital Avenue Nedlands, Perth WA 6009
 phone: 6456 2222
 email: gareth.baynam@health.wa.gov.au
 is_sme: true
@@ -32,5 +32,5 @@ regions:
 latitude: -31.9675
 longitude: 115.81673
 logo_url: /logos/rare-care-clinical.png
-capabilities: "* Innovation\n  * health and well-being\n  * R and D\n  * Global partnerships"
-discriminators: "* insights from medical mysteries, clarity from the extremity\n  * rare disease e.g. that manifest with the rare environment and circumstances encountered in space travel and defence situations\n  * remote region capabilities\n  * artificial intelligence\n  * 3D facial analysis"
+capabilities: "- Innovation\n  * health and well-being\n  * R and D\n  * Global partnerships"
+discriminators: "- insights from medical mysteries, clarity from the extremity\n  * rare disease e.g. that manifest with the rare environment and circumstances encountered in space travel and defence situations\n  * remote region capabilities\n  * artificial intelligence\n  * 3D facial analysis"

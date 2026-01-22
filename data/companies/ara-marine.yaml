@@ -7,10 +7,10 @@ overview: 'With well-established and documented work practices, ARA Marine proje
 
 
   We also have large, custom-built workshops designed to meet the requirements of our customers at the ports of Henderson, Sydney, Karratha and Darwin. Our workshops in Karratha, Henderson and Sydney also hold hyperbaric accreditation from the Royal Australian Navy.'
-website: https://aramarine.com.au/sectors/defence
+website: https://aramarine.com.au/sectors/defence/
 contact_name: Mike Gartside
 contact_title: Manager
-address: 42 Zedora Turn
+address: 42 Zedora Turn, Henderson WA 6166
 phone: '1800003473'
 email: mgartside@aramarine.com.au
 is_sme: true
@@ -48,6 +48,6 @@ regions:
 - Naval Base
 latitude: -32.1517937
 longitude: 115.781418
-logo_url: /logos/ara-marine.jpg
+logo_url: /logos/ara-marine.png
 capabilities: "**ARA Marine inspects, tests, services, repairs, recertifies and supplies:**\n\n  * FRC and rescue boats\n  * Davits\n  * Safety release hooks\n  * Firefighting equipment and systems\n  * Fire suppression systems\n  * Portable firefighting equipment\n  * Gas detection and calibration gas\n  * Breathing air systems and Breathing Air Compressor Units (BACUs)\n  * Breathing apparatus and long line units\n  * Diving, breathing air, oxygen and mixed gas systems\n  * Medium and high-pressure air/gas compressors and boosters\n  * Pressure vessels, relief valves, gauges, heat exchangers, pipework and hoses\n  * Fluid transfer pumps and accessories\n  * Additional miscellaneous safety equipment\n\n**ARA Marine 's other services include:**\n\n  * Manufacture of breathing air packages\n  * Oxygen cleaning of gas systems\n  * Hire SCBA, Breathing Air Compressor Unit (BACU) packages\n  * System design\n  * Project management\n  * Planning and management of maintenance including planned\
   \ preventative, predictive and corrective maintenance on plant and equipment\n  * Emergency maintenance including a 24-hour call-out service\n  * Facilities and machinery appraisal\n  * Minor works, renovations and refurbishments"

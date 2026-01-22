@@ -1,11 +1,10 @@
 name: AB&H Pty Ltd
 slug: ab-h
-overview: "AB&H Pty Ltd is a Technology Services company specialising in Agile Program and Project Management. Our project managers are PRINCE2 and PMI certified.  \nAB&H Pty Ltd also provides professional services for ICT Technology planning - including:,\n\n  * Cyber Security \n  * Applications Requirements Planning \n  * Infrastructure Planning\n  * Web Design\n\nFor eligible companies, AB&H Pty Ltd can facilitate R&D Project funding by registering eligible companies with The Department of Industry, Science, Energy & Resources, to enable companies to claim the R&D Tax Incentive, providing (up to) 43.5% of R&D Expenditure that has already been spent in a Financial Year."
+overview: "AB&H Pty Ltd is a Technology Services company specialising in Agile Program and Project Management. Our project managers are PRINCE2 and PMI certified.\nAB&H Pty Ltd also provides professional services for ICT Technology planning - including:,\n\n  * Cyber Security\n  * Applications Requirements Planning\n  * Infrastructure Planning\n  * Web Design\n\nFor eligible companies, AB&H Pty Ltd can facilitate R&D Project funding by registering eligible companies with The Department of Industry, Science, Energy & Resources, to enable companies to claim the R&D Tax Incentive, providing (up to) 43.5% of R&D Expenditure that has already been spent in a Financial Year."
 website: www.abandh.com.au
-# potential_website: https://www.abc.net.au
 contact_name: Russell Ascott
 contact_title: Director
-address: PO Box 130
+address: PO Box 130, Mosman Park WA 6012
 phone: +61 413 819 715
 email: russell.ascott@abandh.com.au
 is_sme: true

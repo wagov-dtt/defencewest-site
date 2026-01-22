@@ -1,10 +1,12 @@
 name: Touchtech Australia
 slug: touchtech
-overview: "Touchtech Australia Pty Ltd (Touchtech) is a locally owned Bunbury based company that focuses on software and product development to solve business concerns for our clients.   \nTouchtech has a range of products that we can customise to meet individual client needs, and can develop bespoke software and products specifically to suit a client. Clients have included small business, mining, transport & earth moving, commercial fishing and government."
-website: https://touchtech.com.au
+overview: 'Touchtech Australia Pty Ltd (Touchtech) is a locally owned Bunbury based company that focuses on software and product development to solve business concerns for our clients.
+
+  Touchtech has a range of products that we can customise to meet individual client needs, and can develop bespoke software and products specifically to suit a client. Clients have included small business, mining, transport & earth moving, commercial fishing and government.'
+website: www.touchtech.com.au
 contact_name: Chris Dickie
 contact_title: Director
-address: 6 Beddingfield Street
+address: 6 Beddingfield Street, Davenport WA 6230
 phone: 0438931911
 email: chris@touchtech.com.au
 is_sme: true

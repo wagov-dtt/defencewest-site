@@ -13,13 +13,14 @@ overview: '**NGALIMA: A Respected Aboriginal Civil Contractor Serving the Pilbar
 
 
   We take pride in contributing to the economic development of the Pilbara region, while ensuring that our operations are environmentally responsible and aligned with best practices in safety, quality, and sustainability.'
-website: https://ngalima.com.au
+website: https://ngalima.com.au/
 contact_name: Louise Whitten
 contact_title: CEO
-address: Newman Court
+address: Newman Court, Karratha WA 6718
 phone: 1300 933 823
 email: ngalima@ngalima.com.au
 is_sme: true
+is_indigenous_owned: true
 stakeholders:
 - Defence Industry
 - Academic Institutions
@@ -61,7 +62,7 @@ regions:
 - Wheatbelt
 latitude: -20.73614
 longitude: 116.80107
-logo_url: /logos/ngalima.jpg
+logo_url: /logos/ngalima.png
 capabilities: 'Ngalima offers a comprehensive range of services, including earthworks and roadworks, civil concrete construction, dry and wet hire, and labour hire. Our earthworks capabilities cover bulk and detailed earthworks, landscaping, rehabilitation, tailings storage, drainage, culverts, pond and dam installation, road formation, maintenance, and repairs. In concrete construction, we specialise in complex, high-volume works, including structural concrete, suspended and ground slabs, footings, pedestals, tilt panels, insitu walls, columns, concrete pumping, and reinforcing steelwork installation.
 
 

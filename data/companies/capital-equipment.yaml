@@ -4,7 +4,7 @@ overview: Capital currently supply ASC, BAE both fabrication equipment and machi
 website: https://www.capitalequipment.net.au
 contact_name: Jim Harding
 contact_title: Director
-address: 1/10 Renewable Chase Bibra Lake
+address: 1/10 Renewable Chase Bibra Lake, BIBRA LAKE WA 6163
 phone: '0421624436'
 email: jim@capitalequipment.net.au
 is_sme: true
@@ -35,6 +35,12 @@ regions:
 - Wheatbelt
 latitude: -32.10218
 longitude: 115.80832
-logo_url: /logos/capital-equipment.jpg
-capabilities: "We supply various machine tools such as Lathes, Mills, Grinders, Slotters, Vertical - Horizontal Borers, Drills \n\nFabrication Equipment Bandsaws, Pipe Benders, Press Brakes, Guillotines, Punch and Shears, Mag Base Drills, Belt Grinders, Laser Cutters, F- Clamps, Part Marking Machines, Plate Bevellers, Cold saws       \n\nCleaning Equipment Vacuum cleaners, Floor sweepers , Floor scrubbers, Pressure Cleaners"
+logo_url: /logos/capital-equipment.png
+capabilities: 'We supply various machine tools such as Lathes, Mills, Grinders, Slotters, Vertical - Horizontal Borers, Drills
+
+
+  Fabrication Equipment Bandsaws, Pipe Benders, Press Brakes, Guillotines, Punch and Shears, Mag Base Drills, Belt Grinders, Laser Cutters, F- Clamps, Part Marking Machines, Plate Bevellers, Cold saws
+
+
+  Cleaning Equipment Vacuum cleaners, Floor sweepers , Floor scrubbers, Pressure Cleaners'
 discriminators: Capital is a small local business based in Bibra Lake WA . We stock and service machine we sell

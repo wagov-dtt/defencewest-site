@@ -4,7 +4,7 @@ overview: Established in 2001, Calytrix Technologies is an Australian owned and 
 website: https://www.calytrix.com
 contact_name: Shawn Parr
 contact_title: CEO
-address: U19 162 Colin Street,
+address: U19 162 Colin Street,, West Perth WA 6007
 phone: 0402466292
 email: shawn.parr@calytrix.com
 is_sme: true
@@ -30,5 +30,5 @@ regions:
 latitude: -31.94462
 longitude: 115.84388
 logo_url: /logos/calytrix.png
-capabilities: "Calytrix specialises in the integration of training systems and engineering capabilities to deliver world-leading defence training solutions. Within our simulation technology expertise, Calytrix provides systems engineering and architectural design, simulation software, advanced simulated radio communications and advanced   3D virtual reality development environments.\n\nCalytrix's products and services include:  \n•    Training needs analysis and design (SADL)  \n•    Simulation network and architecture design and delivery  \n•    Simulation software  \n     \\- Whole of world 3D VR synthetic environments  \n     \\- Advanced simulated radio communications  \n•    Emulated military equipment  \n•    Virtual and Augmented Reality   \n•    Exercise design and delivery\n\nWith 75+ full-time staff, Calytrix maintains  ISO 9001 Quality, 27001 Information Security and 45001 Safety certification, holds DISP  membership."
+capabilities: "Calytrix specialises in the integration of training systems and engineering capabilities to deliver world-leading defence training solutions. Within our simulation technology expertise, Calytrix provides systems engineering and architectural design, simulation software, advanced simulated radio communications and advanced   3D virtual reality development environments.\n\nCalytrix's products and services include:\n•    Training needs analysis and design (SADL)\n•    Simulation network and architecture design and delivery\n•    Simulation software\n     \\- Whole of world 3D VR synthetic environments\n     \\- Advanced simulated radio communications\n•    Emulated military equipment\n•    Virtual and Augmented Reality\n•    Exercise design and delivery\n\nWith 75+ full-time staff, Calytrix maintains  ISO 9001 Quality, 27001 Information Security and 45001 Safety certification, holds DISP  membership."
 discriminators: With more than 20-years' experience delivering complex high-tempo training and simulation systems to the ADF, and a unique understanding of joint and collective exercise domain, Calytrix has a deep and proven understanding of defence training. Uniquely we are able to support our customers from their initial concept and design phases; training and systems development; and into service and sustainment.  We deliver a full-spectrum training offering to support the warfighter.

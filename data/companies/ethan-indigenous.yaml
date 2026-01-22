@@ -1,13 +1,23 @@
 name: Ethan Indigenous Pty Ltd
 slug: ethan-indigenous
-overview: "Federal Defence Advisory & Strategical (CLASSIFIED), Department of defence (CLASSIFIED) \n\nIn Townsville, tower with high speed, runs large language model AI for department of defence. HPC\n\nWork with all Government & States across the country \n\nAustralian Business with all Souverain."
+overview: 'Federal Defence Advisory & Strategical (CLASSIFIED), Department of defence (CLASSIFIED)
+
+
+  In Townsville, tower with high speed, runs large language model AI for department of defence. HPC
+
+
+  Work with all Government & States across the country
+
+
+  Australian Business with all Souverain.'
 website: https://ethanindigenous.com.au/Home
 contact_name: Jessica Craig-Raymond
 contact_title: 'Account Executive '
-address: 108 St Georges Terrace
+address: 108 St Georges Terrace, Perth WA 6000
 phone: 0420286242
 email: jessica.craig-raymond@ethan.com.au
 is_sme: true
+is_indigenous_owned: true
 stakeholders:
 - Defence Industry
 - Academic Institutions
@@ -37,5 +47,5 @@ regions:
 - Wheatbelt
 latitude: -31.95453
 longitude: 151.85687
-logo_url: /logos/ethan-indigenous.jpg
+logo_url: /logos/ethan-indigenous.png
 discriminators: Capabilities listed below, as mentioned above, In Townsville, tower with high speed, runs large language model AI for department of defence (HPC) . Federal Defence Advisory & Strategical (CLASSIFIED), Department of defence (CLASSIFIED) Australian Business with all Souverain.

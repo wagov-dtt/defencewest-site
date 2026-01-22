@@ -52,10 +52,14 @@ import Layout from "../layouts/Layout.astro";
     <section>
       <h2>Download Data</h2>
       <p>
-        Export the full directory as a CSV file for use in spreadsheets or other applications.
+        Export the full directory for use in spreadsheets or other applications.
       </p>
-      <p>
-        <a href="/companies.csv" role="button" class="outline" download>Download CSV</a>
+      <p class="download-links">
+        <small>
+          <a href="/companies.xlsx" download>Download Excel (.xlsx)</a>
+          <span class="separator">|</span>
+          <a href="/companies.csv" download>Download CSV</a>
+        </small>
       </p>
     </section>
   </article>
@@ -82,5 +86,14 @@ import Layout from "../layouts/Layout.astro";
   section h2 {
     border-bottom: 2px solid var(--pico-primary);
     padding-bottom: 0.5rem;
+  }
+
+  .download-links {
+    margin-top: 0.5rem;
+  }
+
+  .download-links .separator {
+    margin: 0 0.5rem;
+    opacity: 0.5;
   }
 </style>

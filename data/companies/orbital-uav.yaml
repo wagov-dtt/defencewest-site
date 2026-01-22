@@ -1,10 +1,10 @@
 name: Orbital UAV
 slug: orbital-uav
 overview: Orbital UAV is a world leader in the design, development and manufacture of propulsion systems and flight critical components for unmanned aerial vehicles (UAVs). From operations in Perth, Western Australia and Oregon, USA we deliver our integrated propulsion systems and associated technologies into the world's largest suppliers of tactical UAVs. Our patented fuel injection system enables advanced spark ignition using heavy fuel - a requirement for military applications. Such revolutionary technologies combined with our proven operational experience mean Orbital UAV is uniquely placed to meet the long endurance and high reliability requirements of the rapidly evolving UAV market.
-website: https://www.orbitaluav.com
+website: www.orbitaluav.com
 contact_name: Todd Alder
 contact_title: CEO & Managing Director
-address: 4 Whipple Street
+address: 4 Whipple Street, Balcatta WA 6021
 phone: +61 8 9441 2311
 email: contact@orbitalcorp.com.au
 is_sme: true
@@ -26,5 +26,5 @@ regions:
 latitude: -31.8632207
 longitude: 115.8056379
 logo_url: /logos/orbital-uav.png
-capabilities: "With four decades of technical know-how and operational experience, Orbital UAV is the world leader in spark ignited, heavy fuel propulsion systems for tactical UAVs. From our world-class facilities in Perth, Australia we offer concept and detailed designs, prototyping and sourcing, and testing and validation. \n\nOur capabilities include:   \nDesign & Development \n\n  * Concept definition through to production;\n  * State-of-the-art analysis tools; and\n  * Design iteration through prototyping and detailed test procedures, measurement and analysis.\n\nMachining & Prototyping   \n\n  * Rapid in-house manufacture for prototyping and production; and \n  * Metrology labs. Testing & Validation \n  * Aero-Engine propeller test stands (including durability cycles such as FAR33); \n  * Environmental dynamometers for cold start down to -35˚C and hot operation up to 60˚C; and \n  * Altitude simulation up to 20,000ft. \n\nOrbital UAV's world leading propulsion solutions exceed the\
-  \ competition benchmark for reliability, power and system durability."
+capabilities: "With four decades of technical know-how and operational experience, Orbital UAV is the world leader in spark ignited, heavy fuel propulsion systems for tactical UAVs. From our world-class facilities in Perth, Australia we offer concept and detailed designs, prototyping and sourcing, and testing and validation.\n\nOur capabilities include:\nDesign & Development\n\n  * Concept definition through to production;\n  * State-of-the-art analysis tools; and\n  * Design iteration through prototyping and detailed test procedures, measurement and analysis.\n\nMachining & Prototyping\n\n  * Rapid in-house manufacture for prototyping and production; and\n  * Metrology labs. Testing & Validation\n  * Aero-Engine propeller test stands (including durability cycles such as FAR33);\n  * Environmental dynamometers for cold start down to -35˚C and hot operation up to 60˚C; and\n  * Altitude simulation up to 20,000ft.\n\nOrbital UAV's world leading propulsion solutions exceed the competition benchmark\
+  \ for reliability, power and system durability."

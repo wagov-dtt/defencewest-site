@@ -7,10 +7,11 @@ overview: 'Vescient is an Australian owned multinational company with office is 
 website: https://www.vescient.com
 contact_name: Rod Greedy
 contact_title: Managing Director
-address: Level 16, 111 St Georges Terrace
+address: Level 16, 111 St Georges Terrace, Perth WA 6000
 phone: (08) 6270 6395
 email: services@vescient.com
 is_sme: true
+is_veteran_owned: true
 stakeholders:
 - Defence Industry
 - Academic Institutions
@@ -76,6 +77,9 @@ regions:
 latitude: -31.9535554
 longitude: 115.8535415
 logo_url: /logos/vescient.png
-capabilities: "Our core business is assisting our clients to define and solve complex, and wicked problems. We have a unique perspective of problems and challenges and have a lot to offer the Defence sector. Our key to success is our combination of our first-principles, multi-disciplinary approach to problems solving, combined with our highly-diverse workforce. We are adept at managing security and confidentiality.   \nOur Defence sector portfolio is split between above-the-line programme delivery direct to Defence, as well as below-the-line support to tenderer and suppliers. Our portfolio diversity is representative of our workforce diversity. A third of our 30-strong workforce are Army, Air Force or Navy veterans. They have over a hundred years of combined experience in the Defence Sector. An even spread of former Australian Defence Force experience across the Air, Land, Sea and Space domains, Defence industry and civilian corporate experience brings perspective and balance to the Vescient\
-  \ capability offering.   \nVescient’s skill set spans international logistics, resources, civil engineering, project engineering, planning and scheduling, safety, workforce planning, organisational and clinical psychology, human engineering and information technology. We are culturally diverse and internationally aware. Languages spoken on our offices today include Cantonese, Korean, Hindi, Macedonian/Croatian, Malay, Mandarin, Danish and Spanish. We also have significant experience in mentoring and capability development of aboriginal business."
+capabilities: 'Our core business is assisting our clients to define and solve complex, and wicked problems. We have a unique perspective of problems and challenges and have a lot to offer the Defence sector. Our key to success is our combination of our first-principles, multi-disciplinary approach to problems solving, combined with our highly-diverse workforce. We are adept at managing security and confidentiality.
+
+  Our Defence sector portfolio is split between above-the-line programme delivery direct to Defence, as well as below-the-line support to tenderer and suppliers. Our portfolio diversity is representative of our workforce diversity. A third of our 30-strong workforce are Army, Air Force or Navy veterans. They have over a hundred years of combined experience in the Defence Sector. An even spread of former Australian Defence Force experience across the Air, Land, Sea and Space domains, Defence industry and civilian corporate experience brings perspective and balance to the Vescient capability offering.
+
+  Vescient’s skill set spans international logistics, resources, civil engineering, project engineering, planning and scheduling, safety, workforce planning, organisational and clinical psychology, human engineering and information technology. We are culturally diverse and internationally aware. Languages spoken on our offices today include Cantonese, Korean, Hindi, Macedonian/Croatian, Malay, Mandarin, Danish and Spanish. We also have significant experience in mentoring and capability development of aboriginal business.'
 discriminators: We distinguish ourselves from our competitors by fusing strategy, people, technology and foresight to enable our clients to succeed.

@@ -5,7 +5,7 @@ overview: "With over 130 years of experience, **St John WA** is a trusted provid
 website: https://www.stjohnwa.com.au
 contact_name: David John Waters
 contact_title: Manager, Growth and Innovation
-address: 209 Great Eastern Highway
+address: 209 Great Eastern Highway, Belmont WA 6104
 phone: 0476897839
 email: David.Waters@stjohnwa.com.au
 is_sme: true
@@ -34,4 +34,4 @@ latitude: -31.9451762
 longitude: 115.9215004
 logo_url: /logos/st-john-ambulance-wa.png
 capabilities: "Beyond our core emergency and patient transport services, St John WA offers a diverse range of specialised health and medical support solutions. These include:\n\n  * First Aid Training\n  * Specialised clinical and critical emergency response training\n  * Mental health and psychosocial safety support\n  * Occupational Health Services\n  * Provision of clinical personnel (nurses, medics, paramedics)\n  * Leasing of ambulances\n  * Clinical governance and readiness assessments"
-discriminators: "* State ambulance service provider\n  * provision of GP, Dental and Occupational health services through urgent care centres\n  * Critical Care and Special Operations services and support\n  * Largest employer of paramedical staff in WA\n  * Footprint across the entire state via metropolitan and regional subcentres\n  * Provider of around 70% of the state's First Aid training requirements\n  * Management of the states defibrillator network of over 12,000 units"
+discriminators: "- State ambulance service provider\n  * provision of GP, Dental and Occupational health services through urgent care centres\n  * Critical Care and Special Operations services and support\n  * Largest employer of paramedical staff in WA\n  * Footprint across the entire state via metropolitan and regional subcentres\n  * Provider of around 70% of the state's First Aid training requirements\n  * Management of the states defibrillator network of over 12,000 units"

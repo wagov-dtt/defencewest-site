@@ -13,13 +13,15 @@ overview: 'Zagul Biri is a First Nations–led advisory and engagement company s
 
 
   Zagul Biri actively engages with Defence West, Aboriginal business hubs, and industry partners to align its services with Western Australia’s Defence industry priorities and to contribute to sustainable economic participation, workforce capability, and long-term industry growth.'
-website: https://zagulbiri.com.au
+website: https://zagulbiri.com.au/
 contact_name: Erol Williams
 contact_title: Director
-address: 42 Bishopsgate St
+address: 42 Bishopsgate St, Lathlain WA 6100
 phone: '0431257412'
 email: hello@zagulbiri.com.au
 is_sme: true
+is_indigenous_owned: true
+is_veteran_owned: true
 stakeholders:
 - Defence Industry
 - Academic Institutions
@@ -50,4 +52,4 @@ longitude: 115.9076123
 logo_url: /logos/zagul-biri.png
 capabilities: "Zagul Biri provides advisory and engagement services that support Defence and Defence industry organisations to strengthen workforce participation, reduce engagement risk, and deliver culturally informed outcomes aligned with Defence and WA Government priorities.\n\n**Key capabilities include:**\n\n  * Aboriginal and Torres Strait Islander cultural advisory and engagement\n  * Indigenous workforce attraction, retention, and participation strategies\n  * Cultural capability and leadership briefings\n  * Social procurement advisory and Aboriginal business engagement pathways\n  * Stakeholder engagement across Defence, industry, government, and community\n  * Trusted brokerage between Defence, primes, SMEs, and First Nations organisations\n\nZagul Biri’s directors have delivered these capabilities through extensive Defence service and senior leadership roles. This includes advising Defence leaders on Indigenous workforce matters, supporting First Nations personnel within Defence\
   \ environments, and facilitating culturally informed engagement within complex and regulated organisations.\n\nThe company supports Defence primes and SMEs by providing practical, culturally informed advisory services that strengthen social licence, workforce outcomes, and long-term community relationships."
-discriminators: "* **First Nations–led with lived Defence experience**  \nDirectors with Royal Australian Navy service and strong Defence cultural understanding.\n  * **Cultural insight translated into delivery outcomes**  \nPractical advisory services focused on real-world application.\n  * **Aligned with WA Defence priorities**  \nWorkforce participation, social procurement, and sustainable industry growth.\n  * **Trusted relationships across sectors**  \nEstablished networks across Defence, government, industry, and First Nations organisations.\n  * **Risk-aware and Defence-ready**  \nOperates with an understanding of Defence governance, confidentiality, and accountability.\n  * **Agile and scalable**  \nAble to support primes, SMEs, and government across planning, engagement, and delivery.\n  * **Values-driven and professionally governed**  \nGrounded in integrity, cultural responsibility, and commercial discipline."
+discriminators: "- **First Nations–led with lived Defence experience**\nDirectors with Royal Australian Navy service and strong Defence cultural understanding.\n  * **Cultural insight translated into delivery outcomes**\nPractical advisory services focused on real-world application.\n  * **Aligned with WA Defence priorities**\nWorkforce participation, social procurement, and sustainable industry growth.\n  * **Trusted relationships across sectors**\nEstablished networks across Defence, government, industry, and First Nations organisations.\n  * **Risk-aware and Defence-ready**\nOperates with an understanding of Defence governance, confidentiality, and accountability.\n  * **Agile and scalable**\nAble to support primes, SMEs, and government across planning, engagement, and delivery.\n  * **Values-driven and professionally governed**\nGrounded in integrity, cultural responsibility, and commercial discipline."

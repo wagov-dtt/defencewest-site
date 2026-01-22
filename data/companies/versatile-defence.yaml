@@ -10,10 +10,10 @@ overview: 'Versatile Defence is an Australian-owned company built on a strong fo
 
 
   With a focus on practical innovation and long-term reliability, Versatile Defence continues to build trusted relationships with defence clients and industry partners, contributing to Australia’s maritime strength and resilience.'
-website: https://versatile-defence.com.au
+website: https://versatile-defence.com.au/
 contact_name: Kim Bakker
 contact_title: Sales & Marketing
-address: 20 Egmont Rd
+address: 20 Egmont Rd, Henderson WA 6166
 phone: '0451507504'
 email: sales@versatile-defence.com.au
 is_sme: true
@@ -49,5 +49,16 @@ regions:
 latitude: -32.1535223
 longitude: 115.7737501
 logo_url: /logos/versatile-defence.png
-capabilities: "Versatile Defence offers a comprehensive suite of capabilities tailored to the defence, security, and maritime sectors. Our core strengths lie in **specialist consulting** , **supply of advanced defence technologies** , and **manufacture of high-performance poly boats** —each designed to enhance operational efficiency, safety, and sustainability.\n\nThrough our consulting arm, we provide expert guidance across vessel systems, engineering integration, and operational support. Our team’s background in commercial and government maritime projects enables us to deliver pragmatic solutions aligned with defence standards and compliance frameworks. We have supported defence-related clients by advising on vessel lighting upgrades, propulsion efficiency, and emissions compliance using technologies sourced from our international partners.\n\nOur trade and distribution capability connects the Australian defence sector with world-class equipment and systems. Through strategic partnerships,\
-  \ we deliver reliable, field-proven technologies that enhance vessel performance and reduce environmental impact. These systems have been deployed in government and paramilitary fleets, improving safety, efficiency, and crew comfort.\n\nVersatile Defence’s in-house **poly boat manufacturing** capability represents a unique offering within Australia. Our rugged, low-maintenance vessels are engineered for demanding operational environments and suited for patrol, training, and transport applications. With our recent access to newer technology, we are now able to 3D print these vessels for fast prototyping needs. \n\nBy combining global innovation with Australian production and service capability, Versatile Defence provides practical, cost-effective solutions that support sovereign readiness, reduce maintenance overheads, and extend operational life across defence assets."
+capabilities: 'Versatile Defence offers a comprehensive suite of capabilities tailored to the defence, security, and maritime sectors. Our core strengths lie in **specialist consulting** , **supply of advanced defence technologies** , and **manufacture of high-performance poly boats** —each designed to enhance operational efficiency, safety, and sustainability.
+
+
+  Through our consulting arm, we provide expert guidance across vessel systems, engineering integration, and operational support. Our team’s background in commercial and government maritime projects enables us to deliver pragmatic solutions aligned with defence standards and compliance frameworks. We have supported defence-related clients by advising on vessel lighting upgrades, propulsion efficiency, and emissions compliance using technologies sourced from our international partners.
+
+
+  Our trade and distribution capability connects the Australian defence sector with world-class equipment and systems. Through strategic partnerships, we deliver reliable, field-proven technologies that enhance vessel performance and reduce environmental impact. These systems have been deployed in government and paramilitary fleets, improving safety, efficiency, and crew comfort.
+
+
+  Versatile Defence’s in-house **poly boat manufacturing** capability represents a unique offering within Australia. Our rugged, low-maintenance vessels are engineered for demanding operational environments and suited for patrol, training, and transport applications. With our recent access to newer technology, we are now able to 3D print these vessels for fast prototyping needs.
+
+
+  By combining global innovation with Australian production and service capability, Versatile Defence provides practical, cost-effective solutions that support sovereign readiness, reduce maintenance overheads, and extend operational life across defence assets.'

@@ -1,10 +1,10 @@
 name: Newton Labs
 slug: newton-labs
 overview: The prime focus of Newton Labs is on the Internet of Things (IoT), machine learning and real-time data analytics for heavy industry applications.
-website: http://staging.newtonlabs.com.au/index-fullscreen-countdown-video.html
+website: www.newtonlabs.com.au
 contact_name: Simon Vincent
 contact_title: Managing Director
-address: 191 St Georges Terrace
+address: 191 St Georges Terrace, Perth WA 6000
 phone: +61 435 112 224
 email: simon@newtonlabs.com.au
 is_sme: true
@@ -23,5 +23,5 @@ regions:
 - Perth Metropolitan
 latitude: -31.9539836
 longitude: 115.8532393
-logo_url: /logos/newton-labs.jpg
+logo_url: /logos/newton-labs.png
 capabilities: We are an award-winning and leading Australian IoT company that builds real-time solutions for the global mining industry, although our capabilites also have promising applications to defence requirements.

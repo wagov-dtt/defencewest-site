@@ -7,10 +7,10 @@ overview: 'No previous experience with defence industry.
 
 
   We have feedstock supply chains operating for 5 years and aim to be producing biofuels by 2028 subject to demand and offtake. Currently producing other biofuel related products.'
-website: https://renewable.bio
+website: http://www.renewable.bio
 contact_name: Angelo Dabala
 contact_title: CEO
-address: Level 2 Wentworth Building, 300 Murray Street
+address: Level 2 Wentworth Building, 300 Murray Street, Perth WA 6000
 phone: 0409681316
 email: angelo.dabala@renewable.bio
 is_sme: true
@@ -46,4 +46,4 @@ capabilities: 'Our objective is to replace imported fossil fuels with sustainabl
 
 
   Our feedstock to produce renewable fuels is primarily agricultural and forestry residues. In principle, any sustainable organic feedstock can be utilised.'
-discriminators: "* Locally produced sustainable biofuels\n  * Currently producing A$10m revenue, planning to scale up\n  * All feedstock sustainably sourced\n  * Biofuels as a renewable creates employment primarily in regional Australia"
+discriminators: "- Locally produced sustainable biofuels\n  * Currently producing A$10m revenue, planning to scale up\n  * All feedstock sustainably sourced\n  * Biofuels as a renewable creates employment primarily in regional Australia"

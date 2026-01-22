@@ -1,11 +1,13 @@
 name: Peritas Consulting Pty Ltd
 slug: peritas
-overview: "Peritas has evolved significantly from our three-person office in 2008 to become a truly national, West Australian-owned and operated engineering design consultancy. With an award-winning civil & structural design team engaged in diverse projects across the engineering spectrum, we embrace the individuality of each engineer, designer, client and project to ensure our service remains bespoke and nimble. **We are here to design better futures, differently.** This purpose and design philosophy supports our overall vision - to create engineered futures beyond convention. With offices in Perth and Melbourne, Peritas has a dedicated team of fifty professionals who provide constructible solutions, cutting-edge technologies, and reliable techniques to deliver integrated engineering solutions that minimise costs, risks and time-frames for clients. \n\nWe deliver robust and resilient engineering design solutions tailored for the demanding requirements of the Australian Defence Industry.\
-  \ At Peritas we ensure to deliver secure, efficient and cost effective design that meets the stringent standards of Defence projects."
-website: https://peritas.au
+overview: 'Peritas has evolved significantly from our three-person office in 2008 to become a truly national, West Australian-owned and operated engineering design consultancy. With an award-winning civil & structural design team engaged in diverse projects across the engineering spectrum, we embrace the individuality of each engineer, designer, client and project to ensure our service remains bespoke and nimble. **We are here to design better futures, differently.** This purpose and design philosophy supports our overall vision - to create engineered futures beyond convention. With offices in Perth and Melbourne, Peritas has a dedicated team of fifty professionals who provide constructible solutions, cutting-edge technologies, and reliable techniques to deliver integrated engineering solutions that minimise costs, risks and time-frames for clients.
+
+
+  We deliver robust and resilient engineering design solutions tailored for the demanding requirements of the Australian Defence Industry. At Peritas we ensure to deliver secure, efficient and cost effective design that meets the stringent standards of Defence projects.'
+website: https://peritas.au/
 contact_name: Matt Waring
 contact_title: National Business Development Manager
-address: 74 Goodwood Parade
+address: 74 Goodwood Parade, Burswood WA 6100
 phone: (08) 6336 9299
 email: mwaring@peritas.au
 is_sme: true
@@ -40,6 +42,40 @@ regions:
 latitude: -31.9577592
 longitude: 115.9002147
 logo_url: /logos/peritas.png
-capabilities: "Capabilities:   \nComprehensive Engineering services - Feasibility studies & Master planning. Concept & Preliminary Design. Design modelling & documentation (including advanced BIM capabilities). \n\nSpecialised Engineering Disciplines - civil engineering (site development, infrastructure). Structural Engineering (building and protective structures). Construction Engineering (planning, execution, and management), High performance Floor Design (vibration control, specialised loading). \n\nProject Lifecycle Support - Full project lifecycle support form initial concept through to final construction and commissioning. Adaptable to all stages of a project.   \n  \nConstruction support & Supervision   \n  \nExamples of previous projects Peritas Consulting have worked on:   \nCampbell Barracks Upgrades – Access and Carparks  \nAMC Henderson – Subdivision and infrastructure works  \nPearce Airbase – Various Maintenance contracts (Civil & Structural consultancy works)  \nHMAS Stirling,\
-  \ Garden Island (Various maintenance and land based upgrade projects)  \n  \n**Austral Shipyards Infrastructure development  **  \nAustral Ships Pty Ltd (Structural - Marine) - $12million value   \nOver the years we have seen Austal Ships grow from a small group of dedicated shareholder employees into one of the best large aluminium fast vessel designers/constructors in the world.   \n  \nWith every expansion, we were involved both with the design and construction/management of their new facilities.   \n  \nCash strapped because of growth, Austal demanded and expected cost efficient large steel structures to manufacture a wide range of large aluminium catamarans and ferries."
-discriminators: "* Australian owned and operated (17years)\n  * Bespoke & Individualised Solutions\n  * Exceptional Depth of Expertise \n  * Versatile, Multi-Disciplinary Integration \n  * Advanced Design & Modelling Capabilities \n  * ISO 45001:2018\n  * ISO 9001:2015\n  * ISO 14001:2015\n  * 2024 Australian Steel Instutution Awards: WA Buildings large projects winner\n  * Hitatchi mining equipment assembly workshop Stage 3 \n  * Carbon Neutral Business \n  * Key partners and clients - Kerman, Georgiou, Rio Tinto, BMD, BHP, Austral, Badge, Development WA\n  * Working with Office of Defense Industry Support to prioritise areas of our business that will have us defense ready"
+capabilities: 'Capabilities:
+
+  Comprehensive Engineering services - Feasibility studies & Master planning. Concept & Preliminary Design. Design modelling & documentation (including advanced BIM capabilities).
+
+
+  Specialised Engineering Disciplines - civil engineering (site development, infrastructure). Structural Engineering (building and protective structures). Construction Engineering (planning, execution, and management), High performance Floor Design (vibration control, specialised loading).
+
+
+  Project Lifecycle Support - Full project lifecycle support form initial concept through to final construction and commissioning. Adaptable to all stages of a project.
+
+
+  Construction support & Supervision
+
+
+  Examples of previous projects Peritas Consulting have worked on:
+
+  Campbell Barracks Upgrades – Access and Carparks
+
+  AMC Henderson – Subdivision and infrastructure works
+
+  Pearce Airbase – Various Maintenance contracts (Civil & Structural consultancy works)
+
+  HMAS Stirling, Garden Island (Various maintenance and land based upgrade projects)
+
+
+  **Austral Shipyards Infrastructure development  **
+
+  Austral Ships Pty Ltd (Structural - Marine) - $12million value
+
+  Over the years we have seen Austal Ships grow from a small group of dedicated shareholder employees into one of the best large aluminium fast vessel designers/constructors in the world.
+
+
+  With every expansion, we were involved both with the design and construction/management of their new facilities.
+
+
+  Cash strapped because of growth, Austal demanded and expected cost efficient large steel structures to manufacture a wide range of large aluminium catamarans and ferries.'
+discriminators: "- Australian owned and operated (17years)\n  * Bespoke & Individualised Solutions\n  * Exceptional Depth of Expertise\n  * Versatile, Multi-Disciplinary Integration\n  * Advanced Design & Modelling Capabilities\n  * ISO 45001:2018\n  * ISO 9001:2015\n  * ISO 14001:2015\n  * 2024 Australian Steel Instutution Awards: WA Buildings large projects winner\n  * Hitatchi mining equipment assembly workshop Stage 3\n  * Carbon Neutral Business\n  * Key partners and clients - Kerman, Georgiou, Rio Tinto, BMD, BHP, Austral, Badge, Development WA\n  * Working with Office of Defense Industry Support to prioritise areas of our business that will have us defense ready"

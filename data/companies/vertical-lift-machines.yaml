@@ -13,10 +13,10 @@ overview: 'Vertical Lift Machines (VLM) is a Western Australian owned company an
 
 
   VLM is committed to supporting the growth of Australia’s sovereign industrial capability. By providing technology that protects workers, enhances precision and strengthens operational performance, we aim to contribute meaningfully to the defence manufacturing, maintenance and sustainment sectors across Western Australia and beyond.'
-website: https://vertistore.com.au
+website: http://www.vertistore.com.au
 contact_name: John Peinke
 contact_title: Managing Director
-address: 85 Marine Terrace
+address: 85 Marine Terrace, Sorrento WA 6020
 phone: 0439545448
 email: johnp@vertistore.com.au
 is_sme: true
@@ -64,7 +64,7 @@ regions:
 - Perth
 latitude: -31.8373156
 longitude: 115.7577329
-logo_url: /logos/vertical-lift-machines.jpg
+logo_url: /logos/vertical-lift-machines.png
 capabilities: 'Vertical Lift Machines (VLM) provides advanced pneumatic lifting and handling systems that improve safety, precision and workflow efficiency across defence manufacturing, maintenance and sustainment activities. Our capabilities support environments where accuracy, repeatability and workforce protection are essential.
 
 
@@ -78,5 +78,5 @@ capabilities: 'Vertical Lift Machines (VLM) provides advanced pneumatic lifting 
 
 
   VLM is committed to supporting Australia’s sovereign industrial capability through safe, reliable and precise material handling solutions tailored to defence environments.'
-discriminators: "* Exclusive Australasian distributor of **Dalmec Industrial Manipulators** , a global leader with over 60,000 systems installed worldwide.\n  * Proven reliability with more than **650 Dalmec manipulators operating in Australia and New Zealand** , many in service for close to 30 years.\n  * Fully pneumatic systems with **no electronics, motors or hydraulics** , reducing maintenance requirements and ensuring dependable performance in demanding defence environments.\n  * **Near weightless, precision handling** ideal for assembly tasks requiring small tolerances, controlled movement and repeatable positioning.\n  * Registered **Australian defence supplier** with an active role supporting Army Aviation through the new Apache helicopter program.\n  * Strong focus on operator safety and WHS compliance, reducing manual handling risks and improving workforce sustainability.\n  * Ability to **custom engineer manipulators** to suit specific defence components, tooling, assemblies and\
+discriminators: "- Exclusive Australasian distributor of **Dalmec Industrial Manipulators** , a global leader with over 60,000 systems installed worldwide.\n  * Proven reliability with more than **650 Dalmec manipulators operating in Australia and New Zealand** , many in service for close to 30 years.\n  * Fully pneumatic systems with **no electronics, motors or hydraulics** , reducing maintenance requirements and ensuring dependable performance in demanding defence environments.\n  * **Near weightless, precision handling** ideal for assembly tasks requiring small tolerances, controlled movement and repeatable positioning.\n  * Registered **Australian defence supplier** with an active role supporting Army Aviation through the new Apache helicopter program.\n  * Strong focus on operator safety and WHS compliance, reducing manual handling risks and improving workforce sustainability.\n  * Ability to **custom engineer manipulators** to suit specific defence components, tooling, assemblies and\
   \ environmental conditions.\n  * Local WA presence with responsive **on site support, installation, operator training and maintenance capability**.\n  * Long standing partnership with **Dalmec Italy** , providing access to world class engineering, design expertise and global defence experience.\n  * Trusted by major organisations across ANZ including **BHP, BlueScope, ABB, Coca Cola and Amcor** , demonstrating cross industry reliability and capability.\n  * Member of industry bodies including **AIDN** , and **Henderson Alliance** supporting collaboration and the growth of sovereign industrial capability.\n  * Compact SME structure that allows **fast response times, flexible engagement and direct access to decision makers**."

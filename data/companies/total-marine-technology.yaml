@@ -1,10 +1,13 @@
 name: Total Marine Technology Pty Ltd (TMT)
 slug: total-marine-technology
-overview: "Total Marine Technology (TMT) is unique as the only company designing and building Work Class Remotely Operated Underwater Vehicles (ROVs) in Australia.   \n  \nTMT is a combination of cutting-edge technologies that require a multi-disciplined engineering team and a world-class manufacturing facility. They employ over 130 people at their facility in Perth, Western Australia, and at least another 100 people offshore, mostly in operations."
-website: https://www.tmtrov.com
+overview: 'Total Marine Technology (TMT) is unique as the only company designing and building Work Class Remotely Operated Underwater Vehicles (ROVs) in Australia.
+
+
+  TMT is a combination of cutting-edge technologies that require a multi-disciplined engineering team and a world-class manufacturing facility. They employ over 130 people at their facility in Perth, Western Australia, and at least another 100 people offshore, mostly in operations.'
+website: www.tmtrov.com.au
 contact_name: Paul Colley
 contact_title: 'CEO '
-address: 1 Ambitious Link
+address: 1 Ambitious Link, Bibra Lake WA 6163
 phone: +61 8 9411 6500
 email: defence@tmtrov.com.au
 is_sme: true

@@ -1,10 +1,16 @@
 name: Alemlube PTY Ltd
 slug: alemlube
-overview: "Proudly servicing industry for 55 years, Alemlube is a proactive and dynamic Australian-owned family business with its Head Office in Sydney and branches across five Australian states, as well as Auckland, New Zealand.  \n\nRepresenting globally recognised leaders in their fields, Alemlube designs, engineers and delivers high quality products with a complete solution approach.   Our customer base spans distributors, OEMs, and end users across a wide range of industries including Automotive, Transport, Mining, Agriculture, Industrial and Construction. \n\nAlemlube offers a national platform, across its six branch locations.  This ensures that customer service, order fulfilment, sales support, system design, installation and on site after sales service are always locally available and rapidly deployed."
+overview: 'Proudly servicing industry for 55 years, Alemlube is a proactive and dynamic Australian-owned family business with its Head Office in Sydney and branches across five Australian states, as well as Auckland, New Zealand.
+
+
+  Representing globally recognised leaders in their fields, Alemlube designs, engineers and delivers high quality products with a complete solution approach.   Our customer base spans distributors, OEMs, and end users across a wide range of industries including Automotive, Transport, Mining, Agriculture, Industrial and Construction.
+
+
+  Alemlube offers a national platform, across its six branch locations.  This ensures that customer service, order fulfilment, sales support, system design, installation and on site after sales service are always locally available and rapidly deployed.'
 website: https://www.alemlube.com.au
 contact_name: Todd  Franklin
 contact_title: State Manager WA
-address: 9 Kalinga Way, Landsdale
+address: 9 Kalinga Way, Landsdale, Perth WA 6065
 phone: 08 9302 4199
 email: toddf@alemlube.com.au
 is_sme: true
@@ -45,8 +51,8 @@ regions:
 - Wheatbelt
 latitude: -31.80269
 longitude: 115.85218
-logo_url: /logos/alemlube.jpg
-capabilities: "Alemlube is a specialist in the supply of high-performance equipment and solutions for the Automotive, Transport, Mining, Agriculture, Industrial and Construction sectors.  \n\nOur expansive product portfolio ranges from the essential grease nipple to advanced workshop equipment, including the largest capacity vehicle hoists and wheel service equipment for cars, light commercial vehicles, buses and trucks.\n\nWe proudly deliver customised solutions that enhance productivity across Australasia including:\n\n  * The design, fit out and commissioning of automotive workshops\n  * The engineering, supply and installation of automatic lubrication systems for both mobile and fixed plant equipment \n\nBacked by decades of industry experience, Alemlube continues to support our customers with innovative equipment and superior, keeping their operations moving forward."
+logo_url: /logos/alemlube.png
+capabilities: "Alemlube is a specialist in the supply of high-performance equipment and solutions for the Automotive, Transport, Mining, Agriculture, Industrial and Construction sectors.\n\nOur expansive product portfolio ranges from the essential grease nipple to advanced workshop equipment, including the largest capacity vehicle hoists and wheel service equipment for cars, light commercial vehicles, buses and trucks.\n\nWe proudly deliver customised solutions that enhance productivity across Australasia including:\n\n  * The design, fit out and commissioning of automotive workshops\n  * The engineering, supply and installation of automatic lubrication systems for both mobile and fixed plant equipment\n\nBacked by decades of industry experience, Alemlube continues to support our customers with innovative equipment and superior, keeping their operations moving forward."
 discriminators: 'Specialised manufacturing of machinery and equipment
 
 

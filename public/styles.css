@@ -62,9 +62,17 @@
 /* Filter tags */
 .filter-tag {
   font-size: 0.875rem;
-  padding: 0.15rem 0.5rem;
+  padding: 0.25rem 0.6rem;
   border-radius: 1rem;
   cursor: pointer;
+  border: none;
+  background: var(--pico-primary);
+  color: var(--pico-primary-inverse);
+}
+
+.filter-tag:hover,
+.filter-tag:focus {
+  background: var(--pico-primary-hover);
 }
 
 /* Filter status card in sidebar */
@@ -298,6 +306,34 @@
 /* Utilities */
 .hidden {
   display: none !important;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Skip link */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  padding: 0.5rem 1rem;
+  background: var(--pico-primary);
+  color: var(--pico-primary-inverse);
+  z-index: 1000;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  top: 0;
 }
 
 /* Autocomplete dropdown (autoComplete.js + Pico) */

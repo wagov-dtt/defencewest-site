@@ -16,14 +16,14 @@ overview: 'We are a Cyber Security Consultancy providing a range of expertise fr
 
 
   Cyber Security is our passion.'
-website: https://www.lokusec.com
+website: https://www.lokusec.com/
 contact_name: Sudesh Ranasinghe
 contact_title: Co-Founder/Director
-address: 123B Colin Street
+address: 123B Colin Street, West Perth WA 6005
 phone: 0428155677
 email: Sudesh@lokusec.com
 is_prime: true
 latitude: -31.9454884
 longitude: 115.8427873
 logo_url: /logos/lokusec.png
-capabilities: "100% Australian, incepted in WA (At our local pub - Raffles) \n\nWe are direct, no fluff cyber security experts.\n\nOur services include:\n\n  * Supply Chain Risk Management.\n  * Consulting & Professional Services.\n  * Security Rating Platform.\n\nMore details here - https://www.lokusec.com/services/"
+capabilities: "100% Australian, incepted in WA (At our local pub - Raffles)\n\nWe are direct, no fluff cyber security experts.\n\nOur services include:\n\n  * Supply Chain Risk Management.\n  * Consulting & Professional Services.\n  * Security Rating Platform.\n\nMore details here - https://www.lokusec.com/services/"

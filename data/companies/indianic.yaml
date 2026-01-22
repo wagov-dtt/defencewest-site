@@ -13,10 +13,10 @@ overview: 'Indianic Group has established itself as a trusted leader in marine c
 
 
   With a strong foundation in marine innovation and a clear mission to serve with integrity, Indianic Group is proud to be part of Australia’s defence story past, present, and future.'
-website: https://indianic.com.au
+website: https://indianic.com.au/
 contact_name: Nigel Rees
 contact_title: 'Managing Director '
-address: 8 Sparks Road
+address: 8 Sparks Road, Henderson WA 6166
 phone: 08 9412 9000
 email: tenders@indianic.com.au
 is_sme: true
@@ -56,6 +56,42 @@ regions:
 latitude: -32.1486648
 longitude: 115.7773325
 logo_url: /logos/indianic.png
-capabilities: "**Operational Diving Services:**\n\n**Asset Inspection & Survey: **Wharf & vessel inspections (incl. UWILD), Mooring assessment & repair  \n**Specialist Subsea Operations:** Welding, cutting, dredging, airlifting, Protection systems (scour, cathodic, pile wrap), Hull cleaning & ship repair  \n**Environmental & Risk Surveys:** UXO clearance & Potential Marine Pest (PMP) inspections, Scientific/environmental monitoring Support  \n**Emergency Response & Recovery:** Salvage & recovery, Rapid inspection & IMR deployment\n\n**Shoreside Infrastructure & Construction**  \n**Infrastructure Sustainment:** Routine inspection & maintenance, Asset life-extension for ports/naval facilities  \n**Marine Piling & Structural Works:** Pile installation & remediation, Structural strengthening works  \n**Wharf & Facility Delivery:** Construction, upgrades & decommissioning  \n**Marine Systems:** Navigation aids, fendering & subsea deployments  \n**Shore Crossings & Pipelines: **Coastal & subsea\
-  \ pipeline install/remediation\n\n**Engineering & Fabrication Services: **  \n**Fabrication & bespoke engineering: **blasting, painting, and corrosion protection"
-discriminators: "•    Certified Commercial Diving delivering across Defence bases nationwide  \n•    Highly qualified workforce with expertise in high-risk operations  \n•    Rapid Mobilisation and emergency response capability  \n•    Conveniently located in the AMC Precinct  \n•    Working Direct to SPOs and Primes  \n•    20+ Years Industry Experience"
+capabilities: '**Operational Diving Services:**
+
+
+  **Asset Inspection & Survey: **Wharf & vessel inspections (incl. UWILD), Mooring assessment & repair
+
+  **Specialist Subsea Operations:** Welding, cutting, dredging, airlifting, Protection systems (scour, cathodic, pile wrap), Hull cleaning & ship repair
+
+  **Environmental & Risk Surveys:** UXO clearance & Potential Marine Pest (PMP) inspections, Scientific/environmental monitoring Support
+
+  **Emergency Response & Recovery:** Salvage & recovery, Rapid inspection & IMR deployment
+
+
+  **Shoreside Infrastructure & Construction**
+
+  **Infrastructure Sustainment:** Routine inspection & maintenance, Asset life-extension for ports/naval facilities
+
+  **Marine Piling & Structural Works:** Pile installation & remediation, Structural strengthening works
+
+  **Wharf & Facility Delivery:** Construction, upgrades & decommissioning
+
+  **Marine Systems:** Navigation aids, fendering & subsea deployments
+
+  **Shore Crossings & Pipelines: **Coastal & subsea pipeline install/remediation
+
+
+  **Engineering & Fabrication Services: **
+
+  **Fabrication & bespoke engineering: **blasting, painting, and corrosion protection'
+discriminators: '•    Certified Commercial Diving delivering across Defence bases nationwide
+
+  •    Highly qualified workforce with expertise in high-risk operations
+
+  •    Rapid Mobilisation and emergency response capability
+
+  •    Conveniently located in the AMC Precinct
+
+  •    Working Direct to SPOs and Primes
+
+  •    20+ Years Industry Experience'

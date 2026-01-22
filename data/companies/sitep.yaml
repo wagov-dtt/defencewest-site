@@ -4,7 +4,7 @@ overview: Sitep Australia is a small defence and telecommunications company esta
 website: https://www.sitepaustralia.com
 contact_name: Raffaele Iannizzotto
 contact_title: Business Development Director
-address: Unit 13/50
+address: Unit 13/50, Bibra Lake WA 6163
 phone: 0439164413
 email: r.iannizzotto@sitepaustralia.com
 is_sme: true
@@ -35,5 +35,5 @@ regions:
 - Naval Base
 latitude: -32.1071299
 longitude: 115.8072672
-logo_url: /logos/sitep.jpg
+logo_url: /logos/sitep.png
 capabilities: We fully own all patents of our high-end sophisticated products, including the UHF MILSATCOM Antenna System; the Military GPS system (land & naval); Wind & Meteo Sensor; and the Multirole Acoustic Stabilised System (MASS).  Sitep also has several partnerships involved in Autonomous Underwater Vehicles (AUVs) and Remotely Operated Vehicles (ROVs).  Our capabilities include engineering, manufacturing and testing, field service, and integrated logistics support (ILS) for all our products.  Sitep’s capabilities include both navy and land domains.

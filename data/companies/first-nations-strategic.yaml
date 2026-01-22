@@ -1,13 +1,14 @@
 name: First Nations Strategic Alliance
 slug: first-nations-strategic
 overview: First Nations Strategic Alliance (FNSA) is dedicated to equipping Australia's defence force with essential equipment and maintenance services. Harnessing the expertise of FNSA, facilitates timely procurement, dependable maintenance, and logistical support for a wide range of defence assets. Through collaboration and innovation, it acts as a vital link between defence requirements and Indigenous capabilities, fostering economic development and empowerment within Indigenous companies. FNSA serves as a strategic partner, promoting efficiency, sustainability, and national security.
-website: https://firstnationscorp.com.au
+website: https://firstnationscorp.com.au/
 contact_name: Mr Alex Gibb
 contact_title: Corporate
-address: 312 Victoria Rd
+address: 312 Victoria Rd, Malaga WA 6090
 phone: 0864658000
 email: alex.gibb@firstnationscorp.com.au
 is_sme: true
+is_indigenous_owned: true
 stakeholders:
 - Defence Industry
 - Academic Institutions

@@ -1,13 +1,14 @@
 name: Ghost Fire Systems
 slug: ghost-fire-systems
 overview: Ghost Fire Systems is a veteran owned and operated research and development company, focused on developing battlefield simulators. Ghost Fire Systems simulators integrate with in-service weapons and replicate them being fired, using electronics as a substitution for blank firing cartridges or explosive munitions. The simulators enable soldiers to train more often, enhancing their neural pathways, allowing them to process more information on the battlefield to improve their decision making and thus survivability.
-website: https://www.ghostfiresystems.com
+website: http://www.ghostfiresystems.com
 contact_name: Brett Harrex
 contact_title: Founder / CEO
-address: PO Box 2041
+address: PO Box 2041, Como WA 6152
 phone: 0421 175 288
 email: Brett.harrex@ghostfiresystems.com
 is_sme: true
+is_veteran_owned: true
 capability_streams:
 - Education and Training
 - Land Forces
@@ -28,4 +29,4 @@ capabilities: 'Ghost Fire Systems creates solutions to enhance training at the t
 
 
   Our latest product, the Blank Firing Simulator, is being trialled with RAAF 2 Security Forces'
-discriminators: "* Veteran owned & operated. \n  * Systems built by users, for users.\n  * 40 years combined experience within the Australian Army. \n  * Contemporary knowledge of in-service weapon systems and user integration. \n  * Systems are designed and manufactured within Australia to build Australian sovereign capability.\n  * Member of the Defence Trailblazer program."
+discriminators: "- Veteran owned & operated.\n  * Systems built by users, for users.\n  * 40 years combined experience within the Australian Army.\n  * Contemporary knowledge of in-service weapon systems and user integration.\n  * Systems are designed and manufactured within Australia to build Australian sovereign capability.\n  * Member of the Defence Trailblazer program."

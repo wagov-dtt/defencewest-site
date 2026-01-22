@@ -13,13 +13,14 @@ overview: 'Global Coating Systems (GCS) is an Australian-owned SME specialising 
 
 
   By combining industrial-scale coating expertise with targeted defence R&D, GCS delivers solutions that extend asset life, reduce maintenance costs, and enhance operational resilience. Our mission is to ensure that Australia’s defence and maritime forces are equipped with cutting-edge surface protection systems that perform when it matters most.'
-website: https://globalcoatingsystems.com
+website: https://globalcoatingsystems.com/
 contact_name: Darren Gibbon
 contact_title: Business Growth
-address: 4/7 Cessnock Way
+address: 4/7 Cessnock Way, ROCKINGHAM WA 6168
 phone: 0400300294
 email: darren.gibbon@global-cs.com.au
 is_sme: true
+is_veteran_owned: true
 stakeholders:
 - Defence Industry
 - Academic Institutions
@@ -69,5 +70,5 @@ capabilities: 'Global Coating Systems (GCS) delivers advanced protective coating
 
 
   Our mission is to provide defence with adaptable, tested surface protection solutions that keep assets in service longer, perform better, and enhance personnel safety.'
-discriminators: "* **Proven Defence-Grade Coatings** – BattleJacket® self-healing/self-sealing ballistic protection, FireCap™ passive fire protection, BlastBack blast mitigation, and WarCoat tactical terrain resilience, engineered for mission-critical applications.\n  * **Next-Generation Defence R &D** – Ongoing development in anti-biofouling, frequency shielding, and advanced tactical coatings to increase survivability and meet evolving threat profiles.\n  * **Sovereign Capability** – Australian-owned SME with manufacturing in Queensland and operational hubs in Henderson and Port Hedland, ensuring secure, rapid supply to Defence projects.\n  * **Custom Engineering & Integration** – Coatings tailored to platform-specific weight, space, and operational constraints, supporting through-life support and sustainment strategies.\n  * **Advanced Test & Evaluation Facilities** – In-house laboratories simulate operational environments to validate performance, durability, and compliance with stringent\
+discriminators: "- **Proven Defence-Grade Coatings** – BattleJacket® self-healing/self-sealing ballistic protection, FireCap™ passive fire protection, BlastBack blast mitigation, and WarCoat tactical terrain resilience, engineered for mission-critical applications.\n  * **Next-Generation Defence R &D** – Ongoing development in anti-biofouling, frequency shielding, and advanced tactical coatings to increase survivability and meet evolving threat profiles.\n  * **Sovereign Capability** – Australian-owned SME with manufacturing in Queensland and operational hubs in Henderson and Port Hedland, ensuring secure, rapid supply to Defence projects.\n  * **Custom Engineering & Integration** – Coatings tailored to platform-specific weight, space, and operational constraints, supporting through-life support and sustainment strategies.\n  * **Advanced Test & Evaluation Facilities** – In-house laboratories simulate operational environments to validate performance, durability, and compliance with stringent\
   \ defence standards.\n  * **Proven Operational Demonstrations** – Field-tested BattleJacket® with the Australian 10th Light Horse Regiment, showcasing capability in live-fire scenarios.\n  * **Certified & Defence-Ready** – ISO 9001:2015, ISO 14001:2015, ISO 45001:2018 accredited; JOSCAR registered; member of Henderson Alliance, AIDN, and Australian Corrosion Association."

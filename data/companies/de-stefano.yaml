@@ -1,10 +1,10 @@
 name: De Stefano & Co
 slug: de-stefano
 overview: At De Stefano & Co, our mission is to support engineering, manufacturing and technology-based businesses to navigate the complex defence industry environment and grow their defence sector revenues. We do this through a deep understanding of how the defence sector works, its procurement mechanisms, security requirements and the available grant programs.
-website: https://www.destefanoandco.com.au
+website: https://www.destefanoandco.com.au/
 contact_name: Emilio De Stefano
 contact_title: Director & Principal
-address: PO Box 507
+address: PO Box 507, Fremantle WA 6959
 phone: 1300 438 347
 email: enquiry@destefanoandco.com.au
 is_sme: true
@@ -28,5 +28,5 @@ regions:
 latitude: -32.0517901
 longitude: 115.755096
 logo_url: /logos/de-stefano.png
-capabilities: "De Stefano & Co supports businesses through the following services:\n\n**STRATEGY**\n\n  * Defence Industry Market Entry (DIME®) Program \n  * Defence Sector Due Diligence Activity\n  * Cyber Security Strategy Review & Uplift\n\n**SECURITY**\n\n  * Defence Industry Security Program (DISP) Membership Attainment \n  * DISP Ongoing Compliance Assurance (OCA™)\n  * Security Officer Support as a Service (SOSaaS™) \n  * Cyber Security Consulting & Maturity Uplift \n    * CMMC \n    * ISO27001\n    * NIST CSF/SP 800-171\n    * Essenital Eight\n    * ISM/IRAP\n  * Security Education & Training\n  * Physical Security Uplift\n  * Personnel Security\n\n**GRANTS**\n\n  * Defence Industry Development Grants (DIDG) \n    * Skilling\n    * Sovereign Industrial Priorities\n    * Security\n    * Exports\n  * Export Market Development Grant (EMDG)"
-discriminators: "What sets De Stefano & Co apart from other security and defence-focused consultancies?\n\n  * > 200 years of combined Defence and security experience working in Defence Primes, the Big 4, Managing Contractors and SMEs \n  * DISP member with security cleared staff \n  * A trusted source of defence security education and guidance to academia, industry associations and their members nationwide \n  * Ranked 12th fastest growing business in SA in the BDO Fast Movers program in 2022, and 15th fastest in 2023 \n  * Winner of 'Cyber Security Consulting Business of the Year - SME' at the 2024 Australian Cyber Security Awards and finalist for 'Consultancy of the Year' in the 2023 and 2024 Australian Defence Industry Awards"
+capabilities: "De Stefano & Co supports businesses through the following services:\n\n**STRATEGY**\n\n  * Defence Industry Market Entry (DIME®) Program\n  * Defence Sector Due Diligence Activity\n  * Cyber Security Strategy Review & Uplift\n\n**SECURITY**\n\n  * Defence Industry Security Program (DISP) Membership Attainment\n  * DISP Ongoing Compliance Assurance (OCA™)\n  * Security Officer Support as a Service (SOSaaS™)\n  * Cyber Security Consulting & Maturity Uplift\n    * CMMC\n    * ISO27001\n    * NIST CSF/SP 800-171\n    * Essenital Eight\n    * ISM/IRAP\n  * Security Education & Training\n  * Physical Security Uplift\n  * Personnel Security\n\n**GRANTS**\n\n  * Defence Industry Development Grants (DIDG)\n    * Skilling\n    * Sovereign Industrial Priorities\n    * Security\n    * Exports\n  * Export Market Development Grant (EMDG)"
+discriminators: "What sets De Stefano & Co apart from other security and defence-focused consultancies?\n\n  * > 200 years of combined Defence and security experience working in Defence Primes, the Big 4, Managing Contractors and SMEs\n  * DISP member with security cleared staff\n  * A trusted source of defence security education and guidance to academia, industry associations and their members nationwide\n  * Ranked 12th fastest growing business in SA in the BDO Fast Movers program in 2022, and 15th fastest in 2023\n  * Winner of 'Cyber Security Consulting Business of the Year - SME' at the 2024 Australian Cyber Security Awards and finalist for 'Consultancy of the Year' in the 2023 and 2024 Australian Defence Industry Awards"

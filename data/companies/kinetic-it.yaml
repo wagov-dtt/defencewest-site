@@ -7,10 +7,10 @@ overview: 'Kinetic IT has been providing ICT Managed Services since 1995, we hav
 
 
   The service offerings that are provided by Kinetic IT revolve around 4 key aspects: Business & Digital Transformation, Cyber & Information Security, Managed Enterprise Technology Services and Advisory & Consulting Services'
-website: https://kineticit.com.au
+website: https://kineticit.com.au/
 contact_name: Ryan Gray
 contact_title: Operations Manager
-address: Riverside Rd
+address: Riverside Rd, East Fremantle WA 6158
 phone: 0417940458
 email: ryan.gray@kineticit.com.au
 is_sme: true
@@ -31,4 +31,10 @@ regions:
 latitude: -32.0337933
 longitude: 115.7630662
 logo_url: /logos/kinetic-it.png
-capabilities: "Kinetic IT aims to be recognised as a leader in technology solution, tailored to our clients and the environment in which they operate. \n\nWe are an Australian owned company that has many ties with defence and its IT needs throughout multiple contracts which place us in a unique position to support Defence IT capability, now and into the future. \n\nAdditionally, through our connections with the Veterans Community we are well placed to maximise the skills and qualifications of Defence Veterans and provide employment pathways, including entry level requiring no experience, that can assist with their transition to non defence related positions while still within the eco system"
+capabilities: 'Kinetic IT aims to be recognised as a leader in technology solution, tailored to our clients and the environment in which they operate.
+
+
+  We are an Australian owned company that has many ties with defence and its IT needs throughout multiple contracts which place us in a unique position to support Defence IT capability, now and into the future.
+
+
+  Additionally, through our connections with the Veterans Community we are well placed to maximise the skills and qualifications of Defence Veterans and provide employment pathways, including entry level requiring no experience, that can assist with their transition to non defence related positions while still within the eco system'

@@ -5,7 +5,7 @@ overview: Directions Workforce Solutions has built a strong, practical history o
 website: https://www.directionswa.com.au
 contact_name: Kristim Lim
 contact_title: Chief Executive Officer
-address: 7 Sayer St
+address: 7 Sayer St, Midland WA 6056
 phone: 0448048792
 email: kristin@directionswa.com.au
 is_sme: true
@@ -60,7 +60,18 @@ regions:
 latitude: -31.8924937
 longitude: 116.0097296
 logo_url: /logos/directions-workforce.png
-capabilities: "Directions Workforce Solutions combines specialist Group Training Organisation capability with hands-on recruitment, compliance, payroll and apprentice mentoring to deliver workforce outcomes tailored to the defence supply chain. We design defence-aligned training pathways that map to contract requirements, safety regimes and technical standards; manage end-to-end onboarding (candidate attraction, selection, payroll, workplace supervision and reporting); and maintain intentionally low caseloads to provide highly personalised support and rapid problem-solving for employers.\n\nRecent examples include:  \n• Award-Winning Placements — supported AENWA finalists and Special Recognition winners into roles within defence contractors, demonstrating our ability to develop high-calibre, job-ready technicians.  \n• Tailored GTO delivery for Local Defence Suppliers — implemented customised on-the-job training plans, compliance checklists and mentor rosters while managing payroll and performance\
-  \ reporting, reducing employer administrative burden and accelerating apprentice productivity.  \n• School and Community Engagement — ran targeted campaigns with our Apprentice Advisors to attract motivated candidates for hard-to-fill trades, connecting industry needs with local training providers.\n\nTogether these capabilities provide defence contractors with a compliant, scalable and locally grounded workforce solution that lowers hiring risk, supports diversity targets and produces technicians ready for the unique demands of defence projects."
-discriminators: "* Registered Group Training Organisation delivering nationally-accredited apprenticeship and pre-apprenticeship pathways tailored specifically to defence contract requirements.\n  * End-to-End Program Management: candidate attraction and selection, payroll and admin, on-the-job training plans, mentoring, workplace supervision and compliance reporting.\n  * Intentionally low caseloads to provide highly personalised apprentice support and fast employer problem-resolution.\n  * Proven track record placing award-winning talent into defence roles — AENWA finalists and Special Recognition winners and 2025 Apprentice of the Year Finalists.\n  * In-house capabilities across recruitment, technical Apprentice Advisors, employer engagement and digital marketing/videography to attract and prepare candidates for specialist trades.\n  * Scalable, customised GTO delivery with mentor rosters, safety/compliance checklists and performance reporting that reduce employer administrative burden.\n\
+capabilities: 'Directions Workforce Solutions combines specialist Group Training Organisation capability with hands-on recruitment, compliance, payroll and apprentice mentoring to deliver workforce outcomes tailored to the defence supply chain. We design defence-aligned training pathways that map to contract requirements, safety regimes and technical standards; manage end-to-end onboarding (candidate attraction, selection, payroll, workplace supervision and reporting); and maintain intentionally low caseloads to provide highly personalised support and rapid problem-solving for employers.
+
+
+  Recent examples include:
+
+  • Award-Winning Placements — supported AENWA finalists and Special Recognition winners into roles within defence contractors, demonstrating our ability to develop high-calibre, job-ready technicians.
+
+  • Tailored GTO delivery for Local Defence Suppliers — implemented customised on-the-job training plans, compliance checklists and mentor rosters while managing payroll and performance reporting, reducing employer administrative burden and accelerating apprentice productivity.
+
+  • School and Community Engagement — ran targeted campaigns with our Apprentice Advisors to attract motivated candidates for hard-to-fill trades, connecting industry needs with local training providers.
+
+
+  Together these capabilities provide defence contractors with a compliant, scalable and locally grounded workforce solution that lowers hiring risk, supports diversity targets and produces technicians ready for the unique demands of defence projects.'
+discriminators: "- Registered Group Training Organisation delivering nationally-accredited apprenticeship and pre-apprenticeship pathways tailored specifically to defence contract requirements.\n  * End-to-End Program Management: candidate attraction and selection, payroll and admin, on-the-job training plans, mentoring, workplace supervision and compliance reporting.\n  * Intentionally low caseloads to provide highly personalised apprentice support and fast employer problem-resolution.\n  * Proven track record placing award-winning talent into defence roles — AENWA finalists and Special Recognition winners and 2025 Apprentice of the Year Finalists.\n  * In-house capabilities across recruitment, technical Apprentice Advisors, employer engagement and digital marketing/videography to attract and prepare candidates for specialist trades.\n  * Scalable, customised GTO delivery with mentor rosters, safety/compliance checklists and performance reporting that reduce employer administrative burden.\n\
   \  * Strong local partnerships with defence contractors, suppliers, TAFE and community stakeholders — proven to accelerate onboarding and improve retention."

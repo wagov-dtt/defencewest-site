@@ -20,6 +20,9 @@ const {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={description} />
+    <link rel="preconnect" href="https://esm.sh" crossorigin />
+    <link rel="preconnect" href="https://unpkg.com" crossorigin />
+    <link rel="dns-prefetch" href="https://basemaps.cartocdn.com" />
     <link rel="icon" href="/favicon.ico" />
     <link
       rel="stylesheet"
@@ -28,9 +31,11 @@ const {
     <link
       rel="stylesheet"
       href="https://unpkg.com/maplibre-gl@5/dist/maplibre-gl.css"
+      media="print"
+      onload="this.media='all'"
     />
     <link rel="stylesheet" href="/styles.css" />
-    <script src="https://unpkg.com/maplibre-gl@5/dist/maplibre-gl.js"></script>
+    <script defer src="https://unpkg.com/maplibre-gl@5/dist/maplibre-gl.js"></script>
     <title>{title}</title>
     {
       jsonLd && (
@@ -39,9 +44,10 @@ const {
     }
   </head>
   <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
     <Navbar />
 
-    <main class="container">
+    <main id="main-content" class="container">
       <slot />
     </main>
   </body>

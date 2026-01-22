@@ -10,10 +10,10 @@ overview: 'Founded in Perth, Western Australia, Petritek has established itself 
 
 
   Looking ahead, Petritek is actively expanding its Defence capabilities through strategic partnerships, ongoing R&D investments, and a dedicated focus on innovation. By leveraging our existing expertise and applying it to Defence needs, we aim to be a trusted partner in safeguarding Australia''s critical infrastructure and advancing technological excellence in this vital sector.'
-website: https://petritek.com
+website: https://petritek.com/
 contact_name: Ben Fowler
 contact_title: Business Development Manager
-address: 75 Farrall Road
+address: 75 Farrall Road, Midvale WA 6056
 phone: 0431695986
 email: ben@petritek.com
 is_prime: true
@@ -40,7 +40,73 @@ regions:
 latitude: -31.88733
 longitude: 116.03287
 logo_url: /logos/petritek.png
-capabilities: "Petritek specializes in advanced R&D-driven engineering solutions, leveraging our expertise in precision instrumentation, radiation tracking systems, environmental control technologies, and robust monitoring solutions to meet the rigorous demands of challenging industries. While we have not yet completed projects within the defence sector, our extensive experience in sectors such as oil and gas, space, and energy demonstrates our ability to adapt and deliver high-value solutions in complex environments.\n\n**Key Capabilities:**\n\n**Precision Tracking and Monitoring Systems:**  \nDevelopment of isotopic-based tracking solutions capable of high-accuracy monitoring in remote and demanding locations.  \n**Custom Engineering Design:**  \nExpertise in designing bespoke systems tailored to unique project requirements, with an emphasis on reliability and durability.  \n**Environmental Control Technology:**  \nProven ability to create secure, controlled environments for transporting\
-  \ sensitive or high-value equipment.  \n**System Integration and Scalability:**  \nExperience in integrating innovative solutions with existing infrastructure to enhance operational efficiency.\n\nPetritek is keen to bring our innovative problem-solving approach to the defence sector. We are ready to collaborate with defence stakeholders to explore how our existing capabilities can be tailored to meet the unique challenges of defence operations, delivering solutions that ensure accuracy, security, and operational success."
-discriminators: "**Company Discriminators**\n\n**Proven Expertise in Challenging Environments:**  \nSpecializes in precision instrumentation, radiation tracking systems, and environmental control technologies for extreme conditions.  \n \n\n**Bespoke R &D Capabilities:**  \nTailored engineering solutions designed to meet unique client needs, ensuring innovation and operational efficiency.  \n \n\n**Advanced Tracking Technologies:**  \nDevelopers of isotopic-based pipeline pig tracking systems, offering unparalleled accuracy and reliability in monitoring and defect detection.  \n \n\n**Strong Industry Relationships:**  \nTrusted partner of major organizations in the Oil & Gas, Space, and Energy sectors, demonstrating reliability and expertise across industries.  \n \n\n**Innovative Problem-Solving:**  \nEmphasis on addressing complex challenges through innovation, providing clients with cutting-edge solutions tailored to their specific requirements.  \n \n\n**Strategic Focus on Defence:**\
-  \  \nActively exploring opportunities to bring our innovative technologies to the defence sector, with capabilities aligned to key defence requirements.  \n \n\n**Engineering Excellence and Experience:**  \nDecades of combined team experience across diverse sectors, equipping us with the knowledge to adapt solutions for defence and other critical applications.  \n \n\nPetritek is positioned as a reliable, innovative partner, dedicated to delivering exceptional engineering solutions that meet the rigorous demands of our clients."
+capabilities: 'Petritek specializes in advanced R&D-driven engineering solutions, leveraging our expertise in precision instrumentation, radiation tracking systems, environmental control technologies, and robust monitoring solutions to meet the rigorous demands of challenging industries. While we have not yet completed projects within the defence sector, our extensive experience in sectors such as oil and gas, space, and energy demonstrates our ability to adapt and deliver high-value solutions in complex environments.
+
+
+  **Key Capabilities:**
+
+
+  **Precision Tracking and Monitoring Systems:**
+
+  Development of isotopic-based tracking solutions capable of high-accuracy monitoring in remote and demanding locations.
+
+  **Custom Engineering Design:**
+
+  Expertise in designing bespoke systems tailored to unique project requirements, with an emphasis on reliability and durability.
+
+  **Environmental Control Technology:**
+
+  Proven ability to create secure, controlled environments for transporting sensitive or high-value equipment.
+
+  **System Integration and Scalability:**
+
+  Experience in integrating innovative solutions with existing infrastructure to enhance operational efficiency.
+
+
+  Petritek is keen to bring our innovative problem-solving approach to the defence sector. We are ready to collaborate with defence stakeholders to explore how our existing capabilities can be tailored to meet the unique challenges of defence operations, delivering solutions that ensure accuracy, security, and operational success.'
+discriminators: '**Company Discriminators**
+
+
+  **Proven Expertise in Challenging Environments:**
+
+  Specializes in precision instrumentation, radiation tracking systems, and environmental control technologies for extreme conditions.
+
+
+
+  **Bespoke R &D Capabilities:**
+
+  Tailored engineering solutions designed to meet unique client needs, ensuring innovation and operational efficiency.
+
+
+
+  **Advanced Tracking Technologies:**
+
+  Developers of isotopic-based pipeline pig tracking systems, offering unparalleled accuracy and reliability in monitoring and defect detection.
+
+
+
+  **Strong Industry Relationships:**
+
+  Trusted partner of major organizations in the Oil & Gas, Space, and Energy sectors, demonstrating reliability and expertise across industries.
+
+
+
+  **Innovative Problem-Solving:**
+
+  Emphasis on addressing complex challenges through innovation, providing clients with cutting-edge solutions tailored to their specific requirements.
+
+
+
+  **Strategic Focus on Defence:**
+
+  Actively exploring opportunities to bring our innovative technologies to the defence sector, with capabilities aligned to key defence requirements.
+
+
+
+  **Engineering Excellence and Experience:**
+
+  Decades of combined team experience across diverse sectors, equipping us with the knowledge to adapt solutions for defence and other critical applications.
+
+
+
+  Petritek is positioned as a reliable, innovative partner, dedicated to delivering exceptional engineering solutions that meet the rigorous demands of our clients.'

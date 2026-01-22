@@ -4,7 +4,7 @@ overview: An accredited Defence Industry Security Program Member, ECU is support
 website: https://www.ecu.edu.au/research/defence
 contact_name: Ms Michele Clement
 contact_title: Director Defence Engagement
-address: 270 Joondalup Drive
+address: 270 Joondalup Drive, Joondalup WA 6027
 phone: +61 418857824
 email: Defence.Research@ecu.edu.au
 stakeholders:
@@ -44,7 +44,16 @@ regions:
 - South West
 latitude: -31.7563544
 longitude: 115.7735808
-logo_url: /logos/edith-cowan-university.jpg
-capabilities: "**Cyber Security & Information Warfare**\n\nRecognised as one of Australia's first Academic Centres of Cyber Security Excellence by the Australian Government, ECU delivers onsite bespoke cyber security training to Defence personnel, and is conducting Defence research in:\n\n  * Defence personnel cyber training\n  * Digital twins for automation\n  * Maritime anomaly detection (AI/ML)\n  * Electronic systems vulnerability testing\n\n**Maritime**\n\nOur maritime capability is centre on advancing technologies through cutting-edge research and innovation to develop reliable systems and ensuring robust and intelligent solutions for the evolving challenges of the marine domain. \n\n  * Human-machine communications\n  * Reliable underwater messaging systems\n  * Maritime anomaly detection\n  * Autonomous systems research\n  * Marine biosecurity\n\n**Engineering**\n\nECUs engineering expertise focuses on delivering innovative solutions that enhance efficiency, performance and durability.\
-  \ By leveraging cutting-edge manufacturing techniques and advanced structural design, we create resilient and high-performing systems tailored to meet the demands of modern applications.\n\n  * Advanced materials manufacturing\n  * High-performance and lightweight structures\n  * Material performance and durability \n\n**Health Sciences**\n\nECUs researchers have strong cross-disciplianary alliances and collaborate extensively with relevant domestic and international organisations to ensure that our research addresses real-world problems and has direct impact at an individual, community and global level.\n\n  * Virtual-reality-enhanced tactical parachute training. \n  * Physical injury prevention\n  * Digital twinning development\n  * Virtual Reality Mass Casualty Triage Simulator"
-discriminators: "**Availability & Support**\n\nBespoke research and education offerings can be tailored to meet Defence and Defence Industry requirements, with a range of ECU facilities also available for Defence and Defence Industry to conduct research. \n\n**Accreditation & Awards**\n\nECU has been rewarded with five-star ratings for undergraduate teaching quality over the past 17 years, along with consistently high ratings for overall education, including many courses that are nationally and internationally accredited."
+logo_url: /logos/edith-cowan-university.png
+capabilities: "**Cyber Security & Information Warfare**\n\nRecognised as one of Australia's first Academic Centres of Cyber Security Excellence by the Australian Government, ECU delivers onsite bespoke cyber security training to Defence personnel, and is conducting Defence research in:\n\n  * Defence personnel cyber training\n  * Digital twins for automation\n  * Maritime anomaly detection (AI/ML)\n  * Electronic systems vulnerability testing\n\n**Maritime**\n\nOur maritime capability is centre on advancing technologies through cutting-edge research and innovation to develop reliable systems and ensuring robust and intelligent solutions for the evolving challenges of the marine domain.\n\n  * Human-machine communications\n  * Reliable underwater messaging systems\n  * Maritime anomaly detection\n  * Autonomous systems research\n  * Marine biosecurity\n\n**Engineering**\n\nECUs engineering expertise focuses on delivering innovative solutions that enhance efficiency, performance and durability.\
+  \ By leveraging cutting-edge manufacturing techniques and advanced structural design, we create resilient and high-performing systems tailored to meet the demands of modern applications.\n\n  * Advanced materials manufacturing\n  * High-performance and lightweight structures\n  * Material performance and durability\n\n**Health Sciences**\n\nECUs researchers have strong cross-disciplianary alliances and collaborate extensively with relevant domestic and international organisations to ensure that our research addresses real-world problems and has direct impact at an individual, community and global level.\n\n  * Virtual-reality-enhanced tactical parachute training.\n  * Physical injury prevention\n  * Digital twinning development\n  * Virtual Reality Mass Casualty Triage Simulator"
+discriminators: '**Availability & Support**
+
+
+  Bespoke research and education offerings can be tailored to meet Defence and Defence Industry requirements, with a range of ECU facilities also available for Defence and Defence Industry to conduct research.
+
+
+  **Accreditation & Awards**
+
+
+  ECU has been rewarded with five-star ratings for undergraduate teaching quality over the past 17 years, along with consistently high ratings for overall education, including many courses that are nationally and internationally accredited.'

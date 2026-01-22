@@ -7,13 +7,14 @@ overview: 'Greenroom Robotics is an Australian deep-tech company pioneering adva
 
 
   Greenroom operates at the intersection of software, autonomy, and naval innovation—delivering sovereign capabilities that enhance warfighter safety, reduce crew burden, and modernise fleet operations. As a trusted dual-use supplier, Greenroom is actively engaged in AUKUS Pillar II, contributing to allied innovation in unmanned maritime systems.'
-website: https://greenroomrobotics.com
+website: https://greenroomrobotics.com/
 contact_name: Peter Baker
 contact_title: General Manager - Growth
-address: Level 1, 86 High Street
+address: Level 1, 86 High Street, Fremantle WA 6160
 phone: '+61404316560'
 email: peter.baker@greenroomrobotics.com
 is_sme: true
+is_veteran_owned: true
 stakeholders:
 - Defence Industry
 - Defence West
@@ -42,4 +43,4 @@ longitude: 115.7456769
 logo_url: /logos/greenroom-robotics.png
 capabilities: "Greenroom delivers software-first maritime autonomy solutions designed to be modular, scalable, and platform-agnostic. Our capabilities include:\n\n  * **Autonomous Navigation (GAMA):** Real-time COLREGS-aware navigational autonomy including route planning, sensor fusion, and mission control.\n  * **Perception & Threat Detection (Lookout+):** AI/ML-based detection from EO/IR cameras for object classification, geolocation, and target tracking.\n  * **Digital Simulation (MISSIM):** Synthetic environments for autonomy testing, AI model training, and hardware-in-the-loop validation.\n  * **Fleet & Mission Orchestration (MarOps):** Secure automated logging tools mission execution and reporting across distributed fleets.\n\nRecent examples:\n\n  * **RAN PBAT Trials (2023–2024):** Greenroom systems were deployed aboard a large patrol vessel, enabling remote operations and threat detection in live sea environments.\n  * **UK & US Deployments:** Autonomous retrofits on commercial and\
   \ defence-relevant platforms have demonstrated export readiness and interoperability.\n  * **DSTG Collaboration:** Provided autonomy software for experimentation and warfighter concept development in naval testbeds.\n\nThese capabilities allow defence stakeholders to deploy and experiment with trusted autonomy at low risk and low cost."
-discriminators: "* **Sovereign Software:** 100% Australian-owned and developed. No ITAR restrictions (AUKUS user - ITAR Exemption)\n  * **Software-First Autonomy:** Hardware-agnostic stack deployable on new builds and retrofits.\n  * **Proven at Sea:** Successfully trialled by the Royal Australian Navy under operational conditions.\n  * **Dual-Use, Scalable Design:** Deployable across defence, offshore, and transport sectors.\n  * **Sensor Fusion & Perception:** Real-time AI-enabled vision for enhanced threat awareness.\n  * **Trusted Partnerships:** Collaboration with DSTG, Austal Australia, EGS Survey, and international defence industry.\n  * **Recognised Innovation:** Finalist in multiple national innovation awards for dual-use tech.\n  * **Clearances & Accreditation:** DISP Member (Entry Level), ISO-compliant software processes."
+discriminators: "- **Sovereign Software:** 100% Australian-owned and developed. No ITAR restrictions (AUKUS user - ITAR Exemption)\n  * **Software-First Autonomy:** Hardware-agnostic stack deployable on new builds and retrofits.\n  * **Proven at Sea:** Successfully trialled by the Royal Australian Navy under operational conditions.\n  * **Dual-Use, Scalable Design:** Deployable across defence, offshore, and transport sectors.\n  * **Sensor Fusion & Perception:** Real-time AI-enabled vision for enhanced threat awareness.\n  * **Trusted Partnerships:** Collaboration with DSTG, Austal Australia, EGS Survey, and international defence industry.\n  * **Recognised Innovation:** Finalist in multiple national innovation awards for dual-use tech.\n  * **Clearances & Accreditation:** DISP Member (Entry Level), ISO-compliant software processes."

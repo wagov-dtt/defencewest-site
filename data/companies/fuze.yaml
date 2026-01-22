@@ -4,10 +4,10 @@ overview: 'The FUZE team provides urgent response to ensure the continued operat
 
 
   FUZE is a composite systems manufacturer with integrated technology, engineering project services and field teams allowing rapid delivery of large, high risk projects successfully and provide warranty support for the life of the composite component.'
-website: https://fuze.solutions
+website: https://fuze.solutions/
 contact_name: Jason LeCoultre
 contact_title: Managing Director
-address: 10 Marchesi Street
+address: 10 Marchesi Street, Kewdale WA 6105
 phone: +61 405 660 786
 email: jason.lecoultre@fuze.solutions
 is_sme: true
@@ -59,4 +59,4 @@ capabilities: 'FUZE can repair ships at sea or along side rather than dry-dockin
 
 
   These services can be used to rapidly repair pipework, pipelines, large storage tanks, jetties, marine infrastructure and underwater applications as the materials can be applied underwater using divers.'
-discriminators: "* Rapid mobilisation & repair: deployable teams in hours/days.\n  * We operate where others won’t: wet, subsea & remote; alongside  \nor in-theatre.\n  * Defence-grade assurance: ISO 9001/14001/45001, JOSCAR-AU, code-compliant  \ndesigns and Classification Society approved materials, design and applications.\n  * Backed by Byrnecut Group: logistics & workforce reach for  \nassured delivery.\n  * Engineers in the field: integrated design-and-install for complex  \ngeometries, confined spaces & critical structures.\n  * Live-system repairs: seal leaks & rebuild assets without shutdown.  \nSafety by design: no hot works, reduced headcount at risk; shorter  \ntime-on-tools.\n  * Sovereign capability: Australian-engineered, Defence-ready  \nsolutions.\n  * Development and verification capabilities in-house to rapidly develop custom composite systems.\n  * Proven across sectors: oil & gas, marine, infrastructure,  \nmining—transferable to naval platforms and defence estates."
+discriminators: "- Rapid mobilisation & repair: deployable teams in hours/days.\n  * We operate where others won’t: wet, subsea & remote; alongside\nor in-theatre.\n  * Defence-grade assurance: ISO 9001/14001/45001, JOSCAR-AU, code-compliant\ndesigns and Classification Society approved materials, design and applications.\n  * Backed by Byrnecut Group: logistics & workforce reach for\nassured delivery.\n  * Engineers in the field: integrated design-and-install for complex\ngeometries, confined spaces & critical structures.\n  * Live-system repairs: seal leaks & rebuild assets without shutdown.\nSafety by design: no hot works, reduced headcount at risk; shorter\ntime-on-tools.\n  * Sovereign capability: Australian-engineered, Defence-ready\nsolutions.\n  * Development and verification capabilities in-house to rapidly develop custom composite systems.\n  * Proven across sectors: oil & gas, marine, infrastructure,\nmining—transferable to naval platforms and defence estates."

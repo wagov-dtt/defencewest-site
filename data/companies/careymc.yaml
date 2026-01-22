@@ -4,10 +4,11 @@ overview: Carey has been operating for 26 years in the mining, civil and constru
 website: https://careygroupholdings.com.au
 contact_name: David Cann
 contact_title: Architect
-address: 312 Victoria Rd
+address: 312 Victoria Rd, Malaga WA 6090
 phone: 0439889983
 email: david.cann@careygroupholdings.com.au
 is_sme: true
+is_indigenous_owned: true
 stakeholders:
 - Defence Industry
 - Defence West
@@ -34,5 +35,5 @@ regions:
 latitude: -31.86231
 longitude: 115.88482
 logo_url: /logos/careymc.png
-capabilities: "* Civil, Marine and General Construction Contractors\n  * Concrete\n  * structural & architectural steel, \n  * Earthworks, roads & hardstands\n  * Dams & drainage, \n  * Land rehabilitation\n  * marine civil including wharfs, bridges, revetments, \n  * building construction/ installation. \n  * Building renovations/ refurbishments. \n  * Demolition Class 1- complex and high-risk demolition\n  * Asbestos Removal\n  * Registered architects: Design, Planning, Scoping, Feasibilities\n  * Project Managers\n  * Registered Builders"
-discriminators: "* Registered Architects. \n  * Registered Builders. \n  * Asbestos removal (Class B). \n  * Demolition (Class 1). \n  * Licensed Security Agent. \n  * FSC accredited. \n  * ISO 9001, 45001, 14001.\n  * Supply Nation Certified\n  * Part of the Carey Group which includes First Nations Engineering (SMPE&I) Carey Assets (Asset & Fleet management) & Carey Training RTO\n  * Key customers include BHP, FMG, Fremantle Port Authority, Southern Port Authority, Pilbara Ports. Australian Federal Police, Main Roads WA, Jones Lang LaSalle (Defence and Government Projects)"
+capabilities: "- Civil, Marine and General Construction Contractors\n  * Concrete\n  * structural & architectural steel,\n  * Earthworks, roads & hardstands\n  * Dams & drainage,\n  * Land rehabilitation\n  * marine civil including wharfs, bridges, revetments,\n  * building construction/ installation.\n  * Building renovations/ refurbishments.\n  * Demolition Class 1- complex and high-risk demolition\n  * Asbestos Removal\n  * Registered architects: Design, Planning, Scoping, Feasibilities\n  * Project Managers\n  * Registered Builders"
+discriminators: "- Registered Architects.\n  * Registered Builders.\n  * Asbestos removal (Class B).\n  * Demolition (Class 1).\n  * Licensed Security Agent.\n  * FSC accredited.\n  * ISO 9001, 45001, 14001.\n  * Supply Nation Certified\n  * Part of the Carey Group which includes First Nations Engineering (SMPE&I) Carey Assets (Asset & Fleet management) & Carey Training RTO\n  * Key customers include BHP, FMG, Fremantle Port Authority, Southern Port Authority, Pilbara Ports. Australian Federal Police, Main Roads WA, Jones Lang LaSalle (Defence and Government Projects)"

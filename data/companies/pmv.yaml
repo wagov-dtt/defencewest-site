@@ -10,13 +10,14 @@ overview: 'PMV Engineering is an Indigenous-owned company with over 25 years of 
 
 
   With operations in WA, SA, and NT, and a strong focus on Indigenous engagement and workforce development, PMV is committed to supporting Australia''s sovereign capability goals through sustainable and skilled service delivery. We look forward to contributing to the defence industry with a focus on integrity, safety, and long-term value.'
-website: https://pmvengineering.com.au
+website: https://pmvengineering.com.au/
 contact_name: Nitin Ahuja
 contact_title: General Manager
-address: 10/22 Shields Crescent
+address: 10/22 Shields Crescent, Booragoon WA 6154
 phone: 08 9317 2146
 email: nitin@pmv.net.au
 is_sme: true
+is_indigenous_owned: true
 stakeholders:
 - Defence Industry
 - Academic Institutions
@@ -65,4 +66,4 @@ capabilities: 'PMV Engineering delivers practical, safety-driven solutions in ha
 
 
   With a team holding over 300 years of combined experience, PMV offers capability, capacity, and commitment to supporting Australia''s defence goals.'
-discriminators: "* **Indigenous-Owned and Operated** - Supply Nation-registered and listed on The Circle (SA).\n  * **25+ Years of National Operation** - Proven history through our training and engineering arms.\n  * **Experienced Technical Team** - Over 300 years of combined team experience.\n  * **Government and Critical Infrastructure Clients** - Including Water Corporation and Australian Submarine Corporation.\n  * **Proven Delivery in High-Risk Environments** - Including fuel depots, treatment plants, and confined spaces.\n  * **RTO Capability** - PMV operates a nationally recognised training organisation (RTO 52447).\n  * **Certified Systems** - ISO 9001 (Quality).\n  * **Responsive and Relationship-Focused** - Agile enough to move quickly while delivering to standard."
+discriminators: "- **Indigenous-Owned and Operated** - Supply Nation-registered and listed on The Circle (SA).\n  * **25+ Years of National Operation** - Proven history through our training and engineering arms.\n  * **Experienced Technical Team** - Over 300 years of combined team experience.\n  * **Government and Critical Infrastructure Clients** - Including Water Corporation and Australian Submarine Corporation.\n  * **Proven Delivery in High-Risk Environments** - Including fuel depots, treatment plants, and confined spaces.\n  * **RTO Capability** - PMV operates a nationally recognised training organisation (RTO 52447).\n  * **Certified Systems** - ISO 9001 (Quality).\n  * **Responsive and Relationship-Focused** - Agile enough to move quickly while delivering to standard."

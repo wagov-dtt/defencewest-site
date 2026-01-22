@@ -68,8 +68,26 @@ const jsonLd = {
   jsonLd={jsonLd}
 >
   <div class="company-page">
+    <!-- Company Header (h1 first for accessibility) -->
+    <header class="company-header">
+      {logoSrc && <img src={logoSrc} alt="" class="company-logo" />}
+      <hgroup>
+        <h1>{company.name}</h1>
+        {
+          (company.is_prime || company.is_sme || company.is_indigenous_owned || company.is_veteran_owned) && (
+            <p class="company-badges">
+              {company.is_prime && <small>Prime Contractor</small>}
+              {company.is_sme && <small>SME</small>}
+              {company.is_indigenous_owned && <small>Indigenous Owned</small>}
+              {company.is_veteran_owned && <small>Veteran Owned</small>}
+            </p>
+          )
+        }
+      </hgroup>
+    </header>
+
     <!-- Main Content Area - Two Column Layout -->
-    <main data-pagefind-body class="company-content">
+    <main class="company-content">
       <!-- Left Column: Content -->
       <div class="content-column">
         {
@@ -102,22 +120,14 @@ const jsonLd = {
 
       <!-- Right Column: Company Info -->
       <aside class="info-column">
-        <!-- Company Header -->
-        <div class="company-header">
-          {logoSrc && <img src={logoSrc} alt="" class="company-logo" />}
-          <hgroup>
-            <h1 data-pagefind-meta="title">{company.name}</h1>
-            {
-              (company.is_prime || company.is_sme) && (
-                <p>
-                  {company.is_prime && <small>Prime Contractor</small>}
-                  {company.is_prime && company.is_sme && <small> · </small>}
-                  {company.is_sme && <small>SME</small>}
-                </p>
-              )
-            }
-          </hgroup>
-        </div>
+        {
+          (company.contact_name || company.contact_title) && (
+            <div class="contact-person">
+              {company.contact_name && <p class="contact-name">{company.contact_name}</p>}
+              {company.contact_title && <p class="contact-title">{company.contact_title}</p>}
+            </div>
+          )
+        }
 
         {
           (company.phone ||
@@ -143,13 +153,13 @@ const jsonLd = {
                 </p>
               )}
               {company.address && (
-                <p>
+                <p class="address">
                   {addressSearchUrl ? (
                     <a href={addressSearchUrl} target="_blank" rel="noopener">
-                      <small>{company.address}</small>
+                      {company.address}
                     </a>
                   ) : (
-                    <small>{company.address}</small>
+                    company.address
                   )}
                 </p>
               )}
@@ -190,7 +200,7 @@ const jsonLd = {
                           href={`/?capability_streams=${encodeURIComponent(stream)}`}
                           title={stream}
                         >
-                          <img src={iconUrl} alt={stream} />
+                          <img src={iconUrl} alt={stream} loading="lazy" />
                         </a>
                       ) : null;
                     })}
@@ -310,10 +320,46 @@ const jsonLd = {
 </script>
 
 <style>
+  /* Company Page Header */
+  .company-page > .company-header {
+    text-align: center;
+    margin-bottom: calc(var(--pico-spacing) * 2);
+  }
+
+  .company-page > .company-header .company-logo {
+    max-height: 100px;
+    max-width: 240px;
+    object-fit: contain;
+    margin-bottom: var(--pico-spacing);
+  }
+
+  .company-page > .company-header hgroup {
+    margin-bottom: 0;
+  }
+
+  .company-page > .company-header h1 {
+    font-size: 1.75rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .company-page > .company-header hgroup p {
+    margin: 0;
+    opacity: 0.7;
+  }
+
+  .company-badges small {
+    display: inline-block;
+    padding: 0.15rem 0.5rem;
+    margin: 0.15rem;
+    background: var(--pico-muted-border-color);
+    border-radius: var(--pico-border-radius);
+    font-size: 0.75rem;
+  }
+
   /* Two Column Layout */
   .company-content {
     display: grid;
-    grid-template-columns: 1fr 320px;
+    grid-template-columns: 1fr 360px;
     gap: calc(var(--pico-spacing) * 2);
     align-items: start;
   }
@@ -356,36 +402,21 @@ const jsonLd = {
     padding: var(--pico-spacing);
   }
 
-  /* Company Header */
-  .company-header {
+  .contact-person {
     text-align: center;
+    padding-bottom: var(--pico-spacing);
+    border-bottom: 1px solid var(--pico-muted-color);
   }
 
-  .company-logo {
-    max-height: 80px;
-    max-width: 180px;
-    object-fit: contain;
-    margin-bottom: var(--pico-spacing);
-  }
-
-  .company-header hgroup {
-    margin-bottom: 0;
-  }
-
-  .company-header hgroup h1 {
-    font-size: 1.25rem;
-    margin-bottom: 0.25rem;
-  }
-
-  .company-header hgroup p {
+  .contact-person .contact-name {
+    font-weight: 600;
     margin: 0;
-    opacity: 0.7;
   }
 
-  .contact-info {
-    text-align: left;
-    border-top: 1px solid var(--pico-muted-border-color);
-    padding-top: var(--pico-spacing);
+  .contact-person .contact-title {
+    font-size: 0.875rem;
+    opacity: 0.7;
+    margin: 0.25rem 0 0 0;
   }
 
   .contact-info p {
@@ -394,6 +425,12 @@ const jsonLd = {
 
   .contact-info p:last-child {
     margin-bottom: 0;
+  }
+
+  .contact-info .address {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    word-break: break-word;
   }
 
   /* Map */

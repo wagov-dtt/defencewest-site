@@ -19,7 +19,7 @@ overview: 'Western Australian Speciality Alloys (WASA) operates specialist melti
 website: https://www.wasa.com.au
 contact_name: Sandy Pelc
 contact_title: PA to General Manager
-address: 2-4 Hopewell Street
+address: 2-4 Hopewell Street, Canning Vale WA 6155
 phone: +61 8 9455 4111
 email: wasa@wasa.com.au
 is_sme: true
@@ -60,4 +60,4 @@ capabilities: 'Double vacuum melted VIM & VAR and VIM & ESR ingots are produced 
 
 
   We are the only vacuum induction melting facility of its kind in the southern hemisphere. As such, we aim to provide the highest quality alloys for the most stringent physical applications.'
-discriminators: "* Manufacture nickel, cobalt and iron based superalloys for aerospace, power generation and oil & gas applications.\n  * Alloys for forging applications.\n  * Alloys for casting and powder atomisation applications."
+discriminators: "- Manufacture nickel, cobalt and iron based superalloys for aerospace, power generation and oil & gas applications.\n  * Alloys for forging applications.\n  * Alloys for casting and powder atomisation applications."

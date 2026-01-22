@@ -4,7 +4,7 @@ overview: "**Engineering & Design Expertise**:\n\n  * **Innovative Team** : Thei
 website: https://www.barclayeng.com.au
 contact_name: Caroline Sampson
 contact_title: Sales - Projects
-address: 12-16 Catalano Road
+address: 12-16 Catalano Road, Canning Vale WA 6155
 phone: +61 8 9256 0900
 email: info@barclayeng.com.au
 is_sme: true
@@ -53,5 +53,11 @@ regions:
 latitude: -32.0618922
 longitude: 115.9021721
 logo_url: /logos/barclay.png
-capabilities: "Barclay Engineering's in-house capabilities make them a one-stop-shop for customers requiring a total solution to their needs. \n\n**Workshop and Fabrication** :\n\n  * **Facility** : State-of-the-art workshop spans 13,000m² in Canning Vale.\n  * **Materials** : Equipped to handle fabrication of Mild Steel, Stainless Steel, and Aluminium, among other specialist requirements.\n  * **Laser Cutting** : Features an in-house specialist Laser Cutting service with a Bystronic Byspeed 3015 4KW Ceramic Fiber Laser Cutter, providing millimetre precision and bespoke designs."
-discriminators: "Western Australian family owned and operated with Head Office in Canning Vale with a multi-disciplinary team. Barclay Engineering push the boundaries in prefabrication, modularity and design for installation to ensure value for the client is maximised by mitigating risk and time during installation. Proud members of the Henderson Alliance, Australian Steel Institute and a Veteran Employment Supporter. \n\nOperating since 1977, with a focus on quality and customer satisfaction. Clients can expect a genuine dedication to quality, integrity, and lasting relationships, laying the foundation for mutual growth and success. \n\nBarclay Engineering offers ongoing maintenance service for all completed projects to partner with clients to meet project servicing requirements and safeguarding the longevity of the product, for years to come."
+capabilities: "Barclay Engineering's in-house capabilities make them a one-stop-shop for customers requiring a total solution to their needs.\n\n**Workshop and Fabrication** :\n\n  * **Facility** : State-of-the-art workshop spans 13,000m² in Canning Vale.\n  * **Materials** : Equipped to handle fabrication of Mild Steel, Stainless Steel, and Aluminium, among other specialist requirements.\n  * **Laser Cutting** : Features an in-house specialist Laser Cutting service with a Bystronic Byspeed 3015 4KW Ceramic Fiber Laser Cutter, providing millimetre precision and bespoke designs."
+discriminators: 'Western Australian family owned and operated with Head Office in Canning Vale with a multi-disciplinary team. Barclay Engineering push the boundaries in prefabrication, modularity and design for installation to ensure value for the client is maximised by mitigating risk and time during installation. Proud members of the Henderson Alliance, Australian Steel Institute and a Veteran Employment Supporter.
+
+
+  Operating since 1977, with a focus on quality and customer satisfaction. Clients can expect a genuine dedication to quality, integrity, and lasting relationships, laying the foundation for mutual growth and success.
+
+
+  Barclay Engineering offers ongoing maintenance service for all completed projects to partner with clients to meet project servicing requirements and safeguarding the longevity of the product, for years to come.'

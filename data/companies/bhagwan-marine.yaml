@@ -1,10 +1,10 @@
 name: Bhagwan Marine Limited
 slug: bhagwan-marine
 overview: 25 Year strong Australian Marine Solutions provider that started with one Cray fishing vessel out of Geraldton (The Bhagwan) that now operates close to 100 MArine assets around Australia. Listing on the ASX in July 2025 we are now the leading ASX listed Marine company. We have supported the Defence industry nationally through Primes since inception however want to focus more on Defence as one of three growth sectors in the future.
-website: https://www.bhagwanmarine.com
+website: https://www.bhagwanmarine.com/
 contact_name: Peter Carmichael
 contact_title: GM Corporate Strategy
-address: Lvl 3 251 St Georges Terrace
+address: Lvl 3 251 St Georges Terrace, Perth WA 6018
 phone: 0458939076
 email: peter.carmichael@bhagwanmarine.com
 is_sme: true
@@ -29,4 +29,4 @@ latitude: -31.9529368
 longitude: 115.8498659
 logo_url: /logos/bhagwan-marine.png
 capabilities: Through our service lines of Marine, Vessel, Sub Sea, diving and Project Delivery we support both Ports and Inshore and Offshore Maritime Defence Industry. From Marine Infrastructure construction and Maintenance support through to Towage and Marine Logistics we have recently carried out Mooring Installation at Christmas Island for FranMarine though to a Frigate Tow from Darwin to Fremantle for Qube including supporting the likes of Duratech for the Dolphin upgrades in Darwin. We are eager to offer our Henderson facility and a marine based barge service to service HMAS Sterling.
-discriminators: "* Key strategically positioned Locations and facilitys around Australia\n  * Large diverse fleet of marine assets\n  * ISO 9001:2015 Quality Management System\n  * ISO 14001:2015 Environmental Management System\n  * ISO 45001:2018 Occupational Health & Safety Management System\n  * Robust systems and policies meeting the standards of Tier 1 customers\n  * Australian ownership\n  * Intimate knowledge of customer needs\n  * Large Internal manning pool of skilled and compliant marine crew\n  * Veteran engagement\n  * Indigenous engagement"
+discriminators: "- Key strategically positioned Locations and facilitys around Australia\n  * Large diverse fleet of marine assets\n  * ISO 9001:2015 Quality Management System\n  * ISO 14001:2015 Environmental Management System\n  * ISO 45001:2018 Occupational Health & Safety Management System\n  * Robust systems and policies meeting the standards of Tier 1 customers\n  * Australian ownership\n  * Intimate knowledge of customer needs\n  * Large Internal manning pool of skilled and compliant marine crew\n  * Veteran engagement\n  * Indigenous engagement"

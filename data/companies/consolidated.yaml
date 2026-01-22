@@ -1,10 +1,10 @@
 name: Consolidated Group
 slug: consolidated
 overview: 'An Australian owned and operated company dedicated to servicing the mining, civil and transport sectors. We will deliver quality, reliable, and extensive fleet and operational support whenever and wherever its needed. Our competitive discriminators include: Can Do Approach Manage contracts through communication and flexibility whilst remaining responsive and proactive, Exceptional Standards Excellence across our fleet, operations and services, Industry Specific Training Technology and upskilling to diversify our capabilities, Safety First Leaders in Innovative online Safety management Systems.'
-website: https://consolidatedgroup.com.au
+website: www.consolidatedgroup.com.au
 contact_name: 'Theo Tsorvas '
 contact_title: Director
-address: 101 Phillips Road
+address: 101 Phillips Road, Wattelup WA 6166
 phone: 0459 786 391
 email: theo@consolidatedgroup.com.au
 is_sme: true
@@ -23,5 +23,7 @@ regions:
 - Perth Metropolitan
 latitude: -32.16884
 longitude: 115.80859
-logo_url: /logos/consolidated.jpg
-capabilities: "Civil works - Covering all scope elements from earthworks, drainage, cartage and site clearing, we provide a host of comprehensive civil services to assist with on-site operations. We have a fleet of over 100 heavy diesel machines including trucks, water carts, graders, rollers, skid steers, wheel loaders, articulated haul trucks and excavators. Transport - We can facilitate the transport of plant and machinery through our transport services including bulk haulage, freight, float service and hot shots, ranging from Perth to remote areas. We are Main Roads Heavy Vehicle Accredited.  Mechanical Maintenance - We have qualified and apprentice Certificate III in Engineering - Mechanical Trade Plant Mechanics available to service equipment anywhere utilising their mobile service units with state-of-the-art diagnostic technology.       \n---"
+logo_url: /logos/consolidated.png
+capabilities: 'Civil works - Covering all scope elements from earthworks, drainage, cartage and site clearing, we provide a host of comprehensive civil services to assist with on-site operations. We have a fleet of over 100 heavy diesel machines including trucks, water carts, graders, rollers, skid steers, wheel loaders, articulated haul trucks and excavators. Transport - We can facilitate the transport of plant and machinery through our transport services including bulk haulage, freight, float service and hot shots, ranging from Perth to remote areas. We are Main Roads Heavy Vehicle Accredited.  Mechanical Maintenance - We have qualified and apprentice Certificate III in Engineering - Mechanical Trade Plant Mechanics available to service equipment anywhere utilising their mobile service units with state-of-the-art diagnostic technology.
+
+  ---'

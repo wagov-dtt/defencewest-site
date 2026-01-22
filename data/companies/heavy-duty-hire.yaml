@@ -1,10 +1,10 @@
 name: HEAVY DUTY HIRE
 slug: heavy-duty-hire
 overview: Our company has been working on defence bases in WA for around 12 months as a sub contractor. We have completed earthworks projects at Bindoon Training Facility, Garden Island and Pearce Airbase. We provide both equipment, operators and a project management that keeps projects safe, efficient and compliant.
-website: https://www.hdhire.net
+website: ' https://www.hdhire.net'
 contact_name: Adam Marshall
 contact_title: Director
-address: PO Box 1160
+address: PO Box 1160, Canning Bridge WA 6153
 phone: 0452692150
 email: adam.marshall@hdhire.net
 is_sme: true
@@ -36,5 +36,9 @@ regions:
 latitude: -32.0110898
 longitude: 115.8532676
 logo_url: /logos/heavy-duty-hire.png
-capabilities: "Earthmoving equipment hire - Excavators, Front End Loaders, Tipper trucks (Rigid and Articulating),   \nTransportable accommodation hire (delivery, servicing, refilling) - Site offices, Lunch rooms, toilets, generators, water tanks, secure fuel storage.  \nOperator capability - With our competent operators, we can help deliver projects safely, efficiently and on time."
-discriminators: "At HDH, we’ve built our business around solving the problems that cost clients time, money, and peace of mind: \n\n  * Direct accountability – led by the Director, not a call centre, for fast decisions and personal responsibility.\n  * Outcome focused - we know that repeat business is the best type, so we always seek to deliver the best possible outcome for our clients.\n  * Turnkey site compounds – we'll deliver and commission our accommodation and power generation equipment ready to work \n  * Smarter logistics – bunching assets together for transport, reducing wait times and costs"
+capabilities: 'Earthmoving equipment hire - Excavators, Front End Loaders, Tipper trucks (Rigid and Articulating),
+
+  Transportable accommodation hire (delivery, servicing, refilling) - Site offices, Lunch rooms, toilets, generators, water tanks, secure fuel storage.
+
+  Operator capability - With our competent operators, we can help deliver projects safely, efficiently and on time.'
+discriminators: "At HDH, we’ve built our business around solving the problems that cost clients time, money, and peace of mind:\n\n  * Direct accountability – led by the Director, not a call centre, for fast decisions and personal responsibility.\n  * Outcome focused - we know that repeat business is the best type, so we always seek to deliver the best possible outcome for our clients.\n  * Turnkey site compounds – we'll deliver and commission our accommodation and power generation equipment ready to work\n  * Smarter logistics – bunching assets together for transport, reducing wait times and costs"

@@ -16,7 +16,7 @@ overview: 'Adisyn is an Australian-owned, ASX-listed technology company (ASX: AI
 website: https://adisyn.com.au
 contact_name: Jesse Gane
 contact_title: General Manager
-address: 4 McGrath Rd,
+address: 4 McGrath Rd,, Henderson WA 6166
 phone: 0434045890
 email: jesse.gane@adisyn.com.au
 is_sme: true
@@ -53,4 +53,4 @@ longitude: 115.78541
 logo_url: /logos/adisyn.png
 capabilities: "Adisyn offers full-spectrum IT and Cybersecurity services aligned to the unique needs of Defence and critical infrastructure clients, delivered through our _Advise - Support - Protect_ service model:\n\n**Advise**\n\n  * Cybersecurity and ICT strategy consulting\n  * ISO 27001 and DISP-aligned governance and risk frameworks\n  * Defence-specific project management and procurement support\n  * Security and technology roadmap development\n\n**Support**\n\n  * Sovereign, Australian-based service desk and field support\n  * Managed IT services with secure endpoint and infrastructure management\n  * 24/7 monitoring, patching, and system lifecycle management\n  * Business continuity, backup, and disaster recovery\n\n**Protect**\n\n  * Australian-based 24/7 Security Operations Centre (SOC)\n  * CREST-aligned penetration testing and offensive security\n  * Vulnerability management and threat intelligence\n  * Essential Eight and ISM uplift programs\n  * Incident response and cyber\
   \ resilience planning\n\nAdisyn has successfully supported organisations in Defence and Defence-adjacent sectors to modernise their environments, uplift their cyber maturity, and meet compliance requirements across highly sensitive and resource-constrained environments."
-discriminators: "* ASX-listed, Australian-owned and operated\n  * Veteran-led leadership\n  * Full end-to-end capability: strategy, delivery, operations, and protection\n  * All services delivered onshore with sovereign infrastructure\n  * Active member of the Australian Signals Directorate (ASD) Cyber Security Partnership Program\n  * ISO 27001-aligned and DISP-aware services with track record in governance uplift\n  * Strong delivery across disconnected and bandwidth-restricted environments\n  * Experience with local, state, and federal government clients\n  * Vendor-agnostic - solutions tailored to customer mission, not product"
+discriminators: "- ASX-listed, Australian-owned and operated\n  * Veteran-led leadership\n  * Full end-to-end capability: strategy, delivery, operations, and protection\n  * All services delivered onshore with sovereign infrastructure\n  * Active member of the Australian Signals Directorate (ASD) Cyber Security Partnership Program\n  * ISO 27001-aligned and DISP-aware services with track record in governance uplift\n  * Strong delivery across disconnected and bandwidth-restricted environments\n  * Experience with local, state, and federal government clients\n  * Vendor-agnostic - solutions tailored to customer mission, not product"

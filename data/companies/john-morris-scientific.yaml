@@ -1,10 +1,16 @@
 name: John Morris Scientific Pty Ltd
 slug: john-morris-scientific
-overview: "Since our founding in 1952, the John Morris Group has steadily expanded, guided by a policy which excluded all products except those of the highest quality. Our commitment to quality extends to our recruitment process & team, our state-of-art nationwide facilities and the service we provide to our customers. \n\nToday we are recognised as one of Australia's and New Zealand's leading distributors of a range of specialised scientific equipment sourced from the world's leading manufacturers.\n\nFor over 65 years John Morris Group has been the industry leader in the supply, installation & servicing of precision instruments throughout the South Pacific."
-website: https://www.johnmorrisgroup.com
+overview: 'Since our founding in 1952, the John Morris Group has steadily expanded, guided by a policy which excluded all products except those of the highest quality. Our commitment to quality extends to our recruitment process & team, our state-of-art nationwide facilities and the service we provide to our customers.
+
+
+  Today we are recognised as one of Australia''s and New Zealand''s leading distributors of a range of specialised scientific equipment sourced from the world''s leading manufacturers.
+
+
+  For over 65 years John Morris Group has been the industry leader in the supply, installation & servicing of precision instruments throughout the South Pacific.'
+website: www.johnmorrisgroup.com
 contact_name: Lav Deshpande
 contact_title: Product Manager
-address: 61-63 Victoria Ave
+address: 61-63 Victoria Ave, Chatswood NSW 2067
 phone: 02 9496 4206
 email: ldeshpande@johnmorrisgroup.com
 is_sme: true
@@ -22,5 +28,5 @@ industrial_capabilities:
 - Propulsion & Engine Systems
 latitude: -33.79016
 longitude: 151.20246
-logo_url: /logos/john-morris-scientific.jpg
-capabilities: "The John Morris group Test & Measurement Division provides  state-of-the-art test & measurement solutions for a wide range of industries including Aerospace & Defence, Power & Energy, Automotive, Transportation,  Mining & Industrial sectors.\n\n \n\nBrands include:\n\n  * MTS - Load and fatigue testing.\n  * PCB Piezotronics - vibration and machine condition monitoring.\n  * Endevco - vibration and machine condition monitoring.\n  * The Modal Shop - vibration and calibration systems.\n  * Sentek - electro-dynamic shakers.\n  * Crystal Instruments - vibration test controllers and data acquisition.\n  * Scanivalve - pressure scanners and transducers.\n  * Viatran - pressure scanners and transducers."
+logo_url: /logos/john-morris-scientific.png
+capabilities: "The John Morris group Test & Measurement Division provides  state-of-the-art test & measurement solutions for a wide range of industries including Aerospace & Defence, Power & Energy, Automotive, Transportation,  Mining & Industrial sectors.\n\n\n\nBrands include:\n\n  * MTS - Load and fatigue testing.\n  * PCB Piezotronics - vibration and machine condition monitoring.\n  * Endevco - vibration and machine condition monitoring.\n  * The Modal Shop - vibration and calibration systems.\n  * Sentek - electro-dynamic shakers.\n  * Crystal Instruments - vibration test controllers and data acquisition.\n  * Scanivalve - pressure scanners and transducers.\n  * Viatran - pressure scanners and transducers."
