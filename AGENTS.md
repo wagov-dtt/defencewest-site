@@ -9,6 +9,8 @@ mise run setup   # Install dependencies
 mise run dev     # Start dev server (port 4321)
 mise run build   # Build static site (includes lint + link check)
 mise run lint    # Validate YAML data files only
+mise run format  # Format Astro/TS/CSS with Prettier
+mise run check   # Type check Astro files
 ```
 
 ## Project Structure
@@ -36,7 +38,7 @@ Each company is a single YAML file in `data/companies/`:
 
 ```yaml
 name: Company Name
-slug: company-name          # URL path, matches filename
+slug: company-name # URL path, matches filename
 overview: Description text
 website: https://example.com
 logo_url: /logos/company-name.png
@@ -83,7 +85,12 @@ The `mise run build` task runs: lint → build → link check (lychee).
 
 ## Adding/Editing Companies
 
-1. Edit or create `data/companies/{slug}.yaml`
-2. Run `mise run lint` to validate
-3. Run `mise run build` to verify
-4. Commit the YAML file
+See [README.md](README.md#addingediting-companies) for details on adding or editing companies via the website or code.
+
+## Scraping
+
+To re-scrape company data from the source directory:
+
+```bash
+uv run python scripts/scrape.py
+```

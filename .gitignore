@@ -12,6 +12,7 @@ dist/
 # Cache
 data/cache/
 data/companies.json
+.lycheecache
 
 # IDE
 .idea/

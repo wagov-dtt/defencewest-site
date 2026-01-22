@@ -17,24 +17,37 @@ const shortOverview = company.overview?.slice(0, 100);
 
 <a href={`/company/${company.slug}`} class="card-link">
   <article>
-    {(company.is_prime || company.is_sme) && (
-      <div class="badges">
-        {company.is_prime && <small>Prime</small>}
-        {company.is_sme && <small>SME</small>}
-      </div>
-    )}
-    
+    {
+      (company.is_prime || company.is_sme) && (
+        <div class="badges">
+          {company.is_prime && <small>Prime</small>}
+          {company.is_sme && <small>SME</small>}
+        </div>
+      )
+    }
+
     <div class="logo-area">
-      {company.logo_url ? (
-        <img src={company.logo_url} alt="" loading="lazy" />
-      ) : (
-        <span class="initials">{company.name.slice(0, 2).toUpperCase()}</span>
-      )}
+      {
+        company.logo_url ? (
+          <img src={company.logo_url} alt="" loading="lazy" />
+        ) : (
+          <span class="initials">{company.name.slice(0, 2).toUpperCase()}</span>
+        )
+      }
     </div>
-    
+
     <h4>{company.name}</h4>
-    
-    {shortOverview && <p class="overview"><small>{shortOverview}{company.overview && company.overview.length > 100 ? '...' : ''}</small></p>}
+
+    {
+      shortOverview && (
+        <p class="overview">
+          <small>
+            {shortOverview}
+            {company.overview && company.overview.length > 100 ? "..." : ""}
+          </small>
+        </p>
+      )
+    }
   </article>
 </a>
 

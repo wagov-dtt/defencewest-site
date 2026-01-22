@@ -1,61 +1,88 @@
 ---
-const isHomepage = Astro.url.pathname === '/' || Astro.url.pathname === '';
-const isContact = Astro.url.pathname.includes('/contact');
+// All buttons start as outline - JS will highlight the active one
 ---
 
 <header class="site-header">
   <div class="header-container">
-    <a href="https://www.wa.gov.au/organisation/department-of-the-premier-and-cabinet/defence-west" class="logo-wrapper">
+    <a
+      href="https://www.wa.gov.au/organisation/department-of-the-premier-and-cabinet/defence-west"
+      class="logo-wrapper"
+    >
       <img src="/defence-west-logo.svg" alt="Defence West logo" />
     </a>
     <div role="group" class="view-toggle">
-      {isHomepage ? (
-        <>
-          <a href="/" role="button" id="view-directory" class="contrast">Directory</a>
-          <a href="/?view=map" role="button" id="view-map" class="contrast outline">Map</a>
-          <a href="/contact" role="button" class="contrast outline">Contact</a>
-        </>
-      ) : (
-        <>
-          <a href="/" role="button" class="contrast outline">Directory</a>
-          <a href="/?view=map" role="button" class="contrast outline">Map</a>
-          <a href="/contact" role="button" class={`contrast ${isContact ? '' : 'outline'}`}>Contact</a>
-        </>
-      )}
+      <a href="/" role="button" id="nav-directory" class="contrast outline">
+        Directory
+      </a>
+      <a href="/?view=map" role="button" id="nav-map" class="contrast outline">
+        Map
+      </a>
+      <a href="/contact" role="button" id="nav-contact" class="contrast outline">
+        Contact
+      </a>
     </div>
-    <a href="https://www.wa.gov.au/organisation/department-of-energy-and-economic-diversification" class="gov-logo">
+    <a
+      href="https://www.wa.gov.au/organisation/department-of-energy-and-economic-diversification"
+      class="gov-logo"
+    >
       <img src="/wa-gov-logo.png" alt="Government of Western Australia logo" />
     </a>
   </div>
 </header>
 
 <script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const dirBtn = document.getElementById('view-directory');
-    const mapBtn = document.getElementById('view-map');
-    
-    if (dirBtn && mapBtn) {
-      // Check URL param on load and set correct active state
-      const isMapView = new URLSearchParams(window.location.search).get('view') === 'map';
-      if (isMapView) {
-        dirBtn.classList.add('outline');
-        mapBtn.classList.remove('outline');
-      }
-      
-      dirBtn.addEventListener('click', (e) => {
+  declare global {
+    interface Window {
+      showMap?: () => void;
+      showCards?: () => void;
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const dirBtn = document.getElementById("nav-directory") as HTMLAnchorElement | null;
+    const mapBtn = document.getElementById("nav-map") as HTMLAnchorElement | null;
+    const contactBtn = document.getElementById("nav-contact") as HTMLAnchorElement | null;
+
+    if (!dirBtn || !mapBtn || !contactBtn) return;
+
+    const path = window.location.pathname;
+    const isMapView = new URLSearchParams(window.location.search).get("view") === "map";
+    const isContact = path.endsWith("/contact") || path.endsWith("/contact/") || path.endsWith("/contact.html");
+    // Homepage detection: root, ends with /, or ends with /index.html - but not /contact or /company etc
+    const isHomepage = path === "/" || path.endsWith("/index.html") || 
+      (path.endsWith("/") && !path.includes("/company") && !path.includes("/contact") && !path.includes("/edit"));
+
+    function setActive(btn: HTMLAnchorElement) {
+      dirBtn.classList.add("outline");
+      mapBtn.classList.add("outline");
+      contactBtn.classList.add("outline");
+      btn.classList.remove("outline");
+    }
+
+    // Set initial active state
+    if (isContact) {
+      setActive(contactBtn);
+    } else if (isHomepage && isMapView) {
+      setActive(mapBtn);
+    } else if (isHomepage) {
+      setActive(dirBtn);
+    }
+    // Other pages (company details, edit) - no nav item highlighted
+
+    // Only wire up click handlers on homepage where we have the map toggle
+    if (isHomepage) {
+      dirBtn.addEventListener("click", (e) => {
         e.preventDefault();
         window.showCards?.();
-        dirBtn.classList.remove('outline');
-        mapBtn.classList.add('outline');
-        history.pushState({}, '', dirBtn.href.split('?')[0]);
+        setActive(dirBtn);
+        history.pushState({}, "", window.location.pathname);
       });
-      
-      mapBtn.addEventListener('click', (e) => {
+
+      mapBtn.addEventListener("click", (e) => {
         e.preventDefault();
         window.showMap?.();
-        mapBtn.classList.remove('outline');
-        dirBtn.classList.add('outline');
-        history.pushState({}, '', mapBtn.href);
+        setActive(mapBtn);
+        history.pushState({}, "", window.location.pathname + "?view=map");
       });
     }
   });

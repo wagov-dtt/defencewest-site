@@ -1,6 +1,6 @@
-import fs from 'node:fs';
-import path from 'node:path';
-import yaml from 'yaml';
+import fs from "node:fs";
+import path from "node:path";
+import yaml from "yaml";
 
 export interface Taxonomies {
   stakeholders: string[];
@@ -14,9 +14,9 @@ let cached: Taxonomies | null = null;
 
 export function getTaxonomies(): Taxonomies {
   if (cached) return cached;
-  
-  const taxonomiesPath = path.join(process.cwd(), 'data/taxonomies.yaml');
-  cached = yaml.parse(fs.readFileSync(taxonomiesPath, 'utf-8'));
+
+  const taxonomiesPath = path.join(process.cwd(), "data/taxonomies.yaml");
+  cached = yaml.parse(fs.readFileSync(taxonomiesPath, "utf-8"));
   return cached!;
 }
 
