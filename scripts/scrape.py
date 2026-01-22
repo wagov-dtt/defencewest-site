@@ -112,6 +112,12 @@ def html_to_md(html: str) -> str:
     text = re.sub(r"\\\s*$", "", text, flags=re.MULTILINE)
     # Clean up excessive trailing whitespace on lines
     text = re.sub(r"[ \t]+$", "", text, flags=re.MULTILINE)
+    # Remove horizontal rules (---, ***, ___) that appear in content
+    text = re.sub(r"^[-*_]{3,}\s*$", "", text, flags=re.MULTILINE)
+    # Demote headers (h1->h3, h2->h4, etc) - content shouldn't have top-level headers
+    text = re.sub(r"^(#{1,2})\s", r"###", text, flags=re.MULTILINE)
+    # Clean up resulting multiple newlines again
+    text = re.sub(r"\n{3,}", "\n\n", text)
     return text.strip()
 
 

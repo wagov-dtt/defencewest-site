@@ -76,10 +76,10 @@ const jsonLd = {
         {
           (company.is_prime || company.is_sme || company.is_indigenous_owned || company.is_veteran_owned) && (
             <p class="company-badges">
-              {company.is_prime && <small>Prime Contractor</small>}
-              {company.is_sme && <small>SME</small>}
-              {company.is_indigenous_owned && <small>Indigenous Owned</small>}
-              {company.is_veteran_owned && <small>Veteran Owned</small>}
+              {company.is_prime && <a href="/?is_prime=true"><small>Prime Contractor</small></a>}
+              {company.is_sme && <a href="/?is_sme=true"><small>SME</small></a>}
+              {company.is_indigenous_owned && <a href="/?is_indigenous_owned=true"><small>Indigenous Owned</small></a>}
+              {company.is_veteran_owned && <a href="/?is_veteran_owned=true"><small>Veteran Owned</small></a>}
             </p>
           )
         }
@@ -354,6 +354,16 @@ const jsonLd = {
     background: var(--pico-muted-border-color);
     border-radius: var(--pico-border-radius);
     font-size: 0.75rem;
+  }
+
+  .company-badges a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .company-badges a:hover small {
+    background: var(--pico-primary);
+    color: var(--pico-primary-inverse);
   }
 
   /* Two Column Layout */
