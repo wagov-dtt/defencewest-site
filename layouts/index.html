@@ -204,7 +204,7 @@ $companies | append $company -}} {{- end -}} {{- $companies = sort $companies
       mapIframe.classList.toggle("hidden", !showMap);
 
       if (showMap && !mapLoaded) {
-        mapIframe.src = "{{ "map/" | relURL }}";
+        mapIframe.src = "./map/";
         mapLoaded = true;
       }
 

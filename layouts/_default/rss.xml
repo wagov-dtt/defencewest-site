@@ -1,0 +1,49 @@
+{{- /* Custom RSS template for WA Defence Industry Directory */ -}}
+{{- /* Fixes: empty titles, adds taxonomy categories */ -}}
+{{- $pages := .Pages -}}
+{{- if .IsHome -}}
+  {{- $pages = where site.RegularPages "Section" "company" -}}
+{{- end -}}
+{{- printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?>" | safeHTML }}
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>{{ .Site.Title }}</title>
+    <link>{{ .Permalink }}</link>
+    <description>{{ with .Site.Params.description }}{{ . }}{{ else }}{{ .Site.Title }}{{ end }}</description>
+    <generator>Hugo</generator>
+    <language>{{ .Site.Language.LanguageCode }}</language>
+    {{- with $pages }}
+    <lastBuildDate>{{ (index . 0).Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" }}</lastBuildDate>
+    {{- end }}
+    <atom:link href="{{ .Permalink }}feed.xml" rel="self" type="application/rss+xml" />
+    {{- range $pages }}
+    <item>
+      <title>{{ with .Params.name }}{{ . }}{{ else }}{{ .Title }}{{ end }}</title>
+      <link>{{ .Permalink }}</link>
+      <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" }}</pubDate>
+      <guid>{{ .Permalink }}</guid>
+      {{- /* Taxonomy categories */ -}}
+      {{- range .Params.capability_streams }}
+      <category domain="capability_stream">{{ . }}</category>
+      {{- end }}
+      {{- range .Params.capability_domains }}
+      <category domain="capability_domain">{{ . }}</category>
+      {{- end }}
+      {{- range .Params.regions }}
+      <category domain="region">{{ . }}</category>
+      {{- end }}
+      {{- range .Params.stakeholders }}
+      <category domain="stakeholder">{{ . }}</category>
+      {{- end }}
+      {{- range .Params.industrial_capabilities }}
+      <category domain="industrial_capability">{{ . }}</category>
+      {{- end }}
+      {{- if .Params.is_sme }}<category>SME</category>{{ end }}
+      {{- if .Params.is_prime }}<category>Prime</category>{{ end }}
+      {{- if .Params.is_indigenous_owned }}<category>Indigenous Owned</category>{{ end }}
+      {{- if .Params.is_veteran_owned }}<category>Veteran Owned</category>{{ end }}
+      <description>{{ .Summary | html }}</description>
+    </item>
+    {{- end }}
+  </channel>
+</rss>

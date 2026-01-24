@@ -159,16 +159,8 @@
 
   <!-- ===== EDIT MODE ===== -->
   <div id="edit-mode" class="hidden">
-    {{/* Extract Overview and Capabilities from raw content */}}
-    {{- $rawContent := .RawContent -}}
-    {{- $overview := "" -}}
-    {{- $capabilities := "" -}}
-    {{- if findRE "(?s)## Overview\\s*\\n(.+?)(?:## |$)" $rawContent -}}
-      {{- $overview = index (findRE "(?s)## Overview\\s*\\n(.+?)(?:## |$)" $rawContent) 0 | replaceRE "(?s)## Overview\\s*\\n" "" | replaceRE "(?s)\\n## $" "" | strings.TrimSpace -}}
-    {{- end -}}
-    {{- if findRE "(?s)## Capabilities\\s*\\n(.+?)(?:## |$)" $rawContent -}}
-      {{- $capabilities = index (findRE "(?s)## Capabilities\\s*\\n(.+?)(?:## |$)" $rawContent) 0 | replaceRE "(?s)## Capabilities\\s*\\n" "" | strings.TrimSpace -}}
-    {{- end -}}
+    {{/* Use raw markdown content */}}
+    {{- $rawContent := .RawContent | strings.TrimSpace -}}
     
     <div class="row">
       <!-- Left Column: Main editing -->
@@ -181,21 +173,12 @@
         <input type="hidden" id="field-slug" name="slug" value="{{ $slug }}">
         
         <fieldset>
-          <legend>Overview</legend>
+          <legend>Content (Markdown)</legend>
           <div class="editor-toolbar">
-            <label class="preview-toggle"><input type="checkbox" role="switch" data-preview-for="field-overview"> Preview</label>
+            <label class="preview-toggle"><input type="checkbox" role="switch" data-preview-for="field-content"> Preview</label>
           </div>
-          <textarea id="field-overview" name="overview" rows="10" spellcheck="true">{{ $overview }}</textarea>
-          <div id="field-overview-preview" class="markdown-preview hidden"></div>
-        </fieldset>
-        
-        <fieldset>
-          <legend>Capabilities</legend>
-          <div class="editor-toolbar">
-            <label class="preview-toggle"><input type="checkbox" role="switch" data-preview-for="field-capabilities"> Preview</label>
-          </div>
-          <textarea id="field-capabilities" name="capabilities" rows="12" spellcheck="true">{{ $capabilities }}</textarea>
-          <div id="field-capabilities-preview" class="markdown-preview hidden"></div>
+          <textarea id="field-content" name="content" rows="20" spellcheck="true">{{ $rawContent }}</textarea>
+          <div id="field-content-preview" class="markdown-preview hidden"></div>
         </fieldset>
 
         <fieldset class="edit-actions">
@@ -415,8 +398,7 @@ if (viewMode && editMode) {
       industrial_capabilities: getCheckedValues('industrial_capabilities'),
       regions: getCheckedValues('regions'),
     };
-    const overview = getValue('field-overview');
-    const capabilities = getValue('field-capabilities');
+    const content = getValue('field-content');
     
     const lines = ['---', `name: ${formatYaml(data.name)}`, `date: ${new Date().toISOString().split('T')[0]}`];
 
@@ -440,9 +422,8 @@ if (viewMode && editMode) {
 
     lines.push('---', '');
     
-    // Content sections
-    if (overview) lines.push('## Overview', '', overview, '');
-    if (capabilities) lines.push('## Capabilities', '', capabilities);
+    // Content (full markdown)
+    if (content) lines.push(content);
     
     return lines.join('\n');
   }

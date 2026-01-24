@@ -1,15 +1,17 @@
 #!/usr/bin/env python3
 """
-Export company data to CSV and XLSX formats.
+Export company data to CSV, XLSX, and JSON formats.
 Reads markdown files from content/company/ and validates against taxonomies.
 """
 
+import json
 import sys
 from pathlib import Path
 
 import frontmatter
 import pandas as pd
 import yaml
+from openpyxl.utils import get_column_letter
 
 # Paths
 ROOT = Path(__file__).parent.parent
@@ -99,6 +101,7 @@ def companies_to_dataframe(companies: list[dict], taxonomies: dict) -> pd.DataFr
     """Convert companies to a pandas DataFrame.
 
     Converts taxonomy keys to display names for human-readable output.
+    Column order optimized: identity -> location -> taxonomies -> flags -> content.
     """
 
     # Helper to convert keys to display names
@@ -109,22 +112,13 @@ def companies_to_dataframe(companies: list[dict], taxonomies: dict) -> pd.DataFr
     rows = []
     for c in companies:
         row = {
+            # Identity (most important first)
             "name": c.get("name", ""),
-            "slug": c.get("slug", ""),
             "website": c.get("website", ""),
-            "phone": c.get("phone", ""),
-            "email": c.get("email", ""),
+            # Location
+            "regions": "; ".join(keys_to_names(c.get("regions") or [], "regions")),
             "address": c.get("address", ""),
-            "latitude": c.get("latitude"),
-            "longitude": c.get("longitude"),
-            "is_sme": c.get("is_sme", False),
-            "is_prime": c.get("is_prime", False),
-            "is_indigenous_owned": c.get("is_indigenous_owned", False),
-            "is_veteran_owned": c.get("is_veteran_owned", False),
-            # Join lists with semicolons, converting keys to display names
-            "stakeholders": "; ".join(
-                keys_to_names(c.get("stakeholders") or [], "stakeholders")
-            ),
+            # Capabilities (most searched)
             "capability_streams": "; ".join(
                 keys_to_names(c.get("capability_streams") or [], "capability_streams")
             ),
@@ -136,13 +130,64 @@ def companies_to_dataframe(companies: list[dict], taxonomies: dict) -> pd.DataFr
                     c.get("industrial_capabilities") or [], "industrial_capabilities"
                 )
             ),
-            "regions": "; ".join(keys_to_names(c.get("regions") or [], "regions")),
-            # Include overview (first part of content)
-            "overview": (c.get("_content") or "").split("##")[0].strip()[:500],
+            # Classification
+            "stakeholders": "; ".join(
+                keys_to_names(c.get("stakeholders") or [], "stakeholders")
+            ),
+            # Flags
+            "is_sme": c.get("is_sme", False),
+            "is_prime": c.get("is_prime", False),
+            "is_indigenous_owned": c.get("is_indigenous_owned", False),
+            "is_veteran_owned": c.get("is_veteran_owned", False),
+            # Contact
+            "phone": c.get("phone", ""),
+            "email": c.get("email", ""),
+            # Geo
+            "latitude": c.get("latitude"),
+            "longitude": c.get("longitude"),
+            # Full markdown content
+            "markdown": (c.get("_content") or "").strip(),
+            # Internal reference
+            "slug": c.get("slug", ""),
         }
         rows.append(row)
 
     return pd.DataFrame(rows)
+
+
+def companies_to_json(companies: list[dict], taxonomies: dict) -> list[dict]:
+    """Convert companies to JSON-serializable format.
+
+    Preserves taxonomy keys (not display names) for programmatic access.
+    """
+    result = []
+    for c in companies:
+        item = {
+            "slug": c.get("slug", ""),
+            "name": c.get("name", ""),
+            "website": c.get("website", ""),
+            "address": c.get("address", ""),
+            "phone": c.get("phone", ""),
+            "email": c.get("email", ""),
+            "latitude": c.get("latitude"),
+            "longitude": c.get("longitude"),
+            # Full markdown content
+            "markdown": (c.get("_content") or "").strip(),
+            # Taxonomies as arrays (keys, not display names)
+            "regions": c.get("regions") or [],
+            "stakeholders": c.get("stakeholders") or [],
+            "capability_streams": c.get("capability_streams") or [],
+            "capability_domains": c.get("capability_domains") or [],
+            "industrial_capabilities": c.get("industrial_capabilities") or [],
+            # Flags
+            "is_sme": c.get("is_sme", False),
+            "is_prime": c.get("is_prime", False),
+            "is_indigenous_owned": c.get("is_indigenous_owned", False),
+            "is_veteran_owned": c.get("is_veteran_owned", False),
+        }
+        result.append(item)
+
+    return result
 
 
 def export_csv(df: pd.DataFrame, output_path: Path) -> None:
@@ -152,25 +197,47 @@ def export_csv(df: pd.DataFrame, output_path: Path) -> None:
 
 
 def export_xlsx(df: pd.DataFrame, output_path: Path) -> None:
-    """Export DataFrame to XLSX with formatting."""
+    """Export DataFrame to XLSX with formatting and hyperlinks."""
     with pd.ExcelWriter(output_path, engine="openpyxl") as writer:
         df.to_excel(writer, index=False, sheet_name="Companies")
 
-        # Auto-adjust column widths
         worksheet = writer.sheets["Companies"]
+
+        # Find website column index (1-based for openpyxl)
+        website_col_idx = list(df.columns).index("website") + 1
+
+        # Add hyperlinks to website column
+        for row_idx, url in enumerate(
+            df["website"], start=2
+        ):  # Start at row 2 (after header)
+            if url and isinstance(url, str) and url.startswith("http"):
+                cell = worksheet.cell(row=row_idx, column=website_col_idx)
+                cell.hyperlink = url
+                cell.style = "Hyperlink"
+
+        # Auto-adjust column widths
         for idx, col in enumerate(df.columns):
+            col_letter = get_column_letter(idx + 1)
             # Handle NaN values properly
             col_data = df[col].fillna("").astype(str)
             max_length = max(col_data.map(len).max(), len(col))
-            # Cap at 50 chars, columns go A-Z then AA, AB, etc.
-            col_letter = (
-                chr(65 + idx)
-                if idx < 26
-                else f"{chr(64 + idx // 26)}{chr(65 + idx % 26)}"
+            # Cap widths: 80 for markdown, 50 for others
+            max_width = 80 if col == "markdown" else 50
+            worksheet.column_dimensions[col_letter].width = min(
+                max_length + 2, max_width
             )
-            worksheet.column_dimensions[col_letter].width = min(max_length + 2, 50)
+
+        # Freeze header row
+        worksheet.freeze_panes = "A2"
 
     print(f"Exported {len(df)} companies to {output_path}")
+
+
+def export_json(companies: list[dict], output_path: Path) -> None:
+    """Export companies to JSON."""
+    with open(output_path, "w") as f:
+        json.dump(companies, f, indent=2)
+    print(f"Exported {len(companies)} companies to {output_path}")
 
 
 def main():
@@ -208,6 +275,12 @@ def main():
 
     export_csv(df, STATIC_DIR / "companies.csv")
     export_xlsx(df, STATIC_DIR / "companies.xlsx")
+
+    # JSON export (uses original companies data, sorted)
+    json_data = companies_to_json(
+        sorted(companies, key=lambda c: c.get("name", "").lower()), taxonomies
+    )
+    export_json(json_data, STATIC_DIR / "companies.json")
 
     print("\nExport complete!")
     return 0  # Always succeed - validation is informational

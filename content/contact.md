@@ -15,7 +15,7 @@ Defence West supports the growth of Western Australia's defence industry, connec
 
 This directory showcases WA companies with defence and science capabilities, helping prime contractors and government agencies find local suppliers.
 
-[Add Your Company](/edit/new/) | [Browse Directory](/)
+[Add Your Company](../company/_template/#edit) | [Browse Directory](../)
 
 You can also email your company details and logo directly to [defencewest@dpc.wa.gov.au](mailto:defencewest@dpc.wa.gov.au) for review.
 
@@ -23,4 +23,4 @@ You can also email your company details and logo directly to [defencewest@dpc.wa
 
 Export the full directory for use in spreadsheets or other applications.
 
-[Download Excel (.xlsx)](/companies.xlsx) | [Download CSV](/companies.csv) | [RSS Feed](/feed.xml)
+[Download Excel (.xlsx)](../companies.xlsx) | [Download CSV](../companies.csv) | [Download JSON](../companies.json) | [RSS Feed](../feed.xml)
