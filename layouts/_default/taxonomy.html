@@ -38,7 +38,7 @@
 
 {{- with .Content }}{{ . }}{{ end }}
 
-<div class="company-grid">
+<div class="grid-auto">
   {{- range .Pages.ByTitle }}
     {{- $slug := .File.BaseFileName -}}
     {{- $computed := index $.Site.Data.computed $slug -}}
