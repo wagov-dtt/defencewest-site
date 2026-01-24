@@ -28,14 +28,14 @@
   <!-- ===== VIEW MODE ===== -->
   <div id="view-mode">
     <!-- Main Content Area - Two Column Layout -->
-    <div class="company-content">
+    <div class="row">
       <!-- Left Column: Content -->
-      <div class="content-column">
+      <div class="col-8 col-m-12 content-column">
         {{ .Content }}
       </div>
 
       <!-- Right Column: Company Info -->
-      <aside class="info-column">
+      <aside class="col-4 col-m-12 info-column">
         <h1 class="company-title">
           {{- if $logoUrl }}
           <a href="{{ $company.website }}" title="{{ $company.name }}" target="_blank" rel="noopener">
@@ -170,9 +170,9 @@
       {{- $capabilities = index (findRE "(?s)## Capabilities\\s*\\n(.+?)(?:## |$)" $rawContent) 0 | replaceRE "(?s)## Capabilities\\s*\\n" "" | strings.TrimSpace -}}
     {{- end -}}
     
-    <div class="company-content">
+    <div class="row">
       <!-- Left Column: Main editing -->
-      <div class="content-column">
+      <div class="col-8 col-m-12 content-column">
         <div class="edit-header">
           <h2>Edit</h2>
           <a href="#" id="cancel-edit">Cancel</a>
@@ -206,19 +206,41 @@
       </div>
 
       <!-- Right Column: Company Details + Taxonomies -->
-      <aside class="info-column" id="edit-filters">
+      <aside class="col-4 col-m-12 info-column" id="edit-filters">
         <details>
           <summary>Company Details</summary>
           <div class="edit-fields">
-            <label>Name <input type="text" id="field-name" name="name" value="{{ $company.name }}" required></label>
-            <label>Website <input type="url" id="field-website" name="website" value="{{ $company.website }}" placeholder="https://"></label>
-            <label>Phone <input type="tel" id="field-phone" name="phone" value="{{ $company.phone }}"></label>
-            <label>Email <input type="email" id="field-email" name="email" value="{{ $company.email }}"></label>
-            <label>Address <input type="text" id="field-address" name="address" value="{{ $company.address }}"></label>
-            <label>Latitude <input type="text" id="field-latitude" name="latitude" value="{{ $company.latitude }}"></label>
-            <label>Longitude <input type="text" id="field-longitude" name="longitude" value="{{ $company.longitude }}"></label>
-            <label>Contact <input type="text" id="field-contact-name" name="contact_name" value="{{ $company.contact_name }}"></label>
-            <label>Title <input type="text" id="field-contact-title" name="contact_title" value="{{ $company.contact_title }}"></label>
+            <label for="field-name">Name</label>
+            <input type="text" id="field-name" name="name" value="{{ $company.name }}" required>
+            
+            <label for="field-website">Website</label>
+            <input type="url" id="field-website" name="website" value="{{ $company.website }}" placeholder="https://">
+            
+            <label for="field-phone">Phone</label>
+            <input type="tel" id="field-phone" name="phone" value="{{ $company.phone }}">
+            
+            <label for="field-email">Email</label>
+            <input type="email" id="field-email" name="email" value="{{ $company.email }}">
+            
+            <label for="field-address">Address</label>
+            <input type="text" id="field-address" name="address" value="{{ $company.address }}">
+            
+            <div class="grid">
+              <div>
+                <label for="field-latitude">Latitude</label>
+                <input type="text" id="field-latitude" name="latitude" value="{{ $company.latitude }}">
+              </div>
+              <div>
+                <label for="field-longitude">Longitude</label>
+                <input type="text" id="field-longitude" name="longitude" value="{{ $company.longitude }}">
+              </div>
+            </div>
+            
+            <label for="field-contact-name">Contact Name</label>
+            <input type="text" id="field-contact-name" name="contact_name" value="{{ $company.contact_name }}">
+            
+            <label for="field-contact-title">Contact Title</label>
+            <input type="text" id="field-contact-title" name="contact_title" value="{{ $company.contact_title }}">
           </div>
         </details>
 
