@@ -1,0 +1,37 @@
+---
+name: Stowe Australia Pty Ltd
+date: '2024-01-01'
+website: https://www.stoweaustralia.com.au
+contact_name: David Hoey
+contact_title: WA Operations Manager
+address: Unit 2/8 Fisher Street, Belmont WA 6104
+phone: 0487 550 670
+email: David.hoey@stoweaustralia.com.au
+is_sme: true
+capability_streams:
+- keyn
+capability_domains:
+- air
+- barracks
+- base
+- communications
+- stable
+industrial_capabilities:
+- design
+- electronics
+- mechanical
+regions:
+- perth-metropolitan
+latitude: -31.9523854
+longitude: 115.9282476
+---
+
+## Overview
+
+STOWE AUSTRALIA is a family-owned business that has been operating for over 110 years since 1910. We are Australia's leading electrical and communications installation and service contractor.
+
+## Capabilities
+
+We are an employer dedicated to training our staff to the continuously changing electrical and communications environment.
+
+We are a solution driven company that can take on all aspects of work for clients including - Civils, Fire, security, automation, HV and LV, Engineering and design, PA, Audio Visual and Lighting Control.

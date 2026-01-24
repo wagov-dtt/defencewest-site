@@ -1,0 +1,51 @@
+---
+name: HoseCo
+date: '2024-01-01'
+website: https://hoseco.com.au
+contact_name: John McGill
+contact_title: Group Sales & Product Manager
+address: 37 Magnet Road, Canning Vale WA 6155
+phone: 0408 922 371
+email: john.mcgill@hoseco.com.au
+is_prime: true
+stakeholders:
+- defence
+capability_streams:
+- iscw
+- keyn
+- aasl
+- masw
+- saac
+- lcaw
+capability_domains:
+- air
+- amphibious
+- armour
+- barracks
+- base
+- destroyers
+- fighter
+- frigates
+- light
+- maritime
+- minor
+- refuelling
+- replenishment
+- submarines
+- utility
+industrial_capabilities:
+- fuel
+- hydraulics
+regions:
+- perth-metropolitan
+latitude: -32.0610363
+longitude: 115.9263348
+---
+
+## Overview
+
+HoseCo Australia specialise in the supply, maintenance and management of Flexible Hose Assemblies for a wide range of applications. HoseCo have a market leading scope of certifications to support the Defence Forces right around Australia.
+
+## Capabilities
+
+HoseCo Australia specialise in the supply, maintenance and management of Flexible Hose Assemblies for a wide range of applications. HoseCo have a market leading scope of certifications to support the Defence Forces right around Australia.

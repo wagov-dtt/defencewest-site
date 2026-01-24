@@ -1,0 +1,31 @@
+---
+name: South Metropolitan TAFE
+date: '2024-01-01'
+website: https://www.southmetrotafe.wa.edu.au
+contact_name: South Metropolitan TAFE
+address: 1 Fleet Street, Fremantle WA 6160
+phone: 1800 001 001
+email: info@smtafe.wa.edu.au
+stakeholders:
+- academic
+- defence-west
+capability_domains:
+- submarines
+- training
+regions:
+- perth-metropolitan
+- australian
+- north
+- south
+- naval
+latitude: -32.0558611
+longitude: 115.7325097
+---
+
+## Overview
+
+South Metropolitan TAFE (SM TAFE) has been working in partnership with the defence industry for more than two decades. The college delivers a range of qualifications and courses to all arms of the defence industry, throughout the state and nationally. As the national defence sector expands, SM TAFE is well positioned to deliver agile, nationally accredited training tailored to industry demand.
+
+## Capabilities
+
+SM TAFE's defence qualifications range from entry level Certificate II through to Diploma and Advanced Diploma, as well as specific skills sets and customised training programs. Clients include the Royal Australian Navy, SMEs, defence contractors and their supply chain. SM TAFE has delivery capability in Industry 4.0, automation, cyber security, remote piloting, aerospace, maritime, logistics, sustainment and shipbuilding courses across its 12 campuses, including at Naval Base Campus, Henderson. SM TAFE can provide the skills and competencies required by maritime defence programs attracted to Western Australia. The Western Australian Defence Industry Workforce Office (WADIWO) and WA Office of the Naval Shipbuilding College (NSC) are co-located at Naval Base Campus to enable collaboration. The work undertaken by the WADIWO will help SM TAFE shape education and training activities so that industry will have a workforce with the right skills at the right time. This work has equipped SM TAFE to understand and respond to the skills and competencies required for the various maritime defence programs the State will attract. The NSC collaborates with SM TAFE in understanding the industry's skilling needs to support growth as part of its mission to develop sovereign workforce capability for the nation.

@@ -1,0 +1,34 @@
+---
+name: Fortuna CFO Services Pty Ltd
+date: '2024-01-01'
+website: https://www.fortunaadvisors.com.au
+contact_name: Simon Turner
+contact_title: Director & Lead CFO Consultant
+address: Suite 1.02, 110 Erindale Road, Balcatta WA 6021
+phone: 0418 375 260
+email: cfo@fortunaadvisors.com.au
+is_sme: true
+capability_streams:
+- iscw
+- keyn
+- aasl
+- masw
+- saac
+- lcaw
+regions:
+- perth-metropolitan
+latitude: -31.8595112
+longitude: 115.8099362
+---
+
+## Overview
+
+Fortuna CFO Services is the result of the merging of a traditional accounting public practice and a Virtual CFO services provider. We provide part time senior financial management expertise to the small business sector at a cost a fraction of that of a full time resource.
+
+With over 25 years of experience working in and leading the finance & corporate services divisions of businesses in the SME sector, across a range of industries including precision engineering, construction and fabrication, along with our lead consultant having spent time serving on a Resolution Class SSBN, we are able to work with businesses across a number of disciplines which would support the defence sector and assist them with the challenges they face.
+
+## Capabilities
+
+Fortuna CFO Services aren't your typical accountants. Our primary focus is on making you pay MORE tax. By improving your profitability, working with you to strengthen your balance sheet and improve your cash flow, we will help you to ensure that you are set up for success in your chosen field.
+
+We were born out of a sense of frustration at seeing so many small businesses fail when our intervention could have helped them be successful. SMEs don't generally have the resources to pay upwards of $250k for a full time, experienced senior finance professional, but having a resource available that can not only work with you on a part time basis, at a fraction of the cost, but also knows what it is like to work at the sharp end and has an affinity with people in the military.

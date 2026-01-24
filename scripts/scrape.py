@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Scraper for WA Defence Industry and Science Capability Directory.
-Extracts company data and saves as YAML files.
+Extracts company data and saves as Markdown files with YAML frontmatter.
 """
 
 import asyncio
@@ -11,13 +11,16 @@ import shutil
 import subprocess
 import sys
 from pathlib import Path
-from urllib.parse import urlparse
+from urllib.parse import urlparse, quote
 
 import diskcache
 import httpx
 import html2text
 import yaml
 from selectolax.parser import HTMLParser
+
+from taxonomy import get_short_key, build_taxonomy_keys
+from slugify import slugify
 
 # Check if mogrify (ImageMagick) is available for image optimization
 HAS_MOGRIFY = shutil.which("mogrify") is not None
@@ -27,12 +30,29 @@ BASE_URL = (
 )
 MAP_URL = "https://www.deed.wa.gov.au/defence-map"
 DATA_DIR = Path(__file__).parent.parent / "data"
-CACHE_DIR = DATA_DIR / "cache"
-LOGOS_DIR = Path(__file__).parent.parent / "public" / "logos"
-ICONS_DIR = Path(__file__).parent.parent / "public" / "icons"
+CONTENT_DIR = Path(__file__).parent.parent / "content"
+CACHE_DIR = Path(__file__).parent.parent / ".cache"
+STATIC_DIR = Path(__file__).parent.parent / "static"
+LOGOS_DIR = STATIC_DIR / "logos"
+ICONS_DIR = STATIC_DIR / "icons"
 
 # Initialize disk cache (no expiry by default)
 cache = diskcache.Cache(CACHE_DIR / "diskcache")
+
+# HTML to markdown converter
+H2T = html2text.HTML2Text()
+H2T.ignore_links = True
+H2T.ignore_images = True
+H2T.body_width = 0
+
+# Western Australia bounding box (approximate)
+# Lat: -35.5 to -13.5, Lng: 112.5 to 129.0
+WA_BOUNDS = {
+    "min_lat": -35.5,
+    "max_lat": -13.5,
+    "min_lng": 112.5,
+    "max_lng": 129.0,
+}
 
 # HTML to markdown converter
 H2T = html2text.HTML2Text()
@@ -64,6 +84,70 @@ REMOVE_SUFFIXES = [
 
 # Semaphore to limit concurrent requests
 MAX_CONCURRENT = 20
+
+
+def is_in_wa(lat: float, lng: float) -> bool:
+    """Check if coordinates are within Western Australia bounds."""
+    return (
+        WA_BOUNDS["min_lat"] <= lat <= WA_BOUNDS["max_lat"]
+        and WA_BOUNDS["min_lng"] <= lng <= WA_BOUNDS["max_lng"]
+    )
+
+
+async def geocode_address(
+    client: httpx.AsyncClient,
+    address: str,
+    semaphore: asyncio.Semaphore,
+) -> tuple[float, float] | None:
+    """Geocode an address using Nominatim (OpenStreetMap).
+
+    Returns (latitude, longitude) or None if not found.
+    """
+    if not address:
+        return None
+
+    # Check cache first
+    cache_key = f"geocode:{address}"
+    if cache_key in cache:
+        cached = cache[cache_key]
+        if cached:
+            return tuple(cached)
+        return None
+
+    async with semaphore:
+        try:
+            # Nominatim requires a User-Agent
+            url = "https://nominatim.openstreetmap.org/search"
+            params = {
+                "q": address,
+                "format": "json",
+                "limit": 1,
+                "countrycodes": "au",  # Restrict to Australia
+            }
+            headers = {
+                "User-Agent": "DefenceWestDirectory/1.0 (https://github.com/defencewest)"
+            }
+
+            r = await client.get(url, params=params, headers=headers)
+            r.raise_for_status()
+
+            # Rate limit: Nominatim requires max 1 request/second
+            await asyncio.sleep(1.1)
+
+            results = r.json()
+            if results:
+                lat = float(results[0]["lat"])
+                lng = float(results[0]["lon"])
+                cache[cache_key] = [lat, lng]
+                return (lat, lng)
+
+            # Cache negative result
+            cache[cache_key] = None
+            return None
+
+        except Exception as e:
+            print(f"    Geocode error for '{address[:50]}...': {e}")
+            return None
 
 
 def clean_slug(slug: str) -> str:
@@ -150,28 +234,27 @@ def build_full_address(d: dict) -> str:
     return ", ".join(parts)
 
 
-def optimize_image(filepath: Path) -> Path:
-    """Optimize image with mogrify if available. Returns final path (may change extension)."""
+def optimize_image(filepath: Path, resize: str = "520x120>", trim: bool = True) -> Path:
+    """Optimize image with mogrify if available. Returns final path (may change extension).
+
+    Args:
+        filepath: Path to image file
+        resize: ImageMagick resize geometry (default: 520x120> for logos)
+        trim: Whether to trim whitespace (default: True for logos, False for icons)
+    """
     if not HAS_MOGRIFY or not filepath.exists():
         return filepath
 
+    new_path = filepath.with_suffix(".png")
     try:
-        # Convert to PNG and optimize (strip metadata, reasonable quality)
-        # This handles various input formats and normalizes to PNG
-        new_path = filepath.with_suffix(".png")
-        subprocess.run(
-            [
-                "mogrify",
-                "-format",
-                "png",
-                "-strip",  # Remove metadata
-                "-resize",
-                "400x400>",  # Resize if larger than 400x400, keep aspect
-                str(filepath),
-            ],
-            check=True,
-            capture_output=True,
-        )
+        # Build mogrify command - convert to PNG, optionally trim, resize, strip metadata
+        # No color adjustments to preserve original colors
+        cmd = ["mogrify", "-format", "png"]
+        if trim:
+            cmd += ["-fuzz", "5%", "-trim", "+repage"]
+        cmd += ["-resize", resize, "-strip", str(filepath)]
+
+        subprocess.run(cmd, check=True, capture_output=True)
         # If original wasn't PNG, mogrify creates new file and keeps old one
         if filepath.suffix.lower() != ".png" and new_path.exists():
             filepath.unlink()  # Remove original
@@ -180,7 +263,6 @@ def optimize_image(filepath: Path) -> Path:
         print(
             f"  Warning: mogrify failed for {filepath.name}: {e.stderr.decode()[:100]}"
         )
-
     return filepath
 
 
@@ -231,7 +313,12 @@ async def resolve_url(
 
 
 def download_image(
-    client: httpx.Client, url: str, dest_dir: Path, filename: str
+    client: httpx.Client,
+    url: str,
+    dest_dir: Path,
+    filename: str,
+    resize: str = "520x120>",
+    trim: bool = True,
 ) -> tuple[str | None, bool]:
     """Download an image, optimize it, and return (local_path, was_downloaded).
 
@@ -279,7 +366,7 @@ def download_image(
     filepath.write_bytes(image_bytes)
 
     # Optimize with mogrify if available (may change extension to .png)
-    filepath = optimize_image(filepath)
+    filepath = optimize_image(filepath, resize=resize, trim=trim)
 
     return f"/{dest_dir.name}/{filepath.name}", True
 
@@ -322,26 +409,112 @@ def extract_companies(html: str) -> list[dict]:
     return companies
 
 
-def extract_stream_icons(companies: list[dict], client: httpx.Client) -> dict[str, str]:
-    """Extract and download capability stream icons, return title->icon_url mapping."""
-    stream_icons = {}
+def extract_all_taxonomy_values(raw_companies: list[dict]) -> dict[str, set[str]]:
+    """Extract all unique taxonomy values from raw company data.
 
+    Returns dict of taxonomy_name -> set of display names.
+    """
+    values = {
+        "stakeholders": set(),
+        "capability_streams": set(),
+        "capability_domains": set(),
+        "industrial_capabilities": set(),
+        "regions": set(),
+    }
+
+    for raw in raw_companies:
+        d = raw.get("details", {})
+        for s in d.get("WADefenceKeyStakeholders", []):
+            if s.get("Title"):
+                values["stakeholders"].add(s["Title"])
+        for s in d.get("CapabilityStreams", []):
+            if s.get("Title"):
+                values["capability_streams"].add(s["Title"])
+        for s in d.get("CapabilityDomains", []):
+            if s.get("Title"):
+                values["capability_domains"].add(s["Title"])
+        for s in d.get("IndustrialCapabilities", []):
+            if s.get("Title"):
+                values["industrial_capabilities"].add(s["Title"])
+        for s in d.get("Regions", []):
+            if s.get("Title"):
+                values["regions"].add(s["Title"])
+
+    return values
+
+
+def extract_stream_icons(companies: list[dict], client: httpx.Client) -> dict[str, str]:
+    """Extract and download capability stream icons to /icons/streams/{key}.png.
+
+    Returns dict of title -> key for streams that have icons.
+    """
+    streams_dir = ICONS_DIR / "streams"
+
+    # Collect all stream titles with icons
+    streams_with_icons = {}
     for raw in companies:
         for stream in raw.get("details", {}).get("CapabilityStreams", []):
             title = stream.get("Title")
             icon_url = stream.get("IconUrl")
-            if title and icon_url and title not in stream_icons:
-                # Create slug from title for filename
-                slug = re.sub(r"[^a-z0-9]+", "-", title.lower()).strip("-")
-                local_path, downloaded = download_image(
-                    client, icon_url, ICONS_DIR, slug
-                )
-                if local_path:
-                    stream_icons[title] = local_path
-                    if downloaded:
-                        print(f"  Downloaded icon: {title}")
+            if title and icon_url and title not in streams_with_icons:
+                streams_with_icons[title] = icon_url
 
-    return stream_icons
+    # Build key mapping with conflict resolution
+    key_mapping = build_taxonomy_keys(list(streams_with_icons.keys()))
+    # Invert: title -> key
+    title_to_key = {name: key for key, name in key_mapping.items()}
+
+    # Download icons using the resolved keys
+    for title, icon_url in streams_with_icons.items():
+        key = title_to_key[title]
+        local_path, downloaded = download_image(
+            client, icon_url, streams_dir, key, resize="72x72>", trim=False
+        )
+        if downloaded:
+            print(f"  Downloaded stream icon: {key}")
+
+    return title_to_key
+
+
+def extract_ownership_icons(
+    companies: list[dict], client: httpx.Client
+) -> dict[str, str]:
+    """Extract and download ownership icons to /icons/ownerships/{key}.png.
+
+    Returns dict of title -> key for ownerships that have icons.
+    """
+    ownerships_dir = ICONS_DIR / "ownerships"
+
+    # Collect all ownership titles with icons
+    ownerships_with_icons = {}
+    for raw in companies:
+        for ownership in raw.get("details", {}).get("Ownerships", []):
+            title = ownership.get("Title")
+            icon_url = ownership.get("IconUrl")
+            # Skip "None" ownership type
+            if (
+                title
+                and title != "None"
+                and icon_url
+                and title not in ownerships_with_icons
+            ):
+                ownerships_with_icons[title] = icon_url
+
+    # Build key mapping with conflict resolution
+    key_mapping = build_taxonomy_keys(list(ownerships_with_icons.keys()))
+    # Invert: title -> key
+    title_to_key = {name: key for key, name in key_mapping.items()}
+
+    # Download icons using the resolved keys
+    for title, icon_url in ownerships_with_icons.items():
+        key = title_to_key[title]
+        local_path, downloaded = download_image(
+            client, icon_url, ownerships_dir, key, resize="72x72>", trim=False
+        )
+        if downloaded:
+            print(f"  Downloaded ownership icon: {key}")
+
+    return title_to_key
 
 
 def extract_coordinates(html: str) -> dict[str, tuple[float, float]]:
@@ -381,16 +554,37 @@ def normalize_company(
     raw: dict,
     client: httpx.Client,
     coords: dict[str, tuple[float, float]],
+    name_to_key: dict[str, dict[str, str]],
 ) -> dict:
-    """Normalize company data into clean YAML structure."""
+    """Normalize company data into clean YAML structure.
+
+    Args:
+        raw: Raw company data from HTML extraction
+        client: HTTP client for downloading images
+        coords: Company name -> (lat, lng) mapping
+        name_to_key: Taxonomy name -> {display_name: short_key} mappings
+
+    Note: slug and logo_url are NOT stored in frontmatter - they are derived:
+    - slug: from the markdown filename
+    - logo_url: from /logos/{slug}.png (if file exists)
+
+    The slug is still returned in the dict for file naming purposes,
+    but is removed before writing frontmatter in save_markdown().
+    """
     d = raw.get("details", {})
     slug = clean_slug(raw.get("slug", ""))
     name = d.get("CompanyName", raw.get("name", "")).strip()
     website = d.get("Website", "")
 
+    # Helper to convert display names to keys
+    def to_keys(values: list[str], tax_name: str) -> list[str]:
+        mapping = name_to_key.get(tax_name, {})
+        return [mapping.get(v, v) for v in values if v in mapping]
+
     company = {
         "name": name,
-        "slug": slug,
+        "_slug": slug,  # Internal use only, removed before saving frontmatter
+        "date": "2024-01-01",  # Default date for RSS, can be updated when content changes
         "overview": html_to_md(d.get("CompanyOverviewRTF", "")),
         "website": website,
         "contact_name": d.get("ContactName", ""),
@@ -407,19 +601,31 @@ def normalize_company(
         "is_veteran_owned": any(
             o.get("Title") == "Veteran Owned" for o in d.get("Ownerships", [])
         ),
-        "stakeholders": [
-            s["Title"] for s in d.get("WADefenceKeyStakeholders", []) if s.get("Title")
-        ],
-        "capability_streams": [
-            s["Title"] for s in d.get("CapabilityStreams", []) if s.get("Title")
-        ],
-        "capability_domains": [
-            s["Title"] for s in d.get("CapabilityDomains", []) if s.get("Title")
-        ],
-        "industrial_capabilities": [
-            s["Title"] for s in d.get("IndustrialCapabilities", []) if s.get("Title")
-        ],
-        "regions": [s["Title"] for s in d.get("Regions", []) if s.get("Title")],
+        # Store short keys, not display names
+        "stakeholders": to_keys(
+            [
+                s["Title"]
+                for s in d.get("WADefenceKeyStakeholders", [])
+                if s.get("Title")
+            ],
+            "stakeholders",
+        ),
+        "capability_streams": to_keys(
+            [s["Title"] for s in d.get("CapabilityStreams", []) if s.get("Title")],
+            "capability_streams",
+        ),
+        "capability_domains": to_keys(
+            [s["Title"] for s in d.get("CapabilityDomains", []) if s.get("Title")],
+            "capability_domains",
+        ),
+        "industrial_capabilities": to_keys(
+            [s["Title"] for s in d.get("IndustrialCapabilities", []) if s.get("Title")],
+            "industrial_capabilities",
+        ),
+        "regions": to_keys(
+            [s["Title"] for s in d.get("Regions", []) if s.get("Title")],
+            "regions",
+        ),
     }
 
     # Add coordinates if available
@@ -428,11 +634,9 @@ def normalize_company(
         company["latitude"] = lat
         company["longitude"] = lng
 
-    # Logo
+    # Download logo (but don't store path in frontmatter - derived from slug)
     if d.get("CompanyLogoUrl"):
-        logo, _ = download_image(client, d["CompanyLogoUrl"], LOGOS_DIR, slug)
-        if logo:
-            company["logo_url"] = logo
+        download_image(client, d["CompanyLogoUrl"], LOGOS_DIR, slug)
 
     # Optional markdown fields
     for field, key in [
@@ -472,7 +676,7 @@ async def resolve_all_urls(companies: list[dict]) -> dict[str, str]:
         slugs = []
 
         for c in companies:
-            slug = c["slug"]
+            slug = c["_slug"]
             website = c.get("website", "")
 
             if website:
@@ -492,6 +696,63 @@ async def resolve_all_urls(companies: list[dict]) -> dict[str, str]:
         return url_map
 
 
+async def geocode_companies(companies: list[dict]) -> dict[str, tuple[float, float]]:
+    """Geocode addresses for companies with missing or out-of-WA coordinates.
+
+    Returns dict mapping slug -> (latitude, longitude)
+    """
+    # Use a lower concurrency limit for Nominatim (rate limited)
+    semaphore = asyncio.Semaphore(1)  # 1 request at a time due to rate limit
+
+    async with httpx.AsyncClient(timeout=30) as client:
+        to_geocode = []
+
+        for c in companies:
+            slug = c["_slug"]
+            address = c.get("address", "")
+            lat = c.get("latitude")
+            lng = c.get("longitude")
+
+            needs_geocode = False
+            reason = ""
+
+            if not lat or not lng:
+                needs_geocode = True
+                reason = "missing coordinates"
+            elif not is_in_wa(lat, lng):
+                needs_geocode = True
+                reason = f"outside WA ({lat:.2f}, {lng:.2f})"
+
+            if needs_geocode and address:
+                to_geocode.append((slug, address, reason))
+
+        if not to_geocode:
+            print("  No companies need geocoding")
+            return {}
+
+        print(
+            f"  Geocoding {len(to_geocode)} addresses (this may take a while due to rate limits)..."
+        )
+
+        results = {}
+        for slug, address, reason in to_geocode:
+            print(f"    {slug}: {reason}")
+            coords = await geocode_address(client, address, semaphore)
+            if coords:
+                lat, lng = coords
+                if is_in_wa(lat, lng):
+                    results[slug] = coords
+                    print(f"      -> ({lat:.4f}, {lng:.4f})")
+                else:
+                    print(
+                        f"      -> ({lat:.4f}, {lng:.4f}) - still outside WA, skipping"
+                    )
+            else:
+                print(f"      -> not found")
+
+        return results
+
+
 def save_yaml(data: dict, path: Path):
     """Save data as YAML."""
     path.parent.mkdir(parents=True, exist_ok=True)
@@ -504,6 +765,52 @@ def save_yaml(data: dict, path: Path):
             sort_keys=False,
             width=1000,
         )
+
+
+def save_markdown(data: dict, path: Path):
+    """Save company data as Markdown with YAML frontmatter.
+
+    Extracts overview, capabilities, and discriminators into the markdown body.
+    All other fields go into the YAML frontmatter.
+
+    Note: _slug is removed before saving (it's only used for file naming).
+    """
+    path.parent.mkdir(parents=True, exist_ok=True)
+
+    # Make a copy to avoid modifying the original
+    data = dict(data)
+
+    # Remove internal slug field (derived from filename)
+    data.pop("_slug", None)
+
+    # Extract content fields for the markdown body
+    overview = data.pop("overview", "")
+    capabilities = data.pop("capabilities", "")
+    discriminators = data.pop("discriminators", "")
+
+    # Build YAML frontmatter from remaining structured data
+    frontmatter = yaml.dump(
+        data,
+        default_flow_style=False,
+        allow_unicode=True,
+        sort_keys=False,
+        width=1000,
+    )
+
+    # Build markdown body
+    body_parts = []
+    if overview:
+        body_parts.append(f"## Overview\n\n{overview.strip()}")
+    if capabilities:
+        body_parts.append(f"\n## Capabilities\n\n{capabilities.strip()}")
+    if discriminators:
+        body_parts.append(f"\n## Discriminators\n\n{discriminators.strip()}")
+
+    body = "\n".join(body_parts)
+
+    # Write complete markdown file
+    with open(path, "w") as f:
+        f.write(f"---\n{frontmatter}---\n\n{body}\n")
 
 
 async def main_async():
@@ -531,14 +838,44 @@ async def main_async():
         print(f"Found coordinates for {len(coords)} companies")
         cache["coordinates"] = {k: list(v) for k, v in coords.items()}
 
-        # Extract and download stream icons
+        # Extract all taxonomy values first
+        print("Building taxonomies...")
+        all_values = extract_all_taxonomy_values(raw)
+
+        # Build key mappings for non-icon taxonomies
+        taxonomies = {
+            "stakeholders": build_taxonomy_keys(list(all_values["stakeholders"])),
+            "capability_domains": build_taxonomy_keys(
+                list(all_values["capability_domains"])
+            ),
+            "industrial_capabilities": build_taxonomy_keys(
+                list(all_values["industrial_capabilities"])
+            ),
+            "regions": build_taxonomy_keys(list(all_values["regions"])),
+        }
+
+        # Extract and download stream icons (builds keys internally)
         print("Downloading capability stream icons...")
         stream_icons = extract_stream_icons(raw, client)
+        taxonomies["capability_streams"] = {
+            key: name for name, key in stream_icons.items()
+        }
         cache["stream_icons"] = stream_icons
 
-        # Normalize companies
+        # Extract and download ownership icons (builds keys internally)
+        print("Downloading ownership icons...")
+        ownership_icons = extract_ownership_icons(raw, client)
+        taxonomies["ownerships"] = {key: name for name, key in ownership_icons.items()}
+        cache["ownership_icons"] = ownership_icons
+
+        # Build reverse lookup: taxonomy_name -> {display_name: key}
+        name_to_key = {}
+        for tax_name, mapping in taxonomies.items():
+            name_to_key[tax_name] = {name: key for key, name in mapping.items()}
+
+        # Normalize companies (now with key conversion)
         print("Processing companies...")
-        companies = [normalize_company(c, client, coords) for c in raw]
+        companies = [normalize_company(c, client, coords, name_to_key) for c in raw]
         cache["companies_normalized"] = companies
 
     # Resolve URLs asynchronously
@@ -548,7 +885,7 @@ async def main_async():
     # Update companies with resolved URLs
     updated = 0
     for c in companies:
-        slug = c["slug"]
+        slug = c["_slug"]
         if slug in url_map:
             resolved = url_map[slug]
             if resolved and resolved != c.get("website"):
@@ -558,36 +895,35 @@ async def main_async():
 
     print(f"  Updated {updated} URLs")
 
+    # Geocode addresses for companies with missing or out-of-WA coordinates
+    print("Geocoding addresses...")
+    geocoded = await geocode_companies(companies)
+
+    # Update companies with geocoded coordinates
+    geocode_updated = 0
+    for c in companies:
+        slug = c["_slug"]
+        if slug in geocoded:
+            lat, lng = geocoded[slug]
+            c["latitude"] = lat
+            c["longitude"] = lng
+            geocode_updated += 1
+
+    if geocode_updated:
+        print(f"  Updated {geocode_updated} coordinates via geocoding")
+
     # Check for slug conflicts
-    slugs = [c["slug"] for c in companies]
+    slugs = [c["_slug"] for c in companies]
     dupes = [s for s in set(slugs) if slugs.count(s) > 1]
     if dupes:
         print(f"WARNING: Duplicate slugs: {dupes}")
 
-    # Save companies
+    # Save companies as markdown files
     for c in companies:
-        save_yaml(c, DATA_DIR / "companies" / f"{c['slug']}.yaml")
-    print(f"Saved {len(companies)} companies")
+        save_markdown(c, CONTENT_DIR / "company" / f"{c['_slug']}.md")
+    print(f"Saved {len(companies)} companies to content/company/")
 
-    # Save taxonomies with stream icons
-    taxonomies = {
-        "stakeholders": sorted(
-            {v for c in companies for v in c.get("stakeholders", [])}
-        ),
-        "capability_streams": {
-            title: stream_icons.get(title, "")
-            for title in sorted(
-                {v for c in companies for v in c.get("capability_streams", [])}
-            )
-        },
-        "capability_domains": sorted(
-            {v for c in companies for v in c.get("capability_domains", [])}
-        ),
-        "industrial_capabilities": sorted(
-            {v for c in companies for v in c.get("industrial_capabilities", [])}
-        ),
-        "regions": sorted({v for c in companies for v in c.get("regions", [])}),
-    }
+    # Save taxonomies (already built earlier)
     save_yaml(taxonomies, DATA_DIR / "taxonomies.yaml")
     print("Saved taxonomies.yaml")
 

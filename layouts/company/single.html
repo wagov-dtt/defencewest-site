@@ -1,0 +1,476 @@
+{{ define "main" }}
+{{- $company := .Params -}}
+{{- $slug := .File.BaseFileName -}}
+{{- $computed := index .Site.Data.computed $slug -}}
+{{- $taxonomies := .Site.Data.taxonomies -}}
+
+{{/* Simple derivations stay in Hugo */}}
+{{- $logoPath := printf "/logos/%s.png" $slug -}}
+{{- $logoUrl := cond (fileExists (printf "static%s" $logoPath)) $logoPath "" -}}
+{{- $websiteDisplay := $company.website | default "" | replaceRE "^https?://" "" | replaceRE "/$" "" -}}
+{{- $mapUrl := "" -}}
+{{- if and $company.latitude $company.longitude -}}
+  {{- $mapUrl = printf "%s?q=%v,%v" .Site.Params.mapsUrl $company.latitude $company.longitude -}}
+{{- end -}}
+
+{{/* GitHub edit URL */}}
+{{- $githubRepo := .Site.Params.githubRepo | default "example/repo" -}}
+{{- $githubBranch := .Site.Params.githubBranch | default "main" -}}
+{{- $githubEditUrl := printf "https://github.com/%s/edit/%s/content/company/%s.md" $githubRepo $githubBranch $slug -}}
+
+{{/* Address search URL */}}
+{{- $addressSearchUrl := "" -}}
+{{- with $company.address -}}
+  {{- $addressSearchUrl = printf "%s/search/?api=1&query=%s" $.Site.Params.mapsUrl (. | urlquery) -}}
+{{- end -}}
+
+<div class="company-page">
+  <!-- ===== VIEW MODE ===== -->
+  <div id="view-mode">
+    <!-- Main Content Area - Two Column Layout -->
+    <div class="company-content">
+      <!-- Left Column: Content -->
+      <div class="content-column">
+        {{ .Content }}
+      </div>
+
+      <!-- Right Column: Company Info -->
+      <aside class="info-column">
+        <h1 class="company-title">
+          {{- if $logoUrl }}
+          <a href="{{ $company.website }}" title="{{ $company.name }}" target="_blank" rel="noopener">
+            <img src="{{ $logoUrl | relURL }}" alt="{{ $company.name }}">
+          </a>
+          {{- else }}
+          {{ $company.name }}
+          {{- end }}
+        </h1>
+
+        {{- if or $company.contact_name $company.contact_title }}
+        <div class="contact-person">
+          {{- with $company.contact_name }}<p class="contact-name">{{ . }}</p>{{ end -}}
+          {{- with $company.contact_title }}<p class="contact-title">{{ . }}</p>{{ end -}}
+        </div>
+        {{- end }}
+
+        {{- if or $company.phone $company.email $company.address $company.website }}
+        <div class="contact-info">
+          {{- with $company.website }}<p><a href="{{ . }}" target="_blank" rel="noopener">{{ $websiteDisplay }}</a></p>{{ end -}}
+          {{- with $company.phone }}<p><a href="tel:{{ . }}">{{ . }}</a></p>{{ end -}}
+          {{- with $company.email }}<p><a href="mailto:{{ . }}">{{ . }}</a></p>{{ end -}}
+          {{- with $company.address }}
+          <p class="address">
+            {{- if $addressSearchUrl }}<a href="{{ $addressSearchUrl }}" target="_blank" rel="noopener">{{ . }}</a>
+            {{- else }}{{ . }}{{ end -}}
+          </p>
+          {{- end }}
+        </div>
+        {{- end }}
+
+        {{- if and $company.latitude $company.longitude }}
+        {{- $mapImage := printf "maps/%s.png" $slug }}
+        {{- if fileExists (printf "static/%s" $mapImage) }}
+        <div class="minimap">
+          <a href="{{ $mapUrl }}" target="_blank" rel="noopener" title="View on Google Maps">
+            <img src="{{ $mapImage | relURL }}" alt="Map showing {{ $company.name }} location" loading="lazy">
+          </a>
+        </div>
+        {{- end }}
+        {{- end }}
+
+        <!-- Taxonomy Section -->
+        <div class="taxonomy-section">
+          {{- with $company.capability_streams }}
+          <strong class="sidebar-section">Capability Streams</strong>
+          <div class="stream-icons">
+            {{- range . -}}
+              {{- $key := . -}}
+              {{- $name := index $taxonomies.capability_streams $key | default $key }}
+            <a href="{{ printf "/?f=stream:%s" $key | relURL }}" title="{{ $name }}">
+              <img src="{{ printf "icons/streams/%s.png" $key | relURL }}" alt="{{ $name }}" loading="lazy">
+            </a>
+            {{- end }}
+          </div>
+          {{- end }}
+
+          {{- with $company.stakeholders }}
+          <strong class="sidebar-section">Stakeholders</strong>
+          <ul>
+            {{- range . }}
+              {{- $key := . -}}
+              {{- $name := index $taxonomies.stakeholders $key | default $key }}
+            <li><a href="{{ printf "/?f=stake:%s" $key | relURL }}">{{ $name }}</a></li>
+            {{- end }}
+          </ul>
+          {{- end }}
+
+          {{- with $company.capability_domains }}
+          <strong class="sidebar-section">Capability Domains</strong>
+          <ul>
+            {{- range . }}
+              {{- $key := . -}}
+              {{- $name := index $taxonomies.capability_domains $key | default $key }}
+            <li><a href="{{ printf "/?f=domain:%s" $key | relURL }}">{{ $name }}</a></li>
+            {{- end }}
+          </ul>
+          {{- end }}
+
+          {{- with $company.industrial_capabilities }}
+          <strong class="sidebar-section">Industrial Capabilities</strong>
+          <ul>
+            {{- range . }}
+              {{- $key := . -}}
+              {{- $name := index $taxonomies.industrial_capabilities $key | default $key }}
+            <li><a href="{{ printf "/?f=ind:%s" $key | relURL }}">{{ $name }}</a></li>
+            {{- end }}
+          </ul>
+          {{- end }}
+
+          {{- with $company.regions }}
+          <strong class="sidebar-section">Regions</strong>
+          <ul>
+            {{- range . }}
+              {{- $key := . -}}
+              {{- $name := index $taxonomies.regions $key | default $key }}
+            <li><a href="{{ printf "/?f=region:%s" $key | relURL }}">{{ $name }}</a></li>
+            {{- end }}
+          </ul>
+          {{- end }}
+
+          {{/* Related Companies - based on taxonomy overlap */}}
+          {{- $related := .Site.RegularPages.Related . | first 5 }}
+          {{- with $related }}
+          <strong class="sidebar-section">Similar Companies</strong>
+          <ul class="related-companies">
+            {{- range . }}
+            <li><a href="{{ .RelPermalink }}">{{ .Params.name }}</a></li>
+            {{- end }}
+          </ul>
+          {{- end }}
+        </div>
+      </aside>
+    </div>
+
+    <!-- Footer with Edit link -->
+    <footer class="company-footer">
+      <a href="#edit" id="start-edit">Edit this listing</a>
+    </footer>
+  </div>
+
+  <!-- ===== EDIT MODE ===== -->
+  <div id="edit-mode" class="hidden">
+    {{/* Extract Overview and Capabilities from raw content */}}
+    {{- $rawContent := .RawContent -}}
+    {{- $overview := "" -}}
+    {{- $capabilities := "" -}}
+    {{- if findRE "(?s)## Overview\\s*\\n(.+?)(?:## |$)" $rawContent -}}
+      {{- $overview = index (findRE "(?s)## Overview\\s*\\n(.+?)(?:## |$)" $rawContent) 0 | replaceRE "(?s)## Overview\\s*\\n" "" | replaceRE "(?s)\\n## $" "" | strings.TrimSpace -}}
+    {{- end -}}
+    {{- if findRE "(?s)## Capabilities\\s*\\n(.+?)(?:## |$)" $rawContent -}}
+      {{- $capabilities = index (findRE "(?s)## Capabilities\\s*\\n(.+?)(?:## |$)" $rawContent) 0 | replaceRE "(?s)## Capabilities\\s*\\n" "" | strings.TrimSpace -}}
+    {{- end -}}
+    
+    <div class="company-content">
+      <!-- Left Column: Main editing -->
+      <div class="content-column">
+        <div class="edit-header">
+          <h2>Edit</h2>
+          <a href="#" id="cancel-edit">Cancel</a>
+        </div>
+
+        <input type="hidden" id="field-slug" name="slug" value="{{ $slug }}">
+        
+        <fieldset>
+          <legend>Overview</legend>
+          <div class="editor-toolbar">
+            <label class="preview-toggle"><input type="checkbox" role="switch" data-preview-for="field-overview"> Preview</label>
+          </div>
+          <textarea id="field-overview" name="overview" rows="10" spellcheck="true">{{ $overview }}</textarea>
+          <div id="field-overview-preview" class="markdown-preview hidden"></div>
+        </fieldset>
+        
+        <fieldset>
+          <legend>Capabilities</legend>
+          <div class="editor-toolbar">
+            <label class="preview-toggle"><input type="checkbox" role="switch" data-preview-for="field-capabilities"> Preview</label>
+          </div>
+          <textarea id="field-capabilities" name="capabilities" rows="12" spellcheck="true">{{ $capabilities }}</textarea>
+          <div id="field-capabilities-preview" class="markdown-preview hidden"></div>
+        </fieldset>
+
+        <fieldset class="edit-actions">
+          <button type="button" id="btn-copy">Copy Markdown</button>
+          <button type="button" id="btn-download" class="outline">Download .md</button>
+          <a href="{{ $githubEditUrl }}" target="_blank" rel="noopener" role="button" class="secondary outline">Edit on GitHub</a>
+        </fieldset>
+      </div>
+
+      <!-- Right Column: Company Details + Taxonomies -->
+      <aside class="info-column" id="edit-filters">
+        <details>
+          <summary>Company Details</summary>
+          <div class="edit-fields">
+            <label>Name <input type="text" id="field-name" name="name" value="{{ $company.name }}" required></label>
+            <label>Website <input type="url" id="field-website" name="website" value="{{ $company.website }}" placeholder="https://"></label>
+            <label>Phone <input type="tel" id="field-phone" name="phone" value="{{ $company.phone }}"></label>
+            <label>Email <input type="email" id="field-email" name="email" value="{{ $company.email }}"></label>
+            <label>Address <input type="text" id="field-address" name="address" value="{{ $company.address }}"></label>
+            <label>Latitude <input type="text" id="field-latitude" name="latitude" value="{{ $company.latitude }}"></label>
+            <label>Longitude <input type="text" id="field-longitude" name="longitude" value="{{ $company.longitude }}"></label>
+            <label>Contact <input type="text" id="field-contact-name" name="contact_name" value="{{ $company.contact_name }}"></label>
+            <label>Title <input type="text" id="field-contact-title" name="contact_title" value="{{ $company.contact_title }}"></label>
+          </div>
+        </details>
+
+        <input type="text" id="filter-options" placeholder="Filter taxonomies..." autocomplete="off">
+
+        <details>
+          <summary>Company Type</summary>
+          <div class="filter-list">
+            <label class="filter-item"><input type="checkbox" id="field-is-sme" name="is_sme" {{ if $company.is_sme }}checked{{ end }}><span class="filter-label">SME</span></label>
+            <label class="filter-item"><input type="checkbox" id="field-is-prime" name="is_prime" {{ if $company.is_prime }}checked{{ end }}><span class="filter-label">Prime Contractor</span></label>
+            <label class="filter-item"><input type="checkbox" id="field-is-indigenous" name="is_indigenous_owned" {{ if $company.is_indigenous_owned }}checked{{ end }}><span class="filter-label">Indigenous Owned</span></label>
+            <label class="filter-item"><input type="checkbox" id="field-is-veteran" name="is_veteran_owned" {{ if $company.is_veteran_owned }}checked{{ end }}><span class="filter-label">Veteran Owned</span></label>
+          </div>
+        </details>
+
+        <details>
+          <summary>Stakeholders</summary>
+          <div class="filter-list">
+            {{- $selected := $company.stakeholders | default slice -}}
+            {{- range $key, $name := $taxonomies.stakeholders }}
+            <label class="filter-item"><input type="checkbox" name="stakeholders" value="{{ $key }}" {{ if in $selected $key }}checked{{ end }}><span class="filter-label">{{ $name }}</span></label>
+            {{- end }}
+          </div>
+        </details>
+
+        <details>
+          <summary>Capability Streams</summary>
+          <div class="filter-list">
+            {{- $selected := $company.capability_streams | default slice -}}
+            {{- range $key, $name := $taxonomies.capability_streams }}
+            <label class="filter-item"><input type="checkbox" name="capability_streams" value="{{ $key }}" {{ if in $selected $key }}checked{{ end }}><span class="filter-label">{{ $name }}</span></label>
+            {{- end }}
+          </div>
+        </details>
+
+        <details>
+          <summary>Capability Domains</summary>
+          <div class="filter-list">
+            {{- $selected := $company.capability_domains | default slice -}}
+            {{- range $key, $name := $taxonomies.capability_domains }}
+            <label class="filter-item"><input type="checkbox" name="capability_domains" value="{{ $key }}" {{ if in $selected $key }}checked{{ end }}><span class="filter-label">{{ $name }}</span></label>
+            {{- end }}
+          </div>
+        </details>
+
+        <details>
+          <summary>Industrial Capabilities</summary>
+          <div class="filter-list">
+            {{- $selected := $company.industrial_capabilities | default slice -}}
+            {{- range $key, $name := $taxonomies.industrial_capabilities }}
+            <label class="filter-item"><input type="checkbox" name="industrial_capabilities" value="{{ $key }}" {{ if in $selected $key }}checked{{ end }}><span class="filter-label">{{ $name }}</span></label>
+            {{- end }}
+          </div>
+        </details>
+
+        <details>
+          <summary>Regions</summary>
+          <div class="filter-list">
+            {{- $selected := $company.regions | default slice -}}
+            {{- range $key, $name := $taxonomies.regions }}
+            <label class="filter-item"><input type="checkbox" name="regions" value="{{ $key }}" {{ if in $selected $key }}checked{{ end }}><span class="filter-label">{{ $name }}</span></label>
+            {{- end }}
+          </div>
+        </details>
+      </aside>
+    </div>
+  </div>
+</div>
+
+<!-- Editor JS -->
+<script type="module">
+import { marked } from '{{ .Site.Params.cdnUrl }}/marked@17/lib/marked.esm.js';
+
+const viewMode = document.getElementById('view-mode');
+const editMode = document.getElementById('edit-mode');
+const startEdit = document.getElementById('start-edit');
+const cancelEdit = document.getElementById('cancel-edit');
+const btnCopy = document.getElementById('btn-copy');
+const btnDownload = document.getElementById('btn-download');
+const filterInput = document.getElementById('filter-options');
+
+if (viewMode && editMode) {
+
+  function showView() {
+    viewMode.classList.remove('hidden');
+    editMode.classList.add('hidden');
+    history.replaceState(null, '', location.pathname);
+  }
+
+  function showEdit(e) {
+    e?.preventDefault();
+    viewMode.classList.add('hidden');
+    editMode.classList.remove('hidden');
+    history.replaceState(null, '', '#edit');
+  }
+
+  // Filter taxonomy options
+  if (filterInput) {
+    const filterItems = editMode.querySelectorAll('.filter-item');
+    const taxonomyDetails = editMode.querySelectorAll('details:has(.filter-list)');
+
+    filterInput.addEventListener('input', () => {
+      const q = filterInput.value.toLowerCase().trim();
+      
+      // Filter checkbox items
+      filterItems.forEach(item => {
+        const label = item.querySelector('.filter-label')?.textContent.toLowerCase() || '';
+        item.style.display = (!q || label.includes(q)) ? '' : 'none';
+      });
+      
+      // Expand/collapse taxonomy details based on query
+      taxonomyDetails.forEach(details => {
+        const filterList = details.querySelector('.filter-list');
+        const hasVisible = [...filterList.querySelectorAll('.filter-item')].some(i => i.style.display !== 'none');
+        details.hidden = q && !hasVisible;
+        details.open = q && hasVisible;
+      });
+    });
+  }
+
+  // Preview toggle handlers
+  document.querySelectorAll('.preview-toggle input[data-preview-for]').forEach(toggle => {
+    const textareaId = toggle.dataset.previewFor;
+    const textarea = document.getElementById(textareaId);
+    const preview = document.getElementById(textareaId + '-preview');
+    if (!textarea || !preview) return;
+
+    toggle.addEventListener('change', () => {
+      if (toggle.checked) {
+        preview.innerHTML = marked.parse(textarea.value || '*No content*');
+        textarea.classList.add('hidden');
+        preview.classList.remove('hidden');
+      } else {
+        textarea.classList.remove('hidden');
+        preview.classList.add('hidden');
+      }
+    });
+  });
+
+  // Form data helpers
+  const getValue = id => document.getElementById(id)?.value?.trim() || '';
+  const getChecked = id => document.getElementById(id)?.checked || false;
+  const getCheckedValues = name => [...editMode.querySelectorAll(`input[name="${name}"]:checked`)].map(el => el.value);
+
+  function formatYaml(v) {
+    if (v == null || v === '') return null;
+    if (typeof v === 'boolean' || typeof v === 'number') return v;
+    if (/^[\d.]+$/.test(v) || /[:#\[\]{}|>&*!?'"\n]/.test(v)) {
+      return `"${v.replace(/\\/g, '\\\\').replace(/"/g, '\\"')}"`;
+    }
+    return v;
+  }
+
+  function generateMarkdown() {
+    const data = {
+      name: getValue('field-name'),
+      website: getValue('field-website'),
+      phone: getValue('field-phone'),
+      email: getValue('field-email'),
+      address: getValue('field-address'),
+      latitude: getValue('field-latitude'),
+      longitude: getValue('field-longitude'),
+      contact_name: getValue('field-contact-name'),
+      contact_title: getValue('field-contact-title'),
+      is_sme: getChecked('field-is-sme'),
+      is_prime: getChecked('field-is-prime'),
+      is_indigenous_owned: getChecked('field-is-indigenous'),
+      is_veteran_owned: getChecked('field-is-veteran'),
+      stakeholders: getCheckedValues('stakeholders'),
+      capability_streams: getCheckedValues('capability_streams'),
+      capability_domains: getCheckedValues('capability_domains'),
+      industrial_capabilities: getCheckedValues('industrial_capabilities'),
+      regions: getCheckedValues('regions'),
+    };
+    const overview = getValue('field-overview');
+    const capabilities = getValue('field-capabilities');
+    
+    const lines = ['---', `name: ${formatYaml(data.name)}`, `date: ${new Date().toISOString().split('T')[0]}`];
+
+    // Optional fields
+    ['website', 'phone', 'email', 'address', 'latitude', 'longitude', 'contact_name', 'contact_title'].forEach(k => {
+      if (data[k]) lines.push(`${k}: ${formatYaml(data[k])}`);
+    });
+
+    // Booleans (only if true)
+    ['is_sme', 'is_prime', 'is_indigenous_owned', 'is_veteran_owned'].forEach(k => {
+      if (data[k]) lines.push(`${k}: true`);
+    });
+
+    // Taxonomies
+    ['stakeholders', 'capability_streams', 'capability_domains', 'industrial_capabilities', 'regions'].forEach(k => {
+      if (data[k]?.length) {
+        lines.push(`${k}:`);
+        data[k].forEach(v => lines.push(`  - ${formatYaml(v)}`));
+      }
+    });
+
+    lines.push('---', '');
+    
+    // Content sections
+    if (overview) lines.push('## Overview', '', overview, '');
+    if (capabilities) lines.push('## Capabilities', '', capabilities);
+    
+    return lines.join('\n');
+  }
+
+  function feedback(btn, msg) {
+    if (!btn) return;
+    const orig = btn.textContent;
+    btn.textContent = msg;
+    btn.disabled = true;
+    setTimeout(() => { btn.textContent = orig; btn.disabled = false; }, 1500);
+  }
+
+  async function copyMarkdown() {
+    try {
+      await navigator.clipboard.writeText(generateMarkdown());
+      feedback(btnCopy, 'Copied!');
+    } catch {
+      const ta = document.createElement('textarea');
+      ta.value = generateMarkdown();
+      ta.style.cssText = 'position:fixed;opacity:0';
+      document.body.appendChild(ta);
+      ta.select();
+      document.execCommand('copy');
+      document.body.removeChild(ta);
+      feedback(btnCopy, 'Copied!');
+    }
+  }
+
+  function downloadMarkdown() {
+    const slug = getValue('field-slug') || 'company';
+    const blob = new Blob([generateMarkdown()], { type: 'text/markdown' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `${slug}.md`;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+    feedback(btnDownload, 'Downloaded!');
+  }
+
+  // Event listeners
+  startEdit?.addEventListener('click', showEdit);
+  cancelEdit?.addEventListener('click', showView);
+  btnCopy?.addEventListener('click', copyMarkdown);
+  btnDownload?.addEventListener('click', downloadMarkdown);
+
+  if (location.hash === '#edit') showEdit();
+}
+</script>
+
+{{ end }}

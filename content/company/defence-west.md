@@ -1,0 +1,50 @@
+---
+name: Defence West
+date: '2024-01-01'
+website: https://www.wa.gov.au/organisation/department-of-the-premier-and-cabinet/defence-west
+contact_name: Amalia Burmas
+contact_title: Manager - Defence Industry Development
+address: Level 11, 1 William Street, Perth WA 6000
+phone: +61 8 9262 1672
+email: defencewest@jtsi.wa.gov.au
+is_prime: true
+stakeholders:
+- defence
+- academic
+- defence-west
+- defence-science
+capability_streams:
+- aerial
+- base
+- education
+- electronic
+- intelligence
+- land
+- logistics
+- maritime
+- research
+- space
+industrial_capabilities:
+- none
+regions:
+- gascoyne
+- goldfields
+- great
+- kimberley
+- mid
+- peel
+- perth
+- pilbara
+- south-west
+- wheatbelt
+latitude: -31.9556883
+longitude: 115.8553785
+---
+
+## Overview
+
+Defence West within the Department of Jobs, Tourism, Science and Innovation is the State Government office responsible for championing the interests of the Western Australian defence industry. We support the national interest by enhancing defence capabilities in Western Australia. Western Australia is an internationally recognised advanced manufacturing hub and the pre-eminent base of operations for all Australian Defence Force (ADF) and Alliance operations in the Indian Ocean. It is the home of a robust defence industry that is respected, innovative and competitive. The defence sector in Western Australia is a trusted, stable and major employer. Western Australia's workforce development requirements will be guided by a strategic approach to ensure industry needs are met. This will ensure the local workforce is recognised as one of the most highly educated, qualified and skilled of its type in the world. WA's plan includes 6 key strategies: 1. Supporting a Strong and Enduring Defence Presence. 2. Growing the State's Defence Industry Capability and Contribution. 3.Developing Strategic Infrastructure. 4. Building Research and Innovation Partnerships. 5. Advancing Education, Training and Skilling. 6. Supporting Veterans and Families.
+
+## Capabilities
+
+Defence West is vital in: Assisting SMEs to increase their capability, capacity and competitiveness, enabling them to better contribute to national and defence programs to enhance Australia's sovereign capability; Delivering industry engagement opportunities for local companies with international defence contractors and the Australian Government; Working with our Team WA Universities to enhance the State's defence-related research and development capability by building research and innovation partnerships; Promoting defence industry careers and working with South Metropolitan TAFE and the Department of Training and Workforce Development to ensure our workforce has the required skills to meet the demands of defence programs; Working with our overseas offices to attract international defence companies to invest in Western Australia, help local businesses export products and get into global supply chains; helping the State's economy recovery from COVID-19; and valuing our defence personnel, veterans and their families.

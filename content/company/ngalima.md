@@ -1,0 +1,87 @@
+---
+name: Ngalima
+date: '2024-01-01'
+website: https://ngalima.com.au
+contact_name: Louise Whitten
+contact_title: CEO
+address: Newman Court, Karratha WA 6718
+phone: 1300 933 823
+email: ngalima@ngalima.com.au
+is_sme: true
+is_indigenous_owned: true
+stakeholders:
+- defence
+- academic
+- defence-west
+- defence-science
+capability_streams:
+- aerial
+- base
+- land
+- logistics
+capability_domains:
+- air
+- barracks
+- base
+- land
+- testing
+- training-ranges
+- sustainment
+- new
+industrial_capabilities:
+- composites
+- decking
+- design
+- electronics
+- hydraulics
+- mechanical
+- protective
+- steel
+regions:
+- gascoyne
+- goldfields
+- great
+- kimberley
+- mid
+- peel
+- perth
+- pilbara
+- south-west
+- wheatbelt
+latitude: -20.73614
+longitude: 116.80107
+---
+
+## Overview
+
+**NGALIMA: A Respected Aboriginal Civil Contractor Serving the Pilbara Region**
+
+NGALIMA is a proudly Aboriginal-owned and operated business based in the Pilbara region of Western Australia. Specialising in earthworks, concrete construction, and providing plant and labour hire services, Ngalima serves a diverse range of industries, including mining, oil and gas, renewables, and infrastructure. With a deep commitment to excellence, we deliver high-quality, reliable services to meet the unique demands of these sectors.
+
+The name "Ngalima" is derived from the Pinikarra language, meaning "Ours Together," which perfectly encapsulates our values of unity, community, and collaboration. At Ngalima, we believe in creating and sharing opportunities, building strong relationships, and working together with our clients, employees, subcontractors, and local communities to achieve mutual success.
+
+Our services are grounded in respect for both our cultural heritage and the communities we work in. By maintaining a strong focus on collaboration and inclusivity, Ngalima fosters an environment that supports the growth and development of Indigenous and non-Indigenous professionals alike, ensuring that everyone benefits from the opportunities we create.
+
+We take pride in contributing to the economic development of the Pilbara region, while ensuring that our operations are environmentally responsible and aligned with best practices in safety, quality, and sustainability.
+
+## Capabilities
+
+Ngalima offers a comprehensive range of services, including earthworks and roadworks, civil concrete construction, dry and wet hire, and labour hire. Our earthworks capabilities cover bulk and detailed earthworks, landscaping, rehabilitation, tailings storage, drainage, culverts, pond and dam installation, road formation, maintenance, and repairs. In concrete construction, we specialise in complex, high-volume works, including structural concrete, suspended and ground slabs, footings, pedestals, tilt panels, insitu walls, columns, concrete pumping, and reinforcing steelwork installation.
+
+We provide a fleet of equipment, primarily from Caterpillar, Komatsu, and Isuzu, with comprehensive maintenance packages for both our own and clients' equipment. Our heavy-duty mechanics, based in fully outfitted trucks, offer field service support across a wide range of machinery, including drill rigs and dozers, ensuring minimal downtime. With workshops in Port Hedland and Perth, we deliver efficient support and rapid response.
+
+Our labour hire services provide skilled professionals--Indigenous and non-Indigenous--across diverse industry sectors, backed by extensive experience and deep industry knowledge.
+
+## Discriminators
+
+At Ngalima, we are committed to creating and implementing robust, pragmatic health, safety, quality, and environmental strategies that guide our team in maintaining a safe workplace for every employee, subcontractor, client, supplier, and visitor. Our Safety Program is central to our operations and reflects our commitment to ensuring that every staff member returns home safely, every day. This commitment is embedded in our safety policies and procedures, communications, onsite practices, training programs, and our engagement with clients on each project.
+
+We actively empower and encourage our employees to take a "hands-on" approach in managing their own safety and the safety of their colleagues, both in the workplace and beyond. Our proactive safety culture encourages open communication and the shared responsibility of everyone to help identify and mitigate risks. To support this, we:
+
+  * Provide safe and healthy working conditions that prevent work-related injuries and illnesses.
+  * Eliminate hazards and continuously reduce risks to protect our workers.
+  * Involve, empower, and consult with our employees in identifying workplace hazards, implementing safety improvements, and making necessary interventions.
+  * Investigate all incidents thoroughly and implement preventive actions to minimize the risk of recurrence while driving continuous improvement.
+  * Ensure our Health and Safety policy is effectively communicated to all employees, subcontractors, and other relevant parties.
+
+We are fully committed to complying with all relevant Work Health and Safety legislation and other obligations, including ISO 45001 standards. ISO 45001 offers a robust framework for managing occupational health and safety (OHS) risks and opportunities, ensuring the health and safety of our workplace, and protecting the wellbeing of our personnel.

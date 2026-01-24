@@ -1,0 +1,733 @@
+/* === Directory Layout === */
+
+.directory {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: var(--pico-spacing);
+  min-height: calc(100vh - 100px);
+}
+
+.directory > .filters {
+  position: sticky;
+  top: 0;
+  max-height: 100vh;
+  overflow-y: auto;
+  padding: var(--pico-spacing);
+  background: var(--pico-card-background-color);
+}
+
+.directory > main {
+  padding: var(--pico-spacing);
+}
+
+@media (max-width: 768px) {
+  .directory {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .directory > .filters {
+    position: static;
+    max-height: none;
+    overflow-y: visible;
+  }
+}
+
+/* === Filter Status === */
+.filter-status {
+  padding: 0.5rem 0;
+  margin-bottom: 0.75rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
+
+.filter-status .visible-count {
+  font-weight: bold;
+}
+
+.filter-status #filter-options {
+  font-size: 0.7rem;
+  padding: 0.2rem 0.4rem;
+  margin: 0;
+  width: auto;
+  flex: 1;
+  min-width: 40px;
+  max-width: 100px;
+}
+
+/* Search bar above cards */
+main > input[type="search"] {
+  width: 100%;
+  margin-bottom: var(--pico-spacing);
+}
+
+#filter-options {
+  font-size: 0.75rem;
+  padding: 0.3rem 0.5rem;
+  margin-bottom: 0.5rem;
+  opacity: 0.7;
+  --pico-form-element-spacing-vertical: 0.3rem;
+  --pico-form-element-spacing-horizontal: 0.5rem;
+}
+
+#filter-options:focus {
+  opacity: 1;
+}
+
+/* === Clear Button === */
+.clear-all {
+  font-size: 0.7rem;
+  padding: 0.2rem 0.4rem;
+  margin: 0;
+}
+
+/* === Filter Form Elements === */
+.filters details {
+  border: none;
+  padding: 0;
+  margin: 0 0 0.75rem 0;
+}
+
+.filters details[hidden] {
+  display: none;
+}
+
+.filters summary {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  opacity: 0.6;
+  margin-bottom: 0.4rem;
+  padding: 0;
+}
+
+/* === Filter List (mdbook-style sidebar) === */
+.filter-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.filter-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.3rem 0.4rem;
+  margin: 0;
+  font-size: 0.8rem;
+  cursor: pointer;
+  border-radius: var(--pico-border-radius);
+  transition: background-color 0.1s;
+}
+
+.filter-item:hover {
+  background: var(--pico-muted-border-color);
+}
+
+.filter-item input[type="checkbox"] {
+  margin: 0;
+  width: 1rem;
+  height: 1rem;
+  flex-shrink: 0;
+}
+
+.filter-item .filter-label {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.filter-item .filter-count {
+  font-size: 0.7rem;
+  opacity: 0.5;
+  flex-shrink: 0;
+}
+
+.filter-item:has(input:checked) {
+  background: var(--pico-primary-focus);
+}
+
+.filter-item:has(input:checked) .filter-label {
+  font-weight: 500;
+}
+
+.filter-item:has(input:checked) .filter-count {
+  opacity: 0.8;
+}
+
+/* === Stream Icon Checkboxes === */
+.stream-icons {
+  display: flex;
+  gap: 0.35rem;
+  flex-wrap: wrap;
+}
+
+.stream-icon {
+  position: relative;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+}
+
+.stream-icon input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+}
+
+.stream-icon img {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--pico-border-radius);
+  object-fit: cover;
+  opacity: 0.5;
+  filter: grayscale(40%);
+  transition: all 0.15s ease;
+  border: 2px solid transparent;
+}
+
+.stream-icon:hover img {
+  opacity: 0.75;
+  filter: grayscale(20%);
+}
+
+.stream-icon input:checked + img {
+  opacity: 1;
+  filter: none;
+  border-color: var(--pico-primary);
+  box-shadow: 0 0 0 2px var(--pico-primary-focus);
+}
+
+/* === JS-Applied Filter Classes === */
+.company-item.search-hidden {
+  display: none !important;
+}
+
+.company-item.filter-hidden {
+  display: none !important;
+}
+
+/* === No Results Message === */
+.no-results {
+  display: none;
+  text-align: center;
+  opacity: 0.7;
+  padding: 2rem;
+}
+
+/* Show no-results when all cards are hidden */
+.company-grid:not(
+    :has(
+      .company-item:not([style*="display: none"]):not(.search-hidden):not(
+          .filter-hidden
+        )
+    )
+  )
+  + .no-results {
+  display: block;
+}
+
+/* === Search Highlighting (CSS Custom Highlight API) === */
+::highlight(search-results) {
+  background-color: var(--pico-primary-focus);
+  color: inherit;
+}
+
+/* === Company Card Grid === */
+.company-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: var(--pico-spacing);
+}
+
+.company-item {
+  display: flex;
+}
+
+/* === Company Card Styles === */
+.company-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  height: 100%;
+  width: 100%;
+}
+
+.company-card article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+  padding: 1rem;
+  transition: background-color 0.15s;
+  background: var(--pico-card-background-color);
+  border-radius: var(--pico-border-radius);
+}
+
+.company-card:hover article {
+  background-color: var(--pico-muted-border-color);
+}
+
+.company-card .logo-area {
+  height: 60px;
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.company-card .logo-area img {
+  max-width: 100%;
+  max-height: 60px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+.company-card .logo-area .initials {
+  font-size: 1.5rem;
+  font-weight: bold;
+  opacity: 0.4;
+}
+
+.company-card .name {
+  margin: 0 0 0.5rem 0;
+  font-size: 1rem;
+  font-weight: bold;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.company-card .badges {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.2rem;
+  margin-bottom: 0.35rem;
+  min-height: 1.2rem;
+}
+
+.company-card .badges small {
+  padding: 0.05rem 0.3rem;
+  background: var(--pico-muted-border-color);
+  border-radius: var(--pico-border-radius);
+  font-size: 0.6rem;
+  opacity: 0.7;
+}
+
+.company-card .badges small.highlight {
+  opacity: 0.85;
+}
+
+.company-card .overview {
+  margin: 0;
+  flex: 1;
+  opacity: 0.7;
+  font-size: 0.8rem;
+}
+
+.company-card .overview small {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Compact card for map popups */
+.company-card.compact {
+  height: auto;
+}
+
+.company-card.compact article {
+  padding: 0.75rem;
+  height: auto;
+  box-shadow: none;
+  margin: 0;
+}
+
+/* === Site Header Nav === */
+nav[data-theme="dark"] {
+  background: var(--pico-primary-background);
+}
+
+nav .logo {
+  height: 50px;
+}
+
+@media (max-width: 600px) {
+  nav .logo {
+    height: 40px;
+  }
+}
+
+/* === Global Styles === */
+:root {
+  --pico-border-radius: 0.25rem;
+}
+
+[type="search"] {
+  --pico-border-radius: 0.25rem;
+}
+
+/* === Utilities === */
+.hidden {
+  display: none !important;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Skip link */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  padding: 0.5rem 1rem;
+  background: var(--pico-primary);
+  color: var(--pico-primary-inverse);
+  z-index: 1000;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* === Index Page: Search Row & View Toggle === */
+.search-row {
+  display: flex;
+  gap: var(--pico-spacing);
+  margin-bottom: var(--pico-spacing);
+  align-items: center;
+}
+.search-row input[type="search"] {
+  flex: 1;
+  margin: 0;
+}
+.view-toggle {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  white-space: nowrap;
+  margin: 0;
+  flex-shrink: 0;
+}
+.view-toggle input {
+  margin: 0;
+}
+
+#map-iframe {
+  width: 100%;
+  height: calc(100vh - 180px);
+  min-height: 500px;
+  border: none;
+  border-radius: var(--pico-border-radius);
+}
+#map-iframe.hidden {
+  display: none;
+}
+.company-grid.hidden {
+  display: none;
+}
+
+/* === Company Page Layout === */
+.company-page .company-content {
+  display: grid !important;
+  grid-template-columns: 1fr 360px;
+  gap: calc(var(--pico-spacing) * 2);
+  align-items: start;
+}
+
+.company-page .content-column,
+.company-page .info-column {
+  min-width: 0; /* Prevent grid blowout */
+}
+
+@media (max-width: 992px) {
+  .company-page .company-content {
+    grid-template-columns: 1fr;
+    gap: var(--pico-spacing);
+  }
+  .company-page .info-column {
+    order: -1;
+  }
+}
+
+/* Company Title in Sidebar */
+.company-page .company-title {
+  text-align: center;
+  margin: 0;
+  font-size: 1.25rem;
+}
+.company-page .company-title img {
+  max-height: 80px;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+/* Content Column */
+.company-page .content-column h2 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-top: calc(var(--pico-spacing) * 1.5);
+  margin-bottom: calc(var(--pico-spacing) * 0.75);
+  padding-bottom: calc(var(--pico-spacing) * 0.5);
+  border-bottom: 1px solid var(--pico-muted-border-color);
+}
+.company-page .content-column h2:first-child {
+  margin-top: 0;
+}
+
+/* Info Column (Sidebar) */
+.company-page .info-column {
+  display: flex;
+  flex-direction: column;
+  gap: var(--pico-spacing);
+  background: var(--pico-muted-border-color);
+  border-radius: var(--pico-border-radius);
+  padding: var(--pico-spacing);
+}
+.company-page .contact-person {
+  text-align: center;
+  padding-bottom: var(--pico-spacing);
+  border-bottom: 1px solid var(--pico-muted-color);
+}
+.company-page .contact-person .contact-name {
+  font-weight: 600;
+  margin: 0;
+}
+.company-page .contact-person .contact-title {
+  font-size: 0.875rem;
+  opacity: 0.7;
+  margin: 0.25rem 0 0 0;
+}
+.company-page .contact-info p {
+  margin: 0 0 0.5rem 0;
+}
+.company-page .contact-info p:last-child {
+  margin-bottom: 0;
+}
+.company-page .contact-info .address {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  word-break: break-word;
+}
+
+/* Minimap */
+.company-page .minimap {
+  border-radius: var(--pico-border-radius);
+  overflow: hidden;
+}
+.company-page .minimap a {
+  display: block;
+}
+.company-page .minimap img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: filter 0.15s;
+}
+.company-page .minimap:hover img {
+  filter: brightness(0.9);
+}
+
+/* Taxonomy Section in Sidebar */
+.company-page .taxonomy-section .stream-icons {
+  display: flex;
+  gap: 0.35rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.5rem;
+}
+.company-page .taxonomy-section .stream-icons a {
+  display: block;
+  padding: 0;
+}
+.company-page .taxonomy-section .stream-icons img {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--pico-border-radius);
+  object-fit: cover;
+  transition: all 0.15s ease;
+  border: 2px solid transparent;
+}
+.company-page .taxonomy-section .stream-icons a:hover img {
+  border-color: var(--pico-primary);
+}
+.company-page .taxonomy-section ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.company-page .taxonomy-section li {
+  margin: 0;
+  padding: 0;
+}
+.company-page .taxonomy-section a {
+  display: block;
+  padding: calc(var(--pico-spacing) * 0.25) 0;
+  text-decoration: none;
+}
+
+/* Company Footer with Edit Link */
+.company-page .company-footer {
+  margin-top: calc(var(--pico-spacing) * 2);
+  padding-top: var(--pico-spacing);
+  border-top: 1px solid var(--pico-muted-border-color);
+  text-align: right;
+}
+.company-page .company-footer a {
+  font-size: 0.85rem;
+  color: var(--pico-muted-color);
+}
+
+/* === Company Page: Edit Mode === */
+.company-page .edit-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--pico-spacing);
+}
+.company-page .edit-header h1 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.company-page .edit-fields label {
+  display: grid;
+  grid-template-columns: 70px 1fr;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.7rem;
+  margin-bottom: 0.4rem;
+}
+.company-page .edit-fields input {
+  width: 100%;
+  padding: 0.25rem 0.4rem;
+  font-size: 0.75rem;
+  --pico-form-element-spacing-vertical: 0.25rem;
+  --pico-form-element-spacing-horizontal: 0.4rem;
+}
+
+.company-page .edit-actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+.company-page .edit-actions button,
+.company-page .edit-actions a[role="button"] {
+  margin: 0;
+}
+
+.company-page #field-overview,
+.company-page #field-capabilities {
+  font-family:
+    ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  width: 100%;
+}
+
+/* Editor toolbar with preview toggle */
+.company-page .editor-toolbar {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 0.5rem;
+}
+.company-page .preview-toggle {
+  font-size: 0.8rem;
+  margin: 0;
+}
+
+/* Markdown preview area */
+.company-page .markdown-preview {
+  min-height: 150px;
+  padding: var(--pico-spacing);
+  border: 1px solid var(--pico-form-element-border-color);
+  border-radius: var(--pico-border-radius);
+  background: var(--pico-form-element-background-color);
+}
+
+/* === Print Styles === */
+@media print {
+  /* Hide interactive/nav elements */
+  nav,
+  .filters,
+  .skip-link,
+  .view-toggle,
+  .search-row,
+  .no-results,
+  .company-footer,
+  #edit-mode,
+  .print-hide,
+  #map-iframe {
+    display: none !important;
+  }
+
+  /* Reset layout */
+  body {
+    background: white;
+    color: black;
+  }
+
+  .container-fluid {
+    padding: 0 !important;
+    max-width: 100% !important;
+  }
+
+  .directory {
+    display: block !important;
+  }
+
+  /* Compact company cards */
+  .company-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 0.5rem !important;
+  }
+
+  .company-card article {
+    padding: 0.5rem !important;
+    border: 1px solid #ccc !important;
+  }
+
+  .company-card .overview {
+    display: none !important;
+  }
+
+  /* Company detail - single column */
+  .company-page .company-content {
+    display: block !important;
+  }
+
+  .company-page .minimap,
+  .company-page .stream-icons {
+    display: none !important;
+  }
+
+  /* Page breaks */
+  article {
+    break-inside: avoid;
+  }
+}

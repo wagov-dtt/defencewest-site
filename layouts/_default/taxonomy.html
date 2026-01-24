@@ -1,0 +1,51 @@
+{{ define "main" }}
+{{/*
+  Term page - lists all companies with a specific taxonomy term
+  e.g., /regions/perth/ shows all companies in Perth
+*/}}
+{{- $taxonomies := .Site.Data.taxonomies -}}
+{{- $taxonomyName := .Data.Plural -}}
+{{- $termKey := .Data.Term -}}
+{{- $taxonomyMap := index $taxonomies $taxonomyName -}}
+{{- $displayName := index $taxonomyMap $termKey | default $termKey -}}
+{{- $taxonomyTitle := $taxonomyName | humanize | title -}}
+
+{{/* Map taxonomy name to filter prefix */}}
+{{- $filterPrefix := "" -}}
+{{- if eq $taxonomyName "stakeholders" }}{{ $filterPrefix = "stake" }}{{ end -}}
+{{- if eq $taxonomyName "capability_streams" }}{{ $filterPrefix = "stream" }}{{ end -}}
+{{- if eq $taxonomyName "capability_domains" }}{{ $filterPrefix = "domain" }}{{ end -}}
+{{- if eq $taxonomyName "industrial_capabilities" }}{{ $filterPrefix = "ind" }}{{ end -}}
+{{- if eq $taxonomyName "regions" }}{{ $filterPrefix = "region" }}{{ end -}}
+
+<nav aria-label="breadcrumb">
+  <ul>
+    <li><a href="{{ "/" | relURL }}">Directory</a></li>
+    <li><a href="{{ printf "/%s/" $taxonomyName | relURL }}">{{ $taxonomyTitle }}</a></li>
+    <li>{{ $displayName }}</li>
+  </ul>
+</nav>
+
+<hgroup>
+  <h1>{{ $displayName }}</h1>
+  <p>
+    {{ len .Pages }} {{ if eq (len .Pages) 1 }}company{{ else }}companies{{ end }}
+    {{- if $filterPrefix }}
+    · <a href="{{ printf "/?f=%s:%s" $filterPrefix $termKey | relURL }}">View with filters</a>
+    {{- end }}
+  </p>
+</hgroup>
+
+{{- with .Content }}{{ . }}{{ end }}
+
+<div class="company-grid">
+  {{- range .Pages.ByTitle }}
+    {{- $slug := .File.BaseFileName -}}
+    {{- $computed := index $.Site.Data.computed $slug -}}
+    {{- $companyData := merge .Params (dict "slug" $slug) }}
+    {{- partial "company-card.html" (dict "company" $companyData "computed" $computed "mode" "directory") }}
+  {{- end }}
+</div>
+
+<p><a href="{{ printf "/%s/" $taxonomyName | relURL }}">&larr; All {{ $taxonomyTitle }}</a></p>
+{{ end }}

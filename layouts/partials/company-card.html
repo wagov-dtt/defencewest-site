@@ -1,0 +1,87 @@
+{{/*
+  Company card component - used by both directory and map pages
+  Params: 
+    - .company (required): company data object (frontmatter + slug)
+    - .computed (required): pre-computed data from data/computed.yaml
+    - .mode (optional): "directory" (default), "map", or "popup"
+*/}}
+{{- $company := .company -}}
+{{- $computed := .computed -}}
+{{- $mode := .mode | default "directory" -}}
+{{- $isMap := eq $mode "map" -}}
+{{- $isPopup := eq $mode "popup" -}}
+{{- $filters := $computed.filter_data -}}
+
+{{/* Simple derivations stay in Hugo */}}
+{{- $logoPath := printf "/logos/%s.png" $company.slug -}}
+{{- $logoUrl := cond (fileExists (printf "static%s" $logoPath)) $logoPath "" -}}
+
+{{- if $isPopup -}}
+{{/* Popup mode: wrapped in .pico for conditional CSS */}}
+<div class="pico">
+  <a href="{{ printf "company/%s/" $company.slug | relURL }}" class="company-card">
+    <article>
+      <div class="logo-area">
+        {{- if $logoUrl -}}
+        <img src="{{ $logoUrl | relURL }}" alt="">
+        {{- else -}}
+        <span class="initials">{{ substr $company.name 0 2 | upper }}</span>
+        {{- end -}}
+      </div>
+      <div class="name">{{ $company.name }}</div>
+      <div class="badges">
+        {{- if $company.is_prime }}<small>Prime</small>{{ end -}}
+        {{- if $company.is_sme }}<small>SME</small>{{ end -}}
+        {{- if $company.is_indigenous_owned }}<small class="highlight">Indigenous</small>{{ end -}}
+        {{- if $company.is_veteran_owned }}<small class="highlight">Veteran</small>{{ end -}}
+      </div>
+      {{- with $computed.overview_short }}
+      <p class="overview"><small>{{ . | markdownify }}</small></p>
+      {{- end }}
+    </article>
+  </a>
+</div>
+{{- else -}}
+{{/* Directory/Map mode: full card with wrapper and data attributes */}}
+<div class="{{ if $isMap }}map-marker{{ else }}company-item{{ end }}"
+     data-slug="{{ $company.slug }}"
+     data-search="{{ $computed.search_text }}"
+     data-f="{{ $computed.filter_data }}"
+     {{- with $company.latitude }} data-lat="{{ . }}"{{ end -}}
+     {{- with $company.longitude }} data-lng="{{ . }}"{{ end -}}>
+
+  {{- if $isMap }}
+  <span class="marker-dot"></span>
+  <div class="marker-popup">
+  {{- end }}
+
+  <a href="{{ printf "company/%s/" $company.slug | relURL }}" class="company-card{{ if $isMap }} compact{{ end }}">
+    <article>
+      <div class="logo-area">
+        {{- if $logoUrl }}
+        <img src="{{ $logoUrl | relURL }}" alt="" loading="lazy">
+        {{- else }}
+        <span class="initials">{{ substr $company.name 0 2 | upper }}</span>
+        {{- end }}
+      </div>
+
+      <div class="name">{{ $company.name }}</div>
+
+      <div class="badges">
+        {{- if $company.is_prime }}<small>Prime</small>{{ end -}}
+        {{- if $company.is_sme }}<small>SME</small>{{ end -}}
+        {{- if $company.is_indigenous_owned }}<small class="highlight">Indigenous</small>{{ end -}}
+        {{- if $company.is_veteran_owned }}<small class="highlight">Veteran</small>{{ end -}}
+      </div>
+
+      {{- if and $computed.overview_short (not $isMap) }}
+      <p class="overview"><small>{{ $computed.overview_short | markdownify }}</small></p>
+      {{- end }}
+    </article>
+  </a>
+
+  {{- if $isMap }}
+  </div>
+  {{- end }}
+</div>
+{{- end -}}

@@ -7,46 +7,68 @@ Static site for the WA Defence Industry and Science Capability Directory.
 ## Quick Start
 
 ```bash
-mise run setup   # Install dependencies
-mise run dev     # Dev server at localhost:4321
-mise run build   # Build to dist/
+mise run setup   # Install dependencies + generate computed data
+mise run dev     # Dev server at localhost:1313
+mise run build   # Build to public/
 ```
 
 ## Adding/Editing Companies
 
-Every company page has an **"Edit this listing"** link. Use [/edit/new](https://wagov-dtt.github.io/defencewest-site/edit/new) to add a new company.
+Every company page has an **"Edit this listing"** link. The editor lets you:
 
-The editor validates your YAML and shows valid taxonomy options. Submit changes via GitHub or email to defencewest@dpc.wa.gov.au.
+- Edit overview and capabilities markdown with live preview
+- Modify contact details and taxonomy selections
+- Copy the generated markdown or download as `.md` file
+- Link directly to edit on GitHub
+
+Submit changes via GitHub PR or email to defencewest@dpc.wa.gov.au.
 
 ## Project Structure
 
 ```
-data/companies/*.yaml   # Company data
-data/taxonomies.yaml    # Filter categories
-public/logos/           # Company logos
-public/icons/           # Capability stream icons
+content/company/*.md   # Company pages (328 markdown files)
+data/
+  taxonomies.yaml      # Filter categories + icons
+  companies/*.yaml     # Original scraped data (reference)
+  computed.yaml        # Generated: pre-computed values (gitignored)
+  counts.yaml          # Generated: taxonomy counts (gitignored)
+hugo.toml              # All site config (theme, CDN URLs, map settings)
+static/logos/          # Company logos
+static/icons/          # Capability stream icons
+static/maps/           # Pre-rendered minimap PNGs
 ```
 
 ## Logo Processing
 
-To batch-process logos and icons (trim whitespace, resize, strip metadata):
+Logos are automatically processed by the scraper (`scripts/scrape.py`) using ImageMagick `mogrify`:
+
+- Fuzzy trim (5% fuzz to handle near-white backgrounds)
+- Resize to max 520x120 (2x retina for card display)
+- Convert to PNG and strip metadata
+
+To manually reprocess all logos:
 
 ```bash
-mogrify -trim -fuzz 1% -resize 400x400\> -strip public/logos/*.png
-mogrify -trim -fuzz 1% -resize 400x400\> -strip public/logos/*.jpg
-mogrify -colorspace sRGB -strip public/icons/*.jpg
+rm -f static/logos/*.png
+uv run python scripts/scrape.py  # Uses cached images, reprocesses with mogrify
 ```
-
-Icon colors are adjusted via CSS filters in `public/styles.css`.
 
 Requires [ImageMagick](https://imagemagick.org/) (`apt install imagemagick` or `brew install imagemagick`).
 
 ## Tech
 
-[Astro](https://astro.build), [PicoCSS](https://picocss.com), [MapLibre GL JS](https://maplibre.org), [uFuzzy](https://github.com/leeoniya/uFuzzy). Tools: [mise](https://mise.jdx.dev), [pnpm](https://pnpm.io), [uv](https://docs.astral.sh/uv/).
+[Hugo](https://gohugo.io), [PicoCSS](https://picocss.com), [MapLibre GL JS](https://maplibre.org). Tools: [mise](https://mise.jdx.dev), [uv](https://docs.astral.sh/uv/).
 
-~1,750 lines of code: TypeScript 434, Python 588, CSS 330, Markdown 91. Estimated ~$49k / 4 months ([scc](https://github.com/boyter/scc)).
+## Maps
+
+The map implementation uses:
+
+- **[OSM Shortbread Vector Tiles](https://vector.openstreetmap.org/)** - free, public vector tiles from OpenStreetMap
+- **[MapLibre GL JS](https://maplibre.org)** - vector map rendering with globe projection
+- **Static minimaps** - pre-rendered PNG images for company cards (generated via `pymgl` using the same OSM tiles)
+
+All map configuration (style URL, tile URL) is in `hugo.toml` under `[params]`.
 
 ## AI-Assisted Development
 
-This website was developed with assistance from [OpenCode](https://github.com/wagov-dtt/tutorials-and-workshops/blob/main/README.md#opencode-ai-agent), in accordance with [ADR 011: AI Tool Governance](https://adr.dtt.digital.wa.gov.au/security/011-ai-governance.html).
+This website was developed with assistance from [OpenCode](https://github.com/anomalyco/opencode), in accordance with [ADR 011: AI Tool Governance](https://adr.dtt.digital.wa.gov.au/security/011-ai-governance.html).

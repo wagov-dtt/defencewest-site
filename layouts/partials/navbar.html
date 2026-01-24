@@ -1,0 +1,40 @@
+<nav class="container-fluid" data-theme="dark">
+  <ul>
+    <li>
+      <a href="https://www.wa.gov.au/organisation/department-of-the-premier-and-cabinet/defence-west">
+        <img src="{{ "defence-west-logo.svg" | relURL }}" alt="Defence West" class="logo">
+      </a>
+    </li>
+  </ul>
+  <ul>
+    {{- if eq .Section "company" }}
+    <li><a href="{{ .RelPermalink }}" aria-current="page">{{ .Params.name }}</a></li>
+    {{- if .Params.is_prime }}<li><small>Prime</small></li>{{ end -}}
+    {{- if .Params.is_sme }}<li><small>SME</small></li>{{ end -}}
+    {{- if .Params.is_indigenous_owned }}<li><small>Indigenous</small></li>{{ end -}}
+    {{- if .Params.is_veteran_owned }}<li><small>Veteran</small></li>{{ end -}}
+    {{- end }}
+  </ul>
+  <ul>
+    <li><a href="{{ "/" | relURL }}" {{ if .IsHome }}aria-current="page"{{ end }}>Directory</a></li>
+    <li>
+      <details class="dropdown">
+        <summary>Browse</summary>
+        <ul dir="rtl" data-theme="light">
+          <li><a href="{{ "regions/" | relURL }}">Regions</a></li>
+          <li><a href="{{ "capability_streams/" | relURL }}">Capability Streams</a></li>
+          <li><a href="{{ "capability_domains/" | relURL }}">Capability Domains</a></li>
+          <li><a href="{{ "industrial_capabilities/" | relURL }}">Industrial Capabilities</a></li>
+          <li><a href="{{ "stakeholders/" | relURL }}">Stakeholders</a></li>
+        </ul>
+      </details>
+    </li>
+    <li><a href="{{ "contact/" | relURL }}" {{ if hasPrefix .RelPermalink "/contact" }}aria-current="page"{{ end }}>Contact</a></li>
+    <li class="print-hide"><a href="javascript:window.print()" title="Print this page">Print</a></li>
+    <li>
+      <a href="https://www.wa.gov.au/organisation/department-of-energy-and-economic-diversification">
+        <img src="{{ "wa-gov-logo.png" | relURL }}" alt="Government of Western Australia" class="logo">
+      </a>
+    </li>
+  </ul>
+</nav>

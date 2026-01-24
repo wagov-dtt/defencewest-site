@@ -1,108 +1,111 @@
 stakeholders:
-- Academic Institutions
-- Defence Industry
-- Defence Science Centre
-- Defence West
-capability_streams:
-  AASL - Air and Sea Lift: /icons/aasl-air-and-sea-lift.png
-  Aerial; Strike and Air Combat: /icons/aerial-strike-and-air-combat.png
-  Base Support: /icons/base-support.png
-  Education and Training: /icons/education-and-training.png
-  Electronic Warfare and Cyber: /icons/electronic-warfare-and-cyber.png
-  ISCW - Intelligence, Surveillance, Reconnaissance, Space, Electronic Warfare and Cyber: /icons/iscw-intelligence-surveillance-reconnaissance-space-electronic-warfare-and-cyber.png
-  Intelligence; Surveillance and Reconnaissance: /icons/intelligence-surveillance-and-reconnaissance.png
-  KEYN - Key Enablers: /icons/keyn-key-enablers.png
-  LCAW - Land Combat and Amphibious Warfare: /icons/lcaw-land-combat-and-amphibious-warfare.png
-  Land Forces: /icons/land-forces.png
-  Logistics and Supply Chain: /icons/logistics-and-supply-chain.png
-  MASW - Maritime and Anti-Submarine Warfare: /icons/masw-maritime-and-anti-submarine-warfare.png
-  Maritime and Sub-Sea Forces: /icons/maritime-and-sub-sea-forces.png
-  Research and Technology Development: /icons/research-and-technology-development.png
-  SAAC - Strike and Air Combat: /icons/saac-strike-and-air-combat.png
-  Space: /icons/space.png
+  academic: Academic Institutions
+  defence: Defence Industry
+  defence-science: Defence Science Centre
+  defence-west: Defence West
 capability_domains:
-- AI & Autonomy
-- Air Bases
-- Air Traffic Management
-- Airborne Early Warning and Control
-- Amphibious Elements
-- Armour and Vehicles
-- Barracks and Training Ranges
-- Base Support and Redevelopment
-- C2 & Common Operating Picture
-- CBRN (Chemical; Radiological; Biological and Nuclear)
-- Communications
-- Cyber Security
-- Cyber and Information Operations
-- Destroyers
-- Electronic Warfare
-- Fighter Aircraft
-- Frigates
-- Ground Combat
-- ICT for Operations
-- Intelligence
-- Land Communications
-- Light Helicopters
-- Maritime Support
-- Minor War Vessels
-- Missile Defence
-- Multi-Purpose Vessels
-- New Energy/Power
-- Quantum
-- Reconnaissance Aircraft
-- Refuelling Aircraft
-- Replenishment/Supply Ships
-- Robotics
-- Science & Technology
-- Search & Rescue
-- Space
-- Special Operations
-- Stable Defence ICT
-- Submarines
-- Surveillance
-- Sustainment and maintenance
-- Testing Ranges
-- Training & Simulation
-- Training Platforms
-- Training Ranges
-- Transport Aircraft
-- US Force Posture Initiative
-- Uncrewed/Autonomous vehicles
-- Under Sea Capabilities
-- Utility Helicopters
+  ai: AI & Autonomy
+  air: Air Bases
+  air-traffic: Air Traffic Management
+  airborne: Airborne Early Warning and Control
+  amphibious: Amphibious Elements
+  armour: Armour and Vehicles
+  barracks: Barracks and Training Ranges
+  base: Base Support and Redevelopment
+  c2: C2 & Common Operating Picture
+  cbrn: CBRN (Chemical; Radiological; Biological and Nuclear)
+  communications: Communications
+  cyber: Cyber Security
+  cyber-and: Cyber and Information Operations
+  destroyers: Destroyers
+  electronic: Electronic Warfare
+  fighter: Fighter Aircraft
+  frigates: Frigates
+  ground: Ground Combat
+  ict: ICT for Operations
+  intelligence: Intelligence
+  land: Land Communications
+  light: Light Helicopters
+  maritime: Maritime Support
+  minor: Minor War Vessels
+  missile: Missile Defence
+  multi: Multi-Purpose Vessels
+  new: New Energy/Power
+  quantum: Quantum
+  reconnaissance: Reconnaissance Aircraft
+  refuelling: Refuelling Aircraft
+  replenishment: Replenishment/Supply Ships
+  robotics: Robotics
+  science: Science & Technology
+  search: Search & Rescue
+  space: Space
+  special: Special Operations
+  stable: Stable Defence ICT
+  submarines: Submarines
+  surveillance: Surveillance
+  sustainment: Sustainment and maintenance
+  testing: Testing Ranges
+  training: Training & Simulation
+  training-platforms: Training Platforms
+  training-ranges: Training Ranges
+  transport: Transport Aircraft
+  us: US Force Posture Initiative
+  uncrewed: Uncrewed/Autonomous vehicles
+  under: Under Sea Capabilities
+  utility: Utility Helicopters
 industrial_capabilities:
-- Adaptive Manufacturing
-- Aluminium Fabrication
-- Blasting & Painting
-- CNC Machining
-- Chemical; Marine Coating; Anti-Corrosion; Varnish & Biofouling
-- Composites & Components
-- Decking; Flooring & Furnishing
-- Design & Engineering Services
-- Electronics & Instrumentation
-- Fuel & Exhaust Systems
-- High Performance Computing (HPC)/Data Analytic
-- Hydraulics and Pneumatics
-- Mechanical & Electrical
-- None
-- Propulsion & Engine Systems
-- Protective & Safety Systems
-- Refrigeration; Air Conditioning & Heating
-- Steel Fabrication
-- Welding
+  adaptive: Adaptive Manufacturing
+  aluminium: Aluminium Fabrication
+  blasting: Blasting & Painting
+  cnc: CNC Machining
+  chemical: Chemical; Marine Coating; Anti-Corrosion; Varnish & Biofouling
+  composites: Composites & Components
+  decking: Decking; Flooring & Furnishing
+  design: Design & Engineering Services
+  electronics: Electronics & Instrumentation
+  fuel: Fuel & Exhaust Systems
+  high: High Performance Computing (HPC)/Data Analytic
+  hydraulics: Hydraulics and Pneumatics
+  mechanical: Mechanical & Electrical
+  none: None
+  propulsion: Propulsion & Engine Systems
+  protective: Protective & Safety Systems
+  refrigeration: Refrigeration; Air Conditioning & Heating
+  steel: Steel Fabrication
+  welding: Welding
 regions:
-- Australian Marine Complex
-- Gascoyne
-- Goldfields-Esperance
-- Great Southern
-- Kimberley
-- Mid West
-- Naval Base
-- North Regional WA
-- Peel
-- Perth
-- Perth Metropolitan
-- Pilbara
-- South Regional WA
-- South West
-- Wheatbelt
+  australian: Australian Marine Complex
+  gascoyne: Gascoyne
+  goldfields: Goldfields-Esperance
+  great: Great Southern
+  kimberley: Kimberley
+  mid: Mid West
+  naval: Naval Base
+  north: North Regional WA
+  peel: Peel
+  perth: Perth
+  perth-metropolitan: Perth Metropolitan
+  pilbara: Pilbara
+  south: South Regional WA
+  south-west: South West
+  wheatbelt: Wheatbelt
+capability_streams:
+  aasl: AASL - Air and Sea Lift
+  aerial: Aerial; Strike and Air Combat
+  base: Base Support
+  education: Education and Training
+  electronic: Electronic Warfare and Cyber
+  iscw: ISCW - Intelligence, Surveillance, Reconnaissance, Space, Electronic Warfare and Cyber
+  intelligence: Intelligence; Surveillance and Reconnaissance
+  keyn: KEYN - Key Enablers
+  lcaw: LCAW - Land Combat and Amphibious Warfare
+  land: Land Forces
+  logistics: Logistics and Supply Chain
+  masw: MASW - Maritime and Anti-Submarine Warfare
+  maritime: Maritime and Sub-Sea Forces
+  research: Research and Technology Development
+  saac: SAAC - Strike and Air Combat
+  space: Space
+ownerships:
+  indigenous: Indigenous Owned
+  veteran: Veteran Owned

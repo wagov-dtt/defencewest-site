@@ -1,0 +1,103 @@
+---
+name: Volz Australia Pty Ltd
+date: '2024-01-01'
+website: https://www.volz.com.au
+contact_name: Rhys Jones
+contact_title: WA Sales & Product Manager
+address: 8/50 Sustainable Ave, Bibra Lake WA 6163
+phone: 0439 426 653
+email: rhys@volz.com.au
+is_sme: true
+stakeholders:
+- defence
+capability_streams:
+- aasl
+- masw
+- lcaw
+capability_domains:
+- amphibious
+- armour
+- destroyers
+- frigates
+- maritime
+- minor
+- multi
+- replenishment
+- science
+- search
+- special
+- submarines
+industrial_capabilities:
+- cnc
+- composites
+- design
+- electronics
+- fuel
+- hydraulics
+- mechanical
+- propulsion
+- protective
+- refrigeration
+regions:
+- perth-metropolitan
+latitude: -32.1035797
+longitude: 115.8119605
+---
+
+## Overview
+
+Volz Australia was founded in 2005 with a vision to provide Superior Stainless Steel Hydraulic Components by combining quality products with decades of experience & expertise & incorporating outstanding customer service at the forefront of everything we do.
+
+Our knowledge & experience allow us to understand our clients & their expectations. From the initial inquiry to the successful completion of the project we take pride in our _People_ , our _Products_ & our _Performance_.
+
+Excellence in Quality, Safety & Environmental Management is driven by the leadership qualities of all Volz Australia employees, allowing us to bring to the market the best products & service across a wide range of industries & applications.
+
+As a proud member of the Volz Group based in Germany, our core business is 316Ti Stainless Steel components made to exacting international standards, certified globally. With stocks in NSW, WA, & QLD we are Australia's largest stockist. Supported by warehouses in Singapore & Germany we are able to service your needs locally & globally.
+
+Our range of products now extends beyond the 316Ti components ranging from high performance valving to certified clamping technology and much more.
+
+We welcome you to the Volz Australia Community, Our People, Our Products and Our Performance. We look forward to hearing from you.
+
+## Capabilities
+
+A proud member of the Volz Group based in Germany; our core business is 316Ti Stainless Steel components made to exacting international standards.
+
+EN10204/3.1 material traceability is available for all products. With stocks in NSW, WA & QLD, supported by warehouses in Singapore & Germany, Volz are able to service your needs locally & globally.
+
+**DISCRIMINATORS**
+
+316Ti - Titanium Stainless Steel and specialist production
+
+Material traceability to EN10204/3.1
+
+DNV-GL Type Approvals for Flexible Hoses to CP-0183
+
+6 locations throughout Asia-Pacific - 3 in Australia
+
+Supplier to Essential industry - Defence, Oil & Gas, Shipping, Mining, Agriculture, Power Generation
+
+Global support & supply network
+
+Experienced Senior Management Team
+
+**PRODUCTS**
+
+Threaded adaptors, tees & elbows, Hose fittings compatible with various standards/brands of hose, DIN2353 metric compression fittings,
+
+Clamping technology - DIN3015, Tube - Imperial & Metric, Twin ferrule tube fittings, Weld-on fittings, Test points & adaptors, High pressure ball valves - all styles
+
+Quick release couplings - all styles, Fire suppression fittings, Lubrication fittings, SAE flanged adaptors, Tooling, Specialised production, Exotics - SAF, Monel, CuNi
+
+**KEY CUSTOMERS**
+
+Total Marine Technology, MMA Offshore, ASC, Austal, QMTS, JFD Global, BAE Systems, Cooper Fluid Systems, Alfagomma Group, Pirtek Fluid Systems,
+
+Veem Engineering, Terex Jacques, Enermech, Ryco Hydraulics, Bosch Rexroth, Parker Hannifin, Enzed, Multiple Australian OEM's
+
+**QUALITY & ACCREDITATIONS**
+
+As part of our quality program, Volz currently holds certification for our products with internationally recognised bodies:
+
+DNV-GL, Lloyd's Register, ABS, Bureau Veritas, RMRS, GOST, CCS, RINA
+
+Volz also conforms and is certified to the following ISO standards: ISO9001, ISO14001, ISO50001

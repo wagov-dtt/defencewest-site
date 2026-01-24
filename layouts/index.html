@@ -1,0 +1,304 @@
+{{ define "main" }} {{/* Load all company pages and computed data */}} {{-
+$computed := .Site.Data.computed -}} {{- $companies := slice -}} {{- range where
+.Site.RegularPages "Section" "company" -}} {{- $company := .Params -}} {{-
+$company = merge $company (dict "slug" .File.BaseFileName) -}} {{- $companies =
+$companies | append $company -}} {{- end -}} {{- $companies = sort $companies
+"name" -}} {{- $taxonomies := .Site.Data.taxonomies -}}
+
+<h1 class="visually-hidden">
+  WA Defence Industry and Science Capability Directory
+</h1>
+
+<div class="directory" id="directory">
+  <!-- Filters Sidebar -->
+  {{ partial "filters.html" (dict "companies" $companies "taxonomies"
+  $taxonomies "site" .Site) }}
+
+  <!-- Main Content -->
+  <main>
+    <!-- Search bar with view toggle -->
+    <div class="search-row">
+      <input
+        type="search"
+        name="q"
+        form="filters"
+        placeholder="Search companies..."
+        autocomplete="off"
+        aria-label="Search companies"
+      />
+      <label class="view-toggle">
+        <span>Cards</span>
+        <input
+          type="checkbox"
+          role="switch"
+          name="view"
+          value="map"
+          form="filters"
+        />
+        <span>Map</span>
+      </label>
+    </div>
+
+    <!-- Cards Grid -->
+    <div class="company-grid" id="company-grid">
+      {{- range $companies }} {{ partial "company-card.html" (dict "company" .
+      "computed" (index $computed .slug) "mode" "directory") }} {{- end }}
+    </div>
+
+    <!-- Map iframe (hidden by default) -->
+    <iframe id="map-iframe" class="hidden" title="Map"></iframe>
+
+    <!-- No results message -->
+    <p class="no-results">No companies match your filters.</p>
+  </main>
+</div>
+
+<noscript>
+  <style>
+    .clear-all,
+    .clear-section {
+      display: none !important;
+    }
+    .no-results {
+      display: none !important;
+    }
+  </style>
+</noscript>
+
+<script>
+  (function() {
+    "use strict";
+
+    // === DOM ===
+    const $ = (s) => document.querySelector(s);
+    const $$ = (s) => [...document.querySelectorAll(s)];
+    const form = $("#filters");
+    const cards = $$(".company-item");
+    const gridEl = $("#company-grid");
+    const mapIframe = $("#map-iframe");
+    const countEl = $(".visible-count");
+    const noResults = $(".no-results");
+    const viewSwitch = $("input[name='view']");
+
+    let mapLoaded = false;
+
+    // === Get Filters from Form ===
+    function getFilters() {
+      const data = new FormData(form);
+      return {
+        search: (data.get("q") || "").trim().toLowerCase(),
+        f: data.getAll("f"),  // All filter values like "st:ai", "cs:base", etc.
+      };
+    }
+
+    // === Match Card Against Filters ===
+    function matchesFilters(dataset, filters) {
+      // Search
+      if (filters.search) {
+        const text = (dataset.search || "").toLowerCase();
+        if (!text.includes(filters.search)) return false;
+      }
+
+      // Taxonomy filters - card's data-f contains "st:ai|cs:base|..."
+      // All selected filters must be present (AND logic)
+      if (filters.f.length) {
+        const cardFilters = (dataset.f || "").toLowerCase().split("|");
+        if (!filters.f.every(f => cardFilters.includes(f.toLowerCase()))) return false;
+      }
+
+      return true;
+    }
+
+    // === URL Sync ===
+    function syncFromURL() {
+      const params = new URLSearchParams(location.search);
+
+      // Populate form fields from URL
+      for (const input of form.elements) {
+        if (input.type === "checkbox") {
+          input.checked = params.getAll(input.name).includes(input.value);
+        } else if (input.name) {
+          input.value = params.get(input.name) || "";
+        }
+      }
+
+      // Apply view state without updating URL again
+      setView(viewSwitch?.checked, false);
+    }
+
+    function updateURL() {
+      const params = new URLSearchParams(new FormData(form));
+      const url = params.toString() ? "?" + params : location.pathname;
+      history.replaceState({}, "", url);
+    }
+
+    // === Search Highlighting ===
+    function updateHighlight(query) {
+      if (!CSS.highlights) return;
+      CSS.highlights.clear();
+      if (!query) return;
+
+      const ranges = [];
+      const q = query.toLowerCase();
+
+      $$(".company-item:not(.filter-hidden) .name").forEach((el) => {
+        const textNode = el.firstChild;
+        if (!textNode || textNode.nodeType !== Node.TEXT_NODE) return;
+        const text = textNode.textContent.toLowerCase();
+        const idx = text.indexOf(q);
+        if (idx >= 0) {
+          try {
+            const range = new Range();
+            range.setStart(textNode, idx);
+            range.setEnd(textNode, idx + q.length);
+            ranges.push(range);
+          } catch (e) {}
+        }
+      });
+
+      if (ranges.length) CSS.highlights.set("search-results", new Highlight(...ranges));
+    }
+
+    // === Update Display ===
+    function updateCards() {
+      const filters = getFilters();
+      let visibleCount = 0;
+
+      cards.forEach((card) => {
+        const visible = matchesFilters(card.dataset, filters);
+        card.classList.toggle("filter-hidden", !visible);
+        if (visible) visibleCount++;
+      });
+
+      if (countEl) countEl.textContent = visibleCount;
+      if (noResults && !isMapView()) {
+        noResults.style.display = visibleCount === 0 ? "block" : "none";
+      }
+
+      updateHighlight(filters.search || "");
+    }
+
+    // === Map Communication ===
+    function updateMap() {
+      if (!isMapView() || !mapLoaded) return;
+      const params = new URLSearchParams(new FormData(form)).toString();
+      mapIframe.contentWindow?.postMessage({ type: "updateFilters", params }, "*");
+    }
+
+    window.addEventListener("message", (e) => {
+      if (e.data?.type === "markerCount" && isMapView()) {
+        if (countEl) countEl.textContent = e.data.count;
+        if (noResults) noResults.style.display = e.data.count === 0 ? "block" : "none";
+      }
+    });
+
+    // === View Toggle ===
+    function isMapView() {
+      return viewSwitch?.checked;
+    }
+
+    function setView(showMap, updateUrl = true) {
+      gridEl.classList.toggle("hidden", showMap);
+      mapIframe.classList.toggle("hidden", !showMap);
+
+      if (showMap && !mapLoaded) {
+        mapIframe.src = "{{ "map/" | relURL }}";
+        mapLoaded = true;
+      }
+
+      if (updateUrl) updateURL();
+      showMap ? updateMap() : updateCards();
+      if (showMap && noResults) noResults.style.display = "none";
+    }
+
+    viewSwitch?.addEventListener("change", () => setView(viewSwitch.checked));
+    mapIframe.addEventListener("load", updateMap);
+
+    // === Event Listeners ===
+    function onFilterChange() {
+      updateCards();
+      updateMap();
+      updateURL();
+    }
+
+    // Debounced search
+    let searchTimeout;
+    form.q?.addEventListener("input", () => {
+      clearTimeout(searchTimeout);
+      searchTimeout = setTimeout(onFilterChange, 150);
+    });
+
+    // All other form changes
+    form.addEventListener("change", () => {
+      onFilterChange();
+      updateOptionVisibility();
+    });
+
+    // === Filter Options (filters the taxonomy lists) ===
+    const filterOptionsInput = $("#filter-options");
+    const allFilterItems = $$(".filters .filter-item");
+    const allStreamLabels = $$(".filters .stream-icon");
+    const allDetails = $$(".filters details");
+
+    // Store default open state
+    const defaultOpenState = new Map();
+    allDetails.forEach(d => defaultOpenState.set(d, d.open));
+
+    function updateOptionVisibility() {
+      const query = (filterOptionsInput?.value || "").toLowerCase().trim();
+
+      // Filter checkbox list items (always show checked items)
+      allFilterItems.forEach(item => {
+        const label = item.querySelector(".filter-label");
+        const isChecked = item.querySelector("input")?.checked;
+        const matches = !query || (label?.textContent || "").toLowerCase().includes(query);
+        item.hidden = !matches && !isChecked;
+      });
+
+      // Filter stream icon labels (always show checked items)
+      allStreamLabels.forEach(label => {
+        const isChecked = label.querySelector("input")?.checked;
+        const matches = !query || label.title.toLowerCase().includes(query);
+        label.hidden = !matches && !isChecked;
+      });
+
+      // Hide details with no visible items, expand when filtering or has selections
+      allDetails.forEach(details => {
+        const filterList = details.querySelector(".filter-list");
+        const streamIcons = details.querySelector(".stream-icons");
+        const hasChecked = details.querySelector("input:checked");
+
+        if (filterList) {
+          const hasVisible = [...filterList.querySelectorAll(".filter-item")].some(i => !i.hidden);
+          details.hidden = !hasVisible;
+          details.open = hasChecked || (query && hasVisible) || defaultOpenState.get(details);
+        } else if (streamIcons) {
+          const hasVisible = [...streamIcons.querySelectorAll(".stream-icon")].some(l => !l.hidden);
+          details.hidden = !hasVisible;
+          details.open = hasChecked || (query && hasVisible) || defaultOpenState.get(details);
+        }
+      });
+    }
+
+    filterOptionsInput?.addEventListener("input", updateOptionVisibility);
+
+    // Also clear filter-options on form reset
+    form.addEventListener("reset", () => {
+      setTimeout(() => {
+        updateOptionVisibility();
+        onFilterChange();
+      }, 0);
+    });
+
+    // Prevent form submission (we use live filtering)
+    form.addEventListener("submit", (e) => e.preventDefault());
+
+    window.addEventListener("popstate", () => { syncFromURL(); updateCards(); updateMap(); });
+
+    // === Init ===
+    syncFromURL();
+    updateCards();
+  })();
+</script>
+
+{{ end }}
