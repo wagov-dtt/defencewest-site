@@ -1,0 +1,62 @@
+---
+name: AROSE
+date: '2024-01-01'
+website: https://www.arose.org.au
+contact_name: Leanne Cunnold
+contact_title: CEO
+address: Level 9 191 St Georges Terrace, PERTH WA 6000
+phone: 1300 236 354
+email: connect@arose.org.au
+is_sme: true
+capability_streams:
+- space
+capability_domains:
+- science
+- space
+- robotics
+industrial_capabilities:
+- none
+regions:
+- gascoyne
+- goldfields
+- great
+- kimberley
+- mid
+- peel
+- perth
+- pilbara
+- south-west
+- wheatbelt
+latitude: -31.95427
+longitude: 115.85333
+---
+
+## Overview
+
+Australian Remote Operations for Space and Earth (AROSE) consortium was founded in February 2020, borne from the vision of former astronaut and Deputy Administrator of NASA, Colonel Pamela Melroy, and Head of Intelligent and Autonomous Systems at Woodside, Russell Potapinski.
+
+Standing at the forefront of knowledge and technology transfer between Australia's traditional industry sectors and the burgeoning international space sector, AROSE brings these sectors together to collaborate on targeted, industry-led projects with Australia's world-leading Remote Operations expertise at their core.
+
+These projects deliver high-end, niche solutions and technology for applications from Earth to space and back again; solutions and applications that can transform industries, explore space, and return benefits to our economy, workforce, communities, and the planet, now and for future generations.
+
+**Our mission**
+
+  * Drive knowledge exchange across sectors from Space-to-ground and ground-to-Space through industry-led projects.
+  * Build and advocate national capability and develop the future workforce to expand remote operations.
+  * Secure Australia's role in the international Space sector.
+
+## Capabilities
+
+Our Members and other ambitious companies come to us with their big challenges, those they can't solve with traditional approach or technology.
+
+AROSE engages the right expertise across our consortium of members who bring diversity of thought, new approaches and a collaborative effort to deliver an innovative solution which enables transformation.
+
+Our consortium boasts technology expertise in remote operations, robotics and automation, space robotics, systems engineering, interoperability, communications, cybersecurity, data science and consultancy, high power computing, planetary science, rocket and launch, satellites, spacecraft, planetary rovers, and smart surface sensors. With members including leading forces in the Australian Defence Industry, our consortium have the experience and expertise to solve challenges.
+
+Recently, AROSE has been awarded a $1.7million grant through the Department of Defence's Schools Pathways Program to deliver the AROSE Virtual and In-person STEM Training and Awareness (AVISTA) Program. The AVISTA Program will engage students, parents, and teachers across Australia through hands-on learning experiences, immersive Virtual Reality (VR) technology, and provide direct insights into defence industry career pathways.
+
+## Discriminators
+
+Our members consortium boasts technology expertise in remote operations, robotics and automation, space robotics, systems engineering, interoperability, communications, cybersecurity, data science and consultancy, high power computing, planetary science, rocket and launch, satellites, spacecraft, planetary rovers, and smart surface sensors.
+
+AROSE Members include Gilmour Space Technologies, Nova Systems, Gunggandji Aerospace**,** Fugro, Raytracer, Woodside Energy, The University of Western Australia, Curtin University, UNSW Sydney, Cicada Innovations, Deloitte Space and Rio Tinto.

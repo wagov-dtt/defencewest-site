@@ -1,15 +1,22 @@
 [project]
-name = "defencewest-scraper"
+name = "defencewest-scripts"
 version = "0.1.0"
-description = "Scraper for WA Defence Industry Directory"
+description = "Scripts for WA Defence Industry Directory"
 requires-python = ">=3.12"
 dependencies = [
+    # Scraping
     "httpx>=0.28.0",
     "selectolax>=0.4.0",
     "html2text>=2024.0.0",
     "pyyaml>=6.0",
     "diskcache>=5.6.3",
-    "mdformat>=1.0.0",
+    "python-slugify>=8.0",
+    # Export
+    "pandas>=2.0",
+    "openpyxl>=3.1",
+    "python-frontmatter>=1.0",
+    # Map generation
+    "pymgl>=0.5.0",
 ]
 
 [tool.hatch.build.targets.wheel]

@@ -1,0 +1,24 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="{{ .Description | default .Site.Params.description }}">
+
+<link rel="icon" href="{{ "favicon.ico" | relURL }}">
+
+{{- $picoTheme := .Site.Params.picoTheme | default "azure" -}}
+{{- $cdn := "https://cdn.jsdelivr.net/npm" -}}
+<link rel="stylesheet" href="{{ $cdn }}/@picocss/pico@2/css/pico.{{ $picoTheme }}.min.css">
+<link rel="stylesheet" href="{{ "styles.css" | relURL }}">
+
+{{- if eq .Section "company" }}
+<title>{{ .Params.name }} | {{ .Site.Title }}</title>
+{{- else }}
+<title>{{ .Title | default .Site.Title }}</title>
+{{- end }}
+
+{{- with .Params.jsonLd }}
+<script type="application/ld+json">{{ . | jsonify | safeJS }}</script>
+{{- end }}
+
+{{- if .IsHome }}
+<link rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" href="{{ "feed.xml" | relURL }}">
+{{- end }}

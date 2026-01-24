@@ -1,0 +1,73 @@
+---
+name: Sirius Geopolitics Pty Ltd
+date: '2024-01-01'
+website: https://www.siriusgeopolitics.au
+contact_name: Alana Ford
+contact_title: Founder & Managing Director
+address: Withheld, Rockingham WA 6169
+phone: 0402027683
+email: hello@siriusgeopolitics.au
+is_sme: true
+stakeholders:
+- defence
+- academic
+- defence-west
+- defence-science
+capability_streams:
+- education
+- electronic
+- intelligence
+- research
+industrial_capabilities:
+- none
+regions:
+- peel
+- perth
+latitude: -32.32457
+longitude: 115.7693535
+---
+
+## Overview
+
+Sirius Geopolitics is a boutique research and advisory service that helps governments, institutions and defence industry vendors navigate global trends and critical international challenges. We specialise in independent analysis at the nexus of international affairs, defence and security, and technology. We translate complexity into timely and actionable insights. Our work spans customised research and analysis, geopolitical advice for decision-making, policy development, and public engagements.
+
+Our vision is to shape a more informed, connected, and resilient world, where democratic values, responsible technology, and strategic cooperation underpin lasting stability and collective strength.
+
+## Capabilities
+
+**Sirius Geopolitics provides strategic intelligence, geopolitical analysis, and advisory services that help defence industry stakeholders understand and navigate the rapidly evolving Indo Pacific security environment.** Our capabilities centre on translating complex geopolitical, technological, and national security trends into actionable insights that support industry decision-making, risk management, business development, and strategic positioning.
+
+We specialise in:
+• **Geostrategic research and analysis** across the Indo-Pacific, including great-power competition, hybrid warfare, disinformation, cognitive security, and emerging technologies.
+• **Defence policy interpretation and strategic forecasting** , helping organisations align products, services, and investment decisions with Australia’s evolving priorities, including AUKUS, critical minerals, sovereign capability, and workforce challenges.
+• **Stakeholder engagement and briefing services** , including tailored presentations, capability briefings, and executive education for industry, government, and community stakeholders.
+
+**Recent work includes:**
+• Authoring multiple publications for the Perth USAsia Centre focused on defence, technology, and strategic competition—including _Disinformation and Cognitive Warfare_ and _Technopolitik: Technology, Geostrategic Competition and Warfare._
+• Delivering expert commentary and public engagement on AUKUS, WA’s defence industrial base, and Indo Pacific strategic trends, supporting local companies seeking to understand defence priorities and operational environments.
+• Providing insights and advice to defence and military forces, including the Royal Australian Navy, and most recently, France's military academy.
+• Providing tailored geopolitical and security briefings to defence-adjacent industry groups, including contributions to organisations such as the Women in Defence Association, and participation in defence-industry events across Western Australia.
+
+## Discriminators
+
+• **Indo-Pacific strategic intelligence expertise** with specialist capability in threat environment assessment, hybrid warfare analysis, disinformation risk, and geostrategic forecasting.
+
+• **Demonstrated defence-sector relevance** , with publications and analysis directly informing defence, government, and industry stakeholders (e.g., _Disinformation and Cognitive Warfare_ , _Technopolitik_ , _State of Democracy in the Indo-Pacific_).
+
+• **Advanced analytical capability** including horizon scanning, scenario development, strategic risk identification, and technology-policy assessment (AI, quantum, cyber, autonomous systems).
+
+• **Strong WA defence-industry awareness** with understanding of HMAS Stirling, Henderson industrial base, AUKUS infrastructure, and the state’s critical minerals/energy-security landscape.
+
+• **High-level government and defence engagement experience** , including policy interpretation, strategic communication, and senior stakeholder advisory.
+
+• **Professional memberships and affiliations:** Perth USAsia Centre Affiliated Expert (2026), Women in the Alliance Network, Women in Defence community, Henderson Alliance, AIDN.
+
+• **Clearance suitability:** experience working in national security settings and eligible for AGSVA clearance.
+
+• **Established networks across defence, government, academia and industry** enabling timely insights, stakeholder access, and informed situational awareness.
+
+• **Technical communication proficiency** , delivering classified-adjacent briefings, executive presentations, strategic reports, and defence-aligned narrative development.
+
+• **Boutique, agile service model** allowing rapid turnaround, customised analysis, and cost-efficient support for SMEs entering or scaling within the defence market.
+
+• **Key clients and partners:** Perth USAsia Centre, WA defence-aligned SMEs, industry groups, academic and research institutions, and Indo-Pacific strategic partners.

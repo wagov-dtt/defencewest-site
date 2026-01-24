@@ -1,0 +1,34 @@
+---
+name: Regal Engineering
+date: '2024-01-01'
+website: https://www.regaleng.com.au
+contact_name: Jamie Crofts
+contact_title: Manager
+address: 28 Poletti Road, Cockburn Central WA 6164
+phone: 08 9414 1011
+email: admin@regaleng.com.au
+is_sme: true
+capability_streams:
+- masw
+capability_domains:
+- armour
+- maritime
+- minor
+- multi
+industrial_capabilities:
+- aluminium
+- steel
+- welding
+latitude: -32.126032
+longitude: 115.8478325
+---
+
+## Overview
+
+Regal Engineering is a locally owned and operated heavy engineering and fabrication provider, with over 20 years experience in the fabrication of components for the Mining and Oil & Gas industry in Australia.
+We specialise in the general fabrication of structural steel, piping systems, installation of mechanical equipment and welding of carbon and exotic materials for onshore and offshore applications. We have the capabilities to provide boiler making, pipe fitting and welding services at our workshop or onsite. With our extensive network of trusted suppliers, we can offer a complete end to end solution to meet all of your project requirements. This includes handling any machining, sandblasting/painting, electrical, mechanical repairs and non-destructive testing (NDT). We are dedicated to maintaining the highest quality service by exceeding our customer's expectations with every project we deliver.
+Our work is executed in accordance with the international management systems standard ISO 9001. Safety remains our number one priority. We are committed to providing a healthy and safe work environment for all of our employees, clients and those around us. We promote responsible management of health and safety through our Health and Safety Management System, which aims to prevent hazards and mitigate risk
+
+## Capabilities
+
+Regal Engineering is a leading multi-disciplinary engineering and fabrication company, specialising in providing high quality fabrication, welding, structural, piping and mechanical services for the mining, marine and onshore and offshore Oil & Gas industries in Australia. With over 20 years engineering experience, we have the expertise to meet any challenge onsite or in the workshop. Whether your facilities are fixed or floating, we can provide a robust solution that will exceed your expectations in quality, functionality, cost and safety.

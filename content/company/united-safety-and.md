@@ -1,0 +1,40 @@
+---
+name: United Safety and Survivability Corporation
+date: '2024-01-01'
+website: https://www.unitedsafetycorporation.com.au
+contact_name: 'Chris Wheeler '
+contact_title: WA Business Development Manager
+address: 3/1 Hathor Way, Bibra Lake WA 6163
+phone: 04398434727
+email: chris.Wheeler@ussc.com.au
+is_sme: true
+stakeholders:
+- defence
+capability_streams:
+- masw
+- lcaw
+capability_domains:
+- air
+- armour
+- barracks
+- base
+- land
+- minor
+- missile
+- multi
+industrial_capabilities:
+- electronics
+- protective
+regions:
+- perth-metropolitan
+latitude: -32.0950492
+longitude: 115.8081527
+---
+
+## Overview
+
+We move Life Forward; every day, United Safety reaches people in high-stakes environments where lives can be on the line at any moment. United Safety and Survivability Corporation are committed to delivering the most innovative and reliable safety and survivability solutions that our customers can trust to protect life and property. As a global leader in the design and engineering of world-class safety, survivability, and technology solutions across a variety of industries and categories, our portfolio of products and services includes Fire protection prevention and maintenance, seating for commercial buses, fire trucks, ambulances, military vehicles, motor coaches, rail cars and trains. We design and build specialty soldier survivability systems for military vehicles, and our revolutionary fire suppression systems are used in school buses, public transit, heavy machinery, and more. Active Air Purification and AEGIS® Microbial Surface Treatment help protect the public and operators by eliminating bacteria and viruses from air and surfaces.
+
+## Capabilities
+
+Leading the world in high-performance military solutions. We're proud to manufacture cutting-edge safety and survivability seating solutions for heavy-duty military use. Our Global Seating with battlefield-proven credentials as a world leader in the development and production of soldier survivability systems. United Safety Australia has the ability to provide complete supply chain options. Seating Fire Safety and Suppression - vehicles, facilities, marine, deployable cabins Air Purification Asset Telematics Buk Fire Fighting Foam (PFAS free) Remote Asset surveillance, monitoring and fire Protection.

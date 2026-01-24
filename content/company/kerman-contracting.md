@@ -1,0 +1,67 @@
+---
+name: Kerman Contracting
+date: '2024-01-01'
+website: https://kerman.com.au
+contact_name: James Rowdon
+contact_title: Business Development Director
+address: 30 Kearns Crescent, Ardross WA 6153
+phone: 0478590705
+email: james.rowdon@kerman.com.au
+is_sme: true
+stakeholders:
+- defence
+- defence-west
+capability_streams:
+- logistics
+capability_domains:
+- air
+- barracks
+- base
+- refuelling
+- training-ranges
+- sustainment
+industrial_capabilities:
+- design
+- fuel
+- mechanical
+- steel
+regions:
+- gascoyne
+- goldfields
+- great
+- kimberley
+- mid
+- peel
+- perth
+- pilbara
+- south-west
+- wheatbelt
+latitude: -32.02014
+longitude: 115.83577
+---
+
+## Overview
+
+Kerman is a Tier 2 majority family owned business. Established in 1981 by Brian Kerman. Kerman has been involved in the Agricultural, Resource, and General Industrial sectors from our inception. Defence is a relatively new sector for Kerman, utilising the same skills as with the other sectors. Kerman is an Industrial Constructor specialising in bulk storage and materials handling facilities (conveyors, chutes, hoppers and the like), structural, mechanical & piping (SMP) works associated with building process plants along with numerous other non-process infrastructure, including structures like Warehouses, Washdowns, Tyre Change, Waste Recovery & Fuel Facilities, Accommodation Villages & Workshops.
+
+## Capabilities
+
+Projects from a value of $10M up to $200M.
+
+The following areas define the disciplines of design, supply and installation work undertaken by Kerman: Engineering Design Management; Civil & Infrastructure Construction; Engineering Construction; Structural, mechanical & piping (SMP); E&I and hydraulic services, and; General building construction.
+
+Kerman has successfully completed the design & construction of projects totaling more than $2.7B, including competitively tendered lump sum and open book negotiated contracts.
+
+Kerman has an excellent record for safety, high quality, workplace relations, budget management, and project completion timing. Our capability is defined by 3 key areas, mentioned above, with delivery by traditional means, design and construct; Engineering, Procurement & Construction (EPC); Cost Reimbursable; Open Book ECI or Target Cost Estimate. Kerman's point of difference is the ability to leverage over 40 years of experience and knowledge to provide cost-effective, innovative design and construction solutions for our clients, retaining a highly-skilled, long term, hands-on management team, ability to deliver, high quality, safe and timely outcomes for our clients. Kerman recognises, and is committed to, utilising local business services and suppliers wherever practical, where the work is not being self-performed, for the benefit of both the local community and Kerman.
+
+Camp, workshops, fuel facilities, warehouses/hangars, administration facilities, wash down facilities, pump stations, material handling facilities.
+
+## Discriminators
+
+Kerman has Certification to ISO 9001:2015, ISO 45001:2018, ISO 14001:2015 along with Federal WHS accreditation.
+
+Kerman is a multi-disciplined Industrial Constructor specializing in bulk storage sheds and materials handling facilities (conveyors, chutes, hoppers), structural, mechanical & piping (SMP) works associated with building process plants, along with numerous other non-process infrastructure including structures like Warehouses, Waste Recovery & Fuel Facilities, Accommodation Villages & Workshops.
+
+Kerman's point of difference is the ability to leverage over 40 years of experience and knowledge to provide cost-effective, innovative design and construction solutions for our clients. Kerman's success in retaining a highly-skilled, long term, hands-on management team and supporting the workforce is a key component of the ability to deliver, high quality, safe and timely outcomes for our clients. Kerman prides ourselves on our relationships with not only our clients, but with our suppliers, consultants and sub-contractors. Kerman recognises, and is committed to, utilising local business services and suppliers wherever practical, where the work is not being self-performed, for the benefit of both the local community and Kerman. Local Industry Participation has enabled Kerman to establish close, ongoing, relationships with numerous local businesses providing invaluable support to the success of the project. This commitment is driven by our Directors and Senior Management and requires practical implementation by our site teams.
+
+Much of Kerman's success can be attributed to the ability to combine the strength and stability of a large organization with the service, flexibility, openness, and honesty somebody would expect from a smaller business. Kerman's strong culture is supported by our values of "Relationships, Adaptive, Reliable, & Empowered".

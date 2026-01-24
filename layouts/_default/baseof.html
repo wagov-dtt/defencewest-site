@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    {{- partial "head.html" . -}}
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    {{- partial "navbar.html" . -}}
+
+    <main id="main-content" class="container-fluid">
+      {{- block "main" . }}{{- end }}
+    </main>
+  </body>
+</html>

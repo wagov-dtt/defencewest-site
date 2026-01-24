@@ -1,0 +1,111 @@
+---
+name: International Maritime Consultants Pty Ltd T/A IMC Naval Architects
+date: '2024-01-01'
+website: https://imcau.com.au
+contact_name: Justin McPherson
+contact_title: Managing Director
+address: 'Street address: Suite 2, Level 2, Atwell Buildings 3 Cantonment Street, Fremantle WA 6160'
+phone: +61 8 9335 1991
+email: imc@imcau.com.au
+is_sme: true
+capability_streams:
+- aasl
+- masw
+- lcaw
+capability_domains:
+- amphibious
+- maritime
+- minor
+- multi
+- replenishment
+industrial_capabilities:
+- design
+latitude: -32.05393
+longitude: 115.74668
+---
+
+## Overview
+
+IMC Naval Architects (IMC) is an independent Australian naval architecture and marine engineering consultancy servicing the global commercial and defence sectors. Headquartered in Fremantle, Western Australia and established in 1994, IMC provides ship design, vessel modification & conversion, naval architecture, offshore engineering and acquisition management services. IMC is a member of the Australian Dept. of Defence - Defence Support Services (DSS) panel, while also being DISP and ISO 9001:2000 accredited. Independent of shipyards and OEMs, IMC is able to offer advice free of third-party influence, while services are backed by a team of accredited and experienced professional engineers using the latest digital tools.
+
+IMC offers consultancy services to Australian State and Federal Government agencies both above and below the line with a presence in Canberra to facilitate Commonwealth engagement.
+
+## Capabilities
+
+**SHIP DESIGN**
+
+IMC works collaboratively with clients to provide bespoke vessel solutions tailored to operational objectives. The company has the skilled personnel, the latest design tools and experience to work successfully across the design cycle. From requirements analysis through concept development, to detailed structural and systems engineering and shipyard production drawings in both steel and aluminium.
+
+•              Offshore Vessels
+
+•              Defence / Law Enforcement Vessels
+
+•              Commercial Vessels
+
+•              Fishing / Research Vessels
+
+**MODIFICATION & CONVERSION**
+
+Utilising its comprehensive in-house design capability, IMC offers project-related vessel modifications through to full vessel conversions. Through the development of a detailed understanding of project requirements, IMC combines the skills and experience of both parties to optimise solutions for the smallest modification through to a complete vessel role change. With experience and expertise across multiple marine sectors, IMC is able to identify and unlock value in existing vessel assets to provide their owners with new revenue streams as market conditions and technical solutions evolve.
+
+•              Vessel Conversion
+
+•              Vessel Modification
+
+**NAVAL ARCHITECTURE**
+
+Drawing on experience spanning the marine, shipping and offshore sectors, IMC offers naval architectural consultancy in support of operational decision making, strategic planning, system optimisation and regulatory compliance.
+
+•              Motion and Operability Analysis
+
+•              Stability Analysis
+
+•              Structural Design & Analysis
+
+•              Systems Engineering
+
+•              Regulatory Compliance
+
+**OFFSHORE ENGINEERING**
+
+In support of Australia's burgeoning offshore oil and gas sector, IMC has developed a comprehensive understanding of the engineering needs of the offshore and broader maritime industries. Utilising a suite of the latest software design and analysis tools, combined with a comprehensive understanding of the relevant Codes and Standards, IMC offers a broad range of engineering solutions for the offshore sector.
+
+•              Lift Engineering
+
+•              Transport Engineering
+
+•              Mooring Design & Analysis
+
+•              Operations Simulation
+
+•              Jack-up Rigs
+
+**ACQUISITION MANAGEMENT**
+
+IMC supports Government and commercial vessel acquisition programs with its technical and commercial expertise ensuring requirements and budgets are effectively and efficiently translated into successful operational capability. Working across the full range of vessel types and work scopes, IMC offers services in support of the following key project stages;
+
+•              Requirements definition
+
+•              Conceptual design
+
+•              Technical specification development
+
+•              Tender process management
+
+•              Bid management
+
+•              Technical evaluation
+
+•              Commercial evaluation
+
+•              Contract negotiation
+
+•              Contract management
+
+•              Contractor selection
+
+•              Build supervision / owner's representation
+
+•              Commissioning, sea trials and vessel delivery
+
+•              Asset disposal
