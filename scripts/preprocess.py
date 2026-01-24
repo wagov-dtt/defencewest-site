@@ -4,8 +4,9 @@ Preprocess company data to generate computed values and static map images.
 
 Generates:
   - data/computed.yaml: Pre-calculated values for Hugo templates
-  - data/counts.yaml: Taxonomy value counts
   - static/maps/*.png: Static minimap images (when --maps flag used)
+
+Note: Taxonomy counts are now handled by Hugo's native taxonomy system.
 
 Usage:
     uv run python scripts/preprocess.py [--dry-run] [--maps] [--force-maps]
@@ -151,51 +152,6 @@ def process_company(path: Path) -> tuple[str, dict]:
     return slug, computed
 
 
-def generate_counts() -> dict:
-    """Generate taxonomy counts across all companies."""
-    counts = {
-        "stakeholders": {},
-        "capability_streams": {},
-        "capability_domains": {},
-        "industrial_capabilities": {},
-        "regions": {},
-        "company_types": {"prime": 0, "sme": 0, "indigenous": 0, "veteran": 0},
-    }
-
-    for path in CONTENT_DIR.glob("*.md"):
-        content = path.read_text()
-        match = re.match(r"^---\n(.*?)\n---", content, re.DOTALL)
-        if not match:
-            continue
-
-        fm = yaml.safe_load(match.group(1))
-
-        for field in [
-            "stakeholders",
-            "capability_streams",
-            "capability_domains",
-            "industrial_capabilities",
-            "regions",
-        ]:
-            for value in fm.get(field, []):
-                counts[field][value] = counts[field].get(value, 0) + 1
-
-        if fm.get("is_prime"):
-            counts["company_types"]["prime"] += 1
-        if fm.get("is_sme"):
-            counts["company_types"]["sme"] += 1
-        if fm.get("is_indigenous_owned"):
-            counts["company_types"]["indigenous"] += 1
-        if fm.get("is_veteran_owned"):
-            counts["company_types"]["veteran"] += 1
-
-    for field in counts:
-        if field != "company_types":
-            counts[field] = dict(sorted(counts[field].items(), key=lambda x: -x[1]))
-
-    return counts
-
-
 def main():
     dry_run = "--dry-run" in sys.argv
     gen_maps = "--maps" in sys.argv
@@ -227,12 +183,11 @@ def main():
     if dry_run:
         print("\nWould generate:")
         print(f"  data/computed.yaml ({len(computed)} entries)")
-        print(f"  data/counts.yaml")
         if companies_needing_maps:
             print(f"  static/maps/*.png ({len(companies_needing_maps)} images)")
         return
 
-    # Write YAML files
+    # Write computed YAML
     DATA_DIR.mkdir(parents=True, exist_ok=True)
     with open(DATA_DIR / "computed.yaml", "w") as f:
         yaml.dump(
@@ -240,14 +195,7 @@ def main():
         )
     print("Generated data/computed.yaml")
 
-    counts = generate_counts()
-    with open(DATA_DIR / "counts.yaml", "w") as f:
-        yaml.dump(
-            counts, f, default_flow_style=False, allow_unicode=True, sort_keys=False
-        )
-    print("Generated data/counts.yaml")
-
-    # Generate maps if requested (uses Carto Voyager CDN tiles)
+    # Generate maps if requested
     if companies_needing_maps:
         print(f"Generating {len(companies_needing_maps)} map images...")
         for i, (slug, lat, lng) in enumerate(companies_needing_maps):

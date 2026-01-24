@@ -23,7 +23,7 @@ run = ["mise run preprocess", "uv run python scripts/export.py", "hugo --minify 
 [tasks.preprocess]
 run = "uv run python scripts/preprocess.py"
 sources = ["content/company/*.md", "data/taxonomies.yaml"]
-outputs = ["data/computed.yaml", "data/counts.yaml"]
+outputs = ["data/computed.yaml"]
 
 [tasks.maps]
 description = "Generate static minimap images"

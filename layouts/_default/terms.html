@@ -1,0 +1,39 @@
+{{ define "main" }}
+{{/*
+  Taxonomy list page - lists all terms in a taxonomy
+  e.g., /regions/ shows all regions with company counts
+*/}}
+{{- $taxonomies := .Site.Data.taxonomies -}}
+{{- $taxonomyName := .Data.Plural -}}
+{{- $taxonomyMap := index $taxonomies $taxonomyName -}}
+{{- $totalCompanies := len (where .Site.RegularPages "Section" "company") -}}
+
+<nav aria-label="breadcrumb">
+  <ul>
+    <li><a href="{{ "/" | relURL }}">Directory</a></li>
+    <li>{{ .Title }}</li>
+  </ul>
+</nav>
+
+<hgroup>
+  <h1>{{ .Title }}</h1>
+  <p>Browse {{ $totalCompanies }} companies by {{ .Title | lower }}</p>
+</hgroup>
+
+{{- with .Content }}{{ . }}{{ end }}
+
+<div class="grid">
+  {{- range .Data.Terms.ByCount }}
+    {{- $slug := .Page.RelPermalink | replaceRE "^/[^/]+/" "" | replaceRE "/$" "" -}}
+    {{- $displayName := index $taxonomyMap $slug | default .Name -}}
+  <article>
+    <a href="{{ .Page.RelPermalink }}">
+      <strong>{{ $displayName }}</strong>
+      <br><small>{{ .Count }} {{ if eq .Count 1 }}company{{ else }}companies{{ end }}</small>
+    </a>
+  </article>
+  {{- end }}
+</div>
+
+<p><a href="{{ "/" | relURL }}">&larr; Back to Directory</a></p>
+{{ end }}

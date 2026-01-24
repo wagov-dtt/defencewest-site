@@ -136,6 +136,17 @@
             {{- end }}
           </ul>
           {{- end }}
+
+          {{/* Related Companies - based on taxonomy overlap */}}
+          {{- $related := .Site.RegularPages.Related . | first 5 }}
+          {{- with $related }}
+          <strong class="sidebar-section">Similar Companies</strong>
+          <ul class="related-companies">
+            {{- range . }}
+            <li><a href="{{ .RelPermalink }}">{{ .Params.name }}</a></li>
+            {{- end }}
+          </ul>
+          {{- end }}
         </div>
       </aside>
     </div>

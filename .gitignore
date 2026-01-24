@@ -16,7 +16,6 @@ data/cache/
 
 # Generated data (from preprocess.py)
 data/computed.yaml
-data/counts.yaml
 
 # Generated exports
 static/companies.csv
