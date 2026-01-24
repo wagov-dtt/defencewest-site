@@ -9,13 +9,15 @@ $companies | append $company -}} {{- end -}} {{- $companies = sort $companies
   WA Defence Industry and Science Capability Directory
 </h1>
 
-<div class="directory" id="directory">
+<div class="row" id="directory">
   <!-- Filters Sidebar -->
-  {{ partial "filters.html" (dict "companies" $companies "taxonomies"
-  $taxonomies "site" .Site) }}
+  <aside class="col-3 col-m-4 col-s-12 filters-sidebar">
+    {{ partial "filters.html" (dict "companies" $companies "taxonomies"
+    $taxonomies "site" .Site) }}
+  </aside>
 
   <!-- Main Content -->
-  <main>
+  <main class="col-9 col-m-8 col-s-12">
     <!-- Search bar with view toggle -->
     <div class="search-row">
       <input
@@ -40,7 +42,7 @@ $companies | append $company -}} {{- end -}} {{- $companies = sort $companies
     </div>
 
     <!-- Cards Grid -->
-    <div class="company-grid" id="company-grid">
+    <div class="grid-auto" id="company-grid">
       {{- range $companies }} {{ partial "company-card.html" (dict "company" .
       "computed" (index $computed .slug) "mode" "directory") }} {{- end }}
     </div>

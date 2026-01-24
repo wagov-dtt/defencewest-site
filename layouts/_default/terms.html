@@ -22,7 +22,7 @@
 
 {{- with .Content }}{{ . }}{{ end }}
 
-<div class="grid">
+<div class="grid-auto" style="--grid-min: 200px;">
   {{- range .Data.Terms.ByCount }}
     {{- $slug := .Page.RelPermalink | replaceRE "^/[^/]+/" "" | replaceRE "/$" "" -}}
     {{- $displayName := index $taxonomyMap $slug | default .Name -}}

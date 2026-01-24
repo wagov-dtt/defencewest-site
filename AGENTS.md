@@ -105,7 +105,41 @@ Taxonomy keys map to display names via `data/taxonomies.yaml`.
 - `layouts/page/map.html` - MapLibre GL map (standalone iframe, uses OSM vector tiles)
 - `layouts/partials/company-card.html` - Shared card component (directory + map)
 - `layouts/partials/filters.html` - Shared filter sidebar
-- `layouts/company/single.html` - Company detail page
+- `layouts/company/single.html` - Company detail page (view + edit modes)
+- `layouts/_default/terms.html` - Taxonomy list (e.g., /regions/)
+- `layouts/_default/taxonomy.html` - Term page (e.g., /regions/perth/)
+
+## Grid System
+
+Custom 12-column grid system in `styles.css` (uses `.row` to avoid conflict with PicoCSS `.grid`):
+
+```html
+<!-- 12-column layout -->
+<div class="row">
+  <aside class="col-3 col-m-4 col-s-12">Sidebar</aside>
+  <main class="col-9 col-m-8 col-s-12">Content</main>
+</div>
+
+<!-- Auto-fit card grid -->
+<div class="grid-auto">
+  <article>Card 1</article>
+  <article>Card 2</article>
+</div>
+
+<!-- PicoCSS simple grid (equal columns) -->
+<div class="grid">
+  <div>Column 1</div>
+  <div>Column 2</div>
+</div>
+```
+
+**Classes:**
+- `.row` - 12-column container
+- `.col-1` to `.col-12` - column spans (default/large 992px+)
+- `.col-m-1` to `.col-m-12` - medium screens (576-991px)
+- `.col-s-1` to `.col-s-12` - small screens (<576px)
+- `.grid-auto` - auto-fit card grid with `--grid-min` CSS variable
+- `.grid` - PicoCSS native equal-column grid
 
 ## Filtering
 
