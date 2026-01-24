@@ -1,6 +1,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="{{ .Description | default .Site.Params.description }}">
+<meta name="color-scheme" content="light dark">
+
+{{/* Page description */}}
+{{- $description := .Site.Params.description -}}
+{{- with .Description }}{{ $description = . }}{{ end -}}
+{{- with .Params.overview }}{{ $description = . | truncate 160 }}{{ end -}}
+<meta name="description" content="{{ $description }}">
 
 <link rel="icon" href="{{ "favicon.ico" | relURL }}">
 
@@ -9,11 +15,25 @@
 <link rel="stylesheet" href="{{ $cdn }}/@picocss/pico@2/css/pico.{{ $picoTheme }}.min.css">
 <link rel="stylesheet" href="{{ "styles.css" | relURL }}">
 
-{{- if eq .Section "company" }}
-<title>{{ .Params.name }} | {{ .Site.Title }}</title>
-{{- else }}
-<title>{{ .Title | default .Site.Title }}</title>
+{{/* Page title - handle different page types */}}
+{{- $pageTitle := .Site.Title -}}
+{{- if .IsHome -}}
+  {{- $pageTitle = .Site.Title -}}
+{{- else if eq .Section "company" -}}
+  {{- $pageTitle = printf "%s | %s" .Params.name .Site.Title -}}
+{{- else if eq .Kind "term" -}}
+  {{/* Term page: e.g., "Perth - Regions | Site Title" */}}
+  {{- $taxonomies := .Site.Data.taxonomies -}}
+  {{- $taxonomyMap := index $taxonomies .Data.Plural -}}
+  {{- $displayName := index $taxonomyMap .Data.Term | default .Data.Term -}}
+  {{- $pageTitle = printf "%s - %s | %s" $displayName (.Data.Plural | humanize | title) .Site.Title -}}
+{{- else if eq .Kind "taxonomy" -}}
+  {{/* Taxonomy list page: e.g., "Regions | Site Title" */}}
+  {{- $pageTitle = printf "%s | %s" .Title .Site.Title -}}
+{{- else if .Title -}}
+  {{- $pageTitle = printf "%s | %s" .Title .Site.Title -}}
 {{- end }}
+<title>{{ $pageTitle }}</title>
 
 {{- with .Params.jsonLd }}
 <script type="application/ld+json">{{ . | jsonify | safeJS }}</script>

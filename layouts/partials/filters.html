@@ -1,5 +1,5 @@
 {{/* Filters partial - shared between directory and map pages
-  Expects: $companies, $taxonomies
+  Expects: $companies, $taxonomies, $site (for .Site.Taxonomies)
   
   All filters use single param "f" with prefix:value format:
   - stake:xxx = stakeholder
@@ -12,36 +12,21 @@
   Taxonomy structure: { key: "Full Name" }
   Company frontmatter stores keys, not display names.
   Icons are at /icons/streams/{key}.png and /icons/ownerships/{key}.png
+  
+  Uses Hugo's native .Site.Taxonomies for counts instead of manual iteration.
 */}}
 {{- $companies := .companies -}}
 {{- $taxonomies := .taxonomies -}}
+{{- $site := .site -}}
 
-{{/* Count companies per taxonomy key */}}
-{{- $stakeholderCounts := dict -}}
-{{- $streamCounts := dict -}}
-{{- $domainCounts := dict -}}
-{{- $industrialCounts := dict -}}
-{{- $regionCounts := dict -}}
+{{/* Use Hugo's native taxonomy counts */}}
+{{- $stakeholderCounts := $site.Taxonomies.stakeholders -}}
+{{- $streamCounts := $site.Taxonomies.capability_streams -}}
+{{- $domainCounts := $site.Taxonomies.capability_domains -}}
+{{- $industrialCounts := $site.Taxonomies.industrial_capabilities -}}
+{{- $regionCounts := $site.Taxonomies.regions -}}
 
-{{- range $companies -}}
-  {{- range .stakeholders -}}
-    {{- $stakeholderCounts = merge $stakeholderCounts (dict . (add (index $stakeholderCounts . | default 0) 1)) -}}
-  {{- end -}}
-  {{- range .capability_streams -}}
-    {{- $streamCounts = merge $streamCounts (dict . (add (index $streamCounts . | default 0) 1)) -}}
-  {{- end -}}
-  {{- range .capability_domains -}}
-    {{- $domainCounts = merge $domainCounts (dict . (add (index $domainCounts . | default 0) 1)) -}}
-  {{- end -}}
-  {{- range .industrial_capabilities -}}
-    {{- $industrialCounts = merge $industrialCounts (dict . (add (index $industrialCounts . | default 0) 1)) -}}
-  {{- end -}}
-  {{- range .regions -}}
-    {{- $regionCounts = merge $regionCounts (dict . (add (index $regionCounts . | default 0) 1)) -}}
-  {{- end -}}
-{{- end -}}
-
-{{/* Ownership counts */}}
+{{/* Ownership counts - still manual since these are boolean flags, not taxonomies */}}
 {{- $indigenousCount := 0 -}}
 {{- $veteranCount := 0 -}}
 {{- range $companies -}}
@@ -62,7 +47,8 @@
     <summary>Stakeholders</summary>
     <div class="filter-list">
       {{- range $key, $name := $taxonomies.stakeholders -}}
-        {{- $count := index $stakeholderCounts $key | default 0 -}}
+        {{- $term := index $stakeholderCounts $key -}}
+        {{- $count := 0 }}{{ with $term }}{{ $count = .Count }}{{ end -}}
         {{- if gt $count 0 }}
       <label class="filter-item">
         <input type="checkbox" name="f" value="stake:{{ $key }}" />
@@ -79,7 +65,8 @@
     <summary>Capability Streams</summary>
     <div class="stream-icons">
       {{- range $key, $name := $taxonomies.capability_streams -}}
-        {{- $count := index $streamCounts $key | default 0 -}}
+        {{- $term := index $streamCounts $key -}}
+        {{- $count := 0 }}{{ with $term }}{{ $count = .Count }}{{ end -}}
         {{- if gt $count 0 }}
       <label class="stream-icon" title="{{ $name }} ({{ $count }})">
         <input type="checkbox" name="f" value="stream:{{ $key }}" />
@@ -95,7 +82,8 @@
     <summary>Domains</summary>
     <div class="filter-list">
       {{- range $key, $name := $taxonomies.capability_domains -}}
-        {{- $count := index $domainCounts $key | default 0 -}}
+        {{- $term := index $domainCounts $key -}}
+        {{- $count := 0 }}{{ with $term }}{{ $count = .Count }}{{ end -}}
         {{- if gt $count 0 }}
       <label class="filter-item">
         <input type="checkbox" name="f" value="domain:{{ $key }}" />
@@ -112,7 +100,8 @@
     <summary>Industrial</summary>
     <div class="filter-list">
       {{- range $key, $name := $taxonomies.industrial_capabilities -}}
-        {{- $count := index $industrialCounts $key | default 0 -}}
+        {{- $term := index $industrialCounts $key -}}
+        {{- $count := 0 }}{{ with $term }}{{ $count = .Count }}{{ end -}}
         {{- if gt $count 0 }}
       <label class="filter-item">
         <input type="checkbox" name="f" value="ind:{{ $key }}" />
@@ -129,7 +118,8 @@
     <summary>Regions</summary>
     <div class="filter-list">
       {{- range $key, $name := $taxonomies.regions -}}
-        {{- $count := index $regionCounts $key | default 0 -}}
+        {{- $term := index $regionCounts $key -}}
+        {{- $count := 0 }}{{ with $term }}{{ $count = .Count }}{{ end -}}
         {{- if gt $count 0 }}
       <label class="filter-item">
         <input type="checkbox" name="f" value="region:{{ $key }}" />

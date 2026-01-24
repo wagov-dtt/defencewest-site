@@ -12,7 +12,7 @@ $companies | append $company -}} {{- end -}} {{- $companies = sort $companies
 <div class="directory" id="directory">
   <!-- Filters Sidebar -->
   {{ partial "filters.html" (dict "companies" $companies "taxonomies"
-  $taxonomies) }}
+  $taxonomies "site" .Site) }}
 
   <!-- Main Content -->
   <main>

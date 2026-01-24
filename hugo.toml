@@ -11,8 +11,14 @@ buildExpired = false
 relativeURLs = true
 uglyURLs = false
 
-# Disable unused features
-disableKinds = ["taxonomy", "term"]
+# Taxonomies - enabled for SEO (generates /regions/perth/, /capability-domains/cyber/ pages)
+# Note: We use custom keys (not slugs), so Hugo will create URLs like /regions/perth/
+[taxonomies]
+  stakeholder = "stakeholders"
+  capability_stream = "capability_streams"
+  capability_domain = "capability_domains"
+  industrial_capability = "industrial_capabilities"
+  region = "regions"
 
 # Output formats
 [outputs]
@@ -38,6 +44,24 @@ disableKinds = ["taxonomy", "term"]
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true  # Allow HTML in markdown
+
+# Related content - find similar companies by taxonomy overlap
+[related]
+  includeNewer = true
+  threshold = 50
+  toLower = true
+  [[related.indices]]
+    name = "capability_streams"
+    weight = 100
+  [[related.indices]]
+    name = "capability_domains"
+    weight = 80
+  [[related.indices]]
+    name = "regions"
+    weight = 60
+  [[related.indices]]
+    name = "industrial_capabilities"
+    weight = 40
 
 # Site parameters
 [params]
