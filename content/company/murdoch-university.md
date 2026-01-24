@@ -1,0 +1,42 @@
+---
+name: Murdoch University
+date: '2024-01-01'
+website: https://www.murdoch.edu.au
+contact_name: Alasdair Macdonald
+contact_title: Director Research and Innovation
+address: 90 South Street, Murdoch WA 6150
+phone: +61 8 9360 6466
+email: a.macdonald@murdoch.edu.au
+stakeholders:
+- academic
+- defence-science
+capability_streams:
+- education
+- research
+capability_domains:
+- cyber
+- ict
+- science
+- training
+- cyber-and
+industrial_capabilities:
+- none
+latitude: -32.0688259
+longitude: 115.8161804
+---
+
+## Overview
+
+Murdoch University is focused on changing lives and society for the better through accessible education and research, contributing to the solution of societal and environmental challenges and providing an inclusive, caring community in which everyone can realise their potential.
+
+We have a range of research capabilities that are translational in nature. Focus is provided through local industry-linked partnerships, as well as international collaborations that address unique national and global challenges. Our major research themes are focused on Health Futures, Food Security and Sustainable Development that address global, national and local priorities. Murdoch has a wide range of defence related research expertise across a range of disciplines including strategic policy through the Asia-Pacific Centre, human physical and cognitive performance, engineering and IT applications, to biosecurity and application of One Health principles. We place high value on long-term partnerships and seek collaborations with communities, industries and government in achieving long-term goals.
+
+## Capabilities
+
+Murdoch University hosts the Australian National Phenome Centre, a global leader in metabolic phenotyping. This centre investigates the interactions between an individual's genome and environment, providing precise analyses of functional status. These findings are applied to precision nutrition, medicine, and therapeutic interventions, particularly in Defence, with a focus on medical countermeasures and human performance.
+
+The MindBody Lab at Murdoch is a unique facility dedicated to advancing human physical and cognitive performance. Collaborating with partners in maritime defence, air traffic control, elite sports, forensics, and policing, the lab explores how stress impacts performance and decision-making. Research includes assessing human performance using physiological, biomechanical, biochemical, and psychological techniques; decision-making expertise and skill acquisition; pain perception; and neuroplasticity. The lab also investigates neural activity in response to stimuli and recovery from cognitive and physical trauma, including PTSD and brain injuries.
+
+Murdoch is a leader in biosecurity and One Health, addressing challenges in military operations and the unintended movement of pathogens and parasites across borders. This impacts operational readiness and personnel health. Murdoch works with international, national, and local bodies to strengthen biosecurity frameworks and surveillance systems, protecting animal, plant, and human populations.
+
+Murdoch is also at the forefront of drone technology, with one of the largest drone fleets in Australian higher education. Equipped with optical and hyperspectral imaging systems, these drones support intelligence, surveillance, reconnaissance, and threat detection. Collaborations with IT and Computing departments enhance control systems, automation, and onboard machine learning.

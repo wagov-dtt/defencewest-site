@@ -1,0 +1,60 @@
+baseURL = "/"
+languageCode = "en-au"
+title = "WA Defence Industry & Science Capability Directory"
+
+# Build settings
+buildDrafts = false
+buildFuture = false
+buildExpired = false
+
+# Relative URLs for portable HTML (GitHub Pages subfolders, IPFS, USB drives)
+relativeURLs = true
+uglyURLs = false
+
+# Disable unused features
+disableKinds = ["taxonomy", "term"]
+
+# Output formats
+[outputs]
+  home = ["HTML", "RSS"]
+  section = ["HTML"]
+
+[outputFormats.RSS]
+  baseName = "feed"
+
+# URL structure - use filename as slug since frontmatter doesn't have slug field
+[permalinks]
+  company = "/company/:contentbasename/"
+  edit = "/edit/:contentbasename/"
+
+# Sitemap
+[sitemap]
+  changeFreq = "weekly"
+  filename = "sitemap.xml"
+  priority = 0.5
+
+# Markdown rendering
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true  # Allow HTML in markdown
+
+# Site parameters
+[params]
+  description = "Western Australia's Defence Industry and Science Capability Directory"
+  siteUrl = "https://defencewest.wa.gov.au"
+  githubRepo = "wagov-dtt/defencewest-site"
+  githubBranch = "main"
+  
+  # Pico CSS theme (azure, slate, zinc, sand, etc.)
+  picoTheme = "slate"
+  
+  # CDN for external libraries (MapLibre, PicoCSS)
+  cdnUrl = "https://cdn.jsdelivr.net/npm"
+  
+  # Map settings (OSM Shortbread vector tiles)
+  mapStyleUrl = "https://vector.openstreetmap.org/styles/shortbread/colorful.json"
+  mapTilesUrl = "https://vector.openstreetmap.org/shortbread_v1/{z}/{x}/{y}.mvt"
+  
+  # External URLs
+  mapsUrl = "https://www.google.com/maps"

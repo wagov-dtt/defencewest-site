@@ -1,0 +1,219 @@
+{{/*
+  Standalone map embed - loaded in iframe
+  Uses PicoCSS conditional for popup styling
+*/}}
+{{- $picoTheme := .Site.Params.picoTheme -}}
+{{- $cdn := .Site.Params.cdnUrl -}}
+{{- $mapStyle := .Site.Params.mapStyleUrl -}}
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Map</title>
+  <base target="_top">
+  <link rel="stylesheet" href="{{ $cdn }}/maplibre-gl@5/dist/maplibre-gl.css">
+  <link rel="stylesheet" href="{{ $cdn }}/@picocss/pico@2/css/pico.conditional.{{ $picoTheme }}.min.css">
+  <link rel="stylesheet" href="{{ "styles.css" | relURL }}">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body, #map { width: 100%; height: 100%; }
+    
+    /* Custom marker dot */
+    .marker-dot {
+      width: 14px;
+      height: 14px;
+      background: #1095c1;
+      border: 2px solid white;
+      border-radius: 50%;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+      cursor: pointer;
+      transition: transform 0.15s;
+    }
+    .marker-dot:hover {
+      transform: scale(1.3);
+    }
+    
+    /* Popup styling */
+    .maplibregl-popup-content {
+      padding: 0;
+      border-radius: var(--pico-border-radius);
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    }
+    
+    .maplibregl-popup-content article {
+      box-shadow: none;
+      margin: 0;
+    }
+    
+    .maplibregl-popup-content p,
+    .maplibregl-popup-content small {
+      margin: 0;
+    }
+    
+    /* No results overlay */
+    .no-results {
+      display: none;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: white;
+      padding: 1rem 2rem;
+      border-radius: 6px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+      font-family: system-ui, sans-serif;
+      color: #666;
+      z-index: 10;
+    }
+  </style>
+</head>
+<body>
+  <div id="map"></div>
+  <p class="no-results">No companies match your filters.</p>
+
+  <!-- Pre-rendered company cards (hidden, used by JS for popups) -->
+  <div id="company-cards" hidden>
+    {{- $computed := .Site.Data.computed -}}
+    {{- range where .Site.RegularPages "Section" "company" -}}
+      {{- $company := .Params -}}
+      {{- if and $company.latitude $company.longitude -}}
+        {{- $slug := .File.BaseFileName -}}
+        {{- $comp := index $computed $slug -}}
+        {{- $companyWithSlug := merge $company (dict "slug" $slug) -}}
+        <template
+          data-slug="{{ $slug }}"
+          data-lat="{{ $company.latitude }}"
+          data-lng="{{ $company.longitude }}"
+          data-search="{{ $comp.search_text }}"
+          data-f="{{ $comp.filter_data }}"
+        >{{ partial "company-card.html" (dict "company" $companyWithSlug "computed" $comp "mode" "popup") }}</template>
+      {{- end -}}
+    {{- end -}}
+  </div>
+
+  <script src="{{ $cdn }}/maplibre-gl@5/dist/maplibre-gl.js"></script>
+  <script>
+  (function() {
+    "use strict";
+
+    const PERTH = [115.8605, -31.9505];
+    const MAP_STYLE = "{{ $mapStyle }}";
+
+    // Build company data from DOM templates
+    const companies = [...document.querySelectorAll("#company-cards template")].map(t => ({
+      lat: parseFloat(t.dataset.lat),
+      lng: parseFloat(t.dataset.lng),
+      search: t.dataset.search,
+      f: t.dataset.f,
+      popup: t.innerHTML,
+    }));
+
+    // Filter matching
+    function matchesFilters(c, filters) {
+      if (filters.search && !c.search.includes(filters.search)) return false;
+      if (filters.f.length) {
+        const cardFilters = (c.f || "").toLowerCase().split("|");
+        if (!filters.f.every(f => cardFilters.includes(f.toLowerCase()))) return false;
+      }
+      return true;
+    }
+
+    function getFiltersFromURL() {
+      const params = new URLSearchParams(window.location.search);
+      return {
+        search: (params.get("q") || "").toLowerCase(),
+        f: params.getAll("f"),
+      };
+    }
+
+    const map = new maplibregl.Map({
+      container: "map",
+      style: MAP_STYLE,
+      center: PERTH,
+      zoom: 4,
+    });
+
+    map.on("style.load", () => {
+      map.setProjection({ type: "globe" });
+    });
+
+    const noResults = document.querySelector(".no-results");
+    const markers = [];
+
+    // Create markers
+    let activePopup = null;
+
+    companies.forEach(c => {
+      const dot = document.createElement("div");
+      dot.className = "marker-dot";
+
+      const popup = new maplibregl.Popup({ offset: 10, closeButton: false })
+        .setHTML(c.popup);
+
+      const marker = new maplibregl.Marker({ element: dot })
+        .setLngLat([c.lng, c.lat])
+        .setPopup(popup)
+        .addTo(map);
+
+      // Show popup on hover (stays open until another marker or map leave)
+      dot.addEventListener("mouseenter", () => {
+        if (activePopup && activePopup !== popup) activePopup.remove();
+        if (!popup.isOpen()) marker.togglePopup();
+        activePopup = popup;
+      });
+
+      markers.push({ marker, data: c });
+    });
+
+    // Close popup when mouse leaves map
+    document.getElementById("map").addEventListener("mouseleave", () => {
+      if (activePopup) {
+        activePopup.remove();
+        activePopup = null;
+      }
+    });
+
+    // Filter markers
+    let fitBoundsTimeout = null;
+
+    function updateMarkers() {
+      const filters = getFiltersFromURL();
+      let visibleCount = 0;
+      const bounds = new maplibregl.LngLatBounds();
+
+      markers.forEach(({ marker, data }) => {
+        const visible = matchesFilters(data, filters);
+        marker.getElement().style.display = visible ? "" : "none";
+        if (visible) {
+          visibleCount++;
+          bounds.extend([data.lng, data.lat]);
+        }
+      });
+
+      noResults.style.display = visibleCount === 0 ? "block" : "none";
+      window.parent.postMessage({ type: "markerCount", count: visibleCount }, "*");
+
+      clearTimeout(fitBoundsTimeout);
+      if (visibleCount > 0 && visibleCount < markers.length) {
+        fitBoundsTimeout = setTimeout(() => {
+          map.fitBounds(bounds, { padding: 50, maxZoom: 12, duration: 500 });
+        }, 800);
+      }
+    }
+
+    updateMarkers();
+
+    window.addEventListener("message", (e) => {
+      if (e.data?.type === "updateFilters") {
+        const url = new URL(window.location);
+        url.search = e.data.params;
+        window.history.replaceState({}, "", url);
+        updateMarkers();
+      }
+    });
+  })();
+  </script>
+</body>
+</html>
