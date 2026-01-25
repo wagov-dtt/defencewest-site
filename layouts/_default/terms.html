@@ -67,11 +67,12 @@
     <a href="{{ .Page.RelPermalink }}">
       {{- if $hasIcon }}
       <img src="{{ $iconUrl }}" alt="" class="taxonomy-icon">
-      {{- else if $hasTermMap }}
+      {{- end }}
+      <strong class="taxonomy-name">{{ $displayName }}</strong>
+      {{- if $hasTermMap }}
       <img src="{{ $termMapUrl }}" alt="" class="taxonomy-map-thumb">
       {{- end }}
-      <strong>{{ $displayName }}</strong>
-      <br><small>{{ .Count }} {{ if eq .Count 1 }}company{{ else }}companies{{ end }}</small>
+      <small>{{ .Count }} {{ if eq .Count 1 }}company{{ else }}companies{{ end }}</small>
     </a>
   </article>
   {{- end }}

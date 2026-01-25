@@ -53,6 +53,7 @@ All external libraries use **jsdelivr** CDN with **major version pinning**:
 
 - `https://cdn.jsdelivr.net/npm/@picocss/pico@2/...` - CSS framework
 - `https://cdn.jsdelivr.net/npm/maplibre-gl@5/...` - Map rendering
+- `https://cdn.jsdelivr.net/npm/lucide@latest/...` - Icons (rendered via JS)
 
 ## Relative Links
 
@@ -146,10 +147,10 @@ Breakpoints align with PicoCSS: 768px, 1024px (Pico also uses 576px, 1280px, 153
 
 Both directory and map pages use the same filtering approach:
 
-- **Boolean filters** (Prime, SME, Indigenous, Veteran) - multi-select
-- **Multi-select filters** (Regions, Domains, etc.) - JavaScript with AND logic
+- **Icon filters** (Capability Streams, Ownership) - clickable icon toggles
+- **Checkbox filters** (Regions, Domains, etc.) - multi-select with AND logic
 - **Search** - substring matching on company name + overview
-- **Filter options** - filters the taxonomy dropdowns themselves
+- **Filter options** - search box to filter the taxonomy lists themselves
 - **URL sync** - filter state persists in URL params via `<form method="get">`
 
 ## Development Guidelines
@@ -171,6 +172,7 @@ mise run dev           # Start dev server
 mise run build         # Build static site
 mise run preprocess    # Generate computed data
 mise run maps-force    # Regenerate all minimap images
+mise run htmlcheck     # Validate HTML with superhtml
 
 # Correct - run tools via mise
 mise x -- hugo version
@@ -184,13 +186,15 @@ hugo --minify          # NO!
 Tools managed by mise:
 - `hugo` - Static site generator
 - `lychee` - Link checker
+- `superhtml` - HTML validator
 - `uv` - Python package manager (for scripts)
 - `python` - Python interpreter
 
 ## CI & Link Checking
 
-The `mise run build` task runs: preprocess → export → hugo build → link check (lychee).
+The `mise run build` task runs: preprocess → export → hugo build → HTML check (superhtml) → link check (lychee).
 
+- Superhtml validates HTML structure
 - Lychee checks all links in the built HTML
 - Add known-broken URLs to `.lycheeignore` to suppress warnings
 

@@ -34,7 +34,7 @@
   {{- if .is_veteran_owned }}{{ $veteranCount = add $veteranCount 1 }}{{ end -}}
 {{- end -}}
 
-<form class="filters" id="filters" method="get" action="">
+<form class="filters" id="filters" method="get">
   <div class="filters-scroll">
     <!-- Search within filters -->
     <input type="text" id="filter-options" class="filter-search" placeholder="Search filters..." autocomplete="off" aria-label="Search filters">
@@ -48,8 +48,8 @@
           {{- $count := 0 }}{{ with $term }}{{ $count = .Count }}{{ end -}}
           {{- if gt $count 0 }}
         <label class="stream-icon" title="{{ $name }} ({{ $count }})">
-          <input type="checkbox" name="f" value="stream:{{ $key }}" />
-          <img src="{{ printf "icons/streams/%s.png" $key | relURL }}" alt="{{ $name }}" />
+          <input type="checkbox" name="f" value="stream:{{ $key }}">
+          <img src="{{ printf "icons/streams/%s.png" $key | relURL }}" alt="{{ $name }}">
         </label>
           {{- end -}}
         {{- end }}
@@ -67,8 +67,8 @@
           {{- if eq $key "veteran" }}{{ $count = $veteranCount }}{{ end -}}
           {{- if gt $count 0 }}
         <label class="stream-icon" title="{{ $name }} ({{ $count }})">
-          <input type="checkbox" name="f" value="own:{{ $key }}" />
-          <img src="{{ printf "icons/ownerships/%s.png" $key | relURL }}" alt="{{ $name }}" />
+          <input type="checkbox" name="f" value="own:{{ $key }}">
+          <img src="{{ printf "icons/ownerships/%s.png" $key | relURL }}" alt="{{ $name }}">
         </label>
           {{- end -}}
         {{- end }}
@@ -85,7 +85,7 @@
           {{- $count := 0 }}{{ with $term }}{{ $count = .Count }}{{ end -}}
           {{- if gt $count 0 }}
         <label class="filter-item">
-          <input type="checkbox" name="f" value="stake:{{ $key }}" />
+          <input type="checkbox" name="f" value="stake:{{ $key }}">
           <span class="filter-label">{{ $name }}</span>
           <span class="filter-count">{{ $count }}</span>
         </label>
@@ -103,7 +103,7 @@
           {{- $count := 0 }}{{ with $term }}{{ $count = .Count }}{{ end -}}
           {{- if gt $count 0 }}
         <label class="filter-item">
-          <input type="checkbox" name="f" value="region:{{ $key }}" />
+          <input type="checkbox" name="f" value="region:{{ $key }}">
           <span class="filter-label">{{ $name }}</span>
           <span class="filter-count">{{ $count }}</span>
         </label>
@@ -121,7 +121,7 @@
           {{- $count := 0 }}{{ with $term }}{{ $count = .Count }}{{ end -}}
           {{- if gt $count 0 }}
         <label class="filter-item">
-          <input type="checkbox" name="f" value="domain:{{ $key }}" />
+          <input type="checkbox" name="f" value="domain:{{ $key }}">
           <span class="filter-label">{{ $name }}</span>
           <span class="filter-count">{{ $count }}</span>
         </label>
@@ -139,7 +139,7 @@
           {{- $count := 0 }}{{ with $term }}{{ $count = .Count }}{{ end -}}
           {{- if gt $count 0 }}
         <label class="filter-item">
-          <input type="checkbox" name="f" value="ind:{{ $key }}" />
+          <input type="checkbox" name="f" value="ind:{{ $key }}">
           <span class="filter-label">{{ $name }}</span>
           <span class="filter-count">{{ $count }}</span>
         </label>

@@ -1,0 +1,5 @@
+{{- /* Lucide icon. Usage: {{ partial "icon.html" (dict "name" "map" "size" 20) }} */ -}}
+{{- $name := .name -}}
+{{- $size := .size | default 24 -}}
+{{- $class := .class | default "" -}}
+<i class="icon{{ with $class }} {{ . }}{{ end }}" data-lucide="{{ $name }}" style="width:{{ $size }}px;height:{{ $size }}px"></i>

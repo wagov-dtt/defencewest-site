@@ -72,7 +72,7 @@ uglyURLs = false
   # Pico CSS theme (azure, slate, zinc, sand, etc.)
   picoTheme = "slate"
   
-  # CDN for external libraries (MapLibre, PicoCSS)
+  # CDN for external libraries (MapLibre, PicoCSS, Lucide icons)
   cdnUrl = "https://cdn.jsdelivr.net/npm"
   
   # Map settings (OSM Shortbread vector tiles)

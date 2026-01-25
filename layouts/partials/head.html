@@ -14,6 +14,7 @@
 {{- $cdn := "https://cdn.jsdelivr.net/npm" -}}
 <link rel="stylesheet" href="{{ $cdn }}/@picocss/pico@2/css/pico.{{ $picoTheme }}.min.css">
 <link rel="stylesheet" href="{{ "styles.css" | relURL }}">
+<script src="{{ $cdn }}/lucide@latest/dist/umd/lucide.min.js" defer></script>
 
 {{/* Page title - handle different page types */}}
 {{- $pageTitle := .Site.Title -}}
