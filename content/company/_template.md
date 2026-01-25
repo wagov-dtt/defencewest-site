@@ -1,5 +1,8 @@
 ---
 # Template for new company - copy this file and rename to your-company-slug.md
+build:
+  list: never
+  publishResources: false
 
 name: ACME Corporation
 date: '2025-01-01'

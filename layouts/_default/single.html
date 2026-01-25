@@ -1,8 +1,12 @@
 {{ define "main" }}
-<article>
-  <header>
-    <h1>{{ .Title }}</h1>
-  </header>
-  {{ .Content }}
-</article>
+<nav aria-label="breadcrumb">
+  <ul>
+    <li><a href="{{ "/" | relURL }}">Directory</a></li>
+    <li>{{ .Title }}</li>
+  </ul>
+</nav>
+
+<h1>{{ .Title }}</h1>
+
+{{ .Content }}
 {{ end }}

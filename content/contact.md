@@ -1,5 +1,5 @@
 ---
-title: Contact - WA Defence Directory
+title: Contact
 type: page
 ---
 
@@ -17,7 +17,7 @@ This directory showcases WA companies with defence and science capabilities, hel
 
 [Add Your Company](../company/_template/#edit) | [Browse Directory](../)
 
-You can also email your company details and logo directly to [defencewest@dpc.wa.gov.au](mailto:defencewest@dpc.wa.gov.au) for review.
+You can also email your details and logo to [defencewest@dpc.wa.gov.au](mailto:defencewest@dpc.wa.gov.au).
 
 ## Download Data
 

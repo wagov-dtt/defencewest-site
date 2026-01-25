@@ -24,6 +24,13 @@
   {{- $addressSearchUrl = printf "%s/search/?api=1&query=%s" $.Site.Params.mapsUrl (. | urlquery) -}}
 {{- end -}}
 
+<nav aria-label="breadcrumb">
+  <ul>
+    <li><a href="{{ "/" | relURL }}">Directory</a></li>
+    <li>{{ $company.name }}</li>
+  </ul>
+</nav>
+
 <div class="company-page">
   <!-- ===== VIEW MODE ===== -->
   <div id="view-mode">
@@ -31,20 +38,27 @@
     <div class="row">
       <!-- Left Column: Content -->
       <div class="col-8 col-m-12 content-column">
+        <h1>{{ $company.name }}</h1>
+        {{- if or $company.is_prime $company.is_sme $company.is_indigenous_owned $company.is_veteran_owned }}
+        <p class="company-badges-inline">
+          {{- if $company.is_prime }}<small>Prime</small>{{ end -}}
+          {{- if $company.is_sme }}<small>SME</small>{{ end -}}
+          {{- if $company.is_indigenous_owned }}<small>Indigenous</small>{{ end -}}
+          {{- if $company.is_veteran_owned }}<small>Veteran</small>{{ end -}}
+        </p>
+        {{- end }}
         {{ .Content }}
       </div>
 
       <!-- Right Column: Company Info -->
       <aside class="col-4 col-m-12 info-column">
-        <h1 class="company-title">
-          {{- if $logoUrl }}
+        {{- if $logoUrl }}
+        <article class="company-logo">
           <a href="{{ $company.website }}" title="{{ $company.name }}" target="_blank" rel="noopener">
             <img src="{{ $logoUrl | relURL }}" alt="{{ $company.name }}">
           </a>
-          {{- else }}
-          {{ $company.name }}
-          {{- end }}
-        </h1>
+        </article>
+        {{- end }}
 
         {{- if or $company.contact_name $company.contact_title }}
         <div class="contact-person">
@@ -181,11 +195,11 @@
           <div id="field-content-preview" class="markdown-preview hidden"></div>
         </fieldset>
 
-        <fieldset class="edit-actions">
+        <div role="group" class="edit-actions">
           <button type="button" id="btn-copy">Copy Markdown</button>
           <button type="button" id="btn-download" class="outline">Download .md</button>
           <a href="{{ $githubEditUrl }}" target="_blank" rel="noopener" role="button" class="secondary outline">Edit on GitHub</a>
-        </fieldset>
+        </div>
       </div>
 
       <!-- Right Column: Company Details + Taxonomies -->
@@ -208,12 +222,12 @@
             <label for="field-address">Address</label>
             <input type="text" id="field-address" name="address" value="{{ $company.address }}">
             
-            <div class="grid">
-              <div>
+            <div class="row">
+              <div class="col-6 col-s-12">
                 <label for="field-latitude">Latitude</label>
                 <input type="text" id="field-latitude" name="latitude" value="{{ $company.latitude }}">
               </div>
-              <div>
+              <div class="col-6 col-s-12">
                 <label for="field-longitude">Longitude</label>
                 <input type="text" id="field-longitude" name="longitude" value="{{ $company.longitude }}">
               </div>

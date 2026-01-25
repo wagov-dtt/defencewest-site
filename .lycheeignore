@@ -1,2 +1,5 @@
 # GitHub edit links (rate limited)
 github.com.*edit
+
+# Template file reference (not a real company)
+file://.*_template

@@ -31,7 +31,6 @@ uglyURLs = false
 # URL structure - use filename as slug since frontmatter doesn't have slug field
 [permalinks]
   company = "/company/:contentbasename/"
-  edit = "/edit/:contentbasename/"
 
 # Sitemap
 [sitemap]

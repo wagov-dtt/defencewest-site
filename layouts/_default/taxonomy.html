@@ -2,13 +2,23 @@
 {{/*
   Term page - lists all companies with a specific taxonomy term
   e.g., /regions/perth/ shows all companies in Perth
+  Two-column layout: map embed + company cards
 */}}
 {{- $taxonomies := .Site.Data.taxonomies -}}
 {{- $taxonomyName := .Data.Plural -}}
 {{- $termKey := .Data.Term -}}
 {{- $taxonomyMap := index $taxonomies $taxonomyName -}}
 {{- $displayName := index $taxonomyMap $termKey | default $termKey -}}
-{{- $taxonomyTitle := $taxonomyName | humanize | title -}}
+
+{{/* Display name mapping for taxonomy titles */}}
+{{- $taxonomyTitles := dict 
+  "capability_streams" "Capability Streams"
+  "capability_domains" "Capability Domains"
+  "industrial_capabilities" "Industrial Capabilities"
+  "regions" "Regions"
+  "stakeholders" "Stakeholders"
+-}}
+{{- $taxonomyTitle := index $taxonomyTitles $taxonomyName | default ($taxonomyName | humanize | title) -}}
 
 {{/* Map taxonomy name to filter prefix */}}
 {{- $filterPrefix := "" -}}
@@ -38,13 +48,25 @@
 
 {{- with .Content }}{{ . }}{{ end }}
 
-<div class="grid-auto">
-  {{- range .Pages.ByTitle }}
-    {{- $slug := .File.BaseFileName -}}
-    {{- $computed := index $.Site.Data.computed $slug -}}
-    {{- $companyData := merge .Params (dict "slug" $slug) }}
-    {{- partial "company-card.html" (dict "company" $companyData "computed" $computed "mode" "directory") }}
-  {{- end }}
+<div class="row">
+  {{/* Cards column */}}
+  <div class="col-6 col-m-12 col-s-12">
+    <div class="grid-auto">
+      {{- range .Pages.ByTitle }}
+        {{- $slug := .File.BaseFileName -}}
+        {{- $computed := index $.Site.Data.computed $slug -}}
+        {{- $companyData := merge .Params (dict "slug" $slug) }}
+        {{- partial "company-card.html" (dict "company" $companyData "computed" $computed "mode" "directory") }}
+      {{- end }}
+    </div>
+  </div>
+
+  {{/* Map column */}}
+  <div class="col-6 col-m-12 col-s-12">
+    <div class="taxonomy-map">
+      <iframe src="{{ printf "map/?f=%s:%s" $filterPrefix $termKey | relURL }}" title="Map of {{ $displayName }} companies"></iframe>
+    </div>
+  </div>
 </div>
 
 <p><a href="{{ printf "/%s/" $taxonomyName | relURL }}">&larr; All {{ $taxonomyTitle }}</a></p>

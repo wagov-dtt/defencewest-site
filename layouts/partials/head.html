@@ -17,6 +17,16 @@
 
 {{/* Page title - handle different page types */}}
 {{- $pageTitle := .Site.Title -}}
+
+{{/* Display name mapping for taxonomy titles */}}
+{{- $taxonomyTitles := dict 
+  "capability_streams" "Capability Streams"
+  "capability_domains" "Capability Domains"
+  "industrial_capabilities" "Industrial Capabilities"
+  "regions" "Regions"
+  "stakeholders" "Stakeholders"
+-}}
+
 {{- if .IsHome -}}
   {{- $pageTitle = .Site.Title -}}
 {{- else if eq .Section "company" -}}
@@ -26,10 +36,12 @@
   {{- $taxonomies := .Site.Data.taxonomies -}}
   {{- $taxonomyMap := index $taxonomies .Data.Plural -}}
   {{- $displayName := index $taxonomyMap .Data.Term | default .Data.Term -}}
-  {{- $pageTitle = printf "%s - %s | %s" $displayName (.Data.Plural | humanize | title) .Site.Title -}}
+  {{- $taxonomyTitle := index $taxonomyTitles .Data.Plural | default (.Data.Plural | humanize | title) -}}
+  {{- $pageTitle = printf "%s - %s | %s" $displayName $taxonomyTitle .Site.Title -}}
 {{- else if eq .Kind "taxonomy" -}}
   {{/* Taxonomy list page: e.g., "Regions | Site Title" */}}
-  {{- $pageTitle = printf "%s | %s" .Title .Site.Title -}}
+  {{- $taxonomyTitle := index $taxonomyTitles .Data.Plural | default .Title -}}
+  {{- $pageTitle = printf "%s | %s" $taxonomyTitle .Site.Title -}}
 {{- else if .Title -}}
   {{- $pageTitle = printf "%s | %s" .Title .Site.Title -}}
 {{- end }}

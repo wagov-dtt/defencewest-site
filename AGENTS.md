@@ -16,7 +16,6 @@ mise run build   # Build static site (includes link check)
 content/company/*.md   # Company pages (328 files)
 data/
   taxonomies.yaml      # Filter categories + icons
-  companies/*.yaml     # Original scraped data (reference)
   computed.yaml        # Generated: pre-computed values (gitignored)
   counts.yaml          # Generated: taxonomy counts (gitignored)
 hugo.toml              # All site config (theme, CDN URLs, map settings)
@@ -28,7 +27,7 @@ scripts/
 layouts/               # Hugo templates
 layouts/partials/      # Shared components
 static/logos/          # Company logos
-static/icons/          # Capability stream icons
+static/icons/          # Capability stream and ownership icons
 static/maps/           # Pre-rendered minimap PNGs (generated)
 static/styles.css      # Custom styles (PicoCSS from CDN)
 ```
@@ -135,11 +134,13 @@ Custom 12-column grid system in `styles.css` (uses `.row` to avoid conflict with
 
 **Classes:**
 - `.row` - 12-column container
-- `.col-1` to `.col-12` - column spans (default/large 992px+)
-- `.col-m-1` to `.col-m-12` - medium screens (576-991px)
-- `.col-s-1` to `.col-s-12` - small screens (<576px)
+- `.col-1` to `.col-12` - column spans (default/large 1024px+)
+- `.col-m-1` to `.col-m-12` - medium screens (768-1023px)
+- `.col-s-1` to `.col-s-12` - small screens (<768px)
 - `.grid-auto` - auto-fit card grid with `--grid-min` CSS variable
 - `.grid` - PicoCSS native equal-column grid
+
+Breakpoints align with PicoCSS: 768px, 1024px (Pico also uses 576px, 1280px, 1536px for font scaling).
 
 ## Filtering
 
@@ -162,13 +163,29 @@ Both directory and map pages use the same filtering approach:
 
 ### Mise Usage
 
-This project uses [mise](https://mise.jdx.dev/) to manage all tooling. Always use `mise run <task>` or `mise x -- <tool>` rather than calling tools directly:
+This project uses [mise](https://mise.jdx.dev/) to manage all tooling. **NEVER run hugo directly** - always use `mise run <task>` or `mise x -- <tool>`:
 
 ```bash
-mise run dev           # NOT: hugo server
-mise run build         # NOT: hugo --minify
+# Correct - use mise tasks
+mise run dev           # Start dev server
+mise run build         # Build static site
+mise run preprocess    # Generate computed data
 mise run maps-force    # Regenerate all minimap images
+
+# Correct - run tools via mise
+mise x -- hugo version
+mise x -- lychee --version
+
+# WRONG - never run hugo directly
+hugo server            # NO!
+hugo --minify          # NO!
 ```
+
+Tools managed by mise:
+- `hugo` - Static site generator
+- `lychee` - Link checker
+- `uv` - Python package manager (for scripts)
+- `python` - Python interpreter
 
 ## CI & Link Checking
 

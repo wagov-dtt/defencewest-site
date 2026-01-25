@@ -35,119 +35,122 @@
 {{- end -}}
 
 <form class="filters" id="filters" method="get" action="">
-  <!-- Status -->
-  <div class="filter-status">
-    <span><span class="visible-count">{{ len $companies }}</span> / {{ len $companies }}</span>
-    <input type="text" id="filter-options" placeholder="Filter..." autocomplete="off" aria-label="Filter options">
-    <button type="reset" class="clear-all outline secondary">Clear</button>
+  <div class="filters-scroll">
+    <!-- Search within filters -->
+    <input type="text" id="filter-options" class="filter-search" placeholder="Search filters..." autocomplete="off" aria-label="Search filters">
+
+    <!-- Capability Streams -->
+    <section class="filter-section">
+      <h4>Capability Streams</h4>
+      <div class="stream-icons">
+        {{- range $key, $name := $taxonomies.capability_streams -}}
+          {{- $term := index $streamCounts $key -}}
+          {{- $count := 0 }}{{ with $term }}{{ $count = .Count }}{{ end -}}
+          {{- if gt $count 0 }}
+        <label class="stream-icon" title="{{ $name }} ({{ $count }})">
+          <input type="checkbox" name="f" value="stream:{{ $key }}" />
+          <img src="{{ printf "icons/streams/%s.png" $key | relURL }}" alt="{{ $name }}" />
+        </label>
+          {{- end -}}
+        {{- end }}
+      </div>
+    </section>
+
+    <!-- Ownership -->
+    {{- with $taxonomies.ownerships }}
+    <section class="filter-section">
+      <h4>Ownership</h4>
+      <div class="stream-icons">
+        {{- range $key, $name := . -}}
+          {{- $count := 0 -}}
+          {{- if eq $key "indigenous" }}{{ $count = $indigenousCount }}{{ end -}}
+          {{- if eq $key "veteran" }}{{ $count = $veteranCount }}{{ end -}}
+          {{- if gt $count 0 }}
+        <label class="stream-icon" title="{{ $name }} ({{ $count }})">
+          <input type="checkbox" name="f" value="own:{{ $key }}" />
+          <img src="{{ printf "icons/ownerships/%s.png" $key | relURL }}" alt="{{ $name }}" />
+        </label>
+          {{- end -}}
+        {{- end }}
+      </div>
+    </section>
+    {{- end }}
+
+    <!-- Stakeholders -->
+    <section class="filter-section">
+      <h4>Stakeholders</h4>
+      <div class="filter-list">
+        {{- range $key, $name := $taxonomies.stakeholders -}}
+          {{- $term := index $stakeholderCounts $key -}}
+          {{- $count := 0 }}{{ with $term }}{{ $count = .Count }}{{ end -}}
+          {{- if gt $count 0 }}
+        <label class="filter-item">
+          <input type="checkbox" name="f" value="stake:{{ $key }}" />
+          <span class="filter-label">{{ $name }}</span>
+          <span class="filter-count">{{ $count }}</span>
+        </label>
+          {{- end -}}
+        {{- end }}
+      </div>
+    </section>
+
+    <!-- Regions -->
+    <section class="filter-section">
+      <h4>Regions</h4>
+      <div class="filter-list">
+        {{- range $key, $name := $taxonomies.regions -}}
+          {{- $term := index $regionCounts $key -}}
+          {{- $count := 0 }}{{ with $term }}{{ $count = .Count }}{{ end -}}
+          {{- if gt $count 0 }}
+        <label class="filter-item">
+          <input type="checkbox" name="f" value="region:{{ $key }}" />
+          <span class="filter-label">{{ $name }}</span>
+          <span class="filter-count">{{ $count }}</span>
+        </label>
+          {{- end -}}
+        {{- end }}
+      </div>
+    </section>
+
+    <!-- Capability Domains -->
+    <section class="filter-section">
+      <h4>Domains</h4>
+      <div class="filter-list">
+        {{- range $key, $name := $taxonomies.capability_domains -}}
+          {{- $term := index $domainCounts $key -}}
+          {{- $count := 0 }}{{ with $term }}{{ $count = .Count }}{{ end -}}
+          {{- if gt $count 0 }}
+        <label class="filter-item">
+          <input type="checkbox" name="f" value="domain:{{ $key }}" />
+          <span class="filter-label">{{ $name }}</span>
+          <span class="filter-count">{{ $count }}</span>
+        </label>
+          {{- end -}}
+        {{- end }}
+      </div>
+    </section>
+
+    <!-- Industrial Capabilities -->
+    <section class="filter-section">
+      <h4>Industrial</h4>
+      <div class="filter-list">
+        {{- range $key, $name := $taxonomies.industrial_capabilities -}}
+          {{- $term := index $industrialCounts $key -}}
+          {{- $count := 0 }}{{ with $term }}{{ $count = .Count }}{{ end -}}
+          {{- if gt $count 0 }}
+        <label class="filter-item">
+          <input type="checkbox" name="f" value="ind:{{ $key }}" />
+          <span class="filter-label">{{ $name }}</span>
+          <span class="filter-count">{{ $count }}</span>
+        </label>
+          {{- end -}}
+        {{- end }}
+      </div>
+    </section>
   </div>
 
-  <!-- Stakeholders -->
-  <details open>
-    <summary>Stakeholders</summary>
-    <div class="filter-list">
-      {{- range $key, $name := $taxonomies.stakeholders -}}
-        {{- $term := index $stakeholderCounts $key -}}
-        {{- $count := 0 }}{{ with $term }}{{ $count = .Count }}{{ end -}}
-        {{- if gt $count 0 }}
-      <label class="filter-item">
-        <input type="checkbox" name="f" value="stake:{{ $key }}" />
-        <span class="filter-label">{{ $name }}</span>
-        <span class="filter-count">{{ $count }}</span>
-      </label>
-        {{- end -}}
-      {{- end }}
-    </div>
-  </details>
-
-  <!-- Capability Streams -->
-  <details open>
-    <summary>Capability Streams</summary>
-    <div class="stream-icons">
-      {{- range $key, $name := $taxonomies.capability_streams -}}
-        {{- $term := index $streamCounts $key -}}
-        {{- $count := 0 }}{{ with $term }}{{ $count = .Count }}{{ end -}}
-        {{- if gt $count 0 }}
-      <label class="stream-icon" title="{{ $name }} ({{ $count }})">
-        <input type="checkbox" name="f" value="stream:{{ $key }}" />
-        <img src="{{ printf "icons/streams/%s.png" $key | relURL }}" alt="{{ $name }}" />
-      </label>
-        {{- end -}}
-      {{- end }}
-    </div>
-  </details>
-
-  <!-- Capability Domains -->
-  <details>
-    <summary>Domains</summary>
-    <div class="filter-list">
-      {{- range $key, $name := $taxonomies.capability_domains -}}
-        {{- $term := index $domainCounts $key -}}
-        {{- $count := 0 }}{{ with $term }}{{ $count = .Count }}{{ end -}}
-        {{- if gt $count 0 }}
-      <label class="filter-item">
-        <input type="checkbox" name="f" value="domain:{{ $key }}" />
-        <span class="filter-label">{{ $name }}</span>
-        <span class="filter-count">{{ $count }}</span>
-      </label>
-        {{- end -}}
-      {{- end }}
-    </div>
-  </details>
-
-  <!-- Industrial Capabilities -->
-  <details>
-    <summary>Industrial</summary>
-    <div class="filter-list">
-      {{- range $key, $name := $taxonomies.industrial_capabilities -}}
-        {{- $term := index $industrialCounts $key -}}
-        {{- $count := 0 }}{{ with $term }}{{ $count = .Count }}{{ end -}}
-        {{- if gt $count 0 }}
-      <label class="filter-item">
-        <input type="checkbox" name="f" value="ind:{{ $key }}" />
-        <span class="filter-label">{{ $name }}</span>
-        <span class="filter-count">{{ $count }}</span>
-      </label>
-        {{- end -}}
-      {{- end }}
-    </div>
-  </details>
-
-  <!-- Regions -->
-  <details>
-    <summary>Regions</summary>
-    <div class="filter-list">
-      {{- range $key, $name := $taxonomies.regions -}}
-        {{- $term := index $regionCounts $key -}}
-        {{- $count := 0 }}{{ with $term }}{{ $count = .Count }}{{ end -}}
-        {{- if gt $count 0 }}
-      <label class="filter-item">
-        <input type="checkbox" name="f" value="region:{{ $key }}" />
-        <span class="filter-label">{{ $name }}</span>
-        <span class="filter-count">{{ $count }}</span>
-      </label>
-        {{- end -}}
-      {{- end }}
-    </div>
-  </details>
-
-  <!-- Ownership -->
-  {{- with $taxonomies.ownerships }}
-  <details open>
-    <summary>Ownership</summary>
-    <div class="stream-icons">
-      {{- range $key, $name := . -}}
-        {{- $count := 0 -}}
-        {{- if eq $key "indigenous" }}{{ $count = $indigenousCount }}{{ end -}}
-        {{- if eq $key "veteran" }}{{ $count = $veteranCount }}{{ end -}}
-        {{- if gt $count 0 }}
-      <label class="stream-icon" title="{{ $name }} ({{ $count }})">
-        <input type="checkbox" name="f" value="own:{{ $key }}" />
-        <img src="{{ printf "icons/ownerships/%s.png" $key | relURL }}" alt="{{ $name }}" />
-      </label>
-        {{- end -}}
-      {{- end }}
-    </div>
-  </details>
-  {{- end }}
+  <!-- Sticky footer -->
+  <footer class="filters-footer">
+    <button type="reset" class="clear-all secondary outline">Clear all filters</button>
+  </footer>
 </form>

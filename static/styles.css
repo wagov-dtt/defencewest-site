@@ -1,4 +1,4 @@
-/* === 12-Column CSS Grid System === */
+/* === 12-Column Grid System === */
 /* Usage: <div class="row"><div class="col-6 col-m-4 col-s-12">...</div></div> */
 /* Breakpoints: s (<576px), m (576-991px), default (992px+) */
 
@@ -8,7 +8,7 @@
   gap: var(--pico-spacing, 1rem);
 }
 
-/* Default (large screens 992px+) */
+/* Generate column spans */
 .col-1 { grid-column: span 1; }
 .col-2 { grid-column: span 2; }
 .col-3 { grid-column: span 3; }
@@ -22,38 +22,6 @@
 .col-11 { grid-column: span 11; }
 .col-12 { grid-column: span 12; }
 
-/* Medium screens (576px - 991px) */
-@media (max-width: 991px) {
-  .col-m-1 { grid-column: span 1; }
-  .col-m-2 { grid-column: span 2; }
-  .col-m-3 { grid-column: span 3; }
-  .col-m-4 { grid-column: span 4; }
-  .col-m-5 { grid-column: span 5; }
-  .col-m-6 { grid-column: span 6; }
-  .col-m-7 { grid-column: span 7; }
-  .col-m-8 { grid-column: span 8; }
-  .col-m-9 { grid-column: span 9; }
-  .col-m-10 { grid-column: span 10; }
-  .col-m-11 { grid-column: span 11; }
-  .col-m-12 { grid-column: span 12; }
-}
-
-/* Small screens (<576px) */
-@media (max-width: 575px) {
-  .col-s-1 { grid-column: span 1; }
-  .col-s-2 { grid-column: span 2; }
-  .col-s-3 { grid-column: span 3; }
-  .col-s-4 { grid-column: span 4; }
-  .col-s-5 { grid-column: span 5; }
-  .col-s-6 { grid-column: span 6; }
-  .col-s-7 { grid-column: span 7; }
-  .col-s-8 { grid-column: span 8; }
-  .col-s-9 { grid-column: span 9; }
-  .col-s-10 { grid-column: span 10; }
-  .col-s-11 { grid-column: span 11; }
-  .col-s-12 { grid-column: span 12; }
-}
-
 /* Auto-fit grid for card layouts */
 .grid-auto {
   display: grid;
@@ -61,101 +29,124 @@
   gap: var(--pico-spacing, 1rem);
 }
 
+/* === Global Styles === */
+:root {
+  --pico-border-radius: 0.25rem;
+}
+
+[type="search"] {
+  --pico-border-radius: 0.25rem;
+}
+
+/* === Utilities === */
+.hidden {
+  display: none !important;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Skip link - standard a11y pattern */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  padding: 0.5rem 1rem;
+  background: var(--pico-primary);
+  color: var(--pico-primary-inverse);
+  z-index: 1000;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* === Site Header Nav === */
+nav[data-theme="dark"] {
+  background: var(--pico-primary-background);
+}
+
+nav .logo {
+  height: 50px;
+}
+
 /* === Filters Sidebar === */
 .filters-sidebar {
   position: sticky;
   top: 0;
   max-height: 100vh;
-  overflow-y: auto;
-  padding: var(--pico-spacing);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
   background: var(--pico-card-background-color);
 }
 
-@media (max-width: 575px) {
-  .filters-sidebar {
-    position: static;
-    max-height: none;
-  }
-}
-
-/* === Filter Status === */
-.filter-status {
-  padding: 0.5rem 0;
-  margin-bottom: 0.75rem;
+.filters {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 0.8rem;
-  opacity: 0.8;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
 }
 
-.filter-status .visible-count {
-  font-weight: bold;
-}
-
-.filter-status #filter-options {
-  font-size: 0.7rem;
-  padding: 0.2rem 0.4rem;
-  margin: 0;
-  width: auto;
+.filters-scroll {
   flex: 1;
-  min-width: 40px;
-  max-width: 100px;
+  overflow-y: auto;
+  padding: var(--pico-spacing);
 }
 
-/* Search bar above cards */
-main > input[type="search"] {
+.filters-footer {
+  padding: var(--pico-spacing);
+  border-top: 1px solid var(--pico-muted-border-color);
+  background: var(--pico-card-background-color);
+}
+
+.filters-footer button {
   width: 100%;
-  margin-bottom: var(--pico-spacing);
-}
-
-#filter-options {
-  font-size: 0.75rem;
-  padding: 0.3rem 0.5rem;
-  margin-bottom: 0.5rem;
-  opacity: 0.7;
-  --pico-form-element-spacing-vertical: 0.3rem;
-  --pico-form-element-spacing-horizontal: 0.5rem;
-}
-
-#filter-options:focus {
-  opacity: 1;
-}
-
-/* === Clear Button === */
-.clear-all {
-  font-size: 0.7rem;
-  padding: 0.2rem 0.4rem;
   margin: 0;
 }
 
-/* === Filter Form Elements === */
-.filters details {
-  border: none;
-  padding: 0;
-  margin: 0 0 0.75rem 0;
-}
-
-.filters details[hidden] {
+/* Mobile filter controls - hidden by default */
+.mobile-filter-toggle,
+.mobile-filter-close,
+.mobile-filter-backdrop {
   display: none;
 }
 
-.filters summary {
-  font-size: 0.75rem;
+/* === Filter Controls === */
+.filter-search {
+  font-size: 0.8rem;
+  padding: 0.5rem 0.75rem;
+  margin-bottom: 1rem;
+}
+
+/* Filter sections (flat layout) */
+.filter-section {
+  margin-bottom: 1.25rem;
+}
+
+.filter-section h4 {
+  font-size: 0.7rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  opacity: 0.6;
-  margin-bottom: 0.4rem;
-  padding: 0;
+  color: var(--pico-muted-color);
+  margin: 0 0 0.5rem 0;
 }
 
-/* === Filter List (mdbook-style sidebar) === */
+/* === Filter List === */
 .filter-list {
   display: flex;
   flex-direction: column;
-  gap: 0;
 }
 
 .filter-item {
@@ -252,10 +243,6 @@ main > input[type="search"] {
 }
 
 /* === JS-Applied Filter Classes === */
-.company-item.search-hidden {
-  display: none !important;
-}
-
 .company-item.filter-hidden {
   display: none !important;
 }
@@ -268,22 +255,54 @@ main > input[type="search"] {
   padding: 2rem;
 }
 
-/* Show no-results when all cards are hidden */
-.company-grid:not(
-    :has(
-      .company-item:not([style*="display: none"]):not(.search-hidden):not(
-          .filter-hidden
-        )
-    )
-  )
-  + .no-results {
-  display: block;
-}
-
 /* === Search Highlighting (CSS Custom Highlight API) === */
 ::highlight(search-results) {
   background-color: var(--pico-primary-focus);
   color: inherit;
+}
+
+/* === Taxonomy Pages === */
+/* Taxonomy term cards with optional icons */
+.taxonomy-card {
+  text-align: center;
+}
+
+.taxonomy-card a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.taxonomy-card .taxonomy-icon {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  border-radius: var(--pico-border-radius);
+}
+
+.taxonomy-card .taxonomy-map-thumb {
+  width: 100%;
+  max-width: 180px;
+  height: auto;
+  border-radius: var(--pico-border-radius);
+  object-fit: cover;
+}
+
+/* Taxonomy term page - embedded map */
+.taxonomy-map {
+  position: sticky;
+  top: var(--pico-spacing);
+  height: calc(100vh - 2 * var(--pico-spacing));
+}
+
+.taxonomy-map iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: var(--pico-border-radius);
 }
 
 /* === Company Cards === */
@@ -301,14 +320,10 @@ main > input[type="search"] {
   align-items: center;
   text-align: center;
   height: 100%;
-  padding: 1rem;
-  transition: background-color 0.15s;
-  background: var(--pico-card-background-color);
-  border-radius: var(--pico-border-radius);
 }
 
 .company-card:hover article {
-  background-color: var(--pico-muted-border-color);
+  background-color: var(--pico-card-sectioning-background-color);
 }
 
 .company-card .logo-area {
@@ -392,130 +407,144 @@ main > input[type="search"] {
   margin: 0;
 }
 
-/* === Site Header Nav === */
-nav[data-theme="dark"] {
-  background: var(--pico-primary-background);
+/* === Index Page: Directory Header === */
+.directory-header {
+  align-items: center;
+  margin-bottom: var(--pico-spacing);
 }
 
-/* Browse dropdown - outline style */
-nav[data-theme="dark"] .dropdown summary {
-  background: transparent;
-  border: 1px solid currentColor;
+.directory-header .search-group {
+  margin: 0;
 }
 
-nav .logo {
-  height: 50px;
+.directory-header input[type="search"] {
+  margin: 0;
 }
 
-@media (max-width: 600px) {
-  nav .logo {
-    height: 40px;
-  }
+/* Map toggle - icon checkbox like stream icons */
+.map-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 0.75rem;
+  margin: 0;
+  cursor: pointer;
+  background: var(--pico-form-element-background-color);
+  border: var(--pico-border-width) solid var(--pico-form-element-border-color);
+  border-left: none;
+  border-radius: 0 var(--pico-border-radius) var(--pico-border-radius) 0;
 }
 
-/* === Global Styles === */
-:root {
-  --pico-border-radius: 0.25rem;
-}
-
-[type="search"] {
-  --pico-border-radius: 0.25rem;
-}
-
-/* === Utilities === */
-.hidden {
-  display: none !important;
-}
-
-.visually-hidden {
+.map-toggle input {
   position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
+  opacity: 0;
+  width: 0;
+  height: 0;
 }
 
-/* Skip link */
-.skip-link {
-  position: absolute;
-  top: -40px;
-  left: 0;
-  padding: 0.5rem 1rem;
+.map-toggle svg {
+  opacity: 0.5;
+  transition: opacity 0.15s, color 0.15s;
+}
+
+.map-toggle:hover svg {
+  opacity: 0.75;
+}
+
+.map-toggle:has(input:checked) {
+  background: var(--pico-primary);
+  border-color: var(--pico-primary);
+}
+
+.map-toggle:has(input:checked) svg {
+  opacity: 1;
+  color: var(--pico-primary-inverse);
+}
+
+/* === Index Page: Directory Breadcrumb === */
+.directory-breadcrumb ul {
+  align-items: center;
+}
+
+/* Filter badge with X to clear */
+.directory-breadcrumb .filter-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.2rem 0.5rem;
+  font-size: 0.75rem;
+  background: var(--pico-primary-focus);
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+  color: inherit;
+  margin: 0;
+}
+
+.directory-breadcrumb .filter-badge:hover {
   background: var(--pico-primary);
   color: var(--pico-primary-inverse);
-  z-index: 1000;
-  text-decoration: none;
 }
 
-.skip-link:focus {
-  top: 0;
+.directory-breadcrumb .filter-badge svg {
+  opacity: 0.7;
 }
 
-/* === Index Page: Search Row & View Toggle === */
-.search-row {
-  display: flex;
-  gap: var(--pico-spacing);
-  margin-bottom: var(--pico-spacing);
-  align-items: center;
-}
-.search-row input[type="search"] {
-  flex: 1;
-  margin: 0;
-}
-.view-toggle {
-  display: inline-flex !important;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 0.8rem;
-  white-space: nowrap;
-  margin: 0;
-  flex-shrink: 0;
-}
-.view-toggle input {
-  margin: 0;
+.directory-breadcrumb .filter-badge:hover svg {
+  opacity: 1;
 }
 
+.directory-breadcrumb .filter-count {
+  font-weight: 600;
+}
+
+/* Map iframe */
 #map-iframe {
   width: 100%;
-  height: calc(100vh - 180px);
-  min-height: 500px;
+  height: calc(100dvh - 180px);
+  min-height: 400px;
   border: none;
   border-radius: var(--pico-border-radius);
 }
-#map-iframe.hidden {
-  display: none;
-}
+
+#map-iframe.hidden,
 .grid-auto.hidden {
   display: none;
 }
 
 /* === Company Page === */
 .company-page .info-column {
-  background: var(--pico-muted-border-color);
+  background: var(--pico-card-sectioning-background-color);
   border-radius: var(--pico-border-radius);
   padding: var(--pico-spacing);
 }
 
-@media (max-width: 991px) {
-  .company-page .info-column {
-    order: -1;
-  }
+/* Company Logo in Sidebar */
+.company-page .company-logo {
+  text-align: center;
 }
 
-/* Company Title in Sidebar */
-.company-page .company-title {
-  text-align: center;
-  margin: 0;
-  font-size: 1.25rem;
-}
-.company-page .company-title img {
-  max-height: 80px;
+.company-page .company-logo img {
+  max-height: 100px;
   max-width: 100%;
   object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Company Badges Inline (below h1) */
+.company-page .company-badges-inline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  margin: -0.5rem 0 1rem 0;
+}
+
+.company-page .company-badges-inline small {
+  padding: 0.15rem 0.5rem;
+  background: var(--pico-muted-border-color);
+  border-radius: var(--pico-border-radius);
+  font-size: 0.75rem;
 }
 
 /* Content Column */
@@ -527,6 +556,7 @@ nav .logo {
   padding-bottom: calc(var(--pico-spacing) * 0.5);
   border-bottom: 1px solid var(--pico-muted-border-color);
 }
+
 .company-page .content-column h2:first-child {
   margin-top: 0;
 }
@@ -537,21 +567,26 @@ nav .logo {
   padding-bottom: var(--pico-spacing);
   border-bottom: 1px solid var(--pico-muted-color);
 }
+
 .company-page .contact-person .contact-name {
   font-weight: 600;
   margin: 0;
 }
+
 .company-page .contact-person .contact-title {
   font-size: 0.875rem;
   opacity: 0.7;
   margin: 0.25rem 0 0 0;
 }
+
 .company-page .contact-info p {
   margin: 0 0 0.5rem 0;
 }
+
 .company-page .contact-info p:last-child {
   margin-bottom: 0;
 }
+
 .company-page .contact-info .address {
   font-size: 0.9rem;
   line-height: 1.4;
@@ -563,15 +598,18 @@ nav .logo {
   border-radius: var(--pico-border-radius);
   overflow: hidden;
 }
+
 .company-page .minimap a {
   display: block;
 }
+
 .company-page .minimap img {
   width: 100%;
   height: auto;
   display: block;
   transition: filter 0.15s;
 }
+
 .company-page .minimap:hover img {
   filter: brightness(0.9);
 }
@@ -583,10 +621,12 @@ nav .logo {
   flex-wrap: wrap;
   margin-bottom: 0.5rem;
 }
+
 .company-page .taxonomy-section .stream-icons a {
   display: block;
   padding: 0;
 }
+
 .company-page .taxonomy-section .stream-icons img {
   width: 36px;
   height: 36px;
@@ -595,18 +635,22 @@ nav .logo {
   transition: all 0.15s ease;
   border: 2px solid transparent;
 }
+
 .company-page .taxonomy-section .stream-icons a:hover img {
   border-color: var(--pico-primary);
 }
+
 .company-page .taxonomy-section ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
+
 .company-page .taxonomy-section li {
   margin: 0;
   padding: 0;
 }
+
 .company-page .taxonomy-section a {
   display: block;
   padding: calc(var(--pico-spacing) * 0.25) 0;
@@ -620,6 +664,7 @@ nav .logo {
   border-top: 1px solid var(--pico-muted-border-color);
   text-align: right;
 }
+
 .company-page .company-footer a {
   font-size: 0.85rem;
   color: var(--pico-muted-color);
@@ -632,25 +677,19 @@ nav .logo {
   align-items: center;
   margin-bottom: var(--pico-spacing);
 }
+
 .company-page .edit-header h2 {
   margin: 0;
   font-size: 1rem;
 }
 
 .company-page .edit-actions {
-  display: flex;
-  gap: 0.5rem;
-  flex-wrap: wrap;
-}
-.company-page .edit-actions button,
-.company-page .edit-actions a[role="button"] {
-  margin: 0;
+  margin-bottom: var(--pico-spacing);
 }
 
 .company-page #field-overview,
 .company-page #field-capabilities {
-  font-family:
-    ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
   font-size: 0.875rem;
   line-height: 1.5;
   width: 100%;
@@ -662,6 +701,7 @@ nav .logo {
   justify-content: flex-end;
   margin-bottom: 0.5rem;
 }
+
 .company-page .preview-toggle {
   font-size: 0.8rem;
   margin: 0;
@@ -674,6 +714,143 @@ nav .logo {
   border: 1px solid var(--pico-form-element-border-color);
   border-radius: var(--pico-border-radius);
   background: var(--pico-form-element-background-color);
+}
+
+/* === Responsive: Medium screens (768px - 1023px) === */
+@media (max-width: 1023px) {
+  .col-m-1 { grid-column: span 1; }
+  .col-m-2 { grid-column: span 2; }
+  .col-m-3 { grid-column: span 3; }
+  .col-m-4 { grid-column: span 4; }
+  .col-m-5 { grid-column: span 5; }
+  .col-m-6 { grid-column: span 6; }
+  .col-m-7 { grid-column: span 7; }
+  .col-m-8 { grid-column: span 8; }
+  .col-m-9 { grid-column: span 9; }
+  .col-m-10 { grid-column: span 10; }
+  .col-m-11 { grid-column: span 11; }
+  .col-m-12 { grid-column: span 12; }
+
+  .company-page .info-column {
+    order: -1;
+  }
+}
+
+/* === Responsive: Small screens (<768px) === */
+@media (max-width: 767px) {
+  .col-s-1 { grid-column: span 1; }
+  .col-s-2 { grid-column: span 2; }
+  .col-s-3 { grid-column: span 3; }
+  .col-s-4 { grid-column: span 4; }
+  .col-s-5 { grid-column: span 5; }
+  .col-s-6 { grid-column: span 6; }
+  .col-s-7 { grid-column: span 7; }
+  .col-s-8 { grid-column: span 8; }
+  .col-s-9 { grid-column: span 9; }
+  .col-s-10 { grid-column: span 10; }
+  .col-s-11 { grid-column: span 11; }
+  .col-s-12 { grid-column: span 12; }
+
+  nav .logo {
+    height: 40px;
+  }
+
+  nav .desktop-only {
+    display: none;
+  }
+
+  /* Prevent iOS zoom on input focus */
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="search"],
+  input[type="url"],
+  textarea,
+  select {
+    font-size: 16px;
+  }
+
+  /* Filters sidebar becomes slide-out panel */
+  .filters-sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 85%;
+    max-width: 320px;
+    height: 100%;
+    max-height: 100%;
+    z-index: 200;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    padding-top: 3rem;
+  }
+
+  .filters-sidebar.open {
+    transform: translateX(0);
+  }
+
+  .mobile-filter-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: var(--pico-spacing);
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    width: 100%;
+    justify-content: center;
+    grid-column: 1 / -1;
+  }
+
+  .mobile-filter-toggle svg {
+    flex-shrink: 0;
+  }
+
+  .mobile-filter-close {
+    display: flex;
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    background: transparent;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    color: var(--pico-color);
+    z-index: 1;
+  }
+
+  .mobile-filter-close:hover {
+    background: var(--pico-muted-border-color);
+    border-radius: var(--pico-border-radius);
+  }
+
+  .mobile-filter-backdrop.open {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 199;
+  }
+
+  #map-iframe {
+    height: calc(100dvh - 220px);
+    min-height: 300px;
+  }
+}
+
+/* Larger touch targets on touch devices */
+@media (pointer: coarse) {
+  .filter-item {
+    padding: 0.5rem 0.6rem;
+    min-height: 44px;
+  }
+
+  .stream-icon img {
+    width: 44px;
+    height: 44px;
+  }
 }
 
 /* === Print === */
@@ -692,7 +869,6 @@ nav .logo {
     display: none !important;
   }
 
-  /* Reset colors and layout */
   body {
     background: white;
     color: black;
@@ -749,7 +925,6 @@ nav .logo {
     display: none !important;
   }
 
-  /* Page breaks */
   article,
   .company-page .info-column {
     break-inside: avoid;
