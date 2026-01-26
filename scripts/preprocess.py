@@ -24,7 +24,6 @@ import pandas as pd
 import yaml
 from openpyxl.utils import get_column_letter
 from pymgl import Map
-from rich.progress import Progress, TextColumn, BarColumn, TaskProgressColumn
 from shapely import MultiPoint, Point
 from shapely.geometry import mapping
 
@@ -40,6 +39,7 @@ from config import (
     MAP_HEIGHT,
     MAP_MARKER_LAYERS,
     OVERVIEW_MAX_LENGTH,
+    make_progress,
 )
 
 
@@ -126,14 +126,14 @@ def load_taxonomies() -> dict:
         return yaml.safe_load(f) or {}
 
 
-def export_csv(companies: list[dict], taxonomies: dict, output: Path) -> None:
-    """Export to CSV with display names."""
+def _build_export_rows(companies: list[dict], taxonomies: dict) -> list[dict]:
+    """Build export rows with display names for taxonomies."""
 
-    def keys_to_names(keys: list, tax: str) -> str:
+    def keys_to_names(keys: list | None, tax: str) -> str:
         mapping = taxonomies.get(tax, {})
         return "; ".join(mapping.get(k, k) for k in (keys or []))
 
-    rows = [
+    return [
         {
             "name": c.get("name", ""),
             "website": c.get("website", ""),
@@ -161,45 +161,17 @@ def export_csv(companies: list[dict], taxonomies: dict, output: Path) -> None:
         for c in companies
     ]
 
+
+def export_csv(companies: list[dict], taxonomies: dict, output: Path) -> None:
+    """Export to CSV with display names."""
+    rows = _build_export_rows(companies, taxonomies)
     df = pd.DataFrame(rows).sort_values("name", ignore_index=True)
     df.to_csv(output, index=False)
 
 
 def export_xlsx(companies: list[dict], taxonomies: dict, output: Path) -> None:
     """Export to XLSX with formatting."""
-
-    def keys_to_names(keys: list, tax: str) -> str:
-        mapping = taxonomies.get(tax, {})
-        return "; ".join(mapping.get(k, k) for k in (keys or []))
-
-    rows = [
-        {
-            "name": c.get("name", ""),
-            "website": c.get("website", ""),
-            "regions": keys_to_names(c.get("regions"), "regions"),
-            "address": c.get("address", ""),
-            "capability_streams": keys_to_names(
-                c.get("capability_streams"), "capability_streams"
-            ),
-            "capability_domains": keys_to_names(
-                c.get("capability_domains"), "capability_domains"
-            ),
-            "industrial_capabilities": keys_to_names(
-                c.get("industrial_capabilities"), "industrial_capabilities"
-            ),
-            "stakeholders": keys_to_names(c.get("stakeholders"), "stakeholders"),
-            "is_sme": c.get("is_sme", False),
-            "is_prime": c.get("is_prime", False),
-            "phone": c.get("phone", ""),
-            "email": c.get("email", ""),
-            "latitude": c.get("latitude"),
-            "longitude": c.get("longitude"),
-            "markdown": c.get("_content", "").strip(),
-            "slug": c.get("slug", ""),
-        }
-        for c in companies
-    ]
-
+    rows = _build_export_rows(companies, taxonomies)
     df = pd.DataFrame(rows).sort_values("name", ignore_index=True)
 
     with pd.ExcelWriter(output, engine="openpyxl") as writer:
@@ -332,11 +304,7 @@ def main():
 
     # Company maps
     count = 0
-    with Progress(
-        TextColumn("[progress.description]{task.description}"),
-        BarColumn(),
-        TaskProgressColumn(),
-    ) as progress:
+    with make_progress() as progress:
         task = progress.add_task("Company maps...", total=len(company_locations))
         for slug, lat, lng in company_locations:
             if render_map(m, [(lat, lng)], MAPS_DIR / f"{slug}.png"):
@@ -352,11 +320,7 @@ def main():
         if locs
     ]
     count = 0
-    with Progress(
-        TextColumn("[progress.description]{task.description}"),
-        BarColumn(),
-        TaskProgressColumn(),
-    ) as progress:
+    with make_progress() as progress:
         task = progress.add_task("Term maps...", total=len(term_maps))
         for key, locs in term_maps:
             if render_map(m, locs, TERM_MAPS_DIR / f"{key}.png"):

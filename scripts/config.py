@@ -3,11 +3,17 @@
 Imports hugo.toml and exports common paths and constants.
 """
 
+import logging
 import shutil
 from pathlib import Path
 import tomllib
 
 import diskcache
+from rich.progress import Progress, TextColumn, BarColumn, TaskProgressColumn
+
+# Logging setup
+logging.basicConfig(level=logging.WARNING, format="%(levelname)s: %(message)s")
+log = logging.getLogger("defencewest")
 
 # Paths
 ROOT_DIR = Path(__file__).parent.parent
@@ -29,6 +35,24 @@ params = hugo_toml["params"]
 
 # WA bounds from hugo.toml (minx, miny, maxx, maxy format)
 WA_BOUNDS = params["waBounds"]
+
+
+def is_in_wa(lat: float, lng: float) -> bool:
+    """Check if coordinates are within Western Australia bounds."""
+    return (
+        WA_BOUNDS["miny"] <= lat <= WA_BOUNDS["maxy"]
+        and WA_BOUNDS["minx"] <= lng <= WA_BOUNDS["maxx"]
+    )
+
+
+def make_progress() -> Progress:
+    """Create a standard progress bar."""
+    return Progress(
+        TextColumn("[progress.description]{task.description}"),
+        BarColumn(),
+        TaskProgressColumn(),
+    )
+
 
 # User agent for HTTP requests
 USER_AGENT = f"{params['githubRepo']} (+https://github.com/{params['githubRepo']})"

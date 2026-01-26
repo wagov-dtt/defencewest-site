@@ -17,7 +17,6 @@ import httpx
 import yaml
 from geopy.geocoders import Nominatim
 from markdownify import markdownify as md
-from rich.progress import Progress, TextColumn, BarColumn, TaskProgressColumn
 from selectolax.parser import HTMLParser
 from unidecode import unidecode
 
@@ -27,13 +26,15 @@ from config import (
     DATA_DIR,
     ICONS_DIR,
     LOGOS_DIR,
-    WA_BOUNDS,
     HAS_MOGRIFY,
     cache,
     USER_AGENT,
     TAXONOMIES,
     build_taxonomy_keys,
     clean_slug,
+    is_in_wa,
+    log,
+    make_progress,
 )
 
 # URLs from hugo.toml
@@ -41,14 +42,6 @@ BASE_URL = params["scrapeBaseUrl"]
 
 # Initialize Nominatim geolocator for geocoding
 geolocator = Nominatim(user_agent=USER_AGENT, timeout=30)
-
-
-def is_in_wa(lat: float, lng: float) -> bool:
-    """Check if coordinates are within Western Australia bounds."""
-    return (
-        WA_BOUNDS["miny"] <= lat <= WA_BOUNDS["maxy"]
-        and WA_BOUNDS["minx"] <= lng <= WA_BOUNDS["maxx"]
-    )
 
 
 def simplify_address(address: str) -> str:
@@ -174,8 +167,8 @@ def resolve_url(url: str) -> str:
             r = client.head(url)
             if r.status_code < 400:
                 return str(r.url).rstrip("/")
-    except Exception:
-        pass
+    except Exception as e:
+        log.warning(f"URL resolve failed for {url}: {e}")
 
     return (
         f"https://{original_url.rstrip('/')}"
@@ -193,11 +186,7 @@ def resolve_all_urls(companies: list[dict]) -> dict[str, str]:
         return {}
 
     url_map = {}
-    with Progress(
-        TextColumn("[progress.description]{task.description}"),
-        BarColumn(),
-        TaskProgressColumn(),
-    ) as progress:
+    with make_progress() as progress:
         task = progress.add_task(
             f"Resolving {len(to_resolve)} URLs...", total=len(to_resolve)
         )
@@ -211,8 +200,8 @@ def resolve_all_urls(companies: list[dict]) -> dict[str, str]:
                 try:
                     if resolved := future.result():
                         url_map[slug] = resolved
-                except Exception:
-                    pass
+                except Exception as e:
+                    log.warning(f"URL resolve failed for {slug}: {e}")
                 progress.update(task, advance=1)
 
     return url_map
@@ -261,10 +250,11 @@ def download_image(
                     check=True,
                     capture_output=True,
                 )
-            except Exception:
-                pass
+            except Exception as e:
+                log.warning(f"Image optimize failed for {output_path}: {e}")
         return True
-    except Exception:
+    except Exception as e:
+        log.warning(f"Image download failed for {url}: {e}")
         return False
 
 
@@ -513,11 +503,7 @@ def geocode_companies(companies: list[dict]) -> dict[str, tuple[float, float]]:
         return {}
 
     results = {}
-    with Progress(
-        TextColumn("[progress.description]{task.description}"),
-        BarColumn(),
-        TaskProgressColumn(),
-    ) as progress:
+    with make_progress() as progress:
         task = progress.add_task(
             f"Geocoding {len(to_geocode)} addresses...", total=len(to_geocode)
         )
