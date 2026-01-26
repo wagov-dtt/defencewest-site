@@ -18,7 +18,6 @@ log = logging.getLogger("defencewest")
 # Paths
 ROOT_DIR = Path(__file__).parent.parent
 COMPANY_DIR = ROOT_DIR / "content" / "company"
-CONTENT_DIR = ROOT_DIR / "content"
 DATA_DIR = ROOT_DIR / "data"
 STATIC_DIR = ROOT_DIR / "static"
 LOGOS_DIR = STATIC_DIR / "logos"

@@ -22,7 +22,7 @@ from unidecode import unidecode
 
 from config import (
     params,
-    CONTENT_DIR,
+    COMPANY_DIR,
     DATA_DIR,
     ICONS_DIR,
     LOGOS_DIR,
@@ -608,7 +608,7 @@ def main():
 
     # Save files
     for c in companies:
-        save_markdown(c, CONTENT_DIR / "company" / f"{c['_slug']}.md")
+        save_markdown(c, COMPANY_DIR / f"{c['_slug']}.md")
     print(f"Saved {len(companies)} companies to content/company/")
 
     yaml_path = DATA_DIR / "taxonomies.yaml"
