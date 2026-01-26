@@ -1,6 +1,7 @@
 ---
 name: AROSE
-date: '2024-01-01'
+date: '2025-01-27'
+overview: AROSE is an industry-led, not-for-profit organisation establishing Australia as the trusted leader in Remote Operations, Science, Technology and Service - on Earth and in Space.
 website: https://www.arose.org.au
 contact_name: Leanne Cunnold
 contact_title: CEO
@@ -39,12 +40,11 @@ Standing at the forefront of knowledge and technology transfer between Australia
 
 These projects deliver high-end, niche solutions and technology for applications from Earth to space and back again; solutions and applications that can transform industries, explore space, and return benefits to our economy, workforce, communities, and the planet, now and for future generations.
 
-**Our mission**
+- Our mission**
 
-  * Drive knowledge exchange across sectors from Space-to-ground and ground-to-Space through industry-led projects.
-  * Build and advocate national capability and develop the future workforce to expand remote operations.
-  * Secure Australia's role in the international Space sector.
-
+- Drive knowledge exchange across sectors from Space-to-ground and ground-to-Space through industry-led projects.
+- Build and advocate national capability and develop the future workforce to expand remote operations.
+- Secure Australia's role in the international Space sector.
 ## Capabilities
 
 Our Members and other ambitious companies come to us with their big challenges, those they can't solve with traditional approach or technology.
@@ -54,7 +54,6 @@ AROSE engages the right expertise across our consortium of members who bring div
 Our consortium boasts technology expertise in remote operations, robotics and automation, space robotics, systems engineering, interoperability, communications, cybersecurity, data science and consultancy, high power computing, planetary science, rocket and launch, satellites, spacecraft, planetary rovers, and smart surface sensors. With members including leading forces in the Australian Defence Industry, our consortium have the experience and expertise to solve challenges.
 
 Recently, AROSE has been awarded a $1.7million grant through the Department of Defence's Schools Pathways Program to deliver the AROSE Virtual and In-person STEM Training and Awareness (AVISTA) Program. The AVISTA Program will engage students, parents, and teachers across Australia through hands-on learning experiences, immersive Virtual Reality (VR) technology, and provide direct insights into defence industry career pathways.
-
 ## Discriminators
 
 Our members consortium boasts technology expertise in remote operations, robotics and automation, space robotics, systems engineering, interoperability, communications, cybersecurity, data science and consultancy, high power computing, planetary science, rocket and launch, satellites, spacecraft, planetary rovers, and smart surface sensors.

@@ -1,6 +1,7 @@
 ---
 name: Renewable.bio Pty Ltd
-date: '2024-01-01'
+date: '2025-01-27'
+overview: Bioenergy and biofuels company producing renewable fuels from sustainable resources
 website: https://renewable.bio
 contact_name: Angelo Dabala
 contact_title: CEO
@@ -41,7 +42,6 @@ No previous experience with defence industry.
 We are establishing supply chains and production capabilities in Western Australia to produce biofuels including renewable diesel, SAF and biogas.
 
 We have feedstock supply chains operating for 5 years and aim to be producing biofuels by 2028 subject to demand and offtake. Currently producing other biofuel related products.
-
 ## Capabilities
 
 Our objective is to replace imported fossil fuels with sustainable, renewable and 100% compatible biofuels. All our biofuels will be 'drop in', ie 100% compatible with current fossil fuel diesel and aviation fuel.
@@ -49,10 +49,9 @@ Our objective is to replace imported fossil fuels with sustainable, renewable an
 We are planning to have both centralised large scale operations and remote small scale fuel production facilities.
 
 Our feedstock to produce renewable fuels is primarily agricultural and forestry residues. In principle, any sustainable organic feedstock can be utilised.
-
 ## Discriminators
 
 - Locally produced sustainable biofuels
-  * Currently producing A$10m revenue, planning to scale up
-  * All feedstock sustainably sourced
-  * Biofuels as a renewable creates employment primarily in regional Australia
+- Currently producing A$10m revenue, planning to scale up
+- All feedstock sustainably sourced
+- Biofuels as a renewable creates employment primarily in regional Australia

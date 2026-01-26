@@ -1,6 +1,7 @@
 ---
 name: CDMS Consulting Engineers
-date: '2024-01-01'
+date: '2025-01-27'
+overview: CDMS Consulting Engineers provides engineering services specialising in innovative product development.
 website: https://cdmsengineering.com
 contact_name: Damian Connelly
 contact_title: Director, Principal Consulting Engineer
@@ -31,8 +32,8 @@ longitude: 115.84438
 
 ## Overview
 
-CDMS Consulting Engineers provides engineering services specialising in innovative product development, pressure vessel equipment, heat exchangers, steel and concrete structures, piping and pumping, maintenance, storage tanks and thickeners, major projects, lifting design, bulk materials handling, fuel handling and storage and specialist services. Our wider activities across the Midas Group also include mechanical, civil and structural, electrical, building services and process engineering.
-
+CDMS Consulting Engineers provides engineering services specialising in innovative product development, pressure vessel equipment, heat exchangers, steel and concrete structures, piping and pumping, maintenance, storage tanks and thickeners, major projects, lifting design, bulk materials handling, fuel handling and storage and specialist services. Our wider activities across the Midas Group also include mechanical,
+civil and structural, electrical, building services and process engineering.
 ## Capabilities
 
 Our reputation for delivering innovative and quality engineering services for 31 years to WA companies and other customers.

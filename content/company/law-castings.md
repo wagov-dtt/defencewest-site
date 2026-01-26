@@ -1,6 +1,7 @@
 ---
 name: Law Castings
-date: '2024-01-01'
+date: '2025-01-27'
+overview: Law Castings is a family-owned and operated manufacturing business in WA. We are an iron and steel Foundry specialising in stainless steel castings up to 300kg.
 website: https://www.lawcastings.com.au
 contact_name: Rodney Luck
 contact_title: Managing Director
@@ -42,22 +43,20 @@ We have been supplying castings to Austal Ships for the last 25 years. We supply
 
 We are ISO 9001, ISO 45001 & ISO 14001 accredited with DNV and a member of JOSCAR-AU.
 
-We supply Stärke Advanced Manufacturing Group stainless steel castings
-
+We supply Starke Advanced Manufacturing Group stainless steel castings
 ## Capabilities
 
 - Induction furnace capacity 400kg and 100kg
-  * Hard sand moulding and die casting
-  * Induction melting of steels, cast & SG irons, wear resistant- white irons, stainless steels and zinc anodes
-  * Chemical analysis, (Spectrometer)
-  * Grinding, sand blasting and inspection
-  * Heat Treatment
-  * Non destructive test:- including brinell hardness, magnetic particle and dye penetrate testing
-  * Quotes returned within two days
-  * Delivery of casting on time
-  * Weekly updates on order progress
-  * Acknowledgement of order & confirm delivery date within two days
-
+- Hard sand moulding and die casting
+- Induction melting of steels, cast & SG irons, wear resistant- white irons, stainless steels and zinc anodes
+- Chemical analysis, (Spectrometer)
+- Grinding, sand blasting and inspection
+- Heat Treatment
+- Non destructive test:- including brinell hardness, magnetic particle and dye penetrate testing
+- Quotes returned within two days
+- Delivery of casting on time
+- Weekly updates on order progress
+- Acknowledgement of order & confirm delivery date within two days
 ## Discriminators
 
 At Law Castings we are focused on building customer relationships by treating each customer as an individual. We understand that your growth is our growth, and working together, we can understand and satisfy your requirements.

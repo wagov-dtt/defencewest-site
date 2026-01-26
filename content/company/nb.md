@@ -1,6 +1,7 @@
 ---
 name: NB Consulting
-date: '2024-01-01'
+date: '2025-01-27'
+overview: Business Advisory Services - Defence Industry Small-Medium Enterprise (SME)s aspiring to enter or develop their presence in the Defence Industry sector.
 website: https://nb-consulting.com.au
 contact_name: Neil Bartlett
 contact_title: Principal
@@ -8,12 +9,13 @@ address: P.O. Box 1150, Subiaco WA 6904
 phone: +61(0)434 832 336
 email: admin@nb-consulting.com.au
 is_sme: true
-is_veteran_owned: true
 stakeholders:
 - defence
 - defence-west
 regions:
 - perth
+ownerships:
+- veteran
 latitude: -31.947
 longitude: 115.824
 ---
@@ -23,7 +25,6 @@ longitude: 115.824
 Proudly Western Australian and Veteran owned and operated, we provide advisory services to businesses aspiring to enter or develop their presence in the Defence Industry sector.
 
 Leveraging 40+ years of Defence and Defence Industry experience and networks across a variety of international, cross-cultural and multi-disciplinary domains at executive levels within Government, Defence and Industry, we support businesses in the delivery of safe, compliant, cost effective and ethical outcomes.
-
 ## Capabilities
 
 - Business Defence Readiness Evaluation
@@ -53,7 +54,6 @@ Leveraging 40+ years of Defence and Defence Industry experience and networks acr
 - Defence Bid/Tender Alignment (ASDEFCON)
 
 - Defence Program/Project/Operations Support
-
 ## Discriminators
 
 - Defence Veteran Owned & Operated Business

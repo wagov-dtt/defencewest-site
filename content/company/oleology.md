@@ -1,6 +1,7 @@
 ---
 name: OLEOLOGY Pty Ltd
-date: '2024-01-01'
+date: '2025-01-27'
+overview: OLEOLOGY's expertise in water treatment systems includes advanced solutions to recycle and decontaminate water quicker, simpler, and more cost-effective.
 website: https://oleology.com.au
 contact_name: Ben Cammack
 contact_title: Technical Strategy & Development
@@ -49,33 +50,31 @@ Incorporating the MyCelx technology, which efficiently removes organics, oils, h
 While other oil-water separators rely on mechanical separation or chemicals, MyCelx bonds with oil and other contaminants at a molecular level. This means oils, hydrocarbons, and other contaminants are removed almost completely without any water loss.
 
 Some of MyCelx's many benefits are:
-• Oil Contaminant levels reduced to less than 1ppm.
-• No release back into the water
-• Designed to any flow rate and discharge requirements.
-• Easy to install, operate and maintain.
-• Low power requirements.
-• Small Footprint, Low-pressure drop, High Throughput.
-• Skid mount or Containerized.
-• Environmentally Green Engineered Oily Water Filtration and Hydrocarbon Odour Removal.
-• The only technology certified by Lloyd's Register for oily water treatment and discharge into marine environments.
-• Economical - Lowest capital and competitive operating costs.
-
+- Oil Contaminant levels reduced to less than 1ppm.
+- No release back into the water
+- Designed to any flow rate and discharge requirements.
+- Easy to install, operate and maintain.
+- Low power requirements.
+- Small Footprint, Low-pressure drop, High Throughput.
+- Skid mount or Containerized.
+- Environmentally Green Engineered Oily Water Filtration and Hydrocarbon Odour Removal.
+- The only technology certified by Lloyd's Register for oily water treatment and discharge into marine environments.
+- Economical - Lowest capital and competitive operating costs.
 ## Capabilities
 
 OLEOLOGY provides Engineered Water Treatment solutions, GAP Analysis reports, Phased testing and trials, and Engineering capabilities to assist the Defence industry
 
 While other oil-water separators rely on mechanical separation or chemicals, MyCelx bonds with oil and other contaminants at a molecular level. This means oils, hydrocarbons, and other contaminants are removed almost completely without any water loss.
-
 ## Discriminators
 
 Some of MyCelx's many benefits are:
-• Oil Contaminant levels reduced to less than 1ppm.
-• No release back into the water
-• Designed to any flow rate and discharge requirements.
-• Easy to install, operate and maintain.
-• Low power requirements.
-• Small Footprint, Low-pressure drop, High Throughput.
-• Skid mount or Containerized.
-• Environmentally Green Engineered Oily Water Filtration and Hydrocarbon Odour Removal.
-• The only technology certified by Lloyd's Register for oily water treatment and discharge into marine environments.
-• Economical - Lowest capital and competitive operating costs.
+- Oil Contaminant levels reduced to less than 1ppm.
+- No release back into the water
+- Designed to any flow rate and discharge requirements.
+- Easy to install, operate and maintain.
+- Low power requirements.
+- Small Footprint, Low-pressure drop, High Throughput.
+- Skid mount or Containerized.
+- Environmentally Green Engineered Oily Water Filtration and Hydrocarbon Odour Removal.
+- The only technology certified by Lloyd's Register for oily water treatment and discharge into marine environments.
+- Economical - Lowest capital and competitive operating costs.

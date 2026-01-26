@@ -1,6 +1,7 @@
 ---
 name: DC Two Limited
-date: '2024-01-01'
+date: '2025-01-27'
+overview: DC Two is an Australian public company listed on the Australian Stock Exchange (ASX) which conducts a vertically integrated data centre and cloud services hosting business with multiple offerings based around physical data centre colocation, modular data centres, managed cloud computing platforms and software systems to manage and control the automation and self-service of the entire data centre systems
 website: https://www.dctwo.com.au
 contact_name: David May
 contact_title: Business Director
@@ -29,7 +30,6 @@ longitude: 115.8138797
 DC Two is an Australian public company listed on the Australian Stock Exchange (**ASX**) which conducts a vertically integrated data centre and cloud services hosting business with multiple offerings based around physical data centre colocation, modular data centres, managed cloud computing platforms and software systems to manage and control the automation and self-service of the entire data centre systems
 
 Since 2012, DC TWO has been building Cloud services in consultation with partners and clients alike. With the required significant skillsets and technical personnel located in WA primarily and nationally, we work with partners/clients alike to deliver best-in-breed solutions that further encompass security and governance via ISO 27001 (ISMS) frameworks
-
 ## Capabilities
 
 DC Two Limited provides Managed cloud services and Data Centre co-location, with services delivered from our owned ISO 27001 Cloud accredited data centres in Perth (3) and Darwin (1).
@@ -38,8 +38,8 @@ The Company delivers this via a suite of vertically integrated services covering
 
 DC Two has developed a high density and transportable modular data centre that can be deployed with agility based on durable ISO standard sea containers and non ruggedized insulated variants
 
-  * Quick and easy deployment in any location
-  * Small sized and highly transportable
-  * Only requires power and data connectivity
-  * Very high density - up to 40kw per rack for ALL racks
-  * Suitable for cost effective, high performance or supercomputing specific workloads
+- Quick and easy deployment in any location
+- Small sized and highly transportable
+- Only requires power and data connectivity
+- Very high density - up to 40kw per rack for ALL racks
+- Suitable for cost effective, high performance or supercomputing specific workloads

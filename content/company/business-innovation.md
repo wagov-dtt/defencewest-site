@@ -1,6 +1,7 @@
 ---
 name: Business Innovation Services
-date: '2024-01-01'
+date: '2025-01-27'
+overview: Providing business development and preparedness services to SME's within the WA defence industry
 website: https://johntedesco.com.au
 contact_name: John Tedesco
 address: 9 Karijini Close, BIBRA LAKE WA 6163
@@ -31,7 +32,6 @@ John Tedesco from Business Innovation Services (BIS) has over 20 years' experien
 John can help your business meet the requirements of the Defence Business Readiness Tool (DBRT) to become long-term and profitable supplier to the Defence Industry. He is highly experienced in developing policies and procedures to meet required standards and efficiency objectives.
 
 John can also assist with business development activities including tenders, proposals and grant submissions.
-
 ## Capabilities
 
 1.**Business planning and strategy**
@@ -40,10 +40,9 @@ John can also assist with business development activities including tenders, pro
 
 3.**Business development and marketing**
 
-4.**Prepare Tenders, proposals and grant applications  **
+4.**Prepare Tenders, proposals and grant applications**
 
 5.**Defence Business Readiness Tool (DBRT) implementation**
-
 ## Discriminators
 
 We have a bespoke client-focused approach to our business practices tailoring our services to the individual needs of each company and business owner.

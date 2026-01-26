@@ -1,6 +1,7 @@
 ---
 name: Ventia
-date: '2024-01-01'
+date: '2025-01-27'
+overview: We are a leading Australian Prime services integrator working at the heart of Defence capability to support those that serve our country.
 website: https://www.ventia.com
 contact_name: Tracey Glenny
 contact_title: People and Capability Business Partner
@@ -41,11 +42,9 @@ longitude: 115.87062
 ## Overview
 
 Ventia is one of the largest essential services providers in Australia and New Zealand. We proudly provide the services that keep infrastructure working for our communities. We have a diverse and proud heritage combined with a track record for delivering the best outcomes for our clients and the communities in which we operate. With an unwavering focus on safety, we operate around the clock to get the job done. Done safely, sustainably, cost-effectively and together.
-
 ## Capabilities
 
 Ventia is Australia's largest and most diverse provider of Defence estate support services and facilities management. Across all states and territories, we deliver a range of estate, living, and base support capability including asset management and maintenance; ranges and training area management; airfield management; land management and environmental services; project management; firefighting and rescue services; hospitality and catering; domestic services; and transport services.
-
 ## Discriminators
 
 Ventia is a leading essential infrastructure services provider that makes infrastructure work for communities across Australia and New Zealand. We are an Australian Securities Exchange (ASX) top 200 company, with a secondary listing on New Zealand's Exchange (NZX).

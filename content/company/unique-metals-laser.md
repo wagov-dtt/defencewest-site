@@ -1,6 +1,7 @@
 ---
 name: Unique Metals Laser
-date: '2024-01-01'
+date: '2025-01-27'
+overview: "Australia's leading provider of turnkey steel, \r\nmanufacturing solutions, offering end to end\r\nservices including plasma cutting,\r\nperforation, folding, fabrication,\r\nand complete project delivery."
 website: https://www.uniquelaser.com.au
 contact_name: Paul Figliomeni
 contact_title: Director
@@ -57,26 +58,23 @@ Contact our expert team today to discover how we can support your next project w
 solutions.
 Complete Steel Manufacturing Solutions | Fast & Reliable Service | Over 50 Years of Industry Experience | Steel,
 Stainless & Aluminium | ISO 9001 Certified | Servicing Australia Wide
-
 ## Capabilities
 
-•
-LIMITLESS POTENTIAL FOR APPLICATION
+- LIMITLESS POTENTIAL FOR APPLICATION
 
 The versatility of steel whether in sheet, plate, or structural form provides a
 foundation for limitless opportunities. Unique Metals is your trusted partner in transforming raw material into fully realised
-components and assemblies. As Australia’s leading provider of turnkey steel manufacturing solutions, we offer the scale,
+components and assemblies. As Australia's leading provider of turnkey steel manufacturing solutions, we offer the scale,
 technology, and expertise to support complex projects from start to finish.Our advanced processing capabilities include handling
 material up to 25 metres long and 200mm thick using high powered plasma cutting systems, which also incorporate machining
 and milling functionality. Across our national network, we operate a fleet of precision equipment designed to deliver everyth ing
 from intricate components to large scale fabricated structures with absolute accuracy and consistency.In addition to cutting and
 profiling, we offer comprehensive sheet metal processing including forming, stamping, turret punching, and folding
 supported by our highly skilled teams at every site. Extensive fabrication and welding services further enhance our ability t o
-deliver complete steel solutions, all tailored to meet our clients’ diverse needs.With a reputation built on quality, innovation, and
+deliver complete steel solutions, all tailored to meet our clients' diverse needs.With a reputation built on quality, innovation, and
 reliability, Unique Metals continues to help drive Australian manufacturing forward. The applications we support are limited onl y
 by our customers' vision.Our integrated steel manufacturing solutions include: Laser & Plasma Cutting, Turret Punching, 3D
 Profiling, Metal Folding, Fabrication & Welding, and Surface Coating Services.
-
 ## Discriminators
 
 NATIONWIDE

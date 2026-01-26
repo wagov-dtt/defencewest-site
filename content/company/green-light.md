@@ -1,6 +1,7 @@
 ---
 name: Green Light
-date: '2024-01-01'
+date: '2025-01-27'
+overview: An Australian IT services company supporting defence primes nationally with security cleared resources and technology services.
 website: https://greenlightworldwide.com
 contact_name: Ron Elliott
 contact_title: General Manager - WA
@@ -29,12 +30,13 @@ regions:
 - pilbara
 - south-west
 - wheatbelt
+latitude: -31.9562741
+longitude: 115.8586386
 ---
 
 ## Overview
 
 Founded in 2007, Green Light is an Australian based IT services company. We're a DISP member and have supported many key national defence technology projects over the years.
-
 ## Capabilities
 
 We provide security cleared technical specialists such as Engineers, Solutions Architects, Project Managers, Business Analysts etc. We also deliver outcomes based professional and managed technology services such as a 24x7 SOC, Service Desk, Wireless Audits, Data Centre operations, ITAD and various other IT & OT technology related services.

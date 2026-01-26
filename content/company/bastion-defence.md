@@ -1,6 +1,7 @@
 ---
 name: Bastion Defence Consulting
-date: '2024-01-01'
+date: '2025-01-27'
+overview: Bastion Defence Consulting is a premier maritime consulting firm providing a broad range of services across Australia to a number of clients in the defence industry.
 website: https://bastiondefence.com.au
 contact_name: John Oldridge
 contact_title: Regional Manager
@@ -62,7 +63,6 @@ longitude: 115.7854838
 ## Overview
 
 Bastion Defence Consulting is a premier maritime consulting firm providing a broad range of services across Australia to a number of clients in the defence industry. With offices and personnel across Australia, consulting on a wide variety of Defence and Commerical projects. The WA team supports projects such as SEA1439, SEA1180, SEA5014 and SEA1445, as well as supporting commercial solar projects in NSW from WA.
-
 ## Capabilities
 
 Require a broad range of support for your complex maritime projects across the entire asset lifecycle? Bastion has you covered.

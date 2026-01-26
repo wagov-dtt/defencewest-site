@@ -1,6 +1,7 @@
 ---
 name: Engineering Institute of Technology
-date: '2024-01-01'
+date: '2025-01-27'
+overview: We are a leading engineering and technology education and training provider, offering online and on-campus programs. Our wide range of courses is driven by industry experts.
 website: https://www.eit.edu.au
 contact_name: Caroline Mackay
 contact_title: Marketing and Business Manager
@@ -42,7 +43,6 @@ longitude: 115.84428
 ## Overview
 
 EIT has always been at the forefront of engineering education. We embrace cutting-edge technologies and emerging trends, ensuring that our programs stay ahead of the curve. Through our dynamic and interactive online learning platforms, students from around the globe can access our courses, and those in Australia can study on-campus. Let us dive into the history of EIT. You can learn more here: EIT's History Timeline :Engineering Institute of Technology: https://www.eit.edu.au/about-eit/eit-history/
-
 ## Capabilities
 
 EIT offers significant benefits for professionals in the defence industry through its industry-oriented engineering education programs. EIT's curriculum is designed to address real-world challenges, making it highly relevant to the defence sector's needs for practical, up-to-date engineering skills.
@@ -52,7 +52,6 @@ One of EIT's key strengths is its flexible learning options, providing both onli
 The institute's focus on cutting-edge technology aligns well with the defence industry's need for continuous technological advancement. EIT's programs help defence professionals stay current with the latest developments and their potential applications in defence systems.
 
 By leveraging EIT's capabilities, defence industry professionals can enhance their technical skills, broaden their global perspective, and stay at the forefront of engineering and technological advancements. This not only benefits individual careers but also contributes to the overall strengthening of defence capabilities and innovation in the sector.
-
 ## Discriminators
 
 EIT is an award-winning institute and stands out as a leading engineering and technology education provider, offering both online and on-campus programs.

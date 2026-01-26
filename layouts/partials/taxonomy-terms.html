@@ -1,0 +1,15 @@
+{{- /* Render taxonomy terms for a company. Usage: {{ partial "taxonomy-terms.html" (dict "page" . "taxonomy" "regions" "title" "Regions") }} */ -}}
+{{- $page := .page -}}
+{{- $taxonomy := .taxonomy -}}
+{{- $title := .title -}}
+{{- $taxonomies := $page.Site.Data.taxonomies -}}
+{{- $taxonomyMap := index $taxonomies $taxonomy -}}
+{{- with $page.GetTerms $taxonomy }}
+<strong class="sidebar-section">{{ $title }}</strong>
+<ul>
+  {{- range . }}
+  {{- $displayName := index $taxonomyMap .Data.Term | default .LinkTitle }}
+  <li><a href="{{ .RelPermalink }}">{{ $displayName }}</a></li>
+  {{- end }}
+</ul>
+{{- end }}

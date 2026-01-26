@@ -1,6 +1,7 @@
 ---
 name: PMV ENGINEERING
-date: '2024-01-01'
+date: '2025-01-27'
+overview: We are an Indigenous-owned company specialising in hazardous areas, electrical instrumentation, and asset management, servicing clients across major industries with deep technical expertise.
 website: https://pmvengineering.com.au
 contact_name: Nitin Ahuja
 contact_title: General Manager
@@ -8,7 +9,6 @@ address: 10/22 Shields Crescent, Booragoon WA 6154
 phone: 08 9317 2146
 email: nitin@pmv.net.au
 is_sme: true
-is_indigenous_owned: true
 stakeholders:
 - defence
 - academic
@@ -41,6 +41,8 @@ regions:
 - pilbara
 - south-west
 - wheatbelt
+ownerships:
+- indigenous
 latitude: -32.03771
 longitude: 115.82408
 ---
@@ -54,7 +56,6 @@ We have supported clients across Australia in high-risk and complex environments
 Our engagement in the defence industry is built on our proven capability in classified environments, including supporting prime contractors and facilities with hazardous area compliance, inspection services, and engineering support. We understand the importance of working within secure, controlled, and mission-critical settings and pride ourselves on our ability to deliver to specification and schedule.
 
 With operations in WA, SA, and NT, and a strong focus on Indigenous engagement and workforce development, PMV is committed to supporting Australia's sovereign capability goals through sustainable and skilled service delivery. We look forward to contributing to the defence industry with a focus on integrity, safety, and long-term value.
-
 ## Capabilities
 
 PMV Engineering delivers practical, safety-driven solutions in hazardous areas, electrical instrumentation, and asset management -- key capability areas for defence operations. Our services include EEHA compliance audits, hazardous area classification, remediation, verification dossiers, Fitness for Purpose reporting, and labour supply of licensed hazardous area technicians.
@@ -66,14 +67,13 @@ PMV recently provided hazardous area inspections, technical reporting, and remed
 Our background in utilities, oil and gas, and critical infrastructure has positioned us well to service defence clients requiring reliability, compliance, and responsiveness. We are also supporting Indigenous procurement objectives through our Indigenous ownership, local presence, and experienced personnel.
 
 With a team holding over 300 years of combined experience, PMV offers capability, capacity, and commitment to supporting Australia's defence goals.
-
 ## Discriminators
 
 - **Indigenous-Owned and Operated** - Supply Nation-registered and listed on The Circle (SA).
-  * **25+ Years of National Operation** - Proven history through our training and engineering arms.
-  * **Experienced Technical Team** - Over 300 years of combined team experience.
-  * **Government and Critical Infrastructure Clients** - Including Water Corporation and Australian Submarine Corporation.
-  * **Proven Delivery in High-Risk Environments** - Including fuel depots, treatment plants, and confined spaces.
-  * **RTO Capability** - PMV operates a nationally recognised training organisation (RTO 52447).
-  * **Certified Systems** - ISO 9001 (Quality).
-  * **Responsive and Relationship-Focused** - Agile enough to move quickly while delivering to standard.
+- **25+ Years of National Operation** - Proven history through our training and engineering arms.
+- **Experienced Technical Team** - Over 300 years of combined team experience.
+- **Government and Critical Infrastructure Clients** - Including Water Corporation and Australian Submarine Corporation.
+- **Proven Delivery in High-Risk Environments** - Including fuel depots, treatment plants, and confined spaces.
+- **RTO Capability** - PMV operates a nationally recognised training organisation (RTO 52447).
+- **Certified Systems** - ISO 9001 (Quality).
+- **Responsive and Relationship-Focused** - Agile enough to move quickly while delivering to standard.

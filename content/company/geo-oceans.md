@@ -1,6 +1,7 @@
 ---
 name: Geo Oceans Pty Ltd
-date: '2024-01-01'
+date: '2025-01-27'
+overview: Geo Oceans is an innovative subsea inspection, survey and marine science company.
 website: https://www.geooceans.com
 contact_name: Nick Veitch
 contact_title: Managing Director
@@ -43,8 +44,7 @@ Geo Oceans is recognized for delivering innovative and disruptive subsea IRM (In
 
 Key benefits provided by Geo Oceans include reduced costs, reduced carbon emissions (up to 95% CO2 reduction), and reduced HSE (Health, Safety, and Environment) exposure. The company has also developed remote inspection methodologies for Floating Production Storage and Offloading (FPSO) facilities, enhancing safety by reducing the need for manned entry into confined spaces.
 
-Geo Oceans’ expertise and innovative approaches make it a valuable partner for defense-related projects, offering reliable and high-quality deliverables while ensuring safety and efficiency in subsea operations.
-
+Geo Oceans' expertise and innovative approaches make it a valuable partner for defense-related projects, offering reliable and high-quality deliverables while ensuring safety and efficiency in subsea operations.
 ## Capabilities
 
 Geo Oceans is a specialist subsea inspection, survey and marine science company. We specilise in diverless robotic technologies to capture and process subsea data for our clients and support them in making informed decisions. We utilise small ROVs (Remotely Operated Vehicle) and AUV (Autonomous Underwater Vehicle) inspection technology and software disruptively to eliminate the need for using commercial divers, work class ROVs and vessels where possible.
@@ -54,11 +54,10 @@ Geo Oceans owns and operates a fleet of over 40 small ROV systems and AUVs, incl
 We have deployed underwater camera systems and software to assist in monitoring seagrass habitats for HMAS Coonawara maintenance dredging programs.
 
 We regularly deploy small ROVs to perform class surveys for resources clients on FPSO hulls and inside their water ballast tanks.
-
 ## Discriminators
 
 - Fleet of 40 small ROVs and AUVS
-  * Team of 100 subsea industry professionals globally with deep experience developing, maintaining and operating subsea robotics, as well as subsea inspection professionals.
-  * Class Accreditations for all major vessel class societies for performing ROV UWILD and Water Ballast Tank inspection on vessels
-  * Bespoke subsea engineering capability with experience in development of tooling to solve problems for clients quickly and very effectively using small ROVs and tooling
-  * Ability to eliminate the need for diving or confined space entries in many applications.
+- Team of 100 subsea industry professionals globally with deep experience developing, maintaining and operating subsea robotics, as well as subsea inspection professionals.
+- Class Accreditations for all major vessel class societies for performing ROV UWILD and Water Ballast Tank inspection on vessels
+- Bespoke subsea engineering capability with experience in development of tooling to solve problems for clients quickly and very effectively using small ROVs and tooling
+- Ability to eliminate the need for diving or confined space entries in many applications.

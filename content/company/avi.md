@@ -1,6 +1,7 @@
 ---
 name: AVI
-date: '2024-01-01'
+date: '2025-01-27'
+overview: AVI designs, engineers and manufactures complex communications systems, delivering data and capability to key industries in challenging environments.1
 website: https://avi.com.au
 contact_name: Tony Routledge
 contact_title: Managing Director
@@ -49,7 +50,6 @@ A privately owned and operated company, AVI has dedicated facilities Australia-w
 AVI's commitment to sovereign capability and complete traceability underpins the design, manufacturing and delivery of secure, sophisticated communications systems and componentry to an international portfolio across Defence, Mining, Government and Space.
 
 AVI products are designed for optimal performance in harsh and challenging conditions and zero-fail environments with an agile product development methodology providing the ability to move quickly from concept verification and design validation, to working prototypes.
-
 ## Capabilities
 
 Specialising in the design, development and manufacturing of complex communications solutions and componentry for harsh, remote and critical environments, AVI's robust hardware and innovative technology solutions are used in the most sensitive military, mining, space and security applications, all requiring trusted zero-fail operational performance.
@@ -57,7 +57,6 @@ Specialising in the design, development and manufacturing of complex communicati
 AVI's unique hardware and software-defined communications systems offer an unmet level of agility, responsiveness and interoperability, delivering time-critical, low jitter, low latency, data across secure networks and infrastructure to machines, people and platforms.
 
 An ability to directly respond to industry demands and specialist requirements, is attributable to an end-to-end supply chain, from engineering and design through to prototype development, manufacturing, assembly and testing. World-class, in-house testing facilities ensure optimal performance and reliability of all products across extreme environments and operating conditions.
-
 ## Discriminators
 
 AVI's hardened communications solutions are powering some of the biggest industries in the world, providing capabilities for autonomous vehicles, networked battle systems and data management on an exponential scale.

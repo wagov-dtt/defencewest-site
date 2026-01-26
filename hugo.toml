@@ -19,6 +19,7 @@ uglyURLs = false
   capability_domain = "capability_domains"
   industrial_capability = "industrial_capabilities"
   region = "regions"
+  ownership = "ownerships"
 
 # Output formats
 [outputs]
@@ -65,7 +66,7 @@ uglyURLs = false
 # Site parameters
 [params]
   description = "Western Australia's Defence Industry and Science Capability Directory"
-  siteUrl = "https://defencewest.wa.gov.au"
+  siteUrl = "https://wagov-dtt.github.io/defencewest-site"
   githubRepo = "wagov-dtt/defencewest-site"
   githubBranch = "main"
   
@@ -75,9 +76,28 @@ uglyURLs = false
   # CDN for external libraries (MapLibre, PicoCSS, Lucide icons)
   cdnUrl = "https://cdn.jsdelivr.net/npm"
   
-  # Map settings (OSM Shortbread vector tiles)
-  mapStyleUrl = "https://vector.openstreetmap.org/styles/shortbread/colorful.json"
-  mapTilesUrl = "https://vector.openstreetmap.org/shortbread_v1/{z}/{x}/{y}.mvt"
-  
+  # Map settings (OpenFreeMap Liberty)
+  mapStyleUrl = "https://tiles.openfreemap.org/styles/liberty"
+
+  # Scraping URLs
+  scrapeBaseUrl = "https://www.deed.wa.gov.au/wa-defence-industry-and-science-capability-directory"
+  scrapeMapUrl = "https://www.deed.wa.gov.au/defence-map"
+
   # External URLs
   mapsUrl = "https://www.google.com/maps"
+
+  # Western Australia bounding box for geocoding validation
+  [params.waBounds]
+    minx = 112.5
+    miny = -35.5
+    maxx = 129.0
+    maxy = -13.5
+
+# Taxonomy display names (used in templates for human-readable titles)
+[params.taxonomyTitles]
+  capability_streams = "Capability Streams"
+  capability_domains = "Capability Domains"
+  industrial_capabilities = "Industrial Capabilities"
+  regions = "Regions"
+  stakeholders = "Stakeholders"
+  ownerships = "Ownership"

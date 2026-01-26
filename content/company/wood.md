@@ -1,6 +1,7 @@
 ---
 name: Wood
-date: '2024-01-01'
+date: '2025-01-27'
+overview: Wood is a global leader in the delivery of project, engineering and technical services to energy and industrial markets.
 website: https://www.woodplc.com
 contact_name: Andrew Houghton
 contact_title: Business Development Manager
@@ -32,8 +33,9 @@ longitude: 115.85318
 
 ## Overview
 
-Wood plc is a global leader in the delivery of project, engineering and technical services to energy and industrial markets. We operate in more than 60 countries, employing around 55,000 people, with revenues of over $10 billion. We provide performance-driven solutions throughout the asset life cycle, from concept to decommissioning across a broad range of industrial markets including upstream, midstream and downstream oil and gas, chemicals, environment and infrastructure, power and process, clean energy, mining, nuclear and general industrial sectors.
-
+Wood plc is a global leader in the delivery of project, engineering and technical services to energy and industrial markets. We operate in more than 60 countries, employing around 55,000 people, with revenues of over
+$10 billion. We provide performance-driven solutions throughout the asset life cycle, from concept to decommissioning across a broad range of industrial markets including upstream, midstream and downstream oil and gas, chemicals, environment and infrastructure, power and process, clean energy, mining, nuclear
+and general industrial sectors.
 ## Capabilities
 
 Wood delivers comprehensive services to support its customers across the complete lifecycle of their assets, from concept to decommissioning, across a range of energy, process and utility markets. The rich heritage of our founding organisations over 160 years has made us a respected presence in global industrial markets, combining unrivalled technical knowledge and a drive for outstanding delivery. We have a powerful global network of professionals focused on delivering services, safely and cost-effectively that help our customers get the best from their assets to meet their performance goals. Coupled with an endless curiosity and hunger for new ideas to help our customers solve their business challenges, we have a culture of improvement and best practice that infuses all our operations.

@@ -1,6 +1,7 @@
 ---
 name: Constructive Media
-date: '2024-01-01'
+date: '2025-01-27'
+overview: Constructive Media is a well-established WA business specialising in 3D visualisation, CG renders, digital animations, and interactive touchscreens and kiosks to help its clients to communicate.
 website: https://www.constructivemedia.com.au
 contact_name: Darren Kam
 contact_title: CEO
@@ -78,13 +79,11 @@ longitude: 115.81531
 ## Overview
 
 Constructive Media has assisted with creating CG renders and animations for companies who engage with the defence industry such as in construction, maintenance, as well as for accommodation for Defence Housing. We have created CG animations for ports and rail, subsea infrastructure, marine vessels, and oil and gas exploration and production. We have worked with both the private sector and Government operations, and also for local Defence related charities.
-
 ## Capabilities
 
 Constructive Media is a multi-disciplined company based in Western Australia, specialising in producting 3D renders/images and animations to help depict processes, infrastructure, build phases, products and services. Our work is often found in Government presentations, and when suppliers and contractors are proposing new and improved products and services to the Defence Industry. Our ability to help our clients to communicate really helps to unlock concepts and ideas, bringing to light the advantages of a new proposal.
 
-Our ability to code interactive software (websites, standalone applications) also extends to API coding, so we can “bridge the gap” between various pieces of software. And where data visualisation is required, we have the skillset to be able to depict key data in an easy to digest format. We work with a vast range of digital file formats, and our genuine interest and intrigue for solving problems keeps our minds sharp and options open.
-
+Our ability to code interactive software (websites, standalone applications) also extends to API coding, so we can "bridge the gap" between various pieces of software. And where data visualisation is required, we have the skillset to be able to depict key data in an easy to digest format. We work with a vast range of digital file formats, and our genuine interest and intrigue for solving problems keeps our minds sharp and options open.
 ## Discriminators
 
 We have carefully honed our craft since opening in 2003, and our ability work across a wide range of industries gives us the advantage of being able to relate and understand complex technical drawings, or what to look for when promoting new infrastructure. Our work is done here in Western Australia, and we like to support local businesses and charities.

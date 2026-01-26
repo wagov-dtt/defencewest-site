@@ -1,6 +1,7 @@
 ---
 name: Scancam
-date: '2024-01-01'
+date: '2025-01-27'
+overview: 'Scancam specialises in vehicle licence plate recognition and CCTV Security surveillance. '
 website: https://www.scancam.com.au
 contact_name: Eoin Byrne
 contact_title: Director
@@ -25,8 +26,7 @@ longitude: 115.8640639
 
 ## Overview
 
-Scancam specialises in vehicle licence plate recognition and CCTV Security surveillance. Scancam has identified the latest in camera technology and is powered by one of the world’s most advanced optical character recognition engines delivering accurate licence plate capture day and night. Recordings are in HD clarity, which is uncontestable.
-
+Scancam specialises in vehicle licence plate recognition and CCTV Security surveillance. Scancam has identified the latest in camera technology and is powered by one of the world's most advanced optical character recognition engines delivering accurate licence plate capture day and night. Recordings are in HD clarity, which is uncontestable.
 ## Capabilities
 
 Our product has utilised the latest advancements in technology and cloud-based platforms to become a leader in automated number plate recognition in Australia.

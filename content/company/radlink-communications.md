@@ -1,6 +1,7 @@
 ---
 name: Radlink Communications
-date: '2024-01-01'
+date: '2025-01-27'
+overview: Radlink Communications has years of experience in designing, supplying, installing, commissioning, integrating, supporting and maintaining communications networks.
 website: https://radlink.com.au
 contact_name: Greig Hutton
 contact_title: Business Development
@@ -27,7 +28,6 @@ longitude: 115.8864628
 ## Overview
 
 Radlink Communications comprises a team of highly skilled and trained professionals with years of experience in designing, supplying, installing, commissioning, integrating, supporting and maintaining communications networks. Our expertise includes: critical communications networks for the resources sector, government, utilities, construction, emergency services and public safety agencies in Analogue, Tetra, P25 and DMR; wireless communication networks such as point to point, point to multi-point, mesh and LTE; SCADA, telemetry and IT/OT; cyclone-rated, solar-powered communications trailers and skids; cyclone-rated communication towers, masts and poles; fibre optic and coaxial cable networks; a fully managed 24/7 support service providing monitoring and technical assistance; communications power systems utilizing all energy forms, including mains, solar, batteries and backup generators; and an electrical contractor (WA and QLD electrical licences) capable of hybrid power system design, installation, commissioning and certification.
-
 ## Capabilities
 
 Our point of difference is reflected though our dedication to exploring the constantly evolving communications market. The ability to deliver robust infrastructure to any communications technology sets us apart from competitors. Through our collaborative engagement approach, we work with our customers as trusted partners, delivering reliable and dependable communications in some of the harshest physical environments. We often become part of our customer's team, and we share their objectives. We are proud of being independent and agnostic of technology or OEM, and continually monitor technology market trends to provide the right products and solutions to ensure we meet customer needs and deliver successful outcomes. We take the time to work closely with customers to understand the whole picture, so we can distil their complex technology and business problems into clear, actionable and measurable tasks. We deliver simple, streamlined and functional end-to-end solutions that make life easier for customers. This enables them to focus on what is important: improving their agility, enhancing their processes and operating more productively and efficiently.

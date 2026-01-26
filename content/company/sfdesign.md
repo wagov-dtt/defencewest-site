@@ -1,6 +1,7 @@
 ---
 name: SFDesign
-date: '2024-01-01'
+date: '2025-01-27'
+overview: SFDesign is a multidisciplinary design and engineering house with experienced in the design and engineering of piping systems, heavy fabrication, structural detailing, ship layouts, reverse engineering, along with implementing and training globally recognized data management and CAD software which has enabled SFDesign to be a leading industry expert
 website: https://sfdesign.com.au
 contact_name: James Staples
 contact_title: General Manager
@@ -37,7 +38,6 @@ longitude: 115.8907598
 ## Overview
 
 SFDesign is a multidisciplinary design and engineering house with headquarters in Mount Pleasant, Western Australia, established in 2009, with additional offices across Australia. A 100% Privately owned Australian Company it employs over 30 designers and engineers, experienced with the design and engineering of piping systems, heavy fabrication, structural detailing, ship layouts, reverse engineering, along with implementing and training globally recognized data management and CAD software which has enabled SFDesign to be a leading industry expert.
-
 ## Capabilities
 
 SFDesign is a multidisciplinary design and engineering house with headquarters in Mount Pleasant, Western Australia, established in 2009, with additional offices across Australia. A 100% Privately owned Australian Company it employs over 30 designers and engineers, experienced with the design and engineering of piping systems, heavy fabrication, structural detailing, ship layouts, reverse engineering, along with implementing and training globally recognized data management and CAD software which has enabled SFDesign to be a leading industry expert.

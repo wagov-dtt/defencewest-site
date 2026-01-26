@@ -1,8 +1,9 @@
 ---
 name: Alemlube PTY Ltd
-date: '2024-01-01'
+date: '2025-01-27'
+overview: Alemlube offers a range of products and services for various industries, including lubricants, lubrication systems, hose storage, fluid metering, vehicle hoists and more.
 website: https://www.alemlube.com.au
-contact_name: Todd  Franklin
+contact_name: Todd  Franklin
 contact_title: State Manager WA
 address: 9 Kalinga Way, Landsdale, Perth WA 6065
 phone: 08 9302 4199
@@ -54,7 +55,6 @@ Proudly servicing industry for 55 years, Alemlube is a proactive and dynamic Aus
 Representing globally recognised leaders in their fields, Alemlube designs, engineers and delivers high quality products with a complete solution approach.   Our customer base spans distributors, OEMs, and end users across a wide range of industries including Automotive, Transport, Mining, Agriculture, Industrial and Construction.
 
 Alemlube offers a national platform, across its six branch locations.  This ensures that customer service, order fulfilment, sales support, system design, installation and on site after sales service are always locally available and rapidly deployed.
-
 ## Capabilities
 
 Alemlube is a specialist in the supply of high-performance equipment and solutions for the Automotive, Transport, Mining, Agriculture, Industrial and Construction sectors.
@@ -63,11 +63,10 @@ Our expansive product portfolio ranges from the essential grease nipple to advan
 
 We proudly deliver customised solutions that enhance productivity across Australasia including:
 
-  * The design, fit out and commissioning of automotive workshops
-  * The engineering, supply and installation of automatic lubrication systems for both mobile and fixed plant equipment
+- The design, fit out and commissioning of automotive workshops
+- The engineering, supply and installation of automatic lubrication systems for both mobile and fixed plant equipment
 
 Backed by decades of industry experience, Alemlube continues to support our customers with innovative equipment and superior, keeping their operations moving forward.
-
 ## Discriminators
 
 Specialised manufacturing of machinery and equipment

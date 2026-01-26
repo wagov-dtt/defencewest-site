@@ -1,6 +1,7 @@
 ---
 name: Innovaero Pty Ltd
-date: '2024-01-01'
+date: '2025-01-27'
+overview: "Innovaero is a multi-disciplinary, aeronautical product design, certification and manufacturing organisation with \nsignificant experience in the development of large dual-use remotely piloted aircraft systems."
 website: https://innov.aero
 contact_name: Dave Tomkinson
 contact_title: Operations Manager
@@ -31,7 +32,6 @@ longitude: 115.80549
 
 Innovaero's extensive CASA approvals and AS9100D quality management system underpin our whole of life-cycle capability for
 development, flight test and sustainment of complex aeronautical systems.
-
 ## Capabilities
 
 Design:

@@ -1,6 +1,7 @@
 ---
 name: Global Unmanned Systems
-date: '2024-01-01'
+date: '2025-01-27'
+overview: 'Global Unmanned Systems provides organisational capacity building and data acquisition with an emphasis on Remotely Piloted Aircraft Systems (RPAS) and related media processing and analysis technologies. '
 website: https://www.gus-uav.com
 contact_name: Robert Lednor
 contact_title: Operations Manager
@@ -30,7 +31,6 @@ longitude: 115.7787602
 ## Overview
 
 Global Unmanned Systems provides organisational capacity building and data acquisition with an emphasis on Remotely Piloted Aircraft Systems (RPAS) and related media processing and analysis technologies. Particular competencies include: consultancy related to RPAS (drone) operations; training and capacity building; and data acquisition, processing and analysis.
-
 ## Capabilities
 
 We have a deep level of understanding of the RPAS market. We maintain relationships with many technology manufacturers and have the ability to generate custom solutions/ modifications in-house. Drawing on this base of understanding and relationships, we provide tailored training and ongoing support to ensure that any RPAS program is sustainable and generates value for customers.

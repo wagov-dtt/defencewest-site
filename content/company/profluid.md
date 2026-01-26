@@ -1,6 +1,7 @@
 ---
 name: PROFLUID PTY LTD
-date: '2024-01-01'
+date: '2025-01-27'
+overview: PROFLUID deliver high end customized flow solutions to the Air Force & Navy onshore establishments as well as Ships & Submarines.
 website: https://www.profluid.com.au
 contact_name: Jerome MONTEIRO
 contact_title: Managing Director
@@ -57,7 +58,6 @@ Our capabilities include the design, supply, commissioning, and maintenance of i
 We pride our unique attention to details and our design-to-sustainment approach supported by experienced OEMs and a technically astute team.
 
 PROFLUID is a customer-centric company, DNV-GL ISO 9001/14001/45001 and DISP accredited, where each of our customer find a value for money in the fit for process flow solutions we offer.
-
 ## Capabilities
 
 PROFLUID deliver high end customized flow solutions to the Air Force & Navy onshore establishments as well as Ships & Submarines. Our West Australian workshop provides a complete life cycle range of capabilities which includes design, documentation, project management, built, cycle testing, overhaul, reverse engineering, modifications & certification, and pressure testing (hydraulic, gas and pneumatic, up to 1,400bar).

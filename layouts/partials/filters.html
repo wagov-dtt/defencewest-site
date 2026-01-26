@@ -1,21 +1,14 @@
 {{/* Filters partial - shared between directory and map pages
   Expects: $companies, $taxonomies, $site (for .Site.Taxonomies)
   
-  All filters use single param "f" with prefix:value format:
-  - stake:xxx = stakeholder
-  - stream:xxx = capability stream
-  - domain:xxx = capability domain
-  - ind:xxx = industrial capability
-  - region:xxx = region
-  - own:xxx = ownership
+  All filters use single param "f" with taxonomy:key format (e.g., regions:perth)
   
   Taxonomy structure: { key: "Full Name" }
   Company frontmatter stores keys, not display names.
   Icons are at /icons/streams/{key}.png and /icons/ownerships/{key}.png
   
-  Uses Hugo's native .Site.Taxonomies for counts instead of manual iteration.
+  Uses Hugo's native .Site.Taxonomies for counts.
 */}}
-{{- $companies := .companies -}}
 {{- $taxonomies := .taxonomies -}}
 {{- $site := .site -}}
 
@@ -25,14 +18,7 @@
 {{- $domainCounts := $site.Taxonomies.capability_domains -}}
 {{- $industrialCounts := $site.Taxonomies.industrial_capabilities -}}
 {{- $regionCounts := $site.Taxonomies.regions -}}
-
-{{/* Ownership counts - still manual since these are boolean flags, not taxonomies */}}
-{{- $indigenousCount := 0 -}}
-{{- $veteranCount := 0 -}}
-{{- range $companies -}}
-  {{- if .is_indigenous_owned }}{{ $indigenousCount = add $indigenousCount 1 }}{{ end -}}
-  {{- if .is_veteran_owned }}{{ $veteranCount = add $veteranCount 1 }}{{ end -}}
-{{- end -}}
+{{- $ownershipCounts := $site.Taxonomies.ownerships -}}
 
 <form class="filters" id="filters" method="get">
   <div class="filters-scroll">
@@ -48,7 +34,7 @@
           {{- $count := 0 }}{{ with $term }}{{ $count = .Count }}{{ end -}}
           {{- if gt $count 0 }}
         <label class="stream-icon" title="{{ $name }} ({{ $count }})">
-          <input type="checkbox" name="f" value="stream:{{ $key }}">
+          <input type="checkbox" name="f" value="capability_streams:{{ $key }}">
           <img src="{{ printf "icons/streams/%s.png" $key | relURL }}" alt="{{ $name }}">
         </label>
           {{- end -}}
@@ -62,12 +48,11 @@
       <h4>Ownership</h4>
       <div class="stream-icons">
         {{- range $key, $name := . -}}
-          {{- $count := 0 -}}
-          {{- if eq $key "indigenous" }}{{ $count = $indigenousCount }}{{ end -}}
-          {{- if eq $key "veteran" }}{{ $count = $veteranCount }}{{ end -}}
+          {{- $term := index $ownershipCounts $key -}}
+          {{- $count := 0 }}{{ with $term }}{{ $count = .Count }}{{ end -}}
           {{- if gt $count 0 }}
         <label class="stream-icon" title="{{ $name }} ({{ $count }})">
-          <input type="checkbox" name="f" value="own:{{ $key }}">
+          <input type="checkbox" name="f" value="ownerships:{{ $key }}">
           <img src="{{ printf "icons/ownerships/%s.png" $key | relURL }}" alt="{{ $name }}">
         </label>
           {{- end -}}
@@ -85,7 +70,7 @@
           {{- $count := 0 }}{{ with $term }}{{ $count = .Count }}{{ end -}}
           {{- if gt $count 0 }}
         <label class="filter-item">
-          <input type="checkbox" name="f" value="stake:{{ $key }}">
+          <input type="checkbox" name="f" value="stakeholders:{{ $key }}">
           <span class="filter-label">{{ $name }}</span>
           <span class="filter-count">{{ $count }}</span>
         </label>
@@ -103,7 +88,7 @@
           {{- $count := 0 }}{{ with $term }}{{ $count = .Count }}{{ end -}}
           {{- if gt $count 0 }}
         <label class="filter-item">
-          <input type="checkbox" name="f" value="region:{{ $key }}">
+          <input type="checkbox" name="f" value="regions:{{ $key }}">
           <span class="filter-label">{{ $name }}</span>
           <span class="filter-count">{{ $count }}</span>
         </label>
@@ -121,7 +106,7 @@
           {{- $count := 0 }}{{ with $term }}{{ $count = .Count }}{{ end -}}
           {{- if gt $count 0 }}
         <label class="filter-item">
-          <input type="checkbox" name="f" value="domain:{{ $key }}">
+          <input type="checkbox" name="f" value="capability_domains:{{ $key }}">
           <span class="filter-label">{{ $name }}</span>
           <span class="filter-count">{{ $count }}</span>
         </label>
@@ -139,7 +124,7 @@
           {{- $count := 0 }}{{ with $term }}{{ $count = .Count }}{{ end -}}
           {{- if gt $count 0 }}
         <label class="filter-item">
-          <input type="checkbox" name="f" value="ind:{{ $key }}">
+          <input type="checkbox" name="f" value="industrial_capabilities:{{ $key }}">
           <span class="filter-label">{{ $name }}</span>
           <span class="filter-count">{{ $count }}</span>
         </label>

@@ -1,6 +1,7 @@
 ---
 name: Stowe Australia Pty Ltd
-date: '2024-01-01'
+date: '2025-01-27'
+overview: STOWE AUSTRALIA is a family-owned business that has been operating for over 110 years since 1910. We are Australia's leading electrical and communications installation and service contractor.
 website: https://www.stoweaustralia.com.au
 contact_name: David Hoey
 contact_title: WA Operations Manager
@@ -29,7 +30,6 @@ longitude: 115.9282476
 ## Overview
 
 STOWE AUSTRALIA is a family-owned business that has been operating for over 110 years since 1910. We are Australia's leading electrical and communications installation and service contractor.
-
 ## Capabilities
 
 We are an employer dedicated to training our staff to the continuously changing electrical and communications environment.

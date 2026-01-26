@@ -1,6 +1,7 @@
 ---
 name: Thornton Tomasetti
-date: '2024-01-01'
+date: '2025-01-27'
+overview: Engineering consultancy specialising in testing and design & analysis of equipment and structures under extreme loading (blast, shock, fire, seismic, etc..) as well as risk management.
 website: https://www.thorntontomasetti.com/location/perth
 contact_name: Ian Leaver
 contact_title: Defence Business Lead
@@ -68,21 +69,19 @@ Thornton Tomasetti has built a team of highly experienced engineers and scientis
 In addition to our direct defence support capabilities, the Australian team also has significant experience supporting high risk industries, decarbonisation, safety and risk management, future fuels (including battery analysis) and Protective Design and Security (Security Risk assessments, Heavy Vehicle Mitigation and structural blast assessments).
 
 In addition, Thornton Tomasetti is part of a global company, including with over 50 years experience supporting the US DoD and over 25 years supporting the UK MoD.
-
 ## Capabilities
 
 We have a range of specialised capabilities to support Defence Industry including but not limited to:
 
-  * Shock testing of equipment (Recent examples include work for EM Solutions and Marenav to qualify their equipment)
-  * Design and analysis for extreme loads including: Shock, Blast, Fire, Seismic etc..(Recent examples include work for a Defence Prime on shock and DST Group on blast)
-  * Specialised T&E support in relation to other extreme loading events (GWEO, vibration, blast, ballistics)
-  * Safety and Risk Management (Recent example includes work for Defence on explosive safety software development including a risk assessment framework)
-  * World class advanced analysis utilising a number of CFD and FEA tools assessing a wide range of Defence problems (A recent example is work on thermal runaway for batteries and associated structural effects due to thermal effects.
-
+- Shock testing of equipment (Recent examples include work for EM Solutions and Marenav to qualify their equipment)
+- Design and analysis for extreme loads including: Shock, Blast, Fire, Seismic etc..(Recent examples include work for a Defence Prime on shock and DST Group on blast)
+- Specialised T&E support in relation to other extreme loading events (GWEO, vibration, blast, ballistics)
+- Safety and Risk Management (Recent example includes work for Defence on explosive safety software development including a risk assessment framework)
+- World class advanced analysis utilising a number of CFD and FEA tools assessing a wide range of Defence problems (A recent example is work on thermal runaway for batteries and associated structural effects due to thermal effects.
 ## Discriminators
 
 - Thornton Tomasetti is the only company in Australia that operates across the full spectrum of naval platform survivability - design, analysis and testing. We conduct this work across all AUKUS nations, advising navies, writing standards and supporting our clients in the unique environment of naval combatants.
-  * We have a unique set of skills that enable us to provide cradle to grave support to the design and qualification of equipment and structures against a variety of loading conditions, through testing and advanced analysis.
-  * Thornton Tomasetti is the only company, in Australia and globally, that operates shock machines specifically designed to conduct testing on live munitions. Our portable shock test machine 'JASSO' is currently used in Australia for testing equipment for the Royal Australian Navy, but could be used in support of current GWEO test and evaluation efforts.
-  * Actively working or recently worked with Australian Submarine Agency, Directorate Ordnance Safety, Navy Engineering, DST Group, Various Navy Projects, Range of Australian Defence Industry Primes and SMEs.
-  * DISP Accreditation and security cleared staff.
+- We have a unique set of skills that enable us to provide cradle to grave support to the design and qualification of equipment and structures against a variety of loading conditions, through testing and advanced analysis.
+- Thornton Tomasetti is the only company, in Australia and globally, that operates shock machines specifically designed to conduct testing on live munitions. Our portable shock test machine 'JASSO' is currently used in Australia for testing equipment for the Royal Australian Navy, but could be used in support of current GWEO test and evaluation efforts.
+- Actively working or recently worked with Australian Submarine Agency, Directorate Ordnance Safety, Navy Engineering, DST Group, Various Navy Projects, Range of Australian Defence Industry Primes and SMEs.
+- DISP Accreditation and security cleared staff.

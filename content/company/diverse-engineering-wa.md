@@ -1,6 +1,7 @@
 ---
 name: Diverse Engineering (WA)
-date: '2024-01-01'
+date: '2025-01-27'
+overview: Diverse Engineering is a multi-disciplined engineering company that provides an array of services to the energy, industrial, marine and transport sectors.
 website: https://diversewa.com.au
 contact_name: Michael Giles
 contact_title: Managing Director
@@ -26,7 +27,6 @@ longitude: 115.9881378
 ## Overview
 
 Diverse Engineering is a multi-disciplined engineering company that provides an array of services to the energy, industrial, marine and transport sectors. We undertake fabrication, machining, marine and mechanical repairs.
-
 ## Capabilities
 
-Steyr Diesel Engine Dealer – WA sales, parts and service. Alamarin Waterjet Dealer – WA sales, parts and service. Den-Jet Service Agent – WA parts and service. Hammelmann Service agent – Preferred WA repairer. Spoutvac service agent – WA parts and service.
+Steyr Diesel Engine Dealer - WA sales, parts and service. Alamarin Waterjet Dealer - WA sales, parts and service. Den-Jet Service Agent - WA parts and service. Hammelmann Service agent - Preferred WA repairer. Spoutvac service agent - WA parts and service.

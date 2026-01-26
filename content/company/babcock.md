@@ -1,6 +1,7 @@
 ---
 name: Babcock Australia Pty Ltd
-date: '2024-01-01'
+date: '2025-01-27'
+overview: Babcock is an international defence and aerospace business. We support and enhance our customers' defence capabilities and critical assets and we meet our customers' requirements of value for money, increased availability, modernisation and flexibility.
 website: https://www.babcock.com.au
 contact_name: Jeremy Antao
 contact_title: Operations Manager (WA)
@@ -50,7 +51,6 @@ longitude: 115.778922
 Babcock is an international defence company operating in our focus countries of the UK, Australasia, Canada, France and South Africa.  We support and enhance our customers' defence capabilities and critical assets and we meet our customers' requirements of value for money, increased availability, modernisation and flexibility.
 
 Backed by decades of experience in Defence across the globe, we are the premier warship sustainment company in Australasia, and a proven and trusted leader in submarine sustainment, nuclear safety and stewardship.
-
 ## Capabilities
 
 Employing more than 1,800 people across Australia and New Zealand, Babcock is the premier warship sustainment company, currently sustaining 70 per cent of the major surface fleet for the Royal Australian Navy and 100 per cent of the Royal New Zealand Navy. We also operate New Zealand's largest marine engineering and maintenance support facility in Devonport, Auckland.

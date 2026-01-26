@@ -1,6 +1,7 @@
 ---
 name: MI Plumbers
-date: '2024-01-01'
+date: '2025-01-27'
+overview: MI Plumbers delivers industry leading plumbing construction, fit-out, maintenance and surveying services to the mining, defence, civil, industrial and commercial sectors in Western Australia.
 website: https://www.miplumbers.com.au
 contact_name: Daniel MacPherson
 contact_title: Defence Operations Manager
@@ -41,54 +42,52 @@ In an ever-changing Defence landscape, we remain flexible and agile by consisten
 We approach every project as a partnership, because our work creates a lasting impact on Defence communities, we are accountable to these communities - to strengthen them, and making them resilient for whatever the future may hold.
 
 Integrity guides what we do, which means we make the right choices towards supporting Defence capability.
-
 ## Capabilities
 
 To ensure the ongoing performance and capability of Defence assets, we continually look to industry for best practice and tailor our services to suit the functionality and sometimes bespoke needs and response times of Defence equipment and systems.
 
 Our capabilities include:
-\- Programmed preventative maintenance
-\- Reactive repair maintenance
-\- Backflow testing & installation
-\- Gas installations & repairs
-\- Hot water systems
-\- Roof repairs and constructions
-\- Wastewater treatment plants
-\- Pump systems
-\- Water storage tanks
-\- Water treatment systems
-\- Wet fire system repairs
-\- Irrigation repairs
+- Programmed preventative maintenance
+- Reactive repair maintenance
+- Backflow testing & installation
+- Gas installations & repairs
+- Hot water systems
+- Roof repairs and constructions
+- Wastewater treatment plants
+- Pump systems
+- Water storage tanks
+- Water treatment systems
+- Wet fire system repairs
+- Irrigation repairs
 
 Our surveying and engineering capabilities allow us to contribute to the optimisation and compliance of Defence project design and programming through all phases of a project life cycle and are not limited to the following;
 
-\- Annual testing
-\- Audits
-\- Engineering Assessments
-\- Capital asset reports
-\- CCTV Inspections
-\- Design assistance
-\- Pipe locating
-\- Pipework surveying
-\- Preliminary investigations
-\- Water saving strategies
+- Annual testing
+- Audits
+- Engineering Assessments
+- Capital asset reports
+- CCTV Inspections
+- Design assistance
+- Pipe locating
+- Pipework surveying
+- Preliminary investigations
+- Water saving strategies
 
 ADDITIONAL EXPERIENCE
 
-\- Contaminated soils
-\- Vacuum excavation
-\- Soil/ waste classification & removal
-\- Investigation & reporting
-\- Remediation & repairs
-\- Undergound fire pipework
-\- Fire tank liners
-\- Hazardous materials
-\- Asbestos containing pipework
-\- Hygeinist & air monitoring
-
+- Contaminated soils
+- Vacuum excavation
+- Soil/ waste classification & removal
+- Investigation & reporting
+- Remediation & repairs
+- Undergound fire pipework
+- Fire tank liners
+- Hazardous materials
+- Asbestos containing pipework
+- Hygeinist & air monitoring
 ## Discriminators
 
 - Base service maintenance & repairs across WA on Behalf of EMOS
-  * Hydraulic Construction through Defence Primary Contractors across the Estate
-  * DCAC Accredited Work Force
-  * 2022 Business of the Year - Excellence in Maintenance Plumbing
+- Hydraulic Construction through Defence Primary Contractors across the Estate
+- DCAC Accredited Work Force
+- 2022 Business of the Year - Excellence in Maintenance Plumbing

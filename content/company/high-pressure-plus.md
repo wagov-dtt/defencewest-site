@@ -1,6 +1,7 @@
 ---
 name: High Pressure Plus
-date: '2024-01-01'
+date: '2025-01-27'
+overview: Defence approved Hyperbaric Repairer, specialising in high-pressure gas and fluid systems with a strong focus on breathing air and oxygen systems across all Defence sectors in Perth and Sydney.
 website: https://www.hpplus.com.au
 contact_name: Mathew Burton
 contact_title: WA Branch Manager
@@ -52,7 +53,6 @@ longitude: 115.8097976
 High Pressure Plus (HP Plus) is a leading specialist in high-pressure gas and fluid systems, supporting the Defence, aerospace, mining, energy and industrial sectors. From our bases in Sydney and Perth, we deliver engineered solutions, products and services tailored for the most demanding applications.
 
 We are a Defence Authorised Hyperbaric Repairer. This certification allows us to install and maintain high-pressure breathing gas systems and related pressure components, commonly found in ADF SCUBA diving and Damage Control environments both onboard and onshore.
-
 ## Capabilities
 
 Scheduled maintenance and repair of high-pressure Breathing Air Compressor Units (BACUs).
@@ -70,7 +70,6 @@ URDEF repair of critical systems onboard vessels at Fleet Base West (FBW), Fleet
 Subcontractor maintenance activities for primes, where the need for an Authorised Hyperbaric Repairer to complete works and sign-off exists.
 
 Asset management, pressure vessel/cylinder certification and breathing air quality analysis.
-
 ## Discriminators
 
 Authorised Hyperbaric Repairer - ensures that breathing gas systems are maintained in accordance with required ADF engineering specifications and compliance is maintained throughout system lifecycles.

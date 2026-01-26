@@ -4,7 +4,7 @@
 */}}
 {{- $picoTheme := .Site.Params.picoTheme -}}
 {{- $cdn := .Site.Params.cdnUrl -}}
-{{- /* Use local style to avoid CORS issues */ -}}
+{{- $mapStyleUrl := .Site.Params.mapStyleUrl -}}
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
 <head>
@@ -110,7 +110,7 @@
     "use strict";
 
     const PERTH = [115.8605, -31.9505];
-    const MAP_STYLE = "../map-assets/style.json";
+    const MAP_STYLE = "{{ $mapStyleUrl }}";
 
     // Build company data from DOM templates
     const companies = [...document.querySelectorAll("#company-cards template")].map(t => ({

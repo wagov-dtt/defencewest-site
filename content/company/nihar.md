@@ -1,6 +1,7 @@
 ---
 name: Nihar
-date: '2024-01-01'
+date: '2025-01-27'
+overview: 'Nihar is a Western Australian owned and operated company, managed by a team of passionate and experienced Engineers. Nihar was established in 2003, with the vision of being the leading service provider of Asset Maintenance Management solutions in the industry. '
 website: https://www.nihar.com.au
 contact_name: Matheesha Jayasekera
 contact_title: Chief Operating Officer
@@ -39,7 +40,6 @@ Nihar is a Western Australian owned and operated company, managed by a team of p
 Currently we have a team of 80 engineers from various technical backgrounds such as Mechanical, Electrical, Instrumentation, Process, Civil, etc., who are involved in providing reliable asset management services to industries in Australia, and internationally in countries such as USA, Brazil, Thailand, China and Singapore.
 
 Our client spectrum comprises with leading local and international companies from oil & gas, mining & minerals, manufacturing, utilities, rail and chemical industry sectors. We work alongside our clients in a collaborative approach to make breakthrough decisions that improve safety, reliability and availability through consistent high-quality project delivery.
-
 ## Capabilities
 
 We provide high-quality Engineering, Maintenance, Reliability and Operational Support to various industries within Australia and internationally. Utilising a talented, passionate and dedicated engineering team, we support our clients to achieve "Peak Asset Performance", through our main services involving 10 pillars.

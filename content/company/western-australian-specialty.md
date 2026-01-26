@@ -1,6 +1,7 @@
 ---
 name: Western Australian Specialty Alloys
-date: '2024-01-01'
+date: '2025-01-27'
+overview: WA Speciality Alloys provides nickel, cobalt and iron-based superalloy products for the aerospace and defence industry in the form of specialty steel forgings, billets and bars.
 website: https://www.wasa.com.au
 contact_name: Sandy Pelc
 contact_title: PA to General Manager
@@ -49,7 +50,6 @@ In early 2002, Precision Castparts Corporation (PCC) acquired the balance of ind
 As part of the PCC strategy, Overall Forge near Albury, New South Wales, was acquired by PCC. WASA has since taken over the management and transition of Overall Forge into the supply chain of PCC globally.
 
 As a super alloy production company, WASA is part of the critical supply chain for its customers who, in turn, directly support Defence capability worldwide. WASA's melting capabilities have ensured that military propulsion systems developed by engine manufactures are able to meet the challenging demands of their customers.
-
 ## Capabilities
 
 Double vacuum melted VIM & VAR and VIM & ESR ingots are produced in solid solution strengthened nickel base and precipitation hardened Superalloys, Maraging and PH stainless steels. Triple melted VIM/ESR/VAR alloys are also produced for premium rotating applications.
@@ -59,9 +59,8 @@ VIM remelt Superalloy barstock is a major product line, produced in a range of s
 Our fully integrated facility covers the forging process from raw material receipts through to finished bar and near shape sizes. All production including sawing, forging, heat treatment, machining, testing and certification is done in-house.
 
 We are the only vacuum induction melting facility of its kind in the southern hemisphere. As such, we aim to provide the highest quality alloys for the most stringent physical applications.
-
 ## Discriminators
 
 - Manufacture nickel, cobalt and iron based superalloys for aerospace, power generation and oil & gas applications.
-  * Alloys for forging applications.
-  * Alloys for casting and powder atomisation applications.
+- Alloys for forging applications.
+- Alloys for casting and powder atomisation applications.

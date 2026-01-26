@@ -1,6 +1,7 @@
 ---
 name: Intercept Australia
-date: '2024-01-01'
+date: '2025-01-27'
+overview: Intercept Australia provides top to bottom asset preservation.  Intercept Technology focuses on reusable anti-corrosion, anti-static and shielding packaging for long and short-term protection.
 website: https://www.interceptaustralia.com
 contact_name: Warwick Richards
 contact_title: Managing Director
@@ -86,7 +87,6 @@ Intercept Australia is committed to minimising the impact of its activities on b
 Intercept Australia provides secondary products to support total preservation requirements such as desiccants for moisture control, steel, wood and plastic pallets frames and boxes enabling safe handling throughout logistics and storage.
 
 Intercept Australia has also moved into the coatings sector supporting our key objectives of preservation providing rust converters, metal primers, thermal insulation coatings, personnel heat protection coatings and sound vibrational dampening coatings.
-
 ## Capabilities
 
 Intercept Australia provides packaging for storage, logistics and preservation.
@@ -122,33 +122,32 @@ Intercept Technology neutralizes corrosive and migrating gases; like a sacrifici
 Intercept is scavenging technology.  unrestricted by size of the item and packaging, Intercept has a built-in saturation indicator, turning green.
 
 Intercept products are available in shrink/stretch films, foils, polymer bags, foams, canvas, thermo-form and corrugated mediums - Intercept products can be custom designed to suit a diverse range of uses and objects of any size and allows for streamlining the preservation and logistics process.
-
 ## Discriminators
 
 Intercept Australia distinguishes itself from competitors by offering cost-effective anti-corrosion anti-static and shielding preservation packaging that:
 
-  * Can be opened for inspection or for rotation of shafts and bearings close and it goes back to preserving the item without having to replace the packaging cost saving
-  * Intercept materials don't lose their effectiveness High Performance (from -35C to 80C) and Humidity independent
-  * Intercept materials can be used to protect any assemblies containing optical systems
-  * Intercept is not affected by Heat, Light, Acids and Strong Alkalis
-  * Australian made local content
-  * ESD 106-108ohm , permanent (even at humidity<5%)
-  * No emitters required scavenging technology
-  * Intercept is classed non-hazardous
-  * Intercept has a built-in saturation indicator
+- Can be opened for inspection or for rotation of shafts and bearings close and it goes back to preserving the item without having to replace the packaging cost saving
+- Intercept materials don't lose their effectiveness High Performance (from -35C to 80C) and Humidity independent
+- Intercept materials can be used to protect any assemblies containing optical systems
+- Intercept is not affected by Heat, Light, Acids and Strong Alkalis
+- Australian made local content
+- ESD 106-108ohm , permanent (even at humidity<5%)
+- No emitters required scavenging technology
+- Intercept is classed non-hazardous
+- Intercept has a built-in saturation indicator
 
 Intercept Technology packaging products meet:
 
-  * AUST Defence Standar DEF(AUST)1000
-  * UK DEF STAN81-41
-  * USA MIL-PRF 81705-C now MIL-PRF-81705D
-  * USA MIL-P-116 Intercept film minimum 150um MIL-PRF-131K
-  * SPCO 2025 Compliant
-  * Manufactured under Lloyd's Register to the following standards: ISO 9001:2015
-  * Chinese Military standard Clay desiccants GJB 2714-96 and American military standard of MIL-D-3463E
-  * RoHs compliant
-  * Rolls Royce RPS367 corrosion protection of components during manufacture and storage
-  * Boeing Packaging Materials, Qualification of ESD Safe and Corrosion Inhibiting Packaging Material
-  * TACOM-ARDEC Logistics R+D Activity TACOM-ARDEC, Packaging and Engineering Support Division, Picatinny Arsenal.
-  * SKF Packaging of slew bearings 24 months+ preservation of SRB
-  * Norsafe General Preservation Procedure Norsafe Rescue Vessels.
+- AUST Defence Standar DEF(AUST)1000
+- UK DEF STAN81-41
+- USA MIL-PRF 81705-C now MIL-PRF-81705D
+- USA MIL-P-116 Intercept film minimum 150um MIL-PRF-131K
+- SPCO 2025 Compliant
+- Manufactured under Lloyd's Register to the following standards: ISO 9001:2015
+- Chinese Military standard Clay desiccants GJB 2714-96 and American military standard of MIL-D-3463E
+- RoHs compliant
+- Rolls Royce RPS367 corrosion protection of components during manufacture and storage
+- Boeing Packaging Materials, Qualification of ESD Safe and Corrosion Inhibiting Packaging Material
+- TACOM-ARDEC Logistics R+D Activity TACOM-ARDEC, Packaging and Engineering Support Division, Picatinny Arsenal.
+- SKF Packaging of slew bearings 24 months+ preservation of SRB
+- Norsafe General Preservation Procedure Norsafe Rescue Vessels.

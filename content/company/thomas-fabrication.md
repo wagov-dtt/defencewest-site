@@ -1,6 +1,10 @@
 ---
 name: Thomas Fabrication Pty Ltd
-date: '2024-01-01'
+date: '2025-01-27'
+overview: 'Thomas Fabrication provides Cold Forming services for Industrial Thickness Plate steel (mild steel, impact resistant, stainless, exotics, titanium) for Mining, Civil, Defence and Oil & Gas applications, completed to millimetre tolerances.
+
+
+  Fabrication of plate steel for Mining, Civil, Defence and Oil & Gas applications.'
 website: http://www.thomasfabrication.com.au
 contact_name: Reece Carey
 contact_title: Business Development Manager
@@ -39,7 +43,6 @@ longitude: 115.9332717
 Thomas Fabrication commenced operations in Western Australia in 2013. Our family owned business was created out of a desire to provide superior cold-forming steel  services in support of Western Australian industry. We specialise in millimetre-accurate Pressing, Rolling and Fabrication services in support of Mining, Civil, Defence and Oil & Gas clients.
 
 We form all industrial metals, from common mild and stainless steels, hardened and impact resistant steels, through to rare and exotic alloys such as titanium (multiple grades) at industrial thicknesses. We provide market-superior flexibility in tooling and machine redundancy to ensure your project is completed on time, to the highest standards.
-
 ## Capabilities
 
 Thomas Fabrication aims to be a partner of choice for Designers, Engineers and Contractors that require the initial manufacture and fabrication of robust intermediate metal goods from steel plate. Our primary differentiators within our industry lay with our universally compatible tooling, software and production processes, which provide critical redundancy for short lead-time items and within the multi-platform skills of our staff, who are qualified on our six press brakes and four plate rolling machines.

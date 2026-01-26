@@ -1,6 +1,7 @@
 ---
 name: Kanyana Engineering Pty Ltd
-date: '2024-01-01'
+date: '2025-01-27'
+overview: Kanyana Engineering Pty Ltd is a reputable business specialising in metal laser cutting, bending, and fabrication for over 25 years. With a dedicated team of highly skilled professionals, we provide high-quality precision metalworking solutions to various industries.
 website: https://kanyanaengineering.com.au
 contact_name: Sharon Dawe
 contact_title: Account Director
@@ -57,7 +58,6 @@ Our fabrication capabilities allow us to assemble and weld metal components, cre
 We prioritise customer satisfaction and aim to deliver superior quality products and services. We work closely with our clients, understanding their unique needs, and providing tailored solutions to meet their exacting standards.
 
 Our advanced machinery, skilled workforce, and commitment to excellence, we have built a strong reputation in the industry.
-
 ## Capabilities
 
 Kanyana Engineering stands out as a unique and prominent player in the WA defence industry due to our long-standing commitment to innovative and advanced manufacturing practices. With a rich history spanning over 25 years, we have successfully catered to various sectors, including commercial, industrial, mining, and defence. Kanyana's cutting-edge fiber laser cutting technology, enabling us to achieve remarkable tolerances of 0.03mm cutting sheet sizes 6000mm x 2500mm. This expanded cutting capability has propelled us into the realms of aerospace and shipbuilding manufacturing, where precision components and accuracy are of utmost importance.

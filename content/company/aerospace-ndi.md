@@ -1,6 +1,7 @@
 ---
 name: Aerospace NDI
-date: '2024-01-01'
+date: '2025-01-27'
+overview: Aerospace NDI is involved in aircraft component maintenance and aircraft specialist maintenance.
 website: https://www.aerospacendi.com
 contact_name: Anthony Mark Collier
 contact_title: 'Accountable Manager '
@@ -25,13 +26,12 @@ longitude: 115.9328024
 
 Aerospace NDI is involved in aircraft component maintenance, including wheels/ brakes, undercarriage, hydraulics, thrust reversers and flight controls. We also undertake aircraft specialist maintenance including:
 
-  * *non destructive testing (NDT) (5 methods)
-  * machining (fabrication)
-  * electroplating
-  * welding
-  * component painting
-  * manufacture of ground support equipment and tooling
-
+- -non destructive testing (NDT) (5 methods)
+- machining (fabrication)
+- electroplating
+- welding
+- component painting
+- manufacture of ground support equipment and tooling
 ## Capabilities
 
 We provide a range of services for local and interstate clients, with almost all of these services carried out in-house. Customers therefore benefit from reduced costs and faster turnaround times. Aerospace NDI offers a rapid response one-stop shop service and works closely with operators to assist them in maintaining flying schedules.

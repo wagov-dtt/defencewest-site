@@ -1,6 +1,7 @@
 ---
 name: Mainz Pty Ltd
-date: '2024-01-01'
+date: '2025-01-27'
+overview: We make stainless steel cable assemblies to any size or length required. Suppliers of stainless hardware and tools.
 website: https://www.wirebalustrades.com.au
 contact_name: Graeme Eastman
 contact_title: Managing Director
@@ -55,22 +56,20 @@ We are specialist in stainless steel cables and related hardware. We can manufac
 We have over 10 years experience in the manufacture of cable assemblies.
 
 We have previously supplied stainless eye bolts to the navy for use on existing submarines.
-
 ## Capabilities
 
 We have previously supplied stainless eye bolts to the navy for use on existing submarines.
 
 We have also supplies a wide range of stainless cable and hardware to other contractors who may have then supplied to the defence industry. Examples are:
 
-  * wire balustrades
-  * stainless wire and ferrules for industrial tagging
-  * stainless wire and ferrules for low frequency antenna
-  * cable, grippers and assemblies for hanging signs, pipes, etc
-  * safety cables and lanyards
-
+- wire balustrades
+- stainless wire and ferrules for industrial tagging
+- stainless wire and ferrules for low frequency antenna
+- cable, grippers and assemblies for hanging signs, pipes, etc
+- safety cables and lanyards
 ## Discriminators
 
 - Over 10 years experience
-  * Large range of cables and fitting held in stock here in Perth
-  * Cable assemblies are made here in our workshop
-  * Advice on cable requirements and specifications
+- Large range of cables and fitting held in stock here in Perth
+- Cable assemblies are made here in our workshop
+- Advice on cable requirements and specifications

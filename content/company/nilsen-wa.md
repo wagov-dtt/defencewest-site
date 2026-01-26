@@ -1,6 +1,7 @@
 ---
-name: Nilsen WA
-date: '2024-01-01'
+name: 'Nilsen WA '
+date: '2025-01-27'
+overview: Our vision is to be a leading electro-technology company operating throughout Australia to deliver installation, maintenance and manufacturing services from inception to replacement.
 website: https://nilsen.com.au
 contact_name: Katrina Jacovic
 contact_title: PA to General Manager
@@ -33,12 +34,11 @@ Nilsen has offices in all mainland Australian capital cities.
 Our vision is to be a leading electro-technology company operating throughout Australia to deliver installation, maintenance and manufacturing services from inception to replacement.
 
 Our values are we are accountable for making and meeting our commitments.
-
 ## Capabilities
 
 Nilsen are the industry leaders in:
 
-  * electrical construction and engineering,
-  * power distribution switchboard manufacturing and design,
-  * preventative and predictive maintenance,
-  * testing and commissioning complex electrical systems
+- electrical construction and engineering,
+- power distribution switchboard manufacturing and design,
+- preventative and predictive maintenance,
+- testing and commissioning complex electrical systems

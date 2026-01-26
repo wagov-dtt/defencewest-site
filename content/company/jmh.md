@@ -1,6 +1,7 @@
 ---
 name: JMH Group
-date: '2024-01-01'
+date: '2025-01-27'
+overview: For all your mobile plant and equipment mechanical repairs & maintenance, labour hire support, parts supply, specialised tooling hire, component exchange and undercarriage repairs.
 website: https://jmhgroup.net.au
 contact_name: Jaydon Hirst
 contact_title: Director
@@ -8,7 +9,6 @@ address: 41 Foskew Way, Narngulu WA 6532
 phone: 0488 648 370
 email: service@jmhgroup.net.au
 is_sme: true
-is_indigenous_owned: true
 stakeholders:
 - defence
 - defence-west
@@ -32,6 +32,8 @@ regions:
 - mid
 - pilbara
 - wheatbelt
+ownerships:
+- indigenous
 latitude: -28.81265
 longitude: 114.67123
 ---
@@ -46,32 +48,30 @@ Our technicians work with and are supported by our Parts and Clerical Department
 
 At JMH Group we are very enthusiastic about keeping up to date with the latest advances in industry technologies and tooling to continue as industry leaders and innovators. JMH Group have an extensive library of hire equipment, tooling and personnel to ensure operational efficiencies and minimised down-time for our clients.
 All of these qualities have established JMH Group as an industry leader and in recent years led to partnerships with international innovators such as Scania, JCB, Kalmar Oceania, Fuchs and Groeneveld - Beka. JMH group is endorsed and equipped to supply parts, service and support for these brands as well as holding a dealership license for JCB machinery and Kalmar Equipment.
-
 ## Capabilities
 
 On-Site or in Workshop Light and Heavy Vehicle Repairs and Services:
 
-  * Mechanical Repairs and Services
-  * Fabrication and Welding
-  * Auto Electrical
-  * Mechaincal On-Site Labour Support
-  * Mechanical Electronic Diagnostics
-  * Air-conditioning Repairs
-  * Component Overhauls
-  * Onsite Undercarriage Repairs
-  * Spare Parts
-  * Specialised Tooling and Equipment
-  * In House & Mobile Hydraulic Hose Service
-  * Brake & Suspension Testing
-
+- Mechanical Repairs and Services
+- Fabrication and Welding
+- Auto Electrical
+- Mechaincal On-Site Labour Support
+- Mechanical Electronic Diagnostics
+- Air-conditioning Repairs
+- Component Overhauls
+- Onsite Undercarriage Repairs
+- Spare Parts
+- Specialised Tooling and Equipment
+- In House & Mobile Hydraulic Hose Service
+- Brake & Suspension Testing
 ## Discriminators
 
 - JCB Sales, Parts and Service and Repairer dealer
-  * Scania Service, Parts and Repairer dealer
-  * Kalmar Sales, Parts, Service and Repairer Dealer
-  * Fuchs Supplier
-  * Coregas Supplier
-  * Groeneveld-Beka Supplier
-  * MWCCI Business of the Year Award 2021
-  * 40 under 40 Awards (2 x Business Directors)
-  * ISO Accreditation Safety, Quality and Environment obtained May 2025
+- Scania Service, Parts and Repairer dealer
+- Kalmar Sales, Parts, Service and Repairer Dealer
+- Fuchs Supplier
+- Coregas Supplier
+- Groeneveld-Beka Supplier
+- MWCCI Business of the Year Award 2021
+- 40 under 40 Awards (2 x Business Directors)
+- ISO Accreditation Safety, Quality and Environment obtained May 2025

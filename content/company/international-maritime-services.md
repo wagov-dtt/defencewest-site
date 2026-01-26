@@ -1,6 +1,7 @@
 ---
 name: International Maritime Services (IMS)
-date: '2024-01-01'
+date: '2025-01-27'
+overview: 'IMS is an Australian award-winning SME ship delivery and crewing specialist providing qualified and experienced test and trials crew for patrol boats, large high-speed ferries and commercial inshore and offshore vessels. '
 website: https://www.ims.global
 contact_name: Steve Malcolm
 contact_title: Commercial Manager
@@ -27,7 +28,6 @@ longitude: 115.7496146
 International Maritime Services (IMS) is an Australian award-winning SME ship delivery and crewing specialist providing qualified and experienced test and trials crew for patrol boats, large high-speed ferries and commercial inshore and offshore vessels. Since 1985, IMS has provided global ship delivery and manning solutions. On-keel ship delivery, management and crew training are the services on which our reputation has been forged.
 
 We have a proud, successful history and a demonstrated ability to trial and deliver any vessel to and from any port across the globe while providing a complete technical management and crew training service.
-
 ## Capabilities
 
 Since 2001, IMS has provided crews for over 100 Defence and government vessels built in Australia and the USA. These include the Austal-built Armidale, Cape and Guardian class patrol boat programs; the Damen built Damen EGS Besant RGS Stoker, and several Austal USA-built Expeditionary Fast Transport for the US Navy. Swift, clear and concise communications are an essential element in harbour and sea acceptance trials program for a new vessel. The ship-handling experts at IMS act as that conduit; providing the shipyard and Defence representatives vital information. This includes how the vessel is responding while being cognisant of the specified scope and requirements of any specific sea trial.

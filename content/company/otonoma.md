@@ -1,6 +1,7 @@
 ---
 name: Otonoma
-date: '2024-01-01'
+date: '2025-01-27'
+overview: Autonomous orchestration of IT/OT, workflow, people, robotics and systems using an actorised agentic ai overlay network known as the Paranet.
 website: https://www.otonoma.com
 contact_name: Peta Chirgwin
 contact_title: VP Global Industrial Markets
@@ -46,14 +47,12 @@ longitude: 115.75226
 ## Overview
 
 We are in discussions with defence agencies in the US and defence contractors in Australia about the integration of our platform.
-
 ## Capabilities
 
 Seamless collaboration between people and intelligent machines, empowering secure and efficient workflow.
-
 ## Discriminators
 
 - Negative trust security
-  * New ai language
-  * Breaking down silos across a supply chain through intelligent orchestration integrating multiple vendors securely.
-  * Member of Robotics Australia Group
+- New ai language
+- Breaking down silos across a supply chain through intelligent orchestration integrating multiple vendors securely.
+- Member of Robotics Australia Group

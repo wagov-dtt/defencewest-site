@@ -1,6 +1,7 @@
 ---
 name: Fujitsu Australia Limited
-date: '2024-01-01'
+date: '2025-01-27'
+overview: Fujitsu Australia provides a broad range of ICT services and solutions to the Department of Defence in many locations across Australia and overseas.
 website: https://global.fujitsu/en-global
 contact_name: Ron Costanzo
 contact_title: WA State Manager
@@ -41,7 +42,6 @@ longitude: 115.8586039
 ## Overview
 
 Fujitsu Australia provides a broad range of ICT services and solutions to the Department of Defence in many locations across Australia and overseas. In WA, our workforce supports two data centres and a local warehouse and logistics centre that provides ICT services and solutions to large government and commercial organisations. The centre can service any regional or remote location across Australia.
-
 ## Capabilities
 
 We are unique due to our understanding of, and relationships in the local defence-industry. Together with our local WA presence and size, we can assist in working with local companies to develop more defence-related jobs in WA. We have a large number of Defence cleared staff, and can advise local industry dealing with Defence on the security and compliance credentials required. We are focused on, and have funding programs available for co-innovation and proof of concept activities, and can also bring to bear in Australia the latest technology from our research and development labs throughout the world.

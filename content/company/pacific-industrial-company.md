@@ -1,6 +1,7 @@
 ---
 name: Pacific Industrial Company
-date: '2024-01-01'
+date: '2025-01-27'
+overview: Pacific Industrial Company is WA owned and is one of Australia's leading fabrication and construction organisations with operations covering all aspects of steel fabrication and construction.
 website: https://www.pacind.com.au
 contact_name: Zeno Tessarin
 contact_title: Business Development Manager
@@ -42,8 +43,7 @@ longitude: 115.7880405
 
 ## Overview
 
-Pacific Industrial Company was founded in 1969, is WA owned and is one of Australia’s leading fabrication and construction organisations with operations covering all aspects of steel fabrication and construction.
-
+Pacific Industrial Company was founded in 1969, is WA owned and is one of Australia's leading fabrication and construction organisations with operations covering all aspects of steel fabrication and construction.
 ## Capabilities
 
 We are experts in steel construction and can provide value engineering in structural steel solutions. This competency has been well received in the commercial market as we can conduct informed reviews of what an intense structural steel solution provides to customer challenges in terms of flexibility, stabilisation, speed and costs.

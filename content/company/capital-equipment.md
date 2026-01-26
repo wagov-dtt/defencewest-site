@@ -1,6 +1,7 @@
 ---
 name: Capital Equipment
-date: '2024-01-01'
+date: '2025-01-27'
+overview: 'Capital Equipment Machinery Sales has a team of professional staff with extensive knowledge in the sales and service of: Machine Tools, Fabrication Equipment, Cleaning Equipment, Marking Machines'
 website: https://www.capitalequipment.net.au
 contact_name: Jim Harding
 contact_title: Director
@@ -40,7 +41,6 @@ longitude: 115.80832
 ## Overview
 
 Capital currently supply ASC, BAE both fabrication equipment and machine tools
-
 ## Capabilities
 
 We supply various machine tools such as Lathes, Mills, Grinders, Slotters, Vertical - Horizontal Borers, Drills
@@ -48,7 +48,6 @@ We supply various machine tools such as Lathes, Mills, Grinders, Slotters, Verti
 Fabrication Equipment Bandsaws, Pipe Benders, Press Brakes, Guillotines, Punch and Shears, Mag Base Drills, Belt Grinders, Laser Cutters, F- Clamps, Part Marking Machines, Plate Bevellers, Cold saws
 
 Cleaning Equipment Vacuum cleaners, Floor sweepers , Floor scrubbers, Pressure Cleaners
-
 ## Discriminators
 
 Capital is a small local business based in Bibra Lake WA . We stock and service machine we sell

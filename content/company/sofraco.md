@@ -1,6 +1,9 @@
 ---
 name: Sofraco Engineering Services
-date: '2024-01-01'
+date: '2025-01-27'
+overview: 'Sofraco''s specialist engineering services consist of Electrical, Mechanical and Marine engineers as well as Naval Architects and AMSA-accredited Surveyors. We service the full design scope alongside other services such as feasibility studies and commissioning.
+
+  Our field service department delivers comprehensive support for marine systems. Delivered by skilled professionals who can handle a wide range of tasks from fault finding, repair and system servicing, to installation and upgrades.'
 website: https://sofraco.com.au
 contact_name: ben gillard
 contact_title: Operations Manager
@@ -43,7 +46,6 @@ longitude: 115.7599744
 Sofraco is a wholly Australian owned engineering consultancy & service provider that has been providing innovative, practical & professional services to Department of Defence and other government, marine, and commercial clients since foundation in 1988.
 
 Sofraco's emphasis is on providing a holistic, turn-key solution for the support of capital equipment, spanning pre-acquisition, through-life-support to decommissioning and disposal.
-
 ## Capabilities
 
 Sofraco's capabilities are comprised of two interoperating departments: Professional Engineering and

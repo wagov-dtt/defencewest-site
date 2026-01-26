@@ -1,6 +1,7 @@
 ---
 name: One Mob - Trading as Mob Contracting and Event Personnel Australia
-date: '2024-01-01'
+date: '2025-01-27'
+overview: One Mob is a one stop shop for people solutions in the Events, Resources and Labour Hire sector for Western Australia and South Australia
 website: https://onemob.com.au
 contact_name: Maera Paki
 contact_title: Recruitment and Business Improvement Officer
@@ -33,11 +34,10 @@ One Mob is a collection of two businesses servicing the events, construction, tr
 
 One Mob supports a broad cross section of clients, including the Defence and local government projects, construction, logistics and the live performance industry specializing in:
 
-  * Event | Site Management, production, rigging and scaffold, logistics and labour
-  * Trade qualified and industry experienced personnel
-  * Strong and sustainable relationship professional, precise and clear communications
-  * Practiced, tested and personalized recruitment processes
-
+- Event | Site Management, production, rigging and scaffold, logistics and labour
+- Trade qualified and industry experienced personnel
+- Strong and sustainable relationship professional, precise and clear communications
+- Practiced, tested and personalized recruitment processes
 ## Capabilities
 
 Supply Nation Registered

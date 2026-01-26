@@ -18,8 +18,10 @@ data/cache/
 data/computed.yaml
 
 # Generated exports
+static/maps
 static/companies.csv
 static/companies.xlsx
+static/companies.json
 
 # IDE
 .idea/

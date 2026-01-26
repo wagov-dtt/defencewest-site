@@ -1,6 +1,7 @@
 ---
 name: HoseCo
-date: '2024-01-01'
+date: '2025-01-27'
+overview: 'HoseCo Australia specialise in the supply, maintenance and management of Flexible Hose Assemblies for a wide range of applications. '
 website: https://hoseco.com.au
 contact_name: John McGill
 contact_title: Group Sales & Product Manager
@@ -45,7 +46,6 @@ longitude: 115.9263348
 ## Overview
 
 HoseCo Australia specialise in the supply, maintenance and management of Flexible Hose Assemblies for a wide range of applications. HoseCo have a market leading scope of certifications to support the Defence Forces right around Australia.
-
 ## Capabilities
 
 HoseCo Australia specialise in the supply, maintenance and management of Flexible Hose Assemblies for a wide range of applications. HoseCo have a market leading scope of certifications to support the Defence Forces right around Australia.

@@ -1,6 +1,7 @@
 ---
 name: SAS Project Services WA
-date: '2024-01-01'
+date: '2025-01-27'
+overview: "SAS Project Services is proudly WA family owned and has been operating in the fabrication and construction industry all over WA and beyond since 2001. \nWe believe our people are our biggest asset."
 website: https://sasprojectservices.com.au
 contact_name: Murray Middleton
 contact_title: Managing Director
@@ -48,11 +49,9 @@ longitude: 116.03734
 ## Overview
 
 SAS Project Services has worked for Defence as a subcontractor to Prime on a couple of occasions at Pearce RAAF and Stirling Garden Island, providing quality tradespeople to perform steel construction on site.  SAS Project Services is situated in the Chittering Valley close to the Pearce RAAF GinGin RAAF and Bindoon Army Camp and would like to assist with any new project works or remediation works required by Defence.
-
 ## Capabilities
 
 SAS Project Services has predominately served the mining industry over the course of operation and believe the prerequisites in this industry are similar to Defence requirements and therefore an easy adjustment for our organization to move into.
-
 ## Discriminators
 
 SAS Project Services fabricates and installs Stainless Steel Aluminium and Steel products for all applications making our services very versatile to our clients.

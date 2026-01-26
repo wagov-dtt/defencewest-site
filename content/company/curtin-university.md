@@ -1,6 +1,7 @@
 ---
 name: Curtin University
-date: '2024-01-01'
+date: '2025-01-27'
+overview: Curtin University is a trusted partner and fundamental part of the Australian defence industry sector.
 website: https://www.curtin.edu.au
 contact_name: Gary Hale
 contact_title: Director, National Resilience and Security Program Office
@@ -42,21 +43,19 @@ longitude: 115.8873331
 ## Overview
 
 Curtin University is an innovative, global university known for its high-impact research, strong industry partnerships and commitment to preparing job ready graduates for the future. As a university with an established reputation for innovation, Curtin excels in a diverse range of research areas that aim to make tomorrow better for people all over the world. The National Resilience and Security (NRAS) Program Office at Curtin University aims to consolidate Curtin's defence collaborations, creating a centralised hub responsive to Australia's defence challenges, including technological innovation and workforce development. Through NRAS, Curtin leverages its interdisciplinary expertise and strategic partnerships to actively help shape the narratives of defence, national security and space within Australia, while also contributing to the nation's economic prosperity.
-
 ## Capabilities
 
 Curtin University is a Defence Industry Security Program accredited institution, with a strong network of multi-disciplinary research teams, cutting-edge infrastructure, and a history of successful collaborations. The university delivers high-impact research programs to strengthen Australia's sovereign National Resilience and Security, particularly in defence, national security, and space, these include
 
-**Build and Sustainment -** advanced & additive manufacturing, non-destructive testing (NDT) & material characterisation; platform engineering, optimisation & asset management; condition monitoring, corrosion and biofouling; defence critical minerals & energy transitions.
+- Build and Sustainment -** advanced & additive manufacturing, non-destructive testing (NDT) & material characterisation; platform engineering, optimisation & asset management; condition monitoring, corrosion and biofouling; defence critical minerals & energy transitions.
 
-**Robotics & Automation** \- autonomous and remote systems and swarming; AI-driven decision making & adaptive control and human-robot interaction & trust.
+- Robotics & Automation** - autonomous and remote systems and swarming; AI-driven decision making & adaptive control and human-robot interaction & trust.
 
-**Space-to-Seabed** \- advanced space, land & undersea sensing; Integrated detection models & algorithms (AI/ML); maritime mapping & MetOcean; Quantum sensing and technologies and underwater communications.
+- Space-to-Seabed** - advanced space, land & undersea sensing; Integrated detection models & algorithms (AI/ML); maritime mapping & MetOcean; Quantum sensing and technologies and underwater communications.
 
-**Next Generation Defence Technologies -** electronic warfare and signals intelligence; advanced combat system software architectures and secure collaboration platforms (Nebula).
+- Next Generation Defence Technologies -** electronic warfare and signals intelligence; advanced combat system software architectures and secure collaboration platforms (Nebula).
 
-**Workforce Development and Teaching** \- targeted skills & training; talent pipeline, recruitment & retention, incl. new pathways; preferred AUKUS learning and teaching partner in Western Australia with 320 Commonwealth supported positions funded by the Australian Submarine Agency; strong student alumni network and programs.
-
+- Workforce Development and Teaching** - targeted skills & training; talent pipeline, recruitment & retention, incl. new pathways; preferred AUKUS learning and teaching partner in Western Australia with 320 Commonwealth supported positions funded by the Australian Submarine Agency; strong student alumni network and programs.
 ## Discriminators
 
 Location and Size: Largest University in Western Australia

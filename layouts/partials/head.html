@@ -18,15 +18,7 @@
 
 {{/* Page title - handle different page types */}}
 {{- $pageTitle := .Site.Title -}}
-
-{{/* Display name mapping for taxonomy titles */}}
-{{- $taxonomyTitles := dict 
-  "capability_streams" "Capability Streams"
-  "capability_domains" "Capability Domains"
-  "industrial_capabilities" "Industrial Capabilities"
-  "regions" "Regions"
-  "stakeholders" "Stakeholders"
--}}
+{{- $taxonomyTitles := .Site.Params.taxonomyTitles -}}
 
 {{- if .IsHome -}}
   {{- $pageTitle = .Site.Title -}}

@@ -1,6 +1,7 @@
 ---
 name: NW Futures Group Pty Ltd
-date: '2024-01-01'
+date: '2025-01-27'
+overview: "NW Futures group is a WA owned company based in Perth WA. \n\nWe are an independent group that specialize in identifying areas within the Northwest of WA, strategic assets and infrastructure that can be repurposed or co-shared."
 website: http://www.nwfuturesgroup.com.au
 contact_name: David Campbell
 contact_title: Managing Director
@@ -39,7 +40,6 @@ NW Futures Group commenced business in mid 2022, with the vision to repurpose ou
 Our partners that are tier 1 energy companies and Australian and defence companies, are committed to combining subsea and coastal hubs. for the mutual benefit of private, public and security stakeholders.
 
 By sharing resources and repurposing used materials and equipment, the oil and gas and resource industry and defence can reduce their overall environmental impact and increase their efficiency. This circular supply chain approach could also lead to cost savings for both industries, as they would be able to reduce their dependence on new materials and equipment. Overall, a circular supply chain between the oil and gas, resource industry and defence can improve sustainability, increase efficiency, and reduce waste.
-
 ## Capabilities
 
 NW futures We know how to co-exist Petroleum licences, mining tenements with what we call "mapping" - how leases can co-exist together and protects existing and future rights.

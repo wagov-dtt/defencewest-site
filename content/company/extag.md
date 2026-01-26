@@ -1,6 +1,7 @@
 ---
 name: EXTAG Pty Ltd
-date: '2024-01-01'
+date: '2025-01-27'
+overview: EXTAG(r) is a software platform that ensures asset-intensive organisations are compliant, safe & ready for use.
 website: https://www.extag.com.au
 contact_name: Lan Tran
 contact_title: Chief Sales Officer
@@ -43,23 +44,22 @@ EXTAG provides a Custom Asset Management System that optimises sustainment activ
 With a proven track record in highly regulated sectors, our solutions enhance asset visibility, maintenance, scheduling, compliance, and reporting. Our rapid deployment and customisable forms enable immediate use and continuous improvement through user feedback. This user-centric approach drives higher engagement, making EXTAG the preferred choice for adaptable, purpose-driven asset management for multinational clients including Chevron, Altrad, INPEX, Woodside and Worley.
 
 Our scalable platform is easily customised to meet specific industry requirements, delivering tailored and adaptable solutions across various sectors.
-
 ## Capabilities
 
-**Products & Services**
+- Products & Services**
 
-• Safety and Safety Case Engineering: Maintain compliance and mitigate risks.
-• Ground Support Equipment Management: Streamline maintenance and availability.
-• Weapon and Vehicle Maintenance: Maximise readiness with efficient upkeep.
-• Inspection and Testing: Guarantee asset integrity and reliability.
-• Predictive Asset Lifecycle Modelling: Anticipate and prevent equipment failures.
-• Data Visualisation: Provide clear, actionable insights for decision-makers.
-• Remote Operation and Maintenance: Maintain critical assets in any environment.
-• Soft Facility Management Services: Support and sustain essential infrastructure.
-• Reduce Overheads on Training: Optimise training programs for cost-effectiveness.
-• Advanced Planning Tools: Enable proactive and strategic asset management.
+- Safety and Safety Case Engineering: Maintain compliance and mitigate risks.
+- Ground Support Equipment Management: Streamline maintenance and availability.
+- Weapon and Vehicle Maintenance: Maximise readiness with efficient upkeep.
+- Inspection and Testing: Guarantee asset integrity and reliability.
+- Predictive Asset Lifecycle Modelling: Anticipate and prevent equipment failures.
+- Data Visualisation: Provide clear, actionable insights for decision-makers.
+- Remote Operation and Maintenance: Maintain critical assets in any environment.
+- Soft Facility Management Services: Support and sustain essential infrastructure.
+- Reduce Overheads on Training: Optimise training programs for cost-effectiveness.
+- Advanced Planning Tools: Enable proactive and strategic asset management.
 
-**Availability and Support**
+- Availability and Support**
 
 EXTAG's SaaS Asset Management System is currently available to clients in the Mining, Energy, and Oil & Gas sectors across Australia, South America, and the Middle East. Our products are available immediately, with minimal lead times on standard orders.
 
@@ -67,22 +67,21 @@ We are headquartered in Western Australia, and our dedicated in-house team provi
 
 Due to the flexibility and scalability of our software, we are equipped to quickly expand our services to other sectors and regions globally, adapting to specific market requirements.
 
-**Key Customers**
+- Key Customers**
 
 Altrad
 Chevron
 INPEX
 Woodside
 Worley
-
 ## Discriminators
 
 EXTAG is at the forefront of digitising existing paper-based processes and spreadsheets in asset management, with:
 
-• Versatile application across various assets
-• Rapid deployment of the asset management system
-• Minimal hardware investment needed
-• Quick implementation of user feedback
-• Focus on high user engagement and adoption
-• Improved data quality via optimised data collection
-• Significant cost savings with asset utilisation and cost modelling capability
+- Versatile application across various assets
+- Rapid deployment of the asset management system
+- Minimal hardware investment needed
+- Quick implementation of user feedback
+- Focus on high user engagement and adoption
+- Improved data quality via optimised data collection
+- Significant cost savings with asset utilisation and cost modelling capability

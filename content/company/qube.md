@@ -1,6 +1,7 @@
 ---
 name: Qube
-date: '2024-01-01'
+date: '2025-01-27'
+overview: Qube is Australia's largest integrated provider of import and export logistics services, covering the complete supply chain from beginning to end.
 website: https://www.qube.com.au
 contact_name: 'Teneille Semple '
 contact_title: Recruitment Manager
@@ -36,7 +37,6 @@ longitude: 115.8385207
 
 Qube is Australia's largest integrated provider of import and export logistics services, covering the complete supply chain from beginning to end. We are a leader in the markets in which we operate, striving continuously to implement innovative practices that enhance our customers' experience.
 The expertise of each of our divisions is showcased in the statements below. Qube Bulk currently handles more than 85 million tonnes per annum of bulk products and, with our continued involvement in a number of bulk commodity handling projects, these volumes are expected to increase. We empower our people to deliver exceptional results for our customers every day, and we pride ourselves in offering a safe and inclusive workplace. We encourage innovation and collaboration to ensure we exceed industry standards throughout our organisation. Qube focuses on providing a safe workplace through our Zero Harm programs, and we are committed to working with the local communities in which we operate
-
 ## Capabilities
 
 Qube Bulk capabilities include mine, road, rail, storage, port and ship services. Qube Bulk handles various bulk ores, concentrates, mineral sands, salt, coal and dangerous goods. We own and operate strategic infrastructure throughout the supply chain. Qube Bulk is independent, experienced and actively investing in bulk export chain projects. This combination provides customers with a low risk solution. Independence is particularly useful in open access facilities where there are multiple users. Where possible, we look to invest in bulk material handling systems and port facilities.

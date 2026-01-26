@@ -1,6 +1,7 @@
 ---
 name: PRF Industries Pty Ltd
-date: '2024-01-01'
+date: '2025-01-27'
+overview: Electrical Service company providing a licenced workforce to supply and install electrical, data comms, and security cabling and systems
 website: https://prfelectrical.com.au
 contact_name: Phil Fraser
 contact_title: Managing Director
@@ -34,7 +35,6 @@ longitude: 115.7831184
 Since 1985, PRF Electrical has been delivering high quality commercial and industrial, Data Communications Cabling, Security Cabling and Systems and Electrical and Solar PV services across the Perth metro areas and Western Australia.
 
 Our mission to provide customer service and electrical excellence.
-
 ## Capabilities
 
 With over 40 years of experience in the electrical industry, PRF will provide you with an efficient and high quality service with expert knowledge

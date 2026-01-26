@@ -1,6 +1,7 @@
 ---
 name: TL Engineering
-date: '2024-01-01'
+date: '2025-01-27'
+overview: TL Engineering provide design, construction and fitting services for all types of vehicle fleets in Perth/Western Australia.
 website: https://tleng.com.au
 contact_name: Dan Oldham
 contact_title: Managing Director
@@ -25,7 +26,7 @@ longitude: 116.01436
 
 ## Overview
 
-_**TL Engineering**_**started in 1970 as a small backstreet business in Perth WA.**
+- TL Engineering*** **started in 1970 as a small backstreet business in Perth WA.**
 
 Today TL Engineering is a leading motor vehicle body builder based in Western Australia, specialising in the design, manufacture, and supply of high-quality, custom-built commercial and retail vehicle bodies for a variety of industries.
 
@@ -37,25 +38,23 @@ At TL Engineering, we take pride in our commitment to safety, quality, and custo
 
 Our product range includes a wide variety of custom-built vehicle bodies, including but not limited to service bodies, truck bodies, Ute trays, alloy trays and canopies, and more. Our focus on innovation and customisation allows us to offer a wide range of options and configurations to suit any application.
 
-_**We are proud to be an industry leader in Western Australia, and we are looking to partner with Defence for future opportunities for general fabrication. We have a large talented team of fabricators and capacity to service Defence.**_
-
+- We are proud to be an industry leader in Western Australia, and we are looking to partner with Defence for future opportunities for general fabrication. We have a large talented team of fabricators and capacity to service Defence.***
 ## Capabilities
 
 - Steel and Aluminium Fabrication services
-  * Sandblasting and Automotive Painting facilities
-  * Large 15,000m2 workshop close to Roe highway
-  * 75x talented fabricators and tradespeople with capacity for general fabrication
-
+- Sandblasting and Automotive Painting facilities
+- Large 15,000m2 workshop close to Roe highway
+- 75x talented fabricators and tradespeople with capacity for general fabrication
 ## Discriminators
 
 - Over 50 years of Vehicle Body Building experience
-  * Known for quality and heavy duty builds
-  * Ability to continuously develop and improve our products
-  * We work with BHP, RIO, FMG, Ford & Toyota as preferred contractor
-  * Turn key builds - fabrication, paint, electrical, fit and service/repair
-  * HMF Crane Agent for WA
-  * Aust Govt Authorised Modifier - VSB 6 Code - #M1WA
-  * Aust Govt Registered Production Facility - ID P11241
-  * Aust Govt Registered Design Facility - ID D4714
-  * Aust Govt Registered Licenced Repairer - MRB 3603
-  * Motor Vehicle Dealer - MD30158
+- Known for quality and heavy duty builds
+- Ability to continuously develop and improve our products
+- We work with BHP, RIO, FMG, Ford & Toyota as preferred contractor
+- Turn key builds - fabrication, paint, electrical, fit and service/repair
+- HMF Crane Agent for WA
+- Aust Govt Authorised Modifier - VSB 6 Code - #M1WA
+- Aust Govt Registered Production Facility - ID P11241
+- Aust Govt Registered Design Facility - ID D4714
+- Aust Govt Registered Licenced Repairer - MRB 3603
+- Motor Vehicle Dealer - MD30158

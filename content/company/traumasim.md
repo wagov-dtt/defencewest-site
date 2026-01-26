@@ -1,6 +1,7 @@
 ---
 name: TraumaSim
-date: '2024-01-01'
+date: '2025-01-27'
+overview: TraumaSim deliver medically accurate products designed to simulate realistic traumatic injuries and medical conditions as well as providing training, workshops, part-task trainers and moulage technicians & supplies to industries and professionals around the world.
 website: https://traumasim.com.au
 contact_name: Nola Pearce
 contact_title: Managing Director
@@ -25,8 +26,7 @@ longitude: 115.9393346
 
 ## Overview
 
-Since 2008, TraumaSim have been delivering medically accurate products designed to simulate realistic traumatic injuries and medical conditions as well as providing training, workshops, part-task trainers and moulage technicians & supplies to industries and professionals around the world. These services enable medics, health care students / professionals and first responders to undertake training and assessment using medically accurate products that promote realism and diversity in real world simulations. TraumaSim have proudly been providing the Australian Defence Force with products and services for Pre-Deployment Medical Training plus realistic medical moulage & part-task trainers for Army Combat Health Training and Mission Rehearsal Exercises since 2009. Our durable, realistic and locally made products, available in 11 different skin colours, include Emergency Tourniquet Trainers, Haemostatic Clotting Trainers, Haemorrhage Control Simulators, TraumaWear for quick application of reusable wounds, a large selection of silicone wounds plus quality moulage and special affects supplies – allowing medical students and emergency personnel to learn and practise these critical skills within the most realistic scenarios.
-
+Since 2008, TraumaSim have been delivering medically accurate products designed to simulate realistic traumatic injuries and medical conditions as well as providing training, workshops, part-task trainers and moulage technicians & supplies to industries and professionals around the world. These services enable medics, health care students / professionals and first responders to undertake training and assessment using medically accurate products that promote realism and diversity in real world simulations. TraumaSim have proudly been providing the Australian Defence Force with products and services for Pre-Deployment Medical Training plus realistic medical moulage & part-task trainers for Army Combat Health Training and Mission Rehearsal Exercises since 2009. Our durable, realistic and locally made products, available in 11 different skin colours, include Emergency Tourniquet Trainers, Haemostatic Clotting Trainers, Haemorrhage Control Simulators, TraumaWear for quick application of reusable wounds, a large selection of silicone wounds plus quality moulage and special affects supplies - allowing medical students and emergency personnel to learn and practise these critical skills within the most realistic scenarios.
 ## Capabilities
 
-TraumaSim provide a niche service which was founded upon a strong medical background, whose staff also have experience in film, theatre and special effects. This enables TraumaSim to be the leading provider of medically accurate and realistic wounds and training equipment as well as planning and delivery of realistic emergency situations – being one contact for all your emergency training simulation needs.
+TraumaSim provide a niche service which was founded upon a strong medical background, whose staff also have experience in film, theatre and special effects. This enables TraumaSim to be the leading provider of medically accurate and realistic wounds and training equipment as well as planning and delivery of realistic emergency situations - being one contact for all your emergency training simulation needs.

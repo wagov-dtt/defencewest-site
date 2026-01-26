@@ -1,6 +1,7 @@
 ---
 name: SME Gateway Pty Ltd
-date: '2024-01-01'
+date: '2025-01-27'
+overview: 'SME Gateway has a proven heritage of over 15 years in the support of Australian Small to Medium Enterprises and the low-risk facilitation of their introduction to a wide range of work opportunities in the provision of Professional and Technical Services. '
 website: https://www.smegateway.com.au
 contact_name: Andy Stephens
 contact_title: Business Development Executive
@@ -52,7 +53,6 @@ longitude: 115.8572337
 SME Gateway has a proven heritage of over 15 years in support of Australian Small to Medium Enterprises and the low-risk facilitation of their introduction to a wide range of work opportunities in the provision of Professional and Technical Services. We are not a recruitment or labour-hire group but a contractual Tier 1 conduit for SMEs to pursue opportunities in areas that may otherwise prove challenging to identify, qualify, or be perceived as holding increased risk.
 
 SME Gateway has developed a strong reputation as a trusted provider to a wide range of Whole of Government agencies, to date responsible for over $500m worth of contracts being awarded to Australian SMEs. From a foundation built on supporting Federal and State Procurement Panels, SME Gateway is now diversifying to provide services directly. This engagement will be to Primes, undertaking Integrated Work Packages to deliver Coordinated Services, driving Business To Business (B2B) engagement between our members and developing SME Consortiums. Member companies number over 400 nationally, with a firm commitment for growth in Western Australia.
-
 ## Capabilities
 
 SME Gateway offers a unique level of access to Australian SME Professional and Technical Services capability for our clients and a proven and highly effective subcontracting model for our members.

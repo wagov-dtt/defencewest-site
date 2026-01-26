@@ -1,6 +1,7 @@
 ---
 name: Aussie Fluid Power
-date: '2024-01-01'
+date: '2025-01-27'
+overview: AFP is one of Australia's leading fluid power companies providing hydraulic and process solutions including Engineering, on/off site Technician and Construction Services
 website: https://www.aussiefluidpower.com.au
 contact_name: Henry Bardolf-Smith
 contact_title: Sales Manager
@@ -40,14 +41,13 @@ longitude: 115.7632517
 
 ## Overview
 
-AFP is one of Australia’s leading fluid power companies which has been in existence since 2010, providing hydraulic and process solutions to a growing list of Australian and international customers across the water, energy, resource and defence industries.
+AFP is one of Australia's leading fluid power companies which has been in existence since 2010, providing hydraulic and process solutions to a growing list of Australian and international customers across the water, energy, resource and defence industries.
 
 AFP is now part of the largest Services businesses in Australia - Questas Group which acquired AFP in 2021.
 
 We pride ourselves on our ability to combine industry best practice with cutting edge technology and innovation. As well as cultivating robust supply chains and integrated business systems, we strive for continuous improvement to come up with more efficient and cost-effective outcomes for our customers.
 
 Our people have a wealth of experience in the fluid power industry, and are equipped with a diverse range of skills to provide optimal solutions to our customers. Our strong safety and training focus works in parallel with creativity, innovation and hard work to ensure customer expectations are met every time.
-
 ## Capabilities
 
 Full hydraulic and process system design capability from concept selection through to on-site installation, commissioning and aftermarket support services Hydraulics Process pumping and filtration Chemical injection Gas controls On and off site Service support including Asset Inspection & Maintenance, Repairs, Flushing & Oil Polishing to AS4059, Hydrostatic Pressure Testing to NATA Full project delivery capability for both engineered systems and on-site construction scopes, including non-welded and welded piping infrastructure
@@ -131,12 +131,11 @@ Hose manufacturing
 NATA pressure testing
 
 Onsite audits
-
 ## Discriminators
 
 Australian owned (including Parent and Sister Companies)
 
-Parent Company is Questas Group – the largest group of hydraulic services in Australia with over $450M in annual revenue and 950+ active employees Australia-wide
+Parent Company is Questas Group - the largest group of hydraulic services in Australia with over $450M in annual revenue and 950+ active employees Australia-wide
 
 25+ full time Engineering staff
 

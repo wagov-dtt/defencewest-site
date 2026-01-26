@@ -1,6 +1,7 @@
 ---
 name: Meneghello Industrial Group
-date: '2024-01-01'
+date: '2025-01-27'
+overview: Meneghello Industrial Group is an integrated, multi-disciplinary Steel Industry service supplier. We provide galvanizing, abrasive blasting, industrial painting, rubber lining, and custom bolts.
 website: https://www.meneghello.com
 contact_name: Dale Drazevich
 contact_title: Chief Sales Officer
@@ -37,7 +38,6 @@ longitude: 115.8431809
 ## Overview
 
 Meneghello Industrial Group is an integrated, multi-disciplinary collection of companies specialising in steel. We provide galvanizing, abrasive blasting, industrial painting, rubber lining, custom bolt making and support fabrication services. We work with a variety of clients in the industrial, mining, oil & gas, infrastructure, marine and civil sectors. Since 1971 we have serviced the Western Australian market providing quality and express services to all industries. We are ISO quality accredited, have the
-
 ## Capabilities
 
 4 workshops in the Perth metro area
@@ -55,14 +55,13 @@ Logistic comprising of 6 prime movers and trailers
 New $40m Galvanizing plant under construction in Kwinana due to be operational in Dec 2026
 
 Supplied industrial coating to steel fabrication companies for numerous defence projects over the 50 of operation
-
 ## Discriminators
 
 Express option on all our services including overnight turnaround
 
 24 hour service
 
-AS/NZS 5131 – CC3 certified for all your traceability requirements
+AS/NZS 5131 - CC3 certified for all your traceability requirements
 
 ISO 9001 & 45001 accreditation
 

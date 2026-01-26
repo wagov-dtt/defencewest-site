@@ -1,6 +1,7 @@
 ---
 name: Vection Technologies
-date: '2024-01-01'
+date: '2025-01-27'
+overview: Vection Australia Pty Ltd (Vection) is a company wholly owned and controlled by Vection Technologies Ltd, a company listed on the ASX (Australian Securities Exchange) with headquarters in Perth (WA) and global presence in Asia Pacific, Europe, Middle East and Africa (EMEA) and the US, and can boast collaborations and partnerships with some of the most important players on the world market. We specialise in creating solutions with 3D technologies, with a personalised approach to developing software and platforms such as virtual reality experiences, augmented reality tools, real-time 3D configurators and rendered images and videos. Attention to detail, clean and elegant visual impact, easy of use and effectiveness are some of the strengths on which we carry out each project. We proudly work for well-known national and international brands, in many industrial sectors.
 website: https://vection-technologies.com
 contact_name: Neil Armstrong
 contact_title: Senior Business Development Manager
@@ -18,8 +19,11 @@ longitude: 115.8186476
 
 ## Overview
 
-Vection Australia Pty Ltd (Vection) is a company wholly owned and controlled by Vection Technologies Ltd, a company listed on the ASX (Australian Securities Exchange) with headquarters in Perth (WA) and global presence in Asia Paciﬁc, Europe, Middle East and Africa (EMEA) and the US, and can boast collaborations and partnerships with some of the most important players on the world market. We specialise in creating solutions with 3D technologies, with a personalised approach to developing software and platforms such as virtual reality experiences, augmented reality tools, real-time 3D conﬁgurators and rendered images and videos. Attention to detail, clean and elegant visual impact, easy of use and effectiveness are some of the strengths on which we carry out each project. We proudly work for well-known national and international brands, in many industrial sectors. This means that our solutions are suitable for any company, no matter what size or industry sector they operate in.
-
+|  |
+| --- |
+| Vection Australia Pty Ltd (Vection) is a company wholly owned and controlled by Vection Technologies Ltd, a company listed on the ASX (Australian Securities Exchange) with headquarters in Perth (WA) and global presence in Asia Pacific, Europe, Middle East and Africa (EMEA) and the US, and can boast collaborations and partnerships with some of the most important players on the world market. We specialise in creating solutions with 3D technologies, with a personalised approach to developing software and platforms such as virtual reality experiences, augmented reality tools, real-time 3D configurators and rendered images and videos. Attention to detail, clean and elegant visual impact, easy of use and effectiveness are some of the strengths on which we carry out each project. We proudly work for well-known national and international brands, in many industrial sectors. This means that our solutions are suitable for any company, no matter what size or industry sector they operate in. |
 ## Capabilities
 
-MISSION - Employing best-in-class INTEGRATEDXR™ technologies we redesign companies' processes to make innovation real. Side-by-side with our partners, we focus on a complete integration between XR technologies, systems and day-to-day operations. VISION - We believe that INTEGRATEDXR™ (Extended Reality) technologies will be fundamental for the future of the world and mankind. We work every day driven by the desire to innovate and with the ambition to develop and combine the best technologies with excellent design, usability and sustainability. We are the benchmark for companies that aim to create value through Extended Reality all over the world.
+|  |
+| --- |
+| MISSION - Employing best-in-class INTEGRATEDXR(tm) technologies we redesign companies' processes to make innovation real. Side-by-side with our partners, we focus on a complete integration between XR technologies, systems and day-to-day operations. VISION - We believe that INTEGRATEDXR(tm) (Extended Reality) technologies will be fundamental for the future of the world and mankind. We work every day driven by the desire to innovate and with the ambition to develop and combine the best technologies with excellent design, usability and sustainability. We are the benchmark for companies that aim to create value through Extended Reality all over the world. |

@@ -9,15 +9,7 @@
 {{- $taxonomyName := .Data.Plural -}}
 {{- $taxonomyMap := index $taxonomies $taxonomyName -}}
 {{- $totalCompanies := len (where .Site.RegularPages "Section" "company") -}}
-
-{{/* Display name mapping for taxonomy titles */}}
-{{- $taxonomyTitles := dict 
-  "capability_streams" "Capability Streams"
-  "capability_domains" "Capability Domains"
-  "industrial_capabilities" "Industrial Capabilities"
-  "regions" "Regions"
-  "stakeholders" "Stakeholders"
--}}
+{{- $taxonomyTitles := .Site.Params.taxonomyTitles -}}
 {{- $displayTitle := index $taxonomyTitles $taxonomyName | default .Title -}}
 
 {{/* Icon path mapping for taxonomies that have icons */}}
@@ -43,7 +35,7 @@
 
 <div class="grid-auto" style="--grid-min: 200px;">
   {{- range .Data.Terms.ByCount }}
-    {{- $slug := .Page.RelPermalink | replaceRE "^/[^/]+/" "" | replaceRE "/$" "" -}}
+    {{- $slug := .Page.Data.Term -}}
     {{- $displayName := index $taxonomyMap $slug | default .Name -}}
     {{/* Check for icon (capability_streams, ownerships) */}}
     {{- $hasIcon := false -}}
@@ -58,11 +50,11 @@
     {{/* Check for static term map image */}}
     {{- $hasTermMap := false -}}
     {{- $termMapUrl := "" -}}
-    {{- $termMapFile := printf "static/maps/terms/%s-%s.png" $taxonomyName $slug -}}
-    {{- if fileExists $termMapFile -}}
-      {{- $hasTermMap = true -}}
-      {{- $termMapUrl = printf "maps/terms/%s-%s.png" $taxonomyName $slug | relURL -}}
-    {{- end -}}
+     {{- $termMapFile := printf "static/maps/terms/%s-%s.png" $taxonomyName $slug -}}
+     {{- if fileExists $termMapFile -}}
+       {{- $hasTermMap = true -}}
+       {{- $termMapUrl = printf "maps/terms/%s-%s.png" $taxonomyName $slug | relURL -}}
+     {{- end -}}
   <article class="taxonomy-card">
     <a href="{{ .Page.RelPermalink }}">
       {{- if $hasIcon }}

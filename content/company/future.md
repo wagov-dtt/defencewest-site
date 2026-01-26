@@ -1,6 +1,7 @@
 ---
 name: Future Engineering
-date: '2024-01-01'
+date: '2025-01-27'
+overview: Future Engineering specialises in the end-to- end project management and manufacture of precision components and the assembly of designs using a range of materials from plastics through to high-strength alloys.
 website: https://futureeng.com.au
 contact_name: Joanne Ardizzone
 contact_title: Business Development - Defence
@@ -43,7 +44,6 @@ longitude: 115.9713437
 ## Overview
 
 Future Engineering specialises in the end-to- end project management and manufacture of precision components and the assembly of designs using a range of materials from plastics through to high-strength alloys. We provide a complete solution for the design, fabrication, surface treatment, testing and repair of equipment using a range of advanced technologies including - five-axis computer numerically controlled machines; turning, welding and milling machines; and 3D printers. We also regenerate equipment and provide certified repair data and parts for equipment that is obsolete or difficult-to-maintain. Key projects include making tooling, gearbox and transmission components, fixtures, cylinders and housings, and conducting valve repairs.
-
 ## Capabilities
 
 Our key discriminator is offering prime contractors the potential to reliably maximise margins and minimise risk while protecting and building reputation. This stems from our unique mix of flexibility, breadth and technical capability within a small organisational structure that provides whole-of-life support at highly competitive pricing due to low overheads. Our expertise protects and builds the reputations of our customers and enhance government relationships while enabling the maximisation of Australian Industry Capability in Defence work.

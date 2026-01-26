@@ -9,24 +9,8 @@
 {{- $termKey := .Data.Term -}}
 {{- $taxonomyMap := index $taxonomies $taxonomyName -}}
 {{- $displayName := index $taxonomyMap $termKey | default $termKey -}}
-
-{{/* Display name mapping for taxonomy titles */}}
-{{- $taxonomyTitles := dict 
-  "capability_streams" "Capability Streams"
-  "capability_domains" "Capability Domains"
-  "industrial_capabilities" "Industrial Capabilities"
-  "regions" "Regions"
-  "stakeholders" "Stakeholders"
--}}
+{{- $taxonomyTitles := .Site.Params.taxonomyTitles -}}
 {{- $taxonomyTitle := index $taxonomyTitles $taxonomyName | default ($taxonomyName | humanize | title) -}}
-
-{{/* Map taxonomy name to filter prefix */}}
-{{- $filterPrefix := "" -}}
-{{- if eq $taxonomyName "stakeholders" }}{{ $filterPrefix = "stake" }}{{ end -}}
-{{- if eq $taxonomyName "capability_streams" }}{{ $filterPrefix = "stream" }}{{ end -}}
-{{- if eq $taxonomyName "capability_domains" }}{{ $filterPrefix = "domain" }}{{ end -}}
-{{- if eq $taxonomyName "industrial_capabilities" }}{{ $filterPrefix = "ind" }}{{ end -}}
-{{- if eq $taxonomyName "regions" }}{{ $filterPrefix = "region" }}{{ end -}}
 
 <nav aria-label="breadcrumb">
   <ul>
@@ -40,9 +24,7 @@
   <h1>{{ $displayName }}</h1>
   <p>
     {{ len .Pages }} {{ if eq (len .Pages) 1 }}company{{ else }}companies{{ end }}
-    {{- if $filterPrefix }}
-    · <a href="{{ printf "/?f=%s:%s" $filterPrefix $termKey | relURL }}">View with filters</a>
-    {{- end }}
+    · <a href="{{ printf "/?f=%s:%s" $taxonomyName $termKey | relURL }}">View with filters</a>
   </p>
 </hgroup>
 
@@ -64,7 +46,7 @@
   {{/* Map column */}}
   <div class="col-6 col-m-12 col-s-12">
     <div class="taxonomy-map">
-      <iframe src="{{ printf "map/?f=%s:%s" $filterPrefix $termKey | relURL }}" title="Map of {{ $displayName }} companies"></iframe>
+      <iframe src="{{ printf "map/?f=%s:%s" $taxonomyName $termKey | relURL }}" title="Map of {{ $displayName }} companies"></iframe>
     </div>
   </div>
 </div>

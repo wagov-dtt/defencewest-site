@@ -3,6 +3,23 @@ stakeholders:
   defence: Defence Industry
   defence-science: Defence Science Centre
   defence-west: Defence West
+capability_streams:
+  aasl: AASL - Air and Sea Lift
+  aerial: Aerial; Strike and Air Combat
+  base: Base Support
+  education: Education and Training
+  electronic: Electronic Warfare and Cyber
+  iscw: ISCW - Intelligence, Surveillance, Reconnaissance, Space, Electronic Warfare and Cyber
+  intelligence: Intelligence; Surveillance and Reconnaissance
+  keyn: KEYN - Key Enablers
+  lcaw: LCAW - Land Combat and Amphibious Warfare
+  land: Land Forces
+  logistics: Logistics and Supply Chain
+  masw: MASW - Maritime and Anti-Submarine Warfare
+  maritime: Maritime and Sub-Sea Forces
+  research: Research and Technology Development
+  saac: SAAC - Strike and Air Combat
+  space: Space
 capability_domains:
   ai: AI & Autonomy
   air: Air Bases
@@ -89,23 +106,6 @@ regions:
   south: South Regional WA
   south-west: South West
   wheatbelt: Wheatbelt
-capability_streams:
-  aasl: AASL - Air and Sea Lift
-  aerial: Aerial; Strike and Air Combat
-  base: Base Support
-  education: Education and Training
-  electronic: Electronic Warfare and Cyber
-  iscw: ISCW - Intelligence, Surveillance, Reconnaissance, Space, Electronic Warfare and Cyber
-  intelligence: Intelligence; Surveillance and Reconnaissance
-  keyn: KEYN - Key Enablers
-  lcaw: LCAW - Land Combat and Amphibious Warfare
-  land: Land Forces
-  logistics: Logistics and Supply Chain
-  masw: MASW - Maritime and Anti-Submarine Warfare
-  maritime: Maritime and Sub-Sea Forces
-  research: Research and Technology Development
-  saac: SAAC - Strike and Air Combat
-  space: Space
 ownerships:
   indigenous: Indigenous Owned
   veteran: Veteran Owned

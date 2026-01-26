@@ -18,8 +18,6 @@ email: genius@acme.com
 # Classification flags
 is_sme: true
 is_prime: false
-is_indigenous_owned: false
-is_veteran_owned: false
 
 # Taxonomies - use keys from data/taxonomies.yaml
 stakeholders:
@@ -42,6 +40,10 @@ industrial_capabilities:
 
 regions:
   - perth
+
+ownerships:
+  - indigenous
+  - veteran
 
 # Location (for map) - use Google Maps to find coordinates
 latitude: -31.9505

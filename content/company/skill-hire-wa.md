@@ -1,6 +1,7 @@
 ---
 name: Skill Hire WA PTY LTD
-date: '2024-01-01'
+date: '2025-01-27'
+overview: Workforce training and employment solutions in construction and defence industries
 website: https://skillhire.com.au
 contact_name: Ben Dahlstrom
 contact_title: CEO
@@ -43,7 +44,6 @@ longitude: 115.9973805
 ## Overview
 
 Skill Hire is Western Australia's leading trainer and employer of engineers and electricians and has provided its services for many of the state's leading defence contractors. This ranges from securing a talent pathway beginning in schools and culminating in labour hire, apprentice employment and / or accredited training.
-
 ## Capabilities
 
 Track record of servicing clients in WA's defence industry

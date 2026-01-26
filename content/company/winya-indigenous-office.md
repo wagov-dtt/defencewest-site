@@ -1,6 +1,7 @@
 ---
 name: Winya Indigenous Office Furniture Pty Ltd
-date: '2024-01-01'
+date: '2025-01-27'
+overview: WINYA is a majority Indigenous owned and controlled business and is the only company in Australia awarded by the UNITED NATIONS for Leadership in Sustainable Development Goals (SDG).
 website: https://www.winya.com.au
 contact_name: Ben Jacka
 contact_title: General Manager
@@ -8,7 +9,6 @@ address: 41 St Georges Terrace, Perth WA 6000
 phone: '1300184799'
 email: Info@winya.com.au
 is_sme: true
-is_indigenous_owned: true
 stakeholders:
 - defence
 - academic
@@ -35,6 +35,8 @@ regions:
 - pilbara
 - south-west
 - wheatbelt
+ownerships:
+- indigenous
 latitude: -31.95591
 longitude: 115.85925
 ---
@@ -50,7 +52,6 @@ WINYA supplies large scale fit outs and furniture to the ATO, Department of Defe
 WINYA is a big supporter of artists and has one of the largest catalogues of Indigenous artists. WINYA's growing **House Artists Program** aims to feature an artist from every language group, who are paid above industry standard and a fabrication fee for their works.
 
 WINYA maximises its **procurement outreach programs** with timbers from remote communities, robust sustainability and circular economy programs and has created programs in Prisons to train Indigenous inmates to reduce recidivism & build better communities.
-
 ## Capabilities
 
 AUSTRALIA'S LEADING INDIGENOUS FURNISHER
@@ -65,7 +66,6 @@ Custom make furniture on request.
 High Security Installations
 Provide full installation and fit-out services through our partnering with Supply Nation members
 and Indigenous owned fit-out companies
-
 ## Discriminators
 
 DISCRIMINATORS

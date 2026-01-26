@@ -1,6 +1,7 @@
 ---
 name: Multiplan
-date: '2024-01-01'
+date: '2025-01-27'
+overview: Our aim at Multiplan is to be seen as the solution, stopping potential issues in their track, all while adding constructability insights, production intelligence and skilled resourcing along the way.
 website: https://www.multiplan.com.au
 contact_name: Kane Nitschke
 contact_title: Managing Director
@@ -45,12 +46,11 @@ We are based in Perth, Western Australia,
 Over the years we have built a world-class team of tech-savvy construction modelling and steel detailing experts who ensure Multiplan can take on any project, no matter what the size or location.
 
 We are a values-driven organisation, but our values are more than just words.
-
 ## Capabilities
 
 Our aim at Multiplan is to be seen as the solution, stopping potential issues in their track, all while adding constructability insights, production intelligence and skilled resourcing along the way.
 
-Our Direct Client Engagement (DCE™) model is the next evolution of the project client - detailer relationship and, our Direct Fabricator Engagement (DFE™) model has always been a traditional part of our industry.
+Our Direct Client Engagement (DCE(tm)) model is the next evolution of the project client - detailer relationship and, our Direct Fabricator Engagement (DFE(tm)) model has always been a traditional part of our industry.
 
 Expertise
 

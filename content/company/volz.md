@@ -1,6 +1,7 @@
 ---
 name: Volz Australia Pty Ltd
-date: '2024-01-01'
+date: '2025-01-27'
+overview: Volz Australia was founded in 2005 with a vision to provide Superior Stainless Steel Hydraulic Components by combining quality products with decades of experience & expertise & incorporating outstanding customer service at the forefront of everything we do.
 website: https://www.volz.com.au
 contact_name: Rhys Jones
 contact_title: WA Sales & Product Manager
@@ -48,7 +49,7 @@ longitude: 115.8119605
 
 Volz Australia was founded in 2005 with a vision to provide Superior Stainless Steel Hydraulic Components by combining quality products with decades of experience & expertise & incorporating outstanding customer service at the forefront of everything we do.
 
-Our knowledge & experience allow us to understand our clients & their expectations. From the initial inquiry to the successful completion of the project we take pride in our _People_ , our _Products_ & our _Performance_.
+Our knowledge & experience allow us to understand our clients & their expectations. From the initial inquiry to the successful completion of the project we take pride in our *People*, our *Products* & our *Performance*.
 
 Excellence in Quality, Safety & Environmental Management is driven by the leadership qualities of all Volz Australia employees, allowing us to bring to the market the best products & service across a wide range of industries & applications.
 
@@ -57,14 +58,13 @@ As a proud member of the Volz Group based in Germany, our core business is 316Ti
 Our range of products now extends beyond the 316Ti components ranging from high performance valving to certified clamping technology and much more.
 
 We welcome you to the Volz Australia Community, Our People, Our Products and Our Performance. We look forward to hearing from you.
-
 ## Capabilities
 
 A proud member of the Volz Group based in Germany; our core business is 316Ti Stainless Steel components made to exacting international standards.
 
 EN10204/3.1 material traceability is available for all products. With stocks in NSW, WA & QLD, supported by warehouses in Singapore & Germany, Volz are able to service your needs locally & globally.
 
-**DISCRIMINATORS**
+- DISCRIMINATORS**
 
 316Ti - Titanium Stainless Steel and specialist production
 
@@ -80,7 +80,7 @@ Global support & supply network
 
 Experienced Senior Management Team
 
-**PRODUCTS**
+- PRODUCTS**
 
 Threaded adaptors, tees & elbows, Hose fittings compatible with various standards/brands of hose, DIN2353 metric compression fittings,
 
@@ -88,13 +88,13 @@ Clamping technology - DIN3015, Tube - Imperial & Metric, Twin ferrule tube fitti
 
 Quick release couplings - all styles, Fire suppression fittings, Lubrication fittings, SAE flanged adaptors, Tooling, Specialised production, Exotics - SAF, Monel, CuNi
 
-**KEY CUSTOMERS**
+- KEY CUSTOMERS**
 
 Total Marine Technology, MMA Offshore, ASC, Austal, QMTS, JFD Global, BAE Systems, Cooper Fluid Systems, Alfagomma Group, Pirtek Fluid Systems,
 
 Veem Engineering, Terex Jacques, Enermech, Ryco Hydraulics, Bosch Rexroth, Parker Hannifin, Enzed, Multiple Australian OEM's
 
-**QUALITY & ACCREDITATIONS**
+- QUALITY & ACCREDITATIONS**
 
 As part of our quality program, Volz currently holds certification for our products with internationally recognised bodies:
 

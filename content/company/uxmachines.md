@@ -1,6 +1,7 @@
 ---
 name: UXMachines Pty Ltd
-date: '2024-01-01'
+date: '2025-01-27'
+overview: 'UXMachines Pty Ltd commenced operations in Perth, Western Australia in 2019 with the vision to build innovative high-quality IT software products, autonomous aerial drones, and data science solutions. '
 website: https://uxmachines.com
 contact_name: Dr. Artur Lugmayr
 contact_title: Director
@@ -37,7 +38,6 @@ UXMachines Pty Ltd commenced operations in Perth, Western Australia in 2019 with
 Our team has worked successfully on numerous large-scale projects as part of past activities, with leading European and Australian partners. Our mission is to develop human centred software solutions to enable human-AI-teaming, unmanned autonomous aerial vehicles, data visualisation, image processing, and data science.
 
 Human factors and reducing cognitive workload are our design philosophy in designing complex technology systems. We provide flexible and efficient project leadership through our core values of human centred designs, teamwork, innovative out-of-the-box thinking, and commitment to exceed our client expectations.
-
 ## Capabilities
 
 UXMachines Pty Ltd aims to be recognised as a high performing, commercially disciplined contractor for services making use of emerging technologies as AI/ML, unmanned aerial vehicles and aerial robotics, 3D/VR/AR, image processing, computer vision, and data science.

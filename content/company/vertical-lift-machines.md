@@ -1,6 +1,7 @@
 ---
 name: Vertical Lift Machines
-date: '2024-01-01'
+date: '2025-01-27'
+overview: Exclusive distributor of Dalmec manipulators in Australia and New Zealand, delivering precision pneumatic lifting systems that improve safety, efficiency and capability across defence and industry.
 website: https://vertistore.com.au
 contact_name: John Peinke
 contact_title: Managing Director
@@ -64,8 +65,7 @@ Dalmec manipulators provide near weightless, highly controlled movement of compo
 
 Across Australia and New Zealand, Dalmec has more than 650 installed systems, many of which have been operating reliably for close to 30 years. This long service life demonstrates the strength of the design and the value it provides to organisations that require safe and dependable handling solutions.
 
-VLM is committed to supporting the growth of Australia’s sovereign industrial capability. By providing technology that protects workers, enhances precision and strengthens operational performance, we aim to contribute meaningfully to the defence manufacturing, maintenance and sustainment sectors across Western Australia and beyond.
-
+VLM is committed to supporting the growth of Australia's sovereign industrial capability. By providing technology that protects workers, enhances precision and strengthens operational performance, we aim to contribute meaningfully to the defence manufacturing, maintenance and sustainment sectors across Western Australia and beyond.
 ## Capabilities
 
 Vertical Lift Machines (VLM) provides advanced pneumatic lifting and handling systems that improve safety, precision and workflow efficiency across defence manufacturing, maintenance and sustainment activities. Our capabilities support environments where accuracy, repeatability and workforce protection are essential.
@@ -74,21 +74,20 @@ Our Dalmec manipulators enable operators to move, position and assemble componen
 
 VLM offers full life cycle capability including requirement assessment, custom engineering, installation, commissioning, operator training and ongoing technical support. Our Perth based team provides fast response times and direct access to decision makers.
 
-We have recently applied these capabilities within the defence industry by supplying manipulators to support **Army Aviation’s introduction of the new Apache helicopter program**. The systems allow maintenance personnel to safely handle key components and assemblies with consistent precision, reducing physical strain and improving workflow reliability. This example demonstrates how pneumatic manipulators can directly support defence readiness by protecting the workforce and improving operational efficiency.
+We have recently applied these capabilities within the defence industry by supplying manipulators to support **Army Aviation's introduction of the new Apache helicopter program**. The systems allow maintenance personnel to safely handle key components and assemblies with consistent precision, reducing physical strain and improving workflow reliability. This example demonstrates how pneumatic manipulators can directly support defence readiness by protecting the workforce and improving operational efficiency.
 
-VLM is committed to supporting Australia’s sovereign industrial capability through safe, reliable and precise material handling solutions tailored to defence environments.
-
+VLM is committed to supporting Australia's sovereign industrial capability through safe, reliable and precise material handling solutions tailored to defence environments.
 ## Discriminators
 
-- Exclusive Australasian distributor of **Dalmec Industrial Manipulators** , a global leader with over 60,000 systems installed worldwide.
-  * Proven reliability with more than **650 Dalmec manipulators operating in Australia and New Zealand** , many in service for close to 30 years.
-  * Fully pneumatic systems with **no electronics, motors or hydraulics** , reducing maintenance requirements and ensuring dependable performance in demanding defence environments.
-  * **Near weightless, precision handling** ideal for assembly tasks requiring small tolerances, controlled movement and repeatable positioning.
-  * Registered **Australian defence supplier** with an active role supporting Army Aviation through the new Apache helicopter program.
-  * Strong focus on operator safety and WHS compliance, reducing manual handling risks and improving workforce sustainability.
-  * Ability to **custom engineer manipulators** to suit specific defence components, tooling, assemblies and environmental conditions.
-  * Local WA presence with responsive **on site support, installation, operator training and maintenance capability**.
-  * Long standing partnership with **Dalmec Italy** , providing access to world class engineering, design expertise and global defence experience.
-  * Trusted by major organisations across ANZ including **BHP, BlueScope, ABB, Coca Cola and Amcor** , demonstrating cross industry reliability and capability.
-  * Member of industry bodies including **AIDN** , and **Henderson Alliance** supporting collaboration and the growth of sovereign industrial capability.
-  * Compact SME structure that allows **fast response times, flexible engagement and direct access to decision makers**.
+- Exclusive Australasian distributor of **Dalmec Industrial Manipulators**, a global leader with over 60,000 systems installed worldwide.
+- Proven reliability with more than **650 Dalmec manipulators operating in Australia and New Zealand**, many in service for close to 30 years.
+- Fully pneumatic systems with **no electronics, motors or hydraulics**, reducing maintenance requirements and ensuring dependable performance in demanding defence environments.
+- **Near weightless, precision handling** ideal for assembly tasks requiring small tolerances, controlled movement and repeatable positioning.
+- Registered **Australian defence supplier** with an active role supporting Army Aviation through the new Apache helicopter program.
+- Strong focus on operator safety and WHS compliance, reducing manual handling risks and improving workforce sustainability.
+- Ability to **custom engineer manipulators** to suit specific defence components, tooling, assemblies and environmental conditions.
+- Local WA presence with responsive **on site support, installation, operator training and maintenance capability**.
+- Long standing partnership with **Dalmec Italy**, providing access to world class engineering, design expertise and global defence experience.
+- Trusted by major organisations across ANZ including **BHP, BlueScope, ABB, Coca Cola and Amcor**, demonstrating cross industry reliability and capability.
+- Member of industry bodies including **AIDN**, and **Henderson Alliance** supporting collaboration and the growth of sovereign industrial capability.
+- Compact SME structure that allows **fast response times, flexible engagement and direct access to decision makers**.

@@ -1,6 +1,7 @@
 ---
 name: DCL Contracting
-date: '2024-01-01'
+date: '2025-01-27'
+overview: Established in 2014, DCL is a highly capable concrete fabrication firm able to support Defence industry though the delivery of complex construction and maintenance solutions.
 website: https://dclcontracting.com.au
 contact_name: Shane Drew
 contact_title: Business Development Manager
@@ -28,7 +29,6 @@ longitude: 115.92832
 ## Overview
 
 DCL is a specialist concrete, form-working and civil construction company undertaking a diversified range of construction and maintenance projects across the state. With over 70 staff we are well positioned to undertake short notice work, and our fleet of construction plant and equipment provides us with the flexibility and agility necessary to meet our clients' requirements in a prompt and cost-efficient manner. We provide plant and labour hire and undertake work on a contract or day rate basis.
-
 ## Capabilities
 
 DCL specialises in high quality construction work with a focus on concrete and formwork construction and maintenance. The company is ISO Certified and accredited in ISO 14001, 9001 and 45001 management systems ensuring that our services are expertly and efficiently delivered at all times.

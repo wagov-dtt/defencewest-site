@@ -1,6 +1,7 @@
 ---
 name: Murdoch University
-date: '2024-01-01'
+date: '2025-01-27'
+overview: Murdoch University has, from its foundation in 1974, been a university of difference. Established as the second university in WA, Murdoch has always been associated building a brighter future.
 website: https://www.murdoch.edu.au
 contact_name: Alasdair Macdonald
 contact_title: Director Research and Innovation
@@ -30,7 +31,6 @@ longitude: 115.8161804
 Murdoch University is focused on changing lives and society for the better through accessible education and research, contributing to the solution of societal and environmental challenges and providing an inclusive, caring community in which everyone can realise their potential.
 
 We have a range of research capabilities that are translational in nature. Focus is provided through local industry-linked partnerships, as well as international collaborations that address unique national and global challenges. Our major research themes are focused on Health Futures, Food Security and Sustainable Development that address global, national and local priorities. Murdoch has a wide range of defence related research expertise across a range of disciplines including strategic policy through the Asia-Pacific Centre, human physical and cognitive performance, engineering and IT applications, to biosecurity and application of One Health principles. We place high value on long-term partnerships and seek collaborations with communities, industries and government in achieving long-term goals.
-
 ## Capabilities
 
 Murdoch University hosts the Australian National Phenome Centre, a global leader in metabolic phenotyping. This centre investigates the interactions between an individual's genome and environment, providing precise analyses of functional status. These findings are applied to precision nutrition, medicine, and therapeutic interventions, particularly in Defence, with a focus on medical countermeasures and human performance.

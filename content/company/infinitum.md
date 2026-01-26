@@ -1,7 +1,8 @@
 ---
 name: Infinitum Technologies
-date: '2024-01-01'
-website: https://infinitum.net.au
+date: '2025-01-27'
+overview: Providing certified and secure ICT solutions to critical infrastructure and business nation wide.
+website: https://www.infinitum.net.au
 contact_name: Lachlan Britt
 contact_title: CEO
 address: 152 St Georges Terrace, Perth WA 6000
@@ -44,7 +45,6 @@ Infinitum Technologies has two locations:
 
 13 Bradford Street, Geraldton WA 6530 and
 152 St Georges Terrace, Perth WA 6000
-
 ## Capabilities
 
 Providing certified and secure ICT solutions to critical infrastructure and business nation wide.
