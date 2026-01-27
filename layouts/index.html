@@ -51,21 +51,9 @@ $companies | append $company -}} {{- end -}} {{- end -}} {{- $companies = sort $
     {{ partial "icon.html" (dict "name" "filter" "size" 18) }}
     Filters
   </button>
-  
-  <!-- Filters Sidebar -->
-  <aside class="col-3 col-m-4 col-s-12 filters-sidebar" id="filters-sidebar">
-    <button type="button" class="mobile-filter-close" aria-label="Close filters">
-      {{ partial "icon.html" (dict "name" "x" "size" 24) }}
-    </button>
-    {{ partial "filters.html" (dict "companies" $companies "taxonomies"
-    $taxonomies "site" .Site) }}
-  </aside>
-  
-  <!-- Mobile filter backdrop -->
-  <div class="mobile-filter-backdrop"></div>
 
-  <!-- Main Content -->
-  <section class="col-9 col-m-8 col-s-12">
+  <!-- Main Content (first in DOM for better tab order: search → results) -->
+  <section class="col-9 col-m-8 col-s-12 directory-results">
     <!-- Cards Grid -->
     <div class="grid-auto" id="company-grid">
       {{- range $companies }} {{ partial "company-card.html" (dict "company" .
@@ -78,6 +66,19 @@ $companies | append $company -}} {{- end -}} {{- end -}} {{- $companies = sort $
     <!-- No results message -->
     <p class="no-results">No companies match your filters.</p>
   </section>
+  
+  <!-- Filters Sidebar (after results in DOM, positioned left via CSS) -->
+  <aside class="col-3 col-m-4 col-s-12 filters-sidebar" id="filters-sidebar">
+    <button type="button" class="mobile-filter-close" aria-label="Close filters">
+      {{ partial "icon.html" (dict "name" "x" "size" 24) }}
+    </button>
+    {{ partial "filters.html" (dict "companies" $companies "taxonomies"
+    $taxonomies "site" .Site) }}
+  </aside>
+  
+  <!-- Mobile filter backdrop -->
+  <div class="mobile-filter-backdrop"></div>
+</div>
 </div>
 
 <noscript>

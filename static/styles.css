@@ -98,6 +98,12 @@ nav .logo {
   display: flex;
   flex-direction: column;
   background: var(--pico-card-background-color);
+  order: -1;  /* Display before results (which come first in DOM for tab order) */
+}
+
+/* Results section - comes first in DOM for keyboard nav, displayed after sidebar */
+.directory-results {
+  order: 0;
 }
 
 .filters {
