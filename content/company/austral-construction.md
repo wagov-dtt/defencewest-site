@@ -2,7 +2,7 @@
 name: Austral Construction
 date: '2025-01-27'
 overview: Austral Construction is a specialist engineering and construction contractor providing civil, marine, rail, piling and ground retention services to the infrastructure, resource and defence sectors
-website: https://australconstruction.com.au
+website: https://www.australconstruction.com.au
 contact_name: Nicholas Hewitt
 contact_title: National Business Development & Tendering Manager
 address: L11, 200 St Georges Terrace, Perth WA 6000

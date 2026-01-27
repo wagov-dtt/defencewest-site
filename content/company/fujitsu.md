@@ -2,7 +2,7 @@
 name: Fujitsu Australia Limited
 date: '2025-01-27'
 overview: Fujitsu Australia provides a broad range of ICT services and solutions to the Department of Defence in many locations across Australia and overseas.
-website: https://www.fujitsu.com
+website: https://global.fujitsu/en-global
 contact_name: Ron Costanzo
 contact_title: WA State Manager
 address: Level 9, Exchange Tower, 2 The Esplanade, Perth WA 6000

@@ -2,7 +2,7 @@
 name: Industry OneCARD
 date: '2025-01-27'
 overview: Industry OneCARD(tm) provides small and medium enterprises (SME), a range of customised solution for workforce compliance.
-website: https://www.industryonecard.com
+website: https://www.onecardgroup.com
 contact_name: Kareena Waters
 contact_title: Managing Director
 address: 5 Tully Road, Perth WA 6004

@@ -4,7 +4,7 @@ date: '2025-01-27'
 overview: 'Protective Cases produces in-house design and the manufacture of cases and foam inserts, and also prototype to large scale production.
 
   '
-website: https://www.protectivecases.com.au
+website: https://protectivecases.com.au
 contact_name: Greg Kippin
 contact_title: Technical Director
 address: Unit 3, 15 May Holman Drive, Bassendean WA 6054
