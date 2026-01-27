@@ -15,7 +15,12 @@ $companies | append $company -}} {{- end -}} {{- end -}} {{- $companies = sort $
           <span class="filter-count">0</span> filters ✕
         </button>
       </li>
-      <li><span class="visible-count">{{ len $companies }}</span> of {{ len $companies }}</li>
+      <li>
+        {{/* aria-live announces count changes to screen readers */}}
+        <output id="results-status" aria-live="polite" aria-atomic="true">
+          <span class="visible-count">{{ len $companies }}</span> of {{ len $companies }}
+        </output>
+      </li>
     </ul>
   </nav>
   <div class="col-4 col-m-6 col-s-12">
@@ -324,17 +329,24 @@ $companies | append $company -}} {{- end -}} {{- end -}} {{- $companies = sort $
 
     window.addEventListener("popstate", () => { syncFromURL(); updateCards(); updateMap(); });
 
-    // === Mobile Filter Toggle ===
+    // === Mobile Filter Toggle (with focus trap for a11y) ===
     const filterToggle = $(".mobile-filter-toggle");
     const filterSidebar = $(".filters-sidebar");
     const filterBackdrop = $(".mobile-filter-backdrop");
     const filterClose = $(".mobile-filter-close");
+    let previousActiveElement = null;
 
     function openFilters() {
+      previousActiveElement = document.activeElement;
       filterSidebar?.classList.add("open");
       filterBackdrop?.classList.add("open");
       filterToggle?.setAttribute("aria-expanded", "true");
       document.body.style.overflow = "hidden";
+      // Focus first focusable element in sidebar
+      const firstFocusable = filterSidebar?.querySelector(
+        'input, button, [tabindex]:not([tabindex="-1"])'
+      );
+      firstFocusable?.focus();
     }
 
     function closeFilters() {
@@ -342,11 +354,31 @@ $companies | append $company -}} {{- end -}} {{- end -}} {{- $companies = sort $
       filterBackdrop?.classList.remove("open");
       filterToggle?.setAttribute("aria-expanded", "false");
       document.body.style.overflow = "";
+      // Return focus to toggle button
+      previousActiveElement?.focus();
     }
 
     filterToggle?.addEventListener("click", openFilters);
     filterClose?.addEventListener("click", closeFilters);
     filterBackdrop?.addEventListener("click", closeFilters);
+
+    // Focus trap - keep Tab within sidebar when open
+    filterSidebar?.addEventListener("keydown", (e) => {
+      if (e.key !== "Tab" || !filterSidebar.classList.contains("open")) return;
+      const focusables = [...filterSidebar.querySelectorAll(
+        'input:not([type="hidden"]), button, [tabindex]:not([tabindex="-1"])'
+      )].filter(el => !el.hidden && !el.disabled);
+      if (!focusables.length) return;
+      const first = focusables[0];
+      const last = focusables[focusables.length - 1];
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      }
+    });
 
     // === Clear Filters Badge ===
     const clearFiltersBtn = $("#clear-filters");
@@ -359,9 +391,57 @@ $companies | append $company -}} {{- end -}} {{- end -}} {{- $companies = sort $
       updateOptionVisibility();
     });
 
+    // === Keyboard Shortcuts (a11y) ===
+    document.addEventListener("keydown", (e) => {
+      // '/' to focus search (like GitHub)
+      if (e.key === "/" && !e.target.matches("input, textarea, select")) {
+        e.preventDefault();
+        form.q?.focus();
+      }
+      // Escape to close mobile filter panel or clear search
+      if (e.key === "Escape") {
+        if (filterSidebar?.classList.contains("open")) {
+          closeFilters();
+        } else if (form.q?.value) {
+          form.q.value = "";
+          onFilterChange();
+        }
+      }
+    });
+
+    // === Icon Filter Keyboard Navigation (a11y) ===
+    // Make stream icons keyboard accessible with Enter/Space
+    allStreamLabels.forEach(label => {
+      const checkbox = label.querySelector('input[type="checkbox"]');
+      if (!checkbox) return;
+      // Set initial ARIA state
+      label.setAttribute("role", "checkbox");
+      label.setAttribute("aria-checked", checkbox.checked);
+      label.setAttribute("tabindex", "0");
+      checkbox.setAttribute("tabindex", "-1"); // Hide from tab order
+      // Handle keyboard activation
+      label.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          checkbox.checked = !checkbox.checked;
+          label.setAttribute("aria-checked", checkbox.checked);
+          checkbox.dispatchEvent(new Event("change", { bubbles: true }));
+        }
+      });
+      // Sync ARIA state when checkbox changes
+      checkbox.addEventListener("change", () => {
+        label.setAttribute("aria-checked", checkbox.checked);
+      });
+    });
+
     // === Init ===
     syncFromURL();
     updateCards();
+    // Sync ARIA states after URL sync
+    allStreamLabels.forEach(label => {
+      const checkbox = label.querySelector('input[type="checkbox"]');
+      if (checkbox) label.setAttribute("aria-checked", checkbox.checked);
+    });
   })();
 </script>
 

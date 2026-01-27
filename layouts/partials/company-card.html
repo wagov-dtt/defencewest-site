@@ -1,5 +1,26 @@
 {{/*
-  Company card component - used by both directory and map pages
+  COMPANY CARD COMPONENT
+  
+  Reusable card component demonstrating several patterns:
+  
+  1. Pre-computed Data: Overview text and filter data are computed at build
+     time (see scripts/preprocess.py) and stored in data/computed.yaml.
+     This avoids runtime string manipulation and enables instant filtering.
+  
+  2. Progressive Enhancement: Cards are rendered as semantic HTML with all
+     content visible. JavaScript enhances with filtering, but content is
+     accessible without JS.
+  
+  3. Data Attributes for JS: Filter data embedded in data-* attributes
+     enables client-side filtering without API calls:
+     - data-search: lowercase text for search matching
+     - data-f: pipe-separated taxonomy values for filter matching
+  
+  4. Lazy Loading: Images use loading="lazy" for performance
+  
+  5. Accessible Images: Logo images use empty alt="" (decorative) since
+     the company name is provided as text content.
+  
   Params: 
     - .company (required): company data object (frontmatter + slug)
     - .computed (required): pre-computed data from data/computed.yaml

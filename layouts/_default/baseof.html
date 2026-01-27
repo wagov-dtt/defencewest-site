@@ -1,13 +1,35 @@
+{{/*
+  BASE TEMPLATE - Semantic HTML Document Structure
+  
+  This template demonstrates key accessibility patterns:
+  
+  1. Skip Link (line 12): Allows keyboard users to bypass navigation
+     - Hidden by default, appears on focus (see .skip-link in styles.css)
+     - Links to #main-content landmark
+  
+  2. Semantic Landmarks:
+     - <main> wraps primary content (defined in child templates)
+     - <nav> in navbar.html partial
+     - <article>, <aside>, <section> used within pages
+  
+  3. Theme Support: data-theme="light" enables PicoCSS theming
+     - Can be toggled via JavaScript for dark mode
+     - System preference respected via CSS media queries
+  
+  See also: ACCESSIBILITY.md for full accessibility documentation
+*/}}
 <!doctype html>
 <html lang="en" data-theme="light">
   <head>
     {{- partial "head.html" . -}}
   </head>
   <body>
+    {{/* Skip link - appears on Tab press, allows bypassing navigation */}}
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
     {{- partial "navbar.html" . -}}
 
+    {{/* Main landmark - target of skip link, contains primary page content */}}
     <main id="main-content" class="container-fluid">
       {{- block "main" . }}{{- end }}
     </main>

@@ -1,13 +1,34 @@
-{{/* Filters partial - shared between directory and map pages
+{{/*
+  FILTERS PARTIAL - Accessible Filter Sidebar
+  
+  Demonstrates several accessibility and architecture patterns:
+  
+  1. Progressive Enhancement:
+     - Form uses method="get" - works without JavaScript (page reloads with params)
+     - JavaScript intercepts form changes for instant filtering
+     - <noscript> hides JS-only elements when JS unavailable
+  
+  2. Keyboard Accessibility:
+     - Standard checkboxes are natively keyboard accessible
+     - Icon filters (stream-icon) are enhanced with JS for keyboard support
+       (see index.html: role="checkbox", tabindex="0", keydown handler)
+     - Focus trap in mobile mode (see index.html JS)
+  
+  3. Unified Filter Parameter:
+     - All filters use single "f" parameter with "taxonomy:value" format
+     - Simplifies URL parsing and filter logic
+     - Example: ?f=regions:perth&f=capability_streams:land
+  
+  4. Hugo Native Taxonomy Counts:
+     - Uses .Site.Taxonomies for accurate counts
+     - No custom counting logic needed
+  
+  5. Semantic Structure:
+     - <form> wraps all controls
+     - <section> groups related filters with <h4> headings
+     - Labels properly associated with inputs
+  
   Expects: $companies, $taxonomies, $site (for .Site.Taxonomies)
-  
-  All filters use single param "f" with taxonomy:key format (e.g., regions:perth)
-  
-  Taxonomy structure: { key: "Full Name" }
-  Company frontmatter stores keys, not display names.
-  Icons are at /icons/streams/{key}.png and /icons/ownerships/{key}.png
-  
-  Uses Hugo's native .Site.Taxonomies for counts.
 */}}
 {{- $taxonomies := .taxonomies -}}
 {{- $site := .site -}}

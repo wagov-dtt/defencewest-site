@@ -1,0 +1,16 @@
+{
+  "name": "defencewest-site",
+  "private": true,
+  "description": "Optional a11y testing - used in CI, see ACCESSIBILITY.md for local testing",
+  "devDependencies": {
+    "pa11y-ci": "^3.1.0",
+    "puppeteer": "^24.0.0"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": ["puppeteer"],
+    "overrides": {
+      "pa11y>puppeteer": "$puppeteer",
+      "pa11y-ci>puppeteer": "$puppeteer"
+    }
+  }
+}

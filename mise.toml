@@ -29,6 +29,7 @@ depends = ["preprocess"]
 run = "hugo server -D --disableFastRender"
 
 [tasks.build]
+description = "Full build: preprocess, hugo, validate HTML, check links"
 run = ["uv sync", "mise run preprocess", "hugo --cleanDestinationDir", "mise run htmlcheck", "mise run linkcheck"]
 
 [tasks.preprocess]
@@ -50,3 +51,7 @@ run = "uv run python scripts/scrape.py --fresh"
 [tasks.scc]
 description = "Count lines of code with SCC"
 run = "scc --exclude-dir data,content --format table"
+
+[tasks.a11ycheck]
+description = "Run accessibility tests (CI only - requires pnpm install + Chromium)"
+run = "pnpm exec pa11y-ci"

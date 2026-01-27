@@ -81,6 +81,8 @@
 <body>
   <div id="map"></div>
   <p class="no-results">No companies match your filters.</p>
+  <!-- Announce selected company to screen readers (a11y) -->
+  <div id="map-status" class="visually-hidden" aria-live="polite" aria-atomic="true"></div>
 
   <!-- Pre-rendered company cards (hidden, used by JS for popups) -->
   <div id="company-cards" hidden>
@@ -158,7 +160,13 @@
     }), 'top-right');
 
     const noResults = document.querySelector(".no-results");
+    const mapStatus = document.getElementById("map-status");
     const markers = [];
+
+    // Announce selection to screen readers (a11y)
+    function announceSelection(name) {
+      if (mapStatus) mapStatus.textContent = "Selected: " + name;
+    }
 
     // Create markers
     let activePopup = null;
@@ -188,6 +196,9 @@
         if (activePopup && activePopup !== popup) activePopup.remove();
         if (!popup.isOpen()) marker.togglePopup();
         activePopup = popup;
+        // Announce to screen readers
+        const nameEl = popup.getElement()?.querySelector(".name");
+        if (nameEl) announceSelection(nameEl.textContent);
       });
 
       markers.push({ marker, data: c });
@@ -251,6 +262,11 @@
         window.history.replaceState({}, "", url);
         updateMarkers();
       }
+    });
+
+    // Handle map errors gracefully
+    map.on("error", (e) => {
+      console.error("Map error:", e);
     });
   })();
   </script>

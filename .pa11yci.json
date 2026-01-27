@@ -1,0 +1,17 @@
+{
+  "defaults": {
+    "standard": "WCAG2AA",
+    "runners": ["htmlcs"],
+    "chromeLaunchConfig": {
+      "args": ["--no-sandbox", "--disable-setuid-sandbox"]
+    },
+    "timeout": 30000,
+    "useIncognitoBrowserContext": false
+  },
+  "urls": [
+    "http://localhost:1313/",
+    "http://localhost:1313/map/",
+    "http://localhost:1313/regions/",
+    "http://localhost:1313/capability_streams/"
+  ]
+}

@@ -59,6 +59,13 @@ Requires [ImageMagick](https://imagemagick.org/) (`apt install imagemagick` or `
 
 [Hugo](https://gohugo.io), [PicoCSS](https://picocss.com), [MapLibre GL JS](https://maplibre.org). Tools: [mise](https://mise.jdx.dev), [uv](https://docs.astral.sh/uv/).
 
+## Documentation
+
+- [CONTRIBUTING.md](CONTRIBUTING.md) - How to contribute
+- [ACCESSIBILITY.md](ACCESSIBILITY.md) - Accessibility statement and testing approach
+- [AGENTS.md](AGENTS.md) - AI agent development guide
+- [docs/decisions/](docs/decisions/) - Architecture Decision Records
+
 ## Maps
 
 The map implementation uses:

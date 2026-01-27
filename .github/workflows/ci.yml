@@ -32,6 +32,31 @@ jobs:
         with:
           path: public/
 
+  a11y:
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Install mise
+        uses: jdx/mise-action@v2
+        with:
+          experimental: true
+      
+      - name: Install a11y tools and run tests
+        run: |
+          mise use pnpm@latest node@22
+          pnpm install
+          mise run setup-ci
+          Xvfb :99 -screen 0 1024x768x24 &
+          export DISPLAY=:99
+          uv sync
+          mise run preprocess
+          hugo server &
+          sleep 5
+          pnpm exec pa11y-ci
+
   deploy:
     needs: build
     if: github.ref == 'refs/heads/main'
