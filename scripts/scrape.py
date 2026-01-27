@@ -120,12 +120,12 @@ def html_to_md(html: str) -> str:
     """Convert HTML to clean markdown compatible with Hugo/Goldmark."""
     if not html:
         return ""
-    # Strip tables (used as layout wrappers) and images, but keep links
+    # Strip tables (used as layout wrappers), keep links and images
     text = md(
         html,
         heading_style="ATX",
         bullets="-",
-        strip=["img", "table", "tr", "td", "th", "tbody", "thead"],
+        strip=["table", "tr", "td", "th", "tbody", "thead"],
     )
     text = normalize_text(text)
 
