@@ -18,7 +18,11 @@ run = ["uv sync", "mise run preprocess"]
 
 [tasks.setup-ci]
 description = "Install system dependencies for CI (EGL/xvfb for map rendering)"
-run = "sudo apt-get update && sudo apt-get install -y libegl1 libgl1 libopengl0 xvfb"
+run = """
+sudo apt-get update && sudo apt-get install -y libegl1 libgl1 libopengl0 xvfb ca-certificates
+sudo mkdir -p /etc/pki/tls/certs
+sudo ln -sf /etc/ssl/certs/ca-certificates.crt /etc/pki/tls/certs/ca-bundle.crt
+"""
 
 [tasks.dev]
 depends = ["preprocess"]
