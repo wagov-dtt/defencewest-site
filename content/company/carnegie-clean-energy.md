@@ -2,7 +2,7 @@
 name: Carnegie Clean Energy Limited
 date: '2025-01-27'
 overview: Carnegie Clean Energy Limited is focused on the development of solar energy, battery energy storage and wave energy technology.
-website: https://carnegiece.com
+website: http://www.carnegiece.com
 contact_name: Brighid Jay
 contact_title: Chief Commercial Officer
 address: 21 North Mole Drive, North Fremantle WA 6159

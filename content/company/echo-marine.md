@@ -46,11 +46,11 @@ Established in 2010, based in the Australian Marine Complex (AMC) in Western Aus
 ## Capabilities
 
 Echo Marine Group is an experienced and respected team supplying high-quality products and services to the Defence Industry. Defence projects benefit with the same care and attention to detail as we offer our Superyacht clients. Our core strengths are our flexibility, diversity, and specialist knowledge of ship systems and components. We have an extensive pool of highly skilled and trained personnel with capabilities in:
- Design
- Fabrication
- Welding
- Fitting & Machining
- FRP
- Fitout
- Electrical
- Project Management
+Design
+Fabrication
+Welding
+Fitting & Machining
+FRP
+Fitout
+Electrical
+Project Management

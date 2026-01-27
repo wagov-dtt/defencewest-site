@@ -41,8 +41,9 @@ VEEM's purpose-built Canning Vale based workshops are state-of-the-art and cover
 Recognizing the growing global market demand for high performance, marine propellers, VEEM invested in adding to its propeller manufacturing capability with a focus on generating superb designs, ground breaking technology and associated patents, plus the most advanced CNC machinery and robotics in the world in order to achieve the necessary accuracies.
 VEEM has since established a world leading position in high performance marine propellers. Building upon these core strengths, VEEM now also manufactures powerful gyrostabilisers for super yachts, patrol boats and offshore working vessels. VEEM gyrostabilisers now hold a world leading position in the powerful, highest quality roll stabilisation devices market for products specifically engineered for use on large boats and small ships.
 Industry Certifications include
+
 - ISO 9001:2015 - Quality Management System,
-ISO 14001:2015 - Environmental Management System
+  ISO 14001:2015 - Environmental Management System
 - ABS foundry Approval, DNV/GL Foundry and welding approval - CU3
 - IRS foundry approval - Copper, RINA approval
 - Lloyd register approvals

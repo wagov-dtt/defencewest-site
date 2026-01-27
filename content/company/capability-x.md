@@ -53,7 +53,7 @@ longitude: 115.8880338
 
 ## Overview
 
-- Capability X was established in 2023 and has grown rapidly, securing contracts with ASX-listed companies in the Marine, Oil and Gas, and Logistics sectors, as well as contracts with the Western Australia Police.**
+- Capability X was established in 2023 and has grown rapidly, securing contracts with ASX-listed companies in the Marine, Oil and Gas, and Logistics sectors, as well as contracts with the Western Australia Police.\*\*
 
 CX is currently expanding further into the defence sector and has established MOUs with companies that supply to the Australian Defence Force.
 

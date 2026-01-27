@@ -57,7 +57,7 @@ Operating for over 30 years, we have established ourselves as a leader in the Au
 
 Local manufacturing enables us minimise the impact of international currency fluctuations and energy prices, shipping costs and delays for our customers.
 
-Our products are designed to support our customer's workplace safety, spill control  and environmental protection requirements.
+Our products are designed to support our customer's workplace safety, spill control and environmental protection requirements.
 ## Capabilities
 
 Global Spill has manufacturing technologies including robotics and automation.
@@ -70,4 +70,4 @@ Manufacturer-direct supply and pricing to support expedited service and delivery
 
 Solutions-driven approach to on-site spill and safety equipment.
 
-- Australia's future is Australian made**
+- Australia's future is Australian made\*\*

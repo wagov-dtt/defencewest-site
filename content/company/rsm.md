@@ -94,19 +94,19 @@ RSM's discriminators, or unique differentiators, include:
 1. Prior Experience and Expertise:
    Extensive experience working with clients across various industries.
    Delivery of a wide range of continuity and resilience services.
-2. Diverse Specialisation:
+1. Diverse Specialisation:
    Incorporation of specialists into the team to provide technically excellent services.
    Continuity experts ensuring value and fit-for-purpose outcomes.
-3. Senior Level Commitment:
+1. Senior Level Commitment:
    Demonstrated commitment from senior leaders, ensuring clients benefit from their skills and expertise.
-4. Sharing of Lessons Learnt:
+1. Sharing of Lessons Learnt:
    Sharing ideas on improving resilience control environments.
    Leveraging good practices from existing client base.
-5. Practical Solutions:
+1. Practical Solutions:
    Known for a factual validation approach.
    Obtaining buy-in from relevant stakeholders before drafting reports.
    Working with management to identify practical and realistic recommendations.
-6. Value Addition:
+1. Value Addition:
    Adding value through process improvement.
    Recognized for a continuous improvement mindset.
    Applying lean principles and process improvement in services.

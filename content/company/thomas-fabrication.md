@@ -40,7 +40,7 @@ longitude: 115.9332717
 
 ## Overview
 
-Thomas Fabrication commenced operations in Western Australia in 2013. Our family owned business was created out of a desire to provide superior cold-forming steel  services in support of Western Australian industry. We specialise in millimetre-accurate Pressing, Rolling and Fabrication services in support of Mining, Civil, Defence and Oil & Gas clients.
+Thomas Fabrication commenced operations in Western Australia in 2013. Our family owned business was created out of a desire to provide superior cold-forming steel services in support of Western Australian industry. We specialise in millimetre-accurate Pressing, Rolling and Fabrication services in support of Mining, Civil, Defence and Oil & Gas clients.
 
 We form all industrial metals, from common mild and stainless steels, hardened and impact resistant steels, through to rare and exotic alloys such as titanium (multiple grades) at industrial thicknesses. We provide market-superior flexibility in tooling and machine redundancy to ensure your project is completed on time, to the highest standards.
 ## Capabilities

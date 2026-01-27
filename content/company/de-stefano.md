@@ -37,34 +37,45 @@ At De Stefano & Co, our mission is to support engineering, manufacturing and tec
 
 De Stefano & Co supports businesses through the following services:
 
-- STRATEGY**
+- STRATEGY\*\*
 
 - Defence Industry Market Entry (DIME(r)) Program
+
 - Defence Sector Due Diligence Activity
+
 - Cyber Security Strategy Review & Uplift
 
-- SECURITY**
+- SECURITY\*\*
 
 - Defence Industry Security Program (DISP) Membership Attainment
+
 - DISP Ongoing Compliance Assurance (OCA(tm))
+
 - Security Officer Support as a Service (SOSaaS(tm))
+
 - Cyber Security Consulting & Maturity Uplift
+
   - CMMC
   - ISO27001
   - NIST CSF/SP 800-171
   - Essenital Eight
   - ISM/IRAP
+
 - Security Education & Training
+
 - Physical Security Uplift
+
 - Personnel Security
 
-- GRANTS**
+- GRANTS\*\*
 
 - Defence Industry Development Grants (DIDG)
+
   - Skilling
   - Sovereign Industrial Priorities
   - Security
   - Exports
+
 - Export Market Development Grant (EMDG)
 ## Discriminators
 

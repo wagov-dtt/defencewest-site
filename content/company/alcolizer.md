@@ -51,7 +51,7 @@ Alcolizer Technology delivers advanced drug and alcohol testing solutions that e
 
 Our capabilities include:
 
-Technology Development: Industry-leading breath alcohol and drug testing devices, supported by continuous R\&D investment to anticipate emerging risks.
+Technology Development: Industry-leading breath alcohol and drug testing devices, supported by continuous R&D investment to anticipate emerging risks.
 
 Onsite Testing Services: Fast, discreet, and reliable drug and alcohol testing delivered nationwide by certified collectors, minimising operational disruption.
 

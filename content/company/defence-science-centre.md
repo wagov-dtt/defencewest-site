@@ -23,10 +23,11 @@ The Defence Science Centre exists to transform defence science challenges into t
 ## Capabilities
 
 The Defence Science Centre's strategic objectives are:
+
 - Boost defence-relevant research collaborations among universities, industry and Defence
 - Identify opportunities for small and medium enterprise (SME) participation in collaborative research
 - Stimulate defence-relevant collaborations through grant programs
 - Identify defence-relevant science and innovation opportunities
 - Showcase Western Australian science and innovation capabilities
 - Support students' undertaking research projects in Defence and related industry.
-The Defence Science Centre welcomes enquiries from all organisations and institutions involved in, or seeking to be involved in, the development of Defence-relevant research and innovation in Western Australia.
+  The Defence Science Centre welcomes enquiries from all organisations and institutions involved in, or seeking to be involved in, the development of Defence-relevant research and innovation in Western Australia.

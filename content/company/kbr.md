@@ -51,41 +51,41 @@ KBR Defence Services in Australia
 
 1. Project Management and Contract Administration (PMCA)
    - Member of the Defence Infrastructure Panel (DIP), delivering client-side project management and contract administration for Defence Capital Works projects.
-2. Infrastructure Design & Engineering
+1. Infrastructure Design & Engineering
    - Technical design services for Defence Capital Works projects including designing Australia's first naval nuclear licensed facilities at HMAS Stirling and Osborne Shipyard to support nuclear-powered submarine operations under the AUKUS program
-3. Nuclear Advisory & Safety Assurance
+1. Nuclear Advisory & Safety Assurance
    - Through Frazer-Nash Consultancy, KBR delivers nuclear technical solutions with a safety-first approach, supporting submarine infrastructure, estate planning, and nuclear safety assurance for the SSN-AUKUS program
-4. Systems Engineering
+1. Systems Engineering
    - KBR provides advanced systems engineering services across defence platforms, integrating technologies and ensuring operational effectiveness.
-5. Command and Control Systems
+1. Command and Control Systems
    - Long-term support to the Joint Command and Control Systems Program Office, enabling integrated mission planning and execution for the ADF.
-6. Mission Planning & Aviation Systems
+1. Mission Planning & Aviation Systems
    - Development and sustainment of mission planning systems for Army aviation platforms including MRH-90, Black Hawk, Tiger, and Chinook helicopters.
-7. Integrated Logistics Support (ILS)
+1. Integrated Logistics Support (ILS)
    - Delivery of ILS services across multiple defence programs, ensuring operational readiness and lifecycle support.
-8. ICT and Cybersecurity
+1. ICT and Cybersecurity
    - Provision of secure deployed network support, ICT systems, and cybersecurity services for the ADF's Chief Information Officer Group (CIOG).
-9. Space Domain Awareness
+1. Space Domain Awareness
    - Monitoring and reporting of space activity above Australia using advanced sensor and data fusion technologies
-10. Training Services
-    - Delivery of training solutions including 3D modelling, simulation, virtual environments, and performance support for new platforms and systems.
+1. Training Services
+   - Delivery of training solutions including 3D modelling, simulation, virtual environments, and performance support for new platforms and systems.
 ## Discriminators
 
 KBR Company Discriminators - Defence Sector
 
 1. Global Reach & Proven Track Record
    - Operates in 29 countries with over 37,000 employees, serving customers in over 80 countries including delivering defence solutions across Australia, the UK, and the US
-2. Strategic Supplier Status
+1. Strategic Supplier Status
    - Recognised as a Strategic Supplier to the UK Ministry of Defence and Australian Department of Defence, supporting critical infrastructure, logistics, and capability programs
-3. Nuclear & Safety Expertise
+1. Nuclear & Safety Expertise
    - Through Frazer-Nash Consultancy, KBR provides nuclear advisory, systems engineering, and safety assurance services for submarine programs including SSN-AUKUS, Astute, and Dreadnought
-4. Advanced Technology Integration
+1. Advanced Technology Integration
    - Delivers cutting-edge solutions in AI, autonomy, space domain awareness, and digital transformation, including support to the Defence AI Centre and AUKUS AI trials
-5. Accreditations & Memberships
+1. Accreditations & Memberships
    - Gold Award recipient in the UK Defence Employer Recognition Scheme (2024)
    - Signatory to the UK Armed Forces Covenant since 2014
    - 2025 Military Friendly(r) Employer (US)
-6. Security Clearances
+1. Security Clearances
    - Holds high-level security clearances across Five Eyes nations, enabling access to sensitive defence programs and facilities.
-7. Leading Defence Employer
+1. Leading Defence Employer
    - KBR proudly employs thousands of veterans and reservists globally, reflecting its strong commitment to supporting military-connected individuals through meaningful careers and community initiatives

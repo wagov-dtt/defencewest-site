@@ -36,7 +36,7 @@ UWA is supporting the Australian Government's commitment to long term national s
 - bacteria, to reduce development of resistance. Extensive experience in containment level 3 work (PC3) and experience in Biosafety Level 2 and 3 work in both experimental and animal laboratories.
 - Chemical measurement of stress, assessment tools for screening and early detection of mental health problems, remote health provision using wearables.
 - Oceans expertise in in situ measurement, remote sensing, modelling of surface and internal
-waves, currents, sediment, morphology, and biogeochemical properties
+  waves, currents, sediment, morphology, and biogeochemical properties
 - Research in turbulent flows, ocean circulation models, and laboratory work on transport and turbulent mixing within oceans
 - Expertise relevant to defence includes the dynamics of large amplitude internal waves and the ocean response to tropical cyclone forcing
 - Expertise and a significant research portfolio in floating vessel dynamics, ocean-structure interaction, offshore anchoring dynamics and geotechnical engineering

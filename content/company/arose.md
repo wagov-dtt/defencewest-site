@@ -40,10 +40,12 @@ Standing at the forefront of knowledge and technology transfer between Australia
 
 These projects deliver high-end, niche solutions and technology for applications from Earth to space and back again; solutions and applications that can transform industries, explore space, and return benefits to our economy, workforce, communities, and the planet, now and for future generations.
 
-- Our mission**
+- Our mission\*\*
 
 - Drive knowledge exchange across sectors from Space-to-ground and ground-to-Space through industry-led projects.
+
 - Build and advocate national capability and develop the future workforce to expand remote operations.
+
 - Secure Australia's role in the international Space sector.
 ## Capabilities
 
@@ -58,4 +60,4 @@ Recently, AROSE has been awarded a $1.7million grant through the Department of D
 
 Our members consortium boasts technology expertise in remote operations, robotics and automation, space robotics, systems engineering, interoperability, communications, cybersecurity, data science and consultancy, high power computing, planetary science, rocket and launch, satellites, spacecraft, planetary rovers, and smart surface sensors.
 
-AROSE Members include Gilmour Space Technologies, Nova Systems, Gunggandji Aerospace**,** Fugro, Raytracer, Woodside Energy, The University of Western Australia, Curtin University, UNSW Sydney, Cicada Innovations, Deloitte Space and Rio Tinto.
+AROSE Members include Gilmour Space Technologies, Nova Systems, Gunggandji Aerospace\*\*,\*\* Fugro, Raytracer, Woodside Energy, The University of Western Australia, Curtin University, UNSW Sydney, Cicada Innovations, Deloitte Space and Rio Tinto.

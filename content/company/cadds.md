@@ -60,11 +60,11 @@ CADDS Group continues to expand its sovereign capability through digital enginee
 
 CADDS Group delivers end-to-end capability supporting Defence infrastructure, estate upgrades, and operational facilities. Our multidisciplinary services include engineering design (all disciplines), drafting and drawing conversion, surveying and 3D scanning, engineering data management, conveyor and machine guarding, project management, document control, QA, building design, product and industrial design, 3D printing (metals/composites), sustainability consulting, animation, and fabrication including coded welding and shop detailing.
 
-Using advanced digital engineering, BIM modelling, and high-accuracy scanning, we provide as-built capture, clash detection, prototyping, and asset lifecycle documentation. Our remote site support capability enables efficient delivery in regional and remote  locations, supported by offices in Henderson, Perth CBD, Karratha, Victoria, and SE Asia.
+Using advanced digital engineering, BIM modelling, and high-accuracy scanning, we provide as-built capture, clash detection, prototyping, and asset lifecycle documentation. Our remote site support capability enables efficient delivery in regional and remote locations, supported by offices in Henderson, Perth CBD, Karratha, Victoria, and SE Asia.
 
 Our fabrication and 3D printing capabilities enable rapid development of custom components, equipment guards, infrastructure elements, and small-batch manufactured solutions suited to Defence environments. Sustainability services (Emergen) support Defence through energy modelling, environmental compliance, and resilient design.
 
-- Recent Defence projects include:**
+- Recent Defence projects include:\*\*
 - **Robertson Barracks - Kennel Refurbishment (NT):** Architectural design, documentation (Concept, Draft, Final, IFT, IFC) and construction support across multiple buildings, including structural upgrades, roofing, lighting replacement, drainage works, corrosion treatment, and new kennel infrastructure.
 - **Defence Force - Cocos (Keeling) Islands:** Architectural, engineering, and certification services supporting facility upgrades, delivering Defence-compliant documentation for remote tropical conditions.
 

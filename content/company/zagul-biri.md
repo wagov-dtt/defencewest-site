@@ -55,13 +55,18 @@ Zagul Biri actively engages with Defence West, Aboriginal business hubs, and ind
 
 Zagul Biri provides advisory and engagement services that support Defence and Defence industry organisations to strengthen workforce participation, reduce engagement risk, and deliver culturally informed outcomes aligned with Defence and WA Government priorities.
 
-- Key capabilities include:**
+- Key capabilities include:\*\*
 
 - Aboriginal and Torres Strait Islander cultural advisory and engagement
+
 - Indigenous workforce attraction, retention, and participation strategies
+
 - Cultural capability and leadership briefings
+
 - Social procurement advisory and Aboriginal business engagement pathways
+
 - Stakeholder engagement across Defence, industry, government, and community
+
 - Trusted brokerage between Defence, primes, SMEs, and First Nations organisations
 
 Zagul Biri's directors have delivered these capabilities through extensive Defence service and senior leadership roles. This includes advising Defence leaders on Indigenous workforce matters, supporting First Nations personnel within Defence environments, and facilitating culturally informed engagement within complex and regulated organisations.

@@ -44,42 +44,62 @@ Our client spectrum comprises with leading local and international companies fro
 
 We provide high-quality Engineering, Maintenance, Reliability and Operational Support to various industries within Australia and internationally. Utilising a talented, passionate and dedicated engineering team, we support our clients to achieve "Peak Asset Performance", through our main services involving 10 pillars.
 
-1.            Operations Readiness & Asset Integration
+1. ```
+          Operations Readiness & Asset Integration
+   ```
 
 Ensures that your assets are fully prepared to commence production once they are handed over from projects to operations. This includes having the right systems, processes and tactics in place.
 
-2.            Maintenance & Reliability
+2. ```
+          Maintenance & Reliability
+   ```
 
 Helps to maximise platform's utilisation and uptime, lowers maintenance cost by eliminating unnecessary equipment maintenance or system overhauls, and minimizes the frequency of overhauls. This will also help to reduce the probability of sudden equipment failures and increases component reliability.
 
-3.            Asset Performance Optimisation
+3. ```
+          Asset Performance Optimisation
+   ```
 
 Ensures that platform can achieve the maximum performance. It requires an integrated solution to balance cost, risk and performance over the equipment's lifecycle, achieving peak asset performance at minimum cost.
 
-4.            Materials, Spares and Warehouse Management
+4. ```
+          Materials, Spares and Warehouse Management
+   ```
 
 Refers to controlling the continuity, optimisation, supply and transfer of various commodities used in production and maintenance. It is a coordinating function that is responsible for planning and controlling material flow and can significantly impact Asset's overall efficiency.
 
-5.            Integrity & Assurance
+5. ```
+          Integrity & Assurance
+   ```
 
 Ensures that all equipment, piping, instrumentation, electrical systems and other physical items in a unit are designed, constructed, inspected and maintained for safe operations. While integrity and assurance applies to the entire platform lifecycle, its greatest effect is felt during the design phase.
 
-6.            Technical Writing
+6. ```
+          Technical Writing
+   ```
 
 Ensures that documents, processes and procedures are correctly written and fit for purpose.
 
-7.             Computerised Maintenance Management Systems (CMMS) & Master Data
+7. ```
+           Computerised Maintenance Management Systems (CMMS) & Master Data
+   ```
 
 Provides expertise and know how to setup and integrate CMMS systems, master data management, Data Standardisation, Data Cleansing and Data Enrichment.
 
-8.            Data Science & Predictive Analytics
+8. ```
+          Data Science & Predictive Analytics
+   ```
 
 Allows organisations to unlock their past and present knowledge by applying statistics, analytical tools and novel digital techniques to determine, how, when and why maintenance is conducted. From these models, intelligent decisions can be made to optimally apply resources to achieve peak asset performance and maintenance efficiency.
 
-9.            Consultancy Services
+9. ```
+          Consultancy Services
+   ```
 
 Provides various engineering consultancy services to help clients to maximise asset performance such as RAM modelling, FMEA/FMECA analysis, SIL/SIS Studies and assessments, RBI, Equipment criticality analysis, etc.
 
-10.          Decommissioning
+10. ```
+         Decommissioning
+    ```
 
 Provides expertise in developing procedures for decommissioning, lay-up and mothballing in relation to complex platforms and creation of work packs to ensure the preservation of an asset through a cold layup.

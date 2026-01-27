@@ -33,7 +33,7 @@ longitude: 115.74915
 
 ## Overview
 
-NAUTIC Technologies leverages cutting-edge engineering expertise to enhance safety and capability in underwater operations. With a strong focus on defence applications, NAUTIC's flagship innovation, the Smart BCD, combines advanced safety features and capabilty enhancement for operational, commercial and recreational sectors.  This groundbreaking system ensures continuous monitoring and support, promoting operational confidence and efficiency. By prioritising innovation and sustainability, NAUTIC Technologies is redefining underwater systems to meet the evolving demands of defence and beyond.
+NAUTIC Technologies leverages cutting-edge engineering expertise to enhance safety and capability in underwater operations. With a strong focus on defence applications, NAUTIC's flagship innovation, the Smart BCD, combines advanced safety features and capabilty enhancement for operational, commercial and recreational sectors. This groundbreaking system ensures continuous monitoring and support, promoting operational confidence and efficiency. By prioritising innovation and sustainability, NAUTIC Technologies is redefining underwater systems to meet the evolving demands of defence and beyond.
 ## Capabilities
 
 NAUTIC Technologies is advancing underwater systems with its Smart Buoyancy Control Device (Smart BCD), currently at TRL 5, offering enhanced safety and efficiency for defence, commercial, and recreational applications.

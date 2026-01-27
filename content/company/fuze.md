@@ -61,7 +61,7 @@ The FUZE team provides urgent response to ensure the continued operation of crit
 FUZE is a composite systems manufacturer with integrated technology, engineering project services and field teams allowing rapid delivery of large, high risk projects successfully and provide warranty support for the life of the composite component.
 ## Capabilities
 
-FUZE can repair ships at sea or along side rather than dry-docking for large crop and renew scopes.  FUZE has provided flay-away teams for the RNZN and RAN to complete urgent defect scopes on surface ships.
+FUZE can repair ships at sea or along side rather than dry-docking for large crop and renew scopes. FUZE has provided flay-away teams for the RNZN and RAN to complete urgent defect scopes on surface ships.
 
 These services can be used to rapidly repair pipework, pipelines, large storage tanks, jetties, marine infrastructure and underwater applications as the materials can be applied underwater using divers.
 ## Discriminators

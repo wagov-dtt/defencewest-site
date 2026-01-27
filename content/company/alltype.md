@@ -53,7 +53,7 @@ longitude: 115.7917367
 
 ## Overview
 
-- Alltype Engineering** is an Australian-owned and operated company with a proud legacy of supporting the nation's defence sector through specialised **Structural, Mechanical, Piping, Electrical and Instrumentation (SMPE&I)** services. We deliver infrastructure fabrication, construction, and vessel maintenance solutions across all branches of the Australian Defence Force, with the majority of works delivered for the Australian Navy and Airforce.
+- Alltype Engineering\*\* is an Australian-owned and operated company with a proud legacy of supporting the nation's defence sector through specialised **Structural, Mechanical, Piping, Electrical and Instrumentation (SMPE&I)** services. We deliver infrastructure fabrication, construction, and vessel maintenance solutions across all branches of the Australian Defence Force, with the majority of works delivered for the Australian Navy and Airforce.
 
 Our capabilities span direct engagements with the Commonwealth of Australia and collaborative projects with both civilian and military contractors. We have contributed to critical base infrastructure projects, including steelwork, mechanical installations and complex piping systems that support essential fuelling, utilities, and operational networks.
 
@@ -69,16 +69,20 @@ With decades of experience, we continue to deliver high-quality, reliable engine
 - **Defence-Ready Workforce**: Personnel experienced in secure site operations with hazardous area electrical expertise and CC3 certifications.
 ## Discriminators
 
-- Established Expertise**: Operating since 1985, with a strong track record delivering fabrication, installation and maintenance services across defence and other critical industries.
+- Established Expertise\*\*: Operating since 1985, with a strong track record delivering fabrication, installation and maintenance services across defence and other critical industries.
 
-- Advanced Fabrication Capabilities**: Robotic, CNC and automated processing of steel, pipe and plate for precision and efficiency. In house electrical and instrumentation services compliment this offering to deliver complex multidiscipline solutions.
+- Advanced Fabrication Capabilities\*\*: Robotic, CNC and automated processing of steel, pipe and plate for precision and efficiency. In house electrical and instrumentation services compliment this offering to deliver complex multidiscipline solutions.
 
-- Strategic Location**: Local 23,300m2 Naval Base laydown area (expandable to 40,000m2) and a 6,680m2 workshop with four bays, 12 gantry cranes, and 40-tonne lift capacity. Close proximity to Rockingham and Kwinana Defence precincts, AMC and Henderson Maritime services.
+- Strategic Location\*\*: Local 23,300m2 Naval Base laydown area (expandable to 40,000m2) and a 6,680m2 workshop with four bays, 12 gantry cranes, and 40-tonne lift capacity. Close proximity to Rockingham and Kwinana Defence precincts, AMC and Henderson Maritime services.
 
-- Accreditations & Certifications**:
+- Accreditations & Certifications\*\*:
 
 - AS/NZS ISO 9001 (Quality Management)
+
 - AS/NZS ISO 45001 (Occupational Health & Safety)
+
 - AS/NZS ISO 3834 Category 2 (Welding Standards)
+
 - AS 5131 CC3 Structural Steel
+
 - Federal Safety Commission WHS Accreditation Scheme (Currently being assessed)

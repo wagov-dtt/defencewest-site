@@ -45,7 +45,6 @@ Design & Development
 
 Machining & Prototyping
 
-
 - Rapid in-house manufacture for prototyping and production; and
 - Metrology labs.
   Testing & Validation

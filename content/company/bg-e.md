@@ -45,16 +45,16 @@ By effectively executing these projects, we have contributed significantly to th
 
 Our mission is clear: leveraging our diverse and specialised engineering expertise to deliver comprehensive innovation and solutions, safeguarding our nation's interests in the Defence industry. Some of our key organisation capabilities include:
 
-- Civil Engineering**: We deliver end-to-end civil engineering services including design, documentation, and supervision across roads, rail, and land developments.
-- Structural Engineering**: We design high-performing structures in collaboration with industry leaders, using advanced materials and creative engineering.
-- Flood Management & Hydrology**: We specialise in comprehensive flood risk management solutions designed to protect communities and infrastructure.
-- Digital Engineering**: We leverage cutting-edge technologies to deliver smart and efficient digital engineering solutions.
-- Construction Engineering**: We provide innovative and tailored designs and engineering strategies that meet the demands of complex and unconventional projects.
-- Bridge Engineering**: We specialise in innovative bridge design, using advanced techniques and materials for award-winning outcomes.
-- Materials & Durability**: We deliver durable engineering solutions by combining technical expertise with practical insights and academic collaboration.
-- Traffic & Transport Planning**: We develop transport strategies that improve mobility, safety, and sustainability through robust, data-driven planning.
+- Civil Engineering\*\*: We deliver end-to-end civil engineering services including design, documentation, and supervision across roads, rail, and land developments.
+- Structural Engineering\*\*: We design high-performing structures in collaboration with industry leaders, using advanced materials and creative engineering.
+- Flood Management & Hydrology\*\*: We specialise in comprehensive flood risk management solutions designed to protect communities and infrastructure.
+- Digital Engineering\*\*: We leverage cutting-edge technologies to deliver smart and efficient digital engineering solutions.
+- Construction Engineering\*\*: We provide innovative and tailored designs and engineering strategies that meet the demands of complex and unconventional projects.
+- Bridge Engineering\*\*: We specialise in innovative bridge design, using advanced techniques and materials for award-winning outcomes.
+- Materials & Durability\*\*: We deliver durable engineering solutions by combining technical expertise with practical insights and academic collaboration.
+- Traffic & Transport Planning\*\*: We develop transport strategies that improve mobility, safety, and sustainability through robust, data-driven planning.
 
-Our Defence team has a wealth of relevant and recent experience in leveraging our organisation's capabilities to successfully deliver high-quality technical solutions to a variety of key Defence projects. Our team's expertise extends to collaborating with various stakeholders to ensure that the solutions provided align with the specific requirements and objectives of each project.  The following are our key Defence project experience:
+Our Defence team has a wealth of relevant and recent experience in leveraging our organisation's capabilities to successfully deliver high-quality technical solutions to a variety of key Defence projects. Our team's expertise extends to collaborating with various stakeholders to ensure that the solutions provided align with the specific requirements and objectives of each project. The following are our key Defence project experience:
 
 - RAAF Woomera Redevelopment Project
 - Naval Capability Infrastructure Sub-Program 3 and 4A
@@ -68,8 +68,8 @@ Our Defence team has a wealth of relevant and recent experience in leveraging ou
 - No Geographic Constraints - access to into engineers from various disciplines and select the most qualified individuals for the job, regardless of which office they sit in, ensuring seamless execution without state-based subcontractor constraints
 - Security & Compliance - Maintaining a keen awareness of the legislative, political, and community aspects, guaranteeing a sensitive and vigilant approach.
 - Temporary Works Design - Specialist construction engineering and temporary works design group, who seamlessly integrate temporary works design into the detailed design, bringing a more cost-effective and risk-reduced approach.
-- Our strong commitment to our management systems is one of the principal drivers of the provision of quality advice, design and documentation to our clients.  BG&E maintains and implements independently audited management systems:
-  - ISO 9001:2015   Quality Management System
-  - ISO 14001:2015   Environmental Management System
-  - ISO 45001:4018   WHS Management
+- Our strong commitment to our management systems is one of the principal drivers of the provision of quality advice, design and documentation to our clients. BG&E maintains and implements independently audited management systems:
+  - ISO 9001:2015 Quality Management System
+  - ISO 14001:2015 Environmental Management System
+  - ISO 45001:4018 WHS Management
   - ISO 19650-2:2018 Organisation and digitisation of information about buildings and civil engineering works, including BIM

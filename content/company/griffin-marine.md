@@ -55,11 +55,12 @@ Griffin Marine Services prides itself on proactive and professional support serv
 We provide Qualified and Certified support services to the Defence and Commercial
 sectors including Welders, Boilermakers, Painters, Insulators, Trade Assistants,
 Mechanical Fitting, Load Testing and NDT
+
 - Project Management for vessel commissioning and asset management
 - Provision of Machining, Sheet Metal Fabrication and Engineering Services via our own
-workshops
+  workshops
 - Experience and knowledge having worked across all major Navy platforms, including
-ANZAC Class, ACPBs, AORs, Armidale Class and Hobart Class vessels
+  ANZAC Class, ACPBs, AORs, Armidale Class and Hobart Class vessels
 
 Commercial experience including, tugs, oil and gas vessels, ferries, cruise liners and
 dredgers

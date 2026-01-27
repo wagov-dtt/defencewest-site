@@ -27,7 +27,7 @@ longitude: 115.84237
 
 ## Overview
 
-John Tedesco from Business Innovation Services (BIS) has over 20 years' experience in business management in variety of industries. He is experienced in providing business coaching, consulting, and development services.  He has passion for helping SME business owners to grow businesses and increase their profitability and company value.
+John Tedesco from Business Innovation Services (BIS) has over 20 years' experience in business management in variety of industries. He is experienced in providing business coaching, consulting, and development services. He has passion for helping SME business owners to grow businesses and increase their profitability and company value.
 
 John can help your business meet the requirements of the Defence Business Readiness Tool (DBRT) to become long-term and profitable supplier to the Defence Industry. He is highly experienced in developing policies and procedures to meet required standards and efficiency objectives.
 
@@ -49,6 +49,6 @@ We have a bespoke client-focused approach to our business practices tailoring ou
 
 We monitor relevant economic and social trend data and leading commentators which enable us to advise business owners about how their products and operations may be impacted by such trends, as well as how they can respond to any potential opportunities.
 
-We have a unique business growth system PACE - Plan, Act, Check and Execute.  We can apply this system to help grow your business to achieve greater success.
+We have a unique business growth system PACE - Plan, Act, Check and Execute. We can apply this system to help grow your business to achieve greater success.
 
 We are local and therefore know the local business environment.

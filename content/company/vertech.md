@@ -52,7 +52,7 @@ Vertech Group offer a comprehensive Non-destructive testing, Integrity engineeri
 
 We pride ourselves on our quality and put a strong emphasis on supplying high value, innovative and efficient people to achieve excellence in delivery.
 
-- Capability:**
+- Capability:\*\*
 
 - *Conventional Non-Destructive Testing & Advanced Non-Destructive Testing - Integrity management for all new and existing assets/structures.*
 
@@ -79,25 +79,32 @@ We pride ourselves on our quality and put a strong emphasis on supplying high va
 - *Rope and Specialised Access Solutions in place of expensive Scaffolding - Maintenance use on structures ie Wharfs/Jetties*
 ## Discriminators
 
-- Competitive Discriminators:**
+- Competitive Discriminators:\*\*
 
 - Approved Inspection supplier for BAE, UGL and NSM
-- Having our own R & D capabilities which drives innovation, technology advancement, continuous improvement and finding complex inspection solutions
-- Recognised as a world leader in Advanced NDT inspection services and solutions
-- Proven results from  top tier inspection companies within the Oil and Gas sector
 
-- Quality Certifications:**
+- Having our own R & D capabilities which drives innovation, technology advancement, continuous improvement and finding complex inspection solutions
+
+- Recognised as a world leader in Advanced NDT inspection services and solutions
+
+- Proven results from top tier inspection companies within the Oil and Gas sector
+
+- Quality Certifications:\*\*
 
 - NATA certified for Testing and Inspection
+
 - LEEA: Lifting equipment Inspection & Management
+
 - Class Inspection - DNV-GL, BV, ABS, LR
+
 - IRATA (Industrial Rope Access Trainer & Operator
+
 - DROPS (Dropped Object Prevention Scheme)
 
-- Accreditation:**
+- Accreditation:\*\*
 
-- ISO 9001: 2015;  ISO 14001: 2015; ISO 29001: 2010
+- ISO 9001: 2015; ISO 14001: 2015; ISO 29001: 2010
 
-- Key Customers**:
+- Key Customers\*\*:
 
 Woodside, Shell, Chevron, Inpex, Rio Tinto, Jadestone, MACA, UGL, Santos

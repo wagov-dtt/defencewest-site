@@ -69,6 +69,7 @@ Directions Workforce Solutions has built a strong, practical history of supporti
 Directions Workforce Solutions combines specialist Group Training Organisation capability with hands-on recruitment, compliance, payroll and apprentice mentoring to deliver workforce outcomes tailored to the defence supply chain. We design defence-aligned training pathways that map to contract requirements, safety regimes and technical standards; manage end-to-end onboarding (candidate attraction, selection, payroll, workplace supervision and reporting); and maintain intentionally low caseloads to provide highly personalised support and rapid problem-solving for employers.
 
 Recent examples include:
+
 - Award-Winning Placements -- supported AENWA finalists and Special Recognition winners into roles within defence contractors, demonstrating our ability to develop high-calibre, job-ready technicians.
 - Tailored GTO delivery for Local Defence Suppliers -- implemented customised on-the-job training plans, compliance checklists and mentor rosters while managing payroll and performance reporting, reducing employer administrative burden and accelerating apprentice productivity.
 - School and Community Engagement -- ran targeted campaigns with our Apprentice Advisors to attract motivated candidates for hard-to-fill trades, connecting industry needs with local training providers.

@@ -32,7 +32,7 @@ Today we are recognised as one of Australia's and New Zealand's leading distribu
 For over 65 years John Morris Group has been the industry leader in the supply, installation & servicing of precision instruments throughout the South Pacific.
 ## Capabilities
 
-The John Morris group Test & Measurement Division provides  state-of-the-art test & measurement solutions for a wide range of industries including Aerospace & Defence, Power & Energy, Automotive, Transportation,  Mining & Industrial sectors.
+The John Morris group Test & Measurement Division provides state-of-the-art test & measurement solutions for a wide range of industries including Aerospace & Defence, Power & Energy, Automotive, Transportation, Mining & Industrial sectors.
 
 Brands include:
 

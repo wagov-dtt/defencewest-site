@@ -31,11 +31,11 @@ Leveraging 40+ years of Defence and Defence Industry experience and networks acr
 
 - Defence Industry Security Program (DISP)
 
-    o   Membership / Management
+  o Membership / Management
 
 - Defence Aligned Marketing
 
-    o   QUAD Chart/Capability Statement
+  o QUAD Chart/Capability Statement
 
 - Defence Industry Advocacy
 
@@ -43,11 +43,11 @@ Leveraging 40+ years of Defence and Defence Industry experience and networks acr
 
 - Defence Industry Business Strategy
 
-    o   Advice, Guidance and Mentoring
+  o Advice, Guidance and Mentoring
 
 - Grant Funding Advice and Application
 
-    o   Defence Industry Development Grant
+  o Defence Industry Development Grant
 
 - Defence Industry Business Development
 

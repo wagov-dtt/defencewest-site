@@ -50,6 +50,7 @@ Incorporating the MyCelx technology, which efficiently removes organics, oils, h
 While other oil-water separators rely on mechanical separation or chemicals, MyCelx bonds with oil and other contaminants at a molecular level. This means oils, hydrocarbons, and other contaminants are removed almost completely without any water loss.
 
 Some of MyCelx's many benefits are:
+
 - Oil Contaminant levels reduced to less than 1ppm.
 - No release back into the water
 - Designed to any flow rate and discharge requirements.
@@ -68,6 +69,7 @@ While other oil-water separators rely on mechanical separation or chemicals, MyC
 ## Discriminators
 
 Some of MyCelx's many benefits are:
+
 - Oil Contaminant levels reduced to less than 1ppm.
 - No release back into the water
 - Designed to any flow rate and discharge requirements.

@@ -72,11 +72,11 @@ Our capabilities include:
 
 Our core and patented products include:
 
-- Universal Shore Power Cable & Hose Management SystemTM -  expedites shore power cable and fuel hose handling, national award recipient, in association with our partner Ventia.
+- Universal Shore Power Cable & Hose Management SystemTM - expedites shore power cable and fuel hose handling, national award recipient, in association with our partner Ventia.
   - **Australian Defence Contractor Innovation 2020**
   - ****Australian Workplace Health & Safety Award 2021****
-- Mission DeckTM -  no-weld seafastening system enabling rapid marine logistics turn around on vessels of opportunity in "one tide".
-- Mobile MicrogridTM -  scalable, mobile, grid quality, hybrid renewable power supply and integrated water purification, anywhere with minimal logistics, and negligible HSER footprint. Scalable from two-person portable helicopter deployable units to multi-megawatt utility scale SPSs.
+- Mission DeckTM - no-weld seafastening system enabling rapid marine logistics turn around on vessels of opportunity in "one tide".
+- Mobile MicrogridTM - scalable, mobile, grid quality, hybrid renewable power supply and integrated water purification, anywhere with minimal logistics, and negligible HSER footprint. Scalable from two-person portable helicopter deployable units to multi-megawatt utility scale SPSs.
 - Thermal CloakTM - Signal protection, IR cloak, EMP/ECM protection, EMI/RFI shielding.
 
 Onetide's point of difference is the ability to consider a multitude of problems and draw upon our technical limit expertise with modern and additive sovereign manufacturing capability to provide innovative, practical and safe solutions.

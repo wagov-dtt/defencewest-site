@@ -72,7 +72,7 @@ Established in Western Australia in 1996, Intercept Australia bought large shrin
 
 UnderRaps provided encapsulation to the Australian and US navy's during their maintenance work schedules.
 
-2010 UnderRaps wanted to develop more into providing Intercept Technology developed by NOKIA Bell laboratories for anti-corrosion, anti-static and shielding packaging.  This led to a rebranding to the name Intercept Australia.
+2010 UnderRaps wanted to develop more into providing Intercept Technology developed by NOKIA Bell laboratories for anti-corrosion, anti-static and shielding packaging. This led to a rebranding to the name Intercept Australia.
 
 Intercept Australia is not the latest technology supplying anti-corrosion preservation being taken up by global giants such as FORD, BHP, SKF.
 
@@ -82,7 +82,7 @@ Intercept Australia now has 3 in-house loft facilities, enabling manufacturing o
 
 Around 2018 Intercept Australia was granted the rights to produce Intercept Technology films in Australia enabling Intercept Australia to be a true local content provider.
 
-Intercept Australia is committed to minimising the impact of its activities on both the local and global environment.  We believe that our corporate responsibility goes beyond our proprietary borders, and we endeavour to cooperate with our suppliers to develop our business in a sustainable manner.  Every effort is made to conserve resources throughout our operations.
+Intercept Australia is committed to minimising the impact of its activities on both the local and global environment. We believe that our corporate responsibility goes beyond our proprietary borders, and we endeavour to cooperate with our suppliers to develop our business in a sustainable manner. Every effort is made to conserve resources throughout our operations.
 
 Intercept Australia provides secondary products to support total preservation requirements such as desiccants for moisture control, steel, wood and plastic pallets frames and boxes enabling safe handling throughout logistics and storage.
 
@@ -113,13 +113,13 @@ Space
 
 Rocket and Satellite anti-static class 100 applications manufactured under licence in Australia, USA and Europe.
 
-Intercept products are environmentally safe and recyclable.  Intercept is non-offgassing and solvent free, making it personnel, airfreight and optic safe complying to Rohs, TRGS 615 and TRGS 900 standards.
+Intercept products are environmentally safe and recyclable. Intercept is non-offgassing and solvent free, making it personnel, airfreight and optic safe complying to Rohs, TRGS 615 and TRGS 900 standards.
 
 Protection for ferrous and non-ferrous metals, plastics, rubber and fabrics Intercept functionality from -25C - 80C.
 
-Intercept Technology neutralizes corrosive and migrating gases; like a sacrificial anode, these gases are permanently bound to the copper particles bound within Intercept packaging materials.  The particles react readily with elements (Corrosive Gases) that are present in the atmosphere neutralizing corrosion elements.  All materials are equally protected non-hazardous packaging material for all applications.
+Intercept Technology neutralizes corrosive and migrating gases; like a sacrificial anode, these gases are permanently bound to the copper particles bound within Intercept packaging materials. The particles react readily with elements (Corrosive Gases) that are present in the atmosphere neutralizing corrosion elements. All materials are equally protected non-hazardous packaging material for all applications.
 
-Intercept is scavenging technology.  unrestricted by size of the item and packaging, Intercept has a built-in saturation indicator, turning green.
+Intercept is scavenging technology. unrestricted by size of the item and packaging, Intercept has a built-in saturation indicator, turning green.
 
 Intercept products are available in shrink/stretch films, foils, polymer bags, foams, canvas, thermo-form and corrugated mediums - Intercept products can be custom designed to suit a diverse range of uses and objects of any size and allows for streamlining the preservation and logistics process.
 ## Discriminators
@@ -131,7 +131,7 @@ Intercept Australia distinguishes itself from competitors by offering cost-effec
 - Intercept materials can be used to protect any assemblies containing optical systems
 - Intercept is not affected by Heat, Light, Acids and Strong Alkalis
 - Australian made local content
-- ESD 106-108ohm , permanent (even at humidity<5%)
+- ESD 106-108ohm , permanent (even at humidity\<5%)
 - No emitters required scavenging technology
 - Intercept is classed non-hazardous
 - Intercept has a built-in saturation indicator

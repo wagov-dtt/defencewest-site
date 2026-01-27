@@ -47,6 +47,7 @@ Integrity guides what we do, which means we make the right choices towards suppo
 To ensure the ongoing performance and capability of Defence assets, we continually look to industry for best practice and tailor our services to suit the functionality and sometimes bespoke needs and response times of Defence equipment and systems.
 
 Our capabilities include:
+
 - Programmed preventative maintenance
 - Reactive repair maintenance
 - Backflow testing & installation

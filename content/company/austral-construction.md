@@ -2,7 +2,7 @@
 name: Austral Construction
 date: '2025-01-27'
 overview: Austral Construction is a specialist engineering and construction contractor providing civil, marine, rail, piling and ground retention services to the infrastructure, resource and defence sectors
-website: https://www.australconstruction.com.au
+website: https://australconstruction.com.au
 contact_name: Nicholas Hewitt
 contact_title: National Business Development & Tendering Manager
 address: L11, 200 St Georges Terrace, Perth WA 6000
@@ -47,7 +47,7 @@ Austral Construction is recognised across Australia for its commitment to leader
 
 Safety & Quality - FSA Accredited, ISO 9001 Quality, ISO 45001 OHS & ISO 14001 Environment
 
-- Marine construction - Excelling in maritime infrastructure, Austral Construction undertakes projects utilising specialised equipment like self-elevating barges, support vessels, cranes, and piling hammers.**
+- Marine construction - Excelling in maritime infrastructure, Austral Construction undertakes projects utilising specialised equipment like self-elevating barges, support vessels, cranes, and piling hammers.\*\*
 
 - Port facilities maintenance
 
@@ -65,7 +65,7 @@ Safety & Quality - FSA Accredited, ISO 9001 Quality, ISO 45001 OHS & ISO 14001 E
 
 - Structural work
 
-- Civil and structural - Austral Construction delivers civil and structure projects around Australia. Our services cover:** -Civil
+- Civil and structural - Austral Construction delivers civil and structure projects around Australia. Our services cover:\*\* -Civil
 
 - Earthworks
 
@@ -87,7 +87,7 @@ Safety & Quality - FSA Accredited, ISO 9001 Quality, ISO 45001 OHS & ISO 14001 E
 
 - Non-process infrastructure
 
-- Piling - Austral Construction has extensive expertise and experience in piling work, with specialised plant and experienced personnel, our services cover:**
+- Piling - Austral Construction has extensive expertise and experience in piling work, with specialised plant and experienced personnel, our services cover:\*\*
 
 - Sheet and tubular piling
 

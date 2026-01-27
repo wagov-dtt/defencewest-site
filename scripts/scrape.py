@@ -14,6 +14,7 @@ from datetime import date, timedelta
 from pathlib import Path
 
 import httpx
+import mdformat
 import yaml
 from geopy.geocoders import Nominatim
 from markdownify import markdownify as md
@@ -116,7 +117,7 @@ def normalize_text(text: str) -> str:
 
 
 def html_to_md(html: str) -> str:
-    """Convert HTML to clean markdown."""
+    """Convert HTML to clean markdown compatible with Hugo/Goldmark."""
     if not html:
         return ""
     text = md(html, heading_style="ATX", bullets="-", strip=["a", "img"])
@@ -126,6 +127,13 @@ def html_to_md(html: str) -> str:
     text = re.sub(r"^[\-\*]+\s*", "- ", text, flags=re.MULTILINE)
     text = re.sub(r"\n{3,}", "\n\n", text)  # Collapse multiple newlines
     text = re.sub(r"[ \t]+$", "", text, flags=re.MULTILINE)  # Trim trailing whitespace
+
+    # Use mdformat to ensure proper blank lines before lists (Hugo/Goldmark requirement)
+    try:
+        text = mdformat.text(text.strip())
+    except Exception:
+        pass  # Fall back to unformatted if mdformat fails
+
     return text.strip()
 
 

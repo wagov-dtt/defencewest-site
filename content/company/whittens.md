@@ -55,10 +55,12 @@ Whittens brings extensive civil contracting expertise to the defence sector, del
 
 Our team combines technical expertise with robust quality assurance systems, enabling us to meet the stringent requirements of defence projects. We operate under ISO-certified management systems for safety, quality, and environmental performance, ensuring compliance with Defence and Commonwealth procurement standards.
 
-- Recent Projects:**
+- Recent Projects:\*\*
 
 - **RAAF Base Pearce Roadworks & Concrete Pavements** - Delivered concrete rigid pavements and grated drains for taxiway and airside upgrades. ($6M, 2022)
+
 - **Williamtown RAAF** - Installed over 25,000m3 (100,000m2) of high-spec aircraft pavement, plus foundations and concrete-lined drainage channels ($1.5M, 2016).
+
 - **Snowy 2.0 Project** - While primarily energy, it's a Commonwealth strategic infrastructure project requiring high compliance and security standards.
 
 Whittens' ability to deliver complex scopes in secure environments makes us a trusted partner for defence infrastructure projects. Our focus on safety, reliability, and collaboration ensures successful outcomes for clients and stakeholders.

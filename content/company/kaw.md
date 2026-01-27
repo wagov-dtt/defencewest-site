@@ -67,6 +67,7 @@ In 2019 KAW Engineering, expanded into a 3rd workshop facility in Karratha resul
 - Plates Processing
 
 - High-speed cutting in a class of its own, with up to 10 Kilowatts of laser power. For unbeatable productivity in 3 to 12-millimetre thick mild steel
+
 - Cut up to 30 mm thick steel. Clean cutting edges in a wide variety of steel sheet qualities
 
 - Workshop 2
@@ -74,6 +75,7 @@ In 2019 KAW Engineering, expanded into a 3rd workshop facility in Karratha resul
 - Plate Processing
 
 - 1x6m 6-axis CNC Waterjet cutting machine capable of cutting any material and up to 400 mm thick. E.g. Steel, plastic, rubber, composites, Inconel white iron etc (only machine of this kind in the region)
+
 - 3.2x6m HPR400XD High Definition Plasma - Ideal for up to 70 mm Steel (Plasma) 200mm Steel (Oxy)
 
 - Material Stock
@@ -87,33 +89,51 @@ In 2019 KAW Engineering, expanded into a 3rd workshop facility in Karratha resul
 - Heavy Fabrication
 
 - 10T Overhead Gantry Cranes
+
 - 5T side Cranes
+
 - Fabrication size up to 6m (w) x 7m (h) x 80m (I)
+
 - 22 German Made EVM Specialised Welding Machines
+
 - 3 x Press Breaks, Guillotines, 3 x Pipe Benders, 2 x Pan Folders, 1 x Sheetmetal Bending Machine - Xpert 150/3100
 
 - Machining
 
 - 2 x Lathes
+
 - 2 x Mils
+
 - 1 x Turret Drill
+
 - Various Ancillary Machines
 
 - Fabrication & Design Office
 
 - Mechatronics Engineer
+
 - Mining Engineer
+
 - 2 x AS1796 Cert 10 Welding Supervisors
+
 - 1 x International Welding Specialist (Able to write and qualify weld procedures)
+
 - 1 x CSWIP 3.1 (Able to write and qualify weld procedures)
+
 - AS2214 Structural Welding Supervisor
+
 - 2 x Poly Pipe & Plastic Fabrication Welding Supervisors
+
 - 3 x Project Managers
+
 - 3 x Diploma in Leadership & Management
+
 - 5 x Site Supervisors with extensive marine experience
 
-- Safety record**
+- Safety record\*\*
 
 - KAW Engineering has been operating since 1983 and in that time have never incurred a Lost Time Injury for any on site works.
+
 - For all incidents, including near misses etc. we track and monitor through our Integrated Management System. All are reviewed and assessed by our management team and any necessary changes identified and implemented. Following this, any changes are monitored closely for effectiveness.
+
 - 9 Years fully accredited ISO HSE Management System with 0 Major Non-conformance or significant at fault injuries.

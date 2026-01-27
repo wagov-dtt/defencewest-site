@@ -63,9 +63,9 @@ AMC Henderson - Subdivision and infrastructure works
 Pearce Airbase - Various Maintenance contracts (Civil & Structural consultancy works)
 HMAS Stirling, Garden Island (Various maintenance and land based upgrade projects)
 
-- Austral Shipyards Infrastructure development**
-Austral Ships Pty Ltd (Structural - Marine) - $12million value
-Over the years we have seen Austal Ships grow from a small group of dedicated shareholder employees into one of the best large aluminium fast vessel designers/constructors in the world.
+- Austral Shipyards Infrastructure development\*\*
+  Austral Ships Pty Ltd (Structural - Marine) - $12million value
+  Over the years we have seen Austal Ships grow from a small group of dedicated shareholder employees into one of the best large aluminium fast vessel designers/constructors in the world.
 
 With every expansion, we were involved both with the design and construction/management of their new facilities.
 

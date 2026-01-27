@@ -45,9 +45,9 @@ CGL is also working with other traditional owner groups in the West Kimberley, P
 CGL's success in establishing aboriginal partnerships across northern Australia delivers a number of significant benefits including the following.
 
 1. Growing aboriginal business and employment in these regions is critical to addressing the economic disadvantage and associated social issues that aboriginal people face in these communities. These initiatives provide role models and employment opportunities for the local aboriginal community members to aspire to.
-2. Employing aboriginal people in these remote locations makes sense from an economic perspective. When you employ someone in remote locations like this, you are effectively employing the whole family and not just the individual. Our aboriginal employees and their families want to live in these locations and are not as challenged by the environment and isolation as those families that opt to relocate there.
-3. Our traditional owner partners have access to significant land holdings.
-4. Our traditional owner partners have the same community values and aspirations as CGL's shareholders, and we are both equally as driven to ensure that any of our business ventures also delivers social benefits to the communities we operate in.
+1. Employing aboriginal people in these remote locations makes sense from an economic perspective. When you employ someone in remote locations like this, you are effectively employing the whole family and not just the individual. Our aboriginal employees and their families want to live in these locations and are not as challenged by the environment and isolation as those families that opt to relocate there.
+1. Our traditional owner partners have access to significant land holdings.
+1. Our traditional owner partners have the same community values and aspirations as CGL's shareholders, and we are both equally as driven to ensure that any of our business ventures also delivers social benefits to the communities we operate in.
 
 CGL is also working with a farmers' co-operative in Esperance to establish a fuel retail and distribution network.
 

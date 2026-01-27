@@ -52,6 +52,7 @@ As a member of the RSK Group, our organisational capabilities provide clients wi
 ## Capabilities
 
 ADENCO can deliver civil and electrical infrastructure upgrades at both brown and greenfield sites in regional and remote locations. Using our own plant and equipment, supported by our Perth based fabrication facility, we can provide turnkey solutions for all types of facilities including
+
 - training facilities
 - workshops
 - storm water, potable water and wastewater infrastructure

@@ -28,7 +28,7 @@ The Waalitj Foundation aims to lead the provision of education, employment and b
 
 The Waalitj Hub can provide ongoing support to contractors and Aboriginal suppliers participating in Defense projects/contracts.
 
-- The Waalitj Hub**
+- The Waalitj Hub\*\*
 
 The Hub services:
 

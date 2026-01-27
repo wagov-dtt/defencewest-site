@@ -39,21 +39,32 @@ solutions to provide sustainable outcomes
 
 As a trusted, long-term provider to the public and private sectors, Enviropacific has a proven track record of delivering large scale remediation projects for Defence. We have successfully stabilised over one hundred thousand tonnes of PFAS contaminated soil enabling it to be reused in the recent upgrade works at RAAF Pearce.
 
-- REMEDIATION**
+- REMEDIATION\*\*
 
 - Asbestos and HAZMAT
+
 - Demolition
+
 - Soil Remediation
+
 - PFAS management and destruction
+
 - Hazardous Waste Management
+
 - Engineered Solutions
+
 - Decommissioning and Rehabilitation
 
-- WATER**
+- WATER\*\*
 
 - Design, local manufacture and supply of Water Treatment Plants
+
 - Installation & commissioning of Water Treatment Plants
+
 - Operation & maintenance of Water Treatment Plants
+
 - Contaminated ground water and surface water treatment
+
 - PFAS water treatment solutions
+
 - Drinking Water

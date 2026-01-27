@@ -48,7 +48,7 @@ We've been functioning with the defence sector since the 80s. We're happy to hav
 Tradesales specialises in three areas:
 
 - **Heavy Duty Storage** - Products that are built to last such as lockers, cabinets, and site boxes.
-- **Workshop equipment -**products for workshop fit-outs, including the height adjustable workbench, workstations and other workshop equipment.
+- \*\*Workshop equipment -\*\*products for workshop fit-outs, including the height adjustable workbench, workstations and other workshop equipment.
 - **Relocatable Site Solutions** - containerised solutions for hydration, offices, tool storage and more.
 
 Tradesales has successfully supplied defence sector workshop fit outs and infrastructure upgrades with products including but not limited to:
@@ -63,4 +63,4 @@ Tradesales has successfully supplied defence sector workshop fit outs and infras
 - **Pallet Racking & Shelving**
 - **Raised Storage Areas**
 - **Modified Sea Containers**
-- **Lu**bricant Dispensing Systems****
+- **Lu**bricant Dispensing Systems\*\*\*\*

@@ -59,22 +59,31 @@ As global defence priorities shift toward self-reliance and regional security, I
 With a strong foundation in marine innovation and a clear mission to serve with integrity, Indianic Group is proud to be part of Australia's defence story past, present, and future.
 ## Capabilities
 
-- Operational Diving Services:**
+- Operational Diving Services:\*\*
 
-- Asset Inspection & Survey:** Wharf & vessel inspections (incl. UWILD), Mooring assessment & repair
-- Specialist Subsea Operations:** Welding, cutting, dredging, airlifting, Protection systems (scour, cathodic, pile wrap), Hull cleaning & ship repair
-- Environmental & Risk Surveys:** UXO clearance & Potential Marine Pest (PMP) inspections, Scientific/environmental monitoring Support
-- Emergency Response & Recovery:** Salvage & recovery, Rapid inspection & IMR deployment
+- Asset Inspection & Survey:\*\* Wharf & vessel inspections (incl. UWILD), Mooring assessment & repair
 
-- Shoreside Infrastructure & Construction**
-- Infrastructure Sustainment:** Routine inspection & maintenance, Asset life-extension for ports/naval facilities
-- Marine Piling & Structural Works:** Pile installation & remediation, Structural strengthening works
-- Wharf & Facility Delivery:** Construction, upgrades & decommissioning
-- Marine Systems:** Navigation aids, fendering & subsea deployments
-- Shore Crossings & Pipelines:** Coastal & subsea pipeline install/remediation
+- Specialist Subsea Operations:\*\* Welding, cutting, dredging, airlifting, Protection systems (scour, cathodic, pile wrap), Hull cleaning & ship repair
 
-- Engineering & Fabrication Services:**
-- Fabrication & bespoke engineering:** blasting, painting, and corrosion protection
+- Environmental & Risk Surveys:\*\* UXO clearance & Potential Marine Pest (PMP) inspections, Scientific/environmental monitoring Support
+
+- Emergency Response & Recovery:\*\* Salvage & recovery, Rapid inspection & IMR deployment
+
+- Shoreside Infrastructure & Construction\*\*
+
+- Infrastructure Sustainment:\*\* Routine inspection & maintenance, Asset life-extension for ports/naval facilities
+
+- Marine Piling & Structural Works:\*\* Pile installation & remediation, Structural strengthening works
+
+- Wharf & Facility Delivery:\*\* Construction, upgrades & decommissioning
+
+- Marine Systems:\*\* Navigation aids, fendering & subsea deployments
+
+- Shore Crossings & Pipelines:\*\* Coastal & subsea pipeline install/remediation
+
+- Engineering & Fabrication Services:\*\*
+
+- Fabrication & bespoke engineering:\*\* blasting, painting, and corrosion protection
 ## Discriminators
 
 - Certified Commercial Diving delivering across Defence bases nationwide

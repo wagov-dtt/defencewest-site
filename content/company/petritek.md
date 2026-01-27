@@ -46,41 +46,44 @@ Looking ahead, Petritek is actively expanding its Defence capabilities through s
 
 Petritek specializes in advanced R&D-driven engineering solutions, leveraging our expertise in precision instrumentation, radiation tracking systems, environmental control technologies, and robust monitoring solutions to meet the rigorous demands of challenging industries. While we have not yet completed projects within the defence sector, our extensive experience in sectors such as oil and gas, space, and energy demonstrates our ability to adapt and deliver high-value solutions in complex environments.
 
-- Key Capabilities:**
+- Key Capabilities:\*\*
 
-- Precision Tracking and Monitoring Systems:**
-Development of isotopic-based tracking solutions capable of high-accuracy monitoring in remote and demanding locations.
-- Custom Engineering Design:**
-Expertise in designing bespoke systems tailored to unique project requirements, with an emphasis on reliability and durability.
-- Environmental Control Technology:**
-Proven ability to create secure, controlled environments for transporting sensitive or high-value equipment.
-- System Integration and Scalability:**
-Experience in integrating innovative solutions with existing infrastructure to enhance operational efficiency.
+- Precision Tracking and Monitoring Systems:\*\*
+  Development of isotopic-based tracking solutions capable of high-accuracy monitoring in remote and demanding locations.
+
+- Custom Engineering Design:\*\*
+  Expertise in designing bespoke systems tailored to unique project requirements, with an emphasis on reliability and durability.
+
+- Environmental Control Technology:\*\*
+  Proven ability to create secure, controlled environments for transporting sensitive or high-value equipment.
+
+- System Integration and Scalability:\*\*
+  Experience in integrating innovative solutions with existing infrastructure to enhance operational efficiency.
 
 Petritek is keen to bring our innovative problem-solving approach to the defence sector. We are ready to collaborate with defence stakeholders to explore how our existing capabilities can be tailored to meet the unique challenges of defence operations, delivering solutions that ensure accuracy, security, and operational success.
 ## Discriminators
 
-- Company Discriminators**
+- Company Discriminators\*\*
 
-- Proven Expertise in Challenging Environments:**
-Specializes in precision instrumentation, radiation tracking systems, and environmental control technologies for extreme conditions.
+- Proven Expertise in Challenging Environments:\*\*
+  Specializes in precision instrumentation, radiation tracking systems, and environmental control technologies for extreme conditions.
 
-- Bespoke R&D Capabilities:**
-Tailored engineering solutions designed to meet unique client needs, ensuring innovation and operational efficiency.
+- Bespoke R&D Capabilities:\*\*
+  Tailored engineering solutions designed to meet unique client needs, ensuring innovation and operational efficiency.
 
-- Advanced Tracking Technologies:**
-Developers of isotopic-based pipeline pig tracking systems, offering unparalleled accuracy and reliability in monitoring and defect detection.
+- Advanced Tracking Technologies:\*\*
+  Developers of isotopic-based pipeline pig tracking systems, offering unparalleled accuracy and reliability in monitoring and defect detection.
 
-- Strong Industry Relationships:**
-Trusted partner of major organizations in the Oil & Gas, Space, and Energy sectors, demonstrating reliability and expertise across industries.
+- Strong Industry Relationships:\*\*
+  Trusted partner of major organizations in the Oil & Gas, Space, and Energy sectors, demonstrating reliability and expertise across industries.
 
-- Innovative Problem-Solving:**
-Emphasis on addressing complex challenges through innovation, providing clients with cutting-edge solutions tailored to their specific requirements.
+- Innovative Problem-Solving:\*\*
+  Emphasis on addressing complex challenges through innovation, providing clients with cutting-edge solutions tailored to their specific requirements.
 
-- Strategic Focus on Defence:**
-Actively exploring opportunities to bring our innovative technologies to the defence sector, with capabilities aligned to key defence requirements.
+- Strategic Focus on Defence:\*\*
+  Actively exploring opportunities to bring our innovative technologies to the defence sector, with capabilities aligned to key defence requirements.
 
-- Engineering Excellence and Experience:**
-Decades of combined team experience across diverse sectors, equipping us with the knowledge to adapt solutions for defence and other critical applications.
+- Engineering Excellence and Experience:\*\*
+  Decades of combined team experience across diverse sectors, equipping us with the knowledge to adapt solutions for defence and other critical applications.
 
 Petritek is positioned as a reliable, innovative partner, dedicated to delivering exceptional engineering solutions that meet the rigorous demands of our clients.

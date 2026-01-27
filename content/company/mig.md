@@ -59,14 +59,20 @@ Over the past 2-5 years they have expanded their project delivery in the defence
 Mig-Co Engineering not only have the skillset, but they also are armed with innovative equipment to deliver projects to world-class standards. Capabilities are expansive, including but not limited to:
 
 - Repairs, servicing and manufacturing of hydraulics
+
 - Mobile servicing, including line bring and milling
+
 - Coded welding and specialised fabrication
+
 - General and heavy fabrication
+
 - CNC and general machining
+
 - Preventative maintenance
+
 - Carbon and stainless-steel pipe units
 
-- Project Example: Oil Lubrication network. Land-based on-site.**
+- Project Example: Oil Lubrication network. Land-based on-site.\*\*
 
 Our task was to remove existing pipework and replace with new. This included pipework that travelled under culvert, as well as on top of water ways and along the wharf.
 Risk assessments were undertaken, and strategies put in place to ensure there were no environmental implications, including to fauna and reptile life.

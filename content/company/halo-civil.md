@@ -34,7 +34,7 @@ Since our inception, we have consistently demonstrated our capability by success
 
 We specialise in providing comprehensive multidisciplinary civil services tailored specifically for government and private agencies such as the defence sector.
 
-At Halo our mission is to have exceptional people deliver successful projects while causing zero harm. Our ultimate goal is to make a positive impact  on our clients, our industry and the community we proudly serve.
+At Halo our mission is to have exceptional people deliver successful projects while causing zero harm. Our ultimate goal is to make a positive impact on our clients, our industry and the community we proudly serve.
 ## Capabilities
 
 Halo has extensive experience in the execution of intricate civil construction projects across, metro, regional and remote Australia. We have a thorough understanding of the Department of Defence's compliance requirement and security protocols and the capability to construct, upgrade and maintain defence infrastructure.

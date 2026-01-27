@@ -52,9 +52,9 @@ longitude: 115.85218
 
 Proudly servicing industry for 55 years, Alemlube is a proactive and dynamic Australian-owned family business with its Head Office in Sydney and branches across five Australian states, as well as Auckland, New Zealand.
 
-Representing globally recognised leaders in their fields, Alemlube designs, engineers and delivers high quality products with a complete solution approach.   Our customer base spans distributors, OEMs, and end users across a wide range of industries including Automotive, Transport, Mining, Agriculture, Industrial and Construction.
+Representing globally recognised leaders in their fields, Alemlube designs, engineers and delivers high quality products with a complete solution approach. Our customer base spans distributors, OEMs, and end users across a wide range of industries including Automotive, Transport, Mining, Agriculture, Industrial and Construction.
 
-Alemlube offers a national platform, across its six branch locations.  This ensures that customer service, order fulfilment, sales support, system design, installation and on site after sales service are always locally available and rapidly deployed.
+Alemlube offers a national platform, across its six branch locations. This ensures that customer service, order fulfilment, sales support, system design, installation and on site after sales service are always locally available and rapidly deployed.
 ## Capabilities
 
 Alemlube is a specialist in the supply of high-performance equipment and solutions for the Automotive, Transport, Mining, Agriculture, Industrial and Construction sectors.

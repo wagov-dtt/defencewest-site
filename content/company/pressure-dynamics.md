@@ -58,6 +58,7 @@ With our presence across Australia, New Zealand and the UAE combined with operat
 Pressure Dynamics international are a specialist engineering company delivering hydraulic and electro-mechanical solutions to our customers in the Oil & Gas, Mining, Infrastructure, Defence, Marine, and Power Generation sectors.
 
 PD's employ a team of highly skilled Project Managers, Engineers and Technicians who are committed to collaborating with our customers in providing innovative, industry-leading, fit-for-purpose solutions. Our solutions include:
+
 - provision of subject matter experts on and off site in specialist maintenance services
 - provision of specialist rental equipment to facilitate work scopes on site
 - design, manufacture, installation and commissioning;
@@ -66,4 +67,4 @@ PD's employ a team of highly skilled Project Managers, Engineers and Technicians
 - asset management and condition monitoring;
 - reliability engineering and engineering consulting; and
 - modelling, simulation, and training for hydraulic, lifting and electro-mechanical equipment and control systems.
-We take pride in our reputation for solving customer problems that no one else can. We understand the technical and safety risks involved in each project and deliver de-risked outcomes for our customers. Whatever the requirement, our intent is to satisfy our customers with best-value, quality-assured solutions, products and services that deliver superior function, reliability and safety.
+  We take pride in our reputation for solving customer problems that no one else can. We understand the technical and safety risks involved in each project and deliver de-risked outcomes for our customers. Whatever the requirement, our intent is to satisfy our customers with best-value, quality-assured solutions, products and services that deliver superior function, reliability and safety.

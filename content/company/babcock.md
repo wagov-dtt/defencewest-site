@@ -48,7 +48,7 @@ longitude: 115.778922
 
 ## Overview
 
-Babcock is an international defence company operating in our focus countries of the UK, Australasia, Canada, France and South Africa.  We support and enhance our customers' defence capabilities and critical assets and we meet our customers' requirements of value for money, increased availability, modernisation and flexibility.
+Babcock is an international defence company operating in our focus countries of the UK, Australasia, Canada, France and South Africa. We support and enhance our customers' defence capabilities and critical assets and we meet our customers' requirements of value for money, increased availability, modernisation and flexibility.
 
 Backed by decades of experience in Defence across the globe, we are the premier warship sustainment company in Australasia, and a proven and trusted leader in submarine sustainment, nuclear safety and stewardship.
 ## Capabilities

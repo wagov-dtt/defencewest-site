@@ -33,29 +33,41 @@ Specialising in the design, construction, inspection, maintenance, and servicing
 Our dedicated team can provide expert advice and solutions for all manner of electrical applications including:
 
 - design & construction of electrical, communications, security, fire detection, power generation and ups services
+
 - preparation of budget estimates and tender proposals
+
 - advise on cost effective methods of installation and operation
+
 - procurement of specialised equipment and services
+
 - project management and site coordination
+
 - project cost production control, reporting, and forecasting
+
 - testing, commissioning and warranty back up services for the duration of the defect liability period
+
 - regular briefing and information sharing with the client, project team, subcontractors and other stakeholders.
 
-- Oil & Gas Industry**
+- Oil & Gas Industry\*\*
 
 Since entering the oil and gas sector in 2015 Matera Electrical has developed a team of highly skilled and experienced electrical inspectors and electricians currently undertaking a wide range of electrical maintenance, repair and construction activities across major hazard facilities in north-west Western Australia.
 
-- Maintenance**
+- Maintenance\*\*
 
 Our dedicated team of Electrical Inspectors have the capabilities to effectively manage the preventative electrical maintenance requirements for Western Australia's premier LNG provider and assists in ensuring compliance with the provider's legislative requirements. Preventative maintenance activities include:
 
 - conduct detailed and close visual inspections of electrical equipment in hazardous areas;
+
 - report on the integrity of explosion protected electrical equipment in hazardous areas; develop and maintain hazardous area dossiers;
+
 - planning, scheduling and execution of hazardous areas inspections;
+
 - undertake thermographic imaging and prepare reports of findings;
+
 - manage client permit to work requirements, and;
+
 - ensure all work is undertaken in accordance to client WHS and QA requirements
 
-- Repair**
+- Repair\*\*
 
 All our electrical technicians have the skills and qualifications to undertake electrical work in hazardous areas including the repair and installation of explosion protected electrical equipment and wiring systems. In 2017 Matera Electrical were awarded a contract to repair or replace explosion proof light fittings and junction boxes across a major hazard facility in north west Western Australia. Now 18 months into the campaign our team have replaced over 1800 light fittings and junction boxes which has led to greatly improved visibility across the plant. Matera Electrical provided IRATA Level 1 Rope Access training to a many of our repair team to improve efficiencies during execution of the work.

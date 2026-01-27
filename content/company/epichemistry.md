@@ -39,17 +39,22 @@ Epichem maintains secure laboratory facilities in Western Australia and employs 
 
 Epichem provides specialist chemistry capabilities that support defence and dual-use activities across force health protection, preparedness, sustainment, and capability development.
 
-- Key capabilities include:**
+- Key capabilities include:\*\*
 
 - **Medicinal and applied chemistry** - analogue synthesis and SAR optimisation for antimicrobial and anti-infective programs.
+
 - **Analytical chemistry and reference materials** - analytical method development, bespoke reference standards, degradation studies, and independent verification.
+
 - **Materials and polymer chemistry** - functional and specialty materials, stability and compatibility studies for demanding environments.
+
 - **Sustainment and obsolescence support** - chemistry input into material qualification, re-validation, and replacement of legacy chemical components.
+
 - **Secure project delivery** - experience working under confidentiality and IP frameworks with sensitive technical data.
 
-- Recent examples include:**
+- Recent examples include:\*\*
 
 - **Supporting the Development of Antifouling compounds and AMR breakers** - Providing chemistry and synthesis support to local R&D company
+
 - **Providing analytical and formulation support for the development of effective topical treatment for chronic ulcers** - with local R&D company commercializing the product with antimicrobial and biofilm disrupting technology.
 
 Epichem offers a flexible, on-shore chemistry capability that complements Defence research organisations and prime contractors while strengthening Australia's sovereign capability.
