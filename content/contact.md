@@ -5,19 +5,15 @@ type: page
 
 ## Defence West
 
-Defence West supports the growth of Western Australia's defence industry, connecting local businesses with opportunities in the defence and national security sectors.
-
-[defencewest@dpc.wa.gov.au](mailto:defencewest@dpc.wa.gov.au)
-
-[wa.gov.au/defence-west](https://www.wa.gov.au/organisation/department-of-the-premier-and-cabinet/defence-west)
+[Defence West](https://www.wa.gov.au/organisation/department-of-the-premier-and-cabinet/defence-west) supports the growth of Western Australia's defence industry, connecting local businesses with opportunities in the defence and national security sectors.
 
 ## List Your Company
 
 This directory showcases WA companies with defence and science capabilities, helping prime contractors and government agencies find local suppliers.
 
-[Add Your Company](../company/_template/#edit) | [Browse Directory](../)
+[Submit an update](mailto:defencewest@dpc.wa.gov.au) | [Browse Directory](../)
 
-You can also email your details and logo to [defencewest@dpc.wa.gov.au](mailto:defencewest@dpc.wa.gov.au).
+To contribute new companys or update existing ones, please email your details and logo to [defencewest@dpc.wa.gov.au](mailto:defencewest@dpc.wa.gov.au).
 
 ## Download Data
 
