@@ -52,17 +52,17 @@ We service over a hundred clients across the nation and the Pacific, including p
 Griffin Marine Services prides itself on proactive and professional support service to all clients. Our testimonials are proof we deliver high-quality and trustworthy service in the shortest time.
 ## Capabilities
 
-We provide Qualified and Certified support services to the Defence and Commercial
-sectors including Welders, Boilermakers, Painters, Insulators, Trade Assistants,
+We provide Qualified and Certified support services to the Defence and Commercial\
+sectors including Welders, Boilermakers, Painters, Insulators, Trade Assistants,\
 Mechanical Fitting, Load Testing and NDT
 
 - Project Management for vessel commissioning and asset management
-- Provision of Machining, Sheet Metal Fabrication and Engineering Services via our own
+- Provision of Machining, Sheet Metal Fabrication and Engineering Services via our own\
   workshops
-- Experience and knowledge having worked across all major Navy platforms, including
+- Experience and knowledge having worked across all major Navy platforms, including\
   ANZAC Class, ACPBs, AORs, Armidale Class and Hobart Class vessels
 
-Commercial experience including, tugs, oil and gas vessels, ferries, cruise liners and
+Commercial experience including, tugs, oil and gas vessels, ferries, cruise liners and\
 dredgers
 ## Discriminators
 

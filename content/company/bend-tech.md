@@ -42,31 +42,19 @@ Our 10,000 sqm facility in Welshpool houses our team and local manufacturing. Ou
 ## Capabilities
 
 - Design, engineering and fabrication
-
 - On-site consulting and 3D scanning to enable intelligent design
-
 - Access platforms and scaffold elimination
-
 - Work stands
-
 - Equipment and material storage and handling solutions
-
 - Workbenches and tool storage
-
 - Site maintenance and upgrades
-
 - Container fit-outs
 
-- Discriminators\*\*
+**Discriminators**
 
 - In-house design, engineering team with over 15 internal team members
-
 - 3D scanning, scoping, and processing capabilities
-
 - 10000 square metres of fabrication facilities
-
 - 80 tonne lifting capability, 20 metre underhook lift
-
 - Our Australia-wide consultation team and processes with over 10 team members
-
 - Dedicated research and development department and 3D printing capabilities

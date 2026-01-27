@@ -59,21 +59,21 @@ Apex Utilities has delivered civil and utilities works at the Naval Capability C
 The works were completed safely, compliantly and without service strikes, demonstrating Apex Utilities' ability to perform reliably within Defence facilities and meet Defence expectations for safety, asset protection and quality delivery.
 ## Discriminators
 
-- **Strike-Free Delivery Record**
+- **Strike-Free Delivery Record**\
   Proven performance in safety-critical environments, supported by disciplined planning, DBYD processes and strong asset protection controls.
-- **Defence-Ready Experience**
+- **Defence-Ready Experience**\
   Delivered civil and utilities works within a controlled Defence environment at the **Naval Capability Centre,** complying with Defence site access, safety and operational requirements.
-- **Specialist Trenchless Capability**
+- **Specialist Trenchless Capability**\
   In-house Horizontal Directional Drilling (HDD) capability enabling low-impact installation of utilities in constrained and operationally sensitive locations.
-- **Apprenticeship-Led Workforce Model**
+- **Apprenticeship-Led Workforce Model**\
   Strong focus on workforce development through apprenticeships, mentoring and leadership pathways, supporting long-term capability and workforce sustainability.
-- **Industry-Leading Inclusion Outcome**
+- **Industry-Leading Inclusion Outcome**\
   Employer of the first woman in Australia to complete Certificate III in Trenchless Technology, demonstrating practical commitment to inclusion based on capability and performance.
-- **In-House Delivery Model**
+- **In-House Delivery Model**\
   Majority of works delivered by company personnel and plant, providing greater control over safety, quality, scheduling and risk.
-- **Alignment to ISO Management Systems**
+- **Alignment to ISO Management Systems**\
   Implementation of an integrated management system aligned to ISO 9001 (Quality), ISO 14001 (Environmental) and ISO 45001 (WHS), supporting consistent and compliant delivery.
-- **Industry Memberships**
+- **Industry Memberships**\
   Active member of the Civil Contractors Federation (CCF) WA and Henderson Alliance, supporting best practice, workforce development and industry engagement.
-- **Key Client Experience**
+- **Key Client Experience**\
   Experience delivering works for government, utilities and infrastructure clients in regulated environments requiring high standards of safety, compliance and coordination.

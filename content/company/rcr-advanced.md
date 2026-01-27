@@ -2,7 +2,7 @@
 name: RCR Advanced Technologies
 date: '2025-01-27'
 overview: RCR Advanced Technologies is a market leader in the design and manufacture of innovative, award-winning solutions as well as the development of materials handling solutions for rail and ore wagons through strategic partnerships.
-website: https://www.rcradvancedtech.com.au
+website: https://rcradvancedtech.com.au
 contact_name: Neville Kelly
 contact_title: Business Development Manager
 address: Glendale Industrial Estate, Temple Road, PICTON EAST WA 6229
@@ -82,46 +82,28 @@ We offer a range of innovative rail transport and unloading technology for bulk 
 Our range of engineering solutions and expertise is tailored to meet the unique requirements of each project. With a focus on innovation and the application of leading-edge, sustainable technologies, our solutions aim to provide improvements in safety, reliability, efficiency and overall value for our clients.
 ## Capabilities
 
-- DISCRIMINATORS\*\*
+**DISCRIMINATORS**
 
 - Large, long tenure in-house design team established in 1979.
-
 - Experienced in the delivery of complex concept to commissioned plant solutions in fixed and semi-mobile applications
-
 - Award-winning team
-
 - Proven solutions library with 1,500+ complex products in operation
-
 - Electrical and control division (OFI) with PRIME status in defense
-
 - Experience across multiple high standard sectors and clients
-
 - Marine and challenging environment applications references
-
 - Rapid design development and manufacture of bespoke solutions
-
 - Rail wagon OEM (Kiruna Wagon) and refurbishment
 
-- CAPABILITIES\*\*
+**CAPABILITIES**
 
 - 45+ Design in-house design team
-
 - High level project managers
-
 - 70,000m2 manufacturing workshop facilities
-
 - Surface treatment
-
 - Hydraulics and Pneumatics
-
 - High voltage substations, electronics, and controls
-
 - Manufacturing up to 150 tonne/week
-
 - Design software packages inclusive of FEA, ANSYS and other
-
 - 3D printing to improve concept development
-
 - Product support services for all solutions designed and supplied
-
 - Heat treatment

@@ -36,7 +36,7 @@ longitude: 115.8489416
 
 ## Overview
 
-Adwest Group is a fabrication company. We mainly deal in steel but are just as comfortable with stainless steel and aluminium. We also have an in-house sand blast and powdercoating facility.
+Adwest Group is a fabrication company. We mainly deal in steel but are just as comfortable with stainless steel and aluminium. We also have an in-house sand blast and powdercoating facility.\
 We have ISO9002 accreditation, and have worked on many major mining projects and for most blue chip mining companies in WA. We are used to MDRS and our welders/boilermakers are all qualified.
 ## Capabilities
 

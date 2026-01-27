@@ -66,5 +66,5 @@ PD's employ a team of highly skilled Project Managers, Engineers and Technicians
 - storage, maintenance, and preservation of customer equipment;
 - asset management and condition monitoring;
 - reliability engineering and engineering consulting; and
-- modelling, simulation, and training for hydraulic, lifting and electro-mechanical equipment and control systems.
+- modelling, simulation, and training for hydraulic, lifting and electro-mechanical equipment and control systems.\
   We take pride in our reputation for solving customer problems that no one else can. We understand the technical and safety risks involved in each project and deliver de-risked outcomes for our customers. Whatever the requirement, our intent is to satisfy our customers with best-value, quality-assured solutions, products and services that deliver superior function, reliability and safety.

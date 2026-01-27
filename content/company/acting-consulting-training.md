@@ -47,6 +47,6 @@ Acting Consulting Training (ACT) Australia & NZ is a leader in the field of corp
 
 - ACT delivers dramatic scenarios for key workforce development through theatre and film production, that captivate your audience.
 - The lessons learned inspire positive action and create safer working environments.
-- *Nothing Bad*, *Nimrod*, *Space Shuttle*, *Deepwater Horizon*, *Fukushima*, *Game Day,* and *Piper Alpha* are case studies available for delivery through professional
+- *Nothing Bad*, *Nimrod*, *Space Shuttle*, *Deepwater Horizon*, *Fukushima*, *Game Day,* and *Piper Alpha* are case studies available for delivery through professional\
   productions for your conference, leadership group, and workforce safety and risk training (all already used in Defence and Defence Industries).
 - 65 current productions, Bespoke safety, and risk scenario development, national capability.

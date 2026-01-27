@@ -46,29 +46,20 @@ With a proven track record in highly regulated sectors, our solutions enhance as
 Our scalable platform is easily customised to meet specific industry requirements, delivering tailored and adaptable solutions across various sectors.
 ## Capabilities
 
-- Products & Services\*\*
+**Products & Services**
 
 - Safety and Safety Case Engineering: Maintain compliance and mitigate risks.
-
 - Ground Support Equipment Management: Streamline maintenance and availability.
-
 - Weapon and Vehicle Maintenance: Maximise readiness with efficient upkeep.
-
 - Inspection and Testing: Guarantee asset integrity and reliability.
-
 - Predictive Asset Lifecycle Modelling: Anticipate and prevent equipment failures.
-
 - Data Visualisation: Provide clear, actionable insights for decision-makers.
-
 - Remote Operation and Maintenance: Maintain critical assets in any environment.
-
 - Soft Facility Management Services: Support and sustain essential infrastructure.
-
 - Reduce Overheads on Training: Optimise training programs for cost-effectiveness.
-
 - Advanced Planning Tools: Enable proactive and strategic asset management.
 
-- Availability and Support\*\*
+**Availability and Support**
 
 EXTAG's SaaS Asset Management System is currently available to clients in the Mining, Energy, and Oil & Gas sectors across Australia, South America, and the Middle East. Our products are available immediately, with minimal lead times on standard orders.
 
@@ -76,12 +67,12 @@ We are headquartered in Western Australia, and our dedicated in-house team provi
 
 Due to the flexibility and scalability of our software, we are equipped to quickly expand our services to other sectors and regions globally, adapting to specific market requirements.
 
-- Key Customers\*\*
+**Key Customers**
 
-Altrad
-Chevron
-INPEX
-Woodside
+Altrad\
+Chevron\
+INPEX\
+Woodside\
 Worley
 ## Discriminators
 

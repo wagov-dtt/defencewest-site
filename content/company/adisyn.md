@@ -56,36 +56,26 @@ We are proud to contribute to Australia's national security landscape through te
 
 Adisyn offers full-spectrum IT and Cybersecurity services aligned to the unique needs of Defence and critical infrastructure clients, delivered through our *Advise - Support - Protect* service model:
 
-- Advise\*\*
+**Advise**
 
 - Cybersecurity and ICT strategy consulting
-
 - ISO 27001 and DISP-aligned governance and risk frameworks
-
 - Defence-specific project management and procurement support
-
 - Security and technology roadmap development
 
-- Support\*\*
+**Support**
 
 - Sovereign, Australian-based service desk and field support
-
 - Managed IT services with secure endpoint and infrastructure management
-
 - 24/7 monitoring, patching, and system lifecycle management
-
 - Business continuity, backup, and disaster recovery
 
-- Protect\*\*
+**Protect**
 
 - Australian-based 24/7 Security Operations Centre (SOC)
-
 - CREST-aligned penetration testing and offensive security
-
 - Vulnerability management and threat intelligence
-
 - Essential Eight and ISM uplift programs
-
 - Incident response and cyber resilience planning
 
 Adisyn has successfully supported organisations in Defence and Defence-adjacent sectors to modernise their environments, uplift their cyber maturity, and meet compliance requirements across highly sensitive and resource-constrained environments.

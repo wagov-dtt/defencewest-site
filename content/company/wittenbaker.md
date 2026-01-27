@@ -48,11 +48,11 @@ Wittenbaker Engineering Services PTY LTD with its strategically selected service
 
 Core capabilities:
 
-CNC-Machining (Turning, Milling & Wire Cutting)
-Insitu-Machining
-Metal Fabrication & Welding
-Laser Cladding
-Mechanical Fitting & Rebuilds
-Gear Reducer Rebuilds & Load Testing
-Spare Parts
+CNC-Machining (Turning, Milling & Wire Cutting)\
+Insitu-Machining\
+Metal Fabrication & Welding\
+Laser Cladding\
+Mechanical Fitting & Rebuilds\
+Gear Reducer Rebuilds & Load Testing\
+Spare Parts\
 Mechanical & Reverse Engineering

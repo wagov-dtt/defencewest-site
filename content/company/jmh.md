@@ -46,7 +46,7 @@ JMH Group have a large team of qualified and experienced tradespeople in various
 
 Our technicians work with and are supported by our Parts and Clerical Departments who are also recognised and acknowledged as critical in the successful operations of JMH Group. The team at JMH Group are led by a supportive and experienced Management Team to ensure our clients receive the best service and support available in the industry.
 
-At JMH Group we are very enthusiastic about keeping up to date with the latest advances in industry technologies and tooling to continue as industry leaders and innovators. JMH Group have an extensive library of hire equipment, tooling and personnel to ensure operational efficiencies and minimised down-time for our clients.
+At JMH Group we are very enthusiastic about keeping up to date with the latest advances in industry technologies and tooling to continue as industry leaders and innovators. JMH Group have an extensive library of hire equipment, tooling and personnel to ensure operational efficiencies and minimised down-time for our clients.\
 All of these qualities have established JMH Group as an industry leader and in recent years led to partnerships with international innovators such as Scania, JCB, Kalmar Oceania, Fuchs and Groeneveld - Beka. JMH group is endorsed and equipped to supply parts, service and support for these brands as well as holding a dealership license for JCB machinery and Kalmar Equipment.
 ## Capabilities
 

@@ -40,16 +40,12 @@ With over 130 years of experience, **St John WA** is a trusted provider of healt
 
 Beyond its statewide ambulance and first aid services, St John WA delivers workplace health solutions that integrate medical governance, clinical operations, emergency response, and staff wellbeing into every project. This approach improves outcomes in critical medical emergencies, supports ongoing employee health, and minimises operational risks.
 
-- St John's comprehensive services include:\*\*
+**St John's comprehensive services include:**
 
 - **Clinical readiness assessments** - Ensuring emergency systems perform effectively when needed.
-
 - **On-site medical personnel** - Paramedics, medics, and registered nurses deployed for large-scale projects.
-
 - **Occupational health services** - Pre-employment checks, drug and alcohol testing, injury management, and ongoing health monitoring.
-
 - **Training programs** - First aid, mental health, critical response training, and emergency drills.
-
 - **Equipment and medical vehicle leasing** - Fully equipped medical vehicles, first aid supplies, and emergency response equipment tailored to project needs.
 
 This model enhances safety and wellbeing, supporting both project teams and the wider community.

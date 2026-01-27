@@ -67,19 +67,19 @@ These services can be used to rapidly repair pipework, pipelines, large storage 
 ## Discriminators
 
 - Rapid mobilisation & repair: deployable teams in hours/days.
-- We operate where others won't: wet, subsea & remote; alongside
+- We operate where others won't: wet, subsea & remote; alongside\
   or in-theatre.
-- Defence-grade assurance: ISO 9001/14001/45001, JOSCAR-AU, code-compliant
+- Defence-grade assurance: ISO 9001/14001/45001, JOSCAR-AU, code-compliant\
   designs and Classification Society approved materials, design and applications.
-- Backed by Byrnecut Group: logistics & workforce reach for
+- Backed by Byrnecut Group: logistics & workforce reach for\
   assured delivery.
-- Engineers in the field: integrated design-and-install for complex
+- Engineers in the field: integrated design-and-install for complex\
   geometries, confined spaces & critical structures.
-- Live-system repairs: seal leaks & rebuild assets without shutdown.
-  Safety by design: no hot works, reduced headcount at risk; shorter
+- Live-system repairs: seal leaks & rebuild assets without shutdown.\
+  Safety by design: no hot works, reduced headcount at risk; shorter\
   time-on-tools.
-- Sovereign capability: Australian-engineered, Defence-ready
+- Sovereign capability: Australian-engineered, Defence-ready\
   solutions.
 - Development and verification capabilities in-house to rapidly develop custom composite systems.
-- Proven across sectors: oil & gas, marine, infrastructure,
+- Proven across sectors: oil & gas, marine, infrastructure,\
   mining--transferable to naval platforms and defence estates.

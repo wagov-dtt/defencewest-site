@@ -40,7 +40,7 @@ Specialising in the design, manufacture and supply of unique proprietary alloys 
 
 1. Armour Systems
    - Unique, extreme resistance armour systems for both vehicles and personnel
-   - Protection against high velocity antimateriel rounds (0.50 AP, 14.5x114 BZ API) with significant weight reduction (2.3x Mass
+   - Protection against high velocity antimateriel rounds (0.50 AP, 14.5x114 BZ API) with significant weight reduction (2.3x Mass\
      Efficiency v's RHA)
    - Lightweight - less than 50% thickness required for similar stopping ability of standard hard armour
    - Able to be shaped and rolled
@@ -48,9 +48,9 @@ Specialising in the design, manufacture and supply of unique proprietary alloys 
    - Fully weldable for easy infield/battle repairs
    - Ductile failure of rear face in the event of ballistic defeat eliminating backface spalling/shrapnel effect
    - Aluminium backed Skjoldride(r) range uniquely designed for fixed wing and rotary aircraft protection cells
-   - Composite Skjoldride(r) solutions for light vehicle and ATV armour to provide ballistic protection without wholesale panel and
+   - Composite Skjoldride(r) solutions for light vehicle and ATV armour to provide ballistic protection without wholesale panel and\
      structural replacement
-   - Light weight, flexible and man-portable anti-fragmentation ballistic panels (TYR-FR range) are unique to the Industry,
+   - Light weight, flexible and man-portable anti-fragmentation ballistic panels (TYR-FR range) are unique to the Industry,\
      providing protection against drone deployed munitions
    - TYR-Flex range of soft armour is next to thinnest and lightest in class with negligible back face deformation per rated threat
 1. Thermal Camouflage & RF Attenuation

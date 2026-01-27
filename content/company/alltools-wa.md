@@ -41,16 +41,11 @@ At Alltools WA, we pride ourselves on being the go-to supplier for the defence i
 Alltools WA boasts strong organizational capabilities, leveraging an extensive supplier network, efficient logistics, and expert industry knowledge to source and deliver industrial supplies and tooling solutions. Our streamlined procurement processes ensure rapid response times, while our dedicated team provides tailored solutions to meet the unique needs of various industries, including defence, mining, and manufacturing. With a commitment to reliability and customer satisfaction, Alltools WA excels in handling complex supply challenges with precision and efficiency.
 ## Discriminators
 
-- Alltools WA - Key Discriminators\*\*
+**Alltools WA - Key Discriminators**
 
 - **Unmatched Sourcing Capability** - Ability to source any industrial supply or tooling requirement, including hard-to-find and specialised products.
-
 - **Extensive Supplier Network** - Strong relationships with leading manufacturers and distributors ensure competitive pricing and fast procurement.
-
 - **Industry Expertise** - Deep knowledge across multiple sectors, ensuring tailored solutions.
-
 - **Rapid Response & Delivery** - Streamlined logistics and efficient procurement processes for fast and reliable order fulfillment.
-
 - **Customer-Centric Approach** - Dedicated service and personalised solutions to meet specific client needs.
-
 - **Quality & Compliance** - Commitment to providing high-quality products that meet industry and regulatory standards.

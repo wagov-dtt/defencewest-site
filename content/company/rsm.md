@@ -52,19 +52,19 @@ longitude: 115.85882
 
 ## Overview
 
-RSM's Cyber Security and Privacy Risk Services team has specialists nationally in Australia that assist many organisations in providing cyber security advisory,
-technical security assessments and evaluating control requirements against various compliance requirements, frameworks and publications across various
-industries.
-This gives our team a broad understanding of how different organisations address unique or similar challenges and risks. Our engagements are delivered by team
-members who specialise in providing cyber/information security and privacy advisory and assurance, rather than generalist. Some of our suite of services, delivered
+RSM's Cyber Security and Privacy Risk Services team has specialists nationally in Australia that assist many organisations in providing cyber security advisory,\
+technical security assessments and evaluating control requirements against various compliance requirements, frameworks and publications across various\
+industries.\
+This gives our team a broad understanding of how different organisations address unique or similar challenges and risks. Our engagements are delivered by team\
+members who specialise in providing cyber/information security and privacy advisory and assurance, rather than generalist. Some of our suite of services, delivered\
 by our specialists, include the following:
 
-- Advisory and Technical Security Assessments: Evaluating control requirements against various compliance frameworks and publications such as DISP, ASD,
+- Advisory and Technical Security Assessments: Evaluating control requirements against various compliance frameworks and publications such as DISP, ASD,\
   NIST, CPS, ISO, PCI DSS, CIS, CSA, OWASP, COBIT, and more.
-- Cyber Security Advisory, Strategy & Management: Offering guidance on cyber best practices, implement strategies, continuous improvement to ensure
+- Cyber Security Advisory, Strategy & Management: Offering guidance on cyber best practices, implement strategies, continuous improvement to ensure\
   business objectives are met.
 - Defense Industry Security Program: Assessment, advisory, audits and implementation to maintain security controls that align with DISP standards.
-- Penetration and Technical Security Assessments: External and internal network, wireless, web and mobile application, API testing, code and configuration
+- Penetration and Technical Security Assessments: External and internal network, wireless, web and mobile application, API testing, code and configuration\
   reviews, and social engineering.
 - Business Continuity and Crisis Management: Disaster recovery, incident response audits, reviews, and consulting.
 - Audit and Assurance: Cyber security, IT general and application control audits, reviews, and consulting services.
@@ -85,29 +85,29 @@ Key Services:
 - Enterprise and Security Architecture
 - Cyber Management and Compliance
 - Continuity (IT Disaster Recovery, Incident Management, Backup and Recovery)
-- Frameworks and Standards:
+- Frameworks and Standards:\
   Experience with various better practice frameworks and standards such as DISP, NIST, COBIT, ASD Essential Eight, PCI DSS, GDPR, and more.
 ## Discriminators
 
 RSM's discriminators, or unique differentiators, include:
 
-1. Prior Experience and Expertise:
-   Extensive experience working with clients across various industries.
+1. Prior Experience and Expertise:\
+   Extensive experience working with clients across various industries.\
    Delivery of a wide range of continuity and resilience services.
-1. Diverse Specialisation:
-   Incorporation of specialists into the team to provide technically excellent services.
+1. Diverse Specialisation:\
+   Incorporation of specialists into the team to provide technically excellent services.\
    Continuity experts ensuring value and fit-for-purpose outcomes.
-1. Senior Level Commitment:
+1. Senior Level Commitment:\
    Demonstrated commitment from senior leaders, ensuring clients benefit from their skills and expertise.
-1. Sharing of Lessons Learnt:
-   Sharing ideas on improving resilience control environments.
+1. Sharing of Lessons Learnt:\
+   Sharing ideas on improving resilience control environments.\
    Leveraging good practices from existing client base.
-1. Practical Solutions:
-   Known for a factual validation approach.
-   Obtaining buy-in from relevant stakeholders before drafting reports.
+1. Practical Solutions:\
+   Known for a factual validation approach.\
+   Obtaining buy-in from relevant stakeholders before drafting reports.\
    Working with management to identify practical and realistic recommendations.
-1. Value Addition:
-   Adding value through process improvement.
-   Recognized for a continuous improvement mindset.
-   Applying lean principles and process improvement in services.
+1. Value Addition:\
+   Adding value through process improvement.\
+   Recognized for a continuous improvement mindset.\
+   Applying lean principles and process improvement in services.\
    These differentiators highlight RSM's commitment to delivering high-quality, specialized, and practical solutions tailored to the unique needs of our clients.

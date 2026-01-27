@@ -34,5 +34,5 @@ Aerospace NDI is involved in aircraft component maintenance, including wheels/ b
 - manufacture of ground support equipment and tooling
 ## Capabilities
 
-We provide a range of services for local and interstate clients, with almost all of these services carried out in-house. Customers therefore benefit from reduced costs and faster turnaround times. Aerospace NDI offers a rapid response one-stop shop service and works closely with operators to assist them in maintaining flying schedules.
+We provide a range of services for local and interstate clients, with almost all of these services carried out in-house. Customers therefore benefit from reduced costs and faster turnaround times. Aerospace NDI offers a rapid response one-stop shop service and works closely with operators to assist them in maintaining flying schedules.\
 The majority of our workforce is from a military background.

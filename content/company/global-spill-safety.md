@@ -70,4 +70,4 @@ Manufacturer-direct supply and pricing to support expedited service and delivery
 
 Solutions-driven approach to on-site spill and safety equipment.
 
-- Australia's future is Australian made\*\*
+**Australia's future is Australian made**

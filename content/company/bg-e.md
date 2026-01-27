@@ -45,14 +45,14 @@ By effectively executing these projects, we have contributed significantly to th
 
 Our mission is clear: leveraging our diverse and specialised engineering expertise to deliver comprehensive innovation and solutions, safeguarding our nation's interests in the Defence industry. Some of our key organisation capabilities include:
 
-- Civil Engineering\*\*: We deliver end-to-end civil engineering services including design, documentation, and supervision across roads, rail, and land developments.
-- Structural Engineering\*\*: We design high-performing structures in collaboration with industry leaders, using advanced materials and creative engineering.
-- Flood Management & Hydrology\*\*: We specialise in comprehensive flood risk management solutions designed to protect communities and infrastructure.
-- Digital Engineering\*\*: We leverage cutting-edge technologies to deliver smart and efficient digital engineering solutions.
-- Construction Engineering\*\*: We provide innovative and tailored designs and engineering strategies that meet the demands of complex and unconventional projects.
-- Bridge Engineering\*\*: We specialise in innovative bridge design, using advanced techniques and materials for award-winning outcomes.
-- Materials & Durability\*\*: We deliver durable engineering solutions by combining technical expertise with practical insights and academic collaboration.
-- Traffic & Transport Planning\*\*: We develop transport strategies that improve mobility, safety, and sustainability through robust, data-driven planning.
+**Civil Engineering**: We deliver end-to-end civil engineering services including design, documentation, and supervision across roads, rail, and land developments.\
+**Structural Engineering**: We design high-performing structures in collaboration with industry leaders, using advanced materials and creative engineering.\
+**Flood Management & Hydrology**: We specialise in comprehensive flood risk management solutions designed to protect communities and infrastructure.\
+**Digital Engineering**: We leverage cutting-edge technologies to deliver smart and efficient digital engineering solutions.\
+**Construction Engineering**: We provide innovative and tailored designs and engineering strategies that meet the demands of complex and unconventional projects.\
+**Bridge Engineering**: We specialise in innovative bridge design, using advanced techniques and materials for award-winning outcomes.\
+**Materials & Durability**: We deliver durable engineering solutions by combining technical expertise with practical insights and academic collaboration.\
+**Traffic & Transport Planning**: We develop transport strategies that improve mobility, safety, and sustainability through robust, data-driven planning.
 
 Our Defence team has a wealth of relevant and recent experience in leveraging our organisation's capabilities to successfully deliver high-quality technical solutions to a variety of key Defence projects. Our team's expertise extends to collaborating with various stakeholders to ensure that the solutions provided align with the specific requirements and objectives of each project. The following are our key Defence project experience:
 

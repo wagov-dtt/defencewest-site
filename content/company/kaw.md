@@ -130,10 +130,8 @@ In 2019 KAW Engineering, expanded into a 3rd workshop facility in Karratha resul
 
 - 5 x Site Supervisors with extensive marine experience
 
-- Safety record\*\*
+**Safety record**
 
 - KAW Engineering has been operating since 1983 and in that time have never incurred a Lost Time Injury for any on site works.
-
 - For all incidents, including near misses etc. we track and monitor through our Integrated Management System. All are reviewed and assessed by our management team and any necessary changes identified and implemented. Following this, any changes are monitored closely for effectiveness.
-
 - 9 Years fully accredited ISO HSE Management System with 0 Major Non-conformance or significant at fault injuries.

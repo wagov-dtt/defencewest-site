@@ -48,7 +48,7 @@ Sofraco is a wholly Australian owned engineering consultancy & service provider 
 Sofraco's emphasis is on providing a holistic, turn-key solution for the support of capital equipment, spanning pre-acquisition, through-life-support to decommissioning and disposal.
 ## Capabilities
 
-Sofraco's capabilities are comprised of two interoperating departments: Professional Engineering and
-Engineering Support Services. A key differentiator for Sofraco is the versatility of the team combining
-the capabilities these two departments possess in turn enabling the delivery of turnkey, system-wide
+Sofraco's capabilities are comprised of two interoperating departments: Professional Engineering and\
+Engineering Support Services. A key differentiator for Sofraco is the versatility of the team combining\
+the capabilities these two departments possess in turn enabling the delivery of turnkey, system-wide\
 engineering solutions.

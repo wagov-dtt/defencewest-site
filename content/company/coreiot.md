@@ -72,7 +72,7 @@ Based on the following sources:
 
   SSF is specially designed for SMEs with no or limited technology teams. SSF is easy to implement and delivers value straight away.
 
-  COREIoT is ISO 27001 and ISO 9001 certified
-  Key partners include: Advanced Manufacturing Growth Centre (AMGC), AMTIL, Chamber of Commerce and Industry WA, Henderson Alliance, ODIS, Microsoft
-  Key memberships: Henderson Alliance, CCIWA, AUSMINE and Host employers in the Defence industries Pathway Program
+  COREIoT is ISO 27001 and ISO 9001 certified\
+  Key partners include: Advanced Manufacturing Growth Centre (AMGC), AMTIL, Chamber of Commerce and Industry WA, Henderson Alliance, ODIS, Microsoft\
+  Key memberships: Henderson Alliance, CCIWA, AUSMINE and Host employers in the Defence industries Pathway Program\
   Key Customers: Barminco, Perth Childrens Hospital, Water Corporation, Schlam Payload, R.Moore & Sons, Pedco Engineering, STW Industries, Klinger Australia, A.D. Coote & Co

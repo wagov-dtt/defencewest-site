@@ -41,8 +41,8 @@ longitude: 115.852769
 
 ## Overview
 
-Registered in Western Australia in 1985, Altrad Services is a global multi-services provider working in partnership with our clients to build, protect and extend the life of their assets. We deliver complete and innovative solutions, to the highest standards whilst providing a safe working environment for all stakeholders.
-Altrad Services is a leader in the provision of industrial services, generating high added value solutions principally for the Naval Defence, Oil & Gas, Energy, Process and Mining sectors.
+Registered in Western Australia in 1985, Altrad Services is a global multi-services provider working in partnership with our clients to build, protect and extend the life of their assets. We deliver complete and innovative solutions, to the highest standards whilst providing a safe working environment for all stakeholders.\
+Altrad Services is a leader in the provision of industrial services, generating high added value solutions principally for the Naval Defence, Oil & Gas, Energy, Process and Mining sectors.\
 Altrad Services is part of the Altrad Group, who employs around 35,000 people and owns established international brands including Cape, Hertel and Prezioso Linjebygg.
 ## Capabilities
 

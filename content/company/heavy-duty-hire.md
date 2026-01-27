@@ -43,8 +43,8 @@ longitude: 115.8532676
 Our company has been working on defence bases in WA for around 12 months as a sub contractor. We have completed earthworks projects at Bindoon Training Facility, Garden Island and Pearce Airbase. We provide both equipment, operators and a project management that keeps projects safe, efficient and compliant.
 ## Capabilities
 
-Earthmoving equipment hire - Excavators, Front End Loaders, Tipper trucks (Rigid and Articulating),
-Transportable accommodation hire (delivery, servicing, refilling) - Site offices, Lunch rooms, toilets, generators, water tanks, secure fuel storage.
+Earthmoving equipment hire - Excavators, Front End Loaders, Tipper trucks (Rigid and Articulating),\
+Transportable accommodation hire (delivery, servicing, refilling) - Site offices, Lunch rooms, toilets, generators, water tanks, secure fuel storage.\
 Operator capability - With our competent operators, we can help deliver projects safely, efficiently and on time.
 ## Discriminators
 

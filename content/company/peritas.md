@@ -48,7 +48,7 @@ Peritas has evolved significantly from our three-person office in 2008 to become
 We deliver robust and resilient engineering design solutions tailored for the demanding requirements of the Australian Defence Industry. At Peritas we ensure to deliver secure, efficient and cost effective design that meets the stringent standards of Defence projects.
 ## Capabilities
 
-Capabilities:
+Capabilities:\
 Comprehensive Engineering services - Feasibility studies & Master planning. Concept & Preliminary Design. Design modelling & documentation (including advanced BIM capabilities).
 
 Specialised Engineering Disciplines - civil engineering (site development, infrastructure). Structural Engineering (building and protective structures). Construction Engineering (planning, execution, and management), High performance Floor Design (vibration control, specialised loading).
@@ -57,15 +57,15 @@ Project Lifecycle Support - Full project lifecycle support form initial concept 
 
 Construction support & Supervision
 
-Examples of previous projects Peritas Consulting have worked on:
-Campbell Barracks Upgrades - Access and Carparks
-AMC Henderson - Subdivision and infrastructure works
-Pearce Airbase - Various Maintenance contracts (Civil & Structural consultancy works)
+Examples of previous projects Peritas Consulting have worked on:\
+Campbell Barracks Upgrades - Access and Carparks\
+AMC Henderson - Subdivision and infrastructure works\
+Pearce Airbase - Various Maintenance contracts (Civil & Structural consultancy works)\
 HMAS Stirling, Garden Island (Various maintenance and land based upgrade projects)
 
-- Austral Shipyards Infrastructure development\*\*
-  Austral Ships Pty Ltd (Structural - Marine) - $12million value
-  Over the years we have seen Austal Ships grow from a small group of dedicated shareholder employees into one of the best large aluminium fast vessel designers/constructors in the world.
+**Austral Shipyards Infrastructure development**\
+Austral Ships Pty Ltd (Structural - Marine) - $12million value\
+Over the years we have seen Austal Ships grow from a small group of dedicated shareholder employees into one of the best large aluminium fast vessel designers/constructors in the world.
 
 With every expansion, we were involved both with the design and construction/management of their new facilities.
 

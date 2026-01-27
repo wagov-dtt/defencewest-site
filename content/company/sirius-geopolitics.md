@@ -35,24 +35,19 @@ Sirius Geopolitics is a boutique research and advisory service that helps govern
 Our vision is to shape a more informed, connected, and resilient world, where democratic values, responsible technology, and strategic cooperation underpin lasting stability and collective strength.
 ## Capabilities
 
-- Sirius Geopolitics provides strategic intelligence, geopolitical analysis, and advisory services that help defence industry stakeholders understand and navigate the rapidly evolving Indo Pacific security environment.\*\* Our capabilities centre on translating complex geopolitical, technological, and national security trends into actionable insights that support industry decision-making, risk management, business development, and strategic positioning.
+**Sirius Geopolitics provides strategic intelligence, geopolitical analysis, and advisory services that help defence industry stakeholders understand and navigate the rapidly evolving Indo Pacific security environment.** Our capabilities centre on translating complex geopolitical, technological, and national security trends into actionable insights that support industry decision-making, risk management, business development, and strategic positioning.
 
 We specialise in:
 
 - **Geostrategic research and analysis** across the Indo-Pacific, including great-power competition, hybrid warfare, disinformation, cognitive security, and emerging technologies.
-
 - **Defence policy interpretation and strategic forecasting**, helping organisations align products, services, and investment decisions with Australia's evolving priorities, including AUKUS, critical minerals, sovereign capability, and workforce challenges.
-
 - **Stakeholder engagement and briefing services**, including tailored presentations, capability briefings, and executive education for industry, government, and community stakeholders.
 
-- Recent work includes:\*\*
+**Recent work includes:**
 
 - Authoring multiple publications for the Perth USAsia Centre focused on defence, technology, and strategic competition--including *Disinformation and Cognitive Warfare* and *Technopolitik: Technology, Geostrategic Competition and Warfare.*
-
 - Delivering expert commentary and public engagement on AUKUS, WA's defence industrial base, and Indo Pacific strategic trends, supporting local companies seeking to understand defence priorities and operational environments.
-
 - Providing insights and advice to defence and military forces, including the Royal Australian Navy, and most recently, France's military academy.
-
 - Providing tailored geopolitical and security briefings to defence-adjacent industry groups, including contributions to organisations such as the Women in Defence Association, and participation in defence-industry events across Western Australia.
 ## Discriminators
 

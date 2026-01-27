@@ -26,7 +26,7 @@ longitude: 116.01436
 
 ## Overview
 
-- TL Engineering\*\*\* **started in 1970 as a small backstreet business in Perth WA.**
+***TL Engineering*** **started in 1970 as a small backstreet business in Perth WA.**
 
 Today TL Engineering is a leading motor vehicle body builder based in Western Australia, specialising in the design, manufacture, and supply of high-quality, custom-built commercial and retail vehicle bodies for a variety of industries.
 
@@ -38,7 +38,7 @@ At TL Engineering, we take pride in our commitment to safety, quality, and custo
 
 Our product range includes a wide variety of custom-built vehicle bodies, including but not limited to service bodies, truck bodies, Ute trays, alloy trays and canopies, and more. Our focus on innovation and customisation allows us to offer a wide range of options and configurations to suit any application.
 
-- We are proud to be an industry leader in Western Australia, and we are looking to partner with Defence for future opportunities for general fabrication. We have a large talented team of fabricators and capacity to service Defence.\*\*\*
+***We are proud to be an industry leader in Western Australia, and we are looking to partner with Defence for future opportunities for general fabrication. We have a large talented team of fabricators and capacity to service Defence.***
 ## Capabilities
 
 - Steel and Aluminium Fabrication services

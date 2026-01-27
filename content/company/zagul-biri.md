@@ -55,18 +55,13 @@ Zagul Biri actively engages with Defence West, Aboriginal business hubs, and ind
 
 Zagul Biri provides advisory and engagement services that support Defence and Defence industry organisations to strengthen workforce participation, reduce engagement risk, and deliver culturally informed outcomes aligned with Defence and WA Government priorities.
 
-- Key capabilities include:\*\*
+**Key capabilities include:**
 
 - Aboriginal and Torres Strait Islander cultural advisory and engagement
-
 - Indigenous workforce attraction, retention, and participation strategies
-
 - Cultural capability and leadership briefings
-
 - Social procurement advisory and Aboriginal business engagement pathways
-
 - Stakeholder engagement across Defence, industry, government, and community
-
 - Trusted brokerage between Defence, primes, SMEs, and First Nations organisations
 
 Zagul Biri's directors have delivered these capabilities through extensive Defence service and senior leadership roles. This includes advising Defence leaders on Indigenous workforce matters, supporting First Nations personnel within Defence environments, and facilitating culturally informed engagement within complex and regulated organisations.
@@ -74,17 +69,17 @@ Zagul Biri's directors have delivered these capabilities through extensive Defen
 The company supports Defence primes and SMEs by providing practical, culturally informed advisory services that strengthen social licence, workforce outcomes, and long-term community relationships.
 ## Discriminators
 
-- **First Nations-led with lived Defence experience**
+- **First Nations-led with lived Defence experience**\
   Directors with Royal Australian Navy service and strong Defence cultural understanding.
-- **Cultural insight translated into delivery outcomes**
+- **Cultural insight translated into delivery outcomes**\
   Practical advisory services focused on real-world application.
-- **Aligned with WA Defence priorities**
+- **Aligned with WA Defence priorities**\
   Workforce participation, social procurement, and sustainable industry growth.
-- **Trusted relationships across sectors**
+- **Trusted relationships across sectors**\
   Established networks across Defence, government, industry, and First Nations organisations.
-- **Risk-aware and Defence-ready**
+- **Risk-aware and Defence-ready**\
   Operates with an understanding of Defence governance, confidentiality, and accountability.
-- **Agile and scalable**
+- **Agile and scalable**\
   Able to support primes, SMEs, and government across planning, engagement, and delivery.
-- **Values-driven and professionally governed**
+- **Values-driven and professionally governed**\
   Grounded in integrity, cultural responsibility, and commercial discipline.

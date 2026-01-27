@@ -47,17 +47,17 @@ In addition to its benefits for defence, the Smart BCD's adaptable and modular d
 NAUTIC Technologies is committed to developing innovative solutions that prioritise safety and enhance operational effectiveness. The Smart BCD is a significant step forward in creating tools that support users across multiple sectors, offering a blend of advanced technology and user-focused design.
 ## Discriminators
 
-- Expertise Rooted in Navy Service:
+- Expertise Rooted in Navy Service:\
   NAUTIC Technologies was founded by a father and son team with a combined 35 years of active service in the Royal Australian Navy. Their extensive experience in high-stakes underwater operations ensures products are designed with unmatched practicality, reliability, and performance.
-- Innovative Diving Solutions:
+- Innovative Diving Solutions:\
   The flagship product, the Smart Buoyancy Control Device (Smart BCD), incorporates advanced technologies that prioritise safety, precision, and ease of use. It is tailored to meet the diverse needs of military, commercial, and recreational divers.
-- Commitment to Performance and Safety:
+- Commitment to Performance and Safety:\
   The founders' subject matter expertise (SME) ensures every feature of the Smart BCD is meticulously designed and rigorously tested to meet the highest standards of safety and operational efficiency.
-- Diverse Applications:
+- Diverse Applications:\
   NAUTIC's solutions are versatile, supporting defense operations while also catering to commercial industries like underwater exploration and recreational diving, making its products adaptable to a wide range of users.
-- Australian-Driven Innovation:
+- Australian-Driven Innovation:\
   As an Australian-owned and operated company, NAUTIC Technologies reflects the values of innovation and quality that align with the nation's defense and commercial priorities.
-- Focus on Collaboration:
+- Focus on Collaboration:\
   NAUTIC Technologies actively builds partnerships with the University of Adelaide (Defence TrailBlazer participant) and UNSW (Fianalist in Defence 10X program), as well with local industry, and research institutions to foster innovation and accelerate product development.
 
 NAUTIC Technologies sets itself apart through its unique combination of deep operational expertise, innovative technology, and a relentless commitment to safety and performance. With a clear focus on quality and adaptability, it offers solutions that redefine underwater systems across defence, commercial, and recreational domains.

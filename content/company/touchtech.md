@@ -33,7 +33,7 @@ longitude: 115.678321
 
 ## Overview
 
-Touchtech Australia Pty Ltd (Touchtech) is a locally owned Bunbury based company that focuses on software and product development to solve business concerns for our clients.
+Touchtech Australia Pty Ltd (Touchtech) is a locally owned Bunbury based company that focuses on software and product development to solve business concerns for our clients.\
 Touchtech has a range of products that we can customise to meet individual client needs, and can develop bespoke software and products specifically to suit a client. Clients have included small business, mining, transport & earth moving, commercial fishing and government.
 ## Capabilities
 

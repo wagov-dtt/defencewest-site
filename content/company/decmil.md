@@ -2,7 +2,7 @@
 name: Decmil
 date: '2025-01-27'
 overview: Decmil is a leading Australian construction and engineering company providing services across a range of industry sectors.
-website: https://www.decmil.com
+website: https://decmil.com
 contact_name: Drew Wilson
 address: 20 Parkland Road, Osborne Park WA 6017
 phone: +61 8 6240 8114

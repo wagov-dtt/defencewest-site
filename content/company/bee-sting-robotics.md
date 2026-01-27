@@ -2,7 +2,7 @@
 name: Bee Sting Robotics Pty Ltd
 date: '2025-01-27'
 overview: West Australia's first China-free supply chain FPV drone manufacturer, who's entire supply chain is within Australia or Allied country's.
-website: https://beestingrobotics.com
+website: https://www.beestingrobotics.com
 contact_name: Callum Gillespie Misich
 contact_title: Director
 address: 10/30 deviation way, Neerabup WA 6031

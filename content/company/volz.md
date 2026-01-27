@@ -64,7 +64,7 @@ A proud member of the Volz Group based in Germany; our core business is 316Ti St
 
 EN10204/3.1 material traceability is available for all products. With stocks in NSW, WA & QLD, supported by warehouses in Singapore & Germany, Volz are able to service your needs locally & globally.
 
-- DISCRIMINATORS\*\*
+**DISCRIMINATORS**
 
 316Ti - Titanium Stainless Steel and specialist production
 
@@ -80,7 +80,7 @@ Global support & supply network
 
 Experienced Senior Management Team
 
-- PRODUCTS\*\*
+**PRODUCTS**
 
 Threaded adaptors, tees & elbows, Hose fittings compatible with various standards/brands of hose, DIN2353 metric compression fittings,
 
@@ -88,13 +88,13 @@ Clamping technology - DIN3015, Tube - Imperial & Metric, Twin ferrule tube fitti
 
 Quick release couplings - all styles, Fire suppression fittings, Lubrication fittings, SAE flanged adaptors, Tooling, Specialised production, Exotics - SAF, Monel, CuNi
 
-- KEY CUSTOMERS\*\*
+**KEY CUSTOMERS**
 
 Total Marine Technology, MMA Offshore, ASC, Austal, QMTS, JFD Global, BAE Systems, Cooper Fluid Systems, Alfagomma Group, Pirtek Fluid Systems,
 
 Veem Engineering, Terex Jacques, Enermech, Ryco Hydraulics, Bosch Rexroth, Parker Hannifin, Enzed, Multiple Australian OEM's
 
-- QUALITY & ACCREDITATIONS\*\*
+**QUALITY & ACCREDITATIONS**
 
 As part of our quality program, Volz currently holds certification for our products with internationally recognised bodies:
 

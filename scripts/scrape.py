@@ -120,21 +120,16 @@ def html_to_md(html: str) -> str:
     """Convert HTML to clean markdown compatible with Hugo/Goldmark."""
     if not html:
         return ""
-    # Strip tables (often used as formatting wrappers in source data)
+    # Strip tables (used as layout wrappers) and images, but keep links
     text = md(
         html,
         heading_style="ATX",
         bullets="-",
-        strip=["a", "img", "table", "tr", "td", "th", "tbody", "thead"],
+        strip=["img", "table", "tr", "td", "th", "tbody", "thead"],
     )
     text = normalize_text(text)
 
-    # Normalize bullet-like patterns to markdown list items
-    text = re.sub(r"^[\-\*]+\s*", "- ", text, flags=re.MULTILINE)
-    text = re.sub(r"\n{3,}", "\n\n", text)  # Collapse multiple newlines
-    text = re.sub(r"[ \t]+$", "", text, flags=re.MULTILINE)  # Trim trailing whitespace
-
-    # Use mdformat to ensure proper blank lines before lists (Hugo/Goldmark requirement)
+    # Use mdformat to normalize whitespace and ensure proper blank lines before lists
     try:
         text = mdformat.text(text.strip())
     except Exception:

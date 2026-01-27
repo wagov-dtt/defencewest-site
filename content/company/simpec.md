@@ -56,14 +56,21 @@ At the centre of our execution capability is a **highly skilled, directly employ
 Our people are supported by **mature project management systems and robust quality assurance processes** that ensure safe, consistent, and compliant delivery across all phases of construction. From early-stage construction planning through to commissioning and final handover, we have the **experience, systems, and workforce** in place to deliver **end-to-end project execution** across a wide range of project types and environments.
 ## Discriminators
 
-- LiveHire, Pronto, INX and Sitepass
-
-- ISO 9001 Quality,
-
-- ISO 14001 Environment
-
-- ISO 45001 Safety
-
-- ISO27001 Information Security
-
-- Office of the Federal Safety Commission (OFSC)
+- ```
+     LiveHire, Pronto, INX and Sitepass
+  ```
+- ```
+     ISO 9001 Quality,
+  ```
+- ```
+     ISO 14001 Environment
+  ```
+- ```
+     ISO 45001 Safety
+  ```
+- ```
+     ISO27001 Information Security
+  ```
+- ```
+     Office of the Federal Safety Commission (OFSC)
+  ```

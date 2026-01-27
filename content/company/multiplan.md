@@ -37,13 +37,13 @@ longitude: 115.92706
 
 Bringing design ideas to life since 1993.
 
-At Multiplan we are more than just tech-savvy construction modelling experts. We are problem-solvers, innovators and value-adders. We are relationship-builders, collaborators and solution-seekers. Taking pride in everything we do comes naturally, underpinning our reputation as a trusted digital engineering partner. Our trademarked Multiplan logo is a symbol for our exceptional customer service.
+At Multiplan we are more than just tech-savvy [construction modelling](https://www.multiplan.com.au/expertise/construction-modelling) experts. We are problem-solvers, innovators and value-adders. We are relationship-builders, collaborators and solution-seekers. Taking pride in everything we do comes naturally, underpinning our reputation as a trusted digital engineering partner. Our trademarked Multiplan logo is a symbol for our exceptional customer service.
 
 Leading the delivery of construction modelling and structural steel detailing services in Australia - and beyond
 
 We are based in Perth, Western Australia,
 
-Over the years we have built a world-class team of tech-savvy construction modelling and steel detailing experts who ensure Multiplan can take on any project, no matter what the size or location.
+Over the years we have built a world-class team of tech-savvy [construction modelling](https://www.multiplan.com.au/expertise/construction-modelling) and [steel detailing](https://www.multiplan.com.au/expertise/shop-detailing) experts who ensure Multiplan can take on any project, no matter what the size or location.
 
 We are a values-driven organisation, but our values are more than just words.
 ## Capabilities
@@ -54,7 +54,7 @@ Our Direct Client Engagement (DCE(tm)) model is the next evolution of the projec
 
 Expertise
 
-We're the all-important link between project teams, their builder, engineers, and architects, and the steel fabrication process, we translate ideas from engineering into fully-resolved digital construction models and millimetre-perfect shop drawings - right down to the last steel beam, plate and bolt.
+We're the all-important link between project teams, their builder, engineers, and architects, and the steel fabrication process, we translate ideas from engineering into fully-resolved digital [construction models](https://www.multiplan.com.au/expertise/construction-modelling) and millimetre-perfect [shop drawings](https://www.multiplan.com.au/expertise/shop-detailing) - right down to the last steel beam, plate and bolt.
 
 Spotting issues before they arise is a key part of our role. We add innovation and value through early engagement and efficient scheduling. Our experienced, expert team has an unbeatable track record in finishing on time and on budget. We forge proactive, reliable project partnerships to deliver industry-leading solutions on mega projects.
 

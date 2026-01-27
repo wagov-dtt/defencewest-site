@@ -37,8 +37,8 @@ regions:
 - pilbara
 - south-west
 - wheatbelt
-latitude: -32.1522847
-longitude: 115.7829296
+latitude: -32.1522788
+longitude: 115.7834794
 ---
 
 ## Overview

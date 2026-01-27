@@ -33,17 +33,15 @@ longitude: 115.8544416
 
 Currently developing Robodock, a floating dry dock that undertakes blasting and painting services. Like a car wash for ships. The ship sails in, is lifted out of water and robotic arms undertake repairs, blasting, painting, welding.
 
-- Stage 1: Land-based services.\*\*
+**Stage 1: Land-based services.**
 
 Robots to undertake blasting and painting on ships on hardstand
 
 - Very large robotic arm of up to 32m long with blasting head that allows for painting preparation of ships and submarines.
-
 - Vacuum extraction to eliminate waste and hazardous dust
-
 - Painting capability
 
-- Stage 2: Robodock.\*\*
+**Stage 2: Robodock.**
 
 Mounting of proven technology into a floating dry dock and adding extra capabilities. independent of land based facilities.
 

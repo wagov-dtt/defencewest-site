@@ -25,7 +25,7 @@ longitude: 115.7634366
 
 ## Overview
 
-AB&H Pty Ltd is a Technology Services company specialising in Agile Program and Project Management. Our project managers are PRINCE2 and PMI certified.
+AB&H Pty Ltd is a Technology Services company specialising in Agile Program and Project Management. Our project managers are PRINCE2 and PMI certified.\
 AB&H Pty Ltd also provides professional services for ICT Technology planning - including:,
 
 - Cyber Security

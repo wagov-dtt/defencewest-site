@@ -38,17 +38,14 @@ longitude: 115.9645118
 
 Airflite has significant involvement with the Australian Defence Forces and other worldwide Defence agencies, offering a broad range of capabilities and vast experience to support military operations on a global scale.
 
-- Company capabilities\*\* include:
+**Company capabilities** include:
 
 - aircraft (fixed and rotary wing) and component maintenance
-
 - spare parts and product support
-
 - aircraft sales and leasing
-
 - fixed base of operations for VIP Jet Charter support
 
-- Component capabilities\*\* incorporate niche services such as Non Destructive Testing (NDT), calibration, structural/sheet metal repair, avionics, life support systems, egress systems, hydraulics, batteries and many more.
+**Component capabilities** incorporate niche services such as Non Destructive Testing (NDT), calibration, structural/sheet metal repair, avionics, life support systems, egress systems, hydraulics, batteries and many more.
 
 Airflite's support includes all operational and deeper level maintenance, component repair/ overhaul and flight line activities for the Pilatus PC9/A aircraft in a 'Turn Key' solution for the for the Royal Australian Air Force across multiple locations in Australia.
 
@@ -57,6 +54,6 @@ Airflite is currently pursuing growth opportunities through the expansion of exi
 
 Airflite is an experienced contractor and Subcontractor to Primes in the Defence sector. The Company holds numerous quality approvals, including from Directorate General Technical Airworthiness (DGTA), and from
 Civil Aviation Safety Authority (CASA),
-EASA and FAA to Part 145 standards.
+EASA and FAA to Part 145 standards.\
 Airflite understands how to do business with Defence, and how to establish and maintain the highest levels of quality, continuous improvement
 and compliance.

@@ -61,22 +61,22 @@ From cyber and cloud to strategy, visualisation and mission analytics, we can dr
 
 Backed by our cutting-edge services and solutions, how will you shape a more incredible tomorrow?
 
-- Industry Strategy and Ecosystems\*\*
+**Industry Strategy and Ecosystems**
 
 Our Industry Strategy and Ecosystems team shapes the strategic direction of evolving and emerging industries. We support organisations and their ecosystems to understand and respond to prevailing global challenges, creating outcomes that will leave the world in a better place than we found it.
 
-- Value Chain Transformation\*\*
+**Value Chain Transformation**
 
 It's crucial to have an in-depth understanding of your value chain so you can focus on what generates the best outcomes. With offerings such as Illuminate, we build resilience through digital intelligence that provides visibility of your supply chains, improving transparency across multiple tiers. We help you leverage big data analytics and augmented intelligence to generate comprehensive supplier network maps, identifying opportunities and risk exposures, and turning them into actionable, industry-specific insights.
 
-- Digital Twins and Simulation\*\*
+**Digital Twins and Simulation**
 
-Reimagine your ecosystems into a dynamically run and operated network by converting the physical to digital with our digital twin, simulation and machine learning technologies. Through Optimal Reality, we help you understand your business - of now and of the future - so you can control and action change in real-time, with tangible results.
+Reimagine your ecosystems into a dynamically run and operated network by converting the physical to digital with our digital twin, simulation and machine learning technologies. Through [Optimal Reality](https://www.deloitte.com/au/en/products/optimal-reality-digital-twin.html), we help you understand your business - of now and of the future - so you can control and action change in real-time, with tangible results.
 
-- Product Strategy and Lifecyle Management\*\*
+**Product Strategy and Lifecyle Management**
 
 We create smart, safe and sustainable products along the digital thread so you can manage, simulate and improve assets, from business needs through to disposal. Using our product lifecycle management expertise, we create the digital backbone you need to be a business of today and tomorrow.
 
-- Industry 4.0 and Emerging Industrial Technology\*\*
+**Industry 4.0 and Emerging Industrial Technology**
 
 This is where we integrate and accelerate the industrial technology needed to improve our world by connecting technology, ecosystems, and reality together, in real-time.

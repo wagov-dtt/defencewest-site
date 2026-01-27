@@ -57,16 +57,12 @@ Our goal is simple: to help create strong, stable, scalable enterprises that are
 
 We understand the distinctive challenges facing the WA defence industry -- long contracting cycles, demanding compliance and governance standards, and the need to balance capital intensity with agility. Stratosfear's integrated service model combines deep financial acumen with strategic and operational execution capability to ensure our clients are investment-ready, audit-compliant and commercially competitive.
 
-- Core Competencies:\*\*
+**Core Competencies:**
 
 - **Corporate Finance & Capital Advisory:** We design and negotiate capital structures optimised for working-capital efficiency, debt and equity stability, and sustainable funding -- critical for defence suppliers scaling to meet Commonwealth and Tier 1 contractor requirements.
-
 - **Strategic Management & Planning:** Our diagnostics, growth strategies and market analysis position WA defence businesses to diversify contracts, strengthen governance and align operations to Defence procurement expectations.
-
 - **Financial Performance & Managerial Accounting:** Through three-way forecasting, job-costing, and breakeven analysis, we improve margin control and project delivery certainty across engineering, logistics and technology programs.
-
 - **Transactional & Advisory Expertise:** We guide M&A, divestment and investment decisions that expand capability, secure partnerships and attract aligned investors.
-
 - **Operational Leadership & Governance:** We embed systems for accountability, compliance, and transformation leadership -- vital in regulated defence environments.
 
 Our prior work with a WA-based defence engineering firm demonstrates our impact: restructuring financial operations, optimising cash flow and enabling the business to secure new Department of Defence contract extensions.
@@ -74,18 +70,12 @@ Our prior work with a WA-based defence engineering firm demonstrates our impact:
 Stratosfear builds the financial and strategic foundations that enable Western Australia's defence industry to scale with strength and precision.
 ## Discriminators
 
-- Company Discriminators\*\*
+**Company Discriminators**
 
 - **Integrated Finance and Strategy Expertise:** Unlike traditional advisory firms, Stratosfear unites corporate finance, strategic management and operational execution under one roof -- enabling end-to-end solutions from boardroom strategy to field implementation.
-
 - **Proven Experience in High-Growth and Complex Sectors:** With deep roots in mining services, engineering and heavy industry, we bring battle-tested financial and operational frameworks directly transferable to defence manufacturing, sustainment and logistics environments.
-
 - **Hands-On, Execution-Focused Model:** We don't just advise -- we drive outcomes. Our "Guide" and "Drive & Do" delivery modes allow us to operate within management teams, providing practical, real-time execution support across financial control, governance and transformation.
-
 - **Established Defence and Industrial Relationships:** Experience working with defence-aligned organisations in Western Australia, including contractors supporting Defence infrastructure, engineering and logistics programs. Supported by a leadership team with prior Defence service experience and strong networks across industry and government.
-
 - **Capital Advisory Credentials:** Recognised for excellence in capital structure optimisation, working-capital management and funding procurement -- securing sustainable financial structures for complex, capital-intensive enterprises.
-
 - **WA-Centric Focus, National Capability:** Headquartered in Perth, Stratosfear is purpose-built for Western Australia's industrial economy, while maintaining interstate partnerships with financiers, legal advisors and strategic partners to enable scalable, cross-jurisdictional project delivery.
-
 - **Trusted by Established Clients:** Supporting a portfolio spanning civil contracting, engineering, and technology ventures -- each strengthened through our strategic, financial and operational alignment expertise.

@@ -60,52 +60,31 @@ We are experienced in servicing equipment at site and on vessels, and all necess
 We also have large, custom-built workshops designed to meet the requirements of our customers at the ports of Henderson, Sydney, Karratha and Darwin. Our workshops in Karratha, Henderson and Sydney also hold hyperbaric accreditation from the Royal Australian Navy.
 ## Capabilities
 
-- ARA Marine inspects, tests, services, repairs, recertifies and supplies:\*\*
+**ARA Marine inspects, tests, services, repairs, recertifies and supplies:**
 
 - FRC and rescue boats
-
 - Davits
-
 - Safety release hooks
-
 - Firefighting equipment and systems
-
 - Fire suppression systems
-
 - Portable firefighting equipment
-
 - Gas detection and calibration gas
-
 - Breathing air systems and Breathing Air Compressor Units (BACUs)
-
 - Breathing apparatus and long line units
-
 - Diving, breathing air, oxygen and mixed gas systems
-
 - Medium and high-pressure air/gas compressors and boosters
-
 - Pressure vessels, relief valves, gauges, heat exchangers, pipework and hoses
-
 - Fluid transfer pumps and accessories
-
 - Additional miscellaneous safety equipment
 
-- ARA Marine's other services include:\*\*
+**ARA Marine's other services include:**
 
 - Manufacture of breathing air packages
-
 - Oxygen cleaning of gas systems
-
 - Hire SCBA, Breathing Air Compressor Unit (BACU) packages
-
 - System design
-
 - Project management
-
 - Planning and management of maintenance including planned preventative, predictive and corrective maintenance on plant and equipment
-
 - Emergency maintenance including a 24-hour call-out service
-
 - Facilities and machinery appraisal
-
 - Minor works, renovations and refurbishments

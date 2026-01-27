@@ -2,7 +2,7 @@
 name: TraumaSim
 date: '2025-01-27'
 overview: TraumaSim deliver medically accurate products designed to simulate realistic traumatic injuries and medical conditions as well as providing training, workshops, part-task trainers and moulage technicians & supplies to industries and professionals around the world.
-website: https://traumasim.com.au
+website: https://www.traumasim.com.au
 contact_name: Nola Pearce
 contact_title: Managing Director
 address: Unit 7/21 McDonald Crescent, Bassendean WA 6054

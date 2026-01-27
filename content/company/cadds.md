@@ -64,7 +64,8 @@ Using advanced digital engineering, BIM modelling, and high-accuracy scanning, w
 
 Our fabrication and 3D printing capabilities enable rapid development of custom components, equipment guards, infrastructure elements, and small-batch manufactured solutions suited to Defence environments. Sustainability services (Emergen) support Defence through energy modelling, environmental compliance, and resilient design.
 
-- Recent Defence projects include:\*\*
+**Recent Defence projects include:**
+
 - **Robertson Barracks - Kennel Refurbishment (NT):** Architectural design, documentation (Concept, Draft, Final, IFT, IFC) and construction support across multiple buildings, including structural upgrades, roofing, lighting replacement, drainage works, corrosion treatment, and new kennel infrastructure.
 - **Defence Force - Cocos (Keeling) Islands:** Architectural, engineering, and certification services supporting facility upgrades, delivering Defence-compliant documentation for remote tropical conditions.
 

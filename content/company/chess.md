@@ -58,8 +58,8 @@ We maintain specialist facilities for carbon, stainless, and alloy steels, with 
 Our objective is to strengthen Australia's sovereign industrial capability by offering defence primes and Tier 1 contractors a reliable, WA-based partner for high-quality steel fabrication and modular assembly. Chess Engineering stands ready to support future maritime, infrastructure, and land-based defence projects through precision, compliance, and local expertise.
 ## Capabilities
 
-- Organisation Capabilities\*\*
-  Chess Engineering provides advanced steel fabrication, precision machining, modular assembly, and site installation services supporting Australia's maritime, infrastructure, and defence industries. Our ISO 9001, 14001 and 45001-certified systems ensure consistent quality, safety, and environmental performance across every stage of manufacture and installation.
+**Organisation Capabilities**\
+Chess Engineering provides advanced steel fabrication, precision machining, modular assembly, and site installation services supporting Australia's maritime, infrastructure, and defence industries. Our ISO 9001, 14001 and 45001-certified systems ensure consistent quality, safety, and environmental performance across every stage of manufacture and installation.
 
 We specialise in complex CC3-grade fabrication, heavy plate and structural assemblies, and high-accuracy machining of components for defence and industrial applications. Our integrated delivery model covers design support, detailing, fabrication, coating, and testing under full traceability and documented QA control. We maintain segregated bays for stainless, carbon, and alloy materials and work closely with approved coating and NDT contractors to meet naval and defence specifications.
 
@@ -70,26 +70,16 @@ Chess Engineering's capability is reinforced by qualified welding inspectors, in
 By combining precision fabrication, disciplined control, and ISO-aligned governance, Chess Engineering offers defence primes and Tier 1 contractors a trusted WA partner for local manufacture, modular assembly, and infrastructure support.
 ## Discriminators
 
-- Company Discriminators\*\*
+**Company Discriminators**
 
 - **Australian-owned and operated:** Established WA and NSW presence providing sovereign fabrication and engineering capability.
-
 - **ISO-certified systems:** Fully integrated management system accredited to ISO 9001 (Quality), ISO 14001 (Environment), and ISO 45001 (Safety).
-
 - **CC3 fabrication compliance:** Certified capability to deliver complex structural, mechanical, and modular assemblies to AS 5131 CC3 and AS/NZS 1554 standards.
-
 - **Proven defence experience:** Delivered critical steel and modular works for **Garden Island (NSW) Naval Base** supporting fleet maintenance and shore-based infrastructure upgrades.
-
 - **Henderson Alliance member:** Actively engaged within WA's defence industry network promoting local content and collaboration with primes and Tier 1 contractors.
-
 - **Advanced facilities:** Two modern Welshpool workshops with segregated stainless, carbon, and alloy bays; heavy-lift cranes; precision machining; and integrated QA tracking.
-
 - **Documented quality control:** End-to-end traceability through Inspection Test Plans (ITPs), Material Data Reports (MDRs), and third-party inspection sign-off.
-
 - **Experienced workforce:** Qualified welding inspectors, coded welders, and project managers trained for high-security and confined-space works.
-
 - **Key customers and partners:** Defence primes and Tier 1 EPCMs supporting naval, mining, and infrastructure programs.
-
 - **Strong safety and environmental record:** Zero LTI performance and proactive sustainability initiatives aligned with Commonwealth and Defence ESG priorities.
-
 - **Defence-ready posture:** DISP-aligned policies, secure data handling, and controlled workshop zones to support classified and sensitive projects.

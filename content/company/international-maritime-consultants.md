@@ -32,80 +32,114 @@ IMC Naval Architects (IMC) is an independent Australian naval architecture and m
 IMC offers consultancy services to Australian State and Federal Government agencies both above and below the line with a presence in Canberra to facilitate Commonwealth engagement.
 ## Capabilities
 
-- SHIP DESIGN\*\*
+**SHIP DESIGN**
 
 IMC works collaboratively with clients to provide bespoke vessel solutions tailored to operational objectives. The company has the skilled personnel, the latest design tools and experience to work successfully across the design cycle. From requirements analysis through concept development, to detailed structural and systems engineering and shipyard production drawings in both steel and aluminium.
 
-- Offshore Vessels
+- ```
+           Offshore Vessels
+  ```
+- ```
+           Defence / Law Enforcement Vessels
+  ```
+- ```
+           Commercial Vessels
+  ```
+- ```
+           Fishing / Research Vessels
+  ```
 
-- Defence / Law Enforcement Vessels
-
-- Commercial Vessels
-
-- Fishing / Research Vessels
-
-- MODIFICATION & CONVERSION\*\*
+**MODIFICATION & CONVERSION**
 
 Utilising its comprehensive in-house design capability, IMC offers project-related vessel modifications through to full vessel conversions. Through the development of a detailed understanding of project requirements, IMC combines the skills and experience of both parties to optimise solutions for the smallest modification through to a complete vessel role change. With experience and expertise across multiple marine sectors, IMC is able to identify and unlock value in existing vessel assets to provide their owners with new revenue streams as market conditions and technical solutions evolve.
 
-- Vessel Conversion
+- ```
+           Vessel Conversion
+  ```
+- ```
+           Vessel Modification
+  ```
 
-- Vessel Modification
-
-- NAVAL ARCHITECTURE\*\*
+**NAVAL ARCHITECTURE**
 
 Drawing on experience spanning the marine, shipping and offshore sectors, IMC offers naval architectural consultancy in support of operational decision making, strategic planning, system optimisation and regulatory compliance.
 
-- Motion and Operability Analysis
+- ```
+           Motion and Operability Analysis
+  ```
+- ```
+           Stability Analysis
+  ```
+- ```
+           Structural Design & Analysis
+  ```
+- ```
+           Systems Engineering
+  ```
+- ```
+           Regulatory Compliance
+  ```
 
-- Stability Analysis
-
-- Structural Design & Analysis
-
-- Systems Engineering
-
-- Regulatory Compliance
-
-- OFFSHORE ENGINEERING\*\*
+**OFFSHORE ENGINEERING**
 
 In support of Australia's burgeoning offshore oil and gas sector, IMC has developed a comprehensive understanding of the engineering needs of the offshore and broader maritime industries. Utilising a suite of the latest software design and analysis tools, combined with a comprehensive understanding of the relevant Codes and Standards, IMC offers a broad range of engineering solutions for the offshore sector.
 
-- Lift Engineering
+- ```
+           Lift Engineering
+  ```
+- ```
+           Transport Engineering
+  ```
+- ```
+           Mooring Design & Analysis
+  ```
+- ```
+           Operations Simulation
+  ```
+- ```
+           Jack-up Rigs
+  ```
 
-- Transport Engineering
-
-- Mooring Design & Analysis
-
-- Operations Simulation
-
-- Jack-up Rigs
-
-- ACQUISITION MANAGEMENT\*\*
+**ACQUISITION MANAGEMENT**
 
 IMC supports Government and commercial vessel acquisition programs with its technical and commercial expertise ensuring requirements and budgets are effectively and efficiently translated into successful operational capability. Working across the full range of vessel types and work scopes, IMC offers services in support of the following key project stages;
 
-- Requirements definition
-
-- Conceptual design
-
-- Technical specification development
-
-- Tender process management
-
-- Bid management
-
-- Technical evaluation
-
-- Commercial evaluation
-
-- Contract negotiation
-
-- Contract management
-
-- Contractor selection
-
-- Build supervision / owner's representation
-
-- Commissioning, sea trials and vessel delivery
-
-- Asset disposal
+- ```
+           Requirements definition
+  ```
+- ```
+           Conceptual design
+  ```
+- ```
+           Technical specification development
+  ```
+- ```
+           Tender process management
+  ```
+- ```
+           Bid management
+  ```
+- ```
+           Technical evaluation
+  ```
+- ```
+           Commercial evaluation
+  ```
+- ```
+           Contract negotiation
+  ```
+- ```
+           Contract management
+  ```
+- ```
+           Contractor selection
+  ```
+- ```
+           Build supervision / owner's representation
+  ```
+- ```
+           Commissioning, sea trials and vessel delivery
+  ```
+- ```
+           Asset disposal
+  ```

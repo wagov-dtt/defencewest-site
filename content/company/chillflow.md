@@ -57,46 +57,30 @@ Chillflow Solutions currently service the RAN fleet carrying out design, install
 - **Sea trials and deployed operations** - Chillflow Solutions have remote readiness in our technical team and often carry out URFEF deployed operational breakdown and repair works for the Navy Fleet.
 ## Discriminators
 
-- Key Clients\*\*
+**Key Clients**
 
 - **Babcock Australia**
-
 - **Babcock Global Supply Chain**
-
 - **Thales**
-
 - **Teekay**
-
 - **Navantia**
-
 - **Svitzer**
-
 - **Bhagwan Marine**
 
-- Accreditations, Awards & Achievements\*\*
+**Accreditations, Awards & Achievements**
 
 - ISO 9001, 14001, 45001 Accredited
-
 - DISP approved
-
 - JOSCAR Accredited
-
 - Staff - NV1 Clearance
-
 - Veteran Employment Supporter with 7 veterans currently employed
-
 - Approved supplier for AUKUS free trade agreement
-
 - Member and regular sponsor of the Henderson Alliance
-
 - Winner of the defence industry subcontractor of the year Award in 2023 and finalist for the past 5 years
-
 - Key contractor in one of the RANs largest HVAC upgrade projects in recent years ($25m) replacing the 5 x main chiller plants onboard HMAS Choules.
 
-- OEM Agency Agreements\*\*
+**OEM Agency Agreements**
 
 - **J&E Hall (Daikin Marine) -** We are the Australian OEM agents for J&E Hall which is the incumbent chiller plant equipment onboard LHD and LSD platforms
-
 - **Frizonia OEM** - Chillflow are the in country agents for Frizonia the OEM for all HVAC and refrigeration systems onboard the AOR platforms HMAS Stalwart & Supply
-
 - **Bitzer Approved Agent** - Chillflow are an approved service agent for Bitzer Marine - most of the Navy fleet have this refrigeration compressor equipment onboard for their provisions and cargo refrigeration systems.

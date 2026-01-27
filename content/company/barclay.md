@@ -57,29 +57,24 @@ longitude: 115.9021721
 
 ## Overview
 
-- Engineering & Design Expertise\*\*:
+**Engineering & Design Expertise**:
 
 - **Innovative Team**: Their Engineering and Design team excels in creating innovative and collaborative solutions across multiple industries.
-
 - **Advanced Software**: They utilise cutting-edge software such as ACAD Inventor 3D, SolidWorks, and Autodesk BIM to enhance their design capabilities.
 
-- Global Installation Services\*\*:
+**Global Installation Services**:
 
 - **Worldwide Reach**: They offer specialist installation services for their products and projects globally, from Perth to Qatar, Nauru to Sydney, and everywhere in between.
-
 - **Experience**: With over 45 years of experience, they are adept at installing in some of the harshest environments and remote locations.
-
 - **Commitment to Quality**: Barclay Engineering ensures that all installations meet their high standards and deliver trusted, quality service.
 ## Capabilities
 
 Barclay Engineering's in-house capabilities make them a one-stop-shop for customers requiring a total solution to their needs.
 
-- Workshop and Fabrication\*\*:
+**Workshop and Fabrication**:
 
 - **Facility**: State-of-the-art workshop spans 13,000m2 in Canning Vale.
-
 - **Materials**: Equipped to handle fabrication of Mild Steel, Stainless Steel, and Aluminium, among other specialist requirements.
-
 - **Laser Cutting**: Features an in-house specialist Laser Cutting service with a Bystronic Byspeed 3015 4KW Ceramic Fiber Laser Cutter, providing millimetre precision and bespoke designs.
 ## Discriminators
 

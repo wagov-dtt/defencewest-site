@@ -56,7 +56,7 @@ longitude: 116.80107
 
 ## Overview
 
-- NGALIMA: A Respected Aboriginal Civil Contractor Serving the Pilbara Region\*\*
+**NGALIMA: A Respected Aboriginal Civil Contractor Serving the Pilbara Region**
 
 NGALIMA is a proudly Aboriginal-owned and operated business based in the Pilbara region of Western Australia. Specialising in earthworks, concrete construction, and providing plant and labour hire services, Ngalima serves a diverse range of industries, including mining, oil and gas, renewables, and infrastructure. With a deep commitment to excellence, we deliver high-quality, reliable services to meet the unique demands of these sectors.
 

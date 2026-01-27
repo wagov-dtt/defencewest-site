@@ -54,40 +54,40 @@ WINYA is a big supporter of artists and has one of the largest catalogues of Ind
 WINYA maximises its **procurement outreach programs** with timbers from remote communities, robust sustainability and circular economy programs and has created programs in Prisons to train Indigenous inmates to reduce recidivism & build better communities.
 ## Capabilities
 
-AUSTRALIA'S LEADING INDIGENOUS FURNISHER
-As a majority Indigenous-owned genuine Indigenous business, Winya was built with a focus
-on a profit-for-purpose model, supplying large-scale fit-outs and commercial furniture to
+AUSTRALIA'S LEADING INDIGENOUS FURNISHER\
+As a majority Indigenous-owned genuine Indigenous business, Winya was built with a focus\
+on a profit-for-purpose model, supplying large-scale fit-outs and commercial furniture to\
 the public and private sectors.
 
-SERVICES
-Supply high quality commercial furnishing products including workstations, chairs, soft seating,
-tables, storage units and a range of accessories.
-Custom make furniture on request.
-High Security Installations
-Provide full installation and fit-out services through our partnering with Supply Nation members
+SERVICES\
+Supply high quality commercial furnishing products including workstations, chairs, soft seating,\
+tables, storage units and a range of accessories.\
+Custom make furniture on request.\
+High Security Installations\
+Provide full installation and fit-out services through our partnering with Supply Nation members\
 and Indigenous owned fit-out companies
 ## Discriminators
 
-DISCRIMINATORS
-Majority Indigenous-owned business
-Specialize in office and training facility fit-out
-Australia-wide supply chain with operation teams across all states
-Highly qualified team with experience in delivery quality projects of all
-scales.
-A strong supporter of sustainable practice with a dedicated circular
-economy program
-Provide Indigenous traineeship and work with prisons across Australia to
-help improving Indigenous Economic Inclusion
-Multi-award winner such as United Nations Global Compact award for
-Sustainable Development Goals for the Economic Empowerment of
+DISCRIMINATORS\
+Majority Indigenous-owned business\
+Specialize in office and training facility fit-out\
+Australia-wide supply chain with operation teams across all states\
+Highly qualified team with experience in delivery quality projects of all\
+scales.\
+A strong supporter of sustainable practice with a dedicated circular\
+economy program\
+Provide Indigenous traineeship and work with prisons across Australia to\
+help improving Indigenous Economic Inclusion\
+Multi-award winner such as United Nations Global Compact award for\
+Sustainable Development Goals for the Economic Empowerment of\
 Indigenous Peoples, Banksia Awards and multiple Sustainability Awards.
 
-ACCREDITATION & MEMBERSHIP
-Defence Standing Offer Number: SON3373673
-Supply Nation Registered
-Northern Territory Indigenous Business Network Certified
-Local Buy Pre-quialified Supplier
-Accredited Contractor recognized by the Contractor Accreditation LTD
-ISO9001 third party Quality Certified
-ISO14001 Sustainability Certified
+ACCREDITATION & MEMBERSHIP\
+Defence Standing Offer Number: SON3373673\
+Supply Nation Registered\
+Northern Territory Indigenous Business Network Certified\
+Local Buy Pre-quialified Supplier\
+Accredited Contractor recognized by the Contractor Accreditation LTD\
+ISO9001 third party Quality Certified\
+ISO14001 Sustainability Certified\
 ISO 45001 Ready OHS Program
