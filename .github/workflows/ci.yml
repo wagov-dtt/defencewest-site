@@ -19,8 +19,13 @@ jobs:
       - name: Install system dependencies
         run: mise run setup-ci
       
+      - name: Start Xvfb
+        run: |
+          Xvfb :99 -screen 0 1024x768x24 &
+          echo "DISPLAY=:99" >> $GITHUB_ENV
+      
       - name: Build
-        run: xvfb-run mise run build
+        run: mise run build
       
       - name: Upload build artifact
         uses: actions/upload-pages-artifact@v3
