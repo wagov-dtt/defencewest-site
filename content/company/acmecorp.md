@@ -1,53 +1,34 @@
 ---
-# Template for new company - copy this file and rename to your-company-slug.md
-build:
-  list: never
-  publishResources: false
-
 name: ACME Corporation
-date: '2025-01-01'
-website: https://www.acme.com
-
-# Contact
-contact_name: Wile E. Coyote
-contact_title: Chief Innovation Officer
-address: 123 Desert Road, Perth WA 6000
+date: 2026-01-27
+website: "https://www.acme.com"
 phone: +61 8 9000 0000
 email: genius@acme.com
-
-# Classification flags
+address: 123 Desert Road, Perth WA 6000
+latitude: -31.9505
+longitude: "115.8605"
+contact_name: Wile E. Coyote
+contact_title: Chief Innovation Officer
 is_sme: true
-is_prime: false
-
-# Taxonomies - use keys from data/taxonomies.yaml
 stakeholders:
   - defence
   - defence-west
-
 capability_streams:
   - land
   - research
-
 capability_domains:
   - armour
   - robotics
   - science
-
 industrial_capabilities:
+  - composites
   - design
   - mechanical
-  - composites
-
 regions:
   - perth
-
 ownerships:
   - indigenous
   - veteran
-
-# Location (for map) - use Google Maps to find coordinates
-latitude: -31.9505
-longitude: 115.8605
 ---
 
 ## Overview
