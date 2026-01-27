@@ -17,8 +17,8 @@ description = "Install Python dependencies and generate computed data"
 run = ["uv sync", "mise run preprocess"]
 
 [tasks.setup-ci]
-description = "Install system dependencies for CI (EGL for map rendering)"
-run = "sudo apt-get update && sudo apt-get install -y libegl1 libgl1 libopengl0"
+description = "Install system dependencies for CI (EGL/xvfb for map rendering)"
+run = "sudo apt-get update && sudo apt-get install -y libegl1 libgl1 libopengl0 xvfb"
 
 [tasks.dev]
 depends = ["preprocess"]
