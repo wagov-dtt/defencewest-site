@@ -13,6 +13,7 @@ CURL_CA_BUNDLE = "/etc/ssl/certs/ca-certificates.crt"
 SSL_CERT_FILE = "/etc/ssl/certs/ca-certificates.crt"
 
 [tasks.setup]
+description = "Install Python dependencies and generate computed data"
 run = ["uv sync", "mise run preprocess"]
 
 [tasks.setup-ci]
@@ -24,7 +25,7 @@ depends = ["preprocess"]
 run = "hugo server -D --disableFastRender"
 
 [tasks.build]
-run = ["mise run preprocess", "hugo --cleanDestinationDir", "mise run htmlcheck", "mise run linkcheck"]
+run = ["uv sync", "mise run preprocess", "hugo --cleanDestinationDir", "mise run htmlcheck", "mise run linkcheck"]
 
 [tasks.preprocess]
 run = "uv run python scripts/preprocess.py"

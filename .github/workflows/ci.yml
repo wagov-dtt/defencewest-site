@@ -19,9 +19,6 @@ jobs:
       - name: Install system dependencies
         run: mise run setup-ci
       
-      - name: Install dependencies
-        run: mise run setup
-      
       - name: Build
         run: mise run build
       
