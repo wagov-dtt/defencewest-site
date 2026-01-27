@@ -15,6 +15,10 @@ SSL_CERT_FILE = "/etc/ssl/certs/ca-certificates.crt"
 [tasks.setup]
 run = ["uv sync", "mise run preprocess"]
 
+[tasks.setup-ci]
+description = "Install system dependencies for CI (EGL for map rendering)"
+run = "sudo apt-get update && sudo apt-get install -y libegl1 libgl1 libopengl0"
+
 [tasks.dev]
 depends = ["preprocess"]
 run = "hugo server -D --disableFastRender"
@@ -37,9 +41,6 @@ run = "uv run python scripts/scrape.py"
 
 [tasks.scrape-fresh]
 run = "uv run python scripts/scrape.py --fresh"
-
-[tasks.export]
-run = "uv run python scripts/export.py"
 
 [tasks.scc]
 description = "Count lines of code with SCC"
