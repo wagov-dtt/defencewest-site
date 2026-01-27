@@ -41,6 +41,9 @@ $companies | append $company -}} {{- end -}} {{- end -}} {{- $companies = sort $
   </div>
 </div>
 
+{{/* Skip link to bypass filters - visible on focus */}}
+<a href="#company-grid" class="skip-link">Skip to results</a>
+
 <h1 class="visually-hidden">
   WA Defence Industry and Science Capability Directory
 </h1>
@@ -55,7 +58,7 @@ $companies | append $company -}} {{- end -}} {{- end -}} {{- $companies = sort $
   <!-- Main Content (first in DOM for better tab order: search → results) -->
   <section class="col-9 col-m-8 col-s-12 directory-results">
     <!-- Cards Grid -->
-    <div class="grid-auto" id="company-grid">
+    <div class="grid-auto" id="company-grid" tabindex="-1">
       {{- range $companies }} {{ partial "company-card.html" (dict "company" .
       "computed" (index $computed .slug) "mode" "directory") }} {{- end }}
     </div>
