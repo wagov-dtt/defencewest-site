@@ -23,6 +23,17 @@ Every company page has an **"Edit this listing"** link. The editor lets you:
 
 Submit changes via GitHub PR or email to defencewest@dpc.wa.gov.au.
 
+### Online Submission Form
+
+Companies can also submit new listings or updates via the online form at `/submit/`:
+
+- WYSIWYG editor for company description
+- Multi-select dropdowns for taxonomy categories  
+- Logo upload (optional)
+- Submissions are stored in S3 and processed via GitHub Actions workflow
+
+**Note:** The GitHub Actions import workflow (`import-submission.yml`) requires AWS OIDC setup. See [AGENTS.md](AGENTS.md#github-workflow-setup) for configuration details.
+
 ## Project Structure
 
 ```
@@ -33,6 +44,8 @@ data/
   computed.yaml        # Generated: pre-computed values (gitignored)
   counts.yaml          # Generated: taxonomy counts (gitignored)
 hugo.toml              # All site config (theme, CDN URLs, map settings)
+infra/
+  s3-upload.yaml       # CloudFormation template for submission API
 static/logos/          # Company logos
 static/icons/          # Capability stream icons
 static/maps/           # Pre-rendered minimap PNGs

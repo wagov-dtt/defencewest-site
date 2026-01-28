@@ -283,9 +283,16 @@ Shared configuration used by all scripts:
 
 ### GitHub Workflow Setup
 
+> **Status:** The import workflow is defined but not yet fully configured. AWS OIDC authentication needs to be set up in the GitHub repository before it can download from S3.
+
 The import workflow requires these GitHub repository variables:
 - `S3_SUBMISSIONS_BUCKET` - S3 bucket name (e.g., `defencewest-submissions`)
 - `AWS_ROLE_ARN` - IAM role ARN for OIDC authentication
+
+To set up OIDC authentication:
+1. Create an IAM role with S3 read access to the submissions bucket
+2. Configure the role's trust policy to allow GitHub Actions OIDC
+3. Add the role ARN as a repository variable
 
 To trigger manually: Actions → Import Submission → Run workflow → Enter S3 key
 

@@ -11,10 +11,23 @@ Thank you for your interest in contributing to the WA Defence Industry & Science
 
 ## Adding or Editing a Company
 
+### Option 1: Online Form (Recommended for external contributors)
+
+Visit `/submit/` to use the online submission form:
+- Fill in company details and select taxonomy categories
+- Use the WYSIWYG editor for the company description
+- Upload a logo (optional)
+- Submit - the form uploads to S3 for admin review
+
+**Note:** Submissions require admin approval via GitHub PR before appearing on the site.
+
+### Option 2: Direct File Edit
+
 1. Copy `content/company/_template.md` to `content/company/company-name.md`
 2. Fill in the YAML frontmatter fields (see template for guidance)
 3. Add company logo to `static/logos/` (optional, PNG format recommended)
 4. Run `mise run build` to validate your changes
+5. Submit a pull request
 
 ### Company File Format
 
