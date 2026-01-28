@@ -199,32 +199,13 @@ def export_xlsx(companies: list[dict], taxonomies: dict, output: Path) -> None:
 
 
 def export_json(companies: list[dict], output: Path) -> None:
-    """Export to JSON with taxonomy keys."""
-    data = sorted(
-        [
-            {
-                "slug": c.get("slug", ""),
-                "name": c.get("name", ""),
-                "website": c.get("website", ""),
-                "address": c.get("address", ""),
-                "phone": c.get("phone", ""),
-                "email": c.get("email", ""),
-                "latitude": c.get("latitude"),
-                "longitude": c.get("longitude"),
-                "markdown": c.get("_content", "").strip(),
-                "regions": c.get("regions") or [],
-                "stakeholders": c.get("stakeholders") or [],
-                "capability_streams": c.get("capability_streams") or [],
-                "capability_domains": c.get("capability_domains") or [],
-                "industrial_capabilities": c.get("industrial_capabilities") or [],
-                "is_sme": c.get("is_sme", False),
-                "is_prime": c.get("is_prime", False),
-            }
-            for c in companies
-        ],
-        key=lambda x: x["name"].lower(),
-    )
-
+    """Export to JSON - all frontmatter fields plus slug and markdown content."""
+    data = []
+    for c in companies:
+        entry = {k: v for k, v in c.items() if not k.startswith("_")}
+        entry["markdown"] = c.get("_content", "").strip()
+        data.append(entry)
+    data.sort(key=lambda x: (x.get("name") or "").lower())
     output.write_text(json.dumps(data, indent=2))
 
 

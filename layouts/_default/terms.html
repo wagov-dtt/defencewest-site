@@ -56,13 +56,13 @@
        {{- $termMapUrl = printf "maps/terms/%s-%s.png" $taxonomyName $slug | relURL -}}
      {{- end -}}
   <article class="taxonomy-card">
-    <a href="{{ .Page.RelPermalink }}">
+    <a href="{{ .Page.RelPermalink }}" title="{{ $displayName }}">
       {{- if $hasIcon }}
-      <img src="{{ $iconUrl }}" alt="" class="taxonomy-icon">
+      <img src="{{ $iconUrl }}" alt="{{ $displayName }}" class="taxonomy-icon">
       {{- end }}
       <strong class="taxonomy-name">{{ $displayName }}</strong>
       {{- if $hasTermMap }}
-      <img src="{{ $termMapUrl }}" alt="" class="taxonomy-map-thumb">
+      <img src="{{ $termMapUrl }}" alt="Map of {{ $displayName }}" class="taxonomy-map-thumb">
       {{- end }}
       <small>{{ .Count }} {{ if eq .Count 1 }}company{{ else }}companies{{ end }}</small>
     </a>

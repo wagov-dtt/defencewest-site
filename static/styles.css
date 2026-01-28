@@ -968,3 +968,281 @@ nav .logo {
     scroll-behavior: auto !important;
   }
 }
+
+/* === Submit Page === */
+.submit-page .required {
+  color: var(--pico-del-color);
+}
+
+.submit-page #address-status {
+  display: block;
+  margin-top: 0.25rem;
+  font-size: 0.85rem;
+}
+
+.submit-page #address-status.success {
+  color: var(--pico-ins-color);
+}
+
+.submit-page #address-status.warning {
+  color: var(--pico-mark-color);
+}
+
+.submit-page #address-status.error {
+  color: var(--pico-del-color);
+}
+
+/* Logo upload */
+.submit-page .logo-upload {
+  border: 2px dashed var(--pico-form-element-border-color);
+  border-radius: var(--pico-border-radius);
+  padding: var(--pico-spacing);
+  text-align: center;
+  transition: border-color 0.2s, background 0.2s;
+  cursor: pointer;
+  min-height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--pico-spacing);
+}
+
+.submit-page .logo-upload:hover {
+  border-color: var(--pico-primary);
+}
+
+.submit-page .logo-upload.dragover {
+  border-color: var(--pico-primary);
+  background: var(--pico-primary-focus);
+}
+
+.submit-page .upload-placeholder {
+  color: var(--pico-muted-color);
+}
+
+.submit-page .upload-placeholder i {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 0.5rem;
+}
+
+.submit-page .upload-link {
+  color: var(--pico-primary);
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.submit-page .upload-preview {
+  position: relative;
+  display: inline-block;
+}
+
+.submit-page .upload-preview img {
+  max-width: 160px;
+  max-height: 140px;
+  object-fit: contain;
+  border-radius: var(--pico-border-radius);
+}
+
+.submit-page .remove-logo {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: none;
+  background: var(--pico-del-color);
+  color: white;
+  font-size: 16px;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0;
+}
+
+/* Quill editor integration with PicoCSS */
+/* Reset PicoCSS styles inside Quill */
+.submit-page .ql-toolbar button {
+  all: unset;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 24px;
+  padding: 0;
+  margin: 0;
+}
+
+.submit-page .ql-toolbar button:hover {
+  color: var(--pico-primary);
+}
+
+.submit-page .ql-toolbar button.ql-active {
+  color: var(--pico-primary);
+}
+
+.submit-page .ql-toolbar .ql-picker {
+  all: unset;
+  display: inline-flex;
+  align-items: center;
+  height: 24px;
+  cursor: pointer;
+}
+
+.submit-page .ql-toolbar .ql-picker-label {
+  padding: 0 4px;
+}
+
+.submit-page .ql-toolbar .ql-picker-options {
+  background: var(--pico-form-element-background-color);
+  border: 1px solid var(--pico-form-element-border-color);
+  border-radius: var(--pico-border-radius);
+  padding: 4px 0;
+}
+
+.submit-page .ql-toolbar.ql-snow {
+  border-color: var(--pico-form-element-border-color);
+  border-radius: var(--pico-border-radius) var(--pico-border-radius) 0 0;
+  background: var(--pico-form-element-background-color);
+}
+
+.submit-page .ql-container.ql-snow {
+  border-color: var(--pico-form-element-border-color);
+  border-radius: 0 0 var(--pico-border-radius) var(--pico-border-radius);
+  font-family: var(--pico-font-family);
+  font-size: 1rem;
+  min-height: 200px;
+  background: var(--pico-form-element-background-color);
+}
+
+/* Reset PicoCSS styles inside editor content */
+.submit-page .ql-editor {
+  min-height: 200px;
+}
+
+.submit-page .ql-editor ul,
+.submit-page .ql-editor ol {
+  padding-left: 1.5em;
+  margin: 0.5em 0;
+}
+
+.submit-page .ql-editor li {
+  margin: 0;
+  padding: 0;
+}
+
+.submit-page .ql-editor a {
+  color: var(--pico-primary);
+}
+
+.submit-page .ql-editor h2 {
+  font-size: 1.25rem;
+  margin: 1em 0 0.5em 0;
+}
+
+.submit-page .ql-editor h2:first-child {
+  margin-top: 0;
+}
+
+.submit-page .ql-editor h3 {
+  font-size: 1.1rem;
+  margin: 1em 0 0.5em 0;
+}
+
+.submit-page .ql-editor p {
+  margin: 0 0 0.5em 0;
+}
+
+.submit-page .ql-container.ql-snow:focus-within {
+  border-color: var(--pico-primary);
+  box-shadow: 0 0 0 var(--pico-outline-width) var(--pico-primary-focus);
+}
+
+/* Tom Select integration with PicoCSS */
+.submit-page .ts-wrapper.multi .ts-control {
+  background: var(--pico-form-element-background-color);
+  border-color: var(--pico-form-element-border-color);
+  border-radius: var(--pico-border-radius);
+  padding: 0.5rem;
+  min-height: 2.5rem;
+}
+
+.submit-page .ts-wrapper.multi .ts-control:focus-within {
+  border-color: var(--pico-primary);
+  box-shadow: 0 0 0 var(--pico-outline-width) var(--pico-primary-focus);
+}
+
+.submit-page .ts-wrapper .ts-dropdown {
+  background: var(--pico-form-element-background-color);
+  border-color: var(--pico-form-element-border-color);
+  border-radius: var(--pico-border-radius);
+}
+
+.submit-page .ts-wrapper .ts-dropdown .option {
+  padding: 0.5rem 0.75rem;
+}
+
+.submit-page .ts-wrapper .ts-dropdown .option.active {
+  background: var(--pico-primary-focus);
+  color: var(--pico-primary);
+}
+
+.submit-page .ts-wrapper.multi .ts-control .item {
+  background: var(--pico-primary);
+  color: var(--pico-primary-inverse);
+  border-radius: var(--pico-border-radius);
+  padding: 0.15rem 0.5rem;
+  margin: 0.1rem;
+}
+
+.submit-page .ts-wrapper.multi .ts-control .item .remove {
+  border-left-color: var(--pico-primary-inverse);
+}
+
+/* Submit actions */
+.submit-page .submit-actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: var(--pico-spacing);
+}
+
+/* Success panel */
+.submit-page .success-panel {
+  margin-top: var(--pico-spacing);
+}
+
+.submit-page .success-panel .paste-url {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  background: var(--pico-code-background-color);
+  padding: 0.75rem;
+  border-radius: var(--pico-border-radius);
+  margin: var(--pico-spacing) 0;
+}
+
+.submit-page .success-panel .paste-url code {
+  flex: 1;
+  word-break: break-all;
+  background: transparent;
+  padding: 0;
+}
+
+.submit-page .success-panel .paste-url button {
+  flex-shrink: 0;
+  margin: 0;
+  padding: 0.25rem 0.75rem;
+}
+
+/* Responsive: small screens */
+@media (max-width: 767px) {
+  .submit-page .submit-actions {
+    flex-direction: column;
+  }
+  
+  .submit-page .submit-actions button {
+    width: 100%;
+  }
+}
+

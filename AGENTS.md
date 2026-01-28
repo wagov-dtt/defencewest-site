@@ -15,15 +15,17 @@ mise run build   # Build static site (includes link check)
 ```
 content/company/*.md   # Company pages (328 files)
 data/
-  taxonomies.yaml      # Filter categories + icons
+  taxonomies.yaml      # Filter categories (key -> display name)
   computed.yaml        # Generated: pre-computed values (gitignored)
   counts.yaml          # Generated: taxonomy counts (gitignored)
 hugo.toml              # All site config (theme, CDN URLs, map settings)
+infra/
+  s3-upload.yaml       # CloudFormation template for S3 submission API
 scripts/
-  preprocess.py        # Generates computed.yaml + static map images
+  config.py            # Shared config, paths, constants, slug utilities
+  preprocess.py        # Generates computed.yaml, maps, exports (CSV/XLSX/JSON)
   scrape.py            # Scrapes data from source website
-  export.py            # Exports to CSV/XLSX
-  taxonomy.py          # Taxonomy key/name utilities
+  import_submission.py # Imports submissions from S3/local JSON files
 layouts/               # Hugo templates
 layouts/partials/      # Shared components
 static/logos/          # Company logos
@@ -40,12 +42,12 @@ All configuration is in `hugo.toml` under `[params]`:
 [params]
   picoTheme = "slate"           # Pico CSS theme
   cdnUrl = "https://cdn.jsdelivr.net/npm"
-  mapStyleUrl = "https://vector.openstreetmap.org/styles/shortbread/colorful.json"
-  mapTilesUrl = "https://vector.openstreetmap.org/shortbread_v1/{z}/{x}/{y}.mvt"
+  mapStyleUrl = "https://tiles.openfreemap.org/styles/liberty"
   mapsUrl = "https://www.google.com/maps"
+  submitUrl = ""                # S3 API Gateway endpoint (empty = submissions disabled)
 ```
 
-Python scripts read this config via `tomllib`.
+Python scripts read this config via `tomllib` in `scripts/config.py`.
 
 ## CDN Usage
 
@@ -54,6 +56,11 @@ All external libraries use **jsdelivr** CDN with **major version pinning**:
 - `https://cdn.jsdelivr.net/npm/@picocss/pico@2/...` - CSS framework
 - `https://cdn.jsdelivr.net/npm/maplibre-gl@5/...` - Map rendering
 - `https://cdn.jsdelivr.net/npm/lucide@latest/...` - Icons (rendered via JS)
+
+The submit page also uses **esm.sh** for ES modules:
+- `squire-rte@2` - WYSIWYG editor
+- `dompurify@3` - HTML sanitization
+- `marked@17` - Markdown parser (for edit mode)
 
 ## Relative Links
 
@@ -80,17 +87,16 @@ latitude: -31.9505
 longitude: 115.8605
 
 # Taxonomy lists (keys, not display names)
-stakeholders: [industry]
+stakeholders: [defence]
 capability_streams: [land, maritime]
 capability_domains: [cyber]
-industrial_capabilities: [fabrication]
+industrial_capabilities: [steel]
 regions: [perth]
+ownerships: [indigenous]
 
 # Flags
 is_prime: false
 is_sme: true
-is_indigenous_owned: false
-is_veteran_owned: false
 ---
 ## Overview
 
@@ -103,9 +109,10 @@ Taxonomy keys map to display names via `data/taxonomies.yaml`.
 
 - `layouts/index.html` - Directory page with filterable company cards
 - `layouts/page/map.html` - MapLibre GL map (standalone iframe, uses OSM vector tiles)
+- `layouts/page/submit.html` - Company submission form (Squire editor, S3 upload)
 - `layouts/partials/company-card.html` - Shared card component (directory + map)
 - `layouts/partials/filters.html` - Shared filter sidebar
-- `layouts/company/single.html` - Company detail page (view + edit modes)
+- `layouts/company/single.html` - Company detail page
 - `layouts/_default/terms.html` - Taxonomy list (e.g., /regions/)
 - `layouts/_default/taxonomy.html` - Term page (e.g., /regions/perth/)
 
@@ -192,15 +199,17 @@ Tools managed by mise:
 
 ## CI & Link Checking
 
-The `mise run build` task runs: preprocess → export → hugo build → HTML check (superhtml) → link check (lychee).
+The `mise run build` task runs: preprocess → hugo build → HTML check (superhtml) → link check (lychee).
 
 - Superhtml validates HTML structure
 - Lychee checks all links in the built HTML
 - Add known-broken URLs to `.lycheeignore` to suppress warnings
 
-## Preprocessing
+## Scripts
 
-The `scripts/preprocess.py` script generates computed values and static map images. Run automatically during build or manually:
+### preprocess.py
+
+Generates computed values, maps, and exports. Run automatically during build or manually:
 
 ```bash
 mise run preprocess              # Update computed data
@@ -208,32 +217,102 @@ mise run maps-force              # Regenerate all minimap images
 uv run python scripts/preprocess.py --dry-run  # Preview changes
 ```
 
-Pre-computed fields (stored in `data/computed.yaml`, not in source markdown):
+**Generates:**
+- `data/computed.yaml` - Pre-calculated values for Hugo templates
+- `data/counts.yaml` - Taxonomy value counts
+- `static/maps/*.png` - Static minimap images for companies
+- `static/maps/terms/*.png` - Static map images for taxonomy terms
+- `static/companies.json` - All company data for submit page
+- `static/companies.csv`, `.xlsx` - Export files
 
+**Computed fields:**
 - `overview_short` - First 300 chars for card display
 - `search_text` - Lowercase name + overview for filtering
 - `filter_data` - Pre-slugified taxonomy values
 
-Static minimaps (`static/maps/*.png`) are generated using `pymgl` with OSM Shortbread vector tiles from the CDN (no local tile server needed).
+Static minimaps are generated using `pymgl` with OSM Shortbread vector tiles.
 
-Also generates `data/counts.yaml` with taxonomy value counts.
+### scrape.py
 
-## Adding/Editing Companies
-
-See [README.md](README.md#addingediting-companies) for details.
-
-## Scraping
-
-To re-scrape company data from the source directory:
+Re-scrapes company data from the source directory:
 
 ```bash
 uv run python scripts/scrape.py           # Process cached data, resolve URLs
 uv run python scripts/scrape.py --fresh   # Re-fetch from source website
 ```
 
-The scraper:
-
-- Caches HTML and images in `data/cache/diskcache/` for faster re-runs
+**Features:**
+- Caches HTML and images in `.cache/diskcache/` for faster re-runs
 - Resolves website URLs (follows redirects)
-- Optimizes logos/icons with ImageMagick `mogrify` (fuzzy trim, resize, convert to PNG, strip metadata)
+- Geocodes addresses using ArcGIS World Geocoder
+- Optimizes logos/icons with ImageMagick `mogrify`
 - Cleans up markdown (normalizes lists, removes artifacts)
+- Regenerates `data/taxonomies.yaml` from scraped data
+
+### import_submission.py
+
+Imports company submissions from local JSON files:
+
+```bash
+uv run python scripts/import_submission.py path/to/submission.json
+```
+
+**Creates/updates:**
+- `content/company/{slug}.md` - Company markdown file
+- `static/logos/{slug}.png` - Logo image (if included)
+
+The GitHub workflow `.github/workflows/import-submission.yml` automates this process - it downloads the submission from S3, runs the import, and creates a PR for review.
+
+### config.py
+
+Shared configuration used by all scripts:
+- Paths (COMPANY_DIR, DATA_DIR, STATIC_DIR, etc.)
+- Hugo config loading from `hugo.toml`
+- Taxonomy list and constants
+- Slug generation utilities (`clean_slug`, `build_taxonomy_keys`)
+- Progress bar helper
+
+## Submission Flow
+
+1. User fills form at `/submit/` (or `/submit/?edit=company-slug` for edits)
+2. Form data uploaded to S3 via API Gateway (if configured)
+3. User gets submission ID, can notify admin via email
+4. Admin triggers GitHub workflow with submission filename
+5. Workflow downloads from S3, runs `import_submission.py`, creates PR
+6. After PR merge, submission is archived in S3 `processed/` folder
+
+### GitHub Workflow Setup
+
+The import workflow requires these GitHub repository variables:
+- `S3_SUBMISSIONS_BUCKET` - S3 bucket name (e.g., `defencewest-submissions`)
+- `AWS_ROLE_ARN` - IAM role ARN for OIDC authentication
+
+To trigger manually: Actions → Import Submission → Run workflow → Enter S3 key
+
+### Deploying the Submission API
+
+To enable submissions, deploy the CloudFormation stack:
+
+```bash
+aws cloudformation deploy \
+  --template-file infra/s3-upload.yaml \
+  --stack-name defencewest-submissions \
+  --parameter-overrides \
+    BucketName=defencewest-submissions \
+    AllowedOrigin=https://your-domain.com \
+  --capabilities CAPABILITY_IAM
+
+# Get the API endpoint
+aws cloudformation describe-stacks \
+  --stack-name defencewest-submissions \
+  --query 'Stacks[0].Outputs[?OutputKey==`Endpoint`].OutputValue' \
+  --output text
+```
+
+Then set `submitUrl` in `hugo.toml` to the endpoint value.
+
+If `submitUrl` is empty, the submit button is disabled.
+
+## Adding/Editing Companies
+
+See [README.md](README.md#addingediting-companies) for details.

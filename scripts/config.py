@@ -4,7 +4,9 @@ Imports hugo.toml and exports common paths and constants.
 """
 
 import logging
+import os
 import shutil
+import sys
 from pathlib import Path
 import tomllib
 
@@ -126,6 +128,25 @@ SLUG_REMOVE_SUFFIXES = [
 ]
 
 
+# Capability stream acronym prefixes to remove (e.g., "AASL - Air and Sea Lift" -> "Air and Sea Lift")
+CAPABILITY_STREAM_ACRONYMS = [
+    "AASL - ",
+    "ISCW - ",
+    "KEYN - ",
+    "LCAW - ",
+    "MASW - ",
+    "SAAC - ",
+]
+
+
+def clean_capability_stream(name: str) -> str:
+    """Remove acronym prefix from capability stream name."""
+    for prefix in CAPABILITY_STREAM_ACRONYMS:
+        if name.startswith(prefix):
+            return name[len(prefix) :]
+    return name
+
+
 # Slug/key generation functions
 from slugify import slugify
 
@@ -183,3 +204,15 @@ def clean_slug(name: str) -> str:
             slug = "-".join(parts[:3])
 
     return slug
+
+
+def set_output(name: str, value: str):
+    """Set GitHub Actions output variable."""
+    output_file = os.environ.get("GITHUB_OUTPUT")
+    if output_file:
+        with open(output_file, "a") as f:
+            if "\n" in value:
+                f.write(f"{name}<<EOF\n{value}\nEOF\n")
+            else:
+                f.write(f"{name}={value}\n")
+    print(f"{name}: {value}", file=sys.stderr)

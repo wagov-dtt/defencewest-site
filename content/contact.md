@@ -11,9 +11,9 @@ type: page
 
 This directory showcases WA companies with defence and science capabilities, helping prime contractors and government agencies find local suppliers.
 
-[Submit an update](mailto:defencewest@dpc.wa.gov.au) | [Browse Directory](../)
+[Submit a new listing](../submit/) | [Browse Directory](../)
 
-To contribute new companys or update existing ones, please email your details and logo to [defencewest@dpc.wa.gov.au](mailto:defencewest@dpc.wa.gov.au).
+To update an existing listing, visit the company page and click "Suggest an update", or email [defencewest@dpc.wa.gov.au](mailto:defencewest@dpc.wa.gov.au).
 
 ## Download Data
 

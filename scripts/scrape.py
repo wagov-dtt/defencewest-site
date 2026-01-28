@@ -16,7 +16,7 @@ from pathlib import Path
 import httpx
 import mdformat
 import yaml
-from geopy.geocoders import Nominatim
+from geopy.geocoders import ArcGIS
 from markdownify import markdownify as md
 from selectolax.parser import HTMLParser
 from unidecode import unidecode
@@ -32,6 +32,7 @@ from config import (
     USER_AGENT,
     TAXONOMIES,
     build_taxonomy_keys,
+    clean_capability_stream,
     clean_slug,
     is_in_wa,
     log,
@@ -41,8 +42,8 @@ from config import (
 # URLs from hugo.toml
 BASE_URL = params["scrapeBaseUrl"]
 
-# Initialize Nominatim geolocator for geocoding
-geolocator = Nominatim(user_agent=USER_AGENT, timeout=30)
+# Initialize ArcGIS geolocator for geocoding (free, address-level accuracy)
+geolocator = ArcGIS(timeout=30)
 
 
 def simplify_address(address: str) -> str:
@@ -68,7 +69,7 @@ def simplify_address(address: str) -> str:
 
 
 def geocode_address(address: str) -> tuple[float, float] | None:
-    """Geocode an address using Nominatim. Returns (lat, lng) or None.
+    """Geocode an address using ArcGIS. Returns (lat, lng) or None.
 
     Tries the full address first, then a simplified version if that fails.
     """
@@ -82,10 +83,69 @@ def geocode_address(address: str) -> tuple[float, float] | None:
 
     def try_geocode(addr: str) -> tuple[float, float] | None:
         try:
-            location = geolocator.geocode(addr, country_codes="au", exactly_one=True)
-            time.sleep(1.1)  # Rate limit: max 1 request/second
+            # Ensure address includes WA/Australia for better results
+            query = (
+                addr
+                if re.search(r"\b(WA|Western Australia)\b", addr, re.I)
+                else f"{addr}, WA, Australia"
+            )
+            location = geolocator.geocode(query, exactly_one=True)
             if location:
                 return (location.latitude, location.longitude)
+        except Exception as e:
+            print(f"    Geocode error for '{addr[:50]}...': {e}")
+        return None
+
+    # Try full address first
+    if result := try_geocode(address):
+        cache[cache_key] = list(result)
+        return result
+
+    # Try simplified address (remove building names, levels, etc.)
+    simplified = simplify_address(address)
+    if simplified != address:
+        if result := try_geocode(simplified):
+            cache[cache_key] = list(result)
+            return result
+
+    cache[cache_key] = None
+    return None
+
+    cache_key = f"geocode:{address}"
+    if cache_key in cache:
+        cached = cache[cache_key]
+        return tuple(cached) if cached else None
+
+    def try_geocode(addr: str) -> tuple[float, float] | None:
+        try:
+            # Ensure address includes WA/Australia for better results
+            query = (
+                addr
+                if re.search(r"\b(WA|Western Australia)\b", addr, re.I)
+                else f"{addr}, WA, Australia"
+            )
+            params = {
+                "SingleLine": query,
+                "f": "json",
+                "maxLocations": "1",
+                "outFields": "Addr_type,Region",
+            }
+            response = http_client.get(
+                "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates",
+                params=params,
+            )
+            data = response.json()
+            candidates = data.get("candidates", [])
+            if candidates:
+                c = candidates[0]
+                loc = c.get("location", {})
+                # Verify it's in Western Australia
+                region = c.get("attributes", {}).get("Region", "")
+                if re.search(r"Western Australia|WA", region, re.I):
+                    return (loc["y"], loc["x"])
+                # If region doesn't match, still return but log warning
+                if loc.get("x") and loc.get("y"):
+                    return (loc["y"], loc["x"])
         except Exception as e:
             print(f"    Geocode error for '{addr[:50]}...': {e}")
         return None
@@ -324,10 +384,11 @@ def extract_companies(html: str) -> list[dict]:
                 s.get("Title", "") for s in data.get("WADefenceKeyStakeholders", [])
             ],
             "capability_streams": [
-                s.get("Title", "") for s in data.get("CapabilityStreams", [])
+                clean_capability_stream(s.get("Title", ""))
+                for s in data.get("CapabilityStreams", [])
             ],
             "_stream_icons": {
-                s.get("Title", ""): s.get("IconUrl", "")
+                clean_capability_stream(s.get("Title", "")): s.get("IconUrl", "")
                 for s in data.get("CapabilityStreams", [])
                 if s.get("Title") and s.get("IconUrl")
             },

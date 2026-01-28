@@ -1,0 +1,114 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: Serverless S3 Upload API (PUT only, Configurable CORS)
+
+Parameters:
+  BucketName:
+    Type: String
+    Description: Unique name for the new S3 bucket (lowercase, numbers, hyphens).
+    AllowedPattern: '^[a-z0-9][a-z0-9-]*[a-z0-9]$'
+  
+  AllowedOrigin:
+    Type: String
+    Description: Domain allowed to upload (e.g., 'https://myapp.com' or '*').
+    Default: '*'
+
+Resources:
+  # 1. S3 Bucket (Private storage)
+  Bucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: !Ref BucketName
+
+  # 2. IAM Role (Gives API Gateway permission to write to S3)
+  UploadRole:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Principal: { Service: apigateway.amazonaws.com }
+            Action: sts:AssumeRole
+      Policies:
+        - PolicyName: S3Put
+          PolicyDocument:
+            Version: '2012-10-17'
+            Statement:
+              - Effect: Allow
+                Action: s3:PutObject
+                Resource: !Sub 'arn:aws:s3:::${BucketName}/*'
+
+  # 3. API Gateway
+  Api:
+    Type: AWS::ApiGateway::RestApi
+    Properties:
+      Name: !Sub "${BucketName}-api"
+
+  # Resource: /{filename} attached to root
+  FilenameRes:
+    Type: AWS::ApiGateway::Resource
+    Properties:
+      RestApiId: !Ref Api
+      ParentId: !GetAtt Api.RootResourceId
+      PathPart: '{filename}'
+
+  # 4. Method: PUT (The Upload)
+  MethodPut:
+    Type: AWS::ApiGateway::Method
+    Properties:
+      RestApiId: !Ref Api
+      ResourceId: !Ref FilenameRes
+      HttpMethod: PUT
+      AuthorizationType: NONE
+      RequestParameters: { method.request.path.filename: true }
+      Integration:
+        Type: AWS
+        IntegrationHttpMethod: PUT
+        Uri: !Sub "arn:aws:apigateway:${AWS::Region}:s3:path/${BucketName}/{filename}"
+        Credentials: !GetAtt UploadRole.Arn
+        RequestParameters: { integration.request.path.filename: "method.request.path.filename" }
+        IntegrationResponses: [{ StatusCode: 200 }]
+      MethodResponses: [{ StatusCode: 200 }]
+
+  # 5. Method: OPTIONS (CORS Preflight)
+  MethodOptions:
+    Type: AWS::ApiGateway::Method
+    Properties:
+      RestApiId: !Ref Api
+      ResourceId: !Ref FilenameRes
+      HttpMethod: OPTIONS
+      AuthorizationType: NONE
+      Integration:
+        Type: MOCK
+        RequestTemplates: { application/json: '{"statusCode": 200}' }
+        IntegrationResponses:
+          - StatusCode: 200
+            ResponseParameters:
+              method.response.header.Access-Control-Allow-Headers: "'Content-Type,Authorization'"
+              method.response.header.Access-Control-Allow-Methods: "'PUT,OPTIONS'"
+              # Injects your parameter here
+              method.response.header.Access-Control-Allow-Origin: !Sub "'${AllowedOrigin}'"
+      MethodResponses:
+        - StatusCode: 200
+          ResponseParameters:
+            method.response.header.Access-Control-Allow-Headers: true
+            method.response.header.Access-Control-Allow-Methods: true
+            method.response.header.Access-Control-Allow-Origin: true
+
+  # 6. Deploy
+  Deployment:
+    Type: AWS::ApiGateway::Deployment
+    DependsOn: [MethodPut, MethodOptions]
+    Properties: { RestApiId: !Ref Api }
+
+  Stage:
+    Type: AWS::ApiGateway::Stage
+    Properties:
+      DeploymentId: !Ref Deployment
+      RestApiId: !Ref Api
+      StageName: prod
+
+Outputs:
+  Endpoint:
+    Description: API Endpoint
+    Value: !Sub "https://${Api}.execute-api.${AWS::Region}.amazonaws.com/prod/"

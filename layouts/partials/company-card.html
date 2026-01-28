@@ -49,7 +49,7 @@
         <span class="initials">{{ substr $company.name 0 2 | upper }}</span>
         {{- end -}}
       </div>
-      <div class="name">{{ $company.name }}</div>
+      <div class="name" title="{{ $company.name }}">{{ $company.name }}</div>
       <div class="badges">
         {{- if $company.is_prime }}<small>Prime</small>{{ end -}}
         {{- if $company.is_sme }}<small>SME</small>{{ end -}}
@@ -57,7 +57,7 @@
         {{- if $company.is_veteran_owned }}<small class="highlight">Veteran</small>{{ end -}}
       </div>
       {{- with $computed.overview_short }}
-      <p class="overview"><small>{{ . | markdownify }}</small></p>
+      <p class="overview"><small title="{{ $company.overview }}">{{ . | markdownify }}</small></p>
       {{- end }}
     </article>
   </a>
@@ -86,7 +86,7 @@
         {{- end }}
       </div>
 
-      <div class="name">{{ $company.name }}</div>
+      <div class="name" title="{{ $company.name }}">{{ $company.name }}</div>
 
       <div class="badges">
         {{- if $company.is_prime }}<small>Prime</small>{{ end -}}
@@ -96,7 +96,7 @@
       </div>
 
       {{- if and $computed.overview_short (not $isMap) }}
-      <p class="overview"><small>{{ $computed.overview_short | markdownify }}</small></p>
+      <p class="overview"><small title="{{ $company.overview }}">{{ $computed.overview_short | markdownify }}</small></p>
       {{- end }}
     </article>
   </a>

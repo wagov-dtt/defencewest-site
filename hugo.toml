@@ -85,6 +85,10 @@ uglyURLs = false
 
   # External URLs
   mapsUrl = "https://www.google.com/maps"
+  
+  # Submission API endpoint (deploy infra/s3-upload.yaml to get this URL)
+  # Leave empty to disable submissions
+  submitUrl = "https://ou0c46d6mb.execute-api.ap-southeast-2.amazonaws.com/prod/"
 
   # Western Australia bounding box for geocoding validation
   [params.waBounds]
