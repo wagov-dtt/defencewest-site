@@ -464,7 +464,7 @@
     setTaxonomyValues(d);
     if (d.markdown) editor.setHTML(marked.parse(d.markdown));
     const img = new Image(); img.onload = () => { $('logo-preview').src = img.src; $('logo-placeholder').classList.add('hidden'); $('logo-preview-container').classList.remove('hidden'); };
-    img.src = `{{ "logos/" | relURL }}${editSlug}.png`;
+    img.src = `../logos/${editSlug}.png`;
   }
 
   function initEventHandlers() {
