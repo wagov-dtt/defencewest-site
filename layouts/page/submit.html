@@ -65,11 +65,6 @@
     /* Actions */
     .actions { display: flex; gap: 0.5rem; flex-wrap: wrap; }
     
-    /* Success panel */
-    .success-panel { margin-top: 1rem; }
-    .submission-id { display: flex; gap: 0.5rem; align-items: center; background: var(--pico-muted-background-color); padding: 0.75rem; border-radius: var(--pico-border-radius); margin: 1rem 0; }
-    .submission-id code { flex: 1; word-break: break-all; background: transparent; padding: 0; }
-    
     /* PicoCSS Dialog for link editor */
     #link-dialog { max-width: 500px; }
     #link-dialog button { margin-top: 1rem; }
@@ -144,6 +139,7 @@
     <nav aria-label="breadcrumb"><ul><li><a href="{{ "/" | relURL }}">Directory</a></li><li>Submit</li></ul></nav>
     <h1 id="page-title">Submit New Listing</h1>
     <p>Fill out the form below to submit a new company or update an existing listing. When complete, download your submission file and create a <a href="{{ $githubIssuesUrl }}" target="_blank">GitHub issue</a> to attach it. Your submission will be processed automatically and a pull request will be created for review. Or email the file to <a href="mailto:{{ $adminEmail }}">{{ $adminEmail }}</a>.</p>
+    <p id="success-message" class="hidden">✓ Download complete! Follow the instructions above to submit.</p>
   </header>
 
   <main class="container">
@@ -248,15 +244,6 @@
         <button type="button" id="btn-submit-eml">Download Email (EML)</button>
         <button type="button" id="btn-submit-zip" class="secondary">Download ZIP</button>
       </div>
-
-      <!-- Success -->
-      <article id="success-panel" class="success-panel hidden">
-        <header>Submission File Downloaded</header>
-        <p>Submission file downloaded. Create a <a href="${CONFIG.githubIssuesUrl}" target="_blank">GitHub issue</a> and attach this file to submit.</p>
-        <footer class="actions">
-          <button type="button" id="btn-new-submission" class="outline">Submit Another</button>
-        </footer>
-      </article>
     </form>
   </main>
 
@@ -617,8 +604,8 @@
       try {
         submission = buildSubmission();
         generateEML(submission);
-        $('form-actions').classList.add('hidden');
-        $('success-panel').classList.remove('hidden');
+        document.querySelector('header.container').scrollIntoView({ behavior: 'smooth' });
+        $('success-message').classList.remove('hidden');
       }
       catch (e) { alert('Error: ' + e.message); }
       finally { btn.disabled = false; btn.removeAttribute('aria-busy'); }
@@ -630,14 +617,12 @@
       try {
         submission = buildSubmission();
         generateZIP(submission);
-        $('form-actions').classList.add('hidden');
-        $('success-panel').classList.remove('hidden');
+        document.querySelector('header.container').scrollIntoView({ behavior: 'smooth' });
+        $('success-message').classList.remove('hidden');
       }
       catch (e) { alert('Error: ' + e.message); }
       finally { btn.disabled = false; btn.removeAttribute('aria-busy'); }
     });
-
-    $('btn-new-submission').addEventListener('click', () => location.href = location.pathname);
   }
 
   // Initialize

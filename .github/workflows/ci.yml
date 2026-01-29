@@ -55,6 +55,7 @@ jobs:
           mise run preprocess
           hugo server &
           sleep 5
+          export PUPPETEER_EXECUTABLE_PATH=/usr/bin/google-chrome-stable
           pnpm exec pa11y-ci
 
   deploy:

@@ -450,7 +450,7 @@ nav .logo {
   background: var(--pico-muted-border-color);
   border-radius: var(--pico-border-radius);
   font-size: 0.6rem;
-  color: var(--pico-color);  /* Ensure readable text */
+  color: var(--pico-h5-color);
 }
 
 .company-card .badges small.highlight {

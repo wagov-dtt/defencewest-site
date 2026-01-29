@@ -25,6 +25,7 @@ $companies | append $company -}} {{- end -}} {{- end -}} {{- $companies = sort $
   </nav>
   <div class="col-4 col-m-6 col-s-12">
     <fieldset role="group" class="search-group">
+      <legend class="visually-hidden">Search and view options</legend>
       <input
         type="search"
         name="q"
@@ -77,6 +78,7 @@ $companies | append $company -}} {{- end -}} {{- end -}} {{- $companies = sort $
     </button>
     <form class="filters" id="filters" method="get">
       {{ partial "filters.html" . }}
+      <button type="submit" class="visually-hidden" id="filter-submit">Apply filters</button>
     </form>
   </aside>
   
