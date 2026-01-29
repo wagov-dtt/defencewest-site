@@ -2,92 +2,41 @@
 
 [![CI](https://github.com/wagov-dtt/defencewest-site/actions/workflows/ci.yml/badge.svg)](https://github.com/wagov-dtt/defencewest-site/actions/workflows/ci.yml)
 
-Static site for the WA Defence Industry and Science Capability Directory.
+Western Australia's Defence Industry and Science Capability Directory - a static site built with Hugo.
 
-## Quick Start
+## Quick Links
 
-```bash
-mise run setup   # Install dependencies + generate computed data
-mise run dev     # Dev server at localhost:1313
-mise run build   # Build to public/
-```
+- 🏢 **Submit a company** → [submission form](https://wagov-dtt.github.io/defencewest-site/submit/) (for external companies)
+- 🤝 **Contribute code** → [CONTRIBUTING.md](CONTRIBUTING.md) (for developers and admins)
+- 🤖 **AI agent guide** → [AGENTS.md](AGENTS.md) (for AI assistants)
 
-## Adding/Editing Companies
+## Tech Stack
 
-Every company page has an **"Edit this listing"** link. The editor lets you:
-
-- Edit overview and capabilities markdown with live preview
-- Modify contact details and taxonomy selections
-- Copy the generated markdown or download as `.md` file
-- Link directly to edit on GitHub
-
-Submit changes via GitHub PR or email to defencewest@dpc.wa.gov.au.
-
-### Online Submission Form
-
-Companies can also submit new listings or updates via the online form at `/submit/`:
-
-- WYSIWYG editor for company description
-- Multi-select dropdowns for taxonomy categories  
-- Logo upload (optional)
-- Submissions are stored in S3 and processed via GitHub Actions workflow
-
-**Note:** The GitHub Actions import workflow (`import-submission.yml`) requires AWS OIDC setup. See [AGENTS.md](AGENTS.md#github-workflow-setup) for configuration details.
-
-## Project Structure
-
-```
-content/company/*.md   # Company pages (328 markdown files)
-data/
-  taxonomies.yaml      # Filter categories + icons
-  companies/*.yaml     # Original scraped data (reference)
-  computed.yaml        # Generated: pre-computed values (gitignored)
-  counts.yaml          # Generated: taxonomy counts (gitignored)
-hugo.toml              # All site config (theme, CDN URLs, map settings)
-infra/
-  s3-upload.yaml       # CloudFormation template for submission API
-static/logos/          # Company logos
-static/icons/          # Capability stream icons
-static/maps/           # Pre-rendered minimap PNGs
-```
-
-## Logo Processing
-
-Logos are automatically processed by the scraper (`scripts/scrape.py`) using ImageMagick `mogrify`:
-
-- Fuzzy trim (5% fuzz to handle near-white backgrounds)
-- Resize to max 520x120 (2x retina for card display)
-- Convert to PNG and strip metadata
-
-To manually reprocess all logos:
-
-```bash
-rm -f static/logos/*.png
-uv run python scripts/scrape.py  # Uses cached images, reprocesses with mogrify
-```
-
-Requires [ImageMagick](https://imagemagick.org/) (`apt install imagemagick` or `brew install imagemagick`).
-
-## Tech
-
-[Hugo](https://gohugo.io), [PicoCSS](https://picocss.com), [MapLibre GL JS](https://maplibre.org). Tools: [mise](https://mise.jdx.dev), [uv](https://docs.astral.sh/uv/).
+- [Hugo](https://gohugo.io) - Static site generator
+- [PicoCSS](https://picocss.com) - CSS framework
+- [MapLibre GL JS](https://maplibre.org) - Interactive maps
+- Tools: [mise](https://mise.jdx.dev), [uv](https://docs.astral.sh/uv/)
 
 ## Documentation
 
-- [CONTRIBUTING.md](CONTRIBUTING.md) - How to contribute
-- [ACCESSIBILITY.md](ACCESSIBILITY.md) - Accessibility statement and testing approach
+- [CONTRIBUTING.md](CONTRIBUTING.md) - Contributing guide, development setup, admin tasks
 - [AGENTS.md](AGENTS.md) - AI agent development guide
+- [ACCESSIBILITY.md](ACCESSIBILITY.md) - Accessibility statement and testing approach
 - [docs/decisions/](docs/decisions/) - Architecture Decision Records
 
 ## Maps
 
 The map implementation uses:
 
-- **[OSM Shortbread Vector Tiles](https://vector.openstreetmap.org/)** - free, public vector tiles from OpenStreetMap
+- **[OpenFreeMap Liberty](https://openfreemap.org/)** - free, open-source map tiles
 - **[MapLibre GL JS](https://maplibre.org)** - vector map rendering with globe projection
-- **Static minimaps** - pre-rendered PNG images for company cards (generated via `pymgl` using the same OSM tiles)
+- **Static minimaps** - pre-rendered PNG images for company cards (generated via `pymgl`)
 
 All map configuration (style URL, tile URL) is in `hugo.toml` under `[params]`.
+
+## License
+
+This project is released under the MIT License.
 
 ## AI-Assisted Development
 

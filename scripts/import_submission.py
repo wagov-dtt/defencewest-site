@@ -7,7 +7,6 @@ Usage:
 
 Outputs:
     - content/company/{slug}.md (new or updated)
-    - static/logos/{slug}.png (if logo included)
 
 Exit codes:
     0: Success
@@ -148,16 +147,6 @@ def import_submission(submission: dict) -> tuple[str, str, bool, list[str]]:
     md_path = COMPANY_DIR / f"{slug}.md"
     md_path.write_text(md_content)
     print(f"Saved: {md_path}", file=sys.stderr)
-
-    # Save logo if provided
-    if submission.get("logo"):
-        logo_data = submission["logo"]
-        match = re.match(r"data:image/\w+;base64,(.+)", logo_data)
-        if match:
-            logo_bytes = base64.b64decode(match.group(1))
-            logo_path = LOGOS_DIR / f"{slug}.png"
-            logo_path.write_bytes(logo_bytes)
-            print(f"Saved: {logo_path}", file=sys.stderr)
 
     return slug, company_name, is_new, warnings
 

@@ -1,0 +1,119 @@
+name: Process Submission
+
+on:
+  issues:
+    types: [opened, edited]
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+
+jobs:
+  process:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install mise
+        uses: jdx/mise-action@v2
+
+      - name: Install dependencies
+        run: uv sync
+
+      - name: Download and extract submission
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          echo "Finding ZIP attachments..."
+          ASSET_URLS=$(gh api repos/${{ github.repository }}/issues/${{ github.event.issue.number }} \
+            --jq '.assets[] | select(.name | endswith(".zip")) | .url')
+
+          if [ -z "$ASSET_URLS" ]; then
+            echo "No ZIP attachment found on issue"
+            gh api repos/${{ github.repository }}/issues/${{ github.event.issue.number }}/comments \
+              --method POST \
+              -f body="❌ No ZIP attachment found. Please attach a ZIP file generated from the submission form."
+            exit 1
+          fi
+
+          echo "$ASSET_URLS" | head -1 | xargs -I {} curl -L -o submission.zip {}
+          unzip -q submission.zip -d submission
+
+          if [ ! -f "submission/submission.json" ]; then
+            echo "submission.json not found in ZIP"
+            gh api repos/${{ github.repository }}/issues/${{ github.event.issue.number }}/comments \
+              --method POST \
+              -f body="❌ Invalid ZIP file: submission.json not found. Please regenerate and re-upload."
+            exit 1
+          fi
+
+      - name: Import submission
+        id: import
+        run: |
+          uv run python scripts/import_submission.py submission/submission.json
+
+      - name: Create Pull Request
+        id: pr
+        uses: peter-evans/create-pull-request@v7
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "${{ steps.import.outputs.commit_msg }}"
+          branch: "submission/${{ steps.import.outputs.slug }}"
+          delete-branch: true
+          title: "${{ steps.import.outputs.pr_title }}"
+          body: |
+            ## Issue Reference
+
+            Closes #${{ github.event.issue.number }}
+
+            ---
+
+            ${{ steps.import.outputs.warnings }}
+
+            ---
+
+            ### Checklist
+            - [ ] Company name is accurate
+            - [ ] Contact information verified
+            - [ ] Taxonomies are correct
+            - [ ] No duplicate entry exists
+          labels: submission
+
+      - name: Comment success on issue
+        if: success()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: '✅ Pull request created: #' + '${{ steps.pr.outputs.pull_request_number }}\n\nPlease review the PR and merge if the changes look correct.'
+            });
+
+      - name: Close issue
+        if: success()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            github.rest.issues.update({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'closed'
+            });
+
+      - name: Comment failure on issue
+        if: failure()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: '❌ Submission import failed.\n\nError: ' + '${{ job.status }}\n\nPlease check the ZIP file and try again, or contact the team for assistance.'
+            });

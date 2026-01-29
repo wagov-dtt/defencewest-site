@@ -69,7 +69,9 @@ uglyURLs = false
   siteUrl = "https://wagov-dtt.github.io/defencewest-site"
   githubRepo = "wagov-dtt/defencewest-site"
   githubBranch = "main"
-  
+  adminEmail = "defencewest@dpc.wa.gov.au"
+  githubIssuesUrl = "https://github.com/wagov-dtt/defencewest-site/issues/new?template=submission.md"
+
   # Pico CSS theme (azure, slate, zinc, sand, etc.)
   picoTheme = "slate"
   
@@ -85,10 +87,6 @@ uglyURLs = false
 
   # External URLs
   mapsUrl = "https://www.google.com/maps"
-  
-  # Submission API endpoint (deploy infra/s3-upload.yaml to get this URL)
-  # Leave empty to disable submissions
-  submitUrl = "https://ou0c46d6mb.execute-api.ap-southeast-2.amazonaws.com/prod/"
 
   # Western Australia bounding box for geocoding validation
   [params.waBounds]
