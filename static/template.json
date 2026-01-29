@@ -1,24 +1,25 @@
 {
+  "_comment": "TEMPLATE: Fictional example for testing. Not a real company.",
   "type": "new",
   "company": {
-    "name": "Robotix Industries",
-    "website": "https://www.paramount.com/movies/sonic-the-hedgehog-3",
-    "phone": "+61 8 555-ROBOT",
-    "email": "robotnik@robotix.example",
-    "address": "123 Industrial Zone, Hillside WA 6000",
+    "name": "Robotnik's Badnik Barn (Example)",
+    "website": "https://eggman.empire/example",
+    "phone": "+61 8 555-EGGMAN",
+    "email": "robotnik@example.test",
+    "address": "Death Egg Zone, South Island (Fictional)",
     "latitude": "-31.9505",
     "longitude": "115.8605",
     "contact_name": "Dr. Ivo Robotnik",
-    "contact_title": "Chief Innovation Officer & Robot Overlord",
-    "is_sme": true,
-    "is_prime": false,
+    "contact_title": "Supreme Leader",
+    "is_sme": false,
+    "is_prime": true,
     "stakeholders": ["defence"],
     "capability_streams": ["land", "logistics"],
-    "capability_domains": ["robotics", "cyber", "armour"],
-    "industrial_capabilities": ["design", "mechanical", "steel"],
+    "capability_domains": ["robotics", "cyber"],
+    "industrial_capabilities": ["design", "mechanical"],
     "regions": ["perth"],
-    "ownerships": ["veteran"]
+    "ownerships": []
   },
-  "content_html": "<h2>Overview</h2>\n<p>Robotix Industries is a leading provider of autonomous systems and robotic solutions. Our mission is simple: build better machines that get the job done.</p>\n<p>Founded by Dr. Ivo Robotnik, we specialise in creating highly capable robots for defence and industrial applications. Our team of expert engineers works around the clock to deliver cutting-edge autonomous systems.</p>\n<h2>Capabilities</h2>\n<ul>\n<li>Autonomous robotic platforms</li>\n<li>Surveillance and monitoring systems</li>\n<li>Custom robot manufacturing</li>\n<li>Advanced threat detection</li>\n<li>Rapid prototyping of mechanical contraptions</li>\n</ul>\n<h2>Discriminators</h2>\n<h3>Unmatched Expertise</h3>\n<p>Our robots are built by the best in the business. No task too complex.</p>\n<h3>Industrial-Scale Production</h3>\n<p>We can mass-produce robotic fleets in record time.</p>\n<h3>Proven Track Record</h3>\n<p>Over 30 years of experience (with minor setbacks involving blue hedgehogs).</p>\n<h3>Complete Automation Solutions</h3>\n<p>From concept to deployment - we handle everything. No task too ambitious.</p>",
+  "content_html": "<h2>Overview</h2><p><em>This is a fictional example for testing purposes.</em></p><p>Robotnik's Badnik Barn specializes in building robots that chase blue hedgehogs. 30+ years of experience being outrun.</p><h2>Capabilities</h2><ul><li>Building robots that fall off cliffs</li><li>Designing traps that never work</li><li>Collecting Chaos Emeralds (unsuccessfully)</li></ul>",
   "logo": null
 }
