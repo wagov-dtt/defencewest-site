@@ -1,6 +1,6 @@
 ---
 name: Secure Systems Limited
-date: '2025-01-27'
+date: '2025-01-29'
 overview: 'Secure Systems Limited specialises in the design and manufacture of secure portable storage technology for high assurance applications. '
 website: https://www.securesystems.com.au
 contact_name: Peter James
@@ -11,13 +11,6 @@ email: pjames@securesystems.com.au
 is_sme: true
 stakeholders:
 - defence
-capability_streams:
-- iscw
-- keyn
-- aasl
-- masw
-- saac
-- lcaw
 capability_domains:
 - armour
 - cyber
@@ -33,6 +26,13 @@ capability_domains:
 - submarines
 regions:
 - perth-metropolitan
+capability_streams:
+- electronic
+- research
+- logistics
+- maritime
+- aerial
+- land
 latitude: -31.9019749
 longitude: 115.8287464
 ---

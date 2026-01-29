@@ -1,6 +1,6 @@
 ---
 name: Scancam
-date: '2025-01-27'
+date: '2025-01-29'
 overview: 'Scancam specialises in vehicle licence plate recognition and CCTV Security surveillance. '
 website: https://www.scancam.com.au
 contact_name: Eoin Byrne
@@ -11,15 +11,15 @@ email: eoin@scancam.com.au
 is_sme: true
 stakeholders:
 - defence
-capability_streams:
-- iscw
-- aasl
 capability_domains:
 - base
 - ict
 - intelligence
 regions:
 - perth-metropolitan
+capability_streams:
+- electronic
+- logistics
 latitude: -31.9451984
 longitude: 115.8640639
 ---

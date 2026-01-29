@@ -1,6 +1,6 @@
 ---
 name: Business Innovation Services
-date: '2025-01-27'
+date: '2025-01-29'
 overview: Providing business development and preparedness services to SME's within the WA defence industry
 website: https://johntedesco.com.au
 contact_name: John Tedesco
@@ -10,8 +10,6 @@ email: john@johntedesco.com.au
 is_sme: true
 stakeholders:
 - defence
-capability_streams:
-- base
 capability_domains:
 - base
 industrial_capabilities:
@@ -21,6 +19,8 @@ regions:
 - perth
 - south-west
 - wheatbelt
+capability_streams:
+- base
 latitude: -32.09399
 longitude: 115.84237
 ---

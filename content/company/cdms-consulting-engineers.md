@@ -1,6 +1,6 @@
 ---
 name: CDMS Consulting Engineers
-date: '2025-01-27'
+date: '2025-01-29'
 overview: CDMS Consulting Engineers provides engineering services specialising in innovative product development.
 website: https://cdmsengineering.com
 contact_name: Damian Connelly
@@ -11,10 +11,6 @@ email: damian.connelly@cdmsengineering.com
 is_sme: true
 stakeholders:
 - defence
-capability_streams:
-- aasl
-- saac
-- lcaw
 capability_domains:
 - air
 - barracks
@@ -26,6 +22,10 @@ capability_domains:
 - training-ranges
 regions:
 - perth-metropolitan
+capability_streams:
+- logistics
+- aerial
+- land
 latitude: -31.9504
 longitude: 115.84438
 ---

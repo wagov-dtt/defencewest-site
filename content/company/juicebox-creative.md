@@ -1,6 +1,6 @@
 ---
 name: Juicebox Creative Pty Ltd
-date: '2025-01-27'
+date: '2025-01-29'
 overview: Juicebox is a market-leading digital agency specialising in brand-led, human-centred design, technology and marketing solutions.
 website: https://www.juicebox.com.au
 contact_name: Chris Nelson

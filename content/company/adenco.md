@@ -1,6 +1,6 @@
 ---
 name: ADENCO
-date: '2025-01-27'
+date: '2025-01-29'
 overview: ADENCO provides services in the design and construction of Civil and Electrical infrastructure for the Defence, Mining and Renewables sectors
 website: https://www.adenco.com.au
 contact_name: Christoff van der Schyff
@@ -12,12 +12,6 @@ is_sme: true
 stakeholders:
 - defence
 - defence-west
-capability_streams:
-- electronic
-- intelligence
-- land
-- maritime
-- space
 capability_domains:
 - air
 - barracks
@@ -40,6 +34,12 @@ regions:
 - pilbara
 - south-west
 - wheatbelt
+capability_streams:
+- electronic
+- intelligence
+- land
+- maritime
+- space
 latitude: -31.7965
 longitude: 115.84082
 ---

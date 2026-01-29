@@ -1,6 +1,6 @@
 ---
 name: Electro Base Pty Ltd
-date: '2025-01-27'
+date: '2025-01-29'
 overview: Electro Base is a Western Australian renewable energy technology company providing off-grid power needs for commercial and industrial needs and fast e-mobility charging.
 website: https://electrobase.au
 contact_name: Sylvia Tokic
@@ -12,11 +12,6 @@ is_sme: true
 stakeholders:
 - defence
 - defence-west
-capability_streams:
-- base
-- land
-- logistics
-- research
 capability_domains:
 - air
 - air-traffic
@@ -39,6 +34,11 @@ regions:
 - perth
 - south-west
 - wheatbelt
+capability_streams:
+- base
+- land
+- logistics
+- research
 latitude: -32.03949
 longitude: 115.8244
 ---

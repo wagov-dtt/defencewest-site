@@ -1,6 +1,6 @@
 ---
 name: Calibre Group
-date: '2025-01-27'
+date: '2025-01-29'
 overview: 'Calibre Group comprises a diverse group of capabilities including: engineering design services; consulting services; technology, communications and control systems; urban development; project management and EPCM; maintenance and shutdown services. '
 website: https://www.calibregroup.com
 contact_name: Andrew Partington
@@ -10,9 +10,6 @@ email: andrew.partington@calibregroup.com
 is_sme: true
 stakeholders:
 - defence
-capability_streams:
-- iscw
-- keyn
 capability_domains:
 - base
 - c2
@@ -26,6 +23,9 @@ capability_domains:
 - us
 regions:
 - perth-metropolitan
+capability_streams:
+- electronic
+- research
 latitude: -31.9551184
 longitude: 115.8590618
 ---

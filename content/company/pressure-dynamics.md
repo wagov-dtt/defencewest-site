@@ -1,6 +1,6 @@
 ---
 name: Pressure Dynamics International
-date: '2025-01-27'
+date: '2025-01-29'
 overview: 'Pressure Dynamics International
 
   An engineering and services contractor specialising in hydraulic and lifting solutions operating across multiple sectors'
@@ -14,12 +14,6 @@ is_sme: true
 stakeholders:
 - defence
 - defence-west
-capability_streams:
-- keyn
-- aasl
-- masw
-- saac
-- lcaw
 capability_domains:
 - air
 - barracks
@@ -42,6 +36,12 @@ regions:
 - north
 - south
 - naval
+capability_streams:
+- research
+- logistics
+- maritime
+- aerial
+- land
 latitude: -32.1153659
 longitude: 115.8126227
 ---

@@ -1,6 +1,6 @@
 ---
 name: Sirius Geopolitics Pty Ltd
-date: '2025-01-27'
+date: '2025-01-29'
 overview: Sirius Geopolitics is a boutique research and advisory service dedicated to helping organisations navigate geopolitics. Sirius delivers sharp analysis, strategic foresight, and informed engagement.
 website: https://www.siriusgeopolitics.au
 contact_name: Alana Ford
@@ -14,16 +14,16 @@ stakeholders:
 - academic
 - defence-west
 - defence-science
-capability_streams:
-- education
-- electronic
-- intelligence
-- research
 industrial_capabilities:
 - none
 regions:
 - peel
 - perth
+capability_streams:
+- education
+- electronic
+- intelligence
+- research
 latitude: -32.32457
 longitude: 115.7693535
 ---

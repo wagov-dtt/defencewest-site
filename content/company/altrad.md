@@ -1,6 +1,6 @@
 ---
 name: Altrad Services
-date: '2025-01-27'
+date: '2025-01-29'
 overview: 'Altrad Services is a global multi-services provider working in partnership with our clients to build, protect and extend the life of their assets. '
 website: https://www.altradservices-apac.com
 contact_name: Lee Thompson
@@ -11,8 +11,6 @@ email: Au.tenders@altrad.com
 is_sme: true
 stakeholders:
 - defence
-capability_streams:
-- masw
 capability_domains:
 - destroyers
 - frigates
@@ -35,6 +33,8 @@ industrial_capabilities:
 - welding
 regions:
 - perth-metropolitan
+capability_streams:
+- maritime
 latitude: -31.9530719
 longitude: 115.852769
 ---

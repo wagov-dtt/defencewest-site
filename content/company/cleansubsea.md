@@ -1,6 +1,6 @@
 ---
 name: CleanSubSea
-date: '2025-01-27'
+date: '2025-01-29'
 overview: Envirocart - in-water hull cleaning with complete capture, containment and filtration.
 website: http://www.cleansubsea.com
 contact_name: Peter Maidment
@@ -12,8 +12,6 @@ is_sme: true
 stakeholders:
 - defence
 - defence-west
-capability_streams:
-- maritime
 capability_domains:
 - amphibious
 - destroyers
@@ -32,6 +30,8 @@ industrial_capabilities:
 - mechanical
 regions:
 - perth
+capability_streams:
+- maritime
 latitude: -32.09779
 longitude: 115.81493
 ---

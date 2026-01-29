@@ -1,6 +1,6 @@
 ---
 name: Green Light
-date: '2025-01-27'
+date: '2025-01-29'
 overview: An Australian IT services company supporting defence primes nationally with security cleared resources and technology services.
 website: https://greenlightworldwide.com
 contact_name: Ron Elliott
@@ -12,8 +12,6 @@ is_sme: true
 stakeholders:
 - defence
 - defence-west
-capability_streams:
-- research
 capability_domains:
 - communications
 - cyber
@@ -30,6 +28,8 @@ regions:
 - pilbara
 - south-west
 - wheatbelt
+capability_streams:
+- research
 latitude: -31.9562741
 longitude: 115.8586386
 ---

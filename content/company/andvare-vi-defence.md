@@ -1,6 +1,6 @@
 ---
 name: Andvare VI Defence Industries
-date: '2025-01-27'
+date: '2025-01-29'
 overview: Focussing on survivability, specialists in the design and manufacture of advanced armour systems and thermal and radio frequency camouflaging, including fragmentation and rifle rated modular ballistic
 website: https://www.andvarevi.com
 contact_name: Justin Willis
@@ -12,9 +12,6 @@ is_sme: true
 stakeholders:
 - defence
 - defence-west
-capability_streams:
-- land
-- research
 capability_domains:
 - armour
 - sustainment
@@ -26,6 +23,9 @@ industrial_capabilities:
 - protective
 regions:
 - perth
+capability_streams:
+- land
+- research
 latitude: -31.8493566
 longitude: 115.8864906
 ---

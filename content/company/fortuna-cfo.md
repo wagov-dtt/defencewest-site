@@ -1,6 +1,6 @@
 ---
 name: Fortuna CFO Services Pty Ltd
-date: '2025-01-27'
+date: '2025-01-29'
 overview: Fortuna CFO Services is the result of the merging of a traditional accounting public practice and a Virtual CFO services provider. We provide part time senior financial management expertise to the small business sector at a cost a fraction of that of a full time resource.
 website: https://www.fortunaadvisors.com.au
 contact_name: Simon Turner
@@ -9,15 +9,15 @@ address: Suite 1.02, 110 Erindale Road, Balcatta WA 6021
 phone: 0418 375 260
 email: cfo@fortunaadvisors.com.au
 is_sme: true
-capability_streams:
-- iscw
-- keyn
-- aasl
-- masw
-- saac
-- lcaw
 regions:
 - perth-metropolitan
+capability_streams:
+- electronic
+- research
+- logistics
+- maritime
+- aerial
+- land
 latitude: -31.8595112
 longitude: 115.8099362
 ---

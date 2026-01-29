@@ -3,23 +3,6 @@ stakeholders:
   defence: Defence Industry
   defence-science: Defence Science Centre
   defence-west: Defence West
-capability_streams:
-  aasl: Air and Sea Lift
-  aerial: Aerial; Strike and Air Combat
-  base: Base Support
-  education: Education and Training
-  electronic: Electronic Warfare and Cyber
-  iscw: Intelligence, Surveillance, Reconnaissance, Space, Electronic Warfare and Cyber
-  intelligence: Intelligence; Surveillance and Reconnaissance
-  keyn: Key Enablers
-  lcaw: Land Combat and Amphibious Warfare
-  land: Land Forces
-  logistics: Logistics and Supply Chain
-  masw: Maritime and Anti-Submarine Warfare
-  maritime: Maritime and Sub-Sea Forces
-  research: Research and Technology Development
-  saac: Strike and Air Combat
-  space: Space
 capability_domains:
   ai: AI & Autonomy
   air: Air Bases
@@ -109,3 +92,14 @@ regions:
 ownerships:
   indigenous: Indigenous Owned
   veteran: Veteran Owned
+capability_streams:
+  space: Space
+  land: Land Forces
+  electronic: Electronic Warfare and Cyber
+  maritime: Maritime and Sub-Sea Forces
+  research: Research and Technology Development
+  base: Base Support
+  intelligence: Intelligence; Surveillance and Reconnaissance
+  logistics: Logistics and Supply Chain
+  aerial: Aerial; Strike and Air Combat
+  education: Education and Training

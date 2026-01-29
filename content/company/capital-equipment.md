@@ -1,6 +1,6 @@
 ---
 name: Capital Equipment
-date: '2025-01-27'
+date: '2025-01-29'
 overview: 'Capital Equipment Machinery Sales has a team of professional staff with extensive knowledge in the sales and service of: Machine Tools, Fabrication Equipment, Cleaning Equipment, Marking Machines'
 website: https://www.capitalequipment.net.au
 contact_name: Jim Harding
@@ -9,10 +9,6 @@ address: 1/10 Renewable Chase Bibra Lake, BIBRA LAKE WA 6163
 phone: '0421624436'
 email: jim@capitalequipment.net.au
 is_sme: true
-capability_streams:
-- base
-- education
-- logistics
 industrial_capabilities:
 - aluminium
 - blasting
@@ -34,6 +30,10 @@ regions:
 - pilbara
 - south-west
 - wheatbelt
+capability_streams:
+- base
+- education
+- logistics
 latitude: -32.10218
 longitude: 115.80832
 ---

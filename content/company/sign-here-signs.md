@@ -1,6 +1,6 @@
 ---
 name: Sign Here Signs
-date: '2025-01-27'
+date: '2025-01-29'
 overview: Signhere Signs are ISO 9001 Quality Accredited and currently service the mining & all defence industries.
 website: https://www.signheresigns.com.au
 contact_name: Russell Friedman
@@ -11,10 +11,6 @@ email: russell@signheresigns.com.au
 is_sme: true
 stakeholders:
 - defence
-capability_streams:
-- aasl
-- masw
-- lcaw
 capability_domains:
 - air
 - amphibious
@@ -40,6 +36,10 @@ industrial_capabilities:
 - composites
 - steel
 - welding
+capability_streams:
+- logistics
+- maritime
+- land
 latitude: -31.8531708
 longitude: 115.8942713
 ---

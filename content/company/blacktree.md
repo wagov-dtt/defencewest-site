@@ -1,8 +1,8 @@
 ---
 name: Blacktree Technology
-date: '2025-01-27'
+date: '2025-01-29'
 overview: 'Blacktree Technology is an innovative solutions integrator working with leading edge radio and satellite communications technology to connect people and organisations across the globe. '
-website: https://www.blacktree.com.au
+website: https://blacktree.com.au
 contact_name: Joel Nevin
 contact_title: Director
 address: Suite 10, 10 Barber Street, Kalamunda WA 6076
@@ -11,16 +11,16 @@ email: joel.nevin@blacktree.com.au
 is_sme: true
 stakeholders:
 - defence
-capability_streams:
-- iscw
-- aasl
-- saac
-- lcaw
 capability_domains:
 - communications
 - land
 regions:
 - perth-metropolitan
+capability_streams:
+- electronic
+- logistics
+- aerial
+- land
 latitude: -31.9727514
 longitude: 116.0578058
 ---

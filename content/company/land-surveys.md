@@ -1,6 +1,6 @@
 ---
 name: Land Surveys
-date: '2025-01-27'
+date: '2025-01-29'
 overview: Land Surveys was established in 1997 and provides specialist Geospatial Services to all Private and Public Sector Clients. Being a National Surveying and Geospatial Business with over 500 Staff .
 website: https://www.landsurveys.net.au
 contact_name: Philip Jonath
@@ -11,14 +11,6 @@ email: pjonath@landsurveys.net.au
 is_sme: true
 stakeholders:
 - defence
-capability_streams:
-- aerial
-- base
-- intelligence
-- land
-- logistics
-- maritime
-- research
 capability_domains:
 - barracks
 - base
@@ -42,6 +34,14 @@ regions:
 - pilbara
 - south-west
 - wheatbelt
+capability_streams:
+- aerial
+- base
+- intelligence
+- land
+- logistics
+- maritime
+- research
 latitude: -31.9472718
 longitude: 115.9251867
 ---

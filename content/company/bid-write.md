@@ -1,6 +1,6 @@
 ---
 name: Bid Write
-date: '2025-01-27'
+date: '2025-01-29'
 overview: 'Bid Write is Australia''s largest specialist tender and proposal management consultancy helping organisations looking to win through contestable/competitive sourcing processes. '
 website: https://www.bidwrite.com.au
 contact_name: David Lunn
@@ -11,8 +11,6 @@ email: david@bidwrite.com.au
 is_sme: true
 stakeholders:
 - defence
-capability_streams:
-- keyn
 capability_domains:
 - air
 - air-traffic
@@ -53,6 +51,8 @@ capability_domains:
 - utility
 regions:
 - perth-metropolitan
+capability_streams:
+- research
 latitude: -31.94806
 longitude: 115.86448
 ---

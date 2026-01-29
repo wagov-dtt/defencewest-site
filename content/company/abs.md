@@ -1,6 +1,6 @@
 ---
 name: ABS PTY LTD
-date: '2025-01-27'
+date: '2025-01-29'
 overview: ABS Welding has been in business for over 19 years and specializes in the Supply & Install of structural steel.
 website: http://www.abswelding.com.au
 contact_name: Rob Abbey
@@ -13,11 +13,6 @@ stakeholders:
 - defence
 - defence-west
 - defence-science
-capability_streams:
-- logistics
-- maritime
-- research
-- space
 capability_domains:
 - base
 - multi
@@ -39,6 +34,11 @@ regions:
 - pilbara
 - south-west
 - wheatbelt
+capability_streams:
+- logistics
+- maritime
+- research
+- space
 latitude: -32.27438
 longitude: 115.75833
 ---

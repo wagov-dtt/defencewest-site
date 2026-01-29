@@ -1,6 +1,6 @@
 ---
 name: Cullys
-date: '2025-01-27'
+date: '2025-01-29'
 overview: Cullys is a highly-reputable electrical specialist supplying, installing, integrating and commissioning a range of solutions for the Defence and marine sectors.
 website: https://cullys.com.au
 contact_name: Tom Cull
@@ -12,10 +12,6 @@ is_sme: true
 stakeholders:
 - defence
 - defence-west
-capability_streams:
-- base
-- logistics
-- maritime
 capability_domains:
 - air
 - amphibious
@@ -41,6 +37,10 @@ regions:
 - perth
 - pilbara
 - south-west
+capability_streams:
+- base
+- logistics
+- maritime
 latitude: -32.15359
 longitude: 115.77384
 ---

@@ -1,6 +1,6 @@
 ---
 name: Barrett Communications
-date: '2025-01-27'
+date: '2025-01-29'
 overview: Barrett Communications are an Australian sovereign designer and manufacturer of High Frequency (HF) and Very High Frequency (VHF) radio communications systems and subsystems.
 website: https://www.barrettcommunications.com.au
 contact_name: Martin Johnson
@@ -11,12 +11,6 @@ email: martin_johnson@barrettcommunications.com.au
 is_sme: true
 stakeholders:
 - defence
-capability_streams:
-- iscw
-- keyn
-- aasl
-- masw
-- lcaw
 capability_domains:
 - air-traffic
 - airborne
@@ -34,6 +28,12 @@ industrial_capabilities:
 - mechanical
 regions:
 - perth-metropolitan
+capability_streams:
+- electronic
+- research
+- logistics
+- maritime
+- land
 latitude: -32.1005895
 longitude: 115.8112303
 ---

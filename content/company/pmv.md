@@ -1,6 +1,6 @@
 ---
 name: PMV ENGINEERING
-date: '2025-01-27'
+date: '2025-01-29'
 overview: We are an Indigenous-owned company specialising in hazardous areas, electrical instrumentation, and asset management, servicing clients across major industries with deep technical expertise.
 website: https://pmvengineering.com.au
 contact_name: Nitin Ahuja
@@ -12,12 +12,6 @@ is_sme: true
 stakeholders:
 - defence
 - academic
-capability_streams:
-- base
-- education
-- land
-- logistics
-- maritime
 capability_domains:
 - air
 - barracks
@@ -43,6 +37,12 @@ regions:
 - wheatbelt
 ownerships:
 - indigenous
+capability_streams:
+- base
+- education
+- land
+- logistics
+- maritime
 latitude: -32.03771
 longitude: 115.82408
 ---

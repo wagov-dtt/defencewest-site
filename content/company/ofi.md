@@ -1,6 +1,6 @@
 ---
 name: OFI Group Holdings Pty Ltd
-date: '2025-01-27'
+date: '2025-01-29'
 overview: Powering Innovation. OFI is an industry leader in electrical innovation and integration with the persistence, agility and commitment to always deliver.
 website: https://ofigroup.com.au
 contact_name: Cobey Mills
@@ -13,9 +13,6 @@ stakeholders:
 - defence
 - academic
 - defence-west
-capability_streams:
-- electronic
-- research
 capability_domains:
 - communications
 - ict
@@ -38,6 +35,9 @@ regions:
 - pilbara
 - south-west
 - wheatbelt
+capability_streams:
+- electronic
+- research
 latitude: -33.35531
 longitude: 115.66768
 ---

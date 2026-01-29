@@ -1,6 +1,6 @@
 ---
 name: Jeyco Australia
-date: '2025-01-27'
+date: '2025-01-29'
 overview: Jeyco Australia is an Australian family owned and operated business that specialises in synthetic solutions the Marine, Mining, Agriculture and Defence industries.
 website: https://www.jeyco.com.au
 contact_name: Joel Bowen
@@ -14,11 +14,6 @@ stakeholders:
 - academic
 - defence-west
 - defence-science
-capability_streams:
-- aerial
-- land
-- maritime
-- research
 capability_domains:
 - amphibious
 - frigates
@@ -42,6 +37,11 @@ regions:
 - pilbara
 - south-west
 - wheatbelt
+capability_streams:
+- aerial
+- land
+- maritime
+- research
 latitude: -31.91961
 longitude: 115.92996
 ---

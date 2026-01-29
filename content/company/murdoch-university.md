@@ -1,6 +1,6 @@
 ---
 name: Murdoch University
-date: '2025-01-27'
+date: '2025-01-29'
 overview: Murdoch University has, from its foundation in 1974, been a university of difference. Established as the second university in WA, Murdoch has always been associated building a brighter future.
 website: https://www.murdoch.edu.au
 contact_name: Alasdair Macdonald
@@ -11,9 +11,6 @@ email: a.macdonald@murdoch.edu.au
 stakeholders:
 - academic
 - defence-science
-capability_streams:
-- education
-- research
 capability_domains:
 - cyber
 - ict
@@ -22,6 +19,9 @@ capability_domains:
 - cyber-and
 industrial_capabilities:
 - none
+capability_streams:
+- education
+- research
 latitude: -32.0688259
 longitude: 115.8161804
 ---

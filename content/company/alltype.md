@@ -1,6 +1,6 @@
 ---
 name: Alltype Engineering
-date: '2025-01-27'
+date: '2025-01-29'
 overview: Australian owned Alltype Engineering has delivered fabrication, installation, construction and maintenance services nationwide for over 40 years with proven multidiscipline expertise.
 website: https://www.alltypeengineering.com.au
 contact_name: Kelvin Andrijich
@@ -11,11 +11,6 @@ email: kandrijich@alltypeengineering.com.au
 is_sme: true
 stakeholders:
 - defence
-capability_streams:
-- base
-- maritime
-- research
-- space
 capability_domains:
 - base
 - destroyers
@@ -47,6 +42,11 @@ regions:
 - pilbara
 - south-west
 - wheatbelt
+capability_streams:
+- base
+- maritime
+- research
+- space
 latitude: -32.1926963
 longitude: 115.7917367
 ---

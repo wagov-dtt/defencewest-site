@@ -1,6 +1,6 @@
 ---
 name: Airobotics
-date: '2025-01-27'
+date: '2025-01-29'
 overview: 'Airobotics has developed a pilotless drone solution, the first of its kind in the global market. '
 website: https://www.airoboticsdrones.com.au
 contact_name: Christine Jarvis
@@ -11,9 +11,6 @@ email: ChristineJ@airoboticsdrones.com.au
 is_sme: true
 stakeholders:
 - defence
-capability_streams:
-- iscw
-- lcaw
 capability_domains:
 - c2
 - intelligence
@@ -24,6 +21,9 @@ capability_domains:
 - testing
 regions:
 - perth-metropolitan
+capability_streams:
+- electronic
+- land
 latitude: -32.0569821
 longitude: 115.8054992
 ---

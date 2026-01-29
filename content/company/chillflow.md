@@ -1,6 +1,6 @@
 ---
 name: Chillflow Solutions
-date: '2025-01-27'
+date: '2025-01-29'
 overview: Chillflow is a defence contractor specialising in end to- end marine HVAC & Refrigeration engineering solutions. From design, supply, and installation to service, maintenance, and life-cycle support
 website: https://chillflowsolutions.com.au
 contact_name: Gareth Halliday
@@ -11,8 +11,6 @@ email: gareth.halliday@chillflowsolutions.com.au
 is_sme: true
 stakeholders:
 - defence
-capability_streams:
-- maritime
 capability_domains:
 - destroyers
 - frigates
@@ -39,6 +37,8 @@ regions:
 - pilbara
 - south-west
 - wheatbelt
+capability_streams:
+- maritime
 latitude: -32.123114
 longitude: 115.846489
 ---

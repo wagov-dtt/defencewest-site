@@ -1,6 +1,6 @@
 ---
 name: Royston Australia
-date: '2025-01-27'
+date: '2025-01-29'
 overview: Royston diesel power is a dynamic and expanding diesel engine supply, service and repair company that has operated successfully with the global marine and offshore market.
 website: https://www.roystonaustralia.com.au
 contact_name: Matty Burbidge
@@ -11,9 +11,6 @@ email: matty.burbidge@roystonaustralia.com.au
 is_sme: true
 stakeholders:
 - defence
-capability_streams:
-- masw
-- lcaw
 capability_domains:
 - air
 - armour
@@ -26,6 +23,9 @@ industrial_capabilities:
 - propulsion
 regions:
 - australian
+capability_streams:
+- maritime
+- land
 latitude: -32.1540278
 longitude: 115.7739067
 ---

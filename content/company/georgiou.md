@@ -1,6 +1,6 @@
 ---
 name: Georgiou Group
-date: '2025-01-27'
+date: '2025-01-29'
 overview: The Georgiou Group delivers projects from inception to handover, in a range of disciplines and a variety of industries. We are one of Australia's leading building and civil construction companies.
 website: https://www.georgiou.com.au
 contact_name: Michael Ioannakis
@@ -11,12 +11,12 @@ email: michael.ioannakis@georgiou.com.au
 is_sme: true
 stakeholders:
 - defence
-capability_streams:
-- keyn
 capability_domains:
 - base
 regions:
 - perth-metropolitan
+capability_streams:
+- research
 latitude: -31.9154737
 longitude: 115.8147203
 ---

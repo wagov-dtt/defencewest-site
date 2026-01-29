@@ -1,6 +1,6 @@
 ---
 name: Allied Heat Transfer
-date: '2025-01-27'
+date: '2025-01-29'
 overview: Allied Heat Transfer designs, manufactures, services and repairs all types of heat exchangers for the marine, mining, drilling, industrial and power generation sectors.
 website: https://www.alliedheattransfer.com.au
 contact_name: Michael O'Brien
@@ -11,8 +11,6 @@ email: michael@alliedheattransfer.com.au
 is_sme: true
 stakeholders:
 - defence
-capability_streams:
-- masw
 capability_domains:
 - destroyers
 - frigates
@@ -22,6 +20,8 @@ capability_domains:
 - submarines
 regions:
 - perth-metropolitan
+capability_streams:
+- maritime
 latitude: -32.0606063
 longitude: 115.9171412
 ---

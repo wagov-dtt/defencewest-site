@@ -1,6 +1,6 @@
 ---
 name: Alcolizer Pty Ltd
-date: '2025-01-27'
+date: '2025-01-29'
 overview: Australian-owned provider of drug and alcohol testing solutions, with over 35 years of experience supporting Australian Police, Defence, government agencies, and heavy industry leaders.
 website: https://alcolizer.com
 contact_name: Nigel Burr
@@ -12,10 +12,6 @@ is_sme: true
 stakeholders:
 - defence
 - defence-west
-capability_streams:
-- base
-- education
-- logistics
 capability_domains:
 - base
 - sustainment
@@ -32,6 +28,10 @@ regions:
 - pilbara
 - south-west
 - wheatbelt
+capability_streams:
+- base
+- education
+- logistics
 latitude: -31.8572515
 longitude: 115.8069983
 ---

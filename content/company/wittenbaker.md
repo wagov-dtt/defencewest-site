@@ -1,6 +1,6 @@
 ---
 name: Wittenbaker Engineering Services PTY LTD
-date: '2025-01-27'
+date: '2025-01-29'
 overview: "Wittenbaker Engineering Services PTY LTD is a manufacturing and mechanical engineering company, providing substantial services such as:\n\nCNC-Machining (Turning, Milling & Wire Cutting)\nInsitu-Machining\nMetal Fabrication & Welding\nLaser Cladding\nMechanical Fitting & Rebuilds\nGear Reducer Rebuilds & Load Testing \nSpare Parts\nMechanical & Reverse Engineering"
 website: https://www.weservices.com.au
 contact_name: Wayne Wittenbaker
@@ -12,10 +12,6 @@ is_sme: true
 stakeholders:
 - defence
 - defence-west
-capability_streams:
-- aasl
-- masw
-- lcaw
 capability_domains:
 - armour
 - destroyers
@@ -35,6 +31,10 @@ industrial_capabilities:
 regions:
 - australian
 - naval
+capability_streams:
+- logistics
+- maritime
+- land
 latitude: -32.1503221
 longitude: 115.7741346
 ---

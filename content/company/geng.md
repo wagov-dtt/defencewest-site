@@ -1,6 +1,6 @@
 ---
 name: Geng
-date: '2025-01-27'
+date: '2025-01-29'
 overview: Geng provide design engineers within the product, mechanical and manufacturing sector focused on Defence force training facilities and equipment requirements around Australia.
 website: https://www.geng.com
 contact_name: Cliff Green FIEAust, CPEng, NER, APEC Engineer, IntPE(Aust), Past MDIA
@@ -11,8 +11,6 @@ email: Cliff.Green@geng.com
 is_sme: true
 stakeholders:
 - defence
-capability_streams:
-- lcaw
 capability_domains:
 - armour
 - barracks
@@ -25,6 +23,8 @@ capability_domains:
 - training-ranges
 regions:
 - perth-metropolitan
+capability_streams:
+- land
 latitude: -32.00044
 longitude: 116.12332
 ---

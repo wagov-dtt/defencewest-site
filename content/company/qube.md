@@ -1,6 +1,6 @@
 ---
 name: Qube
-date: '2025-01-27'
+date: '2025-01-29'
 overview: Qube is Australia's largest integrated provider of import and export logistics services, covering the complete supply chain from beginning to end.
 website: https://www.qube.com.au
 contact_name: 'Teneille Semple '
@@ -11,11 +11,6 @@ email: teneille.semple@qube.com.au
 is_sme: true
 stakeholders:
 - defence
-capability_streams:
-- iscw
-- keyn
-- masw
-- lcaw
 capability_domains:
 - maritime
 - multi
@@ -29,6 +24,11 @@ industrial_capabilities:
 - protective
 regions:
 - perth-metropolitan
+capability_streams:
+- electronic
+- research
+- maritime
+- land
 latitude: -31.9504965
 longitude: 115.8385207
 ---

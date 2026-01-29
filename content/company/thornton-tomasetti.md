@@ -1,6 +1,6 @@
 ---
 name: Thornton Tomasetti
-date: '2025-01-27'
+date: '2025-01-29'
 overview: Engineering consultancy specialising in testing and design & analysis of equipment and structures under extreme loading (blast, shock, fire, seismic, etc..) as well as risk management.
 website: https://www.thorntontomasetti.com/location/perth
 contact_name: Ian Leaver
@@ -14,12 +14,6 @@ stakeholders:
 - academic
 - defence-west
 - defence-science
-capability_streams:
-- aerial
-- land
-- maritime
-- research
-- space
 capability_domains:
 - air
 - amphibious
@@ -56,6 +50,12 @@ industrial_capabilities:
 - high
 regions:
 - perth
+capability_streams:
+- aerial
+- land
+- maritime
+- research
+- space
 latitude: -31.95618
 longitude: 115.85461
 ---

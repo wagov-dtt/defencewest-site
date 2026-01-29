@@ -1,6 +1,6 @@
 ---
 name: WEST COAST MACHINING SERVICES
-date: '2025-01-27'
+date: '2025-01-29'
 overview: West Coast Machining Services offers high quality, fast turnaround, low cost machining and fabrication services.
 website: https://wcmsperth.com.au
 contact_name: Andre Verbiesen
@@ -11,11 +11,6 @@ email: defence@wcmsperth.com.au
 is_sme: true
 stakeholders:
 - defence
-capability_streams:
-- aasl
-- masw
-- saac
-- lcaw
 capability_domains:
 - armour
 - base
@@ -39,6 +34,11 @@ industrial_capabilities:
 - welding
 regions:
 - perth-metropolitan
+capability_streams:
+- logistics
+- maritime
+- aerial
+- land
 latitude: -31.9975508
 longitude: 115.9240222
 ---

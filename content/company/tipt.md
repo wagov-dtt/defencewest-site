@@ -1,6 +1,6 @@
 ---
 name: TIPT
-date: '2025-01-27'
+date: '2025-01-29'
 overview: TIPT provides psychosocial safety, trauma and metal health solutions to organisations.
 website: https://tipt.com.au
 contact_name: Tanya Hallett
@@ -14,8 +14,6 @@ stakeholders:
 - academic
 - defence-west
 - defence-science
-capability_streams:
-- education
 capability_domains:
 - air
 - air-traffic
@@ -47,6 +45,8 @@ regions:
 - pilbara
 - south-west
 - wheatbelt
+capability_streams:
+- education
 latitude: -32.0613
 longitude: 115.85482
 ---

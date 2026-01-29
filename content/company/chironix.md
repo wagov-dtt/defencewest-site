@@ -1,6 +1,6 @@
 ---
 name: Chironix
-date: '2025-01-27'
+date: '2025-01-29'
 overview: Chironix are specialists in software engineering and robotics systems integration.
 website: https://www.chironix.com
 contact_name: Daniel Milford
@@ -14,11 +14,6 @@ stakeholders:
 - academic
 - defence-west
 - defence-science
-capability_streams:
-- intelligence
-- land
-- research
-- space
 capability_domains:
 - science
 - surveillance
@@ -32,6 +27,11 @@ regions:
 - perth
 ownerships:
 - veteran
+capability_streams:
+- intelligence
+- land
+- research
+- space
 latitude: -31.902301
 longitude: 115.8155055
 ---

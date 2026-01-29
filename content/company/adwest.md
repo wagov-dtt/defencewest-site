@@ -1,6 +1,6 @@
 ---
 name: Adwest Group
-date: '2025-01-27'
+date: '2025-01-29'
 overview: 'Adwest''s capabiity is of  the supply, fabrication, powdercoating and fixing on signs, all to specified drawings provided by our customers. '
 website: https://www.adwestgroup.com.au
 contact_name: 'Mark Brennan '
@@ -11,11 +11,6 @@ email: mark.brennan@adwestgroup.com.au
 is_sme: true
 stakeholders:
 - defence
-capability_streams:
-- iscw
-- keyn
-- masw
-- lcaw
 capability_domains:
 - air
 - armour
@@ -30,6 +25,11 @@ capability_domains:
 - utility
 regions:
 - perth-metropolitan
+capability_streams:
+- electronic
+- research
+- maritime
+- land
 latitude: -31.8036177
 longitude: 115.8489416
 ---

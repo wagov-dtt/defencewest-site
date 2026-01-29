@@ -1,6 +1,6 @@
 ---
 name: Bend-tech Group
-date: '2025-01-27'
+date: '2025-01-29'
 overview: Bend-tech specialises in providing innovative, engineered and certified solutions for safety and efficiency problems to industry.
 website: https://www.bendtechdefence.com.au
 contact_name: Andrew Fawkes
@@ -11,9 +11,6 @@ email: andrew@bendtechgroup.com.au
 is_sme: true
 stakeholders:
 - defence
-capability_streams:
-- keyn
-- aasl
 capability_domains:
 - armour
 - barracks
@@ -30,6 +27,9 @@ industrial_capabilities:
 - welding
 regions:
 - perth-metropolitan
+capability_streams:
+- research
+- logistics
 latitude: -31.9943185
 longitude: 115.9432123
 ---

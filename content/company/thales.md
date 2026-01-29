@@ -1,8 +1,8 @@
 ---
 name: Thales Australia
-date: '2025-01-27'
+date: '2025-01-29'
 overview: Thales is a global technology leader in the aerospace, transport, defence and security markets.
-website: https://www.thalesgroup.com/en/worldwide/australia
+website: https://www.thalesgroup.com/en/countries/asia-pacific/australia
 contact_name: Gregg Bohan
 contact_title: Underwater Systems Programmes Manager
 address: 7 Pickard Avenue, Rockingham WA 6168
@@ -11,11 +11,6 @@ email: Gregg.Bohan@thalesgroup.com.au
 is_prime: true
 stakeholders:
 - defence
-capability_streams:
-- iscw
-- keyn
-- masw
-- lcaw
 capability_domains:
 - air-traffic
 - airborne
@@ -40,6 +35,11 @@ capability_domains:
 - training
 regions:
 - perth-metropolitan
+capability_streams:
+- electronic
+- research
+- maritime
+- land
 latitude: -32.2725999
 longitude: 115.7517411
 ---

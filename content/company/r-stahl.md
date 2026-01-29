@@ -1,6 +1,6 @@
 ---
 name: R Stahl Australia Pty Ltd
-date: '2025-01-27'
+date: '2025-01-29'
 overview: R. Stahl Australia designs and manufactures electrical products for the defence, aviation, marine and manufacturing industries.
 website: https://www.stahl.com.au
 contact_name: John Zagame
@@ -11,12 +11,6 @@ email: john.zagame@stahl.com.au
 is_sme: true
 stakeholders:
 - defence
-capability_streams:
-- iscw
-- keyn
-- aasl
-- masw
-- lcaw
 capability_domains:
 - air
 - amphibious
@@ -38,6 +32,12 @@ capability_domains:
 - utility
 regions:
 - perth-metropolitan
+capability_streams:
+- electronic
+- research
+- logistics
+- maritime
+- land
 latitude: -31.9474376
 longitude: 115.8455144
 ---

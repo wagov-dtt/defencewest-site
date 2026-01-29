@@ -1,6 +1,6 @@
 ---
 name: St John Ambulance WA
-date: '2025-01-27'
+date: '2025-01-29'
 overview: St John WA is a leading social enterprise delivering emergency services, health education, and community programs across Western Australia, supported by over 8,500 volunteers and staff.
 website: https://www.stjohnwa.com.au
 contact_name: David John Waters
@@ -12,8 +12,6 @@ is_sme: true
 stakeholders:
 - academic
 - defence-west
-capability_streams:
-- education
 capability_domains:
 - training
 - training-platforms
@@ -30,6 +28,8 @@ regions:
 - pilbara
 - south-west
 - wheatbelt
+capability_streams:
+- education
 latitude: -31.9451762
 longitude: 115.9215004
 ---

@@ -1,6 +1,6 @@
 ---
 name: Digital Matter
-date: '2025-01-27'
+date: '2025-01-29'
 overview: 'Digital Matter is an innovative Australian technology company that designs and develops embedded electronic solutions along with software platforms required to manage
 
   and report asset activities and events.'
@@ -13,17 +13,17 @@ email: stuart@digitalmatter.com
 is_sme: true
 stakeholders:
 - defence
-capability_streams:
-- iscw
-- keyn
-- aasl
-- lcaw
 capability_domains:
 - ict
 - land
 - surveillance
 regions:
 - perth-metropolitan
+capability_streams:
+- electronic
+- research
+- logistics
+- land
 latitude: -31.947694
 longitude: 115.819439
 ---

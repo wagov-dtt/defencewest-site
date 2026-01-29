@@ -1,6 +1,6 @@
 ---
 name: Aussie Fluid Power
-date: '2025-01-27'
+date: '2025-01-29'
 overview: AFP is one of Australia's leading fluid power companies providing hydraulic and process solutions including Engineering, on/off site Technician and Construction Services
 website: https://www.aussiefluidpower.com.au
 contact_name: Henry Bardolf-Smith
@@ -12,10 +12,6 @@ is_sme: true
 stakeholders:
 - defence
 - defence-west
-capability_streams:
-- base
-- land
-- maritime
 capability_domains:
 - base
 - maritime
@@ -35,6 +31,10 @@ regions:
 - pilbara
 - south-west
 - wheatbelt
+capability_streams:
+- base
+- land
+- maritime
 latitude: -32.0905832
 longitude: 115.7632517
 ---

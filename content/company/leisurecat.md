@@ -1,6 +1,6 @@
 ---
 name: Leisurecat Australia
-date: '2025-01-27'
+date: '2025-01-29'
 overview: Leisurecat Australia supplies fibreglass patrol vessels to 12 metres, high-speed interceptors and powered catamaran search and rescue vessels to 12.5 metres
 website: https://www.leisurecat.com.au
 contact_name: Kevin Horsley
@@ -11,10 +11,6 @@ email: kevin@leisurecat.com.au
 is_sme: true
 stakeholders:
 - defence
-capability_streams:
-- iscw
-- keyn
-- masw
 capability_domains:
 - c2
 - minor
@@ -22,6 +18,10 @@ capability_domains:
 - search
 regions:
 - australian
+capability_streams:
+- electronic
+- research
+- maritime
 latitude: -32.1514245
 longitude: 115.7751316
 ---

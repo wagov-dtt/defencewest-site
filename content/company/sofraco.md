@@ -1,6 +1,6 @@
 ---
 name: Sofraco Engineering Services
-date: '2025-01-27'
+date: '2025-01-29'
 overview: 'Sofraco''s specialist engineering services consist of Electrical, Mechanical and Marine engineers as well as Naval Architects and AMSA-accredited Surveyors. We service the full design scope alongside other services such as feasibility studies and commissioning.
 
   Our field service department delivers comprehensive support for marine systems. Delivered by skilled professionals who can handle a wide range of tasks from fault finding, repair and system servicing, to installation and upgrades.'
@@ -13,10 +13,6 @@ email: ben.gillard@sofraco.com.au
 is_sme: true
 stakeholders:
 - defence
-capability_streams:
-- aasl
-- masw
-- lcaw
 capability_domains:
 - amphibious
 - destroyers
@@ -37,6 +33,10 @@ regions:
 - north
 - south
 - naval
+capability_streams:
+- logistics
+- maritime
+- land
 latitude: -32.0841755
 longitude: 115.7599744
 ---

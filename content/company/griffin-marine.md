@@ -1,6 +1,6 @@
 ---
 name: Griffin Marine Services Pty Ltd
-date: '2025-01-27'
+date: '2025-01-29'
 overview: 'Griffin Marine Services provides multi-disciplinary industrial services and project management to
 
   Prime Contractors, Shipbuilders and maintenance companies in the defence and commercial sectors.'
@@ -15,9 +15,6 @@ stakeholders:
 - defence
 - academic
 - defence-west
-capability_streams:
-- logistics
-- maritime
 capability_domains:
 - frigates
 - maritime
@@ -41,6 +38,9 @@ regions:
 - perth
 - pilbara
 - south-west
+capability_streams:
+- logistics
+- maritime
 latitude: -32.1032764
 longitude: 115.8116882
 ---

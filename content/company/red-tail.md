@@ -1,6 +1,6 @@
 ---
 name: Red Tail Group Pty Ltd
-date: '2025-01-27'
+date: '2025-01-29'
 overview: The Red Tail Group is a boutique Preservation, Maintenance, and Industrial Cleaning services provider. RTG is now the distributor for Zerust VCI products.
 website: https://redtail.group
 contact_name: Duncan Nicholas
@@ -11,9 +11,6 @@ email: duncan.nicholas@redtail.group
 is_sme: true
 stakeholders:
 - defence
-capability_streams:
-- base
-- logistics
 capability_domains:
 - armour
 - maritime
@@ -37,6 +34,9 @@ regions:
 - pilbara
 - south-west
 - wheatbelt
+capability_streams:
+- base
+- logistics
 latitude: -31.90877
 longitude: 116.09415
 ---

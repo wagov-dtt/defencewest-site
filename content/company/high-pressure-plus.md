@@ -1,6 +1,6 @@
 ---
 name: High Pressure Plus
-date: '2025-01-27'
+date: '2025-01-29'
 overview: Defence approved Hyperbaric Repairer, specialising in high-pressure gas and fluid systems with a strong focus on breathing air and oxygen systems across all Defence sectors in Perth and Sydney.
 website: https://www.hpplus.com.au
 contact_name: Mathew Burton
@@ -14,11 +14,6 @@ stakeholders:
 - academic
 - defence-west
 - defence-science
-capability_streams:
-- base
-- land
-- logistics
-- maritime
 capability_domains:
 - amphibious
 - base
@@ -44,6 +39,11 @@ industrial_capabilities:
 regions:
 - perth
 - south-west
+capability_streams:
+- base
+- land
+- logistics
+- maritime
 latitude: -32.1036732
 longitude: 115.8097976
 ---

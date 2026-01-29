@@ -1,6 +1,6 @@
 ---
 name: Fujitsu Australia Limited
-date: '2025-01-27'
+date: '2025-01-29'
 overview: Fujitsu Australia provides a broad range of ICT services and solutions to the Department of Defence in many locations across Australia and overseas.
 website: https://www.fujitsu.com
 contact_name: Ron Costanzo
@@ -11,12 +11,6 @@ email: ron.costanzo@au.fujitsu.com
 is_sme: true
 stakeholders:
 - defence
-capability_streams:
-- iscw
-- keyn
-- aasl
-- masw
-- lcaw
 capability_domains:
 - air
 - barracks
@@ -35,6 +29,12 @@ capability_domains:
 - submarines
 regions:
 - perth-metropolitan
+capability_streams:
+- electronic
+- research
+- logistics
+- maritime
+- land
 latitude: -31.9563429
 longitude: 115.8586039
 ---

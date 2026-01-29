@@ -1,6 +1,6 @@
 ---
 name: Mining & Hydraulic Supplies
-date: '2025-01-27'
+date: '2025-01-29'
 overview: 'Mining and Hydraulic Supplies specialise in the development of technical polymers, coupled with the design and manufacture of products that utilise these polymers.  '
 website: https://mhs.com.au
 contact_name: Steve Wells
@@ -11,9 +11,6 @@ email: steve.w@mhs.com.au
 is_sme: true
 stakeholders:
 - defence
-capability_streams:
-- keyn
-- masw
 capability_domains:
 - destroyers
 - frigates
@@ -24,6 +21,9 @@ capability_domains:
 - submarines
 regions:
 - perth-metropolitan
+capability_streams:
+- research
+- maritime
 latitude: -31.8643999
 longitude: 115.900555
 ---

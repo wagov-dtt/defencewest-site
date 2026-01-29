@@ -1,6 +1,6 @@
 ---
 name: BRE Engineering
-date: '2025-01-27'
+date: '2025-01-29'
 overview: BRE Engineering commenced operations in Western Australia in 2016 and set out to create solutions for engineering problems where others could not, whilst creating an atmosphere for engineers to learn and see a project through from concept to finished product.
 website: https://www.bre.engineering
 contact_name: Steven Thomson
@@ -11,12 +11,6 @@ email: steven.thomson@bre.engineering
 is_sme: true
 stakeholders:
 - defence
-capability_streams:
-- keyn
-- aasl
-- masw
-- saac
-- lcaw
 capability_domains:
 - air
 - amphibious
@@ -43,6 +37,12 @@ industrial_capabilities:
 - welding
 regions:
 - perth-metropolitan
+capability_streams:
+- research
+- logistics
+- maritime
+- aerial
+- land
 latitude: -32.1062157
 longitude: 115.8112303
 ---

@@ -1,6 +1,6 @@
 ---
 name: H-E Parts Engineering
-date: '2025-01-27'
+date: '2025-01-29'
 overview: H-E Parts Engineering carries out machining works for the marine, mining, oil and gas, defence and  rail industries.
 website: https://www.h-eparts.com/mobile-mining/enhancements
 contact_name: Alan Law
@@ -11,10 +11,6 @@ email: alan.law@h-eparts.com.au
 is_sme: true
 stakeholders:
 - defence
-capability_streams:
-- keyn
-- masw
-- lcaw
 capability_domains:
 - air
 - amphibious
@@ -48,6 +44,10 @@ industrial_capabilities:
 regions:
 - perth-metropolitan
 - naval
+capability_streams:
+- research
+- maritime
+- land
 latitude: -32.203745
 longitude: 115.7843763
 ---

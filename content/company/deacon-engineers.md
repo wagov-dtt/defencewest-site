@@ -1,6 +1,6 @@
 ---
 name: Deacon Engineers
-date: '2025-01-27'
+date: '2025-01-29'
 overview: "Deacon Engineers undertakes a broad range of projects in mining, water and waste water, industrial, recycling and sustainability and mineral processing. \n"
 website: https://www.deaconengineers.com.au
 contact_name: Mal Cook
@@ -11,12 +11,12 @@ email: enquiries@deaconengineers.com.au
 is_sme: true
 stakeholders:
 - defence
-capability_streams:
-- keyn
-- masw
-- lcaw
 regions:
 - perth-metropolitan
+capability_streams:
+- research
+- maritime
+- land
 latitude: -31.9541359
 longitude: 115.9188299
 ---

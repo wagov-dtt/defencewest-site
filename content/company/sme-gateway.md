@@ -1,6 +1,6 @@
 ---
 name: SME Gateway Pty Ltd
-date: '2025-01-27'
+date: '2025-01-29'
 overview: 'SME Gateway has a proven heritage of over 15 years in the support of Australian Small to Medium Enterprises and the low-risk facilitation of their introduction to a wide range of work opportunities in the provision of Professional and Technical Services. '
 website: https://www.smegateway.com.au
 contact_name: Andy Stephens
@@ -11,13 +11,6 @@ email: andy.stephens@smegateway.com.au
 is_sme: true
 stakeholders:
 - defence
-capability_streams:
-- iscw
-- keyn
-- aasl
-- masw
-- saac
-- lcaw
 capability_domains:
 - c2
 - communications
@@ -44,6 +37,13 @@ industrial_capabilities:
 - protective
 regions:
 - perth-metropolitan
+capability_streams:
+- electronic
+- research
+- logistics
+- maritime
+- aerial
+- land
 latitude: -31.9561001
 longitude: 115.8572337
 ---

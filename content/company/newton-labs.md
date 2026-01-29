@@ -1,6 +1,6 @@
 ---
 name: Newton Labs
-date: '2025-01-27'
+date: '2025-01-29'
 overview: The prime focus of Newton Labs is on the Internet of Things (IoT), machine learning and real-time data analytics for heavy industry applications.
 website: http://staging.newtonlabs.com.au/index-fullscreen-countdown-video.html
 contact_name: Simon Vincent
@@ -11,17 +11,17 @@ email: simon@newtonlabs.com.au
 is_sme: true
 stakeholders:
 - defence
-capability_streams:
-- iscw
-- keyn
-- aasl
-- saac
 capability_domains:
 - cyber
 - intelligence
 - science
 regions:
 - perth-metropolitan
+capability_streams:
+- electronic
+- research
+- logistics
+- aerial
 latitude: -31.9539836
 longitude: 115.8532393
 ---

@@ -1,6 +1,6 @@
 ---
 name: Total Marine Technology Pty Ltd (TMT)
-date: '2025-01-27'
+date: '2025-01-29'
 overview: 'Total Marine Technology (TMT) is unique as the only company designing and building Work Class Remotely Operated Underwater Vehicles (ROVs) in Australia. '
 website: https://www.tmtrov.com
 contact_name: Paul Colley
@@ -11,8 +11,6 @@ email: defence@tmtrov.com.au
 is_sme: true
 stakeholders:
 - defence
-capability_streams:
-- masw
 capability_domains:
 - maritime
 - science
@@ -30,6 +28,8 @@ industrial_capabilities:
 - welding
 regions:
 - perth-metropolitan
+capability_streams:
+- maritime
 latitude: -32.1003658
 longitude: 115.8084572
 ---

@@ -1,6 +1,6 @@
 ---
 name: Veem
-date: '2025-01-27'
+date: '2025-01-29'
 overview: VEEM is a West Australian manufacturer of sophisticated equipment for the defence, marine, aerospace and oil and gas industries.
 website: https://www.veem.com.au
 contact_name: Dave Johnston
@@ -11,10 +11,6 @@ email: davidj@veem.com.au
 is_sme: true
 stakeholders:
 - defence
-capability_streams:
-- aasl
-- masw
-- lcaw
 capability_domains:
 - destroyers
 - frigates
@@ -27,6 +23,10 @@ capability_domains:
 - submarines
 regions:
 - perth-metropolitan
+capability_streams:
+- logistics
+- maritime
+- land
 latitude: -32.0670026
 longitude: 115.9143692
 ---

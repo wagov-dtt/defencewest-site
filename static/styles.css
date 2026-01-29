@@ -217,6 +217,7 @@ nav .logo {
   display: flex;
   gap: 0.35rem;
   flex-wrap: wrap;
+  margin-top: 0.35rem;
 }
 
 .stream-icon {
@@ -266,6 +267,43 @@ nav .logo {
 
 .stream-icon:focus:not(:focus-visible) {
   outline: none;
+}
+
+/* === Filter Options (non-icon checkboxes) === */
+.filter-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin-top: 0.35rem;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.filter-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  padding: 0.25rem 0.35rem;
+  border-radius: var(--pico-border-radius);
+  transition: background-color 0.15s ease;
+}
+
+.filter-item:hover {
+  background-color: var(--pico-muted-background-color);
+}
+
+.filter-item input[type="checkbox"] {
+  flex-shrink: 0;
+}
+
+.filter-item span {
+  flex: 1;
+}
+
+.filter-item .filter-count {
+  opacity: 0.6;
+  font-size: 0.8em;
 }
 
 /* === JS-Applied Filter Classes === */
@@ -1159,45 +1197,15 @@ nav .logo {
   box-shadow: 0 0 0 var(--pico-outline-width) var(--pico-primary-focus);
 }
 
-/* Tom Select integration with PicoCSS */
-.submit-page .ts-wrapper.multi .ts-control {
-  background: var(--pico-form-element-background-color);
-  border-color: var(--pico-form-element-border-color);
-  border-radius: var(--pico-border-radius);
-  padding: 0.5rem;
-  min-height: 2.5rem;
+/* === SlimSelect PicoCSS Colors === */
+:root {
+  --ss-primary-color: var(--pico-primary);
+  --ss-border-color: var(--pico-form-element-border-color);
 }
 
-.submit-page .ts-wrapper.multi .ts-control:focus-within {
-  border-color: var(--pico-primary);
-  box-shadow: 0 0 0 var(--pico-outline-width) var(--pico-primary-focus);
-}
-
-.submit-page .ts-wrapper .ts-dropdown {
-  background: var(--pico-form-element-background-color);
-  border-color: var(--pico-form-element-border-color);
-  border-radius: var(--pico-border-radius);
-}
-
-.submit-page .ts-wrapper .ts-dropdown .option {
-  padding: 0.5rem 0.75rem;
-}
-
-.submit-page .ts-wrapper .ts-dropdown .option.active {
-  background: var(--pico-primary-focus);
-  color: var(--pico-primary);
-}
-
-.submit-page .ts-wrapper.multi .ts-control .item {
-  background: var(--pico-primary);
-  color: var(--pico-primary-inverse);
-  border-radius: var(--pico-border-radius);
-  padding: 0.15rem 0.5rem;
-  margin: 0.1rem;
-}
-
-.submit-page .ts-wrapper.multi .ts-control .item .remove {
-  border-left-color: var(--pico-primary-inverse);
+/* Submit page icon spacing */
+.submit-page .stream-icons {
+  margin-bottom: 1rem;
 }
 
 /* Submit actions */

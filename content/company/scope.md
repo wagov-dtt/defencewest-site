@@ -1,6 +1,6 @@
 ---
 name: Scope Engineering
-date: '2025-01-27'
+date: '2025-01-29'
 overview: 'Scope Engineering has extensive experience in the oil and gas, marine, refineries and mining sectors providing welding and fabrication services. '
 website: https://www.scopeengineering.com
 contact_name: Luke Roughan
@@ -11,13 +11,6 @@ email: luke@scopeengineering.com.au
 is_sme: true
 stakeholders:
 - defence
-capability_streams:
-- iscw
-- keyn
-- aasl
-- masw
-- saac
-- lcaw
 capability_domains:
 - base
 - destroyers
@@ -28,6 +21,13 @@ capability_domains:
 - surveillance
 regions:
 - australian
+capability_streams:
+- electronic
+- research
+- logistics
+- maritime
+- aerial
+- land
 latitude: -32.1632708
 longitude: 115.7780899
 ---

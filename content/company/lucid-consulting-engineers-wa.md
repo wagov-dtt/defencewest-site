@@ -1,6 +1,6 @@
 ---
 name: 'Lucid Consulting Engineers (WA) '
-date: '2025-01-27'
+date: '2025-01-29'
 overview: 'Lucid is an established national engineering consultancy founded in year 2000 that employs 250 professionals across Australia. '
 website: https://www.lucidconsulting.com.au
 contact_name: Guy Page
@@ -11,8 +11,6 @@ email: guy.page@lucidconsulting.com.au
 is_sme: true
 stakeholders:
 - defence
-capability_streams:
-- keyn
 capability_domains:
 - communications
 industrial_capabilities:
@@ -20,6 +18,8 @@ industrial_capabilities:
 - mechanical
 regions:
 - perth-metropolitan
+capability_streams:
+- research
 latitude: -31.9458246
 longitude: 115.8233811
 ---

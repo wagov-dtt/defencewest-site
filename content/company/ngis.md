@@ -1,6 +1,6 @@
 ---
 name: NGIS Australia
-date: '2025-01-27'
+date: '2025-01-29'
 overview: 'NGIS Australia has provided government agencies and private enterprises across a broad range of industries with technology strategies and solutions in business operations. '
 website: https://www.ngis.com.au
 contact_name: Richard Bentley
@@ -11,9 +11,6 @@ email: richard.bentley@ngis.com.au
 is_sme: true
 stakeholders:
 - defence
-capability_streams:
-- iscw
-- aasl
 capability_domains:
 - base
 - c2
@@ -24,6 +21,9 @@ capability_domains:
 - training-platforms
 regions:
 - perth-metropolitan
+capability_streams:
+- electronic
+- logistics
 latitude: -31.9676541
 longitude: 115.8925618
 ---

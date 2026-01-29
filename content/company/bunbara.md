@@ -1,6 +1,6 @@
 ---
 name: Bunbara
-date: '2025-01-27'
+date: '2025-01-29'
 overview: Aboriginal Female owned company supply high spec piping components and procurement services.
 website: https://bunbara.com.au
 contact_name: Nikky Irvine
@@ -9,9 +9,6 @@ address: Ground Floor 3 Teakle Road, Osborne Park WA 6017
 phone: +61 8 6323 7306
 email: nikky@bunbara.com.au
 is_sme: true
-capability_streams:
-- logistics
-- maritime
 capability_domains:
 - frigates
 - maritime
@@ -32,6 +29,9 @@ regions:
 - wheatbelt
 ownerships:
 - indigenous
+capability_streams:
+- logistics
+- maritime
 latitude: -31.91091
 longitude: 115.81088
 ---

@@ -1,6 +1,6 @@
 ---
 name: Tetra Tech Coffey Pty Ltd
-date: '2025-01-27'
+date: '2025-01-29'
 overview: Coffey operates as a professional services company with expertise in engineering, geoservices, environmental and project management.
 website: https://www.coffey.com
 contact_name: Wayne McFerran
@@ -11,9 +11,6 @@ email: perthtenders@tetratech.com
 is_sme: true
 stakeholders:
 - defence
-capability_streams:
-- keyn
-- lcaw
 capability_domains:
 - air
 - barracks
@@ -22,6 +19,9 @@ capability_domains:
 - science
 regions:
 - perth-metropolitan
+capability_streams:
+- research
+- land
 latitude: -31.9539055
 longitude: 115.850967
 ---

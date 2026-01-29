@@ -1,6 +1,6 @@
 ---
 name: Indrus
-date: '2025-01-27'
+date: '2025-01-29'
 overview: Indrus transforms existing CCTV infrastructure into a real-time asset tracking system, providing facility-wide visibility and situational awareness.
 website: https://indrus.ai
 contact_name: Ryan Liebregts
@@ -12,9 +12,6 @@ is_sme: true
 stakeholders:
 - defence
 - defence-west
-capability_streams:
-- base
-- logistics
 capability_domains:
 - armour
 - barracks
@@ -25,6 +22,9 @@ industrial_capabilities:
 - none
 regions:
 - perth
+capability_streams:
+- base
+- logistics
 latitude: -32.0550585
 longitude: 115.8033322
 ---

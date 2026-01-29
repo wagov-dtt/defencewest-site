@@ -1,6 +1,6 @@
 ---
 name: Radlink Communications
-date: '2025-01-27'
+date: '2025-01-29'
 overview: Radlink Communications has years of experience in designing, supplying, installing, commissioning, integrating, supporting and maintaining communications networks.
 website: https://radlink.com.au
 contact_name: Greig Hutton
@@ -11,8 +11,6 @@ email: greig.hutton@radlink.com.au
 is_sme: true
 stakeholders:
 - defence
-capability_streams:
-- keyn
 capability_domains:
 - barracks
 - communications
@@ -21,6 +19,8 @@ capability_domains:
 - training-ranges
 regions:
 - perth-metropolitan
+capability_streams:
+- research
 latitude: -31.8500211
 longitude: 115.8864628
 ---

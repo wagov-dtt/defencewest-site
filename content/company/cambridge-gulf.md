@@ -1,6 +1,6 @@
 ---
 name: Cambridge Gulf Limited
-date: '2025-01-27'
+date: '2025-01-29'
 overview: 'CGL has Cambridge Gulf Limited (CGL) is a public unlisted company established in 1964 (Kununurra was established in 1963).
 
   69 shareholders who live or have lived in Kununurra.
@@ -15,9 +15,6 @@ email: tony@cgltd.com.au
 is_sme: true
 stakeholders:
 - defence
-capability_streams:
-- keyn
-- masw
 capability_domains:
 - maritime
 - replenishment
@@ -25,6 +22,9 @@ industrial_capabilities:
 - aluminium
 regions:
 - north
+capability_streams:
+- research
+- maritime
 latitude: -15.77325
 longitude: 128.74
 ---

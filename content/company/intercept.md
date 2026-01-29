@@ -1,6 +1,6 @@
 ---
 name: Intercept Australia
-date: '2025-01-27'
+date: '2025-01-29'
 overview: Intercept Australia provides top to bottom asset preservation.  Intercept Technology focuses on reusable anti-corrosion, anti-static and shielding packaging for long and short-term protection.
 website: https://www.interceptaustralia.com
 contact_name: Warwick Richards
@@ -12,12 +12,6 @@ is_sme: true
 stakeholders:
 - defence
 - defence-west
-capability_streams:
-- base
-- land
-- logistics
-- maritime
-- space
 capability_domains:
 - air
 - amphibious
@@ -62,6 +56,12 @@ regions:
 - perth
 - pilbara
 - wheatbelt
+capability_streams:
+- base
+- land
+- logistics
+- maritime
+- space
 latitude: -32.1044727
 longitude: 115.7969165
 ---

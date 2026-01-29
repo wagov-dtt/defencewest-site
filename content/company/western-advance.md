@@ -1,6 +1,6 @@
 ---
 name: Western Advance
-date: '2025-01-27'
+date: '2025-01-29'
 overview: 'Western Advance is a security, safety and surveillance integration specialist providing solutions to Army, Navy and Air Force. '
 website: https://www.westernadvance.com
 contact_name: Jarrad Warwick
@@ -11,11 +11,6 @@ email: j.warwick@westernadvance.com
 is_sme: true
 stakeholders:
 - defence
-capability_streams:
-- iscw
-- keyn
-- masw
-- lcaw
 capability_domains:
 - air
 - airborne
@@ -38,6 +33,11 @@ capability_domains:
 - training-platforms
 regions:
 - perth-metropolitan
+capability_streams:
+- electronic
+- research
+- maritime
+- land
 latitude: -31.8600332
 longitude: 115.9076701
 ---

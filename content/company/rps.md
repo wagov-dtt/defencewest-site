@@ -1,6 +1,6 @@
 ---
 name: RPS Group
-date: '2025-01-27'
+date: '2025-01-29'
 overview: RPS delivers complex projects across the defence, energy, water, commercial, residential, masterplanned communities, education, health, aged care, industrial and social infrastructure sectors.
 website: https://www.rpsgroup.com
 contact_name: Mr David Humphry
@@ -11,9 +11,6 @@ email: david.humphry@rpspm.com.au
 is_sme: true
 stakeholders:
 - defence
-capability_streams:
-- keyn
-- lcaw
 capability_domains:
 - air
 - air-traffic
@@ -27,6 +24,9 @@ capability_domains:
 - us
 regions:
 - perth-metropolitan
+capability_streams:
+- research
+- land
 latitude: -31.9432003
 longitude: 115.8440633
 ---

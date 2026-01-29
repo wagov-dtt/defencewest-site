@@ -1,6 +1,6 @@
 ---
 name: ICM Group
-date: '2025-01-27'
+date: '2025-01-29'
 overview: ICM Group WA is committed to optimising productivity in materials handling.
 website: https://icmgroup.com.au
 contact_name: Julian Hughes
@@ -11,13 +11,6 @@ email: julian.hughes@icmgroup.com.au
 is_sme: true
 stakeholders:
 - defence
-capability_streams:
-- iscw
-- keyn
-- aasl
-- masw
-- saac
-- lcaw
 capability_domains:
 - air
 - barracks
@@ -35,6 +28,13 @@ capability_domains:
 - training-ranges
 regions:
 - perth-metropolitan
+capability_streams:
+- electronic
+- research
+- logistics
+- maritime
+- aerial
+- land
 latitude: -32.0598555
 longitude: 115.9218997
 ---

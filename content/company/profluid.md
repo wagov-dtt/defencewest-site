@@ -1,6 +1,6 @@
 ---
 name: PROFLUID PTY LTD
-date: '2025-01-27'
+date: '2025-01-29'
 overview: PROFLUID deliver high end customized flow solutions to the Air Force & Navy onshore establishments as well as Ships & Submarines.
 website: https://www.profluid.com.au
 contact_name: Jerome MONTEIRO
@@ -11,12 +11,6 @@ email: j.monteiro@profluid.com.au
 is_sme: true
 stakeholders:
 - defence
-capability_streams:
-- keyn
-- aasl
-- masw
-- saac
-- lcaw
 capability_domains:
 - air
 - amphibious
@@ -43,6 +37,12 @@ industrial_capabilities:
 - refrigeration
 regions:
 - perth-metropolitan
+capability_streams:
+- research
+- logistics
+- maritime
+- aerial
+- land
 latitude: -31.798069
 longitude: 115.8443713
 ---

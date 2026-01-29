@@ -1,6 +1,6 @@
 ---
 name: HEAVY DUTY HIRE
-date: '2025-01-27'
+date: '2025-01-29'
 overview: Heavy Duty Hire is a WA based, localy owned and operated equipment hire company. We supply earthmoving equipment, site accommodation and power generation equipment to Mining, Civil and Construction.
 website: https://www.hdhire.net
 contact_name: Adam Marshall
@@ -12,12 +12,6 @@ is_sme: true
 stakeholders:
 - defence
 - defence-west
-capability_streams:
-- base
-- land
-- logistics
-- research
-- space
 capability_domains:
 - communications
 - sustainment
@@ -34,6 +28,12 @@ regions:
 - pilbara
 - south-west
 - wheatbelt
+capability_streams:
+- base
+- land
+- logistics
+- research
+- space
 latitude: -32.0110898
 longitude: 115.8532676
 ---

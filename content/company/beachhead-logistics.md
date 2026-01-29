@@ -1,6 +1,6 @@
 ---
 name: Beachhead Logistics
-date: '2025-01-27'
+date: '2025-01-29'
 overview: Logistics over the Shore (LOTS) and Temporary Ports
 website: https://beachheadlogistics.com.au
 contact_name: Jarod Monaghan
@@ -11,9 +11,6 @@ email: jarod.monaghan@beachheadlogistics.com.au
 is_sme: true
 stakeholders:
 - defence-west
-capability_streams:
-- aasl
-- lcaw
 capability_domains:
 - amphibious
 - maritime
@@ -22,6 +19,9 @@ industrial_capabilities:
 - aluminium
 regions:
 - north
+capability_streams:
+- logistics
+- land
 latitude: -31.9155756
 longitude: 115.8153437
 ---

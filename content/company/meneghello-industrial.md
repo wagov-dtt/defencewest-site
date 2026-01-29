@@ -1,6 +1,6 @@
 ---
 name: Meneghello Industrial Group
-date: '2025-01-27'
+date: '2025-01-29'
 overview: Meneghello Industrial Group is an integrated, multi-disciplinary Steel Industry service supplier. We provide galvanizing, abrasive blasting, industrial painting, rubber lining, and custom bolts.
 website: https://www.meneghello.com
 contact_name: Dale Drazevich
@@ -12,8 +12,6 @@ is_sme: true
 stakeholders:
 - defence
 - defence-west
-capability_streams:
-- base
 capability_domains:
 - base
 - sustainment
@@ -31,6 +29,8 @@ regions:
 - pilbara
 - south-west
 - wheatbelt
+capability_streams:
+- base
 latitude: -31.8034157
 longitude: 115.8431809
 ---

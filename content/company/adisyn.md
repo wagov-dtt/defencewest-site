@@ -1,6 +1,6 @@
 ---
 name: Adisyn
-date: '2025-01-27'
+date: '2025-01-29'
 overview: Adisyn is an ASX-listed Australian IT and Cybersecurity provider delivering end-to-end secure, sovereign-managed services across Defence, government, and critical infrastructure sectors.
 website: https://adisyn.com.au
 contact_name: Jesse Gane
@@ -11,12 +11,6 @@ email: jesse.gane@adisyn.com.au
 is_sme: true
 stakeholders:
 - defence-west
-capability_streams:
-- electronic
-- land
-- maritime
-- research
-- space
 capability_domains:
 - communications
 - cyber
@@ -37,6 +31,12 @@ regions:
 - pilbara
 - south-west
 - wheatbelt
+capability_streams:
+- electronic
+- land
+- maritime
+- research
+- space
 latitude: -32.14457
 longitude: 115.78541
 ---

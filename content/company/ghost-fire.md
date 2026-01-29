@@ -1,6 +1,6 @@
 ---
 name: Ghost Fire Systems
-date: '2025-01-27'
+date: '2025-01-29'
 overview: Developing electronic battlefield simulators to enhance training the Warfighter.
 website: https://www.ghostfiresystems.com
 contact_name: Brett Harrex
@@ -9,10 +9,6 @@ address: PO Box 2041, Como WA 6152
 phone: 0421 175 288
 email: Brett.harrex@ghostfiresystems.com
 is_sme: true
-capability_streams:
-- education
-- land
-- research
 capability_domains:
 - air
 - armour
@@ -26,6 +22,10 @@ regions:
 - perth
 ownerships:
 - veteran
+capability_streams:
+- education
+- land
+- research
 latitude: -31.9998844
 longitude: 115.8705103
 ---

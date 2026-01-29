@@ -1,6 +1,6 @@
 ---
 name: GHD
-date: '2025-01-27'
+date: '2025-01-29'
 overview: GHD is one of the world's leading professional services companies operating in the global markets of water, energy and resources, environment, property and buildings, and transportation.
 website: https://www.ghd.com
 contact_name: Cameron Owen
@@ -11,11 +11,6 @@ email: cameron.owen@ghd.com
 is_sme: true
 stakeholders:
 - defence
-capability_streams:
-- keyn
-- aasl
-- saac
-- lcaw
 capability_domains:
 - air
 - barracks
@@ -23,6 +18,11 @@ capability_domains:
 - communications
 regions:
 - perth-metropolitan
+capability_streams:
+- research
+- logistics
+- aerial
+- land
 latitude: -31.9514547
 longitude: 115.8496348
 ---

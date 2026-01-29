@@ -1,6 +1,6 @@
 ---
 name: Kinetic IT
-date: '2025-01-27'
+date: '2025-01-29'
 overview: 'We''re a leading Australian-owned IT service provider of adaptive technology solutions that harness human intelligence, enhance the user experience and drive meaningful change across organisations.
 
 
@@ -14,8 +14,6 @@ email: ryan.gray@kineticit.com.au
 is_sme: true
 stakeholders:
 - defence
-capability_streams:
-- keyn
 capability_domains:
 - barracks
 - base
@@ -26,6 +24,8 @@ capability_domains:
 - land
 regions:
 - perth-metropolitan
+capability_streams:
+- research
 latitude: -32.0337933
 longitude: 115.7630662
 ---

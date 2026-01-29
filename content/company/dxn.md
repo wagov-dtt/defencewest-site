@@ -1,6 +1,6 @@
 ---
 name: DXN
-date: '2025-01-27'
+date: '2025-01-29'
 overview: 'DXN: Australian leaders in modular data centre solutions, delivering secure, scalable, and efficient infrastructure tailored for defence and critical industries.'
 website: https://dxn.solutions
 contact_name: Anthony Auld
@@ -12,12 +12,6 @@ is_sme: true
 stakeholders:
 - defence
 - defence-west
-capability_streams:
-- base
-- intelligence
-- land
-- research
-- space
 capability_domains:
 - base
 - communications
@@ -47,8 +41,14 @@ regions:
 - pilbara
 - south-west
 - wheatbelt
-latitude: -31.9910224
-longitude: 115.9672754
+capability_streams:
+- base
+- intelligence
+- land
+- research
+- space
+latitude: -31.9908415
+longitude: 115.9670596
 ---
 
 ## Overview

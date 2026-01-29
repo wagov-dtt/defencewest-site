@@ -1,6 +1,6 @@
 ---
 name: 'BAE Systems Australia - Henderson Facility '
-date: '2025-01-27'
+date: '2025-01-29'
 overview: BAE Systems is a global company delivering products and services for clients in more than 100 countries across the resources and energy, defence and commercial maritime sectors.
 website: https://www.baesystems.com/australia
 contact_name: Luke Simmons
@@ -11,11 +11,6 @@ email: luke.simmons@baesystems.com
 is_prime: true
 stakeholders:
 - defence
-capability_streams:
-- keyn
-- aasl
-- masw
-- lcaw
 capability_domains:
 - amphibious
 - base
@@ -35,6 +30,11 @@ capability_domains:
 - us
 regions:
 - australian
+capability_streams:
+- research
+- logistics
+- maritime
+- land
 latitude: -32.1547685
 longitude: 115.7690762
 ---

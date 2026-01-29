@@ -1,6 +1,6 @@
 ---
 name: Calytrix Technologies Pty Ltd
-date: '2025-01-27'
+date: '2025-01-29'
 overview: Calytrix is a leading Australian Training Systems Integrator, blending military training expertise and exercise delivery experience with cutting-edge simulation technologies.
 website: https://www.calytrix.com
 contact_name: Shawn Parr
@@ -12,12 +12,6 @@ is_sme: true
 stakeholders:
 - defence
 - defence-west
-capability_streams:
-- education
-- electronic
-- land
-- maritime
-- research
 capability_domains:
 - c2
 - communications
@@ -28,6 +22,12 @@ industrial_capabilities:
 - electronics
 regions:
 - perth
+capability_streams:
+- education
+- electronic
+- land
+- maritime
+- research
 latitude: -31.94462
 longitude: 115.84388
 ---

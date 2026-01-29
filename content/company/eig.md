@@ -1,6 +1,6 @@
 ---
 name: EIG Australia
-date: '2025-01-27'
+date: '2025-01-29'
 overview: 'Proudly Australian, EIG Australia is a privately owned and operated company. EIG Australia specialises in electrical, mechanical & hydrocarbon projects, servicing the Australian Defence Force, mining, industrial and commercial sectors across Australia.
 
 
@@ -12,8 +12,6 @@ address: 12 Oban Link, Canning Vale WA 6155
 phone: '62542635'
 email: tahlia@eigaustralia.com
 is_sme: true
-capability_streams:
-- lcaw
 capability_domains:
 - base
 industrial_capabilities:
@@ -25,6 +23,8 @@ industrial_capabilities:
 - refrigeration
 regions:
 - perth-metropolitan
+capability_streams:
+- land
 latitude: -32.0691
 longitude: 115.90679
 ---

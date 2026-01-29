@@ -1,6 +1,6 @@
 ---
 name: SFDesign
-date: '2025-01-27'
+date: '2025-01-29'
 overview: SFDesign is a multidisciplinary design and engineering house with experienced in the design and engineering of piping systems, heavy fabrication, structural detailing, ship layouts, reverse engineering, along with implementing and training globally recognized data management and CAD software which has enabled SFDesign to be a leading industry expert
 website: https://sfdesign.com.au
 contact_name: James Staples
@@ -11,9 +11,6 @@ email: james.staples@sfdesign.com
 is_sme: true
 stakeholders:
 - defence
-capability_streams:
-- masw
-- lcaw
 capability_domains:
 - amphibious
 - armour
@@ -31,6 +28,9 @@ industrial_capabilities:
 - design
 regions:
 - perth-metropolitan
+capability_streams:
+- maritime
+- land
 latitude: -31.9944982
 longitude: 115.8907598
 ---

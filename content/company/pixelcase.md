@@ -1,6 +1,6 @@
 ---
 name: Pixelcase Group
-date: '2025-01-27'
+date: '2025-01-29'
 overview: The Pixelcase Group is a production studio specialising in the ground-breaking use of virtual reality, live capture 360 production, aerial technology and photogrammetry.
 website: https://pixelcase.com
 contact_name: John Colebrook
@@ -11,14 +11,14 @@ email: john@pixelcase.com
 is_sme: true
 stakeholders:
 - defence
-capability_streams:
-- keyn
-- saac
 capability_domains:
 - training
 - training-platforms
 regions:
 - perth-metropolitan
+capability_streams:
+- research
+- aerial
 latitude: -31.949802
 longitude: 115.8439045
 ---

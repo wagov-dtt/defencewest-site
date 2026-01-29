@@ -1,6 +1,6 @@
 ---
 name: Law Castings
-date: '2025-01-27'
+date: '2025-01-29'
 overview: Law Castings is a family-owned and operated manufacturing business in WA. We are an iron and steel Foundry specialising in stainless steel castings up to 300kg.
 website: https://www.lawcastings.com.au
 contact_name: Rodney Luck
@@ -11,10 +11,6 @@ email: production@lawcastings.com.au
 is_sme: true
 stakeholders:
 - defence
-capability_streams:
-- logistics
-- maritime
-- research
 capability_domains:
 - destroyers
 - frigates
@@ -31,6 +27,10 @@ industrial_capabilities:
 regions:
 - peel
 - perth
+capability_streams:
+- logistics
+- maritime
+- research
 latitude: -32.1327872
 longitude: 116.0074461
 ---

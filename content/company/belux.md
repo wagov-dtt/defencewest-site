@@ -1,6 +1,6 @@
 ---
 name: BELUX Engineering
-date: '2025-01-27'
+date: '2025-01-29'
 overview: Belux is the largest abrasive water-jet cutting business in Western Australia.
 website: https://www.belux.com.au
 contact_name: Greg Kowalczyk
@@ -11,12 +11,6 @@ email: 247@belux.com.au
 is_sme: true
 stakeholders:
 - defence
-capability_streams:
-- keyn
-- aasl
-- masw
-- saac
-- lcaw
 capability_domains:
 - air
 - amphibious
@@ -44,6 +38,12 @@ industrial_capabilities:
 - steel
 regions:
 - south
+capability_streams:
+- research
+- logistics
+- maritime
+- aerial
+- land
 latitude: -33.3647507
 longitude: 115.6777199
 ---

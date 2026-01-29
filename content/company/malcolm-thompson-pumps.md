@@ -1,8 +1,8 @@
 ---
 name: Malcolm Thompson Pumps
-date: '2025-01-27'
+date: '2025-01-29'
 overview: Malcolm Thompson Pumps provides wide range of sales and service to support capability delivery to the WA pump industry, covering the commercial, industrial and mining sectors.
-website: https://www.mtp.com.au
+website: https://mtp.com.au
 contact_name: Chris Hogg
 contact_title: External sales - Prominent product manager
 address: 33 Colquhoun Road, Perth Airport WA 6105
@@ -11,9 +11,6 @@ email: chogg@mtp.com.au
 is_sme: true
 stakeholders:
 - defence
-capability_streams:
-- keyn
-- masw
 capability_domains:
 - base
 - destroyers
@@ -23,6 +20,9 @@ capability_domains:
 - submarines
 regions:
 - perth-metropolitan
+capability_streams:
+- research
+- maritime
 latitude: -31.9711356
 longitude: 115.9715234
 ---

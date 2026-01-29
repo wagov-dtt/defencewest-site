@@ -1,6 +1,6 @@
 ---
 name: AROSE
-date: '2025-01-27'
+date: '2025-01-29'
 overview: AROSE is an industry-led, not-for-profit organisation establishing Australia as the trusted leader in Remote Operations, Science, Technology and Service - on Earth and in Space.
 website: https://www.arose.org.au
 contact_name: Leanne Cunnold
@@ -9,8 +9,6 @@ address: Level 9 191 St Georges Terrace, PERTH WA 6000
 phone: 1300 236 354
 email: connect@arose.org.au
 is_sme: true
-capability_streams:
-- space
 capability_domains:
 - science
 - space
@@ -28,6 +26,8 @@ regions:
 - pilbara
 - south-west
 - wheatbelt
+capability_streams:
+- space
 latitude: -31.95427
 longitude: 115.85333
 ---

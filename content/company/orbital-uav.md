@@ -1,6 +1,6 @@
 ---
 name: Orbital UAV
-date: '2025-01-27'
+date: '2025-01-29'
 overview: 'Orbital UAV is a world leader in the design, development and manufacture of propulsion systems and flight critical components for unmanned aerial vehicles (UAVs). '
 website: https://www.orbitaluav.com
 contact_name: Todd Alder
@@ -11,8 +11,6 @@ email: contact@orbitalcorp.com.au
 is_sme: true
 stakeholders:
 - defence
-capability_streams:
-- keyn
 capability_domains:
 - reconnaissance
 industrial_capabilities:
@@ -24,6 +22,8 @@ industrial_capabilities:
 - propulsion
 regions:
 - perth-metropolitan
+capability_streams:
+- research
 latitude: -31.8632207
 longitude: 115.8056379
 ---

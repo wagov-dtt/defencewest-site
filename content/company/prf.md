@@ -1,6 +1,6 @@
 ---
 name: PRF Industries Pty Ltd
-date: '2025-01-27'
+date: '2025-01-29'
 overview: Electrical Service company providing a licenced workforce to supply and install electrical, data comms, and security cabling and systems
 website: https://prfelectrical.com.au
 contact_name: Phil Fraser
@@ -11,8 +11,6 @@ email: phil@prfelectrical.com.au
 is_sme: true
 stakeholders:
 - defence-west
-capability_streams:
-- masw
 capability_domains:
 - barracks
 - base
@@ -26,6 +24,8 @@ regions:
 - north
 - south
 - naval
+capability_streams:
+- maritime
 latitude: -32.0582039
 longitude: 115.7831184
 ---

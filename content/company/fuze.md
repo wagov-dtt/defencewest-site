@@ -1,6 +1,6 @@
 ---
 name: Fuze
-date: '2025-01-27'
+date: '2025-01-29'
 overview: Fuze is a composite materials technology business which delivers in-field composite manufacturing to replace welding, bolting and steel loss, minimising downtime and delivering long-term durability.
 website: https://fuze.solutions
 contact_name: Jason LeCoultre
@@ -14,11 +14,6 @@ stakeholders:
 - academic
 - defence-west
 - defence-science
-capability_streams:
-- base
-- logistics
-- maritime
-- research
 capability_domains:
 - air
 - barracks
@@ -50,6 +45,11 @@ regions:
 - pilbara
 - south-west
 - wheatbelt
+capability_streams:
+- base
+- logistics
+- maritime
+- research
 latitude: -31.9784991
 longitude: 115.9599806
 ---

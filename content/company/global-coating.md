@@ -1,6 +1,6 @@
 ---
 name: Global Coating Systems Pty Ltd
-date: '2025-01-27'
+date: '2025-01-29'
 overview: Australian SME delivering next-gen protective coatings backed by R&D, enhancing defence asset durability and increased survivability in extreme environments.
 website: https://globalcoatingsystems.com
 contact_name: Darren Gibbon
@@ -13,10 +13,6 @@ stakeholders:
 - defence
 - academic
 - defence-west
-capability_streams:
-- land
-- maritime
-- research
 capability_domains:
 - armour
 - destroyers
@@ -41,6 +37,10 @@ regions:
 - perth
 ownerships:
 - veteran
+capability_streams:
+- land
+- maritime
+- research
 latitude: -32.2788806
 longitude: 115.7373176
 ---

@@ -1,6 +1,6 @@
 ---
 name: Global Marine Design
-date: '2025-01-27'
+date: '2025-01-29'
 overview: Specialist Marine Design focusing high speed aluminium 4 - 45mtrs. Hundreds of proven designs, commercial, military, rescue and recreational. Built by over 140 builders in 27 countries.
 website: https://globalmarinedesign.com
 contact_name: Stephen Collett
@@ -12,9 +12,6 @@ stakeholders:
 - defence
 - academic
 - defence-west
-capability_streams:
-- land
-- maritime
 capability_domains:
 - amphibious
 - destroyers
@@ -37,6 +34,9 @@ regions:
 - pilbara
 - south-west
 - wheatbelt
+capability_streams:
+- land
+- maritime
 latitude: -32.06365
 longitude: 115.78208
 ---

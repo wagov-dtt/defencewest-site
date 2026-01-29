@@ -1,6 +1,6 @@
 ---
 name: APEX Utilities Pty Ltd
-date: '2025-01-27'
+date: '2025-01-29'
 overview: Apex Utilities is a WA utilities and civil contractor delivering specialist trenchless works with a proven strike-free record and strong workforce development focus.
 website: https://apexutilities.com.au
 contact_name: Tracey Daly
@@ -14,10 +14,6 @@ stakeholders:
 - academic
 - defence-west
 - defence-science
-capability_streams:
-- base
-- education
-- land
 capability_domains:
 - barracks
 - training-platforms
@@ -29,6 +25,10 @@ regions:
 - peel
 - perth
 - south-west
+capability_streams:
+- base
+- education
+- land
 latitude: -32.1963862
 longitude: 115.7830012
 ---

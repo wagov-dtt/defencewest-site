@@ -1,6 +1,6 @@
 ---
 name: KAW Engineering Pty Ltd
-date: '2025-01-27'
+date: '2025-01-29'
 overview: 'KAW Engineering is a wholly, locally, Karratha owned and operated company that has been providing engineering and project support services across the Pilbara region for over 38 years. '
 website: https://kaw.com.au
 contact_name: Yatinder (Yudi) Shekhawat
@@ -11,10 +11,6 @@ email: yudi@kawengineering.com.au
 is_sme: true
 stakeholders:
 - defence
-capability_streams:
-- keyn
-- masw
-- lcaw
 capability_domains:
 - amphibious
 - armour
@@ -34,6 +30,10 @@ industrial_capabilities:
 - welding
 regions:
 - north
+capability_streams:
+- research
+- maritime
+- land
 latitude: -20.764781
 longitude: 116.881878
 ---

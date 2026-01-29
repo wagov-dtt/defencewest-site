@@ -1,6 +1,6 @@
 ---
 name: Zellabox
-date: '2025-01-27'
+date: '2025-01-29'
 overview: 'Zellabox has been a world leader and specialist in the provision of micro data centres. '
 website: https://www.zellabox.com
 contact_name: Clinton Keeler
@@ -11,10 +11,6 @@ email: clinton@zellabox.com
 is_sme: true
 stakeholders:
 - defence
-capability_streams:
-- iscw
-- keyn
-- lcaw
 capability_domains:
 - communications
 - cyber
@@ -24,6 +20,10 @@ capability_domains:
 - stable
 regions:
 - perth-metropolitan
+capability_streams:
+- electronic
+- research
+- land
 latitude: -31.9076292
 longitude: 115.8137723
 ---

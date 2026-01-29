@@ -1,6 +1,6 @@
 ---
 name: Adarsh Australia
-date: '2025-01-27'
+date: '2025-01-29'
 overview: Adarsh Australia provides services to clients who require precision machined components manufactured in a range of materials from plastic to titanium. We've been delivering Precision Engineering Services since 1993. Our ability to appreciate your needs comes from a lifetime of experience in the manufacturing industry. Unlike many other businesses Adarsh Australia has direct CNC machine programming available in house to ensure rapid and accurate interpretation of your drawings into finished parts at a reduced component cost.
 website: https://www.adarsh.com.au
 contact_name: Faz Pollard
@@ -9,10 +9,6 @@ address: 6 Crocker Drive, Malaga WA 6090
 phone: 0431 927 221
 email: faz@adarsh.com.au
 is_sme: true
-capability_streams:
-- keyn
-- saac
-- lcaw
 capability_domains:
 - armour
 - science
@@ -24,6 +20,10 @@ industrial_capabilities:
 - welding
 regions:
 - perth-metropolitan
+capability_streams:
+- research
+- aerial
+- land
 latitude: -31.86077
 longitude: 115.8821
 ---

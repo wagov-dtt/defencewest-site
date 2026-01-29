@@ -1,6 +1,6 @@
 ---
 name: HoseCo
-date: '2025-01-27'
+date: '2025-01-29'
 overview: 'HoseCo Australia specialise in the supply, maintenance and management of Flexible Hose Assemblies for a wide range of applications. '
 website: https://hoseco.com.au
 contact_name: John McGill
@@ -11,13 +11,6 @@ email: john.mcgill@hoseco.com.au
 is_prime: true
 stakeholders:
 - defence
-capability_streams:
-- iscw
-- keyn
-- aasl
-- masw
-- saac
-- lcaw
 capability_domains:
 - air
 - amphibious
@@ -39,6 +32,13 @@ industrial_capabilities:
 - hydraulics
 regions:
 - perth-metropolitan
+capability_streams:
+- electronic
+- research
+- logistics
+- maritime
+- aerial
+- land
 latitude: -32.0610363
 longitude: 115.9263348
 ---

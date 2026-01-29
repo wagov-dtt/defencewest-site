@@ -1,6 +1,6 @@
 ---
 name: Skill Hire WA PTY LTD
-date: '2025-01-27'
+date: '2025-01-29'
 overview: Workforce training and employment solutions in construction and defence industries
 website: https://skillhire.com.au
 contact_name: Ben Dahlstrom
@@ -11,8 +11,6 @@ email: ben.dahlstrom@skillhire.com.au
 is_sme: true
 stakeholders:
 - academic
-capability_streams:
-- education
 capability_domains:
 - barracks
 - base
@@ -37,6 +35,8 @@ regions:
 - pilbara
 - south-west
 - wheatbelt
+capability_streams:
+- education
 latitude: -31.9645302
 longitude: 115.9973805
 ---

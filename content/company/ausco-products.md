@@ -1,6 +1,6 @@
 ---
 name: Ausco Products
-date: '2025-01-27'
+date: '2025-01-29'
 overview: 'Ausco Products is a Western Australian owned company that has been in operation for over 70 years specialising in engineering design and machining services. '
 website: https://auscoproducts.com.au
 contact_name: 'Robert Murphy '
@@ -11,12 +11,6 @@ email: rob@auscoproducts.com.au
 is_sme: true
 stakeholders:
 - defence
-capability_streams:
-- iscw
-- keyn
-- aasl
-- masw
-- lcaw
 capability_domains:
 - armour
 - c2
@@ -32,6 +26,12 @@ capability_domains:
 - training-platforms
 regions:
 - perth-metropolitan
+capability_streams:
+- electronic
+- research
+- logistics
+- maritime
+- land
 latitude: -31.8566115
 longitude: 115.8866476
 ---

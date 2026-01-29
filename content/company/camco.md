@@ -1,6 +1,6 @@
 ---
 name: Camco Engineering
-date: '2025-01-27'
+date: '2025-01-29'
 overview: Camco Engineering is one one of Australia's largest mechanical engineering firms.
 website: https://camcoeng.com.au
 contact_name: Greg Carson
@@ -11,11 +11,6 @@ email: greg.carson@camcoeng.com.au
 is_sme: true
 stakeholders:
 - defence
-capability_streams:
-- aasl
-- masw
-- saac
-- lcaw
 capability_domains:
 - armour
 - destroyers
@@ -40,6 +35,11 @@ industrial_capabilities:
 - welding
 regions:
 - perth-metropolitan
+capability_streams:
+- logistics
+- maritime
+- aerial
+- land
 latitude: -32.056973
 longitude: 115.9263
 ---

@@ -1,8 +1,8 @@
 ---
 name: RCT
-date: '2025-01-27'
+date: '2025-01-29'
 overview: RCT has the expertise and technologies that transform the way the mining and industrial sectors operate.
-website: https://rct-global.com
+website: https://www.rct-global.com
 contact_name: Ryan Noden
 contact_title: Global Business Development Manager
 address: Unit 1-6, 511 Abernethy Road, Kewdale WA 6105
@@ -11,15 +11,15 @@ email: Ryan.Noden@rct-global.com
 is_sme: true
 stakeholders:
 - defence
-capability_streams:
-- keyn
-- aasl
-- lcaw
 capability_domains:
 - armour
 - science
 regions:
 - perth-metropolitan
+capability_streams:
+- research
+- logistics
+- land
 latitude: -31.9776954
 longitude: 115.9582443
 ---

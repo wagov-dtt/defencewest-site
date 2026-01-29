@@ -1,6 +1,6 @@
 ---
 name: CyberCX
-date: '2025-01-27'
+date: '2025-01-29'
 overview: 'We partner with enterprise and government organisations to defend against cyber threats and embrace the opportunities of cloud.
 
 
@@ -16,8 +16,6 @@ stakeholders:
 - defence
 - academic
 - defence-west
-capability_streams:
-- iscw
 capability_domains:
 - communications
 - cyber
@@ -28,6 +26,8 @@ regions:
 - perth-metropolitan
 - north
 - south
+capability_streams:
+- electronic
 latitude: -31.95595
 longitude: 115.85721
 ---

@@ -1,6 +1,6 @@
 ---
 name: Harvest Technology Group
-date: '2025-01-27'
+date: '2025-01-29'
 overview: HTG is a leading provider of secure, high-quality video and data transmission solutions for the defence industry, enabling real-time remote control, communication, and monitoring capabilities.
 website: https://harvest.technology
 contact_name: John Condo
@@ -13,15 +13,6 @@ stakeholders:
 - defence
 - academic
 - defence-west
-capability_streams:
-- aerial
-- base
-- electronic
-- intelligence
-- land
-- logistics
-- maritime
-- research
 capability_domains:
 - air
 - amphibious
@@ -54,6 +45,15 @@ industrial_capabilities:
 - adaptive
 regions:
 - perth
+capability_streams:
+- aerial
+- base
+- electronic
+- intelligence
+- land
+- logistics
+- maritime
+- research
 latitude: -31.9956691
 longitude: 115.8878678
 ---

@@ -1,6 +1,6 @@
 ---
 name: Matera Electrical Services
-date: '2025-01-27'
+date: '2025-01-29'
 overview: Matera Electrical is an Indigenous owned electrical contracting company servicing the oil and gas, commercial construction, heavy industrial, and resource sectors across metropolitan and regional Western Australia.
 website: https://www.materaelectrical.com.au
 contact_name: Phillip Matera
@@ -11,14 +11,14 @@ email: philm@materagroup.com
 is_sme: true
 stakeholders:
 - defence
-capability_streams:
-- keyn
 capability_domains:
 - communications
 industrial_capabilities:
 - electronics
 regions:
 - perth-metropolitan
+capability_streams:
+- research
 latitude: -31.9000806
 longitude: 115.8042513
 ---

@@ -1,6 +1,6 @@
 ---
 name: Mig-Co Engineering
-date: '2025-01-27'
+date: '2025-01-29'
 overview: Mig-Co Engineering is a trusted project partner to many in the sector. Capabilities include machining, mechanical fitting, fabrication, hydraulic components, piping, and maintenance & field services.
 website: https://www.migco.com.au
 contact_name: Adam Miguel
@@ -11,10 +11,6 @@ email: adam@migco.com.au
 is_sme: true
 stakeholders:
 - defence
-capability_streams:
-- base
-- land
-- maritime
 capability_domains:
 - barracks
 - maritime
@@ -43,6 +39,10 @@ regions:
 - pilbara
 - south-west
 - wheatbelt
+capability_streams:
+- base
+- land
+- maritime
 latitude: -32.19627
 longitude: 115.78555
 ---

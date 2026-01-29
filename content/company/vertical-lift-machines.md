@@ -1,6 +1,6 @@
 ---
 name: Vertical Lift Machines
-date: '2025-01-27'
+date: '2025-01-29'
 overview: Exclusive distributor of Dalmec manipulators in Australia and New Zealand, delivering precision pneumatic lifting systems that improve safety, efficiency and capability across defence and industry.
 website: https://vertistore.com.au
 contact_name: John Peinke
@@ -14,12 +14,6 @@ stakeholders:
 - academic
 - defence-west
 - defence-science
-capability_streams:
-- base
-- land
-- logistics
-- maritime
-- space
 capability_domains:
 - air
 - armour
@@ -51,6 +45,12 @@ industrial_capabilities:
 - adaptive
 regions:
 - perth
+capability_streams:
+- base
+- land
+- logistics
+- maritime
+- space
 latitude: -31.8373156
 longitude: 115.7577329
 ---

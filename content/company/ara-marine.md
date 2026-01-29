@@ -1,6 +1,6 @@
 ---
 name: ARA Marine Pty Ltd
-date: '2025-01-27'
+date: '2025-01-29'
 overview: 'With well-established and documented work practices, ARA Marine project manages complex fit outs, tests, services and rectifications to the standards expected by the Department of Defence.
 
 
@@ -18,9 +18,6 @@ is_sme: true
 stakeholders:
 - defence
 - defence-west
-capability_streams:
-- masw
-- lcaw
 capability_domains:
 - air
 - amphibious
@@ -47,6 +44,9 @@ regions:
 - north
 - south
 - naval
+capability_streams:
+- maritime
+- land
 latitude: -32.1517937
 longitude: 115.781418
 ---

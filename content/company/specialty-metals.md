@@ -1,6 +1,6 @@
 ---
 name: Specialty Metals
-date: '2025-01-27'
+date: '2025-01-29'
 overview: Specialty Metals is a leading distributor of quality titanium, stainless steel and exotic alloys.
 website: https://www.specialtymetals.com.au
 contact_name: Grant Sinnott
@@ -11,11 +11,6 @@ email: grant.sinnott@specialtymetals.com.au
 is_sme: true
 stakeholders:
 - defence
-capability_streams:
-- aasl
-- masw
-- saac
-- lcaw
 capability_domains:
 - armour
 - destroyers
@@ -34,6 +29,11 @@ capability_domains:
 - utility
 regions:
 - perth-metropolitan
+capability_streams:
+- logistics
+- maritime
+- aerial
+- land
 latitude: -31.993096
 longitude: 115.93418
 ---

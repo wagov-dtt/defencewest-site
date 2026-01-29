@@ -1,6 +1,6 @@
 ---
 name: Dongara Marine
-date: '2025-01-27'
+date: '2025-01-29'
 overview: Dongara Marine have specific expertise in boat building, maintenance (refit, repair, modification),marine services and advice, high tech composites, manufacturing wheelhouses and other structures for both our own and other boatbuilder's projects.
 website: https://dongaramarine.com.au
 contact_name: Rohan Warr
@@ -11,10 +11,6 @@ email: rohan@dongaramarine.com.au
 is_sme: true
 stakeholders:
 - defence
-capability_streams:
-- aasl
-- masw
-- lcaw
 capability_domains:
 - amphibious
 - maritime
@@ -29,6 +25,10 @@ industrial_capabilities:
 - welding
 regions:
 - north
+capability_streams:
+- logistics
+- maritime
+- land
 latitude: -29.27198
 longitude: 114.92458
 ---

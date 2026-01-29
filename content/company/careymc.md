@@ -1,6 +1,6 @@
 ---
 name: CareyMC Pty Ltd
-date: '2025-01-27'
+date: '2025-01-29'
 overview: Indigenous Civil and General Contractor for roads, bridges, drainage, marine, structural, concrete building construction and renovation. Registered Architects, builders, Class A demolition, Asbestos
 website: https://careygroupholdings.com.au
 contact_name: David Cann
@@ -12,8 +12,6 @@ is_sme: true
 stakeholders:
 - defence
 - defence-west
-capability_streams:
-- base
 capability_domains:
 - air
 - barracks
@@ -34,6 +32,8 @@ regions:
 - wheatbelt
 ownerships:
 - indigenous
+capability_streams:
+- base
 latitude: -31.86231
 longitude: 115.88482
 ---

@@ -1,8 +1,8 @@
 ---
 name: RCR Advanced Technologies
-date: '2025-01-27'
+date: '2025-01-29'
 overview: RCR Advanced Technologies is a market leader in the design and manufacture of innovative, award-winning solutions as well as the development of materials handling solutions for rail and ore wagons through strategic partnerships.
-website: https://rcradvancedtech.com.au
+website: https://www.rcradvancedtech.com.au
 contact_name: Neville Kelly
 contact_title: Business Development Manager
 address: Glendale Industrial Estate, Temple Road, PICTON EAST WA 6229
@@ -14,12 +14,6 @@ stakeholders:
 - academic
 - defence-west
 - defence-science
-capability_streams:
-- keyn
-- aasl
-- masw
-- saac
-- lcaw
 capability_domains:
 - air
 - amphibious
@@ -65,6 +59,12 @@ regions:
 - north
 - south
 - naval
+capability_streams:
+- research
+- logistics
+- maritime
+- aerial
+- land
 latitude: -33.3386456
 longitude: 115.7172634
 ---

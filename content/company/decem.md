@@ -1,6 +1,6 @@
 ---
 name: Decem
-date: '2025-01-27'
+date: '2025-01-29'
 overview: Decem was established in 2019 as an Australian veteran owned and managed company to provide transparent outcome focused solutions to Defence and Defence Industry. Our vision is to deliver genuine Australian capability through empowering good people and fostering a culture of innovation.
 website: https://www.decem.com.au
 contact_name: Andrew Davies
@@ -9,10 +9,6 @@ address: Level 2, 35 Outram Street, West Perth WA 6005
 phone: 0411844242
 email: andrew.davies@decem.com.au
 is_sme: true
-capability_streams:
-- iscw
-- keyn
-- masw
 capability_domains:
 - destroyers
 - frigates
@@ -25,6 +21,10 @@ capability_domains:
 - submarines
 industrial_capabilities:
 - design
+capability_streams:
+- electronic
+- research
+- maritime
 latitude: -31.9492282
 longitude: 115.8390717
 ---

@@ -1,6 +1,6 @@
 ---
 name: Exgroup Pty Ltd
-date: '2025-01-27'
+date: '2025-01-29'
 overview: Exgroup is a specialised mechanical, valve and instrumentation services that uses innovative technologies to help their customers
 website: https://www.exgroup.com.au
 contact_name: Jon Orange
@@ -11,12 +11,6 @@ email: jorange@exgroup.com.au
 is_sme: true
 stakeholders:
 - defence
-capability_streams:
-- keyn
-- aasl
-- masw
-- saac
-- lcaw
 capability_domains:
 - air
 - amphibious
@@ -43,6 +37,12 @@ industrial_capabilities:
 - refrigeration
 regions:
 - perth-metropolitan
+capability_streams:
+- research
+- logistics
+- maritime
+- aerial
+- land
 latitude: -32.1392714
 longitude: 115.9662469
 ---

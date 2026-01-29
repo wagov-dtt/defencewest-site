@@ -1,6 +1,6 @@
 ---
 name: Ventia
-date: '2025-01-27'
+date: '2025-01-29'
 overview: We are a leading Australian Prime services integrator working at the heart of Defence capability to support those that serve our country.
 website: https://www.ventia.com
 contact_name: Tracey Glenny
@@ -11,11 +11,6 @@ email: tracey.glenny@ventia.com
 is_prime: true
 stakeholders:
 - defence
-capability_streams:
-- base
-- education
-- logistics
-- maritime
 capability_domains:
 - air
 - amphibious
@@ -35,6 +30,11 @@ industrial_capabilities:
 regions:
 - perth
 - pilbara
+capability_streams:
+- base
+- education
+- logistics
+- maritime
 latitude: -31.95977
 longitude: 115.87062
 ---

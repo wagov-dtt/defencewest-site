@@ -1,6 +1,6 @@
 ---
 name: Wood
-date: '2025-01-27'
+date: '2025-01-29'
 overview: Wood is a global leader in the delivery of project, engineering and technical services to energy and industrial markets.
 website: https://www.woodplc.com
 contact_name: Andrew Houghton
@@ -11,11 +11,6 @@ email: andrew.houghton@woodplc.com
 is_sme: true
 stakeholders:
 - defence
-capability_streams:
-- iscw
-- keyn
-- masw
-- lcaw
 capability_domains:
 - armour
 - c2
@@ -27,6 +22,11 @@ capability_domains:
 - submarines
 regions:
 - perth-metropolitan
+capability_streams:
+- electronic
+- research
+- maritime
+- land
 latitude: -31.95066
 longitude: 115.85318
 ---

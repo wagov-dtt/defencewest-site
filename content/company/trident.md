@@ -1,6 +1,6 @@
 ---
 name: Trident Australia PTY LTD
-date: '2025-01-27'
+date: '2025-01-29'
 overview: Trident Australia offers design and manufacturing of pneumatic & fluid systems, DNV hose assemblies, precision fabrication, and NATA-accredited calibration services for industrial and defence sectors
 website: https://www.tridentaustralia.com.au
 contact_name: Davide Sirolli
@@ -13,13 +13,6 @@ stakeholders:
 - defence
 - defence-west
 - defence-science
-capability_streams:
-- base
-- education
-- land
-- logistics
-- maritime
-- space
 capability_domains:
 - destroyers
 - fighter
@@ -54,6 +47,13 @@ regions:
 - pilbara
 - south-west
 - wheatbelt
+capability_streams:
+- base
+- education
+- land
+- logistics
+- maritime
+- space
 latitude: -32.0588834
 longitude: 115.9236769
 ---

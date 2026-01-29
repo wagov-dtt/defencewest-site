@@ -1,6 +1,6 @@
 ---
 name: Advanced Braking Technology
-date: '2025-01-27'
+date: '2025-01-29'
 overview: Advanced Braking Technology focuses on the development, manufacturing and marketing of industrial products to the automotive, transport and mining industry.
 website: https://www.advancedbraking.com
 contact_name: Ben Weetman
@@ -10,12 +10,12 @@ email: ben.weetman@advancedbraking.com
 is_sme: true
 stakeholders:
 - defence
-capability_streams:
-- lcaw
 capability_domains:
 - armour
 regions:
 - perth-metropolitan
+capability_streams:
+- land
 latitude: -31.7994337
 longitude: 115.8397454
 ---

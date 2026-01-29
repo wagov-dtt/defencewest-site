@@ -1,6 +1,6 @@
 ---
 name: Deloitte
-date: '2025-01-27'
+date: '2025-01-29'
 overview: It's time to connect, build and accelerate the industries of the future.
 website: https://www.deloitte.com/au/en/services/consulting/services/industrial-redesign-innovation.html
 contact_name: Mitch Johnston
@@ -14,10 +14,6 @@ stakeholders:
 - academic
 - defence-west
 - defence-science
-capability_streams:
-- keyn
-- aasl
-- masw
 capability_domains:
 - air
 - amphibious
@@ -44,6 +40,10 @@ regions:
 - perth-metropolitan
 - australian
 - naval
+capability_streams:
+- research
+- logistics
+- maritime
 latitude: -31.95484
 longitude: 115.85499
 ---

@@ -1,6 +1,6 @@
 ---
 name: 'Nilsen WA '
-date: '2025-01-27'
+date: '2025-01-29'
 overview: Our vision is to be a leading electro-technology company operating throughout Australia to deliver installation, maintenance and manufacturing services from inception to replacement.
 website: https://nilsen.com.au
 contact_name: Katrina Jacovic
@@ -11,8 +11,6 @@ email: nilsenwa@nilsen.com.au
 is_sme: true
 stakeholders:
 - defence
-capability_streams:
-- keyn
 capability_domains:
 - land
 industrial_capabilities:
@@ -21,6 +19,8 @@ industrial_capabilities:
 - mechanical
 regions:
 - perth-metropolitan
+capability_streams:
+- research
 latitude: -32.1059742
 longitude: 115.8123395
 ---

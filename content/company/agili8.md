@@ -1,6 +1,6 @@
 ---
 name: Agili8
-date: '2025-01-27'
+date: '2025-01-29'
 overview: Agili8's award winning XRAI Vision connects frontline workforce to offsite experts with 3D live hands-on eyes-on guidance and AI assistance using smart glasses hands-free mission critical work
 website: https://agili8.com
 contact_name: Esther Oh
@@ -11,17 +11,6 @@ email: esther@agili8.com
 is_sme: true
 stakeholders:
 - defence
-capability_streams:
-- aerial
-- base
-- education
-- electronic
-- intelligence
-- land
-- logistics
-- maritime
-- research
-- space
 capability_domains:
 - air
 - barracks
@@ -50,6 +39,17 @@ industrial_capabilities:
 - high
 regions:
 - perth
+capability_streams:
+- aerial
+- base
+- education
+- electronic
+- intelligence
+- land
+- logistics
+- maritime
+- research
+- space
 latitude: -31.9541281
 longitude: 115.8563816
 ---

@@ -1,6 +1,6 @@
 ---
 name: Iconic Water Solutions
-date: '2025-01-27'
+date: '2025-01-29'
 overview: Specialists in water and wastewater treatment systems, delivering modular solutions and support services for clients requiring dependable and compliant water infrastructure.
 website: https://iconicwater.com.au
 contact_name: Nigell Lee
@@ -14,11 +14,6 @@ stakeholders:
 - academic
 - defence-west
 - defence-science
-capability_streams:
-- base
-- land
-- logistics
-- research
 capability_domains:
 - barracks
 - base
@@ -44,6 +39,11 @@ regions:
 - pilbara
 - south-west
 - wheatbelt
+capability_streams:
+- base
+- land
+- logistics
+- research
 latitude: -32.0376387
 longitude: 115.9938358
 ---

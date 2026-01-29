@@ -1,6 +1,6 @@
 ---
 name: Curtin University
-date: '2025-01-27'
+date: '2025-01-29'
 overview: Curtin University is a trusted partner and fundamental part of the Australian defence industry sector.
 website: https://www.curtin.edu.au
 contact_name: Gary Hale
@@ -11,12 +11,6 @@ email: directorNRAS@curtin.edu.au
 stakeholders:
 - academic
 - defence-science
-capability_streams:
-- education
-- intelligence
-- maritime
-- research
-- space
 capability_domains:
 - cyber
 - intelligence
@@ -36,6 +30,12 @@ industrial_capabilities:
 - adaptive
 regions:
 - perth
+capability_streams:
+- education
+- intelligence
+- maritime
+- research
+- space
 latitude: -32.001215
 longitude: 115.8873331
 ---

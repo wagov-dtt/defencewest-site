@@ -1,6 +1,6 @@
 ---
 name: Austal
-date: '2025-01-27'
+date: '2025-01-29'
 overview: 'Austal is ''The Australian Shipbuilder'': a defence prime contractor and maritime technology partner of choice; designing, constructing and supporting revolutionary defence and commercial vessels.
 
   '
@@ -13,10 +13,6 @@ email: tims@austal.com
 is_sme: true
 stakeholders:
 - defence
-capability_streams:
-- keyn
-- masw
-- lcaw
 capability_domains:
 - amphibious
 - c2
@@ -30,6 +26,10 @@ capability_domains:
 - training
 regions:
 - australian
+capability_streams:
+- research
+- maritime
+- land
 latitude: -32.1447948
 longitude: 115.7675012
 ---

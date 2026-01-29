@@ -1,6 +1,6 @@
 ---
 name: KBR
-date: '2025-01-27'
+date: '2025-01-29'
 overview: At KBR, we partner with government and industry clients to provide technology, engineering and mission-critical solutions.
 website: https://www.kbr.com/en
 contact_name: Robert Sutton
@@ -9,12 +9,6 @@ address: Level 7, 2 Mill Street, Perth WA 6000
 phone: 0434871959
 email: robert.sutton@kbr.com
 is_sme: true
-capability_streams:
-- base
-- education
-- maritime
-- research
-- space
 capability_domains:
 - air
 - barracks
@@ -32,6 +26,12 @@ industrial_capabilities:
 - design
 regions:
 - perth
+capability_streams:
+- base
+- education
+- maritime
+- research
+- space
 latitude: -31.9548569
 longitude: 115.8528035
 ---

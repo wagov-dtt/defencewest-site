@@ -1,6 +1,6 @@
 ---
 name: DC Two Limited
-date: '2025-01-27'
+date: '2025-01-29'
 overview: DC Two is an Australian public company listed on the Australian Stock Exchange (ASX) which conducts a vertically integrated data centre and cloud services hosting business with multiple offerings based around physical data centre colocation, modular data centres, managed cloud computing platforms and software systems to manage and control the automation and self-service of the entire data centre systems
 website: https://www.dctwo.com.au
 contact_name: David May
@@ -9,9 +9,6 @@ address: 27 Aspiration Circuit, Bibra Lake WA 6163
 phone: 0422 860 544
 email: David.may@dctwo.com.au
 is_sme: true
-capability_streams:
-- iscw
-- keyn
 capability_domains:
 - communications
 - cyber
@@ -21,6 +18,9 @@ capability_domains:
 - stable
 industrial_capabilities:
 - electronics
+capability_streams:
+- electronic
+- research
 latitude: -32.0971418
 longitude: 115.8138797
 ---

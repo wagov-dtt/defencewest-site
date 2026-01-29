@@ -1,6 +1,6 @@
 ---
 name: Renewable.bio Pty Ltd
-date: '2025-01-27'
+date: '2025-01-29'
 overview: Bioenergy and biofuels company producing renewable fuels from sustainable resources
 website: https://renewable.bio
 contact_name: Angelo Dabala
@@ -12,10 +12,6 @@ is_sme: true
 stakeholders:
 - defence
 - defence-west
-capability_streams:
-- base
-- logistics
-- research
 capability_domains:
 - air
 - base
@@ -31,6 +27,10 @@ regions:
 - mid
 - south-west
 - wheatbelt
+capability_streams:
+- base
+- logistics
+- research
 latitude: -31.95137
 longitude: 115.85708
 ---

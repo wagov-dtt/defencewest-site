@@ -1,6 +1,6 @@
 ---
 name: Indigenous Managed Services Pty Ltd
-date: '2025-01-27'
+date: '2025-01-29'
 overview: Majority owned Aboriginal Company established in 2017. Supply Nation certified and ABDWA registered. Labour Hire, Commercial cleaning, Land and Grounds Maintenance, ICT hardware & Dry ice blasting
 website: https://www.indigenousmanagedservices.com
 contact_name: Terry Collier
@@ -12,13 +12,6 @@ is_sme: true
 stakeholders:
 - defence
 - defence-west
-capability_streams:
-- aerial
-- education
-- logistics
-- maritime
-- research
-- space
 capability_domains:
 - destroyers
 - fighter
@@ -45,6 +38,13 @@ regions:
 - wheatbelt
 ownerships:
 - indigenous
+capability_streams:
+- aerial
+- education
+- logistics
+- maritime
+- research
+- space
 latitude: -31.9504
 longitude: 115.83734
 ---

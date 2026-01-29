@@ -1,6 +1,6 @@
 ---
 name: Oropesa Port Management
-date: '2025-01-27'
+date: '2025-01-29'
 overview: Oropesa Port Management provides specialist services in the maritime and defence sectors.
 website: https://www.oropesa.com.au
 contact_name: Adam McPhail
@@ -11,10 +11,6 @@ email: enquire@oropesa.com.au
 is_sme: true
 stakeholders:
 - defence
-capability_streams:
-- aasl
-- masw
-- lcaw
 capability_domains:
 - air
 - amphibious
@@ -28,6 +24,10 @@ capability_domains:
 - special
 regions:
 - perth-metropolitan
+capability_streams:
+- logistics
+- maritime
+- land
 latitude: -31.9536696
 longitude: 115.8521858
 ---

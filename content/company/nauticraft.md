@@ -1,6 +1,6 @@
 ---
 name: Nauticraft
-date: '2025-01-27'
+date: '2025-01-29'
 overview: Nauti-Craft Pty Ltd is a research and development company focused on the design and development of the patented Nauti-Craft marine suspension system.
 website: https://www.nauti-craft.com
 contact_name: Ben Allerton
@@ -11,10 +11,6 @@ email: ben@nauti-craft.com
 is_sme: true
 stakeholders:
 - defence
-capability_streams:
-- aasl
-- masw
-- lcaw
 capability_domains:
 - amphibious
 - minor
@@ -24,6 +20,10 @@ capability_domains:
 - special
 regions:
 - south
+capability_streams:
+- logistics
+- maritime
+- land
 latitude: -33.6142904
 longitude: 115.103172
 ---

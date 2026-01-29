@@ -1,6 +1,6 @@
 ---
 name: Future Engineering
-date: '2025-01-27'
+date: '2025-01-29'
 overview: Future Engineering specialises in the end-to- end project management and manufacture of precision components and the assembly of designs using a range of materials from plastics through to high-strength alloys.
 website: https://futureeng.com.au
 contact_name: Joanne Ardizzone
@@ -11,11 +11,6 @@ email: jo@futureeng.com.au
 is_sme: true
 stakeholders:
 - defence
-capability_streams:
-- keyn
-- masw
-- saac
-- lcaw
 capability_domains:
 - amphibious
 - armour
@@ -37,6 +32,11 @@ industrial_capabilities:
 - welding
 regions:
 - perth-metropolitan
+capability_streams:
+- research
+- maritime
+- aerial
+- land
 latitude: -32.0007181
 longitude: 115.9713437
 ---

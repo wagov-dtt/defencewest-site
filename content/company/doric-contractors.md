@@ -1,6 +1,6 @@
 ---
 name: Doric Contractors Pty Ltd
-date: '2025-01-27'
+date: '2025-01-29'
 overview: Doric Contractors primary capabilities are in construction, project management, design management, cost estimation, programming, time and cost scheduling and building.
 website: https://www.doricgroup.com.au
 contact_name: Justin Taylor
@@ -11,14 +11,14 @@ email: doric@doricgroup.com.au
 is_sme: true
 stakeholders:
 - defence
-capability_streams:
-- keyn
 capability_domains:
 - base
 - testing
 - training-ranges
 regions:
 - perth-metropolitan
+capability_streams:
+- research
 latitude: -31.946842
 longitude: 115.8255113
 ---

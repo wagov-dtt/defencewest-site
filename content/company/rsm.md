@@ -1,6 +1,6 @@
 ---
 name: RSM Australia Pty Ltd
-date: '2025-01-27'
+date: '2025-01-29'
 overview: 'RSM provide cyber security, assurance, tax and consulting services globally. As an integrated team of more than 1,900 staff, we share skills, insight and
 
   resources with a client-centric approach'
@@ -14,13 +14,6 @@ is_sme: true
 stakeholders:
 - defence
 - defence-west
-capability_streams:
-- education
-- electronic
-- intelligence
-- logistics
-- research
-- space
 capability_domains:
 - communications
 - cyber
@@ -46,6 +39,13 @@ regions:
 - pilbara
 - south-west
 - wheatbelt
+capability_streams:
+- education
+- electronic
+- intelligence
+- logistics
+- research
+- space
 latitude: -31.9563
 longitude: 115.85882
 ---

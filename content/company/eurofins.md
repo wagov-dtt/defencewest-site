@@ -1,8 +1,8 @@
 ---
 name: 'Eurofins '
-date: '2025-01-27'
+date: '2025-01-29'
 overview: 'Eurofins specialise in all things that have or may impact on human health, hygiene and the environment including: hazardous materials (such as asbestos), pollution (such as hydrocarbons and metals) and emerging contaminants (such as PFAS).'
-website: https://www.eurofins.com.au/environment-testing
+website: https://environment.eurofins.com.au
 contact_name: Matthew Deaves
 contact_title: State Manager WA
 address: Unit 2, 91 Leach Highway, Kewdale WA 6105
@@ -11,14 +11,14 @@ email: matthewdeaves@eurofins.com
 is_sme: true
 stakeholders:
 - defence
-capability_streams:
-- keyn
-- saac
 capability_domains:
 - base
 - science
 regions:
 - perth-metropolitan
+capability_streams:
+- research
+- aerial
 latitude: -31.9760355
 longitude: 115.947841
 ---

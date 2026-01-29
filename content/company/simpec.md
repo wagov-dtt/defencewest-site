@@ -1,6 +1,6 @@
 ---
 name: SIMPEC Pty Ltd
-date: '2025-01-27'
+date: '2025-01-29'
 overview: Australian owned and operated, SIMPEC deliver specialised capabilities in Electrical and Instrumentation (E&I), Civil and Structural, Mechanical, and Piping (SMP) services.
 website: https://www.simpec.com.au
 contact_name: Mark Dimasi
@@ -12,8 +12,6 @@ is_sme: true
 stakeholders:
 - defence
 - defence-west
-capability_streams:
-- base
 capability_domains:
 - barracks
 - base
@@ -34,6 +32,8 @@ regions:
 - pilbara
 - south-west
 - wheatbelt
+capability_streams:
+- base
 latitude: -32.01111
 longitude: 115.84712
 ---

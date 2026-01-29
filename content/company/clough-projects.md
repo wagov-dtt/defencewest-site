@@ -1,6 +1,6 @@
 ---
 name: Clough Projects Australia
-date: '2025-01-27'
+date: '2025-01-29'
 overview: Clough Projects Australia works with some of the world's largest companies to engineer, construct, commission and maintain a comprehensive range of facilities for oil and gas and petrochemicals, metals and mineral, infrastructure and marine projects.
 website: https://www.cloughgroup.com/home
 contact_name: Carl Titchmarsh
@@ -11,10 +11,6 @@ email: tenders@clough.com.au
 is_sme: true
 stakeholders:
 - defence
-capability_streams:
-- aasl
-- masw
-- lcaw
 capability_domains:
 - air
 - air-traffic
@@ -28,6 +24,10 @@ capability_domains:
 - transport
 regions:
 - perth-metropolitan
+capability_streams:
+- logistics
+- maritime
+- land
 latitude: -31.9504921
 longitude: 115.8449212
 ---

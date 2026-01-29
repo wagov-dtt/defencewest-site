@@ -1,6 +1,6 @@
 ---
 name: Security Consulting Group
-date: '2025-01-27'
+date: '2025-01-29'
 overview: Security Consulting Group (SCG) specialises in providing independent protective security, threat and risk analysis and communications consultancy services to high profile clients operating in unique and challenging security environments.
 website: https://www.securityconsultinggroup.com.au
 contact_name: Sharne Hesse
@@ -12,7 +12,7 @@ is_sme: true
 stakeholders:
 - defence
 capability_streams:
-- keyn
+- research
 latitude: -31.9497581
 longitude: 115.8376795
 ---

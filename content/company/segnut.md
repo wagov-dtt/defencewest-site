@@ -1,6 +1,6 @@
 ---
 name: Segnut
-date: '2025-01-27'
+date: '2025-01-29'
 overview: 'Segnut Pty Ltd has developed an innovative direct replacement for a traditional threaded nut. '
 website: https://www.segnut.com
 contact_name: Tom Baskovich
@@ -11,12 +11,6 @@ email: tom@segnut.com
 is_sme: true
 stakeholders:
 - defence
-capability_streams:
-- keyn
-- aasl
-- masw
-- saac
-- lcaw
 capability_domains:
 - air
 - amphibious
@@ -34,6 +28,12 @@ capability_domains:
 regions:
 - perth-metropolitan
 - south
+capability_streams:
+- research
+- logistics
+- maritime
+- aerial
+- land
 latitude: -32.5153857
 longitude: 115.7532481
 ---

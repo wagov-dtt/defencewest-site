@@ -1,6 +1,6 @@
 ---
 name: Solid Concepts
-date: '2025-01-27'
+date: '2025-01-29'
 overview: 'Solid Concepts uses 3D printing and rapid prototyping technologies including selective laser sintering, stereo lithography, fused deposition modelling, Computer Numeric Control (CNC) machining and vacuum casting for short run production. '
 website: https://www.solid-concepts.com.au
 contact_name: 'Francois Primon '
@@ -11,16 +11,16 @@ email: prototype@solid-concepts.com.au
 is_sme: true
 stakeholders:
 - defence
-capability_streams:
-- keyn
-- aasl
-- saac
 capability_domains:
 - armour
 - frigates
 - submarines
 regions:
 - perth-metropolitan
+capability_streams:
+- research
+- logistics
+- aerial
 latitude: -32.0636795
 longitude: 115.9255564
 ---

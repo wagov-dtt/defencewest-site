@@ -1,6 +1,6 @@
 ---
 name: Ngalima
-date: '2025-01-27'
+date: '2025-01-29'
 overview: Ngalima is a Pilbara-based Aboriginal business offering earthworks, concrete construction, and plant and labour hire services.
 website: https://ngalima.com.au
 contact_name: Louise Whitten
@@ -14,11 +14,6 @@ stakeholders:
 - academic
 - defence-west
 - defence-science
-capability_streams:
-- aerial
-- base
-- land
-- logistics
 capability_domains:
 - air
 - barracks
@@ -50,6 +45,11 @@ regions:
 - wheatbelt
 ownerships:
 - indigenous
+capability_streams:
+- aerial
+- base
+- land
+- logistics
 latitude: -20.73614
 longitude: 116.80107
 ---

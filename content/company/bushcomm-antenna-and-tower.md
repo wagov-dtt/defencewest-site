@@ -1,6 +1,6 @@
 ---
 name: Bushcomm Antenna and Tower Systems
-date: '2025-01-27'
+date: '2025-01-29'
 overview: Bushcomm Antenna and Tower Systems specialise in high frequency (HF/VHF) antenna and tower solutions, and are industry innovators of premium quality fixed station  and lightweight tactical antennas and masts.
 website: https://www.bushcomm.com
 contact_name: David Collins
@@ -11,11 +11,6 @@ email: sales@bushcommantennas.com.au
 is_sme: true
 stakeholders:
 - defence
-capability_streams:
-- iscw
-- keyn
-- masw
-- lcaw
 capability_domains:
 - air
 - air-traffic
@@ -33,6 +28,11 @@ capability_domains:
 - us
 regions:
 - perth-metropolitan
+capability_streams:
+- electronic
+- research
+- maritime
+- land
 latitude: -31.9220519
 longitude: 115.9298458
 ---

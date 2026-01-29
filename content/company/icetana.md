@@ -1,6 +1,6 @@
 ---
 name: iCetana
-date: '2025-01-27'
+date: '2025-01-29'
 overview: iCetana is a world leader in the provision of real-time artificial intelligence (AI) assisted video monitoring to service the demands of a complex world.
 website: https://www.icetana.ai
 contact_name: Kevin Brown
@@ -11,10 +11,6 @@ email: kevin.brown@icetana.com.au
 is_sme: true
 stakeholders:
 - defence
-capability_streams:
-- iscw
-- keyn
-- lcaw
 capability_domains:
 - air
 - barracks
@@ -27,6 +23,10 @@ capability_domains:
 - us
 regions:
 - perth-metropolitan
+capability_streams:
+- electronic
+- research
+- land
 latitude: -31.9444166
 longitude: 115.8205494
 ---

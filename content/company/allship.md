@@ -1,6 +1,6 @@
 ---
 name: Allship Engineering
-date: '2025-01-27'
+date: '2025-01-29'
 overview: 'Allship Engineering is a medium sized enterprise organisation working in a supply chain with larger Defence and marine industry companies. Allship maintains contractual relationships with repair agents throughout Australia and abroad in the manufacturing, installation, and repair of Defence parts and components.
 
 
@@ -17,9 +17,6 @@ email: aneaves@allship.com.au
 is_sme: true
 stakeholders:
 - defence
-capability_streams:
-- masw
-- lcaw
 capability_domains:
 - amphibious
 - destroyers
@@ -40,6 +37,9 @@ industrial_capabilities:
 - welding
 regions:
 - australian
+capability_streams:
+- maritime
+- land
 latitude: -32.1462155
 longitude: 115.7816509
 ---

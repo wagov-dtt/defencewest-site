@@ -1,6 +1,6 @@
 ---
 name: Lalli Consulting Engineers
-date: '2025-01-27'
+date: '2025-01-29'
 overview: We provide practical and cost-effective structural design solutions for Defence infrastructure as well as investigative services for asset management.
 website: https://www.lalli.com.au
 contact_name: Brett Walker
@@ -11,8 +11,6 @@ email: brett@lalli.com.au
 is_sme: true
 stakeholders:
 - defence
-capability_streams:
-- base
 capability_domains:
 - barracks
 - base
@@ -29,6 +27,8 @@ regions:
 - pilbara
 - south-west
 - wheatbelt
+capability_streams:
+- base
 latitude: -31.9059358
 longitude: 115.8124034
 ---

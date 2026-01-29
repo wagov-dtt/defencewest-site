@@ -1,6 +1,6 @@
 ---
 name: Watmar
-date: '2025-01-27'
+date: '2025-01-29'
 overview: Watmarine provides manufacturing, general engineering, maintenance and equipment sales services to the Marine and Defence sectors.
 website: https://www.watmar.com.au
 contact_name: Simon Watson
@@ -11,10 +11,6 @@ email: enquires@watmar.com.au
 is_sme: true
 stakeholders:
 - defence
-capability_streams:
-- aasl
-- masw
-- lcaw
 capability_domains:
 - air
 - amphibious
@@ -31,6 +27,10 @@ capability_domains:
 regions:
 - perth-metropolitan
 - naval
+capability_streams:
+- logistics
+- maritime
+- land
 latitude: -32.1899319
 longitude: 115.7870572
 ---

@@ -1,6 +1,6 @@
 ---
 name: Amristar Solutions
-date: '2025-01-27'
+date: '2025-01-29'
 overview: 'Our team of ICT and software engineering professionals helps organisations develop IT strategy, architect effective technology systems and build high-quality, cloud scale business applications. '
 website: https://amristar.com
 contact_name: Daniel Harvey
@@ -11,11 +11,6 @@ email: daniel@amristar.com
 is_sme: true
 stakeholders:
 - defence
-capability_streams:
-- iscw
-- keyn
-- masw
-- saac
 capability_domains:
 - c2
 - ict
@@ -27,6 +22,11 @@ capability_domains:
 - training-platforms
 regions:
 - perth-metropolitan
+capability_streams:
+- electronic
+- research
+- maritime
+- aerial
 latitude: -31.9504066
 longitude: 115.8343026
 ---

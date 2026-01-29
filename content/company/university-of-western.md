@@ -1,6 +1,6 @@
 ---
 name: University of Western Australia
-date: '2025-01-27'
+date: '2025-01-29'
 overview: The University of Western Australia (UWA) is supporting the Australian Government's commitment to long term  national security and sovereign defence capability by contributing with leading strengths in marine engineering, human factors, automation and sensing.
 website: https://www.uwa.edu.au/home
 contact_name: Giacinta (Gia) Parish

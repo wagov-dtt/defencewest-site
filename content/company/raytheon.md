@@ -1,6 +1,6 @@
 ---
 name: Raytheon Australia
-date: '2025-01-27'
+date: '2025-01-29'
 overview: Raytheon Australia is the Australian arm of the Raytheon Company, a major US defence contractor and industrial corporation with core manufacturing concentrations in weapons and military and commercial electronics.
 website: https://www.raytheonaustralia.com.au
 contact_name: John Farrington
@@ -11,13 +11,6 @@ email: john.farrington@raytheon.com.au
 is_prime: true
 stakeholders:
 - defence
-capability_streams:
-- iscw
-- keyn
-- aasl
-- masw
-- saac
-- lcaw
 capability_domains:
 - air-traffic
 - c2
@@ -46,6 +39,13 @@ capability_domains:
 - us
 regions:
 - australian
+capability_streams:
+- electronic
+- research
+- logistics
+- maritime
+- aerial
+- land
 latitude: -32.145098
 longitude: 115.7838678
 ---

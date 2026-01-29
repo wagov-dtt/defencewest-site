@@ -1,6 +1,6 @@
 ---
 name: Matrix Composites & Engineering
-date: '2025-01-27'
+date: '2025-01-29'
 overview: 'Matrix Composites and Engineering Ltd produces engineered products, functional additives and advanced materials for the mining, energy, infrastructure and Defence industries. '
 website: https://matrixengineered.com
 contact_name: Jim Kingston
@@ -11,10 +11,6 @@ email: jim.kingston@matrixengineered.com
 is_sme: true
 stakeholders:
 - defence
-capability_streams:
-- aasl
-- masw
-- lcaw
 capability_domains:
 - amphibious
 - armour
@@ -25,6 +21,10 @@ capability_domains:
 - submarines
 regions:
 - australian
+capability_streams:
+- logistics
+- maritime
+- land
 latitude: -32.1596738
 longitude: 115.7731439
 ---

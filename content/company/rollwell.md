@@ -1,6 +1,6 @@
 ---
 name: Rollwell Engineering
-date: '2025-01-27'
+date: '2025-01-29'
 overview: Rollwell Engineering is a proudly Australian-owned company specialising in fabrication and engineered manufacturing solutions for WA's mining, oil and gas, construction, infrastructure sectors
 website: https://www.rollwell.com.au
 contact_name: Tyler Keeping
@@ -11,8 +11,6 @@ email: tyler@rollwell.com.au
 is_sme: true
 stakeholders:
 - defence
-capability_streams:
-- maritime
 capability_domains:
 - submarines
 - sustainment
@@ -23,6 +21,8 @@ industrial_capabilities:
 regions:
 - peel
 - perth
+capability_streams:
+- maritime
 latitude: -32.2309473
 longitude: 115.7815748
 ---

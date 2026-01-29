@@ -1,6 +1,6 @@
 ---
 name: Otonoma
-date: '2025-01-27'
+date: '2025-01-29'
 overview: Autonomous orchestration of IT/OT, workflow, people, robotics and systems using an actorised agentic ai overlay network known as the Paranet.
 website: https://www.otonoma.com
 contact_name: Peta Chirgwin
@@ -9,14 +9,6 @@ address: Carey pl, Cooloongup WA 6168
 phone: 0404871014
 email: peta.chirgwin@otonoma.com
 is_sme: true
-capability_streams:
-- aerial
-- base
-- electronic
-- intelligence
-- logistics
-- research
-- space
 capability_domains:
 - air-traffic
 - airborne
@@ -40,6 +32,14 @@ regions:
 - pilbara
 - south-west
 - wheatbelt
+capability_streams:
+- aerial
+- base
+- electronic
+- intelligence
+- logistics
+- research
+- space
 latitude: -31.30005
 longitude: 115.75226
 ---

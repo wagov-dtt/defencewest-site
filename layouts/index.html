@@ -75,8 +75,9 @@ $companies | append $company -}} {{- end -}} {{- end -}} {{- $companies = sort $
     <button type="button" class="mobile-filter-close" aria-label="Close filters">
       {{ partial "icon.html" (dict "name" "x" "size" 24) }}
     </button>
-    {{ partial "filters.html" (dict "companies" $companies "taxonomies"
-    $taxonomies "site" .Site) }}
+    <form class="filters" id="filters" method="get">
+      {{ partial "filters.html" . }}
+    </form>
   </aside>
   
   <!-- Mobile filter backdrop -->
@@ -85,10 +86,6 @@ $companies | append $company -}} {{- end -}} {{- end -}} {{- $companies = sort $
 
 <noscript>
   <style>
-    .clear-all,
-    .clear-section {
-      display: none !important;
-    }
     .no-results {
       display: none !important;
     }
@@ -114,26 +111,24 @@ $companies | append $company -}} {{- end -}} {{- end -}} {{- $companies = sort $
     const totalCount = cards.length;
 
     let mapLoaded = false;
+    let isSubmitting = false;
 
-    // === Get Filters from Form ===
-    function getFilters() {
-      const data = new FormData(form);
+    // === Get Filters from URL ===
+    function getFiltersFromURL() {
+      const params = new URLSearchParams(location.search);
       return {
-        search: (data.get("q") || "").trim().toLowerCase(),
-        f: data.getAll("f"),  // All filter values like "st:ai", "cs:base", etc.
+        search: (params.get("q") || "").trim().toLowerCase(),
+        f: params.getAll("f"),
       };
     }
 
     // === Match Card Against Filters ===
     function matchesFilters(dataset, filters) {
-      // Search
       if (filters.search) {
         const text = (dataset.search || "").toLowerCase();
         if (!text.includes(filters.search)) return false;
       }
 
-      // Taxonomy filters - card's data-f contains "st:ai|cs:base|..."
-      // All selected filters must be present (AND logic)
       if (filters.f.length) {
         const cardFilters = (dataset.f || "").toLowerCase().split("|");
         if (!filters.f.every(f => cardFilters.includes(f.toLowerCase()))) return false;
@@ -142,32 +137,64 @@ $companies | append $company -}} {{- end -}} {{- end -}} {{- $companies = sort $
       return true;
     }
 
-    // === URL Sync ===
-    function syncFromURL() {
-      const params = new URLSearchParams(location.search);
+    // === Handle Form Submit ===
+    function handleFormSubmit(e) {
+      e.preventDefault();
 
-      // Populate form fields from URL
-      for (const input of form.elements) {
-        if (input.type === "checkbox") {
-          input.checked = params.getAll(input.name).includes(input.value);
-        } else if (input.name) {
-          input.value = params.get(input.name) || "";
-        }
-      }
+      if (isSubmitting) return;
+      isSubmitting = true;
 
-      // Sync map toggle from URL
-      if (mapToggle) {
-        mapToggle.checked = params.get("view") === "map";
-        setView(mapToggle.checked, false);
-      }
-    }
-
-    function updateURL() {
       const params = new URLSearchParams(new FormData(form));
-      if (mapToggle?.checked) params.set("view", "map");
+
       const url = params.toString() ? "?" + params : location.pathname;
       history.replaceState({}, "", url);
+
+      updateCards();
+      updateMap();
+
+      isSubmitting = false;
     }
+
+    form.addEventListener("submit", handleFormSubmit);
+
+    // Checkbox changes trigger form submit (map toggle already handled by form submit)
+    form.addEventListener("change", (e) => {
+      if (e.target.type === "checkbox" && e.target.id !== "map-toggle") {
+        form.dispatchEvent(new Event('submit'));
+      }
+    });
+
+    // === Map Toggle ===
+    function isMapView() {
+      return mapToggle?.checked;
+    }
+
+    function setView(showMap) {
+      gridEl.classList.toggle("hidden", showMap);
+      mapIframe.classList.toggle("hidden", !showMap);
+
+      if (showMap && !mapLoaded) {
+        mapIframe.src = "./map/";
+        mapLoaded = true;
+      }
+
+      showMap ? updateMap() : updateCards();
+      if (showMap && noResults) noResults.style.display = "none";
+    }
+
+    mapToggle?.addEventListener("change", () => {
+      setView(mapToggle.checked, true);
+      form.dispatchEvent(new Event('submit'));
+    });
+
+    // Debounced search (auto-submit form)
+    let searchTimeout;
+    form.q?.addEventListener("input", () => {
+      clearTimeout(searchTimeout);
+      searchTimeout = setTimeout(() => {
+        form.dispatchEvent(new Event('submit'));
+      }, 150);
+    });
 
     // === Search Highlighting ===
     function updateHighlight(query) {
@@ -198,7 +225,7 @@ $companies | append $company -}} {{- end -}} {{- end -}} {{- $companies = sort $
 
     // === Update Display ===
     function updateCards() {
-      const filters = getFilters();
+      const filters = getFiltersFromURL();
       let visibleCount = 0;
 
       cards.forEach((card) => {
@@ -212,7 +239,6 @@ $companies | append $company -}} {{- end -}} {{- end -}} {{- $companies = sort $
         noResults.style.display = visibleCount === 0 ? "block" : "none";
       }
 
-      // Update filter count in breadcrumb
       const activeFilters = filters.f.length + (filters.search ? 1 : 0);
       if (breadcrumbFilters) {
         breadcrumbFilters.classList.toggle("hidden", activeFilters === 0);
@@ -225,7 +251,7 @@ $companies | append $company -}} {{- end -}} {{- end -}} {{- $companies = sort $
     // === Map Communication ===
     function updateMap() {
       if (!isMapView() || !mapLoaded) return;
-      const params = new URLSearchParams(new FormData(form)).toString();
+      const params = new URLSearchParams(location.search).toString();
       mapIframe.contentWindow?.postMessage({ type: "updateFilters", params }, "*");
     }
 
@@ -236,12 +262,12 @@ $companies | append $company -}} {{- end -}} {{- end -}} {{- $companies = sort $
       }
     });
 
-    // === View Toggle ===
+    // === Map Toggle ===
     function isMapView() {
       return mapToggle?.checked;
     }
 
-    function setView(showMap, updateUrl = true) {
+    function setView(showMap) {
       gridEl.classList.toggle("hidden", showMap);
       mapIframe.classList.toggle("hidden", !showMap);
 
@@ -250,87 +276,18 @@ $companies | append $company -}} {{- end -}} {{- end -}} {{- $companies = sort $
         mapLoaded = true;
       }
 
-      if (updateUrl) updateURL();
       showMap ? updateMap() : updateCards();
       if (showMap && noResults) noResults.style.display = "none";
     }
 
-    mapToggle?.addEventListener("change", () => setView(mapToggle.checked));
     mapIframe.addEventListener("load", updateMap);
 
-    // === Event Listeners ===
-    function onFilterChange() {
+    // === Handle Back/Forward Browser Navigation ===
+    window.addEventListener("popstate", () => {
+      // Browser already updated form from URL params
       updateCards();
       updateMap();
-      updateURL();
-    }
-
-    // Debounced search
-    let searchTimeout;
-    form.q?.addEventListener("input", () => {
-      clearTimeout(searchTimeout);
-      searchTimeout = setTimeout(onFilterChange, 150);
     });
-
-    // All other form changes
-    form.addEventListener("change", () => {
-      onFilterChange();
-      updateOptionVisibility();
-    });
-
-    // === Filter Options (filters the taxonomy lists) ===
-    const filterOptionsInput = $("#filter-options");
-    const allFilterItems = $$(".filters .filter-item");
-    const allStreamLabels = $$(".filters .stream-icon");
-    const allSections = $$(".filters .filter-section");
-
-    function updateOptionVisibility() {
-      const query = (filterOptionsInput?.value || "").toLowerCase().trim();
-
-      // Filter checkbox list items (always show checked items)
-      allFilterItems.forEach(item => {
-        const label = item.querySelector(".filter-label");
-        const isChecked = item.querySelector("input")?.checked;
-        const matches = !query || (label?.textContent || "").toLowerCase().includes(query);
-        item.hidden = !matches && !isChecked;
-      });
-
-      // Filter stream icon labels (always show checked items)
-      allStreamLabels.forEach(label => {
-        const isChecked = label.querySelector("input")?.checked;
-        const matches = !query || label.title.toLowerCase().includes(query);
-        label.hidden = !matches && !isChecked;
-      });
-
-      // Hide sections with no visible items
-      allSections.forEach(section => {
-        const filterList = section.querySelector(".filter-list");
-        const streamIcons = section.querySelector(".stream-icons");
-
-        if (filterList) {
-          const hasVisible = [...filterList.querySelectorAll(".filter-item")].some(i => !i.hidden);
-          section.hidden = !hasVisible;
-        } else if (streamIcons) {
-          const hasVisible = [...streamIcons.querySelectorAll(".stream-icon")].some(l => !l.hidden);
-          section.hidden = !hasVisible;
-        }
-      });
-    }
-
-    filterOptionsInput?.addEventListener("input", updateOptionVisibility);
-
-    // Also clear filter-options on form reset
-    form.addEventListener("reset", () => {
-      setTimeout(() => {
-        updateOptionVisibility();
-        onFilterChange();
-      }, 0);
-    });
-
-    // Prevent form submission (we use live filtering)
-    form.addEventListener("submit", (e) => e.preventDefault());
-
-    window.addEventListener("popstate", () => { syncFromURL(); updateCards(); updateMap(); });
 
     // === Mobile Filter Toggle (with focus trap for a11y) ===
     const filterToggle = $(".mobile-filter-toggle");
@@ -345,7 +302,6 @@ $companies | append $company -}} {{- end -}} {{- end -}} {{- $companies = sort $
       filterBackdrop?.classList.add("open");
       filterToggle?.setAttribute("aria-expanded", "true");
       document.body.style.overflow = "hidden";
-      // Focus first focusable element in sidebar
       const firstFocusable = filterSidebar?.querySelector(
         'input, button, [tabindex]:not([tabindex="-1"])'
       );
@@ -357,7 +313,6 @@ $companies | append $company -}} {{- end -}} {{- end -}} {{- $companies = sort $
       filterBackdrop?.classList.remove("open");
       filterToggle?.setAttribute("aria-expanded", "false");
       document.body.style.overflow = "";
-      // Return focus to toggle button
       previousActiveElement?.focus();
     }
 
@@ -365,7 +320,6 @@ $companies | append $company -}} {{- end -}} {{- end -}} {{- $companies = sort $
     filterClose?.addEventListener("click", closeFilters);
     filterBackdrop?.addEventListener("click", closeFilters);
 
-    // Focus trap - keep Tab within sidebar when open
     filterSidebar?.addEventListener("keydown", (e) => {
       if (e.key !== "Tab" || !filterSidebar.classList.contains("open")) return;
       const focusables = [...filterSidebar.querySelectorAll(
@@ -386,65 +340,46 @@ $companies | append $company -}} {{- end -}} {{- end -}} {{- $companies = sort $
     // === Clear Filters Badge ===
     const clearFiltersBtn = $("#clear-filters");
     clearFiltersBtn?.addEventListener("click", () => {
-      // Uncheck all filter checkboxes (but not the view switch)
-      form.querySelectorAll('input[name="f"]:checked').forEach(cb => cb.checked = false);
-      // Clear search
-      if (form.q) form.q.value = "";
-      onFilterChange();
-      updateOptionVisibility();
+      form.reset();
+      form.dispatchEvent(new Event('submit'));
     });
 
     // === Keyboard Shortcuts (a11y) ===
     document.addEventListener("keydown", (e) => {
-      // '/' to focus search (like GitHub)
       if (e.key === "/" && !e.target.matches("input, textarea, select")) {
         e.preventDefault();
         form.q?.focus();
       }
-      // Escape to close mobile filter panel or clear search
       if (e.key === "Escape") {
         if (filterSidebar?.classList.contains("open")) {
           closeFilters();
         } else if (form.q?.value) {
           form.q.value = "";
-          onFilterChange();
+          form.submit();
         }
       }
     });
 
-    // === Icon Filter Keyboard Navigation (a11y) ===
-    // Make stream icons keyboard accessible with Enter/Space
-    allStreamLabels.forEach(label => {
-      const checkbox = label.querySelector('input[type="checkbox"]');
-      if (!checkbox) return;
-      // Set initial ARIA state
-      label.setAttribute("role", "checkbox");
-      label.setAttribute("aria-checked", checkbox.checked);
-      label.setAttribute("tabindex", "0");
-      checkbox.setAttribute("tabindex", "-1"); // Hide from tab order
-      // Handle keyboard activation
-      label.addEventListener("keydown", (e) => {
-        if (e.key === "Enter" || e.key === " ") {
-          e.preventDefault();
-          checkbox.checked = !checkbox.checked;
-          label.setAttribute("aria-checked", checkbox.checked);
-          checkbox.dispatchEvent(new Event("change", { bubbles: true }));
-        }
-      });
-      // Sync ARIA state when checkbox changes
-      checkbox.addEventListener("change", () => {
-        label.setAttribute("aria-checked", checkbox.checked);
-      });
+    // === Init ===
+    // Manually populate form from URL params to ensure checkboxes are checked
+    const params = new URLSearchParams(location.search);
+    const filterValues = params.getAll("f");
+
+    // Update checkboxes from URL
+    form.querySelectorAll('input[name="f"][type="checkbox"]').forEach(checkbox => {
+      checkbox.checked = filterValues.includes(checkbox.value);
     });
 
-    // === Init ===
-    syncFromURL();
+    // Handle map toggle state
+    if (mapToggle) {
+      const initialMapState = params.get("view") === "map";
+      if (initialMapState !== mapToggle.checked) {
+        mapToggle.checked = initialMapState;
+        setView(initialMapState, false);
+      }
+    }
+
     updateCards();
-    // Sync ARIA states after URL sync
-    allStreamLabels.forEach(label => {
-      const checkbox = label.querySelector('input[type="checkbox"]');
-      if (checkbox) label.setAttribute("aria-checked", checkbox.checked);
-    });
   })();
 </script>
 

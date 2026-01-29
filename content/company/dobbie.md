@@ -1,6 +1,6 @@
 ---
 name: Dobbie
-date: '2025-01-27'
+date: '2025-01-29'
 overview: 'Dobbie is an engineering company that offers capabilites in: 3D design and prototyping, pattern making and ferrous and non-ferrous foundry. '
 website: https://www.dobbie.com.au
 contact_name: Rod Martin
@@ -11,12 +11,6 @@ email: rodm@dobbie.com.au
 is_sme: true
 stakeholders:
 - defence
-capability_streams:
-- keyn
-- aasl
-- masw
-- saac
-- lcaw
 capability_domains:
 - armour
 - base
@@ -32,6 +26,12 @@ industrial_capabilities:
 - design
 regions:
 - perth-metropolitan
+capability_streams:
+- research
+- logistics
+- maritime
+- aerial
+- land
 latitude: -31.8624582
 longitude: 115.9062378
 ---

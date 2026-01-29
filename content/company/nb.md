@@ -1,6 +1,6 @@
 ---
 name: NB Consulting
-date: '2025-01-27'
+date: '2025-01-29'
 overview: Business Advisory Services - Defence Industry Small-Medium Enterprise (SME)s aspiring to enter or develop their presence in the Defence Industry sector.
 website: https://nb-consulting.com.au
 contact_name: Neil Bartlett

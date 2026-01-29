@@ -1,6 +1,6 @@
 ---
 name: RUD
-date: '2025-01-27'
+date: '2025-01-29'
 overview: The RUD Group is a globally certified supplier for defence systems and equipment for land, air and sea. We provide standard and customised applications for the defence force that meet and exceed the industry's exacting standards
 website: https://www.rud.com.au
 contact_name: Novak Anfuso
@@ -9,10 +9,6 @@ address: 107 Broadway, Bassendean WA 6054
 phone: 08 6278 1788
 email: Novak.anfuso@rud.com.au
 is_sme: true
-capability_streams:
-- aasl
-- masw
-- lcaw
 capability_domains:
 - armour
 - maritime
@@ -26,6 +22,10 @@ industrial_capabilities:
 - welding
 regions:
 - perth-metropolitan
+capability_streams:
+- logistics
+- maritime
+- land
 latitude: -31.90159
 longitude: 115.93318
 ---

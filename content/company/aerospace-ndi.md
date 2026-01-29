@@ -1,6 +1,6 @@
 ---
 name: Aerospace NDI
-date: '2025-01-27'
+date: '2025-01-29'
 overview: Aerospace NDI is involved in aircraft component maintenance and aircraft specialist maintenance.
 website: https://www.aerospacendi.com
 contact_name: Anthony Mark Collier
@@ -11,13 +11,13 @@ email: tony@aerospacendi.com
 is_sme: true
 stakeholders:
 - defence
-capability_streams:
-- keyn
 capability_domains:
 - fighter
 - light
 regions:
 - perth-metropolitan
+capability_streams:
+- research
 latitude: -31.9067478
 longitude: 115.9328024
 ---

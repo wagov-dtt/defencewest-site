@@ -1,6 +1,6 @@
 ---
 name: Grant Transformers
-date: '2025-01-27'
+date: '2025-01-29'
 overview: Grant Transformers are experts in manufacturing and supplying of isolation, power & distribution transformers as well as Industrial DC Power Supplies.
 website: https://grant-transformers.com.au
 contact_name: Marco da Silva
@@ -11,9 +11,6 @@ email: marco@grant-transformers.com.au
 is_sme: true
 stakeholders:
 - defence
-capability_streams:
-- keyn
-- masw
 capability_domains:
 - frigates
 - science
@@ -23,6 +20,9 @@ industrial_capabilities:
 - protective
 regions:
 - perth-metropolitan
+capability_streams:
+- research
+- maritime
 latitude: -31.8631739
 longitude: 115.9028809
 ---

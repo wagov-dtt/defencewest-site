@@ -1,6 +1,6 @@
 ---
 name: HIFraser
-date: '2025-01-27'
+date: '2025-01-29'
 overview: HIFraser provide manufacturing and engineering solutions to a number of pivotal national projects.
 website: https://www.hifraser.com.au
 contact_name: Chris Williams
@@ -11,13 +11,13 @@ email: chrisw@hifraser.com
 is_sme: true
 stakeholders:
 - defence
-capability_streams:
-- masw
 capability_domains:
 - frigates
 - submarines
 regions:
 - perth-metropolitan
+capability_streams:
+- maritime
 latitude: -32.0621281
 longitude: 115.8029692
 ---

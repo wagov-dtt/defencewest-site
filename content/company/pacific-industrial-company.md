@@ -1,6 +1,6 @@
 ---
 name: Pacific Industrial Company
-date: '2025-01-27'
+date: '2025-01-29'
 overview: Pacific Industrial Company is WA owned and is one of Australia's leading fabrication and construction organisations with operations covering all aspects of steel fabrication and construction.
 website: https://www.pacind.com.au
 contact_name: Zeno Tessarin

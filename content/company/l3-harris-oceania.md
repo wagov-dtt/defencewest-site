@@ -1,6 +1,6 @@
 ---
 name: L3 Harris - Oceania
-date: '2025-01-27'
+date: '2025-01-29'
 overview: L3 Harris Oceania is a leading provider of maritime systems and solutions in the surface, undersea, geospatial and network centric spheres of operation for both defence and commercial applications.
 website: https://www.l3oceania.com
 contact_name: Scott Elson
@@ -11,12 +11,6 @@ email: scott.elson@L3T.com
 is_sme: true
 stakeholders:
 - defence
-capability_streams:
-- iscw
-- keyn
-- aasl
-- masw
-- lcaw
 capability_domains:
 - c2
 - communications
@@ -27,6 +21,12 @@ capability_domains:
 - surveillance
 regions:
 - perth-metropolitan
+capability_streams:
+- electronic
+- research
+- logistics
+- maritime
+- land
 latitude: -32.0624953
 longitude: 115.7504005
 ---

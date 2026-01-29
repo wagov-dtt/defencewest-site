@@ -1,6 +1,6 @@
 ---
 name: Energy Power Systems Australia Pty. Ltd.
-date: '2025-01-27'
+date: '2025-01-29'
 overview: Caterpillar (r) engines, generators and power solutions provider in Australia, PNG and the Solomon Islands.
 website: https://www.energypower.com.au
 contact_name: Fred Bkamdin
@@ -14,9 +14,6 @@ stakeholders:
 - academic
 - defence-west
 - defence-science
-capability_streams:
-- land
-- maritime
 capability_domains:
 - destroyers
 - maritime
@@ -46,6 +43,9 @@ regions:
 - pilbara
 - south-west
 - wheatbelt
+capability_streams:
+- land
+- maritime
 latitude: -31.91787
 longitude: 115.92689
 ---

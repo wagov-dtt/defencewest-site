@@ -1,6 +1,6 @@
 ---
 name: Fremantle Steel
-date: '2025-01-27'
+date: '2025-01-29'
 overview: 'Fremantle Steel Fabrication is part of the Fremantle Steel Group, which includes Park Engineers and combined has over 100 years of experience in fabricating structural steel components. '
 website: https://www.fremantlesteel.com.au
 contact_name: Laurie D'Amato
@@ -11,9 +11,6 @@ email: laurie.damato@fremantlesteel.com.au
 is_sme: true
 stakeholders:
 - defence
-capability_streams:
-- masw
-- lcaw
 capability_domains:
 - air
 - barracks
@@ -23,6 +20,9 @@ capability_domains:
 - submarines
 regions:
 - perth-metropolitan
+capability_streams:
+- maritime
+- land
 latitude: -32.118123
 longitude: 115.8571672
 ---

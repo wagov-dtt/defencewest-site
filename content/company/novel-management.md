@@ -1,6 +1,6 @@
 ---
 name: Novel Management Pty Ltd
-date: '2025-01-27'
+date: '2025-01-29'
 overview: Novel is a Defence consulting firm offering defence market access, Grant Writing, industry introductions, Quad Charts, ASDEFCON and DISP support and more.
 website: https://www.novelmanagement.com.au
 contact_name: Rachel Falzon
@@ -12,8 +12,6 @@ is_sme: true
 stakeholders:
 - defence
 - defence-west
-capability_streams:
-- education
 capability_domains:
 - base
 - cyber
@@ -34,6 +32,8 @@ regions:
 - pilbara
 - south-west
 - wheatbelt
+capability_streams:
+- education
 latitude: -31.9525739
 longitude: 115.8610488
 ---

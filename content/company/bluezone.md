@@ -1,6 +1,6 @@
 ---
 name: BlueZone Group
-date: '2025-01-27'
+date: '2025-01-29'
 overview: BlueZone Group is an experienced Defence SME and a capable supplier to customers operating in the harsh conditions of deep oceans, coastal seas, rivers and water infrastructure.
 website: https://bluezonegroup.com.au
 contact_name: Mark Musarra
@@ -11,9 +11,6 @@ email: mark.musarra@bzg.com.au
 is_sme: true
 stakeholders:
 - defence
-capability_streams:
-- iscw
-- masw
 capability_domains:
 - amphibious
 - maritime
@@ -24,6 +21,9 @@ industrial_capabilities:
 - electronics
 regions:
 - perth-metropolitan
+capability_streams:
+- electronic
+- maritime
 latitude: -32.1002518
 longitude: 115.8118311
 ---

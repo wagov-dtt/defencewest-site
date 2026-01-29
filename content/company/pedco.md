@@ -1,6 +1,6 @@
 ---
 name: Pedco Engineering
-date: '2025-01-27'
+date: '2025-01-29'
 overview: Pedco Engineering provides metal forming and fabrication/welding services for mild, stainless, exotic steels and alloys.
 website: https://www.pedco.com.au
 contact_name: Deryck Ethelston
@@ -12,9 +12,6 @@ is_sme: true
 stakeholders:
 - defence
 - defence-west
-capability_streams:
-- keyn
-- lcaw
 capability_domains:
 - amphibious
 - armour
@@ -36,6 +33,9 @@ regions:
 - north
 - south
 - naval
+capability_streams:
+- research
+- land
 latitude: -31.9947664
 longitude: 115.9513166
 ---

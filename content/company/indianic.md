@@ -1,6 +1,6 @@
 ---
 name: 'Indianic Group '
-date: '2025-01-27'
+date: '2025-01-29'
 overview: Indianic Group, founded in 2004 and based in Henderson, Western Australia, is a leading provider of marine construction, subsea services and marine infrastructure maintenance across the Asia Pacific.
 website: https://indianic.com.au
 contact_name: Nigel Rees
@@ -11,9 +11,6 @@ email: tenders@indianic.com.au
 is_sme: true
 stakeholders:
 - defence
-capability_streams:
-- base
-- maritime
 capability_domains:
 - base
 - destroyers
@@ -42,6 +39,9 @@ regions:
 - pilbara
 - south-west
 - wheatbelt
+capability_streams:
+- base
+- maritime
 latitude: -32.1486648
 longitude: 115.7773325
 ---

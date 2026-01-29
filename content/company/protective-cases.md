@@ -1,10 +1,10 @@
 ---
 name: Protective Cases
-date: '2025-01-27'
+date: '2025-01-29'
 overview: 'Protective Cases produces in-house design and the manufacture of cases and foam inserts, and also prototype to large scale production.
 
   '
-website: https://protectivecases.com.au
+website: https://www.protectivecases.com.au
 contact_name: Greg Kippin
 contact_title: Technical Director
 address: Unit 3, 15 May Holman Drive, Bassendean WA 6054
@@ -13,12 +13,6 @@ email: greg@protectivecases.com.au
 is_sme: true
 stakeholders:
 - defence
-capability_streams:
-- iscw
-- keyn
-- aasl
-- masw
-- lcaw
 capability_domains:
 - armour
 - communications
@@ -39,6 +33,12 @@ capability_domains:
 - ground
 regions:
 - perth-metropolitan
+capability_streams:
+- electronic
+- research
+- logistics
+- maritime
+- land
 latitude: -31.9068126
 longitude: 115.9390156
 ---

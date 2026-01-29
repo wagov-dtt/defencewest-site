@@ -1,6 +1,6 @@
 ---
 name: Intertek
-date: '2025-01-27'
+date: '2025-01-29'
 overview: Intertek supports the QA efforts of customers across their operations including research and development, raw materials sourcing, components suppliers, manufacturing, transportation, distribution and retail channels, and consumer management.
 website: https://www.intertek.com
 contact_name: Konrad Drogemuller
@@ -11,12 +11,6 @@ email: korad.drogemullare@intertek.com
 is_sme: true
 stakeholders:
 - defence
-capability_streams:
-- iscw
-- keyn
-- aasl
-- masw
-- lcaw
 capability_domains:
 - air
 - airborne
@@ -44,6 +38,12 @@ capability_domains:
 - utility
 regions:
 - perth-metropolitan
+capability_streams:
+- electronic
+- research
+- logistics
+- maritime
+- land
 latitude: -31.9539561
 longitude: 115.8509585
 ---

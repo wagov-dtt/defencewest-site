@@ -1,6 +1,6 @@
 ---
 name: Franmarine
-date: '2025-01-27'
+date: '2025-01-29'
 overview: Franmarine is an Australian owned, diversified marine and underwater service provider that predominantly supports the Defence, infrastructure, shipping and oil and gas industries.
 website: https://www.franmarine.com.au
 contact_name: Adam Falconer-West
@@ -13,9 +13,6 @@ stakeholders:
 - defence
 - defence-west
 - defence-science
-capability_streams:
-- keyn
-- masw
 capability_domains:
 - cyber
 - destroyers
@@ -31,6 +28,9 @@ industrial_capabilities:
 - propulsion
 regions:
 - australian
+capability_streams:
+- research
+- maritime
 latitude: -32.1533026
 longitude: 115.777905
 ---

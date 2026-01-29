@@ -1,6 +1,6 @@
 ---
 name: JFD Australia
-date: '2025-01-27'
+date: '2025-01-29'
 overview: JFD Australia  provides world leading undersea products, systems and capabilities to the Australian Defence Force and the Australian Commercial offshore sector.
 website: https://jfdglobal.com
 contact_name: Cathy Falkiner
@@ -11,8 +11,6 @@ email: C.Falkiner@jfdglobal.com
 is_sme: true
 stakeholders:
 - defence
-capability_streams:
-- keyn
 capability_domains:
 - maritime
 - submarines
@@ -21,6 +19,8 @@ industrial_capabilities:
 - steel
 regions:
 - perth-metropolitan
+capability_streams:
+- research
 latitude: -32.1063051
 longitude: 115.8123395
 ---

@@ -1,6 +1,6 @@
 ---
 name: Austral Construction
-date: '2025-01-27'
+date: '2025-01-29'
 overview: Austral Construction is a specialist engineering and construction contractor providing civil, marine, rail, piling and ground retention services to the infrastructure, resource and defence sectors
 website: https://australconstruction.com.au
 contact_name: Nicholas Hewitt
@@ -9,9 +9,6 @@ address: L11, 200 St Georges Terrace, Perth WA 6000
 phone: 0417448455
 email: nicholas.hewitt@australconstruction.com.au
 is_sme: true
-capability_streams:
-- base
-- maritime
 capability_domains:
 - air
 - amphibious
@@ -36,6 +33,9 @@ regions:
 - pilbara
 - south-west
 - wheatbelt
+capability_streams:
+- base
+- maritime
 latitude: -31.9531
 longitude: 115.85326
 ---

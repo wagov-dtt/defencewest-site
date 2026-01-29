@@ -1,6 +1,6 @@
 ---
 name: Wedgetail Aerospace
-date: '2025-01-27'
+date: '2025-01-29'
 overview: Wedgetail Aerospace is an agnostic drone service provider focused on air freight and data acquisition.
 website: https://www.wedgetailaerospace.com
 contact_name: Tom Symes
@@ -12,11 +12,6 @@ is_prime: true
 stakeholders:
 - defence
 - defence-west
-capability_streams:
-- education
-- intelligence
-- logistics
-- research
 capability_domains:
 - reconnaissance
 - search
@@ -41,6 +36,11 @@ regions:
 - wheatbelt
 ownerships:
 - veteran
+capability_streams:
+- education
+- intelligence
+- logistics
+- research
 latitude: -31.9462672
 longitude: 115.8635746
 ---

@@ -1,6 +1,6 @@
 ---
 name: Multiplan
-date: '2025-01-27'
+date: '2025-01-29'
 overview: Our aim at Multiplan is to be seen as the solution, stopping potential issues in their track, all while adding constructability insights, production intelligence and skilled resourcing along the way.
 website: https://www.multiplan.com.au
 contact_name: Kane Nitschke
@@ -13,10 +13,6 @@ stakeholders:
 - defence
 - defence-west
 - defence-science
-capability_streams:
-- keyn
-- masw
-- lcaw
 capability_domains:
 - air
 - barracks
@@ -29,6 +25,10 @@ regions:
 - perth-metropolitan
 - north
 - south
+capability_streams:
+- research
+- maritime
+- land
 latitude: -31.94778
 longitude: 115.92706
 ---

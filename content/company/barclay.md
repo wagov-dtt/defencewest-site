@@ -1,6 +1,6 @@
 ---
 name: Barclay Engineering
-date: '2025-01-27'
+date: '2025-01-29'
 overview: Barclay Engineering delivers valued solutions worldwide and since 1977. They cater to a diverse range of sectors including Construction, Infrastructure, Power Generation, Defence, Marine and HVAC.
 website: https://www.barclayeng.com.au
 contact_name: Caroline Sampson
@@ -11,13 +11,6 @@ email: info@barclayeng.com.au
 is_sme: true
 stakeholders:
 - defence
-capability_streams:
-- aerial
-- base
-- land
-- logistics
-- maritime
-- space
 capability_domains:
 - air
 - amphibious
@@ -51,6 +44,13 @@ regions:
 - pilbara
 - south-west
 - wheatbelt
+capability_streams:
+- aerial
+- base
+- land
+- logistics
+- maritime
+- space
 latitude: -32.0618922
 longitude: 115.9021721
 ---

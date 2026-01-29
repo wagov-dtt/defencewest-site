@@ -1,6 +1,6 @@
 ---
 name: Whittens Pty Limited
-date: '2025-01-27'
+date: '2025-01-29'
 overview: Whittens partners with clients to deliver safe, reliable earthworks and concrete solutions for complex mining, oil & gas, defence, and infrastructure projects across Australia.
 website: https://www.whittensgroup.com.au
 contact_name: Dario Amara
@@ -14,8 +14,6 @@ stakeholders:
 - academic
 - defence-west
 - defence-science
-capability_streams:
-- base
 capability_domains:
 - base
 industrial_capabilities:
@@ -31,6 +29,8 @@ regions:
 - pilbara
 - south-west
 - wheatbelt
+capability_streams:
+- base
 latitude: -31.9079431
 longitude: 115.8044306
 ---

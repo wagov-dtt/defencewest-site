@@ -1,6 +1,6 @@
 ---
 name: Innovative Asset Solutions
-date: '2025-01-27'
+date: '2025-01-29'
 overview: IAS leads innovation in the preservation, repair and decommissioning of assets for the oil and gas, mining, public infrastructure and industrial sectors.
 website: https://www.ias-group.com.au
 contact_name: Neil Pickwell
@@ -11,11 +11,6 @@ email: neil.pickwell@ugllimited.com
 is_sme: true
 stakeholders:
 - defence
-capability_streams:
-- base
-- land
-- logistics
-- maritime
 capability_domains:
 - base
 - minor
@@ -39,6 +34,11 @@ regions:
 - pilbara
 - south-west
 - wheatbelt
+capability_streams:
+- base
+- land
+- logistics
+- maritime
 latitude: -32.0644707
 longitude: 115.921209
 ---

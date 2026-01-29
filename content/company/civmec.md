@@ -1,6 +1,6 @@
 ---
 name: Civmec
-date: '2025-01-27'
+date: '2025-01-29'
 overview: Civmec is an integrated, multi-disciplinary construction and engineering services provider to the oil and gas, metals and minerals, infrastructure, marine and defence sectors.
 website: https://www.civmec.com.au
 contact_name: Pat Tallon
@@ -11,13 +11,13 @@ email: civmec@civmec.com.au
 is_sme: true
 stakeholders:
 - defence
-capability_streams:
-- keyn
 capability_domains:
 - barracks
 - base
 regions:
 - australian
+capability_streams:
+- research
 latitude: -32.1659018
 longitude: 115.7720808
 ---

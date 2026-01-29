@@ -9,7 +9,6 @@ import json
 import re
 import subprocess
 import sys
-import time
 from datetime import date, timedelta
 from pathlib import Path
 
@@ -29,12 +28,12 @@ from config import (
     LOGOS_DIR,
     HAS_MOGRIFY,
     cache,
-    USER_AGENT,
     TAXONOMIES,
     build_taxonomy_keys,
     clean_capability_stream,
     clean_slug,
     is_in_wa,
+    CANONICAL_CAPABILITY_STREAMS,
     log,
     make_progress,
 )
@@ -92,60 +91,6 @@ def geocode_address(address: str) -> tuple[float, float] | None:
             location = geolocator.geocode(query, exactly_one=True)
             if location:
                 return (location.latitude, location.longitude)
-        except Exception as e:
-            print(f"    Geocode error for '{addr[:50]}...': {e}")
-        return None
-
-    # Try full address first
-    if result := try_geocode(address):
-        cache[cache_key] = list(result)
-        return result
-
-    # Try simplified address (remove building names, levels, etc.)
-    simplified = simplify_address(address)
-    if simplified != address:
-        if result := try_geocode(simplified):
-            cache[cache_key] = list(result)
-            return result
-
-    cache[cache_key] = None
-    return None
-
-    cache_key = f"geocode:{address}"
-    if cache_key in cache:
-        cached = cache[cache_key]
-        return tuple(cached) if cached else None
-
-    def try_geocode(addr: str) -> tuple[float, float] | None:
-        try:
-            # Ensure address includes WA/Australia for better results
-            query = (
-                addr
-                if re.search(r"\b(WA|Western Australia)\b", addr, re.I)
-                else f"{addr}, WA, Australia"
-            )
-            params = {
-                "SingleLine": query,
-                "f": "json",
-                "maxLocations": "1",
-                "outFields": "Addr_type,Region",
-            }
-            response = http_client.get(
-                "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates",
-                params=params,
-            )
-            data = response.json()
-            candidates = data.get("candidates", [])
-            if candidates:
-                c = candidates[0]
-                loc = c.get("location", {})
-                # Verify it's in Western Australia
-                region = c.get("attributes", {}).get("Region", "")
-                if re.search(r"Western Australia|WA", region, re.I):
-                    return (loc["y"], loc["x"])
-                # If region doesn't match, still return but log warning
-                if loc.get("x") and loc.get("y"):
-                    return (loc["y"], loc["x"])
         except Exception as e:
             print(f"    Geocode error for '{addr[:50]}...': {e}")
         return None
@@ -384,8 +329,7 @@ def extract_companies(html: str) -> list[dict]:
                 s.get("Title", "") for s in data.get("WADefenceKeyStakeholders", [])
             ],
             "capability_streams": [
-                clean_capability_stream(s.get("Title", ""))
-                for s in data.get("CapabilityStreams", [])
+                s.get("Title", "") for s in data.get("CapabilityStreams", [])
             ],
             "_stream_icons": {
                 clean_capability_stream(s.get("Title", "")): s.get("IconUrl", "")
@@ -515,10 +459,10 @@ def normalize_company(
     # Taxonomies (convert display names to keys)
     for tax in [
         "stakeholders",
-        "capability_streams",
         "capability_domains",
         "industrial_capabilities",
         "regions",
+        "ownerships",
     ]:
         if values := d.get(tax, []):
             if keys := [
@@ -527,6 +471,51 @@ def normalize_company(
                 if name_to_key.get(tax, {}).get(v)
             ]:
                 company[tax] = keys
+
+    # Capability streams use canonical mapping from source DOM
+    if stream_values := d.get("capability_streams", []):
+        # Convert each stream value to canonical key
+        canonical_keys = []
+        for value in stream_values:
+            # Direct match with canonical display names
+            if value in CANONICAL_CAPABILITY_STREAMS.values():
+                # Find key by display name
+                canonical_key = next(
+                    k for k, v in CANONICAL_CAPABILITY_STREAMS.items() if v == value
+                )
+                if canonical_key:
+                    canonical_keys.append(canonical_key)
+            # Check for old prefixed names (ISCW, KEYN, etc.)
+            elif any(
+                old_prefix in value
+                for old_prefix in [
+                    "ISCW - ",
+                    "KEYN - ",
+                    "LCAW - ",
+                    "MASW - ",
+                    "SAAC - ",
+                    "AASL - ",
+                ]
+            ):
+                # Map to canonical key based on old stream name
+                if "ISCW" in value:
+                    canonical_keys.append("electronic")
+                elif "KEYN" in value:
+                    canonical_keys.append("research")
+                elif "LCAW" in value:
+                    canonical_keys.append("land")
+                elif "MASW" in value:
+                    canonical_keys.append("maritime")
+                elif "SAAC" in value:
+                    canonical_keys.append("aerial")
+                elif "AASL" in value:
+                    canonical_keys.append("logistics")
+            else:
+                # Use cleaned value as-is for any other streams
+                canonical_keys.append(value)
+
+        if canonical_keys:
+            company["capability_streams"] = canonical_keys
 
     # Ownership
     if ownerships := d.get("ownerships", []):
@@ -633,9 +622,40 @@ def main():
         # Build taxonomies
         print("Building taxonomies...")
         all_values = extract_all_taxonomy_values(raw)
-        taxonomies = {
-            tax: build_taxonomy_keys(list(all_values[tax])) for tax in all_values
-        }
+
+        # For capability_streams, use canonical values from source DOM
+        # This ensures consistent display names and keys
+        if "capability_streams" in all_values and all_values["capability_streams"]:
+            # Map each value to canonical key or use as-is
+            canonical_stream_values = []
+            for value in all_values["capability_streams"]:
+                # Check if value matches a canonical display name
+                found = False
+                for key, display_name in CANONICAL_CAPABILITY_STREAMS.items():
+                    if value == display_name:
+                        canonical_stream_values.append(key)
+                        found = True
+                        break
+                # If not found, use the cleaned value as-is
+                if not found and value:
+                    canonical_stream_values.append(value)
+
+            # Build capability_streams taxonomy from canonical values
+            taxonomies = {
+                tax: build_taxonomy_keys(list(all_values[tax]))
+                for tax in all_values
+                if tax != "capability_streams"
+            }
+            taxonomies["capability_streams"] = {
+                key: CANONICAL_CAPABILITY_STREAMS[key]
+                for key in canonical_stream_values
+                if key in CANONICAL_CAPABILITY_STREAMS
+            }
+        else:
+            # Fallback to original logic if capability_streams not found
+            taxonomies = {
+                tax: build_taxonomy_keys(list(all_values[tax])) for tax in all_values
+            }
 
         # Build reverse lookup: {taxonomy: {display_name: key}}
         name_to_key = {

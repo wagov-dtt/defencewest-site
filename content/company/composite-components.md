@@ -1,6 +1,6 @@
 ---
 name: Composite Components
-date: '2025-01-27'
+date: '2025-01-29'
 overview: Composite Components is an advanced composite manufacturer and research and development business utilising material processes such as compression moulding, closed moulding and pre-impregnated moulding.
 website: https://www.compositecomponents.com.au
 contact_name: Josh Fugill
@@ -11,10 +11,6 @@ email: josh@compositecomponents.com.au
 is_sme: true
 stakeholders:
 - defence
-capability_streams:
-- aasl
-- masw
-- lcaw
 capability_domains:
 - amphibious
 - armour
@@ -28,6 +24,10 @@ industrial_capabilities:
 - design
 regions:
 - perth-metropolitan
+capability_streams:
+- logistics
+- maritime
+- land
 latitude: -32.1146229
 longitude: 115.8146042
 ---

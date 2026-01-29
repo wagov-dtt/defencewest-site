@@ -1,6 +1,6 @@
 ---
 name: Versatile Defence
-date: '2025-01-27'
+date: '2025-01-29'
 overview: Versatile Defence provides expert consulting, trusted defence product supply, and durable Australian-made poly boats -- delivering practical, mission-ready solutions across maritime and defence sectors
 website: https://versatile-defence.com.au
 contact_name: Kim Bakker
@@ -13,9 +13,6 @@ stakeholders:
 - defence
 - defence-west
 - defence-science
-capability_streams:
-- land
-- maritime
 capability_domains:
 - destroyers
 - frigates
@@ -38,6 +35,9 @@ industrial_capabilities:
 - adaptive
 regions:
 - perth
+capability_streams:
+- land
+- maritime
 latitude: -32.1535223
 longitude: 115.7737501
 ---

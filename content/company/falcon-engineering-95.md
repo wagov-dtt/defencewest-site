@@ -1,6 +1,6 @@
 ---
 name: Falcon Engineering 95 Pty Ltd
-date: '2025-01-27'
+date: '2025-01-29'
 overview: Falcon Engineering has been engaged in steel fabrication services nationally for 60+ years.  ISO 9001, ISO 14001, ISO 45001 & AS5131 CC3 accredited.
 website: https://www.falconeng95.com.au
 contact_name: Andrew Marriott
@@ -14,12 +14,6 @@ stakeholders:
 - academic
 - defence-west
 - defence-science
-capability_streams:
-- aerial
-- base
-- land
-- maritime
-- space
 capability_domains:
 - air
 - airborne
@@ -63,6 +57,12 @@ regions:
 - pilbara
 - south-west
 - wheatbelt
+capability_streams:
+- aerial
+- base
+- land
+- maritime
+- space
 latitude: -32.11067
 longitude: 115.81802
 ---

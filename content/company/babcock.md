@@ -1,6 +1,6 @@
 ---
 name: Babcock Australia Pty Ltd
-date: '2025-01-27'
+date: '2025-01-29'
 overview: Babcock is an international defence and aerospace business. We support and enhance our customers' defence capabilities and critical assets and we meet our customers' requirements of value for money, increased availability, modernisation and flexibility.
 website: https://www.babcock.com.au
 contact_name: Jeremy Antao
@@ -13,11 +13,6 @@ stakeholders:
 - defence
 - academic
 - defence-west
-capability_streams:
-- iscw
-- keyn
-- aasl
-- masw
 capability_domains:
 - air
 - armour
@@ -42,6 +37,11 @@ industrial_capabilities:
 regions:
 - australian
 - north
+capability_streams:
+- electronic
+- research
+- logistics
+- maritime
 latitude: -32.1490281
 longitude: 115.778922
 ---

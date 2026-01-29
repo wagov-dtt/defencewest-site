@@ -1,6 +1,6 @@
 ---
 name: JMH Group
-date: '2025-01-27'
+date: '2025-01-29'
 overview: For all your mobile plant and equipment mechanical repairs & maintenance, labour hire support, parts supply, specialised tooling hire, component exchange and undercarriage repairs.
 website: https://jmhgroup.net.au
 contact_name: Jaydon Hirst
@@ -12,10 +12,6 @@ is_sme: true
 stakeholders:
 - defence
 - defence-west
-capability_streams:
-- base
-- land
-- logistics
 capability_domains:
 - armour
 industrial_capabilities:
@@ -34,6 +30,10 @@ regions:
 - wheatbelt
 ownerships:
 - indigenous
+capability_streams:
+- base
+- land
+- logistics
 latitude: -28.81265
 longitude: 114.67123
 ---

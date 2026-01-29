@@ -1,6 +1,6 @@
 ---
 name: United Safety and Survivability Corporation
-date: '2025-01-27'
+date: '2025-01-29'
 overview: United Safety and Survivability Corporation are committed to delivering the most innovative and reliable safety and survivability solutions that our customers can trust to protect life and property.
 website: https://www.unitedsafetycorporation.com.au
 contact_name: 'Chris Wheeler '
@@ -11,9 +11,6 @@ email: chris.Wheeler@ussc.com.au
 is_sme: true
 stakeholders:
 - defence
-capability_streams:
-- masw
-- lcaw
 capability_domains:
 - air
 - armour
@@ -28,6 +25,9 @@ industrial_capabilities:
 - protective
 regions:
 - perth-metropolitan
+capability_streams:
+- maritime
+- land
 latitude: -32.0950492
 longitude: 115.8081527
 ---

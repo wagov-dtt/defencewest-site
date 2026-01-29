@@ -1,6 +1,6 @@
 ---
 name: Pinnacle QM
-date: '2025-01-27'
+date: '2025-01-29'
 overview: 'PinnacleQM is a Quality Management and Testing Services organisation delivering advanced testing services and solutions across the Asia-Pacific region. '
 website: https://www.pinnacleqm.com.au
 contact_name: Ian Charlton
@@ -11,10 +11,6 @@ email: ian.charlton@pinnacleqm.com.au
 is_sme: true
 stakeholders:
 - defence
-capability_streams:
-- iscw
-- masw
-- lcaw
 capability_domains:
 - airborne
 - c2
@@ -38,6 +34,10 @@ capability_domains:
 - training-ranges
 regions:
 - perth-metropolitan
+capability_streams:
+- electronic
+- maritime
+- land
 latitude: -31.9539836
 longitude: 115.8532393
 ---

@@ -1,6 +1,6 @@
 ---
 name: BG&E Pty Limited
-date: '2025-01-27'
+date: '2025-01-29'
 overview: BG&E is a globally renowned civil and structural engineering consultancy celebrated for its innovative, cost-effective, and award-winning designs that prioritise practicality and constructability.
 website: https://bgeeng.com
 contact_name: Luke Murphy
@@ -12,12 +12,6 @@ is_sme: true
 stakeholders:
 - defence
 - defence-west
-capability_streams:
-- base
-- education
-- land
-- logistics
-- maritime
 capability_domains:
 - air
 - barracks
@@ -28,6 +22,12 @@ industrial_capabilities:
 - design
 regions:
 - perth
+capability_streams:
+- base
+- education
+- land
+- logistics
+- maritime
 latitude: -31.9499553
 longitude: 115.8556308
 ---

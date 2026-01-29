@@ -1,6 +1,6 @@
 ---
 name: Unique Metals Laser
-date: '2025-01-27'
+date: '2025-01-29'
 overview: "Australia's leading provider of turnkey steel, \r\nmanufacturing solutions, offering end to end\r\nservices including plasma cutting,\r\nperforation, folding, fabrication,\r\nand complete project delivery."
 website: https://www.uniquelaser.com.au
 contact_name: Paul Figliomeni
@@ -12,12 +12,6 @@ is_sme: true
 stakeholders:
 - defence
 - defence-west
-capability_streams:
-- aerial
-- base
-- electronic
-- land
-- maritime
 capability_domains:
 - armour
 - destroyers
@@ -33,6 +27,12 @@ industrial_capabilities:
 - adaptive
 regions:
 - perth
+capability_streams:
+- aerial
+- base
+- electronic
+- land
+- maritime
 latitude: -31.7962006
 longitude: 115.84569
 ---

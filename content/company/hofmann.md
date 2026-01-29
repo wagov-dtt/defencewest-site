@@ -1,6 +1,6 @@
 ---
 name: Hofmann Engineering
-date: '2025-01-27'
+date: '2025-01-29'
 overview: Hofmann Engineering is a globally recognised engineering solutions provider to the defence industry.
 website: https://www.hofmannengineering.com
 contact_name: Erich J Hofmann
@@ -11,10 +11,6 @@ email: erich.j.hofmann@hofmannengineering.com
 is_sme: true
 stakeholders:
 - defence
-capability_streams:
-- iscw
-- masw
-- lcaw
 capability_domains:
 - armour
 - base
@@ -28,6 +24,10 @@ capability_domains:
 - transport
 regions:
 - perth-metropolitan
+capability_streams:
+- electronic
+- maritime
+- land
 latitude: -31.9096469
 longitude: 115.9310931
 ---

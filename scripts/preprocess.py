@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Preprocess company data for the directory site.
+Preprocess company data for directory site.
 
 Generates:
   - data/computed.yaml: Pre-calculated values for Hugo templates
@@ -22,6 +22,7 @@ import httpx
 import frontmatter
 import pandas as pd
 import yaml
+import markdown_it
 from openpyxl.utils import get_column_letter
 from pymgl import Map
 from shapely import MultiPoint, Point
@@ -42,6 +43,8 @@ from config import (
     make_progress,
 )
 
+# Initialize markdown-it for HTML conversion
+md = markdown_it.MarkdownIt()
 
 # --- Map rendering ---
 
@@ -155,7 +158,7 @@ def _build_export_rows(companies: list[dict], taxonomies: dict) -> list[dict]:
             "email": c.get("email", ""),
             "latitude": c.get("latitude"),
             "longitude": c.get("longitude"),
-            "markdown": c.get("_content", "").strip(),
+            "content_html": md.render(c.get("_content", "").strip()),
             "slug": c.get("slug", ""),
         }
         for c in companies
@@ -199,11 +202,12 @@ def export_xlsx(companies: list[dict], taxonomies: dict, output: Path) -> None:
 
 
 def export_json(companies: list[dict], output: Path) -> None:
-    """Export to JSON - all frontmatter fields plus slug and markdown content."""
+    """Export to JSON - all frontmatter fields plus HTML content."""
     data = []
     for c in companies:
         entry = {k: v for k, v in c.items() if not k.startswith("_")}
-        entry["markdown"] = c.get("_content", "").strip()
+        if c.get("_content"):
+            entry["content_html"] = md.render(c["_content"].strip())
         data.append(entry)
     data.sort(key=lambda x: (x.get("name") or "").lower())
     output.write_text(json.dumps(data, indent=2))
@@ -271,7 +275,7 @@ def main():
     export_csv(companies, taxonomies, STATIC_DIR / "companies.csv")
     export_xlsx(companies, taxonomies, STATIC_DIR / "companies.xlsx")
     export_json(companies, STATIC_DIR / "companies.json")
-    print(f"Exported to CSV, XLSX, JSON")
+    print("Exported to CSV, XLSX, JSON")
 
     # Generate maps
     if not company_locations:

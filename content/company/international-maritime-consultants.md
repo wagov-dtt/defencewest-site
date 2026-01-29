@@ -1,6 +1,6 @@
 ---
 name: International Maritime Consultants Pty Ltd T/A IMC Naval Architects
-date: '2025-01-27'
+date: '2025-01-29'
 overview: "IMC Naval Architects (IMC) is an independent Australian naval architecture and marine engineering consultancy servicing the global commercial and defence sectors.  IMC provides ship design, vessel modification & conversion, naval architecture, offshore engineering and acquisition management services. \n\nIMC offers consultancy services to Australian State and Federal Government agencies both above and below the line with a presence in Canberra to facilitate Commonwealth engagement."
 website: https://imcau.com.au
 contact_name: Justin McPherson
@@ -9,10 +9,6 @@ address: 'Street address: Suite 2, Level 2, Atwell Buildings 3 Cantonment Street
 phone: +61 8 9335 1991
 email: imc@imcau.com.au
 is_sme: true
-capability_streams:
-- aasl
-- masw
-- lcaw
 capability_domains:
 - amphibious
 - maritime
@@ -21,6 +17,10 @@ capability_domains:
 - replenishment
 industrial_capabilities:
 - design
+capability_streams:
+- logistics
+- maritime
+- land
 latitude: -32.05393
 longitude: 115.74668
 ---

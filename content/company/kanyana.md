@@ -1,6 +1,6 @@
 ---
 name: Kanyana Engineering Pty Ltd
-date: '2025-01-27'
+date: '2025-01-29'
 overview: Kanyana Engineering Pty Ltd is a reputable business specialising in metal laser cutting, bending, and fabrication for over 25 years. With a dedicated team of highly skilled professionals, we provide high-quality precision metalworking solutions to various industries.
 website: https://kanyanaengineering.com.au
 contact_name: Sharon Dawe
@@ -13,11 +13,6 @@ stakeholders:
 - defence
 - academic
 - defence-west
-capability_streams:
-- aasl
-- masw
-- saac
-- lcaw
 capability_domains:
 - armour
 - frigates
@@ -41,6 +36,11 @@ regions:
 - perth-metropolitan
 - south
 - naval
+capability_streams:
+- logistics
+- maritime
+- aerial
+- land
 latitude: -32.5162852
 longitude: 115.7494173
 ---

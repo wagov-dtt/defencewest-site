@@ -1,6 +1,6 @@
 ---
 name: PQR Quality Solutions
-date: '2025-01-27'
+date: '2025-01-29'
 overview: PQR Quality Solutions is an inspection and quality consulting company which provides technical inspection solutions and inspection staff across the oil and gas, marine, construction and maintenance, infrastructure, mining and resources Industries.
 website: https://pqr.net.au
 contact_name: Paul Reid
@@ -11,10 +11,6 @@ email: paul.reid@pqr.net.au
 is_sme: true
 stakeholders:
 - defence
-capability_streams:
-- aasl
-- masw
-- lcaw
 capability_domains:
 - air
 - armour
@@ -25,6 +21,10 @@ capability_domains:
 - submarines
 regions:
 - perth-metropolitan
+capability_streams:
+- logistics
+- maritime
+- land
 latitude: -32.1041723
 longitude: 115.8114487
 ---

@@ -1,18 +1,14 @@
 ---
 name: Garli Group
-date: '2025-01-27'
+date: '2025-01-29'
 overview: Garli is majority Aboriginal owned and has developed into a thriving business within the civil construction and contracting industry operating across multiple industry segments.
-website: https://garli.com.au
+website: https://www.garli.com.au
 contact_name: Terry Delane
 contact_title: Business Development Manager
 address: Unit A, 117 Great Eastern H'Way, Rivervale WA 6103
 phone: 0456969565
 email: terry.delane@garligroup.com.au
 is_sme: true
-capability_streams:
-- base
-- education
-- logistics
 capability_domains:
 - air
 - base
@@ -29,6 +25,10 @@ regions:
 - wheatbelt
 ownerships:
 - indigenous
+capability_streams:
+- base
+- education
+- logistics
 latitude: -31.95347
 longitude: 115.91428
 ---

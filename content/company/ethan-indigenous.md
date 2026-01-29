@@ -1,6 +1,6 @@
 ---
 name: 'Ethan Indigenous Pty Ltd '
-date: '2025-01-27'
+date: '2025-01-29'
 overview: Ethan Indigenous, IT company with extensive capability that is Indigenous Certified through Supply Nation and Noongar Chamber of Commerce.
 website: https://ethanindigenous.com.au/Home
 contact_name: Jessica Craig-Raymond
@@ -14,10 +14,6 @@ stakeholders:
 - academic
 - defence-west
 - defence-science
-capability_streams:
-- electronic
-- logistics
-- research
 capability_domains:
 - communications
 - cyber
@@ -38,6 +34,10 @@ regions:
 - wheatbelt
 ownerships:
 - indigenous
+capability_streams:
+- electronic
+- logistics
+- research
 latitude: -31.9544414
 longitude: 115.8571838
 ---

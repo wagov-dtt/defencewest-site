@@ -1,6 +1,6 @@
 ---
 name: EXTAG Pty Ltd
-date: '2025-01-27'
+date: '2025-01-29'
 overview: EXTAG(r) is a software platform that ensures asset-intensive organisations are compliant, safe & ready for use.
 website: https://www.extag.com.au
 contact_name: Lan Tran
@@ -11,10 +11,6 @@ email: Lan@extag.com.au
 is_sme: true
 stakeholders:
 - defence
-capability_streams:
-- base
-- land
-- logistics
 capability_domains:
 - armour
 - barracks
@@ -33,6 +29,10 @@ regions:
 - pilbara
 - south-west
 - wheatbelt
+capability_streams:
+- base
+- land
+- logistics
 latitude: -31.95432
 longitude: 115.85242
 ---

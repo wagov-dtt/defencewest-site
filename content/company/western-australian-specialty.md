@@ -1,6 +1,6 @@
 ---
 name: Western Australian Specialty Alloys
-date: '2025-01-27'
+date: '2025-01-29'
 overview: WA Speciality Alloys provides nickel, cobalt and iron-based superalloy products for the aerospace and defence industry in the form of specialty steel forgings, billets and bars.
 website: https://www.wasa.com.au
 contact_name: Sandy Pelc
@@ -12,12 +12,6 @@ is_sme: true
 stakeholders:
 - defence
 - defence-west
-capability_streams:
-- aerial
-- land
-- logistics
-- maritime
-- space
 capability_domains:
 - armour
 - fighter
@@ -33,6 +27,12 @@ industrial_capabilities:
 - cnc
 - propulsion
 - steel
+capability_streams:
+- aerial
+- land
+- logistics
+- maritime
+- space
 latitude: -32.0559826
 longitude: 115.9187139
 ---

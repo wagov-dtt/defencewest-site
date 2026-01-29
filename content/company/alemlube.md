@@ -1,6 +1,6 @@
 ---
 name: Alemlube PTY Ltd
-date: '2025-01-27'
+date: '2025-01-29'
 overview: Alemlube offers a range of products and services for various industries, including lubricants, lubrication systems, hose storage, fluid metering, vehicle hoists and more.
 website: https://www.alemlube.com.au
 contact_name: Todd  Franklin
@@ -12,11 +12,6 @@ is_sme: true
 stakeholders:
 - defence
 - defence-west
-capability_streams:
-- base
-- land
-- logistics
-- maritime
 capability_domains:
 - air
 - armour
@@ -44,6 +39,11 @@ regions:
 - pilbara
 - south-west
 - wheatbelt
+capability_streams:
+- base
+- land
+- logistics
+- maritime
 latitude: -31.80269
 longitude: 115.85218
 ---

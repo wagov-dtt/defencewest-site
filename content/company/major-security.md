@@ -1,6 +1,6 @@
 ---
 name: Major Security Services
-date: '2025-01-27'
+date: '2025-01-29'
 overview: Major Security is a leading security company with over 16 years of experience. We specialise in providing security guards, CCTV surveillance cameras and solar powered surveillance solutions. Our expert team also handles alarm system installation and maintenance. We are also an RTO that offers nationally recognised courses.
 website: https://majorsecurity.com.au
 contact_name: Narinder Banvait
@@ -14,9 +14,6 @@ stakeholders:
 - academic
 - defence-west
 - defence-science
-capability_streams:
-- base
-- education
 capability_domains:
 - barracks
 - base
@@ -32,6 +29,9 @@ regions:
 - pilbara
 - south-west
 - wheatbelt
+capability_streams:
+- base
+- education
 latitude: -31.8948596
 longitude: 116.0634839
 ---

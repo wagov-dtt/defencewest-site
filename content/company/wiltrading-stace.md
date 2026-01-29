@@ -1,6 +1,6 @@
 ---
 name: Wiltrading STACE
-date: '2025-01-27'
+date: '2025-01-29'
 overview: 'Wiltrading STACE has extensive experience in the Defence industry, undertaking large maintenance contracts and projects. '
 website: https://aramarine.com.au/who-we-are/wiltrading-stace
 contact_name: Jason M King
@@ -11,9 +11,6 @@ email: jking@wlst.com.au
 is_sme: true
 stakeholders:
 - defence
-capability_streams:
-- masw
-- lcaw
 capability_domains:
 - air
 - amphibious
@@ -36,6 +33,9 @@ industrial_capabilities:
 regions:
 - perth-metropolitan
 - australian
+capability_streams:
+- maritime
+- land
 latitude: -32.1517937
 longitude: 115.781418
 ---

@@ -1,6 +1,6 @@
 ---
 name: Seymour Whyte Constructions
-date: '2025-01-27'
+date: '2025-01-29'
 overview: Seymour Whyte, an Australian infrastructure contractor providing construction works to Defence across all contract types.
 website: https://seymourwhyte.com.au
 contact_name: Andrew Cosgrove
@@ -14,12 +14,6 @@ stakeholders:
 - academic
 - defence-west
 - defence-science
-capability_streams:
-- aerial
-- base
-- electronic
-- land
-- maritime
 capability_domains:
 - air
 - air-traffic
@@ -82,6 +76,12 @@ regions:
 - pilbara
 - south-west
 - wheatbelt
+capability_streams:
+- aerial
+- base
+- electronic
+- land
+- maritime
 latitude: -31.94744
 longitude: 115.84552
 ---

@@ -1,6 +1,6 @@
 ---
 name: 'Chess Engineering '
-date: '2025-01-27'
+date: '2025-01-29'
 overview: WA-based engineering and fabrication company delivering ISO-certified steel and modular solutions for defence, mining, and infrastructure projects.
 website: https://chessindustries.com.au
 contact_name: Lachlan Kelly
@@ -9,11 +9,6 @@ address: 100 Dowd St, Welshpool WA 6106
 phone: 0437 036 643
 email: l.kelly@chesseng.com.au
 is_sme: true
-capability_streams:
-- base
-- land
-- logistics
-- maritime
 capability_domains:
 - base
 - maritime
@@ -41,6 +36,11 @@ regions:
 - pilbara
 - south-west
 - wheatbelt
+capability_streams:
+- base
+- land
+- logistics
+- maritime
 latitude: -31.9931054
 longitude: 115.9602843
 ---

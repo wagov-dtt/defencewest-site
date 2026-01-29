@@ -1,6 +1,6 @@
 ---
 name: Volz Australia Pty Ltd
-date: '2025-01-27'
+date: '2025-01-29'
 overview: Volz Australia was founded in 2005 with a vision to provide Superior Stainless Steel Hydraulic Components by combining quality products with decades of experience & expertise & incorporating outstanding customer service at the forefront of everything we do.
 website: https://www.volz.com.au
 contact_name: Rhys Jones
@@ -11,10 +11,6 @@ email: rhys@volz.com.au
 is_sme: true
 stakeholders:
 - defence
-capability_streams:
-- aasl
-- masw
-- lcaw
 capability_domains:
 - amphibious
 - armour
@@ -41,6 +37,10 @@ industrial_capabilities:
 - refrigeration
 regions:
 - perth-metropolitan
+capability_streams:
+- logistics
+- maritime
+- land
 latitude: -32.1035797
 longitude: 115.8119605
 ---

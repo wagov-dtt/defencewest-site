@@ -1,6 +1,6 @@
 ---
 name: Edith Cowan University
-date: '2025-01-27'
+date: '2025-01-29'
 overview: ECU has supported Defence on a number of projects in areas of cyber security, simulation, human computer interface, biometrics, reconnaissance/ surveillance and cognitive psychology.
 website: https://www.ecu.edu.au/research/defence
 contact_name: Ms Michele Clement
@@ -12,14 +12,6 @@ stakeholders:
 - defence
 - academic
 - defence-science
-capability_streams:
-- education
-- electronic
-- intelligence
-- land
-- maritime
-- research
-- space
 capability_domains:
 - c2
 - communications
@@ -43,6 +35,14 @@ industrial_capabilities:
 regions:
 - perth
 - south-west
+capability_streams:
+- education
+- electronic
+- intelligence
+- land
+- maritime
+- research
+- space
 latitude: -31.7563544
 longitude: 115.7735808
 ---

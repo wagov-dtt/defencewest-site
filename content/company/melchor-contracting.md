@@ -1,6 +1,6 @@
 ---
 name: Melchor Contracting Pty Ltd
-date: '2025-01-27'
+date: '2025-01-29'
 overview: Melchor is a civil construction company. We offer safe, productive and high-quality services to deliver large and complex projects in remote, regional and metro locations.
 website: https://www.monadelphous.com.au/what-we-do/our-operations/engineering-construction/civils
 contact_name: Martin Headd

@@ -1,6 +1,6 @@
 ---
 name: SAS Project Services WA
-date: '2025-01-27'
+date: '2025-01-29'
 overview: "SAS Project Services is proudly WA family owned and has been operating in the fabrication and construction industry all over WA and beyond since 2001. \nWe believe our people are our biggest asset."
 website: https://sasprojectservices.com.au
 contact_name: Murray Middleton
@@ -13,10 +13,6 @@ stakeholders:
 - defence
 - defence-west
 - defence-science
-capability_streams:
-- base
-- land
-- logistics
 capability_domains:
 - air
 - barracks
@@ -42,6 +38,10 @@ regions:
 - pilbara
 - south-west
 - wheatbelt
+capability_streams:
+- base
+- land
+- logistics
 latitude: -31.51935
 longitude: 116.03734
 ---

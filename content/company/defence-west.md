@@ -1,6 +1,6 @@
 ---
 name: Defence West
-date: '2025-01-27'
+date: '2025-01-29'
 overview: Defence West is the State Government office responsible for championing the interests of the Western Australian defence industry.
 website: https://www.wa.gov.au/organisation/department-of-the-premier-and-cabinet/defence-west
 contact_name: Amalia Burmas
@@ -14,17 +14,6 @@ stakeholders:
 - academic
 - defence-west
 - defence-science
-capability_streams:
-- aerial
-- base
-- education
-- electronic
-- intelligence
-- land
-- logistics
-- maritime
-- research
-- space
 industrial_capabilities:
 - none
 regions:
@@ -38,6 +27,17 @@ regions:
 - pilbara
 - south-west
 - wheatbelt
+capability_streams:
+- aerial
+- base
+- education
+- electronic
+- intelligence
+- land
+- logistics
+- maritime
+- research
+- space
 latitude: -31.9556883
 longitude: 115.8553785
 ---

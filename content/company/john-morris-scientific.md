@@ -1,6 +1,6 @@
 ---
 name: John Morris Scientific Pty Ltd
-date: '2025-01-27'
+date: '2025-01-29'
 overview: 'Since our founding in 1952, the John Morris Group has steadily expanded, guided by a policy which excluded all products except those of the highest quality. Our commitment to quality extends to our recruitment process & team, our state-of-art nationwide facilities and the service we provide to our customers. '
 website: https://www.johnmorrisgroup.com
 contact_name: Lav Deshpande
@@ -9,8 +9,6 @@ address: 61-63 Victoria Ave, Chatswood NSW 2067
 phone: 02 9496 4206
 email: ldeshpande@johnmorrisgroup.com
 is_sme: true
-capability_streams:
-- keyn
 capability_domains:
 - science
 - testing
@@ -21,6 +19,8 @@ industrial_capabilities:
 - hydraulics
 - mechanical
 - propulsion
+capability_streams:
+- research
 ---
 
 ## Overview

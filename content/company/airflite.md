@@ -1,6 +1,6 @@
 ---
 name: Airflite
-date: '2025-01-27'
+date: '2025-01-29'
 overview: Airflite has significant involvement with the Australian Defence Forces and other worldwide Defence agencies, offering a broad range of capabilities and vast experience to support military operations on a global scale.
 website: https://www.airflite.com.au
 contact_name: 'Kris Constantinides '
@@ -11,9 +11,6 @@ email: kconstantinides@airflite.com.au
 is_sme: true
 stakeholders:
 - defence
-capability_streams:
-- aasl
-- saac
 capability_domains:
 - air-traffic
 - airborne
@@ -30,6 +27,9 @@ capability_domains:
 - utility
 regions:
 - perth-metropolitan
+capability_streams:
+- logistics
+- aerial
 latitude: -31.9225865
 longitude: 115.9645118
 ---

@@ -12,6 +12,7 @@ import tomllib
 
 import diskcache
 from rich.progress import Progress, TextColumn, BarColumn, TaskProgressColumn
+from slugify import slugify
 
 # Logging setup
 logging.basicConfig(level=logging.WARNING, format="%(levelname)s: %(message)s")
@@ -139,16 +140,62 @@ CAPABILITY_STREAM_ACRONYMS = [
 ]
 
 
+# Canonical capability streams from source HTML (filter dropdown values and display names)
+# These are the 10 valid streams as defined in the source DOM
+CANONICAL_CAPABILITY_STREAMS = {
+    "aerial": "Aerial; Strike and Air Combat",
+    "base": "Base Support",
+    "education": "Education and Training",
+    "electronic": "Electronic Warfare and Cyber",
+    "intelligence": "Intelligence; Surveillance and Reconnaissance",
+    "land": "Land Forces",
+    "logistics": "Logistics and Supply Chain",
+    "maritime": "Maritime and Sub-Sea Forces",
+    "research": "Research and Technology Development",
+    "space": "Space",
+}
+
+
 def clean_capability_stream(name: str) -> str:
-    """Remove acronym prefix from capability stream name."""
-    for prefix in CAPABILITY_STREAM_ACRONYMS:
-        if name.startswith(prefix):
-            return name[len(prefix) :]
-    return name
+    """Map old capability stream names to canonical taxonomy keys from source DOM.
+
+    Returns canonical key for capability stream.
+    """
+    # Mapping from old prefixed stream names to canonical keys
+    old_to_canonical_mapping = {
+        "AASL - Air and Sea Lift": "logistics",
+        "ISCW - Intelligence, Surveillance, Reconnaissance, Space, Electronic Warfare and Cyber": "electronic",
+        "KEYN - Key Enablers": "research",
+        "LCAW - Land Combat and Amphibious Warfare": "land",
+        "MASW - Maritime and Anti-Submarine Warfare": "maritime",
+        "SAAC - Strike and Air Combat": "aerial",
+    }
+
+    # Check for exact match with old prefixed names
+    if name in old_to_canonical_mapping:
+        return old_to_canonical_mapping[name]
+
+    # Check for prefix match (handles variations)
+    for old_name, canonical_key in old_to_canonical_mapping.items():
+        if name.startswith(old_name):
+            return canonical_key
+
+    # For new streams, normalize to canonical key
+    # Remove acronyms if present (shouldn't be needed for new streams)
+    cleaned = name
+    for old_name in old_to_canonical_mapping.keys():
+        if cleaned.startswith(old_name):
+            cleaned = cleaned[len(old_name) :]
+
+    # Map cleaned name to canonical key by matching display names
+    for key, display_name in CANONICAL_CAPABILITY_STREAMS.items():
+        if cleaned == display_name or cleaned == display_name.lower():
+            return key
+
+    return cleaned
 
 
 # Slug/key generation functions
-from slugify import slugify
 
 
 def _get_short_key(text: str, existing_keys: set[str]) -> str:

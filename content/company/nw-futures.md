@@ -1,6 +1,6 @@
 ---
 name: NW Futures Group Pty Ltd
-date: '2025-01-27'
+date: '2025-01-29'
 overview: "NW Futures group is a WA owned company based in Perth WA. \n\nWe are an independent group that specialize in identifying areas within the Northwest of WA, strategic assets and infrastructure that can be repurposed or co-shared."
 website: http://www.nwfuturesgroup.com.au
 contact_name: David Campbell
@@ -12,9 +12,6 @@ is_sme: true
 stakeholders:
 - defence
 - defence-west
-capability_streams:
-- keyn
-- masw
 capability_domains:
 - base
 - multi
@@ -29,6 +26,9 @@ industrial_capabilities:
 regions:
 - australian
 - north
+capability_streams:
+- research
+- maritime
 latitude: -31.9490179
 longitude: 115.847453
 ---

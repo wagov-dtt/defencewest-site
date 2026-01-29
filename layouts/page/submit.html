@@ -207,43 +207,7 @@
       </div>
 
       <!-- Classification -->
-      <fieldset>
-        <legend>Classification</legend>
-        <div class="row three-col">
-          <label>Capability Streams
-            <select id="field-capability_streams" multiple>
-              {{- range $key, $name := $taxonomies.capability_streams }}<option value="{{ $key }}">{{ $name }}</option>{{- end }}
-            </select>
-          </label>
-          <label>Capability Domains
-            <select id="field-capability_domains" multiple>
-              {{- range $key, $name := $taxonomies.capability_domains }}<option value="{{ $key }}">{{ $name }}</option>{{- end }}
-            </select>
-          </label>
-          <label>Industrial Capabilities
-            <select id="field-industrial_capabilities" multiple>
-              {{- range $key, $name := $taxonomies.industrial_capabilities }}<option value="{{ $key }}">{{ $name }}</option>{{- end }}
-            </select>
-          </label>
-        </div>
-        <div class="row three-col">
-          <label>Stakeholders
-            <select id="field-stakeholders" multiple>
-              {{- range $key, $name := $taxonomies.stakeholders }}<option value="{{ $key }}">{{ $name }}</option>{{- end }}
-            </select>
-          </label>
-          <label>Regions
-            <select id="field-regions" multiple>
-              {{- range $key, $name := $taxonomies.regions }}<option value="{{ $key }}">{{ $name }}</option>{{- end }}
-            </select>
-          </label>
-          <label>Ownership
-            <select id="field-ownerships" multiple>
-              {{- range $key, $name := $taxonomies.ownerships }}<option value="{{ $key }}">{{ $name }}</option>{{- end }}
-            </select>
-          </label>
-        </div>
-      </fieldset>
+      {{ partial "filters.html" . }}
 
       <!-- Description -->
       <fieldset>
@@ -290,7 +254,6 @@
   <script type="module">
   import Squire from 'https://esm.sh/squire-rte@2';
   import DOMPurify from 'https://esm.sh/dompurify@3';
-  import { marked } from 'https://esm.sh/marked@17';
 
   const CONFIG = {
     submitUrl: '{{ $submitUrl }}',
@@ -298,7 +261,6 @@
     companiesUrl: '../companies.json'
   };
 
-  const TAXONOMIES = ['capability_streams', 'capability_domains', 'industrial_capabilities', 'stakeholders', 'regions', 'ownerships'];
   const $ = id => document.getElementById(id);
   let companies = {}, editor = null, logoBase64 = null, editSlug = null;
 
@@ -309,18 +271,24 @@
 
   function getTaxonomyValues() {
     const result = {};
-    TAXONOMIES.forEach(t => {
-      const select = $(`field-${t}`);
-      result[t] = [...select.selectedOptions].map(o => o.value);
+    document.querySelectorAll('input[name="f"]:checked').forEach(el => {
+      const value = el.value || el.getAttribute('value');
+      const [taxonomy, item] = value.split(':');
+      if (!result[taxonomy]) result[taxonomy] = [];
+      result[taxonomy].push(item);
     });
     return result;
   }
 
   function setTaxonomyValues(data) {
-    TAXONOMIES.forEach(t => {
-      const select = $(`field-${t}`);
-      const values = data[t] || [];
-      [...select.options].forEach(o => { o.selected = values.includes(o.value); });
+    const values = [];
+    Object.entries(data).forEach(([taxonomy, items]) => {
+      const taxonomyArray = Array.isArray(items) ? items : [];
+      taxonomyArray.forEach(item => values.push(`${taxonomy}:${item}`));
+    });
+
+    document.querySelectorAll('input[name="f"]').forEach(cb => {
+      cb.checked = values.includes(cb.value);
     });
   }
 
@@ -334,8 +302,51 @@
     });
     editor.setHTML('<h2>Overview</h2><p><br></p>');
 
-    // Toolbar handlers
-    document.querySelector('.editor-toolbar').addEventListener('click', e => {
+    const toolbar = document.querySelector('.editor-toolbar');
+
+    function updateToolbarState() {
+      const path = editor.getPath();
+      const buttons = toolbar.querySelectorAll('button');
+
+      buttons.forEach(btn => {
+        const action = btn.dataset.action;
+        btn.classList.remove('active');
+
+        switch (action) {
+          case 'h2':
+            if (path.includes('H2')) btn.classList.add('active');
+            break;
+          case 'h3':
+            if (path.includes('H3')) btn.classList.add('active');
+            break;
+          case 'bold':
+            if (editor.hasFormat('B')) btn.classList.add('active');
+            break;
+          case 'italic':
+            if (editor.hasFormat('I')) btn.classList.add('active');
+            break;
+          case 'ul':
+            if (path.includes('UL')) btn.classList.add('active');
+            break;
+          case 'ol':
+            if (path.includes('OL')) btn.classList.add('active');
+            break;
+          case 'link':
+            if (editor.hasFormat('A')) btn.classList.add('active');
+            break;
+          case 'unlink':
+            if (editor.hasFormat('A')) btn.classList.add('active');
+            break;
+        }
+      });
+    }
+
+    editor.addEventListener('cursor', updateToolbarState);
+    editor.addEventListener('select', updateToolbarState);
+    editor.addEventListener('input', updateToolbarState);
+    updateToolbarState();
+
+    toolbar.addEventListener('click', e => {
       const btn = e.target.closest('button');
       if (!btn) return;
       const action = btn.dataset.action;
@@ -349,8 +360,14 @@
           if (path.includes('H3')) editor.modifyBlocks(frag => { frag.querySelectorAll('h3').forEach(el => { const p = document.createElement('p'); p.innerHTML = el.innerHTML; el.replaceWith(p); }); return frag; });
           else editor.modifyBlocks(frag => { frag.querySelectorAll('p, div, h2').forEach(el => { const h = document.createElement('h3'); h.innerHTML = el.innerHTML; el.replaceWith(h); }); return frag; });
           break;
-        case 'bold': editor.bold(); break;
-        case 'italic': editor.italic(); break;
+        case 'bold':
+          if (editor.hasFormat('B')) editor.removeBold();
+          else editor.bold();
+          break;
+        case 'italic':
+          if (editor.hasFormat('I')) editor.removeItalic();
+          else editor.italic();
+          break;
         case 'ul':
           if (path.includes('UL')) editor.removeList();
           else editor.makeUnorderedList();
@@ -360,11 +377,16 @@
           else editor.makeOrderedList();
           break;
         case 'link':
-          const url = prompt('Enter URL:', 'https://');
+          const currentLink = path.find(node => node.tagName === 'A');
+          const currentUrl = currentLink ? currentLink.href : '';
+          const url = prompt('Enter URL:', currentUrl || 'https://');
           if (url) editor.makeLink(url);
           break;
-        case 'unlink': editor.removeLink(); break;
+        case 'unlink':
+          editor.removeLink();
+          break;
       }
+      updateToolbarState();
       editor.focus();
     });
   }
@@ -462,7 +484,7 @@
     $('field-contact-name').value = d.contact_name || ''; $('field-contact-title').value = d.contact_title || '';
     $('field-is-sme').checked = d.is_sme || false; $('field-is-prime').checked = d.is_prime || false;
     setTaxonomyValues(d);
-    if (d.markdown) editor.setHTML(marked.parse(d.markdown));
+    if (d.content_html) editor.setHTML(d.content_html);
     const img = new Image(); img.onload = () => { $('logo-preview').src = img.src; $('logo-placeholder').classList.add('hidden'); $('logo-preview-container').classList.remove('hidden'); };
     img.src = `../logos/${editSlug}.png`;
   }

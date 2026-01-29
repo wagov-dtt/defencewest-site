@@ -1,6 +1,6 @@
 ---
 name: Ikad Engineering
-date: '2025-01-27'
+date: '2025-01-29'
 overview: 'IKAD Engineering is a highly-specialised mechanical and structural engineering company providing a diverse range of services across Australia and overseas. '
 website: https://ikad.com.au
 contact_name: Paul Hague
@@ -11,9 +11,6 @@ email: admin@ikad.com.au
 is_sme: true
 stakeholders:
 - defence
-capability_streams:
-- aasl
-- masw
 capability_domains:
 - destroyers
 - frigates
@@ -22,6 +19,9 @@ capability_domains:
 - replenishment
 regions:
 - australian
+capability_streams:
+- logistics
+- maritime
 latitude: -32.1624258
 longitude: 115.7785522
 ---

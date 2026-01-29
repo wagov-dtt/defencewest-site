@@ -1,6 +1,6 @@
 ---
 name: 'MKA Electrical Design Consultants '
-date: '2025-01-27'
+date: '2025-01-29'
 overview: MKA Electrical Design Consultants Pty Ltd (MKA) is an independent, indigenously owned Western Australian company with extensive experience in delivering expert electrical engineering services to a broad range of industries.
 website: https://mkadesign.com.au
 contact_name: Mark Armanasco

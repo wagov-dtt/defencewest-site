@@ -1,6 +1,6 @@
 ---
 name: Greenroom Robotics
-date: '2025-01-27'
+date: '2025-01-29'
 overview: Deep-tech company building modular, hardware-agnostic autonomy and perception software to modernise maritime operations across defence, offshore, and commercial sectors
 website: https://greenroomrobotics.com
 contact_name: Peter Baker
@@ -12,8 +12,6 @@ is_sme: true
 stakeholders:
 - defence
 - defence-west
-capability_streams:
-- maritime
 capability_domains:
 - amphibious
 - maritime
@@ -34,6 +32,8 @@ regions:
 - perth
 ownerships:
 - veteran
+capability_streams:
+- maritime
 latitude: -32.0545017
 longitude: 115.7456769
 ---

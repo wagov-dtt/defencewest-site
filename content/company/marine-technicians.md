@@ -1,6 +1,6 @@
 ---
 name: Marine Technicians Australia
-date: '2025-01-27'
+date: '2025-01-29'
 overview: 'Marine Technicians Australia is an Australian owned and operated marine-electrical company, with a major focus on defence platforms and shore-based infrastructure. '
 website: https://marinetechniciansaustralia.com.au
 contact_name: Mark Brown
@@ -11,10 +11,6 @@ email: mark@marinetechniciansaustralia.com.au
 is_sme: true
 stakeholders:
 - defence
-capability_streams:
-- keyn
-- aasl
-- masw
 capability_domains:
 - communications
 - destroyers
@@ -27,6 +23,10 @@ capability_domains:
 - training-platforms
 regions:
 - australian
+capability_streams:
+- research
+- logistics
+- maritime
 latitude: -32.1643013
 longitude: 115.7775352
 ---

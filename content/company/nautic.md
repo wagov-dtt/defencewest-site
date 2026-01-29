@@ -1,6 +1,6 @@
 ---
 name: NAUTIC Technologies
-date: '2025-01-27'
+date: '2025-01-29'
 overview: NAUTIC Technologies delivers innovative underwater solutions, advancing safety, control, and sustainability to enhance defence, commercial, and recreational capabilities.
 website: https://www.nautictechnologies.com.au
 contact_name: Robert Lee
@@ -14,8 +14,6 @@ stakeholders:
 - academic
 - defence-west
 - defence-science
-capability_streams:
-- maritime
 capability_domains:
 - maritime
 - special
@@ -27,6 +25,8 @@ regions:
 - perth
 ownerships:
 - veteran
+capability_streams:
+- maritime
 latitude: -32.34495
 longitude: 115.74915
 ---

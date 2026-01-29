@@ -1,6 +1,6 @@
 ---
 name: Halo Civil Engineering Pty Ltd
-date: '2025-01-27'
+date: '2025-01-29'
 overview: Halo Civil Engineering is a  Western Australian-owned company equipped with in-house expertise to efficiently construct, upgrade and maintain defence infrastructure in metropolitan, remote, and regional areas
 website: https://www.halocivil.com
 contact_name: Peter Breen
@@ -11,8 +11,6 @@ email: peter.breen@halocivil.com
 is_sme: true
 stakeholders:
 - defence
-capability_streams:
-- keyn
 capability_domains:
 - air
 - barracks
@@ -22,6 +20,8 @@ capability_domains:
 - training-ranges
 regions:
 - perth-metropolitan
+capability_streams:
+- research
 latitude: -31.9325986
 longitude: 115.8655834
 ---

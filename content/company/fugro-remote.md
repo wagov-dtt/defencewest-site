@@ -1,6 +1,6 @@
 ---
 name: Fugro Remote Systems Technology
-date: '2025-01-27'
+date: '2025-01-29'
 overview: Fugro is a world-leading, independent provider of geo-intelligence and asset integrity solutions for large constructions, infrastructure and natural resources.
 website: https://www.fugro.com
 contact_name: Sam Forbes
@@ -11,9 +11,6 @@ email: s.forbes@fugro.com
 is_sme: true
 stakeholders:
 - defence
-capability_streams:
-- keyn
-- masw
 capability_domains:
 - communications
 - maritime
@@ -26,6 +23,9 @@ capability_domains:
 - training-platforms
 regions:
 - perth-metropolitan
+capability_streams:
+- research
+- maritime
 latitude: -31.8593556
 longitude: 115.821167
 ---

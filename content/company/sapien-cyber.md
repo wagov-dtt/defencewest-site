@@ -1,6 +1,6 @@
 ---
 name: Sapien Cyber Limited
-date: '2025-01-27'
+date: '2025-01-29'
 overview: Sapien Cyber specialises in Cyber Risk Management for Operational Technology (OT) Networks. Sapien products and solutions provide complete visibility of your organisation's cyber risk exposure, attack surface and any suspicious activity within your OT networks. Sapien is a wholly Australian owned company established in 2017 with over 25 full time employees. All product development is carried out at our offices in Western Australia.
 website: http://ww84.sapiencyber.com.au
 contact_name: Sonja Pajagic
@@ -11,12 +11,12 @@ email: spajagic@sapiencyber.com.au
 is_sme: true
 stakeholders:
 - defence
-capability_streams:
-- iscw
 capability_domains:
 - cyber
 regions:
 - perth-metropolitan
+capability_streams:
+- electronic
 latitude: -31.75166
 longitude: 115.77542
 ---

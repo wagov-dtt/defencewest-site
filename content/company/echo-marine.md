@@ -1,6 +1,6 @@
 ---
 name: Echo Marine Group Pty Ltd
-date: '2025-01-27'
+date: '2025-01-29'
 overview: Echo Marine Group is an Australian owned and operated shipbuilder and defence sustainment solutions provider, specialising in Maritime vessel construction, Fitout, Flooring, Electrical, Fabrication, FRP and Engineering Services. As a defence maritime solutions provider and luxury and commercial shipbuilder, quality and care for Commonwealth assets is our core focus.
 website: https://www.echomarinegroup.com
 contact_name: Dave Mearns
@@ -13,9 +13,6 @@ stakeholders:
 - defence
 - academic
 - defence-west
-capability_streams:
-- masw
-- lcaw
 capability_domains:
 - amphibious
 - frigates
@@ -36,6 +33,9 @@ regions:
 - perth-metropolitan
 - australian
 - naval
+capability_streams:
+- maritime
+- land
 latitude: -32.1514854
 longitude: 115.7679966
 ---

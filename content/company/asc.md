@@ -1,6 +1,6 @@
 ---
 name: ASC
-date: '2025-01-27'
+date: '2025-01-29'
 overview: ASC is owned by the Commonwealth of Australia, and exists to serve the frontline of Australia's naval defence capabilities.
 website: https://www.asc.com.au
 contact_name: Simon Rusiti
@@ -11,10 +11,6 @@ email: simon.rusiti@asc.com.au
 is_sme: true
 stakeholders:
 - defence
-capability_streams:
-- keyn
-- aasl
-- masw
 capability_domains:
 - science
 - submarines
@@ -23,6 +19,10 @@ industrial_capabilities:
 - blasting
 regions:
 - australian
+capability_streams:
+- research
+- logistics
+- maritime
 latitude: -32.1604471
 longitude: 115.7711101
 ---

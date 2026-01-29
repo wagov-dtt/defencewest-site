@@ -1,6 +1,6 @@
 ---
 name: Lighthouse Engineering Pty Ltd
-date: '2025-01-27'
+date: '2025-01-29'
 overview: Lighthouse Engineering Pty Ltd (LHE) specialises in general steel fabrications and steel structures. We provide cost effective and reliable structural steel and metal works, compliant with Australian standards.
 website: https://lighthouseengineering.com.au
 contact_name: Basel Naser
@@ -9,9 +9,6 @@ address: 14 Boom Street, GNANGARA WA 6077
 phone: 0423 464 815
 email: b.naser@lighthouseengineering.com.au
 is_sme: true
-capability_streams:
-- masw
-- lcaw
 capability_domains:
 - barracks
 - base
@@ -20,6 +17,9 @@ industrial_capabilities:
 - welding
 regions:
 - perth-metropolitan
+capability_streams:
+- maritime
+- land
 latitude: -31.7891428
 longitude: 115.8587316
 ---

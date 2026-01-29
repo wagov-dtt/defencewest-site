@@ -1,6 +1,6 @@
 ---
 name: Sensear Pty Ltd
-date: '2025-01-27'
+date: '2025-01-29'
 overview: Sensear Pty Ltd is a global leader in developing and manufacturing best-in-class digital over-the-ear and in-the-ear industrial and military communication headsets for use with two-way radios and Bluetooth devices.
 website: https://www.sensear.com
 contact_name: Marek Cieslakiewicz
@@ -11,11 +11,6 @@ email: marek.cieslakiewicz@sensear.com
 is_sme: true
 stakeholders:
 - defence
-capability_streams:
-- keyn
-- aasl
-- masw
-- lcaw
 capability_domains:
 - air
 - armour
@@ -44,6 +39,11 @@ capability_domains:
 - utility
 regions:
 - perth-metropolitan
+capability_streams:
+- research
+- logistics
+- maritime
+- land
 latitude: -31.9461395
 longitude: 115.9211605
 ---

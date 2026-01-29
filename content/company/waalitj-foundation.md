@@ -1,6 +1,6 @@
 ---
 name: Waalitj Foundation
-date: '2025-01-27'
+date: '2025-01-29'
 overview: The Waalitj Foundation employs and develops local Aboriginal people in its areas of operation with a vested interest in the sustainable success of our programs. The Foundation celebrates Aboriginal culture as one of the longest surviving in the world and continues with an unwavering commitment to increase opportunities for Aboriginal and Torres Strait Islander people across Perth and regional Western Australia.
 website: https://www.wf.org.au
 contact_name: Samuel Evans
@@ -9,14 +9,14 @@ address: 53 Burswood Road, Burswood WA 6100
 phone: 08 6250 7100, 0499027915
 email: samuele@wf.org.au
 is_sme: true
-capability_streams:
-- keyn
 capability_domains:
 - base
 industrial_capabilities:
 - blasting
 - decking
 - mechanical
+capability_streams:
+- research
 latitude: -31.9676541
 longitude: 115.8925618
 ---

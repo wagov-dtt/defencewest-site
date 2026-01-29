@@ -1,6 +1,6 @@
 ---
 name: Engineering Institute of Technology
-date: '2025-01-27'
+date: '2025-01-29'
 overview: We are a leading engineering and technology education and training provider, offering online and on-campus programs. Our wide range of courses is driven by industry experts.
 website: https://www.eit.edu.au
 contact_name: Caroline Mackay
@@ -14,8 +14,6 @@ stakeholders:
 - academic
 - defence-west
 - defence-science
-capability_streams:
-- education
 capability_domains:
 - science
 - training
@@ -36,6 +34,8 @@ regions:
 - pilbara
 - south-west
 - wheatbelt
+capability_streams:
+- education
 latitude: -31.94751
 longitude: 115.84428
 ---

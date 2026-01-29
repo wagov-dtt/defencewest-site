@@ -1,6 +1,6 @@
 ---
 name: Sitep Australia
-date: '2025-01-27'
+date: '2025-01-29'
 overview: Sitep Australia is a small defence and telecommunications company established in Australia 1999 as a branch of its Italian parent company.  Sitep has a long-standing reputation for designing, developing and supplying telecommunications, navigation, and maritime surveillance to more than 20 navies around the globe.
 website: https://www.sitepaustralia.com
 contact_name: Raffaele Iannizzotto
@@ -14,8 +14,6 @@ stakeholders:
 - academic
 - defence-west
 - defence-science
-capability_streams:
-- masw
 capability_domains:
 - base
 - communications
@@ -34,6 +32,8 @@ regions:
 - perth-metropolitan
 - australian
 - naval
+capability_streams:
+- maritime
 latitude: -32.1071299
 longitude: 115.8072672
 ---

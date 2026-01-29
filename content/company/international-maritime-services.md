@@ -1,6 +1,6 @@
 ---
 name: International Maritime Services (IMS)
-date: '2025-01-27'
+date: '2025-01-29'
 overview: 'IMS is an Australian award-winning SME ship delivery and crewing specialist providing qualified and experienced test and trials crew for patrol boats, large high-speed ferries and commercial inshore and offshore vessels. '
 website: https://www.ims.global
 contact_name: Steve Malcolm
@@ -9,8 +9,6 @@ address: Unit 2, 16 Mews Road, Fremantle WA 6160
 phone: +61 8 93312566
 email: stephen@inationalmaritime.com
 is_sme: true
-capability_streams:
-- masw
 capability_domains:
 - maritime
 - minor
@@ -19,6 +17,8 @@ capability_domains:
 - training
 regions:
 - perth-metropolitan
+capability_streams:
+- maritime
 latitude: -32.0634524
 longitude: 115.7496146
 ---

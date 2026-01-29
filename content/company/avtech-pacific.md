@@ -1,6 +1,6 @@
 ---
 name: Avtech Pacific
-date: '2025-01-27'
+date: '2025-01-29'
 overview: Precision parts manufacturer, delivering outcomes, on-time, to-spec to ensure your project success. Industry leading quality in every part and component we machine.
 website: https://avtech-eng.com.au
 contact_name: Grant Thomas
@@ -14,8 +14,6 @@ stakeholders:
 - academic
 - defence-west
 - defence-science
-capability_streams:
-- logistics
 capability_domains:
 - air
 - amphibious
@@ -53,6 +51,8 @@ industrial_capabilities:
 - steel
 regions:
 - perth
+capability_streams:
+- logistics
 latitude: -31.9000799
 longitude: 116.0207791
 ---

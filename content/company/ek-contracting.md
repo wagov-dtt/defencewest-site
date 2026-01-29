@@ -1,6 +1,6 @@
 ---
 name: EK Contracting
-date: '2025-01-27'
+date: '2025-01-29'
 overview: EK Contracting is a majority Indigenous owned company with a strong focus on Indigenous employment and ongoing career development through our award winning training division. We cater for all your civil and transport needs and can mobilise heavy earth moving equipment, skilled operators and transportation anywhere in WA at short notice.
 website: https://www.ekcontracting.com.au
 contact_name: Kate Tsorvas
@@ -9,14 +9,14 @@ address: 101 Phillips Road, Wattleup WA 6166
 phone: 0487 337 424
 email: kate@ekcontracting.com.au
 is_sme: true
-capability_streams:
-- keyn
 capability_domains:
 - barracks
 industrial_capabilities:
 - blasting
 regions:
 - perth-metropolitan
+capability_streams:
+- research
 latitude: -32.16872
 longitude: 115.80855
 ---

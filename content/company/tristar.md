@@ -1,6 +1,6 @@
 ---
 name: Tristar Australia Pty Ltd
-date: '2025-01-27'
+date: '2025-01-29'
 overview: Tristar Australia is a manufacturer and supplier of high integrity studbolts, bolt tightening equipment, Dimet brand cathodic protection and cable support systems.
 website: http://tristar-au.com
 contact_name: Soheil Chinniah
@@ -11,8 +11,6 @@ email: soheil.c@tristar-au.com
 is_sme: true
 stakeholders:
 - defence
-capability_streams:
-- maritime
 capability_domains:
 - minor
 - multi
@@ -21,6 +19,8 @@ industrial_capabilities:
 - mechanical
 regions:
 - perth
+capability_streams:
+- maritime
 latitude: -31.95577
 longitude: 115.92749
 ---

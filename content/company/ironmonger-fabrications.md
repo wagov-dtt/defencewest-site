@@ -1,6 +1,6 @@
 ---
 name: Ironmonger Fabrications
-date: '2025-01-27'
+date: '2025-01-29'
 overview: Ironmonger Fabrications provide fabrication, site installation and maintenance services to the water, infrastructure, mining, oil and gas, resources, power, utility and petrochemical industries.
 website: https://www.ironmongerfabrications.com.au
 contact_name: Glenn Ironmonger
@@ -11,15 +11,15 @@ email: ironfab@bigpond.com
 is_sme: true
 stakeholders:
 - defence
-capability_streams:
-- keyn
-- masw
 capability_domains:
 - base
 - frigates
 - multi
 regions:
 - perth-metropolitan
+capability_streams:
+- research
+- maritime
 latitude: -31.8608112
 longitude: 115.9151578
 ---

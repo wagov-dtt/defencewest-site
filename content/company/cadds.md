@@ -1,6 +1,6 @@
 ---
 name: CADDS Group Pty Ltd
-date: '2025-01-27'
+date: '2025-01-29'
 overview: CADDS Group provides integrated engineering, architectural, sustainability (Emergen), surveying, drafting, product design, and fabrication services across WA.
 website: https://cadds.com.au
 contact_name: Pip Smith
@@ -14,10 +14,6 @@ stakeholders:
 - academic
 - defence-west
 - defence-science
-capability_streams:
-- base
-- logistics
-- research
 capability_domains:
 - base
 - maritime
@@ -41,6 +37,10 @@ regions:
 - pilbara
 - south-west
 - wheatbelt
+capability_streams:
+- base
+- logistics
+- research
 latitude: -32.1571816
 longitude: 115.7763541
 ---

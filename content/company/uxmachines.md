@@ -1,17 +1,14 @@
 ---
 name: UXMachines Pty Ltd
-date: '2025-01-27'
+date: '2025-01-29'
 overview: 'UXMachines Pty Ltd commenced operations in Perth, Western Australia in 2019 with the vision to build innovative high-quality IT software products, autonomous aerial drones, and data science solutions. '
-website: https://uxmachines.com
+website: https://www.uxmachines.com
 contact_name: Dr. Artur Lugmayr
 contact_title: Director
 address: 126B Alexander Road, Rivervale WA 6103
 phone: 0413 349 225
 email: artur@uxmachines.com
 is_sme: true
-capability_streams:
-- iscw
-- keyn
 capability_domains:
 - air-traffic
 - communications
@@ -27,6 +24,9 @@ industrial_capabilities:
 - design
 - electronics
 - mechanical
+capability_streams:
+- electronic
+- research
 latitude: -31.9645434
 longitude: 115.9245102
 ---

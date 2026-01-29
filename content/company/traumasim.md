@@ -1,6 +1,6 @@
 ---
 name: TraumaSim
-date: '2025-01-27'
+date: '2025-01-29'
 overview: TraumaSim deliver medically accurate products designed to simulate realistic traumatic injuries and medical conditions as well as providing training, workshops, part-task trainers and moulage technicians & supplies to industries and professionals around the world.
 website: https://www.traumasim.com.au
 contact_name: Nola Pearce
@@ -11,15 +11,15 @@ email: info@traumasim.com.au
 is_sme: true
 stakeholders:
 - defence
-capability_streams:
-- aasl
-- masw
-- saac
-- lcaw
 capability_domains:
 - training
 regions:
 - perth-metropolitan
+capability_streams:
+- logistics
+- maritime
+- aerial
+- land
 latitude: -31.9051316
 longitude: 115.9393346
 ---

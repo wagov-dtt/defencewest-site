@@ -1,6 +1,6 @@
 ---
 name: Vescient
-date: '2025-01-27'
+date: '2025-01-29'
 overview: Vescient, is an Australian company with offices in Perth (HQ), Melbourne, Sydney, Brisbane, Canberra and London. We are a veteran owned professional services consulting business, incorporated in 2016.
 website: https://www.vescient.com
 contact_name: Rod Greedy
@@ -14,17 +14,6 @@ stakeholders:
 - academic
 - defence-west
 - defence-science
-capability_streams:
-- aerial
-- base
-- education
-- electronic
-- intelligence
-- land
-- logistics
-- maritime
-- research
-- space
 capability_domains:
 - air
 - amphibious
@@ -73,6 +62,17 @@ regions:
 - wheatbelt
 ownerships:
 - veteran
+capability_streams:
+- aerial
+- base
+- education
+- electronic
+- intelligence
+- land
+- logistics
+- maritime
+- research
+- space
 latitude: -31.9535554
 longitude: 115.8535415
 ---

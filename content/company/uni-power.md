@@ -1,6 +1,6 @@
 ---
 name: Uni Power
-date: '2025-01-27'
+date: '2025-01-29'
 overview: 'Uni-Power International manufactures welder generators,  high charge alternators and NATO 28V DC jet and turbo prop aircrafts.
 
   '
@@ -13,13 +13,6 @@ email: defence@unipower.com.au
 is_sme: true
 stakeholders:
 - defence
-capability_streams:
-- iscw
-- keyn
-- aasl
-- masw
-- saac
-- lcaw
 capability_domains:
 - air-traffic
 - airborne
@@ -43,6 +36,13 @@ capability_domains:
 - transport
 regions:
 - perth-metropolitan
+capability_streams:
+- electronic
+- research
+- logistics
+- maritime
+- aerial
+- land
 latitude: -31.8044013
 longitude: 115.8501448
 ---

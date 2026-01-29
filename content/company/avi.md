@@ -1,6 +1,6 @@
 ---
 name: AVI
-date: '2025-01-27'
+date: '2025-01-29'
 overview: AVI designs, engineers and manufactures complex communications systems, delivering data and capability to key industries in challenging environments.1
 website: https://avi.com.au
 contact_name: Tony Routledge
@@ -12,11 +12,6 @@ is_sme: true
 stakeholders:
 - defence
 - defence-west
-capability_streams:
-- electronic
-- intelligence
-- research
-- space
 capability_domains:
 - barracks
 - c2
@@ -37,6 +32,11 @@ industrial_capabilities:
 - adaptive
 regions:
 - perth
+capability_streams:
+- electronic
+- intelligence
+- research
+- space
 latitude: -32.0417956
 longitude: 115.8207049
 ---

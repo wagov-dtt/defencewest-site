@@ -1,6 +1,6 @@
 ---
 name: AMI Sales
-date: '2025-01-27'
+date: '2025-01-29'
 overview: AMI Sales is a long established company offering both supply, integration and service capability across naval and defence marine requirements.
 website: https://amidefence.com.au
 contact_name: Aaron Smith
@@ -11,10 +11,6 @@ email: aarons@amigroup.co
 is_sme: true
 stakeholders:
 - defence
-capability_streams:
-- iscw
-- aasl
-- masw
 capability_domains:
 - communications
 - destroyers
@@ -28,6 +24,10 @@ capability_domains:
 - training
 regions:
 - perth-metropolitan
+capability_streams:
+- electronic
+- logistics
+- maritime
 latitude: -32.0559885
 longitude: 115.7925576
 ---

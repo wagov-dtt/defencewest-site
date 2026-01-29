@@ -1,6 +1,6 @@
 ---
 name: Directions Workforce Solutions
-date: '2025-01-27'
+date: '2025-01-29'
 overview: Directions Workforce Solutions provides personalised apprenticeship and GTO management, recruitment, training and employer support--building skilled, sustainable workforces.
 website: https://www.directionswa.com.au
 contact_name: Kristim Lim
@@ -12,17 +12,6 @@ is_sme: true
 stakeholders:
 - defence
 - academic
-capability_streams:
-- aerial
-- base
-- education
-- electronic
-- intelligence
-- land
-- logistics
-- maritime
-- research
-- space
 capability_domains:
 - armour
 - barracks
@@ -57,6 +46,17 @@ regions:
 - mid
 - perth
 - south-west
+capability_streams:
+- aerial
+- base
+- education
+- electronic
+- intelligence
+- land
+- logistics
+- maritime
+- research
+- space
 latitude: -31.8924937
 longitude: 116.0097296
 ---

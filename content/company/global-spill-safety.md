@@ -1,6 +1,6 @@
 ---
 name: Global Spill & Safety
-date: '2025-01-27'
+date: '2025-01-29'
 overview: 'Global Spill & Safety is Australia''s only manufacturer of Environmental clean-up polypropylene absorbents, wipes, spill bunds and DG Cabinets.
 
   Our high production capacity and scale results in a lower cost of production, which is passed on to our customers.
@@ -24,11 +24,6 @@ stakeholders:
 - academic
 - defence-west
 - defence-science
-capability_streams:
-- aasl
-- masw
-- saac
-- lcaw
 capability_domains:
 - air
 - armour
@@ -45,6 +40,11 @@ regions:
 - north
 - south
 - naval
+capability_streams:
+- logistics
+- maritime
+- aerial
+- land
 latitude: -31.9705546
 longitude: 115.9534055
 ---

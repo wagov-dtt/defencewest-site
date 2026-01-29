@@ -1,6 +1,6 @@
 ---
 name: First Nations Strategic Alliance
-date: '2025-01-27'
+date: '2025-01-29'
 overview: First Nations Strategic Alliance (FNSA) is a pioneering organization committed to providing comprehensive equipment and maintenance services for the Australian Defence Force.
 website: https://firstnationscorp.com.au
 contact_name: Mr Alex Gibb
@@ -13,12 +13,6 @@ stakeholders:
 - defence
 - academic
 - defence-west
-capability_streams:
-- aerial
-- electronic
-- intelligence
-- land
-- maritime
 capability_domains:
 - amphibious
 - armour
@@ -56,6 +50,12 @@ regions:
 - pilbara
 ownerships:
 - indigenous
+capability_streams:
+- aerial
+- electronic
+- intelligence
+- land
+- maritime
 latitude: -31.86238
 longitude: 115.88478
 ---

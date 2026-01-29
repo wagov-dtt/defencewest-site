@@ -1,6 +1,6 @@
 ---
 name: Damogran
-date: '2025-01-27'
+date: '2025-01-29'
 overview: Automated robotic painting and blasting of ships, both land-based ship surface treatment using robotics and future independent floating dock
 website: https://damogran.com.au
 contact_name: Dale Jordan
@@ -12,9 +12,6 @@ is_sme: true
 stakeholders:
 - defence
 - defence-west
-capability_streams:
-- logistics
-- maritime
 capability_domains:
 - maritime
 - sustainment
@@ -25,6 +22,9 @@ industrial_capabilities:
 - welding
 regions:
 - perth
+capability_streams:
+- logistics
+- maritime
 latitude: -32.1674076
 longitude: 115.8544416
 ---

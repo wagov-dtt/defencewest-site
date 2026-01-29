@@ -1,6 +1,6 @@
 ---
 name: Haymac Engineering Pty Ltd
-date: '2025-01-27'
+date: '2025-01-29'
 overview: Haymac Engineering, a 100% Indigenous-owned WA company, delivers high-quality, customised fabrication and engineering solutions across defence, marine, mining, construction, and energy sectors.
 website: https://www.haymacengineering.com.au
 contact_name: Hayley Andersen
@@ -12,10 +12,6 @@ is_sme: true
 stakeholders:
 - defence
 - defence-west
-capability_streams:
-- base
-- logistics
-- maritime
 capability_domains:
 - maritime
 - multi
@@ -36,6 +32,10 @@ regions:
 - wheatbelt
 ownerships:
 - indigenous
+capability_streams:
+- base
+- logistics
+- maritime
 latitude: -32.1564941
 longitude: 115.7943893
 ---

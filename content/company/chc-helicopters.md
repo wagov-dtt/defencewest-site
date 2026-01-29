@@ -1,6 +1,6 @@
 ---
 name: CHC Helicopters (Australia)
-date: '2025-01-27'
+date: '2025-01-29'
 overview: 'CHC Helicopters (Australia) started operations in 1969 and grew to become the largest commercial helicopter operator in the country. '
 website: https://www.chcheli.com
 contact_name: David Irvine
@@ -11,15 +11,15 @@ email: david.irvine@chcheli.com
 is_sme: true
 stakeholders:
 - defence
-capability_streams:
-- iscw
-- aasl
 capability_domains:
 - search
 - special
 - utility
 regions:
 - perth-metropolitan
+capability_streams:
+- electronic
+- logistics
 latitude: -31.9499453
 longitude: 115.8483871
 ---

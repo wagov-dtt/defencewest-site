@@ -1,6 +1,6 @@
 ---
 name: Precision Technic Defence
-date: '2025-01-27'
+date: '2025-01-29'
 overview: Precision Technic Defence brings together world leading products to design and deliver custom tactical solutions to the warfighter, and to first responders around the globe.
 website: https://ptdefence.com/event/ausa-2024
 contact_name: Greg Whitehouse
@@ -11,11 +11,6 @@ email: gw@ptdefence.com
 is_sme: true
 stakeholders:
 - defence
-capability_streams:
-- iscw
-- keyn
-- saac
-- lcaw
 capability_domains:
 - armour
 - c2
@@ -32,6 +27,11 @@ capability_domains:
 - training
 regions:
 - perth-metropolitan
+capability_streams:
+- electronic
+- research
+- aerial
+- land
 latitude: -32.058955
 longitude: 115.8026256
 ---

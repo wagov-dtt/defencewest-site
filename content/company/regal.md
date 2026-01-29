@@ -1,6 +1,6 @@
 ---
 name: Regal Engineering
-date: '2025-01-27'
+date: '2025-01-29'
 overview: 'Regal Engineering is a locally owned and operated heavy engineering and fabrication provider, with over 20 years experience in the fabrication of components for the Mining and Oil & Gas industry in Australia. '
 website: https://www.regaleng.com.au
 contact_name: Jamie Crofts
@@ -9,8 +9,6 @@ address: 28 Poletti Road, Cockburn Central WA 6164
 phone: 08 9414 1011
 email: admin@regaleng.com.au
 is_sme: true
-capability_streams:
-- masw
 capability_domains:
 - armour
 - maritime
@@ -20,6 +18,8 @@ industrial_capabilities:
 - aluminium
 - steel
 - welding
+capability_streams:
+- maritime
 latitude: -32.126032
 longitude: 115.8478325
 ---
