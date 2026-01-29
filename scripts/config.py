@@ -11,6 +11,7 @@ from pathlib import Path
 import tomllib
 
 import diskcache
+from pathvalidate import sanitize_filename
 from rich.progress import Progress, TextColumn, BarColumn, TaskProgressColumn
 from slugify import slugify
 
@@ -95,6 +96,39 @@ MAP_MARKER_LAYERS = [
 
 # Content processing
 OVERVIEW_MAX_LENGTH = 300
+
+
+def load_taxonomies() -> dict[str, list[str]]:
+    """Load valid taxonomy keys from taxonomies.yaml.
+
+    Returns dict of taxonomy_name -> list of valid keys.
+    """
+    taxonomies_path = DATA_DIR / "taxonomies.yaml"
+    if not taxonomies_path.exists():
+        return {}
+
+    with open(taxonomies_path) as f:
+        import yaml
+
+        data = yaml.safe_load(f)
+
+    # Return dict of taxonomy_name -> list of valid keys
+    return {tax: list(data.get(tax, {}).keys()) for tax in TAXONOMIES if tax in data}
+
+
+def validate_taxonomies(company: dict, valid_taxonomies: dict) -> list[str]:
+    """Validate taxonomy values against allowed keys. Returns list of warnings."""
+    warnings = []
+
+    for taxonomy in TAXONOMIES:
+        if values := company.get(taxonomy):
+            valid_keys = valid_taxonomies.get(taxonomy, [])
+            invalid = [v for v in values if v not in valid_keys]
+            if invalid:
+                warnings.append(f"Invalid {taxonomy}: {', '.join(invalid)}")
+
+    return warnings
+
 
 # Slug generation - suffixes to remove from company names
 SLUG_REMOVE_SUFFIXES = [
@@ -229,8 +263,14 @@ def clean_slug(name: str) -> str:
     """Generate a clean slug for company names.
 
     Removes common suffixes like 'Pty Ltd', 'Australia', etc.
+    Uses pathvalidate for robust path traversal protection.
     """
+    # Generate base slug
     slug = slugify(name)
+
+    # Use pathvalidate to sanitize the slug for safe filename usage
+    # This handles path traversal attacks, reserved names, and invalid chars
+    slug = sanitize_filename(slug, replacement_text="-")
 
     # Remove common suffixes (keep removing until none match)
     changed = True
@@ -249,6 +289,10 @@ def clean_slug(name: str) -> str:
         parts = slug.split("-")
         if len(parts) > 3:
             slug = "-".join(parts[:3])
+
+    # Final safety check: ensure slug is valid
+    if not slug or slug in [".", "..", "-"]:
+        slug = "invalid-name"
 
     return slug
 

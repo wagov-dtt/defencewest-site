@@ -19,13 +19,11 @@ data/
   computed.yaml        # Generated: pre-computed values (gitignored)
   counts.yaml          # Generated: taxonomy counts (gitignored)
 hugo.toml              # All site config (theme, CDN URLs, map settings)
-infra/
-  s3-upload.yaml       # CloudFormation template for S3 submission API
 scripts/
   config.py            # Shared config, paths, constants, slug utilities
   preprocess.py        # Generates computed.yaml, maps, exports (CSV/XLSX/JSON)
   scrape.py            # Scrapes data from source website
-  import_submission.py # Imports submissions from S3/local JSON files
+  import_submission.py # Imports submissions from local JSON files
 layouts/               # Hugo templates
 layouts/partials/      # Shared components
 static/logos/          # Company logos
@@ -44,7 +42,6 @@ All configuration is in `hugo.toml` under `[params]`:
   cdnUrl = "https://cdn.jsdelivr.net/npm"
   mapStyleUrl = "https://tiles.openfreemap.org/styles/liberty"
   mapsUrl = "https://www.google.com/maps"
-  submitUrl = ""                # S3 API Gateway endpoint (empty = submissions disabled)
 ```
 
 Python scripts read this config via `tomllib` in `scripts/config.py`.
@@ -259,9 +256,17 @@ uv run python scripts/import_submission.py path/to/submission.json
 
 **Creates/updates:**
 - `content/company/{slug}.md` - Company markdown file
-- `static/logos/{slug}.png` - Logo image (if included)
+- `static/logos/{slug}.png` - Logo image (if included in submission)
 
-The GitHub workflow `.github/workflows/import-submission.yml` automates this process - it downloads the submission from S3, runs the import, and creates a PR for review.
+**Features:**
+- Extracts base64-encoded logo from submission JSON and saves with ImageMagick optimization
+- Validates taxonomy values against `data/taxonomies.yaml`
+- Detects potential duplicate companies by name similarity
+- Sanitizes user input for git commit messages and PR titles
+- Prevents path traversal attacks using `pathvalidate` library
+- Validates URLs and emails using `validators` library
+
+The GitHub workflow `.github/workflows/process-submission.yml` automates this process - it processes submissions attached to GitHub issues and creates PRs for review.
 
 ### config.py
 
@@ -269,56 +274,44 @@ Shared configuration used by all scripts:
 - Paths (COMPANY_DIR, DATA_DIR, STATIC_DIR, etc.)
 - Hugo config loading from `hugo.toml`
 - Taxonomy list and constants
-- Slug generation utilities (`clean_slug`, `build_taxonomy_keys`)
+- Slug generation utilities (`clean_slug`, `build_taxonomy_keys`) - uses `pathvalidate` for security
 - Progress bar helper
+- Taxonomy validation functions
+
+**Security libraries used:**
+- `pathvalidate` - Cross-platform filename/path sanitization (prevents path traversal)
+- `validators` - URL and email validation
+- `python-slugify` - Unicode-aware slug generation
 
 ## Submission Flow
 
 1. User fills form at `/submit/` (or `/submit/?edit=company-slug` for edits)
-2. Form data uploaded to S3 via API Gateway (if configured)
-3. User gets submission ID, can notify admin via email
-4. Admin triggers GitHub workflow with submission filename
-5. Workflow downloads from S3, runs `import_submission.py`, creates PR
-6. After PR merge, submission is archived in S3 `processed/` folder
+2. User downloads ZIP file containing `submission.json` (and logo if uploaded)
+3. User creates a GitHub issue with the "submission" label and attaches the ZIP file
+4. GitHub Actions workflow automatically processes the submission:
+   - Downloads and extracts the ZIP attachment
+   - Runs `import_submission.py` to create/update company files
+   - Creates a pull request for review
+   - Adds "processed" label to prevent re-processing
+   - Comments on the issue with the PR link
+   - Closes the issue
+5. Admin reviews and merges the PR
+6. Company appears on the site after next deployment
 
-### GitHub Workflow Setup
+### GitHub Workflow
 
-> **Status:** The import workflow is defined but not yet fully configured. AWS OIDC authentication needs to be set up in the GitHub repository before it can download from S3.
+The workflow `.github/workflows/process-submission.yml` handles automatic processing:
 
-The import workflow requires these GitHub repository variables:
-- `S3_SUBMISSIONS_BUCKET` - S3 bucket name (e.g., `defencewest-submissions`)
-- `AWS_ROLE_ARN` - IAM role ARN for OIDC authentication
+**Triggers:** Issues opened with "submission" label
 
-To set up OIDC authentication:
-1. Create an IAM role with S3 read access to the submissions bucket
-2. Configure the role's trust policy to allow GitHub Actions OIDC
-3. Add the role ARN as a repository variable
+**Idempotency:** Issues with "processed" label are skipped
 
-To trigger manually: Actions → Import Submission → Run workflow → Enter S3 key
-
-### Deploying the Submission API
-
-To enable submissions, deploy the CloudFormation stack:
-
-```bash
-aws cloudformation deploy \
-  --template-file infra/s3-upload.yaml \
-  --stack-name defencewest-submissions \
-  --parameter-overrides \
-    BucketName=defencewest-submissions \
-    AllowedOrigin=https://your-domain.com \
-  --capabilities CAPABILITY_IAM
-
-# Get the API endpoint
-aws cloudformation describe-stacks \
-  --stack-name defencewest-submissions \
-  --query 'Stacks[0].Outputs[?OutputKey==`Endpoint`].OutputValue' \
-  --output text
-```
-
-Then set `submitUrl` in `hugo.toml` to the endpoint value.
-
-If `submitUrl` is empty, the submit button is disabled.
+**Process:**
+1. Downloads ZIP attachment from issue body
+2. Validates submission.json format
+3. Imports company data and logo
+4. Creates PR with sanitized commit message
+5. Labels issue as "processed" and closes it
 
 ## Adding/Editing Companies
 

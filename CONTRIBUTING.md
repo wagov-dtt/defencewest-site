@@ -98,8 +98,9 @@ When you receive a submission PR, check:
   - Search `content/company/` for similar names
   - If updating existing, verify the slug matches
 - [ ] **Logo** - Is it the correct company logo?
-  - Should be in `static/logos/{slug}.png`
-  - Reasonable size, readable
+  - Logo is automatically extracted from the submission and saved to `static/logos/{slug}.png`
+  - Check the PR files to see if logo was included
+  - Logo is optional - can proceed without if not provided
 
 ### Common Issues & Fixes
 
@@ -125,6 +126,58 @@ If a submission cannot be fixed:
 1. Comment on the PR explaining what needs to change
 2. Close the PR without merging
 3. The submitter will need to resubmit via the form
+
+## Troubleshooting Submissions
+
+### Workflow Not Triggering
+
+If the GitHub Actions workflow doesn't run when an issue is created:
+
+- Ensure the issue has the **"submission"** label
+- Ensure the issue doesn't already have the **"processed"** label
+- Check that a ZIP file is actually attached (not just linked)
+
+### Logo Not Appearing
+
+The logo is extracted automatically from the submission JSON:
+
+- Logo is saved to `static/logos/{slug}.png`
+- If ImageMagick is available, the logo is optimized (resized to max 520x120, trimmed)
+- If logo extraction fails, a warning appears in the PR description
+- Logo is optional - the submission can proceed without one
+
+### Duplicate Warnings
+
+The script detects potential duplicates by:
+
+- Exact name matches (case-insensitive)
+- Similar names (one name contained within another)
+
+If you see a duplicate warning in the PR:
+
+1. Check if it's actually a duplicate or just a similar name
+2. For updates to existing companies, ensure the slug matches the existing file
+3. For true duplicates, close the PR
+
+### Invalid Taxonomy Warnings
+
+If the PR shows "Invalid taxonomy" warnings:
+
+1. Check `data/taxonomies.yaml` for valid keys
+2. Edit the company file to use correct taxonomy keys
+3. Common mistake: using display names instead of keys (e.g., "Cyber Security" instead of "cyber")
+
+### Workflow Failed
+
+If the workflow fails:
+
+1. Check the Actions log for error details
+2. Common issues:
+   - Invalid JSON in submission
+   - ZIP file corrupted
+   - Missing submission.json in ZIP
+3. The issue will be commented with the failure reason
+4. Remove the "processed" label and ask the submitter to try again
 
 ## Development Guidelines
 
