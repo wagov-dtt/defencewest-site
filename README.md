@@ -6,9 +6,9 @@ Western Australia's Defence Industry and Science Capability Directory - a static
 
 ## Quick Links
 
-- 🏢 **Submit a company** → [submission form](https://wagov-dtt.github.io/defencewest-site/submit/) (for external companies)
-- 🤝 **Contribute code** → [CONTRIBUTING.md](CONTRIBUTING.md) (for developers and admins)
-- 🤖 **AI agent guide** → [AGENTS.md](AGENTS.md) (for AI assistants)
+- **Submit a company** -> [submission form](https://wagov-dtt.github.io/defencewest-site/submit/) (for external companies)
+- **Contribute code** -> [CONTRIBUTING.md](CONTRIBUTING.md) (for developers and admins)
+- **AI agent guide** -> [AGENTS.md](AGENTS.md) (for AI assistants)
 
 ## Tech Stack
 

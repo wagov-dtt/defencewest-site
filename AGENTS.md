@@ -165,6 +165,7 @@ Both directory and map pages use the same filtering approach:
 4. **One company = one file** - easy to find, easy to edit
 5. **Use conventional commits** - `feat:`, `fix:`, `chore:`
 6. **Wait for user approval** before pushing or reverting changes
+7. **Avoid emojis and unicode** - use ASCII only in docs and code for maximum compatibility
 
 ### Mise Usage
 
