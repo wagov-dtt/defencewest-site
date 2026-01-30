@@ -162,6 +162,7 @@
           </div>
           <div class="col-9 col-m-12 col-s-12">
             <label>Company Name <span class="required">*</span><input type="text" id="field-name" required></label>
+            <label>Overview <small>(Short summary for directory cards, max 500 chars)</small><textarea id="field-overview" maxlength="500" rows="3" placeholder="Brief description of your company..."></textarea></label>
             <label>Website<input type="url" id="field-website" placeholder="https://example.com"></label>
             <div class="row">
               <div class="col-6 col-m-6 col-s-12">
@@ -269,6 +270,14 @@
 
   const CONFIG = {
     companiesUrl: '../companies.json'
+  };
+
+  // Field configuration - single source of truth for form fields
+  const FIELDS = {
+    text: ['name', 'website', 'phone', 'email', 'address', 'latitude', 'longitude', 'contact_name', 'contact_title'],
+    textarea: ['overview'],
+    checkbox: ['is_sme', 'is_prime'],
+    taxonomy: ['stakeholders', 'capability_streams', 'capability_domains', 'industrial_capabilities', 'regions', 'ownerships']
   };
 
   const $ = id => document.getElementById(id);
@@ -413,7 +422,7 @@
   }
 
   function initLogoUpload() {
-    const dropzone = $('logo-dropzone'), input = $('logo-input'), placeholder = $('logo-placeholder'), previewContainer = $('logo-preview-container'), preview = $('logo-preview');
+    const dropzone = $('logo-dropzone'), input = $('logo-input');
     function handleFile(file) {
       if (!file?.type.startsWith('image/')) return;
       const reader = new FileReader();
@@ -425,9 +434,7 @@
           if (width > maxSize || height > maxSize) { const s = maxSize / Math.max(width, height); width *= s; height *= s; }
           canvas.width = width; canvas.height = height;
           canvas.getContext('2d').drawImage(img, 0, 0, width, height);
-          logoBase64 = canvas.toDataURL('image/png');
-          preview.src = logoBase64;
-          placeholder.classList.add('hidden'); previewContainer.classList.remove('hidden');
+          setLogo(canvas.toDataURL('image/png'));
         };
         img.src = e.target.result;
       };
@@ -441,7 +448,7 @@
     dropzone.addEventListener('drop', e => { e.preventDefault(); dropzone.classList.remove('dragover'); handleFile(e.dataTransfer.files[0]); });
     input.addEventListener('change', () => handleFile(input.files[0]));
     document.addEventListener('paste', e => { for (const item of e.clipboardData?.items || []) if (item.type.startsWith('image/')) { handleFile(item.getAsFile()); break; } });
-    $('btn-remove-logo').addEventListener('click', (e) => { e.stopPropagation(); logoBase64 = null; preview.src = ''; input.value = ''; previewContainer.classList.add('hidden'); placeholder.classList.remove('hidden'); });
+    $('btn-remove-logo').addEventListener('click', (e) => { e.stopPropagation(); clearLogo(); });
   }
 
   function initAddressValidation() {
@@ -476,14 +483,63 @@
   const getValue = id => $(id)?.value?.trim() || '';
   const getChecked = id => $(id)?.checked || false;
 
+  function setLogo(base64) {
+    logoBase64 = base64;
+    $('logo-preview').src = base64;
+    $('logo-placeholder').classList.add('hidden');
+    $('logo-preview-container').classList.remove('hidden');
+  }
+
+  function clearLogo() {
+    logoBase64 = null;
+    $('logo-preview').src = '';
+    $('logo-input').value = '';
+    $('logo-placeholder').classList.remove('hidden');
+    $('logo-preview-container').classList.add('hidden');
+  }
+
+  function loadLogoFromUrl(url) {
+    const img = new Image();
+    img.crossOrigin = 'anonymous';
+    img.onload = () => {
+      const canvas = document.createElement('canvas');
+      canvas.width = img.naturalWidth;
+      canvas.height = img.naturalHeight;
+      canvas.getContext('2d').drawImage(img, 0, 0);
+      setLogo(canvas.toDataURL('image/png'));
+    };
+    img.onerror = () => console.warn('Could not load logo from', url);
+    img.src = url;
+  }
+
+  function resetForm() {
+    FIELDS.text.forEach(f => $(`field-${f}`).value = '');
+    FIELDS.textarea.forEach(f => $(`field-${f}`).value = '');
+    FIELDS.checkbox.forEach(f => $(`field-${f}`).checked = false);
+    document.querySelectorAll('input[name="f"]').forEach(cb => cb.checked = false);
+    editor.setHTML('<h2>Overview</h2><p><br></p>');
+    clearLogo();
+    editSlug = null;
+    $('page-title').textContent = 'Submit New Listing';
+    $('address-status').textContent = '';
+  }
+
   function buildSubmission() {
-    const taxonomies = getTaxonomyValues();
     const submission = {
       type: editSlug ? 'update' : 'new',
-      company: { name: getValue('field-name'), website: getValue('field-website'), phone: getValue('field-phone'), email: getValue('field-email'), address: getValue('field-address'), latitude: getValue('field-latitude'), longitude: getValue('field-longitude'), contact_name: getValue('field-contact-name'), contact_title: getValue('field-contact-title'), is_sme: getChecked('field-is-sme'), is_prime: getChecked('field-is-prime'), ...taxonomies },
-      content_html: editor.getHTML(), logo: logoBase64, submitted_at: new Date().toISOString()
+      submitted_at: new Date().toISOString()
     };
     if (editSlug) submission.slug = editSlug;
+
+    // Collect all form fields
+    FIELDS.text.forEach(f => { const v = getValue(`field-${f}`); if (v) submission[f] = v; });
+    FIELDS.textarea.forEach(f => { const v = getValue(`field-${f}`); if (v) submission[f] = v; });
+    FIELDS.checkbox.forEach(f => submission[f] = getChecked(`field-${f}`));
+    Object.assign(submission, getTaxonomyValues());
+
+    submission.content_html = editor.getHTML();
+    if (logoBase64) submission.logo = logoBase64;
+
     return submission;
   }
 
@@ -498,38 +554,19 @@
     window.URL.revokeObjectURL(url);
   }
 
-  function loadData(data, slug = null, logoUrl = null) {
-    const d = data.company || data;
-    editSlug = slug || data.slug || null;
-    $('page-title').textContent = editSlug ? `Update: ${d.name}` : 'Submit New Listing';
-    $('field-name').value = d.name || '';
-    $('field-website').value = d.website || '';
-    $('field-phone').value = d.phone || '';
-    $('field-email').value = d.email || '';
-    $('field-address').value = d.address || '';
-    $('field-latitude').value = d.latitude || '';
-    $('field-longitude').value = d.longitude || '';
-    $('field-contact-name').value = d.contact_name || '';
-    $('field-contact-title').value = d.contact_title || '';
-    $('field-is-sme').checked = d.is_sme || false;
-    $('field-is-prime').checked = d.is_prime || false;
-    setTaxonomyValues(d);
+  function loadData(data) {
+    resetForm();
+    editSlug = data.slug || null;
+    if (editSlug) $('page-title').textContent = `Update: ${data.name}`;
+
+    // Load all form fields
+    FIELDS.text.forEach(f => $(`field-${f}`).value = data[f] || '');
+    FIELDS.textarea.forEach(f => $(`field-${f}`).value = data[f] || '');
+    FIELDS.checkbox.forEach(f => $(`field-${f}`).checked = data[f] || false);
+    setTaxonomyValues(data);
+
     if (data.content_html) editor.setHTML(data.content_html);
-    // Handle logo - either base64 in data, or URL to fetch
-    if (data.logo) {
-      logoBase64 = data.logo;
-      $('logo-preview').src = logoBase64;
-      $('logo-placeholder').classList.add('hidden');
-      $('logo-preview-container').classList.remove('hidden');
-    } else if (logoUrl) {
-      const img = new Image();
-      img.onload = () => {
-        $('logo-preview').src = img.src;
-        $('logo-placeholder').classList.add('hidden');
-        $('logo-preview-container').classList.remove('hidden');
-      };
-      img.src = logoUrl;
-    }
+    if (data.logo) setLogo(data.logo);
   }
 
   function initEventHandlers() {
@@ -566,7 +603,9 @@
   initLinkDialog();
   const editSlugParam = new URLSearchParams(location.search).get('edit');
   if (editSlugParam && companies[editSlugParam]) {
-    loadData(companies[editSlugParam], editSlugParam, `../logos/${editSlugParam}.png`);
+    loadData(companies[editSlugParam]);
+    // Load logo from URL and convert to base64 for consistent downloads
+    loadLogoFromUrl(`../logos/${editSlugParam}.png`);
   } else {
     // Try loading template.json for new submissions
     try {

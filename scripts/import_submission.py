@@ -221,11 +221,13 @@ def find_duplicate_companies(
 
 
 def validate_submission(submission: dict) -> tuple[bool, list[str]]:
-    """Validate submission data. Returns (is_valid, warnings)."""
+    """Validate submission data. Returns (is_valid, warnings).
+
+    Expects flat structure with fields directly on submission dict.
+    """
     warnings = []
 
-    company = submission.get("company", {})
-    if not company.get("name"):
+    if not submission.get("name"):
         return False, ["Company name is required"]
 
     # Check content
@@ -234,31 +236,31 @@ def validate_submission(submission: dict) -> tuple[bool, list[str]]:
         warnings.append("No company description provided")
 
     # Warnings for recommended fields
-    if not company.get("website"):
+    if not submission.get("website"):
         warnings.append("No website provided")
-    elif website := company.get("website"):
+    elif website := submission.get("website"):
         # Validate URL format (validators returns True on success, ValidationError on failure)
         if validators.url(website) is not True:
             warnings.append(f"Invalid website URL format: {website}")
 
-    if not company.get("address"):
+    if not submission.get("address"):
         warnings.append("No address provided")
 
-    if not company.get("email") and not company.get("phone"):
+    if not submission.get("email") and not submission.get("phone"):
         warnings.append("No contact information (email or phone)")
-    elif email := company.get("email"):
+    elif email := submission.get("email"):
         # Validate email format (validators returns True on success, ValidationError on failure)
         if validators.email(email) is not True:
             warnings.append(f"Invalid email format: {email}")
 
     # Check taxonomies
-    has_any_taxonomy = any(company.get(t) for t in TAXONOMIES)
+    has_any_taxonomy = any(submission.get(t) for t in TAXONOMIES)
     if not has_any_taxonomy:
         warnings.append("No taxonomies selected")
 
     # Validate coordinates if provided
-    lat = company.get("latitude")
-    lng = company.get("longitude")
+    lat = submission.get("latitude")
+    lng = submission.get("longitude")
     if lat and lng:
         try:
             if not is_in_wa(float(lat), float(lng)):
@@ -272,17 +274,19 @@ def validate_submission(submission: dict) -> tuple[bool, list[str]]:
 
 
 def build_markdown_file(submission: dict) -> str:
-    """Build complete markdown file with YAML frontmatter."""
-    company = submission["company"]
+    """Build complete markdown file with YAML frontmatter.
 
+    Expects flat structure with fields directly on submission dict.
+    """
     # Build frontmatter
     frontmatter = {
-        "name": company["name"],
+        "name": submission["name"],
         "date": submission.get("submitted_at", "")[:10] or "2025-01-01",
     }
 
     # Add optional scalar fields
     for field in [
+        "overview",
         "website",
         "phone",
         "email",
@@ -292,18 +296,18 @@ def build_markdown_file(submission: dict) -> str:
         "contact_name",
         "contact_title",
     ]:
-        if company.get(field):
-            frontmatter[field] = company[field]
+        if submission.get(field):
+            frontmatter[field] = submission[field]
 
     # Add boolean flags (only if true)
     for flag in ["is_sme", "is_prime"]:
-        if company.get(flag):
+        if submission.get(flag):
             frontmatter[flag] = True
 
     # Add taxonomy lists
     for taxonomy in TAXONOMIES:
-        if company.get(taxonomy):
-            frontmatter[taxonomy] = company[taxonomy]
+        if submission.get(taxonomy):
+            frontmatter[taxonomy] = submission[taxonomy]
 
     # Convert HTML content to markdown
     content_md = html_to_markdown(submission.get("content_html", ""))
@@ -332,6 +336,8 @@ def import_submission(submission: dict) -> tuple[str, str, bool, list[str]]:
     """
     Import a submission dict and create company files.
 
+    Expects flat structure with fields directly on submission dict.
+
     Returns: (slug, company_name, is_new, warnings)
     """
     # Validate
@@ -339,8 +345,7 @@ def import_submission(submission: dict) -> tuple[str, str, bool, list[str]]:
     if not is_valid:
         raise ValueError(f"Validation failed: {warnings[0]}")
 
-    company = submission["company"]
-    company_name = company["name"]
+    company_name = submission["name"]
 
     # Determine slug - only preserve existing slug for updates, otherwise use clean_slug
     is_update = submission.get("type") == "update" and submission.get("slug")
@@ -357,7 +362,7 @@ def import_submission(submission: dict) -> tuple[str, str, bool, list[str]]:
 
     # Load and validate taxonomies
     valid_taxonomies = load_taxonomies()
-    taxonomy_warnings = validate_taxonomies(company, valid_taxonomies)
+    taxonomy_warnings = validate_taxonomies(submission, valid_taxonomies)
     warnings.extend(taxonomy_warnings)
 
     # Check for duplicate companies
