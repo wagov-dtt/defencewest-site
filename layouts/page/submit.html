@@ -273,12 +273,15 @@
   };
 
   // Field configuration - single source of truth for form fields
+  // Note: HTML IDs use hyphens (field-contact-name), data keys use underscores (contact_name)
   const FIELDS = {
-    text: ['name', 'website', 'phone', 'email', 'address', 'latitude', 'longitude', 'contact_name', 'contact_title'],
+    text: ['name', 'website', 'phone', 'email', 'address', 'latitude', 'longitude', 'contact-name', 'contact-title'],
     textarea: ['overview'],
-    checkbox: ['is_sme', 'is_prime'],
+    checkbox: ['is-sme', 'is-prime'],
     taxonomy: ['stakeholders', 'capability_streams', 'capability_domains', 'industrial_capabilities', 'regions', 'ownerships']
   };
+  const toDataKey = f => f.replace(/-/g, '_');
+  const toFieldId = f => `field-${f}`;
 
   const $ = id => document.getElementById(id);
   let companies = {}, editor = null, logoBase64 = null, editSlug = null;
@@ -513,9 +516,9 @@
   }
 
   function resetForm() {
-    FIELDS.text.forEach(f => $(`field-${f}`).value = '');
-    FIELDS.textarea.forEach(f => $(`field-${f}`).value = '');
-    FIELDS.checkbox.forEach(f => $(`field-${f}`).checked = false);
+    FIELDS.text.forEach(f => $(toFieldId(f)).value = '');
+    FIELDS.textarea.forEach(f => $(toFieldId(f)).value = '');
+    FIELDS.checkbox.forEach(f => $(toFieldId(f)).checked = false);
     document.querySelectorAll('input[name="f"]').forEach(cb => cb.checked = false);
     editor.setHTML('<h2>Overview</h2><p><br></p>');
     clearLogo();
@@ -531,10 +534,10 @@
     };
     if (editSlug) submission.slug = editSlug;
 
-    // Collect all form fields
-    FIELDS.text.forEach(f => { const v = getValue(`field-${f}`); if (v) submission[f] = v; });
-    FIELDS.textarea.forEach(f => { const v = getValue(`field-${f}`); if (v) submission[f] = v; });
-    FIELDS.checkbox.forEach(f => submission[f] = getChecked(`field-${f}`));
+    // Collect all form fields (convert field-id to data_key)
+    FIELDS.text.forEach(f => { const v = getValue(toFieldId(f)); if (v) submission[toDataKey(f)] = v; });
+    FIELDS.textarea.forEach(f => { const v = getValue(toFieldId(f)); if (v) submission[toDataKey(f)] = v; });
+    FIELDS.checkbox.forEach(f => submission[toDataKey(f)] = getChecked(toFieldId(f)));
     Object.assign(submission, getTaxonomyValues());
 
     submission.content_html = editor.getHTML();
@@ -559,10 +562,10 @@
     editSlug = data.slug || null;
     if (editSlug) $('page-title').textContent = `Update: ${data.name}`;
 
-    // Load all form fields
-    FIELDS.text.forEach(f => $(`field-${f}`).value = data[f] || '');
-    FIELDS.textarea.forEach(f => $(`field-${f}`).value = data[f] || '');
-    FIELDS.checkbox.forEach(f => $(`field-${f}`).checked = data[f] || false);
+    // Load all form fields (data uses underscores, field IDs use hyphens)
+    FIELDS.text.forEach(f => $(toFieldId(f)).value = data[toDataKey(f)] || '');
+    FIELDS.textarea.forEach(f => $(toFieldId(f)).value = data[toDataKey(f)] || '');
+    FIELDS.checkbox.forEach(f => $(toFieldId(f)).checked = data[toDataKey(f)] || false);
     setTaxonomyValues(data);
 
     if (data.content_html) editor.setHTML(data.content_html);
