@@ -1,13 +1,11 @@
 {{/*
-  Standalone submission page - uses PicoCSS with Squire editor and native multi-select
-  Submits to S3 via API Gateway (see infra/s3-upload.yaml)
+  Standalone submission page - uses PicoCSS with Squire editor
+  Downloads JSON file for email submission to DefenceWest
 */}}
 {{- $cdn := .Site.Params.cdnUrl -}}
-{{- $submitUrl := .Site.Params.submitUrl -}}
 {{- $taxonomies := .Site.Data.taxonomies -}}
 {{- $picoTheme := .Site.Params.picoTheme | default "slate" -}}
 {{- $adminEmail := .Site.Params.adminEmail -}}
-{{- $githubIssuesUrl := .Site.Params.githubIssuesUrl -}}
 <!doctype html>
 <html lang="en" data-theme="light">
 <head>
@@ -138,8 +136,8 @@
   <header class="container">
     <nav aria-label="breadcrumb"><ul><li><a href="{{ "/" | relURL }}">Directory</a></li><li>Submit</li></ul></nav>
     <h1 id="page-title">Submit New Listing</h1>
-    <p>Fill out the form below to submit a new company or update an existing listing. When complete, download your submission file and create a <a href="{{ $githubIssuesUrl }}" target="_blank">GitHub issue</a> to attach it. Your submission will be processed automatically and a pull request will be created for review. Or email the file to <a href="mailto:{{ $adminEmail }}">{{ $adminEmail }}</a>.</p>
-    <p id="success-message" class="hidden">✓ Download complete! Follow the instructions above to submit.</p>
+    <p>Fill out the form below to submit a new company or update an existing listing. When complete, download your submission file and email it to <a href="mailto:{{ $adminEmail }}">{{ $adminEmail }}</a>.</p>
+    <p id="success-message" class="hidden">Download complete! Email the file to {{ $adminEmail }} to submit.</p>
   </header>
 
   <main class="container">
@@ -241,8 +239,9 @@
 
       <!-- Actions -->
       <div class="actions" id="form-actions">
-        <button type="button" id="btn-submit-eml">Download Email (EML)</button>
-        <button type="button" id="btn-submit-zip" class="secondary">Download ZIP</button>
+        <button type="button" id="btn-submit">Download Submission</button>
+        <button type="button" id="btn-load" class="secondary">Load Submission</button>
+        <input type="file" id="load-input" accept=".json,application/json" hidden>
       </div>
     </form>
   </main>
@@ -267,12 +266,9 @@
   <script type="module">
   import Squire from 'https://esm.sh/squire-rte@2';
   import DOMPurify from 'https://esm.sh/dompurify@3';
-  import JSZip from 'https://esm.sh/jszip@3';
 
   const CONFIG = {
-    adminEmail: '{{ $adminEmail }}',
-    companiesUrl: '../companies.json',
-    githubIssuesUrl: '{{ $githubIssuesUrl }}'
+    companiesUrl: '../companies.json'
   };
 
   const $ = id => document.getElementById(id);
@@ -490,120 +486,58 @@
     };
   }
 
-  function generateEML(submission) {
-    const companyName = submission.company.name;
-    const isNew = submission.type === 'new';
-    const boundary = "----=_Part_" + Date.now() + "_" + Math.random().toString(36).substr(2, 9);
-    const now = new Date().toISOString().replace(/T/, ' ').replace(/\.\d+Z/, '');
-    
+  function generateJSON(submission) {
     const jsonData = JSON.stringify(submission, null, 2);
-    const base64Json = btoa(unescape(encodeURIComponent(jsonData)));
-    
-    let emlContent = "";
-    
-    emlContent += `Date: ${now}\r\n`;
-    emlContent += `From: ${submission.company.email || 'noreply@example.com'}\r\n`;
-    emlContent += `To: ${CONFIG.adminEmail}\r\n`;
-    emlContent += `Subject: [DefenceWest] ${isNew ? 'New' : 'Update'}: ${companyName}\r\n`;
-    emlContent += `Message-ID: <${Date.now()}@submission.local>\r\n`;
-    emlContent += `MIME-Version: 1.0\r\n`;
-    emlContent += `Content-Type: multipart/mixed; boundary="${boundary}"\r\n`;
-    emlContent += `\r\n`;
-    
-    emlContent += `--${boundary}\r\n`;
-    emlContent += `Content-Type: text/plain; charset=UTF-8\r\n`;
-    emlContent += `Content-Transfer-Encoding: 7bit\r\n\r\n`;
-    emlContent += `Defence West Team,\r\n\r\n`;
-    emlContent += `Please find ${isNew ? 'a new listing' : 'an update'} for ${companyName} attached as a JSON file.\r\n\r\n`;
-    emlContent += `${logoBase64 ? 'Logo is also attached.' : ''}\r\n\r\n`;
-    emlContent += `Regards,\r\n${companyName}\r\n`;
-    emlContent += `\r\n`;
-    
-    emlContent += `--${boundary}\r\n`;
-    emlContent += `Content-Type: application/json; name="${submission.slug}.json"\r\n`;
-    emlContent += `Content-Disposition: attachment; filename="${submission.slug}.json"\r\n`;
-    emlContent += `Content-Transfer-Encoding: base64\r\n\r\n`;
-    emlContent += base64Json + '\r\n';
-    emlContent += `\r\n`;
-    
-    if (logoBase64) {
-      const logoData = logoBase64.split(',')[1];
-      emlContent += `--${boundary}\r\n`;
-      emlContent += `Content-Type: image/png; name="logo.png"\r\n`;
-      emlContent += `Content-Disposition: attachment; filename="logo.png"\r\n`;
-      emlContent += `Content-Transfer-Encoding: base64\r\n\r\n`;
-      emlContent += logoData + '\r\n';
-      emlContent += `\r\n`;
-    }
-    
-    emlContent += `--${boundary}--\r\n`;
-    
-    const blob = new Blob([emlContent], { type: 'message/rfc822' });
+    const blob = new Blob([jsonData], { type: 'application/json' });
     const url = window.URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
-    a.download = `${submission.slug}-submission.eml`;
+    a.download = `${submission.slug}-submission.json`;
     a.click();
     window.URL.revokeObjectURL(url);
   }
 
-  async function generateZIP(submission) {
-    const zip = new JSZip();
-
-    const jsonData = JSON.stringify(submission, null, 2);
-    zip.file('submission.json', jsonData);
-
-    const blob = await zip.generateAsync({ type: 'blob' });
-    const url = window.URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = `${submission.slug}-submission.zip`;
-    a.click();
-    window.URL.revokeObjectURL(url);
-  }
-
-  function initEditMode() {
-    editSlug = new URLSearchParams(location.search).get('edit');
-    if (!editSlug || !companies[editSlug]) return;
-    const d = companies[editSlug];
-    $('page-title').textContent = `Update: ${d.name}`;
-    $('field-name').value = d.name || ''; $('field-website').value = d.website || '';
-    $('field-phone').value = d.phone || ''; $('field-email').value = d.email || '';
-    $('field-address').value = d.address || ''; $('field-latitude').value = d.latitude || ''; $('field-longitude').value = d.longitude || '';
-    $('field-contact-name').value = d.contact_name || ''; $('field-contact-title').value = d.contact_title || '';
-    $('field-is-sme').checked = d.is_sme || false; $('field-is-prime').checked = d.is_prime || false;
+  function loadData(data, slug = null, logoUrl = null) {
+    const d = data.company || data;
+    editSlug = slug || data.slug || null;
+    $('page-title').textContent = editSlug ? `Update: ${d.name}` : 'Submit New Listing';
+    $('field-name').value = d.name || '';
+    $('field-website').value = d.website || '';
+    $('field-phone').value = d.phone || '';
+    $('field-email').value = d.email || '';
+    $('field-address').value = d.address || '';
+    $('field-latitude').value = d.latitude || '';
+    $('field-longitude').value = d.longitude || '';
+    $('field-contact-name').value = d.contact_name || '';
+    $('field-contact-title').value = d.contact_title || '';
+    $('field-is-sme').checked = d.is_sme || false;
+    $('field-is-prime').checked = d.is_prime || false;
     setTaxonomyValues(d);
-    if (d.content_html) editor.setHTML(d.content_html);
-    const img = new Image(); img.onload = () => { $('logo-preview').src = img.src; $('logo-placeholder').classList.add('hidden'); $('logo-preview-container').classList.remove('hidden'); };
-    img.src = `../logos/${editSlug}.png`;
-  }
-
-  async function loadTemplate() {
-    try {
-      const res = await fetch(CONFIG.companiesUrl.replace('companies.json', 'template.json'));
-      if (!res.ok) return;
-      const tpl = await res.json();
-      const d = tpl.company || tpl;
-      $('field-name').value = d.name || ''; $('field-website').value = d.website || '';
-      $('field-phone').value = d.phone || ''; $('field-email').value = d.email || '';
-      $('field-address').value = d.address || ''; $('field-latitude').value = d.latitude || ''; $('field-longitude').value = d.longitude || '';
-      $('field-contact-name').value = d.contact_name || ''; $('field-contact-title').value = d.contact_title || '';
-      $('field-is-sme').checked = d.is_sme || false; $('field-is-prime').checked = d.is_prime || false;
-      setTaxonomyValues(d);
-      if (tpl.content_html) editor.setHTML(tpl.content_html);
+    if (data.content_html) editor.setHTML(data.content_html);
+    // Handle logo - either base64 in data, or URL to fetch
+    if (data.logo) {
+      logoBase64 = data.logo;
+      $('logo-preview').src = logoBase64;
+      $('logo-placeholder').classList.add('hidden');
+      $('logo-preview-container').classList.remove('hidden');
+    } else if (logoUrl) {
+      const img = new Image();
+      img.onload = () => {
+        $('logo-preview').src = img.src;
+        $('logo-placeholder').classList.add('hidden');
+        $('logo-preview-container').classList.remove('hidden');
+      };
+      img.src = logoUrl;
     }
-    catch (e) { console.warn('Could not load template:', e); }
   }
 
   function initEventHandlers() {
-    let submission = null;
-
-    $('btn-submit-eml').addEventListener('click', async () => {
+    $('btn-submit').addEventListener('click', () => {
       if (!getValue('field-name')) { alert('Enter a company name'); $('field-name').focus(); return; }
-      const btn = $('btn-submit-eml'); btn.disabled = true; btn.setAttribute('aria-busy', 'true');
+      const btn = $('btn-submit'); btn.disabled = true; btn.setAttribute('aria-busy', 'true');
       try {
-        submission = buildSubmission();
-        generateEML(submission);
+        const submission = buildSubmission();
+        generateJSON(submission);
         document.querySelector('header.container').scrollIntoView({ behavior: 'smooth' });
         $('success-message').classList.remove('hidden');
       }
@@ -611,17 +545,17 @@
       finally { btn.disabled = false; btn.removeAttribute('aria-busy'); }
     });
 
-    $('btn-submit-zip').addEventListener('click', async () => {
-      if (!getValue('field-name')) { alert('Enter a company name'); $('field-name').focus(); return; }
-      const btn = $('btn-submit-zip'); btn.disabled = true; btn.setAttribute('aria-busy', 'true');
+    $('btn-load').addEventListener('click', () => $('load-input').click());
+    $('load-input').addEventListener('change', async (e) => {
+      const file = e.target.files[0];
+      if (!file) return;
       try {
-        submission = buildSubmission();
-        generateZIP(submission);
-        document.querySelector('header.container').scrollIntoView({ behavior: 'smooth' });
-        $('success-message').classList.remove('hidden');
+        const data = JSON.parse(await file.text());
+        loadData(data);
+      } catch (err) {
+        alert('Invalid JSON file: ' + err.message);
       }
-      catch (e) { alert('Error: ' + e.message); }
-      finally { btn.disabled = false; btn.removeAttribute('aria-busy'); }
+      e.target.value = '';
     });
   }
 
@@ -629,8 +563,16 @@
   await loadCompanies();
   initEditor();
   initLinkDialog();
-  if (!new URLSearchParams(location.search).get('edit')) await loadTemplate();
-  initEditMode();
+  const editSlugParam = new URLSearchParams(location.search).get('edit');
+  if (editSlugParam && companies[editSlugParam]) {
+    loadData(companies[editSlugParam], editSlugParam, `../logos/${editSlugParam}.png`);
+  } else {
+    // Try loading template.json for new submissions
+    try {
+      const res = await fetch(CONFIG.companiesUrl.replace('companies.json', 'template.json'));
+      if (res.ok) loadData(await res.json());
+    } catch (e) { console.warn('Could not load template:', e); }
+  }
   initLogoUpload();
   initAddressValidation();
   initEventHandlers();

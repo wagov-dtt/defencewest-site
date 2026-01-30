@@ -9,6 +9,10 @@ Outputs:
     - content/company/{slug}.md (new or updated)
     - static/logos/{slug}.png (if logo provided)
 
+GitHub Actions outputs:
+    - slug: Company slug for URL
+    - commit_msg: Git commit message
+
 Exit codes:
     0: Success
     1: File not found or invalid JSON
@@ -398,17 +402,12 @@ def main():
         # Set GitHub Actions outputs (sanitized for security)
         safe_name = sanitize_for_git(company_name)
         set_output("slug", slug)
-        set_output("company_name", company_name)
-        set_output("submission_type", "New listing" if is_new else "Update")
         set_output("commit_msg", f"{'feat' if is_new else 'fix'}: {safe_name}")
-        set_output("pr_title", f"{'Add' if is_new else 'Update'}: {safe_name}")
-        set_output("source_file", json_path.name)
 
+        # Log warnings to stderr (not needed in PR body anymore)
         if warnings:
-            warnings_md = "### Warnings\n" + "\n".join(f"- {w}" for w in warnings)
-            set_output("warnings", warnings_md)
-        else:
-            set_output("warnings", "")
+            for w in warnings:
+                print(f"Warning: {w}", file=sys.stderr)
 
         return 0
 

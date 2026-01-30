@@ -1,22 +1,23 @@
 name: Process Submission
 
+# Security: Only triggers when 'approved' label is added
+# Since only collaborators can add labels, this prevents unsolicited commits
 on:
   issues:
-    types: [opened]
+    types: [labeled]
 
 permissions:
   contents: write
-  pull-requests: write
   issues: write
 
 jobs:
   process:
     runs-on: ubuntu-latest
-    # Only process issues with 'submission' label and without 'processed' label
-    if: contains(github.event.issue.labels.*.name, 'submission') && !contains(github.event.issue.labels.*.name, 'processed')
+    # Only process when 'approved' label is added (collaborator-only action)
+    if: github.event.label.name == 'approved'
 
     steps:
-      - name: Checkout code
+      - name: Checkout
         uses: actions/checkout@v4
 
       - name: Install mise
@@ -25,137 +26,47 @@ jobs:
       - name: Install dependencies
         run: uv sync
 
-      - name: Download and extract submission
+      - name: Download submission JSON
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          echo "Finding ZIP attachments..."
-          
-          # Get issue body and look for attachment URLs
-          # GitHub uploads attachments to a CDN and includes them in the issue body as markdown links
           ISSUE_BODY=$(gh api repos/${{ github.repository }}/issues/${{ github.event.issue.number }} --jq '.body')
-          
-          # Look for ZIP file URLs in the issue body (GitHub attachment format)
-          ZIP_URLS=$(echo "$ISSUE_BODY" | grep -oE 'https://github\.com/user-attachments/files/[0-9]+/[^)]+\.zip' || true)
-          
-          # Also check for any .zip URLs
-          if [ -z "$ZIP_URLS" ]; then
-            ZIP_URLS=$(echo "$ISSUE_BODY" | grep -oE 'https?://[^[:space:])]+\.zip' || true)
-          fi
-          
-          if [ -z "$ZIP_URLS" ]; then
-            echo "No ZIP attachment found on issue"
-            gh api repos/${{ github.repository }}/issues/${{ github.event.issue.number }}/comments \
-              --method POST \
-              -f body="❌ No ZIP attachment found. Please attach a ZIP file generated from the submission form."
-            exit 1
-          fi
-          
-          # Take the first ZIP URL
-          ZIP_URL=$(echo "$ZIP_URLS" | head -1)
-          echo "Found ZIP: $ZIP_URL"
-          
-          # Download the ZIP file
-          curl -L -H "Authorization: token $GH_TOKEN" -o submission.zip "$ZIP_URL"
-          
-          if [ ! -f "submission.zip" ] || [ ! -s "submission.zip" ]; then
-            echo "Failed to download ZIP file"
-            gh api repos/${{ github.repository }}/issues/${{ github.event.issue.number }}/comments \
-              --method POST \
-              -f body="❌ Failed to download ZIP file. Please try uploading again."
-            exit 1
-          fi
-          
-          # Extract ZIP
-          unzip -q submission.zip -d submission || {
-            echo "Failed to extract ZIP"
-            gh api repos/${{ github.repository }}/issues/${{ github.event.issue.number }}/comments \
-              --method POST \
-              -f body="❌ Invalid ZIP file. Please regenerate and re-upload."
-            exit 1
-          }
+          JSON_URL=$(echo "$ISSUE_BODY" | grep -oE 'https://github\.com/user-attachments/files/[0-9]+/[^)]+\.json' | head -1)
 
-          if [ ! -f "submission/submission.json" ]; then
-            echo "submission.json not found in ZIP"
-            gh api repos/${{ github.repository }}/issues/${{ github.event.issue.number }}/comments \
-              --method POST \
-              -f body="❌ Invalid ZIP file: submission.json not found. Please regenerate and re-upload."
+          if [ -z "$JSON_URL" ]; then
+            gh issue comment ${{ github.event.issue.number }} -b "No JSON attachment found. Please attach a .json file from the submission form."
             exit 1
           fi
+
+          curl -L -o submission.json "$JSON_URL"
 
       - name: Import submission
         id: import
+        run: uv run python scripts/import_submission.py submission.json
+
+      - name: Commit and push
         run: |
-          uv run python scripts/import_submission.py submission/submission.json
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "${{ steps.import.outputs.commit_msg }}"
+          git push
 
-      - name: Create Pull Request
-        id: pr
-        uses: peter-evans/create-pull-request@v7
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          commit-message: "${{ steps.import.outputs.commit_msg }}"
-          branch: "submission/${{ steps.import.outputs.slug }}"
-          delete-branch: true
-          title: "${{ steps.import.outputs.pr_title }}"
-          body: |
-            ## Issue Reference
-
-            Closes #${{ github.event.issue.number }}
-
-            ---
-
-            ${{ steps.import.outputs.warnings }}
-
-            ---
-
-            ### Checklist
-            - [ ] Company name is accurate
-            - [ ] Contact information verified
-            - [ ] Taxonomies are correct
-            - [ ] No duplicate entry exists
-          labels: submission
-
-      - name: Add processed label
+      - name: Comment and close issue
         if: success()
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          gh api repos/${{ github.repository }}/issues/${{ github.event.issue.number }}/labels \
-            --method POST \
-            --input - <<< '{"labels":["processed"]}'
+          COMMIT_SHA=$(git rev-parse HEAD)
+          SHORT_SHA=$(git rev-parse --short HEAD)
+          gh issue comment ${{ github.event.issue.number }} -b "Committed: [\`$SHORT_SHA\`](https://github.com/${{ github.repository }}/commit/$COMMIT_SHA)
 
-      - name: Comment success on issue
-        if: success()
-        uses: actions/github-script@v7
-        with:
-          script: |
-            github.rest.issues.createComment({
-              issue_number: context.issue.number,
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              body: '✅ Pull request created: #' + '${{ steps.pr.outputs.pull_request_number }}' + '\n\nPlease review the PR and merge if the changes look correct.'
-            });
+          Company page will be live after deployment: https://wagov-dtt.github.io/defencewest-site/company/${{ steps.import.outputs.slug }}/"
+          gh issue close ${{ github.event.issue.number }}
 
-      - name: Close issue
-        if: success()
-        uses: actions/github-script@v7
-        with:
-          script: |
-            github.rest.issues.update({
-              issue_number: context.issue.number,
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              state: 'closed'
-            });
-
-      - name: Comment failure on issue
+      - name: Comment failure
         if: failure()
-        uses: actions/github-script@v7
-        with:
-          script: |
-            github.rest.issues.createComment({
-              issue_number: context.issue.number,
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              body: '❌ Submission import failed.\n\nError: ' + context.job.status + '\n\nPlease check the ZIP file and try again, or contact the team for assistance.'
-            });
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh issue comment ${{ github.event.issue.number }} -b "Submission import failed. Please check the JSON file and try again, or contact the team for assistance."

@@ -106,7 +106,7 @@ Taxonomy keys map to display names via `data/taxonomies.yaml`.
 
 - `layouts/index.html` - Directory page with filterable company cards
 - `layouts/page/map.html` - MapLibre GL map (standalone iframe, uses OSM vector tiles)
-- `layouts/page/submit.html` - Company submission form (Squire editor, S3 upload)
+- `layouts/page/submit.html` - Company submission form (Squire editor, JSON download)
 - `layouts/partials/company-card.html` - Shared card component (directory + map)
 - `layouts/partials/filters.html` - Shared filter sidebar
 - `layouts/company/single.html` - Company detail page
@@ -263,11 +263,9 @@ uv run python scripts/import_submission.py path/to/submission.json
 - Extracts base64-encoded logo from submission JSON and saves with ImageMagick optimization
 - Validates taxonomy values against `data/taxonomies.yaml`
 - Detects potential duplicate companies by name similarity
-- Sanitizes user input for git commit messages and PR titles
+- Sanitizes user input for git commit messages
 - Prevents path traversal attacks using `pathvalidate` library
 - Validates URLs and emails using `validators` library
-
-The GitHub workflow `.github/workflows/process-submission.yml` automates this process - it processes submissions attached to GitHub issues and creates PRs for review.
 
 ### config.py
 
@@ -287,33 +285,11 @@ Shared configuration used by all scripts:
 ## Submission Flow
 
 1. User fills form at `/submit/` (or `/submit/?edit=company-slug` for edits)
-2. User downloads ZIP file containing `submission.json` (and logo if uploaded)
-3. User creates a GitHub issue with the "submission" label and attaches the ZIP file
-4. GitHub Actions workflow automatically processes the submission:
-   - Downloads and extracts the ZIP attachment
-   - Runs `import_submission.py` to create/update company files
-   - Creates a pull request for review
-   - Adds "processed" label to prevent re-processing
-   - Comments on the issue with the PR link
-   - Closes the issue
-5. Admin reviews and merges the PR
-6. Company appears on the site after next deployment
+2. User downloads JSON and emails to defencewest@dpc.wa.gov.au
+3. Admin runs `uv run python scripts/import_submission.py submission.json`
 
-### GitHub Workflow
-
-The workflow `.github/workflows/process-submission.yml` handles automatic processing:
-
-**Triggers:** Issues opened with "submission" label
-
-**Idempotency:** Issues with "processed" label are skipped
-
-**Process:**
-1. Downloads ZIP attachment from issue body
-2. Validates submission.json format
-3. Imports company data and logo
-4. Creates PR with sanitized commit message
-5. Labels issue as "processed" and closes it
+GitHub issues with `approved` label also trigger automatic import via CI.
 
 ## Adding/Editing Companies
 
-See [README.md](README.md#addingediting-companies) for details.
+See [CONTRIBUTING.md](CONTRIBUTING.md) for details.
