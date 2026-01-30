@@ -478,12 +478,13 @@
 
   function buildSubmission() {
     const taxonomies = getTaxonomyValues();
-    return {
+    const submission = {
       type: editSlug ? 'update' : 'new',
-      slug: editSlug || getValue('field-name').toLowerCase().replace(/[^a-z0-9]+/g, '-').slice(0, 50),
       company: { name: getValue('field-name'), website: getValue('field-website'), phone: getValue('field-phone'), email: getValue('field-email'), address: getValue('field-address'), latitude: getValue('field-latitude'), longitude: getValue('field-longitude'), contact_name: getValue('field-contact-name'), contact_title: getValue('field-contact-title'), is_sme: getChecked('field-is-sme'), is_prime: getChecked('field-is-prime'), ...taxonomies },
       content_html: editor.getHTML(), logo: logoBase64, submitted_at: new Date().toISOString()
     };
+    if (editSlug) submission.slug = editSlug;
+    return submission;
   }
 
   function generateJSON(submission) {
@@ -492,7 +493,7 @@
     const url = window.URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
-    a.download = `${submission.slug}-submission.json`;
+    a.download = submission.slug ? `${submission.slug}-submission.json` : 'submission.json';
     a.click();
     window.URL.revokeObjectURL(url);
   }
