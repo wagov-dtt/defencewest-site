@@ -3,35 +3,32 @@
   
   Reusable card component demonstrating several patterns:
   
-  1. Pre-computed Data: Overview text and filter data are computed at build
-     time (see scripts/preprocess.py) and stored in data/computed.yaml.
-     This avoids runtime string manipulation and enables instant filtering.
-  
-  2. Progressive Enhancement: Cards are rendered as semantic HTML with all
+  1. Progressive Enhancement: Cards are rendered as semantic HTML with all
      content visible. JavaScript enhances with filtering, but content is
      accessible without JS.
   
-  3. Data Attributes for JS: Filter data embedded in data-* attributes
+  2. Data Attributes for JS: Filter data embedded in data-* attributes
      enables client-side filtering without API calls:
      - data-search: lowercase text for search matching
-     - data-f: pipe-separated taxonomy values for filter matching
+     - data-{taxonomy}: pipe-separated values for filter matching
   
-  4. Lazy Loading: Images use loading="lazy" for performance
+  3. Lazy Loading: Images use loading="lazy" for performance
   
-  5. Accessible Images: Logo images use empty alt="" (decorative) since
+  4. Accessible Images: Logo images use empty alt="" (decorative) since
      the company name is provided as text content.
   
   Params: 
     - .company (required): company data object (frontmatter + slug)
-    - .computed (required): pre-computed data from data/computed.yaml
     - .mode (optional): "directory" (default), "map", or "popup"
 */}}
 {{- $company := .company -}}
-{{- $computed := .computed -}}
 {{- $mode := .mode | default "directory" -}}
+
+{{/* Compute search text and truncated overview inline */}}
+{{- $search_text := printf "%s %s" $company.name ($company.overview | default "") | lower -}}
+{{- $overview_short := $company.overview | default "" | plainify | truncate 300 -}}
 {{- $isMap := eq $mode "map" -}}
 {{- $isPopup := eq $mode "popup" -}}
-{{- $filters := $computed.filter_data -}}
 
 {{/* Simple derivations stay in Hugo */}}
 {{- $logoPath := printf "/logos/%s.png" $company.slug -}}
@@ -56,8 +53,8 @@
         {{- if $company.is_indigenous_owned }}<small class="highlight">Indigenous</small>{{ end -}}
         {{- if $company.is_veteran_owned }}<small class="highlight">Veteran</small>{{ end -}}
       </div>
-      {{- with $computed.overview_short }}
-      <p class="overview"><small title="{{ $company.overview }}">{{ . | markdownify }}</small></p>
+      {{- with $overview_short }}
+      <p class="overview"><small title="{{ $company.overview }}">{{ . }}</small></p>
       {{- end }}
     </article>
   </a>
@@ -66,10 +63,15 @@
 {{/* Directory/Map mode: full card with wrapper and data attributes */}}
 <div class="{{ if $isMap }}map-marker{{ else }}company-item{{ end }}"
      data-slug="{{ $company.slug }}"
-     data-search="{{ $computed.search_text }}"
-     data-f="{{ $computed.filter_data }}"
-     {{- with $company.latitude }} data-lat="{{ . }}"{{ end -}}
-     {{- with $company.longitude }} data-lng="{{ . }}"{{ end -}}>
+     data-search="{{ $search_text }}"
+     {{- with $company.stakeholders }} data-stakeholders="{{ delimit . "|" }}"{{ end }}
+     {{- with $company.capability_streams }} data-capability_streams="{{ delimit . "|" }}"{{ end }}
+     {{- with $company.capability_domains }} data-capability_domains="{{ delimit . "|" }}"{{ end }}
+     {{- with $company.industrial_capabilities }} data-industrial_capabilities="{{ delimit . "|" }}"{{ end }}
+     {{- with $company.regions }} data-regions="{{ delimit . "|" }}"{{ end }}
+     {{- with $company.ownerships }} data-ownerships="{{ delimit . "|" }}"{{ end }}
+     {{- with $company.latitude }} data-lat="{{ . }}"{{ end }}
+     {{- with $company.longitude }} data-lng="{{ . }}"{{ end }}>
 
   {{- if $isMap }}
   <span class="marker-dot"></span>
@@ -95,8 +97,8 @@
         {{- if $company.is_veteran_owned }}<small class="highlight">Veteran</small>{{ end -}}
       </div>
 
-      {{- if and $computed.overview_short (not $isMap) }}
-      <p class="overview"><small title="{{ $company.overview }}">{{ $computed.overview_short | markdownify }}</small></p>
+      {{- if and $overview_short (not $isMap) }}
+      <p class="overview"><small title="{{ $company.overview }}">{{ $overview_short }}</small></p>
       {{- end }}
     </article>
   </a>

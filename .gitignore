@@ -15,9 +15,6 @@ data/cache/
 .lycheecache
 .cache/
 
-# Generated data (from preprocess.py)
-data/computed.yaml
-
 # Generated exports
 static/maps
 static/companies.csv

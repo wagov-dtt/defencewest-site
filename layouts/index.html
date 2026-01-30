@@ -1,5 +1,4 @@
-{{ define "main" }} {{/* Load all company pages and computed data */}} {{-
-$computed := .Site.Data.computed -}} {{- $companies := slice -}} {{- range where
+{{ define "main" }} {{/* Load all company pages */}} {{- $companies := slice -}} {{- range where
 .Site.RegularPages "Section" "company" -}} {{- if ne .File.BaseFileName "_template" -}}
 {{- $company := .Params -}} {{-
 $company = merge $company (dict "slug" .File.BaseFileName) -}} {{- $companies =
@@ -12,7 +11,7 @@ $companies | append $company -}} {{- end -}} {{- end -}} {{- $companies = sort $
       <li>Directory</li>
       <li id="breadcrumb-filters" class="hidden">
         <button type="button" class="filter-badge" id="clear-filters">
-          <span class="filter-count">0</span> filters ✕
+          <span class="filter-count">0</span> filters x
         </button>
       </li>
       <li>
@@ -61,7 +60,7 @@ $companies | append $company -}} {{- end -}} {{- end -}} {{- $companies = sort $
     <!-- Cards Grid -->
     <div class="grid-auto" id="company-grid" tabindex="-1">
       {{- range $companies }} {{ partial "company-card.html" (dict "company" .
-      "computed" (index $computed .slug) "mode" "directory") }} {{- end }}
+      "mode" "directory") }} {{- end }}
     </div>
 
     <!-- Map iframe (hidden by default) -->
@@ -98,6 +97,9 @@ $companies | append $company -}} {{- end -}} {{- end -}} {{- $companies = sort $
   (function() {
     "use strict";
 
+    const TAXONOMIES = ['stakeholders', 'capability_streams', 'capability_domains', 
+                        'industrial_capabilities', 'regions', 'ownerships'];
+
     // === DOM ===
     const $ = (s) => document.querySelector(s);
     const $$ = (s) => [...document.querySelectorAll(s)];
@@ -118,10 +120,12 @@ $companies | append $company -}} {{- end -}} {{- end -}} {{- $companies = sort $
     // === Get Filters from URL ===
     function getFiltersFromURL() {
       const params = new URLSearchParams(location.search);
-      return {
-        search: (params.get("q") || "").trim().toLowerCase(),
-        f: params.getAll("f"),
-      };
+      const filters = { search: (params.get("q") || "").trim().toLowerCase() };
+      TAXONOMIES.forEach(tax => {
+        const vals = params.getAll(tax);
+        if (vals.length) filters[tax] = vals;
+      });
+      return filters;
     }
 
     // === Match Card Against Filters ===
@@ -131,9 +135,11 @@ $companies | append $company -}} {{- end -}} {{- end -}} {{- $companies = sort $
         if (!text.includes(filters.search)) return false;
       }
 
-      if (filters.f.length) {
-        const cardFilters = (dataset.f || "").toLowerCase().split("|");
-        if (!filters.f.every(f => cardFilters.includes(f.toLowerCase()))) return false;
+      for (const tax of TAXONOMIES) {
+        const required = filters[tax];
+        if (!required?.length) continue;
+        const has = (dataset[tax] || "").split("|");
+        if (!required.every(v => has.includes(v))) return false;
       }
 
       return true;
@@ -159,7 +165,7 @@ $companies | append $company -}} {{- end -}} {{- end -}} {{- $companies = sort $
 
     form.addEventListener("submit", handleFormSubmit);
 
-    // Checkbox changes trigger form submit (map toggle already handled by form submit)
+    // Checkbox changes trigger form submit
     form.addEventListener("change", (e) => {
       if (e.target.type === "checkbox" && e.target.id !== "map-toggle") {
         form.dispatchEvent(new Event('submit'));
@@ -185,7 +191,7 @@ $companies | append $company -}} {{- end -}} {{- end -}} {{- $companies = sort $
     }
 
     mapToggle?.addEventListener("change", () => {
-      setView(mapToggle.checked, true);
+      setView(mapToggle.checked);
       form.dispatchEvent(new Event('submit'));
     });
 
@@ -241,7 +247,8 @@ $companies | append $company -}} {{- end -}} {{- end -}} {{- $companies = sort $
         noResults.style.display = visibleCount === 0 ? "block" : "none";
       }
 
-      const activeFilters = filters.f.length + (filters.search ? 1 : 0);
+      const activeFilters = TAXONOMIES.reduce((n, tax) => n + (filters[tax]?.length || 0), 0)
+                          + (filters.search ? 1 : 0);
       if (breadcrumbFilters) {
         breadcrumbFilters.classList.toggle("hidden", activeFilters === 0);
         if (filterCountEl) filterCountEl.textContent = activeFilters;
@@ -264,29 +271,10 @@ $companies | append $company -}} {{- end -}} {{- end -}} {{- $companies = sort $
       }
     });
 
-    // === Map Toggle ===
-    function isMapView() {
-      return mapToggle?.checked;
-    }
-
-    function setView(showMap) {
-      gridEl.classList.toggle("hidden", showMap);
-      mapIframe.classList.toggle("hidden", !showMap);
-
-      if (showMap && !mapLoaded) {
-        mapIframe.src = "./map/";
-        mapLoaded = true;
-      }
-
-      showMap ? updateMap() : updateCards();
-      if (showMap && noResults) noResults.style.display = "none";
-    }
-
     mapIframe.addEventListener("load", updateMap);
 
     // === Handle Back/Forward Browser Navigation ===
     window.addEventListener("popstate", () => {
-      // Browser already updated form from URL params
       updateCards();
       updateMap();
     });
@@ -363,13 +351,13 @@ $companies | append $company -}} {{- end -}} {{- end -}} {{- $companies = sort $
     });
 
     // === Init ===
-    // Manually populate form from URL params to ensure checkboxes are checked
+    // Populate checkboxes from URL params
     const params = new URLSearchParams(location.search);
-    const filterValues = params.getAll("f");
-
-    // Update checkboxes from URL
-    form.querySelectorAll('input[name="f"][type="checkbox"]').forEach(checkbox => {
-      checkbox.checked = filterValues.includes(checkbox.value);
+    TAXONOMIES.forEach(tax => {
+      const values = params.getAll(tax);
+      form.querySelectorAll(`input[name="${tax}"]`).forEach(cb => {
+        cb.checked = values.includes(cb.value);
+      });
     });
 
     // Handle map toggle state
@@ -377,7 +365,7 @@ $companies | append $company -}} {{- end -}} {{- end -}} {{- $companies = sort $
       const initialMapState = params.get("view") === "map";
       if (initialMapState !== mapToggle.checked) {
         mapToggle.checked = initialMapState;
-        setView(initialMapState, false);
+        setView(initialMapState);
       }
     }
 

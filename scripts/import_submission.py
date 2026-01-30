@@ -34,6 +34,8 @@ from config import (
     COMPANY_DIR,
     LOGOS_DIR,
     TAXONOMIES,
+    SCALAR_FIELDS,
+    BOOLEAN_FIELDS,
     clean_slug,
     is_in_wa,
     set_output,
@@ -284,25 +286,15 @@ def build_markdown_file(submission: dict) -> str:
         "date": submission.get("submitted_at", "")[:10] or "2025-01-01",
     }
 
-    # Add optional scalar fields
-    for field in [
-        "overview",
-        "website",
-        "phone",
-        "email",
-        "address",
-        "latitude",
-        "longitude",
-        "contact_name",
-        "contact_title",
-    ]:
+    # Add optional scalar fields (exclude 'name' which is already added)
+    for field in SCALAR_FIELDS - {"name"}:
         if submission.get(field):
             frontmatter[field] = submission[field]
 
     # Add boolean flags (only if true)
-    for flag in ["is_sme", "is_prime"]:
-        if submission.get(flag):
-            frontmatter[flag] = True
+    for field in BOOLEAN_FIELDS:
+        if submission.get(field):
+            frontmatter[field] = True
 
     # Add taxonomy lists
     for taxonomy in TAXONOMIES:

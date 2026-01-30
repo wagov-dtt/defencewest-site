@@ -86,21 +86,25 @@
 
   <!-- Pre-rendered company cards (hidden, used by JS for popups) -->
   <div id="company-cards" hidden>
-    {{- $computed := .Site.Data.computed -}}
     {{- range where .Site.RegularPages "Section" "company" -}}
       {{- if ne .File.BaseFileName "_template" -}}
       {{- $company := .Params -}}
       {{- if and $company.latitude $company.longitude -}}
         {{- $slug := .File.BaseFileName -}}
-        {{- $comp := index $computed $slug -}}
         {{- $companyWithSlug := merge $company (dict "slug" $slug) -}}
+        {{- $search_text := printf "%s %s" $company.name ($company.overview | default "") | lower -}}
         <template
           data-slug="{{ $slug }}"
           data-lat="{{ $company.latitude }}"
           data-lng="{{ $company.longitude }}"
-          data-search="{{ $comp.search_text }}"
-          data-f="{{ $comp.filter_data }}"
-        >{{ partial "company-card.html" (dict "company" $companyWithSlug "computed" $comp "mode" "popup") }}</template>
+          data-search="{{ $search_text }}"
+          {{- with $company.stakeholders }} data-stakeholders="{{ delimit . "|" }}"{{ end }}
+          {{- with $company.capability_streams }} data-capability_streams="{{ delimit . "|" }}"{{ end }}
+          {{- with $company.capability_domains }} data-capability_domains="{{ delimit . "|" }}"{{ end }}
+          {{- with $company.industrial_capabilities }} data-industrial_capabilities="{{ delimit . "|" }}"{{ end }}
+          {{- with $company.regions }} data-regions="{{ delimit . "|" }}"{{ end }}
+          {{- with $company.ownerships }} data-ownerships="{{ delimit . "|" }}"{{ end }}
+        >{{ partial "company-card.html" (dict "company" $companyWithSlug "mode" "popup") }}</template>
       {{- end -}}
       {{- end -}}
     {{- end -}}
@@ -111,34 +115,43 @@
   (function() {
     "use strict";
 
+    const TAXONOMIES = ['stakeholders', 'capability_streams', 'capability_domains', 
+                        'industrial_capabilities', 'regions', 'ownerships'];
     const PERTH = [115.8605, -31.9505];
     const MAP_STYLE = "{{ $mapStyleUrl }}";
 
     // Build company data from DOM templates
-    const companies = [...document.querySelectorAll("#company-cards template")].map(t => ({
-      lat: parseFloat(t.dataset.lat),
-      lng: parseFloat(t.dataset.lng),
-      search: t.dataset.search,
-      f: t.dataset.f,
-      popup: t.innerHTML,
-    }));
+    const companies = [...document.querySelectorAll("#company-cards template")].map(t => {
+      const data = {
+        lat: parseFloat(t.dataset.lat),
+        lng: parseFloat(t.dataset.lng),
+        search: t.dataset.search,
+        popup: t.innerHTML,
+      };
+      TAXONOMIES.forEach(tax => { data[tax] = t.dataset[tax] || ""; });
+      return data;
+    });
 
     // Filter matching
     function matchesFilters(c, filters) {
       if (filters.search && !c.search.includes(filters.search)) return false;
-      if (filters.f.length) {
-        const cardFilters = (c.f || "").toLowerCase().split("|");
-        if (!filters.f.every(f => cardFilters.includes(f.toLowerCase()))) return false;
+      for (const tax of TAXONOMIES) {
+        const required = filters[tax];
+        if (!required?.length) continue;
+        const has = (c[tax] || "").split("|");
+        if (!required.every(v => has.includes(v))) return false;
       }
       return true;
     }
 
     function getFiltersFromURL() {
       const params = new URLSearchParams(window.location.search);
-      return {
-        search: (params.get("q") || "").toLowerCase(),
-        f: params.getAll("f"),
-      };
+      const filters = { search: (params.get("q") || "").toLowerCase() };
+      TAXONOMIES.forEach(tax => {
+        const vals = params.getAll(tax);
+        if (vals.length) filters[tax] = vals;
+      });
+      return filters;
     }
 
     const map = new maplibregl.Map({

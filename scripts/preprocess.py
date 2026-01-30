@@ -3,7 +3,6 @@
 Preprocess company data for directory site.
 
 Generates:
-  - data/computed.yaml: Pre-calculated values for Hugo templates
   - static/maps/*.png: Static minimap images for companies
   - static/maps/terms/*.png: Static map images for taxonomy terms
   - static/companies.csv, .xlsx, .json: Export files
@@ -13,7 +12,6 @@ Usage:
 """
 
 import json
-import re
 import time
 from datetime import datetime, timedelta
 from pathlib import Path
@@ -39,7 +37,6 @@ from config import (
     MAP_WIDTH,
     MAP_HEIGHT,
     MAP_MARKER_LAYERS,
-    OVERVIEW_MAX_LENGTH,
     make_progress,
 )
 
@@ -93,28 +90,6 @@ def render_map(
     time.sleep(wait)
     output.write_bytes(m.renderPNG())
     return True
-
-
-# --- Hugo computed data ---
-
-
-def truncate_overview(text: str, max_length: int = OVERVIEW_MAX_LENGTH) -> str:
-    """Truncate text to max length at word boundary."""
-    if not text:
-        return ""
-    text = re.sub(r"\s+", " ", text).strip()
-    if len(text) <= max_length:
-        return text
-    truncated = text[: max_length - 1]
-    return (
-        truncated.rsplit(" ", 1)[0] + "..." if " " in truncated else truncated + "..."
-    )
-
-
-def generate_filter_data(fm: dict) -> str | None:
-    """Generate filter string with taxonomy:key values."""
-    parts = [f"{field}:{key}" for field in TAXONOMIES for key in fm.get(field, [])]
-    return "|".join(parts) if parts else None
 
 
 # --- Export functions ---
@@ -218,7 +193,6 @@ def export_json(companies: list[dict], output: Path) -> None:
 
 def main():
     companies = []
-    computed = {}
     company_locations: list[tuple[str, float, float]] = []
     term_locations: dict[str, dict[str, list[tuple[float, float]]]] = {
         tax: {} for tax in TAXONOMIES
@@ -239,16 +213,6 @@ def main():
         company["_content"] = post.content
         companies.append(company)
 
-        # Computed data for Hugo
-        name = fm.get("name", "")
-        overview = str(fm.get("overview", ""))
-        data = {"search_text": f"{name} {overview}".lower().strip()}
-        if overview_short := truncate_overview(overview):
-            data["overview_short"] = overview_short
-        if filter_data := generate_filter_data(fm):
-            data["filter_data"] = filter_data
-        computed[slug] = data
-
         # Map locations
         lat, lng = fm.get("latitude"), fm.get("longitude")
         if lat and lng:
@@ -260,14 +224,6 @@ def main():
                     )
 
     print(f"Processed {len(companies)} companies")
-
-    # Write computed YAML
-    DATA_DIR.mkdir(parents=True, exist_ok=True)
-    with open(DATA_DIR / "computed.yaml", "w") as f:
-        yaml.dump(
-            computed, f, default_flow_style=False, allow_unicode=True, sort_keys=True
-        )
-    print("Generated data/computed.yaml")
 
     # Export files
     taxonomies = load_taxonomies()

@@ -16,8 +16,6 @@ mise run build   # Build static site (includes link check)
 content/company/*.md   # Company pages (328 files)
 data/
   taxonomies.yaml      # Filter categories (key -> display name)
-  computed.yaml        # Generated: pre-computed values (gitignored)
-  counts.yaml          # Generated: taxonomy counts (gitignored)
 hugo.toml              # All site config (theme, CDN URLs, map settings)
 scripts/
   config.py            # Shared config, paths, constants, slug utilities
@@ -216,17 +214,10 @@ uv run python scripts/preprocess.py --dry-run  # Preview changes
 ```
 
 **Generates:**
-- `data/computed.yaml` - Pre-calculated values for Hugo templates
-- `data/counts.yaml` - Taxonomy value counts
 - `static/maps/*.png` - Static minimap images for companies
 - `static/maps/terms/*.png` - Static map images for taxonomy terms
 - `static/companies.json` - All company data for submit page
 - `static/companies.csv`, `.xlsx` - Export files
-
-**Computed fields:**
-- `overview_short` - First 300 chars for card display
-- `search_text` - Lowercase name + overview for filtering
-- `filter_data` - Pre-slugified taxonomy values
 
 Static minimaps are generated using `pymgl` with OSM Shortbread vector tiles.
 

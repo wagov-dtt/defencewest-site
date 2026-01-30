@@ -1,7 +1,6 @@
 {{ define "main" }}
 {{- $company := .Params -}}
 {{- $slug := .File.BaseFileName -}}
-{{- $computed := index .Site.Data.computed $slug -}}
 {{- $taxonomies := .Site.Data.taxonomies -}}
 
 {{/* Simple derivations stay in Hugo */}}

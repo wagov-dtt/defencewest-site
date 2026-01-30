@@ -76,6 +76,21 @@ TAXONOMIES = [
     "ownerships",
 ]
 
+# Field categories for form/import handling
+SCALAR_FIELDS = {
+    "name",
+    "overview",
+    "website",
+    "phone",
+    "email",
+    "address",
+    "latitude",
+    "longitude",
+    "contact_name",
+    "contact_title",
+}
+BOOLEAN_FIELDS = {"is_sme", "is_prime"}
+
 # Map rendering settings
 MAP_WIDTH = 420
 MAP_HEIGHT = 240
@@ -93,9 +108,6 @@ MAP_MARKER_LAYERS = [
         "paint": {"circle-radius": 6, "circle-color": "#1095c1"},
     },
 ]
-
-# Content processing
-OVERVIEW_MAX_LENGTH = 300
 
 
 def load_taxonomies() -> dict[str, list[str]]:

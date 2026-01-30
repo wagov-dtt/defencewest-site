@@ -6,15 +6,17 @@ Related: [DGOV DTT ADRs](https://adr.dtt.digital.wa.gov.au)
 
 ## Context
 
-Directory has 300+ companies with search, filtering, and maps. Runtime computation would be slow and hurt accessibility.
+Directory has 300+ companies with search, filtering, and maps. Pre-rendering maps avoids runtime computation.
 
 ## Decision
 
-Pre-compute derived data in Python before Hugo build:
+Pre-generate static assets in Python before Hugo build:
 
-- **`data/computed.yaml`**: Search text, truncated overviews, filter data
 - **`static/maps/*.png`**: Pre-rendered minimap images
+- **`static/companies.json`**: Export file for submit page edit mode
 - **No runtime computation**: All data ready in HTML
+
+Note: Search text and truncated overviews are now computed inline by Hugo templates using built-in `lower` and `truncate` functions.
 
 ## Consequences
 
@@ -24,5 +26,5 @@ Pre-compute derived data in Python before Hugo build:
 - Simpler client-side code
 
 **Negative:**
-- Extra build step required
-- Must rebuild to update computed data
+- Extra build step required for maps
+- Must rebuild to update map images
