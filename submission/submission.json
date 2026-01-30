@@ -1,0 +1,55 @@
+{
+  "type": "update",
+  "slug": "thales",
+  "company": {
+    "name": "Thales Australia",
+    "website": "https://www.thalesgroup.com/en/countries/asia-pacific/australia",
+    "phone": "+61 8 9550 7513",
+    "email": "Gregg.Bohan@thalesgroup.com.au",
+    "address": "7 Pickard Avenue, Rockingham WA 6168",
+    "latitude": "-32.2725999",
+    "longitude": "115.7517411",
+    "contact_name": "Gregg Bohan",
+    "contact_title": "Underwater Systems Programmes Manager",
+    "is_sme": false,
+    "is_prime": true,
+    "capability_streams": [
+      "electronic",
+      "land",
+      "maritime",
+      "research"
+    ],
+    "stakeholders": [
+      "defence"
+    ],
+    "regions": [
+      "perth-metropolitan"
+    ],
+    "capability_domains": [
+      "air-traffic",
+      "airborne",
+      "armour",
+      "c2",
+      "communications",
+      "cyber",
+      "destroyers",
+      "electronic",
+      "frigates",
+      "ict",
+      "intelligence",
+      "land",
+      "maritime",
+      "minor",
+      "missile",
+      "reconnaissance",
+      "science",
+      "special",
+      "stable",
+      "submarines",
+      "training"
+    ]
+  },
+  "content_html": "<h2>Overview</h2><p>Thales is a global technology leader in the aerospace, transport, defence and security markets. We have 64,000 employees in 56 countries, and reported sales of $14.9 billion in 2016. Drawing on our over 25,000 engineers and researchers, Thales has a unique capability to design and deploy equipment, systems and services to meet the most complex military and security requirements.<br><br>Thales also has a&nbsp;Digital Competence Centre (with software and systems engineers.)</p><p dir=\"auto\" style=\"box-sizing: border-box; margin-top: 0px; margin-bottom: 0px !important; color: rgb(31, 35, 40); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, &quot;Noto Sans&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;\">Location: Level 4, 170 Railway Pde, West Leederville<br style=\"box-sizing: border-box;\">Contact: Ben Hicks, Engineering Manager, ben.hicks[at]thalesgroup.com.au<br></p><h2>Capabilities</h2><p>Thales in Australia is a trusted partner of the Australian Defence Force, and has a commercial presence across the air traffic management, ground transport systems and security systems/services markets. Our expertise in the military sector ranges across protected mobility vehicles, naval support services and integrated communications solutions, air traffic management systems, cyber security solutions and transport systems for the commercial sector. Our capabilities are recognised not just in terms\nof equipment, but also our systems integration, prime contracting and through life support expertise.</p>",
+  "logo": null,
+  "submitted_at": "2026-01-30T01:29:30.302Z"
+}
