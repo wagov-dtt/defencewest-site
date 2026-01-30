@@ -9,6 +9,8 @@ on:
 permissions:
   contents: write
   issues: write
+  pages: write
+  id-token: write
 
 jobs:
   process:
@@ -44,6 +46,22 @@ jobs:
         id: import
         run: uv run python scripts/import_submission.py submission.json
 
+      - name: Install system dependencies
+        run: mise run setup-ci
+
+      - name: Start Xvfb
+        run: |
+          Xvfb :99 -screen 0 1024x768x24 &
+          echo "DISPLAY=:99" >> $GITHUB_ENV
+
+      - name: Build
+        run: mise run build
+
+      - name: Upload build artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: public/
+
       - name: Commit and push
         run: |
           git config user.name "github-actions[bot]"
@@ -52,6 +70,9 @@ jobs:
           git commit -m "${{ steps.import.outputs.commit_msg }}"
           git push
 
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v4
+
       - name: Comment and close issue
         if: success()
         env:
@@ -59,9 +80,9 @@ jobs:
         run: |
           COMMIT_SHA=$(git rev-parse HEAD)
           SHORT_SHA=$(git rev-parse --short HEAD)
-          gh issue comment ${{ github.event.issue.number }} -b "Committed: [\`$SHORT_SHA\`](https://github.com/${{ github.repository }}/commit/$COMMIT_SHA)
+          gh issue comment ${{ github.event.issue.number }} -b "Deployed: [\`$SHORT_SHA\`](https://github.com/${{ github.repository }}/commit/$COMMIT_SHA)
 
-          Company page will be live after deployment: https://wagov-dtt.github.io/defencewest-site/company/${{ steps.import.outputs.slug }}/"
+          Company page: https://wagov-dtt.github.io/defencewest-site/company/${{ steps.import.outputs.slug }}/"
           gh issue close ${{ github.event.issue.number }}
 
       - name: Comment failure

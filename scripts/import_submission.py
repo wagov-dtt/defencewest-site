@@ -342,8 +342,9 @@ def import_submission(submission: dict) -> tuple[str, str, bool, list[str]]:
     company = submission["company"]
     company_name = company["name"]
 
-    # Determine slug
-    slug = submission.get("slug") or clean_slug(company_name)
+    # Determine slug - only preserve existing slug for updates, otherwise use clean_slug
+    is_update = submission.get("type") == "update" and submission.get("slug")
+    slug = submission["slug"] if is_update else clean_slug(company_name)
     is_new = not (COMPANY_DIR / f"{slug}.md").exists()
 
     # Handle slug collision for new submissions
