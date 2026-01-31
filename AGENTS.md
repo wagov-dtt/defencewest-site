@@ -113,37 +113,28 @@ Taxonomy keys map to display names via `data/taxonomies.yaml`.
 
 ## Grid System
 
-Custom 12-column grid system in `styles.css` (uses `.row` to avoid conflict with PicoCSS `.grid`):
+We use a custom build of PicoCSS with 12-column grid support (see [pico#720](https://github.com/picocss/pico/pull/720)):
 
 ```html
 <!-- 12-column layout -->
-<div class="row">
-  <aside class="col-3 col-m-4 col-s-12">Sidebar</aside>
-  <main class="col-9 col-m-8 col-s-12">Content</main>
+<div class="grid">
+  <aside class="col-3 col-md-4">Sidebar</aside>
+  <main class="col-9 col-md-8">Content</main>
 </div>
 
 <!-- Auto-fit card grid -->
-<div class="grid-auto">
+<div class="grid">
   <article>Card 1</article>
   <article>Card 2</article>
-</div>
-
-<!-- PicoCSS simple grid (equal columns) -->
-<div class="grid">
-  <div>Column 1</div>
-  <div>Column 2</div>
 </div>
 ```
 
 **Classes:**
-- `.row` - 12-column container
-- `.col-1` to `.col-12` - column spans (default/large 1024px+)
-- `.col-m-1` to `.col-m-12` - medium screens (768-1023px)
-- `.col-s-1` to `.col-s-12` - small screens (<768px)
-- `.grid-auto` - auto-fit card grid with `--grid-min` CSS variable
-- `.grid` - PicoCSS native equal-column grid
+- `.grid` - Grid container with 12-column support (from custom Pico build)
+- `.col-1` to `.col-12` - column spans (default, 1024px+)
+- `.col-md-1` to `.col-md-12` - medium screens (768-1023px)
 
-Breakpoints align with PicoCSS: 768px, 1024px (Pico also uses 576px, 1280px, 1536px for font scaling).
+The vendored Pico build (`static/pico.slate.min.css`) includes the grid system.
 
 ## Filtering
 

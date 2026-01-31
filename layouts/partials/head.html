@@ -10,9 +10,9 @@
 
 <link rel="icon" href="{{ "favicon.ico" | relURL }}">
 
-{{- $picoTheme := .Site.Params.picoTheme | default "azure" -}}
-{{- $cdn := "https://cdn.jsdelivr.net/npm" -}}
-<link rel="stylesheet" href="{{ $cdn }}/@picocss/pico@2/css/pico.{{ $picoTheme }}.min.css">
+{{- $picoTheme := .Site.Params.picoTheme | default "slate" -}}
+{{- $cdn := .Site.Params.cdnUrl -}}
+<link rel="stylesheet" href="{{ printf "pico.%s.min.css" $picoTheme | relURL }}">
 <link rel="stylesheet" href="{{ $cdn }}/slim-select@3/dist/slimselect.css">
 <link rel="stylesheet" href="{{ "styles.css" | relURL }}">
 <script src="{{ $cdn }}/lucide@latest/dist/umd/lucide.min.js" defer></script>

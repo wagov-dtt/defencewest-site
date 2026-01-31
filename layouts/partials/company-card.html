@@ -29,6 +29,7 @@
 {{- $overview_short := $company.overview | default "" | plainify | truncate 300 -}}
 {{- $isMap := eq $mode "map" -}}
 {{- $isPopup := eq $mode "popup" -}}
+{{- $isDirectory := eq $mode "directory" -}}
 
 {{/* Simple derivations stay in Hugo */}}
 {{- $logoPath := printf "/logos/%s.png" $company.slug -}}
@@ -61,7 +62,9 @@
 </div>
 {{- else -}}
 {{/* Directory/Map mode: full card with wrapper and data attributes */}}
-<div class="{{ if $isMap }}map-marker{{ else }}company-item{{ end }}"
+{{/* For directory mode, include column classes so filtering hides the entire column */}}
+{{- $wrapperClass := cond $isMap "map-marker" "company-item col-12 col-md-4" -}}
+<div class="{{ $wrapperClass }}"
      data-slug="{{ $company.slug }}"
      data-search="{{ $search_text }}"
      {{- with $company.stakeholders }} data-stakeholders="{{ delimit . "|" }}"{{ end }}

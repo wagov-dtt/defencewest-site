@@ -34,9 +34,9 @@
   <!-- ===== VIEW MODE ===== -->
   <div id="view-mode">
     <!-- Main Content Area - Two Column Layout -->
-    <div class="row">
+    <div class="grid">
       <!-- Left Column: Content -->
-      <div class="col-8 col-m-12 content-column">
+      <div class="col-12 col-md-8 content-column">
         <h1>{{ $company.name }}</h1>
         {{- if or $company.is_prime $company.is_sme (len (.GetTerms "ownerships")) }}
         <p class="company-badges-inline">
@@ -52,7 +52,7 @@
       </div>
 
       <!-- Right Column: Company Info -->
-      <aside class="col-4 col-m-12 info-column">
+      <aside class="col-12 col-md-4 info-column">
         {{- if $logoUrl }}
         <article class="company-logo">
           <a href="{{ $company.website }}" title="{{ $company.name }}" target="_blank" rel="noopener">

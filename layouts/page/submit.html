@@ -1,570 +1,441 @@
 {{/*
-  Standalone submission page - uses PicoCSS with Squire editor
+  Submission page - extends baseof with Squire editor
   Downloads JSON file for email submission to DefenceWest
 */}}
-{{- $cdn := .Site.Params.cdnUrl -}}
+{{ define "main" }}
 {{- $taxonomies := .Site.Data.taxonomies -}}
-{{- $picoTheme := .Site.Params.picoTheme | default "slate" -}}
 {{- $adminEmail := .Site.Params.adminEmail -}}
-<!doctype html>
-<html lang="en" data-theme="light">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Submit | {{ .Site.Title }}</title>
-  <link rel="icon" href="{{ "favicon.ico" | relURL }}">
-  <link rel="stylesheet" href="{{ $cdn }}/@picocss/pico@2/css/pico.{{ $picoTheme }}.min.css">
-  <link rel="stylesheet" href="{{ "styles.css" | relURL }}">
-  <script src="{{ $cdn }}/lucide@latest/dist/umd/lucide.min.js" defer></script>
-  <style>
-    main.container { max-width: 1000px; }
-    .hidden { display: none !important; }
-    .required { color: var(--pico-del-color); }
-    
-    /* Form sections */
-    .form-section { margin-bottom: 1.5rem; }
-    .form-section h2 { margin-bottom: 1rem; font-size: 1.1rem; }
-    
-    /* Logo upload */
-    .logo-upload {
-      border: 2px dashed var(--pico-muted-border-color);
-      border-radius: var(--pico-border-radius);
-      padding: 1rem;
-      text-align: center;
-      min-height: 160px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-    }
-    .logo-upload { background: var(--pico-background-color); }
-    .logo-upload:hover, .logo-upload.dragover { border-color: var(--pico-primary); }
-    .upload-placeholder { color: var(--pico-color); }
-    .upload-placeholder svg { width: 40px; height: 40px; stroke: currentColor; display: block; margin: 0 auto 0.5rem; }
-    .upload-preview { position: relative; }
-    .upload-preview img { max-width: 140px; max-height: 120px; object-fit: contain; }
-    .remove-logo {
-      position: absolute; top: -8px; right: -8px;
-      width: 22px; height: 22px; padding: 0; margin: 0;
-      border-radius: 50%; border: none;
-      background: var(--pico-del-color); color: white;
-      font-size: 14px; line-height: 1; cursor: pointer;
-    }
-    
-    /* Address */
-    .address-row { display: flex; gap: 0.5rem; }
-    .address-row input { flex: 1; margin-bottom: 0; }
-    .address-row button { margin-bottom: 0; width: auto; }
-    #address-status { font-size: 0.85rem; margin-top: 0.25rem; }
-    #address-status.success { color: var(--pico-ins-color); }
-    #address-status.warning { color: var(--pico-mark-background-color); }
-    #address-status.error { color: var(--pico-del-color); }
-    
-    /* Actions */
-    .actions { display: flex; gap: 0.5rem; flex-wrap: wrap; }
-    
-    /* PicoCSS Dialog for link editor */
-    #link-dialog { max-width: 500px; }
-    #link-dialog button { margin-top: 1rem; }
-    
-    /* === Squire Editor === */
-    .editor-wrapper {
-      border: var(--pico-border-width) solid var(--pico-form-element-border-color);
-      border-radius: var(--pico-border-radius);
-      overflow: hidden;
-    }
-    .editor-wrapper:focus-within {
-      border-color: var(--pico-primary);
-      box-shadow: 0 0 0 var(--pico-outline-width) var(--pico-primary-focus);
-    }
-    .editor-toolbar {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.25rem;
-      padding: 0.5rem;
-      background: var(--pico-muted-background-color);
-      border-bottom: var(--pico-border-width) solid var(--pico-form-element-border-color);
-    }
-    .editor-toolbar button {
-      width: 2.25rem;
-      height: 2.25rem;
-      padding: 0;
-      margin: 0;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      background: var(--pico-background-color);
-      border: var(--pico-border-width) solid var(--pico-muted-border-color);
-      border-radius: var(--pico-border-radius);
-      color: var(--pico-color);
-      cursor: pointer;
-    }
-    .editor-toolbar button:hover {
-      background: var(--pico-primary-focus);
-      border-color: var(--pico-primary);
-      color: var(--pico-primary);
-    }
-    .editor-toolbar button.active {
-      background: var(--pico-primary);
-      color: var(--pico-primary-inverse);
-      border-color: var(--pico-primary);
-    }
-    .editor-toolbar button svg { width: 1rem; height: 1rem; }
-    .editor-toolbar .sep {
-      width: var(--pico-border-width);
-      background: var(--pico-muted-border-color);
-      margin: 0.25rem 0.375rem;
-      align-self: stretch;
-    }
-    .editor-content {
-      min-height: 200px;
-      padding: 1rem;
-      background: var(--pico-form-element-background-color);
-      color: var(--pico-color);
-      outline: none;
-      overflow-y: auto;
-    }
-    .editor-content h2 { font-size: 1.25rem; margin: 0.5em 0; }
-    .editor-content h3 { font-size: 1.1rem; margin: 0.5em 0; }
-    .editor-content p { margin: 0 0 0.5em; }
-    .editor-content ul, .editor-content ol { padding-left: 1.5em; margin: 0.5em 0; }
-    .editor-content a { color: var(--pico-primary); }
-  </style>
-</head>
-<body>
-  {{- partial "navbar.html" . -}}
-  <header class="container">
-    <nav aria-label="breadcrumb"><ul><li><a href="{{ "/" | relURL }}">Directory</a></li><li>Submit</li></ul></nav>
-    <h1 id="page-title">Submit New Listing</h1>
-    <p>Fill out the form below to submit a new company or update an existing listing. When complete, download your submission file and email it to <a href="mailto:{{ $adminEmail }}">{{ $adminEmail }}</a>.</p>
-    <p id="success-message" class="hidden">Download complete! Email the file to {{ $adminEmail }} to submit.</p>
-  </header>
 
-  <main class="container">
-    <form id="submit-form">
-      <!-- Company Details -->
-      <section class="form-section">
-        <h2>Company Information</h2>
-        <div class="row">
-          <div class="col-3 col-m-12 col-s-12">
-            <label for="logo-input">Logo</label>
-            <div class="logo-upload" id="logo-dropzone" role="button" aria-label="Upload logo">
-              <div class="upload-placeholder" id="logo-placeholder">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="m2.25 15.75 5.159-5.159a2.25 2.25 0 0 1 3.182 0l5.159 5.159m-1.5-1.5 1.409-1.409a2.25 2.25 0 0 1 3.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 0 0 1.5-1.5V6a1.5 1.5 0 0 0-1.5-1.5H3.75A1.5 1.5 0 0 0 2.25 6v12a1.5 1.5 0 0 0 1.5 1.5Zm10.5-11.25h.008v.008h-.008V8.25Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z"/></svg>
-                <div>Drop logo or click to browse</div>
-              </div>
-              <div class="upload-preview hidden" id="logo-preview-container">
-                <img id="logo-preview" alt="Logo preview" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=">
-                <button type="button" class="remove-logo" id="btn-remove-logo">&times;</button>
-              </div>
-              <input type="file" id="logo-input" accept="image/*" hidden>
+<div class="container submit-page">
+<header class="submit-page-header">
+  <nav aria-label="breadcrumb"><ul><li><a href="{{ "/" | relURL }}">Directory</a></li><li>Submit</li></ul></nav>
+  <h1 id="page-title">Submit New Listing</h1>
+  <p>Fill out the form below to submit a new company or update an existing listing. When complete, download your submission file and email it to <a href="mailto:{{ $adminEmail }}">{{ $adminEmail }}</a>.</p>
+  <p id="success-message" class="hidden">Download complete! Email the file to {{ $adminEmail }} to submit.</p>
+</header>
+  <form id="submit-form">
+    <!-- Company Details -->
+    <section class="form-section">
+      <h2>Company Information</h2>
+      <div class="grid">
+        <div class="col-12 col-md-3">
+          <label for="logo-input">Logo</label>
+          <div class="logo-upload" id="logo-dropzone" role="button" aria-label="Upload logo">
+            <div class="upload-placeholder" id="logo-placeholder">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="m2.25 15.75 5.159-5.159a2.25 2.25 0 0 1 3.182 0l5.159 5.159m-1.5-1.5 1.409-1.409a2.25 2.25 0 0 1 3.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 0 0 1.5-1.5V6a1.5 1.5 0 0 0-1.5-1.5H3.75A1.5 1.5 0 0 0 2.25 6v12a1.5 1.5 0 0 0 1.5 1.5Zm10.5-11.25h.008v.008h-.008V8.25Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z"/></svg>
+              <div>Drop logo or click to browse</div>
             </div>
+            <div class="upload-preview hidden" id="logo-preview-container">
+              <img id="logo-preview" alt="Logo preview" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=">
+              <button type="button" class="remove-logo" id="btn-remove-logo">&times;</button>
+            </div>
+            <input type="file" id="logo-input" accept="image/*" hidden>
           </div>
-          <div class="col-9 col-m-12 col-s-12">
-            <label for="field-name">Company Name <span class="required">*</span></label>
-            <input type="text" id="field-name" name="name" required>
-            <label for="field-overview">Overview <small>(Short summary for directory cards, max 500 chars)</small></label>
-            <textarea id="field-overview" name="overview" maxlength="500" rows="3" placeholder="Brief description of your company..."></textarea>
-            <label for="field-website">Website</label>
-            <input type="url" id="field-website" name="website" placeholder="https://example.com">
-            <div class="row">
-              <div class="col-6 col-m-6 col-s-12">
-                <label><input type="checkbox" id="field-is_sme" name="is_sme"> SME</label>
-              </div>
-              <div class="col-6 col-m-6 col-s-12">
-                <label><input type="checkbox" id="field-is_prime" name="is_prime"> Prime Contractor</label>
-              </div>
+        </div>
+        <div class="col-12 col-md-9">
+          <label for="field-name">Company Name <span class="required">*</span></label>
+          <input type="text" id="field-name" name="name" required>
+          <label for="field-overview">Overview <small>(Short summary for directory cards, max 500 chars)</small></label>
+          <textarea id="field-overview" name="overview" maxlength="500" rows="3" placeholder="Brief description of your company..."></textarea>
+          <label for="field-website">Website</label>
+          <input type="url" id="field-website" name="website" placeholder="https://example.com">
+          <div class="grid">
+            <div class="col-6 col-md-6">
+              <label><input type="checkbox" id="field-is_sme" name="is_sme"> SME</label>
+            </div>
+            <div class="col-6 col-md-6">
+              <label><input type="checkbox" id="field-is_prime" name="is_prime"> Prime Contractor</label>
             </div>
           </div>
         </div>
-      </section>
-
-      <!-- Contact Information -->
-      <section class="form-section">
-        <h2>Contact Information</h2>
-        <div class="row">
-          <div class="col-6 col-m-6 col-s-12">
-            <label for="field-phone">Phone</label>
-            <input type="tel" id="field-phone" name="phone">
-          </div>
-          <div class="col-6 col-m-6 col-s-12">
-            <label for="field-email">Email</label>
-            <input type="email" id="field-email" name="email">
-          </div>
-          <div class="col-6 col-m-6 col-s-12">
-            <label for="field-contact_name">Contact Name</label>
-            <input type="text" id="field-contact_name" name="contact_name">
-          </div>
-          <div class="col-6 col-m-6 col-s-12">
-            <label for="field-contact_title">Contact Title</label>
-            <input type="text" id="field-contact_title" name="contact_title">
-          </div>
-        </div>
-      </section>
-
-      <!-- Location -->
-      <section class="form-section">
-        <h2>Location</h2>
-        <label for="field-address">Address</label>
-        <div class="address-row">
-          <input type="text" id="field-address" name="address" placeholder="123 Street, Perth WA 6000">
-          <button type="button" id="btn-validate-address" class="outline">Lookup</button>
-        </div>
-        <small id="address-status"></small>
-        <div class="row" style="margin-top: 1rem;">
-          <div class="col-6 col-m-6 col-s-12">
-            <label for="field-latitude">Latitude</label>
-            <input type="text" id="field-latitude" name="latitude" placeholder="-31.9505">
-          </div>
-          <div class="col-6 col-m-6 col-s-12">
-            <label for="field-longitude">Longitude</label>
-            <input type="text" id="field-longitude" name="longitude" placeholder="115.8605">
-          </div>
-        </div>
-      </section>
-
-      <!-- Classification -->
-      {{ partial "filters.html" . }}
-
-      <!-- Description -->
-      <fieldset>
-        <legend>Company Description</legend>
-        <div class="editor-wrapper">
-          <div class="editor-toolbar">
-            <button type="button" data-action="h2" title="Heading 2"><i data-lucide="heading-2"></i></button>
-            <button type="button" data-action="h3" title="Heading 3"><i data-lucide="heading-3"></i></button>
-            <div class="sep"></div>
-            <button type="button" data-action="bold" title="Bold"><i data-lucide="bold"></i></button>
-            <button type="button" data-action="italic" title="Italic"><i data-lucide="italic"></i></button>
-            <div class="sep"></div>
-            <button type="button" data-action="ul" title="Bullet List"><i data-lucide="list"></i></button>
-            <button type="button" data-action="ol" title="Numbered List"><i data-lucide="list-ordered"></i></button>
-            <div class="sep"></div>
-            <button type="button" data-action="link" title="Add Link"><i data-lucide="link"></i></button>
-            <button type="button" data-action="unlink" title="Remove Link"><i data-lucide="unlink"></i></button>
-          </div>
-          <div id="editor" class="editor-content"></div>
-        </div>
-      </fieldset>
-
-      <!-- Actions -->
-      <div class="actions" id="form-actions">
-        <button type="button" id="btn-submit">Download Submission</button>
-        <button type="button" id="btn-load" class="secondary">Load Submission</button>
-        <input type="file" id="load-input" accept=".json,application/json" hidden>
       </div>
+    </section>
+
+    <!-- Contact Information -->
+    <section class="form-section">
+      <h2>Contact Information</h2>
+      <div class="grid">
+        <div class="col-6 col-md-6">
+          <label for="field-phone">Phone</label>
+          <input type="tel" id="field-phone" name="phone">
+        </div>
+        <div class="col-6 col-md-6">
+          <label for="field-email">Email</label>
+          <input type="email" id="field-email" name="email">
+        </div>
+        <div class="col-6 col-md-6">
+          <label for="field-contact_name">Contact Name</label>
+          <input type="text" id="field-contact_name" name="contact_name">
+        </div>
+        <div class="col-6 col-md-6">
+          <label for="field-contact_title">Contact Title</label>
+          <input type="text" id="field-contact_title" name="contact_title">
+        </div>
+      </div>
+    </section>
+
+    <!-- Location -->
+    <section class="form-section">
+      <h2>Location</h2>
+      <label for="field-address">Address</label>
+      <div class="address-row">
+        <input type="text" id="field-address" name="address" placeholder="123 Street, Perth WA 6000">
+        <button type="button" id="btn-validate-address" class="outline">Lookup</button>
+      </div>
+      <small id="address-status"></small>
+      <div class="grid" style="margin-top: 1rem;">
+        <div class="col-6 col-md-6">
+          <label for="field-latitude">Latitude</label>
+          <input type="text" id="field-latitude" name="latitude" placeholder="-31.9505">
+        </div>
+        <div class="col-6 col-md-6">
+          <label for="field-longitude">Longitude</label>
+          <input type="text" id="field-longitude" name="longitude" placeholder="115.8605">
+        </div>
+      </div>
+    </section>
+
+    <!-- Classification -->
+    {{ partial "filters.html" . }}
+
+    <!-- Description -->
+    <fieldset>
+      <legend>Company Description</legend>
+      <div class="editor-wrapper">
+        <div class="editor-toolbar">
+          <button type="button" data-action="h2" title="Heading 2"><i data-lucide="heading-2"></i></button>
+          <button type="button" data-action="h3" title="Heading 3"><i data-lucide="heading-3"></i></button>
+          <div class="sep"></div>
+          <button type="button" data-action="bold" title="Bold"><i data-lucide="bold"></i></button>
+          <button type="button" data-action="italic" title="Italic"><i data-lucide="italic"></i></button>
+          <div class="sep"></div>
+          <button type="button" data-action="ul" title="Bullet List"><i data-lucide="list"></i></button>
+          <button type="button" data-action="ol" title="Numbered List"><i data-lucide="list-ordered"></i></button>
+          <div class="sep"></div>
+          <button type="button" data-action="link" title="Add Link"><i data-lucide="link"></i></button>
+          <button type="button" data-action="unlink" title="Remove Link"><i data-lucide="unlink"></i></button>
+        </div>
+        <div id="editor" class="editor-content"></div>
+      </div>
+    </fieldset>
+
+    <!-- Actions -->
+    <div class="actions" id="form-actions">
+      <button type="button" id="btn-submit">Download Submission</button>
+      <button type="button" id="btn-load" class="secondary">Load Submission</button>
+      <input type="file" id="load-input" accept=".json,application/json" hidden>
+    </div>
+  </form>
+</div>
+
+<!-- Link Editor Dialog -->
+<dialog id="link-dialog">
+  <article>
+    <header>
+      <button aria-label="Close" onclick="document.getElementById('link-dialog').close()"></button>
+      <h3>Edit Link</h3>
+    </header>
+    <form method="dialog" id="link-form">
+      <label for="link-url">URL</label>
+      <input type="url" name="link-url" id="link-url" required>
+      <footer>
+        <button value="cancel" class="outline">Cancel</button>
+        <button value="confirm">Apply Link</button>
+      </footer>
     </form>
-  </main>
+  </article>
+</dialog>
 
-  <!-- Link Editor Dialog -->
-  <dialog id="link-dialog">
-    <article>
-      <header>
-        <button aria-label="Close" onclick="document.getElementById('link-dialog').close()"></button>
-        <h3>Edit Link</h3>
-      </header>
-      <form method="dialog" id="link-form">
-        <label for="link-url">URL</label>
-        <input type="url" name="link-url" id="link-url" required>
-        <footer>
-          <button value="cancel" class="outline">Cancel</button>
-          <button value="confirm">Apply Link</button>
-        </footer>
-      </form>
-    </article>
-  </dialog>
+<script type="module">
+import Squire from 'https://esm.sh/squire-rte@2';
+import DOMPurify from 'https://esm.sh/dompurify@3';
 
-  <script type="module">
-  import Squire from 'https://esm.sh/squire-rte@2';
-  import DOMPurify from 'https://esm.sh/dompurify@3';
+const TAXONOMIES = ['stakeholders', 'capability_streams', 'capability_domains', 
+                    'industrial_capabilities', 'regions', 'ownerships'];
 
-  const TAXONOMIES = ['stakeholders', 'capability_streams', 'capability_domains', 
-                      'industrial_capabilities', 'regions', 'ownerships'];
+const $ = id => document.getElementById(id);
+const form = document.getElementById('submit-form');
+let companies = {}, editor = null, logoBase64 = null, editSlug = null;
 
-  const $ = id => document.getElementById(id);
-  const form = document.getElementById('submit-form');
-  let companies = {}, editor = null, logoBase64 = null, editSlug = null;
+async function loadCompanies() {
+  try { 
+    const list = await (await fetch('../companies.json')).json(); 
+    list.forEach(c => { companies[c.slug] = c; }); 
+  } catch (e) { console.warn('Could not load companies:', e); }
+}
 
-  async function loadCompanies() {
-    try { 
-      const list = await (await fetch('../companies.json')).json(); 
-      list.forEach(c => { companies[c.slug] = c; }); 
-    } catch (e) { console.warn('Could not load companies:', e); }
-  }
-
-  function initEditor() {
-    editor = new Squire($('editor'), {
-      blockTag: 'P',
-      sanitizeToDOMFragment: (html) => {
-        const clean = DOMPurify.sanitize(html, { RETURN_DOM_FRAGMENT: true, RETURN_DOM_IMPORT: true });
-        return document.importNode(clean, true);
-      }
-    });
-    editor.setHTML('<h2>Overview</h2><p><br></p>');
-
-    const toolbar = document.querySelector('.editor-toolbar');
-
-    function updateToolbarState() {
-      const path = editor.getPath();
-      toolbar.querySelectorAll('button').forEach(btn => {
-        const action = btn.dataset.action;
-        btn.classList.remove('active');
-        switch (action) {
-          case 'h2': if (path.includes('H2')) btn.classList.add('active'); break;
-          case 'h3': if (path.includes('H3')) btn.classList.add('active'); break;
-          case 'bold': if (editor.hasFormat('B')) btn.classList.add('active'); break;
-          case 'italic': if (editor.hasFormat('I')) btn.classList.add('active'); break;
-          case 'ul': if (path.includes('UL')) btn.classList.add('active'); break;
-          case 'ol': if (path.includes('OL')) btn.classList.add('active'); break;
-          case 'link': case 'unlink': if (editor.hasFormat('A')) btn.classList.add('active'); break;
-        }
-      });
+function initEditor() {
+  editor = new Squire($('editor'), {
+    blockTag: 'P',
+    sanitizeToDOMFragment: (html) => {
+      const clean = DOMPurify.sanitize(html, { RETURN_DOM_FRAGMENT: true, RETURN_DOM_IMPORT: true });
+      return document.importNode(clean, true);
     }
+  });
+  editor.setHTML('<h2>Overview</h2><p><br></p>');
 
-    editor.addEventListener('cursor', updateToolbarState);
-    editor.addEventListener('select', updateToolbarState);
-    editor.addEventListener('input', updateToolbarState);
-    updateToolbarState();
+  const toolbar = document.querySelector('.editor-toolbar');
 
-    toolbar.addEventListener('click', e => {
-      const btn = e.target.closest('button');
-      if (!btn) return;
+  function updateToolbarState() {
+    const path = editor.getPath();
+    toolbar.querySelectorAll('button').forEach(btn => {
       const action = btn.dataset.action;
-      const path = editor.getPath();
+      btn.classList.remove('active');
       switch (action) {
-        case 'h2':
-          if (path.includes('H2')) editor.modifyBlocks(frag => { frag.querySelectorAll('h2').forEach(el => { const p = document.createElement('p'); p.innerHTML = el.innerHTML; el.replaceWith(p); }); return frag; });
-          else editor.modifyBlocks(frag => { frag.querySelectorAll('p, div, h3').forEach(el => { const h = document.createElement('h2'); h.innerHTML = el.innerHTML; el.replaceWith(h); }); return frag; });
-          break;
-        case 'h3':
-          if (path.includes('H3')) editor.modifyBlocks(frag => { frag.querySelectorAll('h3').forEach(el => { const p = document.createElement('p'); p.innerHTML = el.innerHTML; el.replaceWith(p); }); return frag; });
-          else editor.modifyBlocks(frag => { frag.querySelectorAll('p, div, h2').forEach(el => { const h = document.createElement('h3'); h.innerHTML = el.innerHTML; el.replaceWith(h); }); return frag; });
-          break;
-        case 'bold': editor.hasFormat('B') ? editor.removeBold() : editor.bold(); break;
-        case 'italic': editor.hasFormat('I') ? editor.removeItalic() : editor.italic(); break;
-        case 'ul': path.includes('UL') ? editor.removeList() : editor.makeUnorderedList(); break;
-        case 'ol': path.includes('OL') ? editor.removeList() : editor.makeOrderedList(); break;
-        case 'link':
-          const currentLink = path.find(node => node.tagName === 'A');
-          $('link-url').value = currentLink?.href || 'https://';
-          $('link-dialog').showModal();
-          break;
-        case 'unlink': editor.removeLink(); break;
+        case 'h2': if (path.includes('H2')) btn.classList.add('active'); break;
+        case 'h3': if (path.includes('H3')) btn.classList.add('active'); break;
+        case 'bold': if (editor.hasFormat('B')) btn.classList.add('active'); break;
+        case 'italic': if (editor.hasFormat('I')) btn.classList.add('active'); break;
+        case 'ul': if (path.includes('UL')) btn.classList.add('active'); break;
+        case 'ol': if (path.includes('OL')) btn.classList.add('active'); break;
+        case 'link': case 'unlink': if (editor.hasFormat('A')) btn.classList.add('active'); break;
       }
-      updateToolbarState();
-      editor.focus();
     });
   }
 
-  function initLinkDialog() {
-    $('link-form').addEventListener('submit', (e) => {
-      const url = new FormData(e.target).get('link-url');
-      if (url && url !== 'https://') editor.makeLink(url);
-      $('link-dialog').close();
-    });
-  }
+  editor.addEventListener('cursor', updateToolbarState);
+  editor.addEventListener('select', updateToolbarState);
+  editor.addEventListener('input', updateToolbarState);
+  updateToolbarState();
 
-  function setLogo(base64) {
-    logoBase64 = base64;
-    $('logo-preview').src = base64;
-    $('logo-placeholder').classList.add('hidden');
-    $('logo-preview-container').classList.remove('hidden');
-  }
-
-  function clearLogo() {
-    logoBase64 = null;
-    $('logo-preview').src = '';
-    $('logo-input').value = '';
-    $('logo-placeholder').classList.remove('hidden');
-    $('logo-preview-container').classList.add('hidden');
-  }
-
-  function loadLogoFromUrl(url) {
-    const img = new Image();
-    img.crossOrigin = 'anonymous';
-    img.onload = () => {
-      const canvas = document.createElement('canvas');
-      canvas.width = img.naturalWidth;
-      canvas.height = img.naturalHeight;
-      canvas.getContext('2d').drawImage(img, 0, 0);
-      setLogo(canvas.toDataURL('image/png'));
-    };
-    img.onerror = () => console.warn('Could not load logo from', url);
-    img.src = url;
-  }
-
-  function initLogoUpload() {
-    const dropzone = $('logo-dropzone'), input = $('logo-input');
-    function handleFile(file) {
-      if (!file?.type.startsWith('image/')) return;
-      const reader = new FileReader();
-      reader.onload = e => {
-        const img = new Image();
-        img.onload = () => {
-          const canvas = document.createElement('canvas'), maxSize = 400;
-          let { width, height } = img;
-          if (width > maxSize || height > maxSize) { const s = maxSize / Math.max(width, height); width *= s; height *= s; }
-          canvas.width = width; canvas.height = height;
-          canvas.getContext('2d').drawImage(img, 0, 0, width, height);
-          setLogo(canvas.toDataURL('image/png'));
-        };
-        img.src = e.target.result;
-      };
-      reader.readAsDataURL(file);
+  toolbar.addEventListener('click', e => {
+    const btn = e.target.closest('button');
+    if (!btn) return;
+    const action = btn.dataset.action;
+    const path = editor.getPath();
+    switch (action) {
+      case 'h2':
+        if (path.includes('H2')) editor.modifyBlocks(frag => { frag.querySelectorAll('h2').forEach(el => { const p = document.createElement('p'); p.innerHTML = el.innerHTML; el.replaceWith(p); }); return frag; });
+        else editor.modifyBlocks(frag => { frag.querySelectorAll('p, div, h3').forEach(el => { const h = document.createElement('h2'); h.innerHTML = el.innerHTML; el.replaceWith(h); }); return frag; });
+        break;
+      case 'h3':
+        if (path.includes('H3')) editor.modifyBlocks(frag => { frag.querySelectorAll('h3').forEach(el => { const p = document.createElement('p'); p.innerHTML = el.innerHTML; el.replaceWith(p); }); return frag; });
+        else editor.modifyBlocks(frag => { frag.querySelectorAll('p, div, h2').forEach(el => { const h = document.createElement('h3'); h.innerHTML = el.innerHTML; el.replaceWith(h); }); return frag; });
+        break;
+      case 'bold': editor.hasFormat('B') ? editor.removeBold() : editor.bold(); break;
+      case 'italic': editor.hasFormat('I') ? editor.removeItalic() : editor.italic(); break;
+      case 'ul': path.includes('UL') ? editor.removeList() : editor.makeUnorderedList(); break;
+      case 'ol': path.includes('OL') ? editor.removeList() : editor.makeOrderedList(); break;
+      case 'link':
+        const currentLink = path.find(node => node.tagName === 'A');
+        $('link-url').value = currentLink?.href || 'https://';
+        $('link-dialog').showModal();
+        break;
+      case 'unlink': editor.removeLink(); break;
     }
-    dropzone.addEventListener('click', e => { if (e.target !== $('btn-remove-logo')) input.click(); });
-    dropzone.addEventListener('dragover', e => { e.preventDefault(); dropzone.classList.add('dragover'); });
-    dropzone.addEventListener('dragleave', () => dropzone.classList.remove('dragover'));
-    dropzone.addEventListener('drop', e => { e.preventDefault(); dropzone.classList.remove('dragover'); handleFile(e.dataTransfer.files[0]); });
-    input.addEventListener('change', () => handleFile(input.files[0]));
-    document.addEventListener('paste', e => { for (const item of e.clipboardData?.items || []) if (item.type.startsWith('image/')) { handleFile(item.getAsFile()); break; } });
-    $('btn-remove-logo').addEventListener('click', e => { e.stopPropagation(); clearLogo(); });
-  }
+    updateToolbarState();
+    editor.focus();
+  });
+}
 
-  function initAddressValidation() {
-    $('btn-validate-address').addEventListener('click', async () => {
-      const address = form.elements.address.value.trim();
-      const status = $('address-status'), btn = $('btn-validate-address');
-      if (!address) { status.textContent = 'Enter an address'; return; }
-      btn.disabled = true; btn.setAttribute('aria-busy', 'true'); status.textContent = 'Looking up...';
-      try {
-        const query = /\b(Australia|WA)\b/i.test(address) ? address : `${address}, WA, Australia`;
-        const params = new URLSearchParams({ SingleLine: query, f: 'json', maxLocations: '1', outFields: 'Addr_type,Region' });
-        const res = await fetch(`https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?${params}`);
-        const data = await res.json();
-        const c = data.candidates?.[0];
-        if (c?.location) {
-          form.elements.latitude.value = c.location.y.toFixed(6);
-          form.elements.longitude.value = c.location.x.toFixed(6);
-          const isWA = /Western Australia|WA/i.test(c.attributes?.Region || c.address || '');
-          const addrType = c.attributes?.Addr_type || 'Address';
-          status.textContent = isWA ? `Found (${addrType}): ${c.address}` : `Found but may not be in WA: ${c.address}`;
-          status.className = isWA ? 'success' : 'warning';
-        } else { status.textContent = 'Address not found'; status.className = 'warning'; }
-      } catch { status.textContent = 'Lookup failed'; status.className = 'error'; }
-      finally { btn.disabled = false; btn.removeAttribute('aria-busy'); }
-    });
-  }
+function initLinkDialog() {
+  $('link-form').addEventListener('submit', (e) => {
+    const url = new FormData(e.target).get('link-url');
+    if (url && url !== 'https://') editor.makeLink(url);
+    $('link-dialog').close();
+  });
+}
 
-  function resetForm() {
-    form.reset();
-    editor.setHTML('<h2>Overview</h2><p><br></p>');
-    clearLogo();
-    editSlug = null;
-    $('page-title').textContent = 'Submit New Listing';
-    $('address-status').textContent = '';
-  }
+function setLogo(base64) {
+  logoBase64 = base64;
+  $('logo-preview').src = base64;
+  $('logo-placeholder').classList.add('hidden');
+  $('logo-preview-container').classList.remove('hidden');
+}
 
-  function loadData(data) {
-    resetForm();
-    editSlug = data.slug || null;
-    if (editSlug) $('page-title').textContent = `Update: ${data.name}`;
+function clearLogo() {
+  logoBase64 = null;
+  $('logo-preview').src = '';
+  $('logo-input').value = '';
+  $('logo-placeholder').classList.remove('hidden');
+  $('logo-preview-container').classList.add('hidden');
+}
 
-    // Load all form fields using form.elements
-    Object.entries(data).forEach(([key, val]) => {
-      const el = form.elements[key];
-      if (!el) return;
-      if (el instanceof RadioNodeList) {
-        // Checkbox group (taxonomies)
-        el.forEach(cb => cb.checked = val?.includes(cb.value));
-      } else if (el.type === 'checkbox') {
-        el.checked = !!val;
-      } else {
-        el.value = val ?? '';
-      }
-    });
+function loadLogoFromUrl(url) {
+  const img = new Image();
+  img.crossOrigin = 'anonymous';
+  img.onload = () => {
+    const canvas = document.createElement('canvas');
+    canvas.width = img.naturalWidth;
+    canvas.height = img.naturalHeight;
+    canvas.getContext('2d').drawImage(img, 0, 0);
+    setLogo(canvas.toDataURL('image/png'));
+  };
+  img.onerror = () => console.warn('Could not load logo from', url);
+  img.src = url;
+}
 
-    if (data.content_html) editor.setHTML(data.content_html);
-    if (data.logo) setLogo(data.logo);
-  }
-
-  function buildSubmission() {
-    const fd = new FormData(form);
-    const submission = { 
-      type: editSlug ? 'update' : 'new', 
-      submitted_at: new Date().toISOString() 
+function initLogoUpload() {
+  const dropzone = $('logo-dropzone'), input = $('logo-input');
+  function handleFile(file) {
+    if (!file?.type.startsWith('image/')) return;
+    const reader = new FileReader();
+    reader.onload = e => {
+      const img = new Image();
+      img.onload = () => {
+        const canvas = document.createElement('canvas'), maxSize = 400;
+        let { width, height } = img;
+        if (width > maxSize || height > maxSize) { const s = maxSize / Math.max(width, height); width *= s; height *= s; }
+        canvas.width = width; canvas.height = height;
+        canvas.getContext('2d').drawImage(img, 0, 0, width, height);
+        setLogo(canvas.toDataURL('image/png'));
+      };
+      img.src = e.target.result;
     };
-    if (editSlug) submission.slug = editSlug;
-
-    // Single-value fields
-    fd.forEach((val, key) => {
-      if (!TAXONOMIES.includes(key) && val) submission[key] = val;
-    });
-
-    // Multi-value taxonomy fields
-    TAXONOMIES.forEach(tax => {
-      const vals = fd.getAll(tax);
-      if (vals.length) submission[tax] = vals;
-    });
-
-    // Booleans (explicit false for unchecked)
-    ['is_sme', 'is_prime'].forEach(f => {
-      submission[f] = form.elements[f]?.checked ?? false;
-    });
-
-    submission.content_html = editor.getHTML();
-    if (logoBase64) submission.logo = logoBase64;
-
-    return submission;
+    reader.readAsDataURL(file);
   }
+  dropzone.addEventListener('click', e => { if (e.target !== $('btn-remove-logo')) input.click(); });
+  dropzone.addEventListener('dragover', e => { e.preventDefault(); dropzone.classList.add('dragover'); });
+  dropzone.addEventListener('dragleave', () => dropzone.classList.remove('dragover'));
+  dropzone.addEventListener('drop', e => { e.preventDefault(); dropzone.classList.remove('dragover'); handleFile(e.dataTransfer.files[0]); });
+  input.addEventListener('change', () => handleFile(input.files[0]));
+  document.addEventListener('paste', e => { for (const item of e.clipboardData?.items || []) if (item.type.startsWith('image/')) { handleFile(item.getAsFile()); break; } });
+  $('btn-remove-logo').addEventListener('click', e => { e.stopPropagation(); clearLogo(); });
+}
 
-  function downloadJSON(submission) {
-    const blob = new Blob([JSON.stringify(submission, null, 2)], { type: 'application/json' });
-    const a = document.createElement('a');
-    a.href = URL.createObjectURL(blob);
-    a.download = submission.slug ? `${submission.slug}-submission.json` : 'submission.json';
-    a.click();
-    URL.revokeObjectURL(a.href);
-  }
-
-  function initEventHandlers() {
-    $('btn-submit').addEventListener('click', () => {
-      if (!form.elements.name.value.trim()) { 
-        alert('Enter a company name'); 
-        form.elements.name.focus(); 
-        return; 
-      }
-      const btn = $('btn-submit'); 
-      btn.disabled = true; 
-      btn.setAttribute('aria-busy', 'true');
-      try {
-        downloadJSON(buildSubmission());
-        document.querySelector('header.container').scrollIntoView({ behavior: 'smooth' });
-        $('success-message').classList.remove('hidden');
-      } catch (e) { alert('Error: ' + e.message); }
-      finally { btn.disabled = false; btn.removeAttribute('aria-busy'); }
-    });
-
-    $('btn-load').addEventListener('click', () => $('load-input').click());
-    $('load-input').addEventListener('change', async e => {
-      const file = e.target.files[0];
-      if (!file) return;
-      try { loadData(JSON.parse(await file.text())); } 
-      catch (err) { alert('Invalid JSON file: ' + err.message); }
-      e.target.value = '';
-    });
-  }
-
-  // Initialize
-  await loadCompanies();
-  initEditor();
-  initLinkDialog();
-  
-  const editSlugParam = new URLSearchParams(location.search).get('edit');
-  if (editSlugParam && companies[editSlugParam]) {
-    loadData(companies[editSlugParam]);
-    loadLogoFromUrl(`../logos/${editSlugParam}.png`);
-  } else {
+function initAddressValidation() {
+  $('btn-validate-address').addEventListener('click', async () => {
+    const address = form.elements.address.value.trim();
+    const status = $('address-status'), btn = $('btn-validate-address');
+    if (!address) { status.textContent = 'Enter an address'; return; }
+    btn.disabled = true; btn.setAttribute('aria-busy', 'true'); status.textContent = 'Looking up...';
     try {
-      const res = await fetch('../template.json');
-      if (res.ok) loadData(await res.json());
-    } catch (e) { console.warn('Could not load template:', e); }
-  }
-  
-  initLogoUpload();
-  initAddressValidation();
-  initEventHandlers();
-  lucide.createIcons();
-  </script>
-</body>
-</html>
+      const query = /\b(Australia|WA)\b/i.test(address) ? address : `${address}, WA, Australia`;
+      const params = new URLSearchParams({ SingleLine: query, f: 'json', maxLocations: '1', outFields: 'Addr_type,Region' });
+      const res = await fetch(`https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?${params}`);
+      const data = await res.json();
+      const c = data.candidates?.[0];
+      if (c?.location) {
+        form.elements.latitude.value = c.location.y.toFixed(6);
+        form.elements.longitude.value = c.location.x.toFixed(6);
+        const isWA = /Western Australia|WA/i.test(c.attributes?.Region || c.address || '');
+        const addrType = c.attributes?.Addr_type || 'Address';
+        status.textContent = isWA ? `Found (${addrType}): ${c.address}` : `Found but may not be in WA: ${c.address}`;
+        status.className = isWA ? 'success' : 'warning';
+      } else { status.textContent = 'Address not found'; status.className = 'warning'; }
+    } catch { status.textContent = 'Lookup failed'; status.className = 'error'; }
+    finally { btn.disabled = false; btn.removeAttribute('aria-busy'); }
+  });
+}
+
+function resetForm() {
+  form.reset();
+  editor.setHTML('<h2>Overview</h2><p><br></p>');
+  clearLogo();
+  editSlug = null;
+  $('page-title').textContent = 'Submit New Listing';
+  $('address-status').textContent = '';
+}
+
+function loadData(data) {
+  resetForm();
+  editSlug = data.slug || null;
+  if (editSlug) $('page-title').textContent = `Update: ${data.name}`;
+
+  // Load all form fields using form.elements
+  Object.entries(data).forEach(([key, val]) => {
+    const el = form.elements[key];
+    if (!el) return;
+    if (el instanceof RadioNodeList) {
+      // Checkbox group (taxonomies)
+      el.forEach(cb => cb.checked = val?.includes(cb.value));
+    } else if (el.type === 'checkbox') {
+      el.checked = !!val;
+    } else {
+      el.value = val ?? '';
+    }
+  });
+
+  if (data.content_html) editor.setHTML(data.content_html);
+  if (data.logo) setLogo(data.logo);
+}
+
+function buildSubmission() {
+  const fd = new FormData(form);
+  const submission = { 
+    type: editSlug ? 'update' : 'new', 
+    submitted_at: new Date().toISOString() 
+  };
+  if (editSlug) submission.slug = editSlug;
+
+  // Single-value fields
+  fd.forEach((val, key) => {
+    if (!TAXONOMIES.includes(key) && val) submission[key] = val;
+  });
+
+  // Multi-value taxonomy fields
+  TAXONOMIES.forEach(tax => {
+    const vals = fd.getAll(tax);
+    if (vals.length) submission[tax] = vals;
+  });
+
+  // Booleans (explicit false for unchecked)
+  ['is_sme', 'is_prime'].forEach(f => {
+    submission[f] = form.elements[f]?.checked ?? false;
+  });
+
+  submission.content_html = editor.getHTML();
+  if (logoBase64) submission.logo = logoBase64;
+
+  return submission;
+}
+
+function downloadJSON(submission) {
+  const blob = new Blob([JSON.stringify(submission, null, 2)], { type: 'application/json' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = submission.slug ? `${submission.slug}-submission.json` : 'submission.json';
+  a.click();
+  URL.revokeObjectURL(a.href);
+}
+
+function initEventHandlers() {
+  $('btn-submit').addEventListener('click', () => {
+    if (!form.elements.name.value.trim()) { 
+      alert('Enter a company name'); 
+      form.elements.name.focus(); 
+      return; 
+    }
+    const btn = $('btn-submit'); 
+    btn.disabled = true; 
+    btn.setAttribute('aria-busy', 'true');
+    try {
+      downloadJSON(buildSubmission());
+      document.querySelector('header').scrollIntoView({ behavior: 'smooth' });
+      $('success-message').classList.remove('hidden');
+    } catch (e) { alert('Error: ' + e.message); }
+    finally { btn.disabled = false; btn.removeAttribute('aria-busy'); }
+  });
+
+  $('btn-load').addEventListener('click', () => $('load-input').click());
+  $('load-input').addEventListener('change', async e => {
+    const file = e.target.files[0];
+    if (!file) return;
+    try { loadData(JSON.parse(await file.text())); } 
+    catch (err) { alert('Invalid JSON file: ' + err.message); }
+    e.target.value = '';
+  });
+}
+
+// Initialize
+await loadCompanies();
+initEditor();
+initLinkDialog();
+
+const editSlugParam = new URLSearchParams(location.search).get('edit');
+if (editSlugParam && companies[editSlugParam]) {
+  loadData(companies[editSlugParam]);
+  loadLogoFromUrl(`../logos/${editSlugParam}.png`);
+} else {
+  try {
+    const res = await fetch('../template.json');
+    if (res.ok) loadData(await res.json());
+  } catch (e) { console.warn('Could not load template:', e); }
+}
+
+initLogoUpload();
+initAddressValidation();
+initEventHandlers();
+lucide.createIcons();
+</script>
+{{ end }}

@@ -19,56 +19,60 @@
 -}}
 {{- $iconPath := index $iconPaths $taxonomyName -}}
 
-<nav aria-label="breadcrumb">
-  <ul>
-    <li><a href="{{ "/" | relURL }}">Directory</a></li>
-    <li>{{ $displayTitle }}</li>
-  </ul>
-</nav>
+<div class="container">
+  <nav aria-label="breadcrumb">
+    <ul>
+      <li><a href="{{ "/" | relURL }}">Directory</a></li>
+      <li>{{ $displayTitle }}</li>
+    </ul>
+  </nav>
 
-<hgroup>
-  <h1>{{ $displayTitle }}</h1>
-  <p>Browse {{ $totalCompanies }} companies by {{ $displayTitle | lower }}</p>
-</hgroup>
+  <hgroup>
+    <h1>{{ $displayTitle }}</h1>
+    <p>Browse {{ $totalCompanies }} companies by {{ $displayTitle | lower }}</p>
+  </hgroup>
 
-{{- with .Content }}{{ . }}{{ end }}
+  {{- with .Content }}{{ . }}{{ end }}
 
-<div class="grid-auto" style="--grid-min: 200px;">
-  {{- range .Data.Terms.ByCount }}
-    {{- $slug := .Page.Data.Term -}}
-    {{- $displayName := index $taxonomyMap $slug | default .Name -}}
-    {{/* Check for icon (capability_streams, ownerships) */}}
-    {{- $hasIcon := false -}}
-    {{- $iconUrl := "" -}}
-    {{- if $iconPath -}}
-      {{- $iconFile := printf "static/%s/%s.png" $iconPath $slug -}}
-      {{- if fileExists $iconFile -}}
-        {{- $hasIcon = true -}}
-        {{- $iconUrl = printf "%s/%s.png" $iconPath $slug | relURL -}}
+  <div class="grid">
+    {{- range .Data.Terms.ByCount }}
+    <div class="col-12 col-md-4">
+      {{- $slug := .Page.Data.Term -}}
+      {{- $displayName := index $taxonomyMap $slug | default .Name -}}
+      {{/* Check for icon (capability_streams, ownerships) */}}
+      {{- $hasIcon := false -}}
+      {{- $iconUrl := "" -}}
+      {{- if $iconPath -}}
+        {{- $iconFile := printf "static/%s/%s.png" $iconPath $slug -}}
+        {{- if fileExists $iconFile -}}
+          {{- $hasIcon = true -}}
+          {{- $iconUrl = printf "%s/%s.png" $iconPath $slug | relURL -}}
+        {{- end -}}
       {{- end -}}
-    {{- end -}}
-    {{/* Check for static term map image */}}
-    {{- $hasTermMap := false -}}
-    {{- $termMapUrl := "" -}}
-     {{- $termMapFile := printf "static/maps/terms/%s-%s.png" $taxonomyName $slug -}}
-     {{- if fileExists $termMapFile -}}
-       {{- $hasTermMap = true -}}
-       {{- $termMapUrl = printf "maps/terms/%s-%s.png" $taxonomyName $slug | relURL -}}
-     {{- end -}}
-  <article class="taxonomy-card">
-    <a href="{{ .Page.RelPermalink }}" title="{{ $displayName }}">
-      {{- if $hasIcon }}
-      <img src="{{ $iconUrl }}" alt="{{ $displayName }}" class="taxonomy-icon">
-      {{- end }}
-      <strong class="taxonomy-name">{{ $displayName }}</strong>
-      {{- if $hasTermMap }}
-      <img src="{{ $termMapUrl }}" alt="Map of {{ $displayName }}" class="taxonomy-map-thumb">
-      {{- end }}
-      <small>{{ .Count }} {{ if eq .Count 1 }}company{{ else }}companies{{ end }}</small>
-    </a>
-  </article>
-  {{- end }}
-</div>
+      {{/* Check for static term map image */}}
+      {{- $hasTermMap := false -}}
+      {{- $termMapUrl := "" -}}
+       {{- $termMapFile := printf "static/maps/terms/%s-%s.png" $taxonomyName $slug -}}
+       {{- if fileExists $termMapFile -}}
+         {{- $hasTermMap = true -}}
+         {{- $termMapUrl = printf "maps/terms/%s-%s.png" $taxonomyName $slug | relURL -}}
+       {{- end -}}
+      <article class="taxonomy-card">
+        <a href="{{ .Page.RelPermalink }}" title="{{ $displayName }}">
+          {{- if $hasIcon }}
+          <img src="{{ $iconUrl }}" alt="{{ $displayName }}" class="taxonomy-icon">
+          {{- end }}
+          <strong class="taxonomy-name">{{ $displayName }}</strong>
+          {{- if $hasTermMap }}
+          <img src="{{ $termMapUrl }}" alt="Map of {{ $displayName }}" class="taxonomy-map-thumb">
+          {{- end }}
+          <small>{{ .Count }} {{ if eq .Count 1 }}company{{ else }}companies{{ end }}</small>
+        </a>
+      </article>
+    </div>
+    {{- end }}
+  </div>
 
-<p><a href="{{ "/" | relURL }}">&larr; Back to Directory</a></p>
+  <p><a href="{{ "/" | relURL }}">&larr; Back to Directory</a></p>
+</div>
 {{ end }}

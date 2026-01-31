@@ -5,8 +5,8 @@ $company = merge $company (dict "slug" .File.BaseFileName) -}} {{- $companies =
 $companies | append $company -}} {{- end -}} {{- end -}} {{- $companies = sort $companies
 "name" -}} {{- $taxonomies := .Site.Data.taxonomies -}}
 
-<div class="row directory-header">
-  <nav aria-label="breadcrumb" class="col-8 col-m-6 col-s-12 directory-breadcrumb">
+<div class="grid directory-header">
+  <nav aria-label="breadcrumb" class="col-8 col-md-6 directory-breadcrumb">
     <ul>
       <li>Directory</li>
       <li id="breadcrumb-filters" class="hidden">
@@ -22,7 +22,7 @@ $companies | append $company -}} {{- end -}} {{- end -}} {{- $companies = sort $
       </li>
     </ul>
   </nav>
-  <div class="col-4 col-m-6 col-s-12">
+  <div class="col-4 col-md-6">
     <fieldset role="group" class="search-group">
       <legend class="visually-hidden">Search and view options</legend>
       <input
@@ -48,7 +48,7 @@ $companies | append $company -}} {{- end -}} {{- end -}} {{- $companies = sort $
   WA Defence Industry and Science Capability Directory
 </h1>
 
-<div class="row" id="directory">
+<div class="grid" id="directory">
   <!-- Mobile filter toggle button -->
   <button type="button" class="mobile-filter-toggle" aria-expanded="false" aria-controls="filters-sidebar">
     {{ partial "icon.html" (dict "name" "filter" "size" 18) }}
@@ -56,11 +56,12 @@ $companies | append $company -}} {{- end -}} {{- end -}} {{- $companies = sort $
   </button>
 
   <!-- Main Content (first in DOM for better tab order: search → results) -->
-  <section class="col-9 col-m-8 col-s-12 directory-results">
+  <section class="col-12 col-md-9 directory-results">
     <!-- Cards Grid -->
-    <div class="grid-auto" id="company-grid" tabindex="-1">
-      {{- range $companies }} {{ partial "company-card.html" (dict "company" .
-      "mode" "directory") }} {{- end }}
+    <div class="grid" id="company-grid" tabindex="-1">
+      {{- range $companies }}
+      {{ partial "company-card.html" (dict "company" . "mode" "directory") }}
+      {{- end }}
     </div>
 
     <!-- Map iframe (hidden by default) -->
@@ -71,7 +72,7 @@ $companies | append $company -}} {{- end -}} {{- end -}} {{- $companies = sort $
   </section>
   
   <!-- Filters Sidebar (after results in DOM, positioned left via CSS) -->
-  <aside class="col-3 col-m-4 col-s-12 filters-sidebar" id="filters-sidebar">
+  <aside class="col-12 col-md-3 filters-sidebar" id="filters-sidebar">
     <button type="button" class="mobile-filter-close" aria-label="Close filters">
       {{ partial "icon.html" (dict "name" "x" "size" 24) }}
     </button>

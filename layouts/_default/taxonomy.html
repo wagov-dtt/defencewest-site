@@ -30,20 +30,20 @@
 
 {{- with .Content }}{{ . }}{{ end }}
 
-<div class="row">
+<div class="grid">
   {{/* Cards column */}}
-  <div class="col-6 col-m-12 col-s-12">
-    <div class="grid-auto">
+  <div class="col-12 col-md-6">
+    <div class="grid">
       {{- range .Pages.ByTitle }}
-        {{- $slug := .File.BaseFileName -}}
-        {{- $companyData := merge .Params (dict "slug" $slug) }}
-        {{- partial "company-card.html" (dict "company" $companyData "mode" "directory") }}
+      {{- $slug := .File.BaseFileName -}}
+      {{- $companyData := merge .Params (dict "slug" $slug) }}
+      {{- partial "company-card.html" (dict "company" $companyData "mode" "directory") }}
       {{- end }}
     </div>
   </div>
 
   {{/* Map column */}}
-  <div class="col-6 col-m-12 col-s-12">
+  <div class="col-12 col-md-6">
     <div class="taxonomy-map">
       <iframe src="{{ printf "map/?%s=%s" $taxonomyName $termKey | relURL }}" title="Map of {{ $displayName }} companies"></iframe>
     </div>
