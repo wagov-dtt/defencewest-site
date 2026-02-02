@@ -201,6 +201,36 @@ python3 scripts/scrape.py        # NO!
 
 uv automatically manages the virtual environment and dependencies defined in `pyproject.toml`.
 
+### System Dependencies
+
+Map rendering via `mlnative` requires these system packages (installed automatically in CI via `mise run setup-ci`):
+
+**Linux (Ubuntu/Debian):**
+```bash
+sudo apt-get install -y \
+  mesa-vulkan-drivers \
+  glslang-dev \
+  pkg-config \
+  libcurl4-openssl-dev \
+  libglfw3-dev \
+  libuv1-dev \
+  libz-dev
+```
+
+**macOS:**
+```bash
+brew install molten-vk vulkan-headers curl glfw libuv zlib
+```
+
+**Requirements:**
+- **mesa-vulkan-drivers**: Vulkan graphics drivers for GPU-accelerated rendering
+- **glslang-dev**: GLSL shader compiler
+- **libcurl4-openssl-dev**: HTTP client for fetching map tiles
+- **libglfw3-dev**: Windowing library (required by MapLibre Native)
+- **libuv1-dev**: Async I/O library
+- **libz-dev**: Compression library
+- **Network access**: Must reach tiles.openfreemap.org for map tiles
+
 ## CI & Link Checking
 
 The `mise run build` task runs: preprocess → hugo build → HTML check (superhtml) → link check (lychee).
