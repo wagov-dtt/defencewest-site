@@ -203,7 +203,7 @@ uv automatically manages the virtual environment and dependencies defined in `py
 
 ### System Dependencies
 
-Map rendering via `mlnative` requires these system packages (installed automatically in CI via `mise run setup-ci`):
+Map rendering via [`mlnative`](https://pypi.org/project/mlnative/) requires these system packages (installed automatically in CI via `mise run setup-ci`):
 
 **Linux (Ubuntu/Debian):**
 ```bash
