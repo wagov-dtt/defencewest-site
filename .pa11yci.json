@@ -3,7 +3,7 @@
     "standard": "WCAG2AA",
     "runners": ["htmlcs"],
     "chromeLaunchConfig": {
-      "args": ["--no-sandbox", "--disable-setuid-sandbox"]
+      "args": ["--no-sandbox", "--disable-setuid-sandbox", "--headless=new"]
     },
     "timeout": 30000,
     "useIncognitoBrowserContext": false
