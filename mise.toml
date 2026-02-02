@@ -17,6 +17,8 @@ run = ["uv sync", "mise run preprocess"]
 description = "Install system dependencies for CI (mlnative renderer dependencies)"
 run = """
 sudo apt-get update && sudo apt-get install -y \
+  mesa-vulkan-drivers \
+  glslang-dev \
   pkg-config \
   libcurl4-openssl-dev \
   libglfw3-dev \
