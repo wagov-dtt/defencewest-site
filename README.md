@@ -30,7 +30,7 @@ The map implementation uses:
 
 - **[OpenFreeMap Liberty](https://openfreemap.org/)** - free, open-source map tiles
 - **[MapLibre GL JS](https://maplibre.org)** - vector map rendering with globe projection
-- **Static minimaps** - pre-rendered PNG images for company cards (generated via `pymgl`)
+- **Static minimaps** - pre-rendered PNG images for company cards (generated via `mlnative`)
 
 All map configuration (style URL, tile URL) is in `hugo.toml` under `[params]`.
 

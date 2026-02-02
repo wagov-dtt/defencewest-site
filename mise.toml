@@ -8,28 +8,20 @@ lychee = "latest"
 
 [env]
 PYTHONDONTWRITEBYTECODE = "1"
-# Fix SSL cert path for pymgl/libcurl
-CURL_CA_BUNDLE = "/etc/ssl/certs/ca-certificates.crt"
-SSL_CERT_FILE = "/etc/ssl/certs/ca-certificates.crt"
 
 [tasks.setup]
 description = "Install Python dependencies and generate computed data"
 run = ["uv sync", "mise run preprocess"]
 
 [tasks.setup-ci]
-description = "Install system dependencies for CI (maplibre-native dependencies)"
+description = "Install system dependencies for CI (mlnative renderer dependencies)"
 run = """
 sudo apt-get update && sudo apt-get install -y \
-  mesa-vulkan-drivers \
-  glslang-dev \
-  build-essential \
+  pkg-config \
   libcurl4-openssl-dev \
   libglfw3-dev \
   libuv1-dev \
-  libz-dev \
-  ca-certificates
-sudo mkdir -p /etc/pki/tls/certs
-sudo ln -sf /etc/ssl/certs/ca-certificates.crt /etc/pki/tls/certs/ca-bundle.crt
+  libz-dev
 """
 
 [tasks.dev]
