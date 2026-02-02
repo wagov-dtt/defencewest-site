@@ -17,9 +17,17 @@ description = "Install Python dependencies and generate computed data"
 run = ["uv sync", "mise run preprocess"]
 
 [tasks.setup-ci]
-description = "Install system dependencies for CI (EGL/xvfb for map rendering)"
+description = "Install system dependencies for CI (maplibre-native dependencies)"
 run = """
-sudo apt-get update && sudo apt-get install -y libegl1 libgl1 libopengl0 xvfb ca-certificates
+sudo apt-get update && sudo apt-get install -y \
+  mesa-vulkan-drivers \
+  glslang-dev \
+  build-essential \
+  libcurl4-openssl-dev \
+  libglfw3-dev \
+  libuv1-dev \
+  libz-dev \
+  ca-certificates
 sudo mkdir -p /etc/pki/tls/certs
 sudo ln -sf /etc/ssl/certs/ca-certificates.crt /etc/pki/tls/certs/ca-bundle.crt
 """
