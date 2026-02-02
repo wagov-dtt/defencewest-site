@@ -184,6 +184,23 @@ Tools managed by mise:
 - `uv` - Python package manager (for scripts)
 - `python` - Python interpreter
 
+### Python Scripts (uv)
+
+This project uses [uv](https://docs.astral.sh/uv/) to manage Python dependencies and run scripts. **Always use `uv run` for Python scripts** - never run them directly:
+
+```bash
+# Correct - use uv run
+uv run python scripts/preprocess.py
+uv run python scripts/scrape.py
+uv run python scripts/import_submission.py path/to/submission.json
+
+# WRONG - never run python directly
+python scripts/preprocess.py     # NO!
+python3 scripts/scrape.py        # NO!
+```
+
+uv automatically manages the virtual environment and dependencies defined in `pyproject.toml`.
+
 ## CI & Link Checking
 
 The `mise run build` task runs: preprocess → hugo build → HTML check (superhtml) → link check (lychee).
@@ -210,7 +227,7 @@ uv run python scripts/preprocess.py --dry-run  # Preview changes
 - `static/companies.json` - All company data for submit page
 - `static/companies.csv`, `.xlsx` - Export files
 
-Static minimaps are generated using `pymgl` with OSM Shortbread vector tiles.
+Static minimaps are generated using `mlnative` with OSM Shortbread vector tiles.
 
 ### scrape.py
 

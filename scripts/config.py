@@ -92,6 +92,7 @@ SCALAR_FIELDS = {
 BOOLEAN_FIELDS = {"is_sme", "is_prime"}
 
 # Map rendering settings
+# Logical display size 420x240, pixel_ratio=2 generates 840x480 for HiDPI
 MAP_WIDTH = 420
 MAP_HEIGHT = 240
 MAP_MARKER_LAYERS = [

@@ -12,7 +12,6 @@ Usage:
 """
 
 import json
-import time
 from datetime import datetime, timedelta
 from pathlib import Path
 
@@ -22,9 +21,7 @@ import pandas as pd
 import yaml
 import markdown_it
 from openpyxl.utils import get_column_letter
-from pymgl import Map
-from shapely import MultiPoint, Point
-from shapely.geometry import mapping
+from mlnative import Map, from_latlng
 
 from config import (
     params,
@@ -46,10 +43,8 @@ md = markdown_it.MarkdownIt()
 # --- Map rendering ---
 
 
-def setup_map(
-    width: int = MAP_WIDTH, height: int = MAP_HEIGHT, zoom: float = 13
-) -> Map:
-    """Create a Map instance with marker layers."""
+def setup_map(width: int = MAP_WIDTH, height: int = MAP_HEIGHT) -> tuple[Map, dict]:
+    """Create a Map instance and load style with marker layers."""
     response = httpx.get(params["mapStyleUrl"])
     response.raise_for_status()
     style = response.json()
@@ -58,16 +53,16 @@ def setup_map(
         "data": {"type": "FeatureCollection", "features": []},
     }
     style["layers"].extend(MAP_MARKER_LAYERS)
-    return Map(json.dumps(style), width, height, 2, 115.86, -31.95, zoom)
+    return Map(width, height, pixel_ratio=2), style
 
 
 def render_map(
     m: Map,
+    style: dict,
     locations: list[tuple[float, float]],
     output: Path,
     max_zoom: float = 13,
     zoom_out: float = 0.2,
-    wait: float = 0.1,
     max_age_days: float = 1,
 ) -> bool:
     """Render map with markers. Returns True if rendered, False if cached."""
@@ -76,19 +71,18 @@ def render_map(
         if datetime.now() - mtime < timedelta(days=max_age_days):
             return False
 
-    points = [Point(lng, lat) for lat, lng in locations]
-    geom = MultiPoint(points) if len(points) > 1 else points[0]
-    geojson = {
-        "type": "FeatureCollection",
-        "features": [{"type": "Feature", "geometry": mapping(geom)}],
-    }
+    geom = from_latlng(locations)
 
-    m.setGeoJSON("markers", json.dumps(geojson))
-    m.setBounds(*geom.bounds)
-    m.setZoom(min(max_zoom, m.zoom - zoom_out))
-    m.load()
-    time.sleep(wait)
-    output.write_bytes(m.renderPNG())
+    # Calculate bounds from locations (lat, lng order)
+    lats = [lat for lat, _lng in locations]
+    lngs = [lng for _lat, lng in locations]
+    bounds = (min(lngs), min(lats), max(lngs), max(lats))
+
+    m.load_style(style)
+    m.set_geojson("markers", geom)
+    center, zoom = m.fit_bounds(bounds, max_zoom=max_zoom)
+    png = m.render(center=center, zoom=zoom - zoom_out)
+    output.write_bytes(png)
     return True
 
 
@@ -239,35 +233,38 @@ def main():
         return
 
     print("Setting up map renderer...")
-    m = setup_map()
+    m, style = setup_map()
     MAPS_DIR.mkdir(parents=True, exist_ok=True)
     TERM_MAPS_DIR.mkdir(parents=True, exist_ok=True)
 
-    # Company maps
-    count = 0
-    with make_progress() as progress:
-        task = progress.add_task("Company maps...", total=len(company_locations))
-        for slug, lat, lng in company_locations:
-            if render_map(m, [(lat, lng)], MAPS_DIR / f"{slug}.png"):
-                count += 1
-            progress.update(task, advance=1)
-    print(f"Generated {count} company maps ({len(company_locations) - count} cached)")
+    with m:
+        # Company maps
+        count = 0
+        with make_progress() as progress:
+            task = progress.add_task("Company maps...", total=len(company_locations))
+            for slug, lat, lng in company_locations:
+                if render_map(m, style, [(lat, lng)], MAPS_DIR / f"{slug}.png"):
+                    count += 1
+                progress.update(task, advance=1)
+        print(
+            f"Generated {count} company maps ({len(company_locations) - count} cached)"
+        )
 
-    # Term maps
-    term_maps = [
-        (f"{tax}-{key}", locs)
-        for tax, terms in term_locations.items()
-        for key, locs in terms.items()
-        if locs
-    ]
-    count = 0
-    with make_progress() as progress:
-        task = progress.add_task("Term maps...", total=len(term_maps))
-        for key, locs in term_maps:
-            if render_map(m, locs, TERM_MAPS_DIR / f"{key}.png"):
-                count += 1
-            progress.update(task, advance=1)
-    print(f"Generated {count} term maps ({len(term_maps) - count} cached)")
+        # Term maps
+        term_maps = [
+            (f"{tax}-{key}", locs)
+            for tax, terms in term_locations.items()
+            for key, locs in terms.items()
+            if locs
+        ]
+        count = 0
+        with make_progress() as progress:
+            task = progress.add_task("Term maps...", total=len(term_maps))
+            for key, locs in term_maps:
+                if render_map(m, style, locs, TERM_MAPS_DIR / f"{key}.png"):
+                    count += 1
+                progress.update(task, advance=1)
+        print(f"Generated {count} term maps ({len(term_maps) - count} cached)")
 
 
 if __name__ == "__main__":

@@ -56,10 +56,10 @@ dependencies = [
     { name = "markdown-it-py" },
     { name = "markdownify" },
     { name = "mdformat" },
+    { name = "mlnative" },
     { name = "openpyxl" },
     { name = "pandas" },
     { name = "pathvalidate" },
-    { name = "pymgl" },
     { name = "python-frontmatter" },
     { name = "python-slugify" },
     { name = "pyyaml" },
@@ -78,10 +78,10 @@ requires-dist = [
     { name = "markdown-it-py", specifier = ">=4.0.0" },
     { name = "markdownify", specifier = ">=1.2.2" },
     { name = "mdformat", specifier = ">=1.0.0" },
+    { name = "mlnative", specifier = ">=0.3.3" },
     { name = "openpyxl", specifier = ">=3.1.5" },
     { name = "pandas", specifier = ">=3.0.0" },
     { name = "pathvalidate", specifier = ">=3.2.1" },
-    { name = "pymgl", specifier = ">=0.5.0" },
     { name = "python-frontmatter", specifier = ">=1.1.0" },
     { name = "python-slugify", specifier = ">=8.0.4" },
     { name = "pyyaml", specifier = ">=6.0.3" },
@@ -224,6 +224,20 @@ wheels = [
 ]
 
 [[package]]
+name = "mlnative"
+version = "0.3.3"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "geopy" },
+    { name = "shapely" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/a2/07/6899b8095972d03ada6cff2f79d87d62b85b243fe55e386f5c13f85f22f5/mlnative-0.3.3.tar.gz", hash = "sha256:d1149673401c2ae521368c3ec9ef45bce808e1fa2737fe2661780b9693ccc178", size = 72152, upload-time = "2026-02-02T05:39:43.201Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/05/46/42b9b6a361d5b52203dd1aaaaa328af7166603f89e7bfcfaccd42d610421/mlnative-0.3.3-py3-none-manylinux_2_28_aarch64.whl", hash = "sha256:19d9e6a50bc46f953717989bbe9e521e36803b1144c74899c70e65253c8d087a", size = 20542554, upload-time = "2026-02-02T05:39:37.454Z" },
+    { url = "https://files.pythonhosted.org/packages/d0/8c/86512bd8e6859aea2d7608f0f94caf975acb508c2830c0da7b9bb639e7eb/mlnative-0.3.3-py3-none-manylinux_2_28_x86_64.whl", hash = "sha256:74c9d7a98844fd20938e8c8afe9d0181f1130427ecdb9ab1a52775194f8ed14d", size = 20908226, upload-time = "2026-02-02T05:39:41.208Z" },
+]
+
+[[package]]
 name = "numpy"
 version = "2.4.1"
 source = { registry = "https://pypi.org/simple" }
@@ -297,15 +311,6 @@ wheels = [
 ]
 
 [[package]]
-name = "packaging"
-version = "26.0"
-source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/65/ee/299d360cdc32edc7d2cf530f3accf79c4fca01e96ffc950d8a52213bd8e4/packaging-26.0.tar.gz", hash = "sha256:00243ae351a257117b6a241061796684b084ed1c516a08c48a3f7e147a9d80b4", size = 143416, upload-time = "2026-01-21T20:50:39.064Z" }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/b7/b9/c538f279a4e237a006a2c98387d081e9eb060d203d8ed34467cc0f0b9b53/packaging-26.0-py3-none-any.whl", hash = "sha256:b36f1fef9334a5588b4166f8bcd26a14e521f2b55e6b9de3aaa80d3ff7a37529", size = 74366, upload-time = "2026-01-21T20:50:37.788Z" },
-]
-
-[[package]]
 name = "pandas"
 version = "3.0.0"
 source = { registry = "https://pypi.org/simple" }
@@ -373,22 +378,6 @@ source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/b0/77/a5b8c569bf593b0140bde72ea885a803b82086995367bf2037de0159d924/pygments-2.19.2.tar.gz", hash = "sha256:636cb2477cec7f8952536970bc533bc43743542f70392ae026374600add5b887", size = 4968631, upload-time = "2025-06-21T13:39:12.283Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/c7/21/705964c7812476f378728bdf590ca4b771ec72385c533964653c68e86bdc/pygments-2.19.2-py3-none-any.whl", hash = "sha256:86540386c03d588bb81d44bc3928634ff26449851e99741617ecb9037ee5ec0b", size = 1225217, upload-time = "2025-06-21T13:39:07.939Z" },
-]
-
-[[package]]
-name = "pymgl"
-version = "0.5.0"
-source = { registry = "https://pypi.org/simple" }
-dependencies = [
-    { name = "packaging" },
-]
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/2c/79/14d055013613d53367616697ad9481f96d15a86907c0f2b96e32cd47f8e0/pymgl-0.5.0-cp312-cp312-macosx_14_0_arm64.whl", hash = "sha256:bbbd5a38b8616df88fb2715f4662c1e503fa51118c3caead32a6b7db61b562c1", size = 2700443, upload-time = "2024-09-30T20:11:50.322Z" },
-    { url = "https://files.pythonhosted.org/packages/a4/49/ae076c89104e31af01f874cdcc9306065a6404d069ba8f7ad207a66bf731/pymgl-0.5.0-cp312-cp312-manylinux_2_28_aarch64.whl", hash = "sha256:0bb0ab32abf5b96e16683a19b972958faf868fabc1ff8b537ec9a166ccd19c6c", size = 22979314, upload-time = "2024-09-30T20:46:48.052Z" },
-    { url = "https://files.pythonhosted.org/packages/3a/16/6271dff48faa53933b6c7f79c4a4ae73c1eb0b1c26f94b93ab53d566b370/pymgl-0.5.0-cp312-cp312-manylinux_2_28_x86_64.whl", hash = "sha256:79cd0bd0011a040adfd8f7fe259f88e4a5b897133525a16c22bc67721f11aded", size = 23565079, upload-time = "2024-09-30T20:11:53.566Z" },
-    { url = "https://files.pythonhosted.org/packages/61/df/11f2697cbd7b62df5f7c28071be767fc65ec0ccd8e44fb32c0717cd7fc91/pymgl-0.5.0-cp313-cp313-macosx_12_0_arm64.whl", hash = "sha256:c6820c1eb479af2e25e73c7c4f1259379a29f845fa8d7d266ca5a640de16fb08", size = 2700454, upload-time = "2024-09-30T20:11:55.973Z" },
-    { url = "https://files.pythonhosted.org/packages/81/79/6e42d22fa090e0f6b245a36f38c751a1739a96011ca6ff7cbcc915b8e06a/pymgl-0.5.0-cp313-cp313-manylinux_2_28_aarch64.whl", hash = "sha256:6c283d971691ff25cf9913f101db88747d551455fb081d86ec3e39c31106d0ee", size = 22979315, upload-time = "2024-09-30T20:46:59.636Z" },
-    { url = "https://files.pythonhosted.org/packages/d8/20/77638a79c127f4814952166ba4bee358b5c1b0cc37ede30d24a40bbe3875/pymgl-0.5.0-cp313-cp313-manylinux_2_28_x86_64.whl", hash = "sha256:e47d826f6d534e6b50ab54a30afa709aaa9c61c2e36eff8f51ef5bc39f139b47", size = 23565086, upload-time = "2024-09-30T20:11:59.597Z" },
 ]
 
 [[package]]
