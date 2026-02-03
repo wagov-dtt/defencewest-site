@@ -78,7 +78,7 @@ requires-dist = [
     { name = "markdown-it-py", specifier = ">=4.0.0" },
     { name = "markdownify", specifier = ">=1.2.2" },
     { name = "mdformat", specifier = ">=1.0.0" },
-    { name = "mlnative", specifier = ">=0.3.3" },
+    { name = "mlnative", specifier = ">=0.3.8" },
     { name = "openpyxl", specifier = ">=3.1.5" },
     { name = "pandas", specifier = ">=3.0.0" },
     { name = "pathvalidate", specifier = ">=3.2.1" },
@@ -225,16 +225,16 @@ wheels = [
 
 [[package]]
 name = "mlnative"
-version = "0.3.3"
+version = "0.3.8"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "geopy" },
     { name = "shapely" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/a2/07/6899b8095972d03ada6cff2f79d87d62b85b243fe55e386f5c13f85f22f5/mlnative-0.3.3.tar.gz", hash = "sha256:d1149673401c2ae521368c3ec9ef45bce808e1fa2737fe2661780b9693ccc178", size = 72152, upload-time = "2026-02-02T05:39:43.201Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/4c/fc/b2236628aae8ca094fdb9d67c2d5cbf2e70aca2651d2a47ef95fa3ce5218/mlnative-0.3.8.tar.gz", hash = "sha256:b9e3c2440fb29135d6fe50e192821a74444b34c7ccc842bd2effa21c6fa943ea", size = 72942, upload-time = "2026-02-03T04:18:42.107Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/05/46/42b9b6a361d5b52203dd1aaaaa328af7166603f89e7bfcfaccd42d610421/mlnative-0.3.3-py3-none-manylinux_2_28_aarch64.whl", hash = "sha256:19d9e6a50bc46f953717989bbe9e521e36803b1144c74899c70e65253c8d087a", size = 20542554, upload-time = "2026-02-02T05:39:37.454Z" },
-    { url = "https://files.pythonhosted.org/packages/d0/8c/86512bd8e6859aea2d7608f0f94caf975acb508c2830c0da7b9bb639e7eb/mlnative-0.3.3-py3-none-manylinux_2_28_x86_64.whl", hash = "sha256:74c9d7a98844fd20938e8c8afe9d0181f1130427ecdb9ab1a52775194f8ed14d", size = 20908226, upload-time = "2026-02-02T05:39:41.208Z" },
+    { url = "https://files.pythonhosted.org/packages/39/02/34b8827003b294d608ec978b62c7fde54f196381d1232ad0f43e96e0cf9e/mlnative-0.3.8-py3-none-manylinux_2_28_aarch64.whl", hash = "sha256:f75fa2edf8974471171aef8db6d2683f1775f84250223cfc7a927ebbb2778c5e", size = 20543281, upload-time = "2026-02-03T04:18:37.117Z" },
+    { url = "https://files.pythonhosted.org/packages/50/cf/39071d551fb1aa644314fd03238b33713aa748f74368c94a588d84404c8a/mlnative-0.3.8-py3-none-manylinux_2_28_x86_64.whl", hash = "sha256:c5dbe5350d2f8bc1b721055181511464339486596d1deb14cff98167e091c8a7", size = 20911277, upload-time = "2026-02-03T04:18:40.127Z" },
 ]
 
 [[package]]
