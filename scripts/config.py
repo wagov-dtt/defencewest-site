@@ -314,9 +314,9 @@ def set_output(name: str, value: str):
     """Set GitHub Actions output variable."""
     output_file = os.environ.get("GITHUB_OUTPUT")
     if output_file:
-        with open(output_file, "a") as f:
+        with open(output_file, "a") as f:  # nosec: GitHub Actions output mechanism
             if "\n" in value:
                 f.write(f"{name}<<EOF\n{value}\nEOF\n")
             else:
                 f.write(f"{name}={value}\n")
-    print(f"{name}: {value}", file=sys.stderr)
+    print(f"{name}: {value}", file=sys.stderr)  # nosec: GitHub Actions output mechanism

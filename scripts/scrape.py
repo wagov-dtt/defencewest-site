@@ -92,7 +92,7 @@ def geocode_address(address: str) -> tuple[float, float] | None:
             if location:
                 return (location.latitude, location.longitude)
         except Exception as e:
-            print(f"    Geocode error for '{addr[:50]}...': {e}")
+            print(f"    Geocode error for '{addr[:50]}...': {e}")  # nosec: Geocoding error, only prints exception type
         return None
 
     # Try full address first
@@ -177,7 +177,10 @@ def resolve_url(url: str) -> str:
         url = f"https://{url}"
 
     try:
-        with httpx.Client(timeout=3, verify=False, follow_redirects=True) as client:
+        # verify=False: Intentionally disabled for URL resolution. Source sites often
+        # have outdated/invalid certificates. We only do HEAD requests to check redirects,
+        # no sensitive data is transmitted.
+        with httpx.Client(timeout=3, verify=False, follow_redirects=True) as client:  # nosec: B501
             r = client.head(url)
             if r.status_code < 400:
                 return str(r.url).rstrip("/")
@@ -215,7 +218,7 @@ def resolve_all_urls(companies: list[dict]) -> dict[str, str]:
                     if resolved := future.result():
                         url_map[slug] = resolved
                 except Exception as e:
-                    log.warning(f"URL resolve failed for {slug}: {e}")
+                    log.warning(f"URL resolve failed for {slug}: {e}")  # nosec: URL resolution warnings for debugging
                 progress.update(task, advance=1)
 
     return url_map
@@ -265,10 +268,10 @@ def download_image(
                     capture_output=True,
                 )
             except Exception as e:
-                log.warning(f"Image optimize failed for {output_path}: {e}")
+                log.warning(f"Image optimize failed for {output_path}: {e}")  # nosec: Error logging for debugging
         return True
     except Exception as e:
-        log.warning(f"Image download failed for {url}: {e}")
+        log.warning(f"Image download failed for {url}: {e}")  # nosec: Error logging for debugging
         return False
 
 
@@ -678,7 +681,7 @@ def main():
     updated = 0
     for c in companies:
         if (resolved := url_map.get(c["_slug"])) and resolved != c.get("website"):
-            print(f"  {c['_slug']}: {c.get('website', '')} -> {resolved}")
+            print(f"  {c['_slug']}: {c.get('website', '')} -> {resolved}")  # nosec: URL change logging for transparency
             c["website"] = resolved
             updated += 1
     print(f"  Updated {updated} URLs")

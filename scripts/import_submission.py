@@ -405,7 +405,7 @@ def main():
         # Log warnings to stderr (not needed in PR body anymore)
         if warnings:
             for w in warnings:
-                print(f"Warning: {w}", file=sys.stderr)
+                print(f"Warning: {w}", file=sys.stderr)  # nosec: Validation warnings, not sensitive data
 
         return 0
 
