@@ -16,7 +16,7 @@ jobs:
       - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
       
       - name: Install mise
-        uses: jdx/mise-action@7b911b9999162960b3b0eff7940cbc19ce5dc921 # v2.1.11
+        uses: jdx/mise-action@5083fe46898c414b2475087cc79da59e7da859e8 # v2.1.11
       
       - name: Install system dependencies
         run: mise run setup-ci
@@ -39,7 +39,7 @@ jobs:
       - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
       
       - name: Install mise
-        uses: jdx/mise-action@7b911b9999162960b3b0eff7940cbc19ce5dc921 # v2.1.11
+        uses: jdx/mise-action@5083fe46898c414b2475087cc79da59e7da859e8 # v2.1.11
         with:
           experimental: true
       
