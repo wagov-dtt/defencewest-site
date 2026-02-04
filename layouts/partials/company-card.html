@@ -51,7 +51,7 @@
       <div class="badges">
         {{- with $company.company_types }}
           {{- range . }}
-            {{- if eq . "prime" }}<small class="highlight">Prime</small>{{ end -}}
+            <small>{{ . }}</small>
           {{- end }}
         {{- end }}
         {{- with $company.ownerships }}

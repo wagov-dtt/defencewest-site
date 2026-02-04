@@ -104,3 +104,4 @@ uglyURLs = false
   regions = "Regions"
   stakeholders = "Stakeholders"
   ownerships = "Ownership"
+  company_types = "Company Types"
