@@ -1,6 +1,6 @@
 ---
 name: Wiltrading STACE
-date: '2025-01-29'
+date: '2025-02-04'
 overview: 'Wiltrading STACE has extensive experience in the Defence industry, undertaking large maintenance contracts and projects. '
 website: https://aramarine.com.au/who-we-are/wiltrading-stace
 contact_name: Jason M King
@@ -8,7 +8,8 @@ contact_title: Defence Manager
 address: 42 Zedora Turn, Henderson WA 6166
 phone: +61 8 9236 2932
 email: jking@wlst.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 capability_domains:

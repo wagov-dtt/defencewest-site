@@ -1,6 +1,6 @@
 ---
 name: NW Futures Group Pty Ltd
-date: '2025-01-29'
+date: '2025-02-04'
 overview: "NW Futures group is a WA owned company based in Perth WA. \n\nWe are an independent group that specialize in identifying areas within the Northwest of WA, strategic assets and infrastructure that can be repurposed or co-shared."
 website: http://www.nwfuturesgroup.com.au
 contact_name: David Campbell
@@ -8,7 +8,8 @@ contact_title: Managing Director
 address: level 2, 600 Murray Street, West Perth WA 6005
 phone: 0429043995
 email: david@nwfuturesgroup.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 - defence-west

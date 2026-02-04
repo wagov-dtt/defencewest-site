@@ -1,6 +1,6 @@
 ---
 name: Global Coating Systems Pty Ltd
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Australian SME delivering next-gen protective coatings backed by R&D, enhancing defence asset durability and increased survivability in extreme environments.
 website: https://globalcoatingsystems.com
 contact_name: Darren Gibbon
@@ -8,7 +8,8 @@ contact_title: Business Growth
 address: 4/7 Cessnock Way, ROCKINGHAM WA 6168
 phone: 0400300294
 email: darren.gibbon@global-cs.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 - academic

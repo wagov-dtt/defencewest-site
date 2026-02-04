@@ -1,6 +1,6 @@
 ---
 name: Pixelcase Group
-date: '2025-01-29'
+date: '2025-02-04'
 overview: The Pixelcase Group is a production studio specialising in the ground-breaking use of virtual reality, live capture 360 production, aerial technology and photogrammetry.
 website: https://pixelcase.com
 contact_name: John Colebrook
@@ -8,7 +8,8 @@ contact_title: Founder/CEO
 address: 5/47 Havelock Street, West Perth WA 6005
 phone: +61 427 573 365
 email: john@pixelcase.com
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 capability_domains:

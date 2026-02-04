@@ -1,6 +1,6 @@
 ---
 name: 'BAE Systems Australia - Henderson Facility '
-date: '2025-01-29'
+date: '2025-02-04'
 overview: BAE Systems is a global company delivering products and services for clients in more than 100 countries across the resources and energy, defence and commercial maritime sectors.
 website: https://www.baesystems.com/australia
 contact_name: Luke Simmons
@@ -8,7 +8,9 @@ contact_title: Acting General Manager Henderson
 address: 42 Quill Way, Henderson WA 6166
 phone: +61 8 6399 3000
 email: luke.simmons@baesystems.com
-is_prime: true
+company_types:
+- large-enterprise
+- prime
 stakeholders:
 - defence
 capability_domains:

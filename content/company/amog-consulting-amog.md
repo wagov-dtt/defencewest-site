@@ -1,6 +1,6 @@
 ---
 name: AMOG Consulting (AMOG Pty Ltd)
-date: '2025-01-29'
+date: '2025-02-04'
 overview: AMOG is a leading global solutions provider to the Defence, maritime construction, energy, transport, and resource industries and we have been solving complex engineering problems since 1991. Our engineers have worked with submarines, naval ships, landing craft, aircraft, defence vehicles and land-based assets.
 website: https://amog.consulting
 contact_name: Kevan Young
@@ -8,7 +8,8 @@ contact_title: Principal Engineer
 address: Level 2, 11 Lucknow Place, West Perth WA 6005
 phone: 08 9212 1800
 email: kevan.young@amog.consulting
-is_sme: true
+company_types:
+- sme
 capability_domains:
 - maritime
 - minor

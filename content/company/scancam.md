@@ -1,6 +1,6 @@
 ---
 name: Scancam
-date: '2025-01-29'
+date: '2025-02-04'
 overview: 'Scancam specialises in vehicle licence plate recognition and CCTV Security surveillance. '
 website: https://www.scancam.com.au
 contact_name: Eoin Byrne
@@ -8,7 +8,8 @@ contact_title: Director
 address: 55 Lindsay Street, Perth WA 6000
 phone: +61 423 535 539
 email: eoin@scancam.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 capability_domains:

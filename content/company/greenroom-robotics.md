@@ -1,6 +1,6 @@
 ---
 name: Greenroom Robotics
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Deep-tech company building modular, hardware-agnostic autonomy and perception software to modernise maritime operations across defence, offshore, and commercial sectors
 website: https://greenroomrobotics.com
 contact_name: Peter Baker
@@ -8,7 +8,8 @@ contact_title: General Manager - Growth
 address: Level 1, 86 High Street, Fremantle WA 6160
 phone: '+61404316560'
 email: peter.baker@greenroomrobotics.com
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 - defence-west

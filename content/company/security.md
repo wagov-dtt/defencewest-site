@@ -1,6 +1,6 @@
 ---
 name: Security Consulting Group
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Security Consulting Group (SCG) specialises in providing independent protective security, threat and risk analysis and communications consultancy services to high profile clients operating in unique and challenging security environments.
 website: https://www.securityconsultinggroup.com.au
 contact_name: Sharne Hesse
@@ -8,7 +8,8 @@ contact_title: Director
 address: Level 1, 23 Ventnor Ave, West Perth WA 6005
 phone: +61 411 474 150
 email: shesse@securityconsultinggroup.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 capability_streams:

@@ -1,6 +1,6 @@
 ---
 name: EJ ELECTRICAL ENGINEERING CONTRACTORS
-date: '2025-01-29'
+date: '2025-02-04'
 overview: EJ Electrical has been providing electrical design, manufacturing, repair, refit and installation services to the marine industry for over 50 years. Located in the Australian Marine Complex, Henderson, Western Australia which is considered the hub of the Defence, Marine and Oil & Gas Industries.
 website: https://www.ejelectrical.com.au
 contact_name: Matthew McCready
@@ -8,7 +8,8 @@ contact_title: 'General Manger '
 address: 1/8 Redemptora Road, Henderson WA 6166
 phone: 0434 613 724
 email: Mail@ejelectrical.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 capability_domains:

@@ -1,6 +1,6 @@
 ---
 name: Future Engineering
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Future Engineering specialises in the end-to- end project management and manufacture of precision components and the assembly of designs using a range of materials from plastics through to high-strength alloys.
 website: https://futureeng.com.au
 contact_name: Joanne Ardizzone
@@ -8,7 +8,8 @@ contact_title: Business Development - Defence
 address: 13-15 Felspar Street, Welshpool WA 6106
 phone: +61 417 388 701
 email: jo@futureeng.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 capability_domains:

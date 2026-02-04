@@ -1,6 +1,6 @@
 ---
 name: SAS Project Services WA
-date: '2025-01-29'
+date: '2025-02-04'
 overview: "SAS Project Services is proudly WA family owned and has been operating in the fabrication and construction industry all over WA and beyond since 2001. \nWe believe our people are our biggest asset."
 website: https://sasprojectservices.com.au
 contact_name: Murray Middleton
@@ -8,7 +8,8 @@ contact_title: Managing Director
 address: Lot 44 Maddern South Road, Chittering, WA, 6084, Chittering WA 6084
 phone: '0427013420'
 email: Murray@sasprojectservices.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 - defence-west

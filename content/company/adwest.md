@@ -1,6 +1,6 @@
 ---
 name: Adwest Group
-date: '2025-01-29'
+date: '2025-02-04'
 overview: 'Adwest''s capabiity is of  the supply, fabrication, powdercoating and fixing on signs, all to specified drawings provided by our customers. '
 website: https://www.adwestgroup.com.au
 contact_name: 'Mark Brennan '
@@ -8,7 +8,8 @@ contact_title: 'Managing  Director '
 address: 15 Christable Way, Landsdale WA 6065
 phone: +61 400 870 084
 email: mark.brennan@adwestgroup.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 capability_domains:

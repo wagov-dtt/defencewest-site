@@ -1,6 +1,6 @@
 ---
 name: LatConnect 60
-date: '2025-01-29'
+date: '2025-02-04'
 overview: 'LATCONNECT 60 is a Western Australian earth observation space company  with the objective to provide responsive, high fidelity, rapid re-visit earth observation data to enhance commercial and defence ISR activities. '
 website: https://www.lc60.ai
 contact_name: Rueben Rajasingam
@@ -8,7 +8,8 @@ contact_title: Director Business Development
 address: Level 1, 191 St Georges Terrace, Perth WA 6000
 phone: +61 410 500 466
 email: rueben@latconnect60.com
-is_sme: true
+company_types:
+- sme
 capability_domains:
 - intelligence
 - science

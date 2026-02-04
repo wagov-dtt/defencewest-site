@@ -1,6 +1,6 @@
 ---
 name: Alemlube PTY Ltd
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Alemlube offers a range of products and services for various industries, including lubricants, lubrication systems, hose storage, fluid metering, vehicle hoists and more.
 website: https://www.alemlube.com.au
 contact_name: Todd  Franklin
@@ -8,7 +8,8 @@ contact_title: State Manager WA
 address: 9 Kalinga Way, Landsdale, Perth WA 6065
 phone: 08 9302 4199
 email: toddf@alemlube.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 - defence-west

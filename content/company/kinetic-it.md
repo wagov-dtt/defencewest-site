@@ -1,6 +1,6 @@
 ---
 name: Kinetic IT
-date: '2025-01-29'
+date: '2025-02-04'
 overview: 'We''re a leading Australian-owned IT service provider of adaptive technology solutions that harness human intelligence, enhance the user experience and drive meaningful change across organisations.
 
 
@@ -11,7 +11,8 @@ contact_title: Operations Manager
 address: Riverside Rd, East Fremantle WA 6158
 phone: 0417940458
 email: ryan.gray@kineticit.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 capability_domains:

@@ -1,6 +1,6 @@
 ---
 name: Infinitum Technologies
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Providing certified and secure ICT solutions to critical infrastructure and business nation wide.
 website: https://www.infinitum.net.au
 contact_name: Lachlan Britt
@@ -8,7 +8,8 @@ contact_title: CEO
 address: 152 St Georges Terrace, Perth WA 6000
 phone: +61 8 9943 8343
 email: sales@infinitum.net.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 capability_domains:

@@ -1,6 +1,6 @@
 ---
 name: Indrus
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Indrus transforms existing CCTV infrastructure into a real-time asset tracking system, providing facility-wide visibility and situational awareness.
 website: https://indrus.ai
 contact_name: Ryan Liebregts
@@ -8,7 +8,8 @@ contact_title: Founder
 address: 4 Keppell Street, Willagee WA 6156
 phone: 0457177925
 email: ryan.liebregts@indrus.ai
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 - defence-west

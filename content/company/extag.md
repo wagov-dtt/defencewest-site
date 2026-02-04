@@ -1,6 +1,6 @@
 ---
 name: EXTAG Pty Ltd
-date: '2025-01-29'
+date: '2025-02-04'
 overview: EXTAG(r) is a software platform that ensures asset-intensive organisations are compliant, safe & ready for use.
 website: https://www.extag.com.au
 contact_name: Lan Tran
@@ -8,7 +8,8 @@ contact_title: Chief Sales Officer
 address: Level 5, 5 Mill Street, Perth WA 6000
 phone: 0412026208
 email: Lan@extag.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 capability_domains:

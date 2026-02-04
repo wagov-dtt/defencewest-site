@@ -1,6 +1,6 @@
 ---
 name: JFD Australia
-date: '2025-01-29'
+date: '2025-02-04'
 overview: JFD Australia  provides world leading undersea products, systems and capabilities to the Australian Defence Force and the Australian Commercial offshore sector.
 website: https://jfdglobal.com
 contact_name: Cathy Falkiner
@@ -8,7 +8,8 @@ contact_title: Managing Director
 address: 54 Bushland Ridge, Bibra Lake WA 6163
 phone: +61 8 6164 4400
 email: C.Falkiner@jfdglobal.com
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 capability_domains:

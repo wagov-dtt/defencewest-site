@@ -1,6 +1,6 @@
 ---
 name: Vertical Lift Machines
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Exclusive distributor of Dalmec manipulators in Australia and New Zealand, delivering precision pneumatic lifting systems that improve safety, efficiency and capability across defence and industry.
 website: https://vertistore.com.au
 contact_name: John Peinke
@@ -8,7 +8,8 @@ contact_title: Managing Director
 address: 85 Marine Terrace, Sorrento WA 6020
 phone: 0439545448
 email: johnp@vertistore.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 - academic

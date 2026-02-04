@@ -1,6 +1,6 @@
 ---
 name: ADENCO
-date: '2025-01-29'
+date: '2025-02-04'
 overview: ADENCO provides services in the design and construction of Civil and Electrical infrastructure for the Defence, Mining and Renewables sectors
 website: https://www.adenco.com.au
 contact_name: Christoff van der Schyff
@@ -8,7 +8,8 @@ contact_title: Managing Director
 address: 11 Quantum Link,, Wangara WA 6065
 phone: 08 6262 2225
 email: cvanderschyff@adenco.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 - defence-west

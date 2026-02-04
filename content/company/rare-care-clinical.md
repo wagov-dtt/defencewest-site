@@ -1,6 +1,6 @@
 ---
 name: Rare Care - Clinical Centre of Expertise for Rare and Undiagnosed Diseases, Perth Children's Hospital
-date: '2025-01-29'
+date: '2025-02-04'
 overview: The Rare Care Centre was launched in to address the challenges faced children and families living with Rare and Undiagnosed Disease
 website: https://pch.health.wa.gov.au/Our-services/Rare-Care-Centre
 contact_name: Gareth S Baynam
@@ -8,7 +8,9 @@ contact_title: Medical Director
 address: Hospital Avenue Nedlands, Perth WA 6009
 phone: 6456 2222
 email: gareth.baynam@health.wa.gov.au
-is_sme: true
+company_types:
+- government
+- sme
 stakeholders:
 - academic
 capability_domains:

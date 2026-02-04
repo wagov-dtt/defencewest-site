@@ -1,6 +1,6 @@
 ---
 name: Veem
-date: '2025-01-29'
+date: '2025-02-04'
 overview: VEEM is a West Australian manufacturer of sophisticated equipment for the defence, marine, aerospace and oil and gas industries.
 website: https://www.veem.com.au
 contact_name: Dave Johnston
@@ -8,7 +8,8 @@ contact_title: 'Defence Products Manager '
 address: 22 Baile Road, Canning Vale WA 6155
 phone: +61 8 9455 9355
 email: davidj@veem.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 capability_domains:

@@ -1,6 +1,6 @@
 ---
 name: H-E Parts Engineering
-date: '2025-01-29'
+date: '2025-02-04'
 overview: H-E Parts Engineering carries out machining works for the marine, mining, oil and gas, defence and  rail industries.
 website: https://www.h-eparts.com/mobile-mining/enhancements
 contact_name: Alan Law
@@ -8,7 +8,8 @@ contact_title: Branch Manager
 address: 40 Weston St, Naval Base WA 6165
 phone: 0459 975 663
 email: alan.law@h-eparts.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 capability_domains:

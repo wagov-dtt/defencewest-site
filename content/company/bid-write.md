@@ -1,6 +1,6 @@
 ---
 name: Bid Write
-date: '2025-01-29'
+date: '2025-02-04'
 overview: 'Bid Write is Australia''s largest specialist tender and proposal management consultancy helping organisations looking to win through contestable/competitive sourcing processes. '
 website: https://www.bidwrite.com.au
 contact_name: David Lunn
@@ -8,7 +8,8 @@ contact_title: Director and Principal
 address: 115 Newcastle Street, Perth WA 6000
 phone: +61 408 904 367
 email: david@bidwrite.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 capability_domains:

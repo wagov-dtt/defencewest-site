@@ -1,6 +1,6 @@
 ---
 name: BG&E Pty Limited
-date: '2025-01-29'
+date: '2025-02-04'
 overview: BG&E is a globally renowned civil and structural engineering consultancy celebrated for its innovative, cost-effective, and award-winning designs that prioritise practicality and constructability.
 website: https://bgeeng.com
 contact_name: Luke Murphy
@@ -8,7 +8,8 @@ contact_title: Defence Lead - WA
 address: Level 19, Kings Square 1, 556 Wellington Street, Perth WA 6000
 phone: +61 8 6364 3361
 email: Luke.Murphy@bgeeng.com
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 - defence-west

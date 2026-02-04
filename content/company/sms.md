@@ -1,6 +1,6 @@
 ---
 name: SMS Group Services
-date: '2025-01-29'
+date: '2025-02-04'
 overview: SMS Group Services is a proudly West Australian-owned company. Specialising in Scaffolding, Rope Access, Blast and Paint, Confined space and other Industrial Services.
 website: https://smsgroup.com.au
 contact_name: Alex Hazell
@@ -8,7 +8,8 @@ contact_title: Business Development
 address: 63 - 67 Division Street, Welshpool WA 6106
 phone: 0438394080
 email: alex.hazell@smsgroup.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 - academic

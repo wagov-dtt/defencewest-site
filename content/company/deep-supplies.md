@@ -1,6 +1,6 @@
 ---
 name: Deep Supplies
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Reacting to the problems we have seen over the past 25 years in the defence, maritime and oil and gas industries; Deep Supplies realised that there is an intelligent way of collecting all types of data. Having a team of qualified and very experienced operators; we have built our business on the ethic of providing reliable information first time. Using the latest available technology, systems and software we can get you the answers you need quickly. We can collect the data you want. GPS, bathymetric, acoustic, personnel monitoring and positioning and any data you specifically need. We have worked with the innovation centre on Garden Island WA introducing subsea devices for monitoring and inspection purposes. Deep supplies have also worked very closely with onshore and offshore companies supplying equipment unique to the required industry; offering the right system first time. We are currently developing an AI system for auto recognition of dangers such as shark identification, bush
   fire growth/direction and a personnel danger vicinity monitoring system.
 website: https://deep.supplies
@@ -9,7 +9,8 @@ contact_title: Director
 address: 3/14 Beneficial Way,, Wangara WA 6065
 phone: 0488005080
 email: sales@deep.supplies
-is_sme: true
+company_types:
+- sme
 capability_domains:
 - armour
 - intelligence

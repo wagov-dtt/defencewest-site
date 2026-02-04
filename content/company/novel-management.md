@@ -1,6 +1,6 @@
 ---
 name: Novel Management Pty Ltd
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Novel is a Defence consulting firm offering defence market access, Grant Writing, industry introductions, Quad Charts, ASDEFCON and DISP support and more.
 website: https://www.novelmanagement.com.au
 contact_name: Rachel Falzon
@@ -8,7 +8,8 @@ contact_title: Director
 address: Metro, Perth WA 6000
 phone: 0436 810 021
 email: info@novelmanagement.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 - defence-west

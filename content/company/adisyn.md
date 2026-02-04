@@ -1,14 +1,15 @@
 ---
 name: Adisyn
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Adisyn is an ASX-listed Australian IT and Cybersecurity provider delivering end-to-end secure, sovereign-managed services across Defence, government, and critical infrastructure sectors.
-website: https://adisyn.com.au
+website: https://adisyn.com
 contact_name: Jesse Gane
 contact_title: General Manager
 address: 4 McGrath Rd,, Henderson WA 6166
 phone: 0434045890
 email: jesse.gane@adisyn.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence-west
 capability_domains:

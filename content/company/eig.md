@@ -1,17 +1,18 @@
 ---
 name: EIG Australia
-date: '2025-01-29'
+date: '2025-02-04'
 overview: 'Proudly Australian, EIG Australia is a privately owned and operated company. EIG Australia specialises in electrical, mechanical & hydrocarbon projects, servicing the Australian Defence Force, mining, industrial and commercial sectors across Australia.
 
 
   Throughout our operation, EIG Australia has aided in Australian Defence Force projects throughout numerous West Australian locations. Partaking in such projects has enabled EIG Australia to broaden and strengthen our electrical and mechanical reach. The major works conducted on the Australian Defence Force sites include the supply and installation of fuel systems, lighting and power installations, installations of lighting protection systems and fire systems, just to highlight a few.'
-website: https://www.eigaustralia.com.au
+website: https://eigaustralia.com.au
 contact_name: Tahlia Collica
 contact_title: Executive Assistant
 address: 12 Oban Link, Canning Vale WA 6155
 phone: '62542635'
 email: tahlia@eigaustralia.com
-is_sme: true
+company_types:
+- sme
 capability_domains:
 - base
 industrial_capabilities:

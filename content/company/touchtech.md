@@ -1,6 +1,6 @@
 ---
 name: 'Touchtech Australia '
-date: '2025-01-29'
+date: '2025-02-04'
 overview: 'Touchtech Australia Pty Ltd (Touchtech) is a locally owned Bunbury based company that focuses on software and product development to solve business concerns for our clients. '
 website: https://touchtech.com.au
 contact_name: Chris Dickie
@@ -8,7 +8,8 @@ contact_title: Director
 address: 6 Beddingfield Street, Davenport WA 6230
 phone: 0438931911
 email: chris@touchtech.com.au
-is_sme: true
+company_types:
+- sme
 capability_domains:
 - communications
 - land

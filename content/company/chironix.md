@@ -1,6 +1,6 @@
 ---
 name: Chironix
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Chironix are specialists in software engineering and robotics systems integration.
 website: https://www.chironix.com
 contact_name: Daniel Milford
@@ -8,7 +8,8 @@ contact_title: CEO
 address: Chironix Labs, Unit 3/33 Millrose Drive, Malaga WA 6090
 phone: '+61862449030'
 email: sales@chironix.com
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 - academic

@@ -1,6 +1,6 @@
 ---
 name: Tristar Australia Pty Ltd
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Tristar Australia is a manufacturer and supplier of high integrity studbolts, bolt tightening equipment, Dimet brand cathodic protection and cable support systems.
 website: http://tristar-au.com
 contact_name: Soheil Chinniah
@@ -8,7 +8,8 @@ contact_title: Director
 address: Unit 4 / 164 Abernethy Road, Belmont WA 6104
 phone: 08 9277 1034
 email: soheil.c@tristar-au.com
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 capability_domains:

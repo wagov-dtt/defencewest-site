@@ -1,6 +1,6 @@
 ---
 name: 'Indianic Group '
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Indianic Group, founded in 2004 and based in Henderson, Western Australia, is a leading provider of marine construction, subsea services and marine infrastructure maintenance across the Asia Pacific.
 website: https://indianic.com.au
 contact_name: Nigel Rees
@@ -8,7 +8,8 @@ contact_title: 'Managing Director '
 address: 8 Sparks Road, Henderson WA 6166
 phone: 08 9412 9000
 email: tenders@indianic.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 capability_domains:

@@ -1,14 +1,15 @@
 ---
 name: Australian Marine Complex Common User Facility
-date: '2025-01-29'
+date: '2025-02-04'
 overview: The Western Australian Government owned Common User Facility (CUF), located at the Australian Marine Complex in Henderson.
-website: https://www.australianmarinecomplex.com.au
+website: https://developmentwa.com.au/projects/industrial-and-commercial/australian-marine-complex/about-the-amc
 contact_name: ' Jonathan Smith'
 contact_title: General Manager
 address: 124 Quill Way, Henderson WA 6166
 phone: '+61894370500'
 email: jonathan.smith@amccuf.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 - defence-west

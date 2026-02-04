@@ -1,6 +1,6 @@
 ---
 name: EVERETT SMITH & CO. PTY. LTD.
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Everett Smith is a WA based electrical contracting and engineering company, with 60 years' experience delivering quality,solutions across sectors, including defence, data, and critical infrastructure
 website: https://everettsmith.com.au
 contact_name: Matthew Conte
@@ -8,7 +8,8 @@ contact_title: General Manager
 address: 58 Howe Street, Perth WA 6017
 phone: '+61411736114'
 email: matt.conte@everettsmith.com.au
-is_prime: true
+company_types:
+- prime
 stakeholders:
 - defence
 capability_domains:

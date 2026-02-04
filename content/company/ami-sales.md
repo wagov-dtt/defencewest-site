@@ -1,14 +1,15 @@
 ---
 name: AMI Sales
-date: '2025-01-29'
+date: '2025-02-04'
 overview: AMI Sales is a long established company offering both supply, integration and service capability across naval and defence marine requirements.
-website: https://amidefence.com.au
+website: https://www.defence.amisales.com.au
 contact_name: Aaron Smith
 contact_title: 'Australasian Business Development Manager '
 address: 107 Forsyth Street, O'Connor WA 6163
 phone: +61 8 9331 0000
 email: aarons@amigroup.co
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 capability_domains:

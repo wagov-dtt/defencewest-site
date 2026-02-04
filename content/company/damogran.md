@@ -1,6 +1,6 @@
 ---
 name: Damogran
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Automated robotic painting and blasting of ships, both land-based ship surface treatment using robotics and future independent floating dock
 website: https://damogran.com.au
 contact_name: Dale Jordan
@@ -8,7 +8,8 @@ contact_title: Director
 address: 14 mohan loop, Hammond Park WA 6164
 phone: '0450107723'
 email: dale.jordan@damogran.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 - defence-west

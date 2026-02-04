@@ -1,6 +1,6 @@
 ---
 name: Lalli Consulting Engineers
-date: '2025-01-29'
+date: '2025-02-04'
 overview: We provide practical and cost-effective structural design solutions for Defence infrastructure as well as investigative services for asset management.
 website: https://www.lalli.com.au
 contact_name: Brett Walker
@@ -8,7 +8,8 @@ contact_title: General Manager
 address: 1/55 Howe Street, Osborne Park WA 6017
 phone: '94440171'
 email: brett@lalli.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 capability_domains:

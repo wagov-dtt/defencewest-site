@@ -1,6 +1,6 @@
 ---
 name: Marine Technicians Australia
-date: '2025-01-29'
+date: '2025-02-04'
 overview: 'Marine Technicians Australia is an Australian owned and operated marine-electrical company, with a major focus on defence platforms and shore-based infrastructure. '
 website: https://marinetechniciansaustralia.com.au
 contact_name: Mark Brown
@@ -8,7 +8,8 @@ contact_title: National Operations Manager
 address: 28 Stuart Drive, Henderson WA 6166
 phone: +61 424 439 241
 email: mark@marinetechniciansaustralia.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 capability_domains:

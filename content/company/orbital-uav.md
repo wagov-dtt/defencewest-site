@@ -1,6 +1,6 @@
 ---
 name: Orbital UAV
-date: '2025-01-29'
+date: '2025-02-04'
 overview: 'Orbital UAV is a world leader in the design, development and manufacture of propulsion systems and flight critical components for unmanned aerial vehicles (UAVs). '
 website: https://www.orbitaluav.com
 contact_name: Todd Alder
@@ -8,7 +8,8 @@ contact_title: CEO & Managing Director
 address: 4 Whipple Street, Balcatta WA 6021
 phone: +61 8 9441 2311
 email: contact@orbitalcorp.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 capability_domains:

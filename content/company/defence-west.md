@@ -1,6 +1,6 @@
 ---
 name: Defence West
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Defence West is the State Government office responsible for championing the interests of the Western Australian defence industry.
 website: https://www.wa.gov.au/organisation/department-of-the-premier-and-cabinet/defence-west
 contact_name: Amalia Burmas
@@ -8,7 +8,9 @@ contact_title: Manager - Defence Industry Development
 address: Level 11, 1 William Street, Perth WA 6000
 phone: +61 8 9262 1672
 email: defencewest@jtsi.wa.gov.au
-is_prime: true
+company_types:
+- government
+- prime
 stakeholders:
 - defence
 - academic

@@ -1,6 +1,6 @@
 ---
 name: Wedgetail Aerospace
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Wedgetail Aerospace is an agnostic drone service provider focused on air freight and data acquisition.
 website: https://www.wedgetailaerospace.com
 contact_name: Tom Symes
@@ -8,7 +8,8 @@ contact_title: Managing Director
 address: 5 Lindsay St, Perth WA 6000
 phone: 0401184933
 email: info@wedgetailaerospace.com
-is_prime: true
+company_types:
+- prime
 stakeholders:
 - defence
 - defence-west
@@ -41,8 +42,8 @@ capability_streams:
 - intelligence
 - logistics
 - research
-latitude: -31.9462672
-longitude: 115.8635746
+latitude: -31.946600145635
+longitude: 115.863002750959
 ---
 
 ## Overview

@@ -1,6 +1,6 @@
 ---
 name: HIFraser
-date: '2025-01-29'
+date: '2025-02-04'
 overview: HIFraser provide manufacturing and engineering solutions to a number of pivotal national projects.
 website: https://www.hifraser.com.au
 contact_name: Chris Williams
@@ -8,7 +8,8 @@ contact_title: Managing Director
 address: 13 Bowen Street, O'Connor WA 6163
 phone: +61 8 9314 7877
 email: chrisw@hifraser.com
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 capability_domains:

@@ -1,6 +1,6 @@
 ---
 name: 'Bhagwan Marine Limited '
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Bhagwan Marine are the leading Australian marine and sub sea solutions provider offering and delivering bespoke solutions to our customers in the Energy, Defence and Ports and Inshore space.
 website: https://www.bhagwanmarine.com
 contact_name: Peter Carmichael
@@ -8,7 +8,8 @@ contact_title: GM Corporate Strategy
 address: Lvl 3 251 St Georges Terrace, Perth WA 6018
 phone: 0458939076
 email: peter.carmichael@bhagwanmarine.com
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 - defence-west

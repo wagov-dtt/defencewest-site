@@ -1,6 +1,6 @@
 ---
 name: Land Surveys
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Land Surveys was established in 1997 and provides specialist Geospatial Services to all Private and Public Sector Clients. Being a National Surveying and Geospatial Business with over 500 Staff .
 website: https://www.landsurveys.net.au
 contact_name: Philip Jonath
@@ -8,7 +8,8 @@ contact_title: Head of Growth WA Metro, NT & SA
 address: 19 Brennan Way, Belmont WA 6014
 phone: 0433660963
 email: pjonath@landsurveys.net.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 capability_domains:

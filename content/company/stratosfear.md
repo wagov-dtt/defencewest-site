@@ -1,6 +1,6 @@
 ---
 name: Stratosfear
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Stratosfear is a fully integrated finance, strategic management and corporate advisory firm, purpose-built to support companies facing rapid scale, complex structure and growth.
 website: https://www.stratosfear.com.au
 contact_name: Brodie Stewart
@@ -8,7 +8,8 @@ contact_title: Director
 address: 16 Ogilvie Rd, Mount Pleasant WA 6153
 phone: 0487452796
 email: brodie.stewart@stratosfear.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 - defence-west

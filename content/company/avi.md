@@ -1,6 +1,6 @@
 ---
 name: AVI
-date: '2025-01-29'
+date: '2025-02-04'
 overview: AVI designs, engineers and manufactures complex communications systems, delivering data and capability to key industries in challenging environments.1
 website: https://avi.com.au
 contact_name: Tony Routledge
@@ -8,7 +8,8 @@ contact_title: Managing Director
 address: 6 Blaikie Street, Myaree WA 6154
 phone: +61 8 93302000
 email: sales@avi.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 - defence-west

@@ -1,6 +1,6 @@
 ---
 name: SFDesign
-date: '2025-01-29'
+date: '2025-02-04'
 overview: SFDesign is a multidisciplinary design and engineering house with experienced in the design and engineering of piping systems, heavy fabrication, structural detailing, ship layouts, reverse engineering, along with implementing and training globally recognized data management and CAD software which has enabled SFDesign to be a leading industry expert
 website: https://sfdesign.com.au
 contact_name: James Staples
@@ -8,7 +8,8 @@ contact_title: General Manager
 address: 10 Brodie-Hall Drive, Bentley WA 6102
 phone: 0438 948 821
 email: james.staples@sfdesign.com
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 capability_domains:

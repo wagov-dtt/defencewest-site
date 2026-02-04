@@ -1,6 +1,6 @@
 ---
 name: Pressure Dynamics International
-date: '2025-01-29'
+date: '2025-02-04'
 overview: 'Pressure Dynamics International
 
   An engineering and services contractor specialising in hydraulic and lifting solutions operating across multiple sectors'
@@ -10,7 +10,8 @@ contact_title: National Sales Manager
 address: 234 Barrington Street, Bibra Lake WA 6163
 phone: 08 9473 7277
 email: davide.sirolli@pressuredynamics.com
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 - defence-west

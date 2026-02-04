@@ -1,6 +1,6 @@
 ---
 name: Allied Heat Transfer
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Allied Heat Transfer designs, manufactures, services and repairs all types of heat exchangers for the marine, mining, drilling, industrial and power generation sectors.
 website: https://www.alliedheattransfer.com.au
 contact_name: Michael O'Brien
@@ -8,7 +8,8 @@ contact_title: Sales Manager
 address: 19 Tacoma Circuit, Canning Vale WA 6155
 phone: +61 8 9455 5933
 email: michael@alliedheattransfer.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 capability_domains:

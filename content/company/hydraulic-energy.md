@@ -1,6 +1,6 @@
 ---
 name: Hydraulic Energy Australia
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Company commenced operations in Western Australia in 2009 with a vision to be the recognised leader within the fluid power industry through responsiveness, operational excellence and continuous improvement to achieve the highest level of customer satisfaction.
 website: https://www.hydraulicenergy.com.au
 contact_name: Marco Cozza
@@ -8,7 +8,8 @@ contact_title: Business Development Manager
 address: 5 Landrail Court, Beckenham WA 6107
 phone: 08 9351 8080
 email: marco@hydraulicenergy.com.au
-is_sme: true
+company_types:
+- sme
 capability_domains:
 - air
 - armour

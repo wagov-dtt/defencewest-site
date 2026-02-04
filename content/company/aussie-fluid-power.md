@@ -1,6 +1,6 @@
 ---
 name: Aussie Fluid Power
-date: '2025-01-29'
+date: '2025-02-04'
 overview: AFP is one of Australia's leading fluid power companies providing hydraulic and process solutions including Engineering, on/off site Technician and Construction Services
 website: https://www.aussiefluidpower.com.au
 contact_name: Henry Bardolf-Smith
@@ -8,7 +8,8 @@ contact_title: Sales Manager
 address: 136 Cockburn Road, North Coogee WA 6163
 phone: '0447007651'
 email: hbardolfsmith@aussiefluidpower.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 - defence-west

@@ -1,6 +1,6 @@
 ---
 name: A.D. Coote & Co. Sheet Metal PTY LTD
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Australian-owned, ISO-certified WA manufacturer delivering sheet metal and heavy fabrication services to infrastructure, mining, oil and gas, and commercial sectors.
 website: https://adcoote.com.au
 contact_name: Charles De Vos
@@ -8,7 +8,8 @@ contact_title: General Manager
 address: 51 Welshpool Road, Welshpool WA 6106
 phone: 0893617666
 email: charles@adcoote.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 - defence-west

@@ -1,6 +1,6 @@
 ---
 name: PRF Industries Pty Ltd
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Electrical Service company providing a licenced workforce to supply and install electrical, data comms, and security cabling and systems
 website: https://prfelectrical.com.au
 contact_name: Phil Fraser
@@ -8,7 +8,8 @@ contact_title: Managing Director
 address: FACTORY 16 5 HINES RD, O'CONNOR WA 6163
 phone: '+61893302505'
 email: phil@prfelectrical.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence-west
 capability_domains:

@@ -1,6 +1,6 @@
 ---
 name: Capability X
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Capability X delivers sovereign AI, automation, and robotics solutions engineered in Perth, supporting defence, subsea, and critical industrial operations with advanced remote-operation capability.
 website: https://www.capabilityx.com
 contact_name: Lex Simons
@@ -8,7 +8,8 @@ contact_title: 'Manager Strategy and Commercial '
 address: 620 Gnangara Road, Cullacabardee WA 6011
 phone: '04017524320'
 email: lsimons@capabilityx.com
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 - academic

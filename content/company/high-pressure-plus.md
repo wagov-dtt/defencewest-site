@@ -1,6 +1,6 @@
 ---
 name: High Pressure Plus
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Defence approved Hyperbaric Repairer, specialising in high-pressure gas and fluid systems with a strong focus on breathing air and oxygen systems across all Defence sectors in Perth and Sydney.
 website: https://www.hpplus.com.au
 contact_name: Mathew Burton
@@ -8,7 +8,8 @@ contact_title: WA Branch Manager
 address: Unit 1, 10 Tidal Way, Bibra Lake WA 6163
 phone: 0407 502 562
 email: mathew.burton@hpplus.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 - academic

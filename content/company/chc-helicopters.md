@@ -1,6 +1,6 @@
 ---
 name: CHC Helicopters (Australia)
-date: '2025-01-29'
+date: '2025-02-04'
 overview: 'CHC Helicopters (Australia) started operations in 1969 and grew to become the largest commercial helicopter operator in the country. '
 website: https://www.chcheli.com
 contact_name: David Irvine
@@ -8,7 +8,8 @@ contact_title: Commercial Manager
 address: Level 4, 1060 Hay St, West Perth WA 6005
 phone: 08 6217 7401
 email: david.irvine@chcheli.com
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 capability_domains:

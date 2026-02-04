@@ -1,6 +1,6 @@
 ---
 name: L3 Harris - Oceania
-date: '2025-01-29'
+date: '2025-02-04'
 overview: L3 Harris Oceania is a leading provider of maritime systems and solutions in the surface, undersea, geospatial and network centric spheres of operation for both defence and commercial applications.
 website: https://www.l3oceania.com
 contact_name: Scott Elson
@@ -8,7 +8,8 @@ contact_title: Director - Sales and Marketing
 address: 108 Marine Terrace, Fremantle WA 6160
 phone: +61 8 9431 0043
 email: scott.elson@L3T.com
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 capability_domains:

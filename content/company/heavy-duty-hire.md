@@ -1,6 +1,6 @@
 ---
 name: HEAVY DUTY HIRE
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Heavy Duty Hire is a WA based, localy owned and operated equipment hire company. We supply earthmoving equipment, site accommodation and power generation equipment to Mining, Civil and Construction.
 website: https://www.hdhire.net
 contact_name: Adam Marshall
@@ -8,7 +8,8 @@ contact_title: Director
 address: PO Box 1160, Canning Bridge WA 6153
 phone: 0452692150
 email: adam.marshall@hdhire.net
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 - defence-west

@@ -1,14 +1,15 @@
 ---
 name: 'Consolidated Group '
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Consolidated Group is a WA owned and operated company with a client focused approach to civil earth works and plant hire services
-website: https://www.consolidatedgroup.com.au
+website: https://consolidatedgroup.com.au
 contact_name: 'Theo Tsorvas '
 contact_title: Director
 address: 101 Phillips Road, Wattelup WA 6166
 phone: 0459 786 391
 email: theo@consolidatedgroup.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 capability_domains:

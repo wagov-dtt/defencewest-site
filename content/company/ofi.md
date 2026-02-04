@@ -1,6 +1,6 @@
 ---
 name: OFI Group Holdings Pty Ltd
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Powering Innovation. OFI is an industry leader in electrical innovation and integration with the persistence, agility and commitment to always deliver.
 website: https://ofigroup.com.au
 contact_name: Cobey Mills
@@ -8,7 +8,8 @@ contact_title: Pre-Contracts Manager
 address: 15 Wilson Road, Davenport WA 6230
 phone: +61 407 302 419
 email: cmills@ofigroup.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 - academic

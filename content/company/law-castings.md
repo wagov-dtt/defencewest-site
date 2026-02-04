@@ -1,6 +1,6 @@
 ---
 name: Law Castings
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Law Castings is a family-owned and operated manufacturing business in WA. We are an iron and steel Foundry specialising in stainless steel castings up to 300kg.
 website: https://www.lawcastings.com.au
 contact_name: Rodney Luck
@@ -8,7 +8,8 @@ contact_title: Managing Director
 address: 12 Williams road, Kelmscott WA 6111
 phone: 0894971044
 email: production@lawcastings.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 capability_domains:

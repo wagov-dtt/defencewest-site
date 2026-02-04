@@ -1,6 +1,6 @@
 ---
 name: Hoppers Asia Pacific Solutions Pty Ltd
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Stainless Steel Fluid Connectors & related products for safe reliable fluid transfer across All industry. Servicing Australia & Asia Pacific
 website: https://hapsaus.com
 contact_name: Tim Poidevin
@@ -8,7 +8,8 @@ contact_title: General Manager
 address: Unit 1/11 Tamara Drive, Cockburn Central WA 6164
 phone: 0499993609
 email: tim.poidevin@hapsaus.com
-is_sme: true
+company_types:
+- sme
 capability_domains:
 - amphibious
 - armour

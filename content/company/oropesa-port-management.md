@@ -1,6 +1,6 @@
 ---
 name: Oropesa Port Management
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Oropesa Port Management provides specialist services in the maritime and defence sectors.
 website: https://www.oropesa.com.au
 contact_name: Adam McPhail
@@ -8,7 +8,8 @@ contact_title: Managing Director
 address: L29, 221 St Georges Tce, Perth WA 6000
 phone: +61 8 6311 2817
 email: enquire@oropesa.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 capability_domains:

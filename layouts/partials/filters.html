@@ -6,6 +6,7 @@
 {{- $industrialCounts := $.Site.Taxonomies.industrial_capabilities -}}
 {{- $regionCounts := $.Site.Taxonomies.regions -}}
 {{- $ownershipCounts := $.Site.Taxonomies.ownerships -}}
+{{- $companyTypeCounts := $.Site.Taxonomies.company_types -}}
 
   <div class="filters-scroll">
     <!-- Capability Streams -->
@@ -29,6 +30,20 @@
         <label class="stream-icon" title="{{ $name }} ({{ with index $ownershipCounts $key }}{{ .Count }}{{ else }}0{{ end }})">
           <input type="checkbox" name="ownerships" value="{{ $key }}">
           <img src="{{ printf "icons/ownerships/%s.png" $key | relURL }}" alt="{{ $name }}" loading="lazy">
+        </label>
+        {{- end }}
+      </div>
+    </details>
+
+    <!-- Company Type -->
+    <details class="filter-details" open>
+      <summary>Company Type</summary>
+      <div class="filter-options">
+        {{- range $key, $name := $taxonomies.company_types }}
+        <label class="filter-item">
+          <input type="checkbox" name="company_types" value="{{ $key }}">
+          <span>{{ $name }}</span>
+          <small class="filter-count">{{ with index $companyTypeCounts $key }}{{ .Count }}{{ else }}0{{ end }}</small>
         </label>
         {{- end }}
       </div>

@@ -1,14 +1,15 @@
 ---
 name: KAEFER
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Since 1918, KAEFER has successfully delivered its unique products and services to the international defence sector in new-build and sustainment projects for surface and sub-surface vessels.
-website: https://kaefer.com.au
+website: https://www.kaefer.com.au
 contact_name: Barry Punter
 contact_title: Manager - Defence
 address: Unit 4, 156 Kewdale Road, Kewdale WA 6105
 phone: +61 428 224 967
 email: b.punter@kaefemc.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 capability_domains:

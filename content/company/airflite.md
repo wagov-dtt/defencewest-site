@@ -1,6 +1,6 @@
 ---
 name: Airflite
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Airflite has significant involvement with the Australian Defence Forces and other worldwide Defence agencies, offering a broad range of capabilities and vast experience to support military operations on a global scale.
 website: https://www.airflite.com.au
 contact_name: 'Kris Constantinides '
@@ -8,7 +8,8 @@ contact_title: General Manager
 address: 26 Newton Road, Perth Airport WA 6105
 phone: +61 8 9478 9000
 email: kconstantinides@airflite.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 capability_domains:

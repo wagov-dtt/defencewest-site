@@ -1,6 +1,6 @@
 ---
 name: Royston Australia
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Royston diesel power is a dynamic and expanding diesel engine supply, service and repair company that has operated successfully with the global marine and offshore market.
 website: https://www.roystonaustralia.com.au
 contact_name: Matty Burbidge
@@ -8,7 +8,8 @@ contact_title: General Manager
 address: 13 Redemptora Road, Henderson WA 6166
 phone: 08 9410 2288
 email: matty.burbidge@roystonaustralia.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 capability_domains:

@@ -1,6 +1,6 @@
 ---
 name: Innovaero Pty Ltd
-date: '2025-01-29'
+date: '2025-02-04'
 overview: "Innovaero is a multi-disciplinary, aeronautical product design, certification and manufacturing organisation with \nsignificant experience in the development of large dual-use remotely piloted aircraft systems."
 website: https://innov.aero
 contact_name: Dave Tomkinson
@@ -8,7 +8,8 @@ contact_title: Operations Manager
 address: 20 Weatherburn Way, Kardinya WA 6163
 phone: +61 8 6365 9179
 email: info@innov.aero
-is_sme: true
+company_types:
+- sme
 capability_domains:
 - intelligence
 - light

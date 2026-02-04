@@ -1,6 +1,6 @@
 ---
 name: Bennett + Co
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Bennett + Co is a full service commercial law firm in Perth, Western Australia.
 website: https://bennettlaw.com.au
 contact_name: Mark MacLennan
@@ -8,7 +8,8 @@ contact_title: Principal
 address: Ground Floor, BGC Centre, 28 The Esplanade, Perth WA 6000
 phone: +61 8 6316 2289
 email: mmaclennan@bennettandco.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 capability_domains:

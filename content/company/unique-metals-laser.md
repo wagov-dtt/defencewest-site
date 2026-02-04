@@ -1,14 +1,15 @@
 ---
 name: Unique Metals Laser
-date: '2025-01-29'
+date: '2025-02-04'
 overview: "Australia's leading provider of turnkey steel, \r\nmanufacturing solutions, offering end to end\r\nservices including plasma cutting,\r\nperforation, folding, fabrication,\r\nand complete project delivery."
-website: https://www.uniquelaser.com.au
+website: https://uniquelaser.com.au
 contact_name: Paul Figliomeni
 contact_title: Director
 address: 117 Inspiration Drive, Wangara WA 6065
 phone: 0413873977
 email: paul.figliomeni@uniquelaser.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 - defence-west

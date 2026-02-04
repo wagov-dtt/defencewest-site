@@ -1,6 +1,6 @@
 ---
 name: United Safety and Survivability Corporation
-date: '2025-01-29'
+date: '2025-02-04'
 overview: United Safety and Survivability Corporation are committed to delivering the most innovative and reliable safety and survivability solutions that our customers can trust to protect life and property.
 website: https://www.unitedsafetycorporation.com.au
 contact_name: 'Chris Wheeler '
@@ -8,7 +8,8 @@ contact_title: WA Business Development Manager
 address: 3/1 Hathor Way, Bibra Lake WA 6163
 phone: 04398434727
 email: chris.Wheeler@ussc.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 capability_domains:

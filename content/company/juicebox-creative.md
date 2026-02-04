@@ -1,6 +1,6 @@
 ---
 name: Juicebox Creative Pty Ltd
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Juicebox is a market-leading digital agency specialising in brand-led, human-centred design, technology and marketing solutions.
 website: https://www.juicebox.com.au
 contact_name: Chris Nelson
@@ -8,7 +8,8 @@ contact_title: Managing Director
 address: 260 Railway Parade, West Leederville WA 6007
 phone: 0412012877
 email: chris@juicebox.com.au
-is_sme: true
+company_types:
+- sme
 capability_domains:
 - communications
 industrial_capabilities:

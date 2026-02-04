@@ -1,6 +1,6 @@
 ---
 name: Western Australian Defence Industry Workforce Office
-date: '2025-01-29'
+date: '2025-02-04'
 overview: The Western Australian Defence Industry Workforce Office (WADIWO) was established in May 2019 as an outcome of the Advancing Education, Training and Skilling strategy. This is part of the Western Australian Defence and Defence Industries Strategic Plan launched by the Premier in 2018. The office leads the development of the WA Defence Workforce Development Plan in close collaboration with Defence West, education and training providers including the Team WA universities, the WA industry and the Department of Training and Workforce Development
 website: https://www.wa.gov.au/service/business-support/industry-development/western-australian-defence-industry-workforce-office
 contact_name: 'Hiromi Fujisaki '
@@ -8,6 +8,8 @@ contact_title: Program Director, WA Defence Workforce Strategy
 address: 16 Parkland Road, Osborne Park WA 6017
 phone: 08 6551 5146
 email: hiromi.fujisaki@dtwd.wa.gov.au
+company_types:
+- government
 stakeholders:
 - academic
 regions:

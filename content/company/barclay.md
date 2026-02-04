@@ -1,6 +1,6 @@
 ---
 name: Barclay Engineering
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Barclay Engineering delivers valued solutions worldwide and since 1977. They cater to a diverse range of sectors including Construction, Infrastructure, Power Generation, Defence, Marine and HVAC.
 website: https://www.barclayeng.com.au
 contact_name: Caroline Sampson
@@ -8,7 +8,8 @@ contact_title: Sales - Projects
 address: 12-16 Catalano Road, Canning Vale WA 6155
 phone: +61 8 9256 0900
 email: info@barclayeng.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 capability_domains:

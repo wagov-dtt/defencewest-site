@@ -1,6 +1,6 @@
 ---
 name: APEX Utilities Pty Ltd
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Apex Utilities is a WA utilities and civil contractor delivering specialist trenchless works with a proven strike-free record and strong workforce development focus.
 website: https://apexutilities.com.au
 contact_name: Tracey Daly
@@ -8,7 +8,8 @@ contact_title: Operations Lead
 address: 14 Lionel Street, Naval Base WA 6165
 phone: '0477755662'
 email: Tracey.Daly@apexutilities.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 - academic

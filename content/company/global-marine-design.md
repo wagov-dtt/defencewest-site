@@ -1,13 +1,14 @@
 ---
 name: Global Marine Design
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Specialist Marine Design focusing high speed aluminium 4 - 45mtrs. Hundreds of proven designs, commercial, military, rescue and recreational. Built by over 140 builders in 27 countries.
 website: https://globalmarinedesign.com
 contact_name: Stephen Collett
 address: 3/297 South Street, Hilton WA 6163
 phone: 0417942247
 email: steve@globalmarinedesign.com
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 - academic

@@ -1,6 +1,6 @@
 ---
 name: NB Consulting
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Business Advisory Services - Defence Industry Small-Medium Enterprise (SME)s aspiring to enter or develop their presence in the Defence Industry sector.
 website: https://nb-consulting.com.au
 contact_name: Neil Bartlett
@@ -8,7 +8,8 @@ contact_title: Principal
 address: P.O. Box 1150, Subiaco WA 6904
 phone: +61(0)434 832 336
 email: admin@nb-consulting.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 - defence-west

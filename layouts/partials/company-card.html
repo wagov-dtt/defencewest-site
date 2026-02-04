@@ -49,10 +49,17 @@
       </div>
       <div class="name" title="{{ $company.name }}">{{ $company.name }}</div>
       <div class="badges">
-        {{- if $company.is_prime }}<small>Prime</small>{{ end -}}
-        {{- if $company.is_sme }}<small>SME</small>{{ end -}}
-        {{- if $company.is_indigenous_owned }}<small class="highlight">Indigenous</small>{{ end -}}
-        {{- if $company.is_veteran_owned }}<small class="highlight">Veteran</small>{{ end -}}
+        {{- with $company.company_types }}
+          {{- range . }}
+            {{- if eq . "prime" }}<small class="highlight">Prime</small>{{ end -}}
+          {{- end }}
+        {{- end }}
+        {{- with $company.ownerships }}
+          {{- range . }}
+            {{- if eq . "indigenous" }}<small class="highlight">Indigenous</small>{{ end -}}
+            {{- if eq . "veteran" }}<small class="highlight">Veteran</small>{{ end -}}
+          {{- end }}
+        {{- end }}
       </div>
       {{- with $overview_short }}
       <p class="overview"><small title="{{ $company.overview }}">{{ . }}</small></p>
@@ -72,9 +79,10 @@
      {{- with $company.capability_domains }} data-capability_domains="{{ delimit . "|" }}"{{ end }}
      {{- with $company.industrial_capabilities }} data-industrial_capabilities="{{ delimit . "|" }}"{{ end }}
      {{- with $company.regions }} data-regions="{{ delimit . "|" }}"{{ end }}
-     {{- with $company.ownerships }} data-ownerships="{{ delimit . "|" }}"{{ end }}
-     {{- with $company.latitude }} data-lat="{{ . }}"{{ end }}
-     {{- with $company.longitude }} data-lng="{{ . }}"{{ end }}>
+      {{- with $company.ownerships }} data-ownerships="{{ delimit . "|" }}"{{ end }}
+      {{- with $company.company_types }} data-company_types="{{ delimit . "|" }}"{{ end }}
+      {{- with $company.latitude }} data-lat="{{ . }}"{{ end }}
+      {{- with $company.longitude }} data-lng="{{ . }}"{{ end }}>
 
   {{- if $isMap }}
   <span class="marker-dot"></span>
@@ -94,10 +102,17 @@
       <div class="name" title="{{ $company.name }}">{{ $company.name }}</div>
 
       <div class="badges">
-        {{- if $company.is_prime }}<small>Prime</small>{{ end -}}
-        {{- if $company.is_sme }}<small>SME</small>{{ end -}}
-        {{- if $company.is_indigenous_owned }}<small class="highlight">Indigenous</small>{{ end -}}
-        {{- if $company.is_veteran_owned }}<small class="highlight">Veteran</small>{{ end -}}
+        {{- with $company.company_types }}
+          {{- range . }}
+            {{- if eq . "prime" }}<small class="highlight">Prime</small>{{ end -}}
+          {{- end }}
+        {{- end }}
+        {{- with $company.ownerships }}
+          {{- range . }}
+            {{- if eq . "indigenous" }}<small class="highlight">Indigenous</small>{{ end -}}
+            {{- if eq . "veteran" }}<small class="highlight">Veteran</small>{{ end -}}
+          {{- end }}
+        {{- end }}
       </div>
 
       {{- if and $overview_short (not $isMap) }}

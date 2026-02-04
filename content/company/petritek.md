@@ -1,6 +1,6 @@
 ---
 name: Petritek
-date: '2025-01-29'
+date: '2025-02-04'
 overview: 'Petritek: Innovating R&D-driven solutions across Oil & Gas, Mining, Space, and expanding into Defence, specializing in precision technologies for challenging environments.'
 website: https://petritek.com
 contact_name: Ben Fowler
@@ -8,7 +8,8 @@ contact_title: Business Development Manager
 address: 75 Farrall Road, Midvale WA 6056
 phone: 0431695986
 email: ben@petritek.com
-is_prime: true
+company_types:
+- prime
 capability_domains:
 - science
 - training

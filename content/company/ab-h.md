@@ -1,6 +1,6 @@
 ---
 name: AB&H Pty Ltd
-date: '2025-01-29'
+date: '2025-02-04'
 overview: AB&H Pty Ltd is a Technology Services company specialising in Agile Program and Project Management.
 website: https://www.abandh.com.au
 contact_name: Russell Ascott
@@ -8,7 +8,8 @@ contact_title: Director
 address: PO Box 130, Mosman Park WA 6012
 phone: +61 413 819 715
 email: russell.ascott@abandh.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 capability_domains:

@@ -1,6 +1,6 @@
 ---
 name: PQR Quality Solutions
-date: '2025-01-29'
+date: '2025-02-04'
 overview: PQR Quality Solutions is an inspection and quality consulting company which provides technical inspection solutions and inspection staff across the oil and gas, marine, construction and maintenance, infrastructure, mining and resources Industries.
 website: https://pqr.net.au
 contact_name: Paul Reid
@@ -8,7 +8,8 @@ contact_title: Managing Director
 address: Level 1, 78 Discovery Drive, Bibra Lake WA 6163
 phone: +61 421 768 388
 email: paul.reid@pqr.net.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 capability_domains:

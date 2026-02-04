@@ -1,6 +1,6 @@
 ---
 name: Kanyana Engineering Pty Ltd
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Kanyana Engineering Pty Ltd is a reputable business specialising in metal laser cutting, bending, and fabrication for over 25 years. With a dedicated team of highly skilled professionals, we provide high-quality precision metalworking solutions to various industries.
 website: https://kanyanaengineering.com.au
 contact_name: Sharon Dawe
@@ -8,7 +8,8 @@ contact_title: Account Director
 address: 22 Fitzgerald Road, Mandurah WA 6210
 phone: +61 89581 6770
 email: sharon@kanyanaengineering.com
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 - academic

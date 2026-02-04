@@ -1,6 +1,6 @@
 ---
 name: Actus Associates Party Limited
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Actus Associates (Actus) is a WA based and veteran owned architectural practice offering tailored architectural solutions to both Defence and civilian clients.
 website: https://www.actus.net.au
 contact_name: Justin Cloney
@@ -8,7 +8,8 @@ contact_title: Operations Director
 address: 26 Charles Street, South Perth WA 6151
 phone: 0863179681
 email: justin@actus.net.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 - academic

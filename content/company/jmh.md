@@ -1,6 +1,6 @@
 ---
 name: JMH Group
-date: '2025-01-29'
+date: '2025-02-04'
 overview: For all your mobile plant and equipment mechanical repairs & maintenance, labour hire support, parts supply, specialised tooling hire, component exchange and undercarriage repairs.
 website: https://jmhgroup.net.au
 contact_name: Jaydon Hirst
@@ -8,7 +8,8 @@ contact_title: Director
 address: 41 Foskew Way, Narngulu WA 6532
 phone: 0488 648 370
 email: service@jmhgroup.net.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 - defence-west

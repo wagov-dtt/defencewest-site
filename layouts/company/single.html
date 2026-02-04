@@ -38,13 +38,11 @@
       <!-- Left Column: Content -->
       <div class="col-12 col-md-8 content-column">
         <h1>{{ $company.name }}</h1>
-        {{- if or $company.is_prime $company.is_sme (len (.GetTerms "ownerships")) }}
+        {{- with .GetTerms "company_types" }}
         <p class="company-badges-inline">
-          {{- if $company.is_prime }}<small>Prime</small>{{ end -}}
-          {{- if $company.is_sme }}<small>SME</small>{{ end -}}
-          {{- range .GetTerms "ownerships" }}
-          {{- $displayName := index $taxonomies.ownerships .Data.Term | default .LinkTitle }}
-          <small>{{ $displayName }}</small>
+          {{- range . }}
+          {{- $displayName := index $taxonomies.company_types .Data.Term | default .LinkTitle }}
+          <a href="{{ .RelPermalink }}" class="badge-link"><small>{{ $displayName }}</small></a>
           {{- end }}
         </p>
         {{- end }}
@@ -95,15 +93,37 @@
 
         <!-- Taxonomy Section -->
         <div class="taxonomy-section">
-          {{- with .GetTerms "capability_streams" }}
-          {{- $taxonomies := $.Site.Data.taxonomies -}}
-          <strong class="sidebar-section">Capability Streams</strong>
-          <div class="stream-icons">
-            {{- range . }}
-            {{- $displayName := index $taxonomies.capability_streams .Data.Term | default .LinkTitle }}
-            <a href="{{ .RelPermalink }}" title="{{ $displayName }}">
-              <img src="{{ printf "icons/streams/%s.png" .Data.Term | relURL }}" alt="{{ $displayName }}" loading="lazy">
-            </a>
+          {{- $hasStreams := .GetTerms "capability_streams" }}
+          {{- $hasOwnerships := .GetTerms "ownerships" }}
+          {{- if or $hasStreams $hasOwnerships }}
+          <div class="grid taxonomy-row">
+            {{- with $hasStreams }}
+            {{- $taxonomies := $.Site.Data.taxonomies -}}
+            <div class="taxonomy-column">
+              <strong class="sidebar-section">Capability Streams</strong>
+              <div class="stream-icons">
+                {{- range . }}
+                {{- $displayName := index $taxonomies.capability_streams .Data.Term | default .LinkTitle }}
+                <a href="{{ .RelPermalink }}" title="{{ $displayName }}">
+                  <img src="{{ printf "icons/streams/%s.png" .Data.Term | relURL }}" alt="{{ $displayName }}" loading="lazy">
+                </a>
+                {{- end }}
+              </div>
+            </div>
+            {{- end }}
+            {{- with $hasOwnerships }}
+            {{- $taxonomies := $.Site.Data.taxonomies -}}
+            <div class="taxonomy-column">
+              <strong class="sidebar-section">Ownership</strong>
+              <div class="ownership-icons">
+                {{- range . }}
+                {{- $displayName := index $taxonomies.ownerships .Data.Term | default .LinkTitle }}
+                <a href="{{ .RelPermalink }}" title="{{ $displayName }}">
+                  <img src="{{ printf "icons/ownerships/%s.png" .Data.Term | relURL }}" alt="{{ $displayName }}" loading="lazy">
+                </a>
+                {{- end }}
+              </div>
+            </div>
             {{- end }}
           </div>
           {{- end }}

@@ -74,6 +74,7 @@ TAXONOMIES = [
     "industrial_capabilities",
     "regions",
     "ownerships",
+    "company_types",
 ]
 
 # Field categories for form/import handling

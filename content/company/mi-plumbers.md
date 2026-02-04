@@ -1,6 +1,6 @@
 ---
 name: MI Plumbers
-date: '2025-01-29'
+date: '2025-02-04'
 overview: MI Plumbers delivers industry leading plumbing construction, fit-out, maintenance and surveying services to the mining, defence, civil, industrial and commercial sectors in Western Australia.
 website: https://www.miplumbers.com.au
 contact_name: Daniel MacPherson
@@ -8,7 +8,8 @@ contact_title: Defence Operations Manager
 address: 79 Frobisher Street, Osborne Park WA 6017
 phone: 0428114168
 email: daniel.macpherson@miplumbers.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 capability_domains:

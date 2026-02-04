@@ -1,6 +1,6 @@
 ---
 name: University of Western Australia
-date: '2025-01-29'
+date: '2025-02-04'
 overview: The University of Western Australia (UWA) is supporting the Australian Government's commitment to long term  national security and sovereign defence capability by contributing with leading strengths in marine engineering, human factors, automation and sensing.
 website: https://www.uwa.edu.au/home
 contact_name: Giacinta (Gia) Parish
@@ -8,6 +8,8 @@ contact_title: Director, UWA Defence & Security Institute
 address: 35 Stirling Highway, Perth WA 6009
 phone: +61 8 6488 3390
 email: giacinta.parish@uwa.edu.au
+company_types:
+- educational
 stakeholders:
 - academic
 - defence-science

@@ -1,6 +1,6 @@
 ---
 name: Segnut
-date: '2025-01-29'
+date: '2025-02-04'
 overview: 'Segnut Pty Ltd has developed an innovative direct replacement for a traditional threaded nut. '
 website: https://www.segnut.com
 contact_name: Tom Baskovich
@@ -8,7 +8,8 @@ contact_title: Chief Executive Officer
 address: 5 Carleton Place, Mandurah WA 6210
 phone: +61 449 253 202
 email: tom@segnut.com
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 capability_domains:

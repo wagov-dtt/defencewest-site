@@ -1,6 +1,6 @@
 ---
 name: Curtin University
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Curtin University is a trusted partner and fundamental part of the Australian defence industry sector.
 website: https://www.curtin.edu.au
 contact_name: Gary Hale
@@ -8,6 +8,8 @@ contact_title: Director, National Resilience and Security Program Office
 address: Kent Street, Bentley WA 6102
 phone: +61 8 9266 1448
 email: directorNRAS@curtin.edu.au
+company_types:
+- educational
 stakeholders:
 - academic
 - defence-science

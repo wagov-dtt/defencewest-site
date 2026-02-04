@@ -38,10 +38,12 @@
       {{- range .Params.industrial_capabilities }}
       <category domain="industrial_capability">{{ . }}</category>
       {{- end }}
-      {{- if .Params.is_sme }}<category>SME</category>{{ end }}
-      {{- if .Params.is_prime }}<category>Prime</category>{{ end }}
-      {{- if .Params.is_indigenous_owned }}<category>Indigenous Owned</category>{{ end }}
-      {{- if .Params.is_veteran_owned }}<category>Veteran Owned</category>{{ end }}
+      {{- range .Params.company_types }}
+      <category domain="company_type">{{ . }}</category>
+      {{- end }}
+      {{- range .Params.ownerships }}
+      <category domain="ownership">{{ . }}</category>
+      {{- end }}
       <description>{{ .Summary | html }}</description>
     </item>
     {{- end }}

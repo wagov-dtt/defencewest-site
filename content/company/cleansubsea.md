@@ -1,6 +1,6 @@
 ---
 name: CleanSubSea
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Envirocart - in-water hull cleaning with complete capture, containment and filtration.
 website: http://www.cleansubsea.com
 contact_name: Peter Maidment
@@ -8,7 +8,8 @@ contact_title: BD technical Advisor
 address: unit 4, 16 aspiration circuit, Bibra Lake WA 6163
 phone: '0427015111'
 email: peter@cleansubsea.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 - defence-west

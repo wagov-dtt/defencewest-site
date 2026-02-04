@@ -1,6 +1,6 @@
 ---
 name: Nauticraft
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Nauti-Craft Pty Ltd is a research and development company focused on the design and development of the patented Nauti-Craft marine suspension system.
 website: https://www.nauti-craft.com
 contact_name: Ben Allerton
@@ -8,7 +8,8 @@ contact_title: Business Development
 address: 9 Clark Street, Dunsborough WA 6281
 phone: +61 408 553 093
 email: ben@nauti-craft.com
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 capability_domains:

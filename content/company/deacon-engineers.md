@@ -1,6 +1,6 @@
 ---
 name: Deacon Engineers
-date: '2025-01-29'
+date: '2025-02-04'
 overview: "Deacon Engineers undertakes a broad range of projects in mining, water and waste water, industrial, recycling and sustainability and mineral processing. \n"
 website: https://www.deaconengineers.com.au
 contact_name: Mal Cook
@@ -8,7 +8,8 @@ contact_title: Business Manager WA
 address: 3/28 Belmont Avenue, Rivervale WA 6103
 phone: +61 8 92172933
 email: enquiries@deaconengineers.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 regions:

@@ -1,6 +1,6 @@
 ---
 name: Red Tail Group Pty Ltd
-date: '2025-01-29'
+date: '2025-02-04'
 overview: The Red Tail Group is a boutique Preservation, Maintenance, and Industrial Cleaning services provider. RTG is now the distributor for Zerust VCI products.
 website: https://redtail.group
 contact_name: Duncan Nicholas
@@ -8,7 +8,8 @@ contact_title: Director
 address: 3 Stanley Street, Glen Forrest, WA 6071
 phone: 0439937566
 email: duncan.nicholas@redtail.group
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 capability_domains:

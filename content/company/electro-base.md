@@ -1,6 +1,6 @@
 ---
 name: Electro Base Pty Ltd
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Electro Base is a Western Australian renewable energy technology company providing off-grid power needs for commercial and industrial needs and fast e-mobility charging.
 website: https://electrobase.au
 contact_name: Sylvia Tokic
@@ -8,7 +8,8 @@ contact_title: CEO
 address: Unit 6, 502 Marmion Street, Booragoon WA 6154
 phone: 0439992072
 email: sylvia@electrobase.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 - defence-west

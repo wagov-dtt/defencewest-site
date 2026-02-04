@@ -1,6 +1,6 @@
 ---
 name: Murdoch University
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Murdoch University has, from its foundation in 1974, been a university of difference. Established as the second university in WA, Murdoch has always been associated building a brighter future.
 website: https://www.murdoch.edu.au
 contact_name: Alasdair Macdonald
@@ -8,6 +8,8 @@ contact_title: Director Research and Innovation
 address: 90 South Street, Murdoch WA 6150
 phone: +61 8 9360 6466
 email: a.macdonald@murdoch.edu.au
+company_types:
+- educational
 stakeholders:
 - academic
 - defence-science

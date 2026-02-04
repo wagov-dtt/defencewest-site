@@ -1,6 +1,6 @@
 ---
 name: Ngalima
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Ngalima is a Pilbara-based Aboriginal business offering earthworks, concrete construction, and plant and labour hire services.
 website: https://ngalima.com.au
 contact_name: Louise Whitten
@@ -8,7 +8,8 @@ contact_title: CEO
 address: Newman Court, Karratha WA 6718
 phone: 1300 933 823
 email: ngalima@ngalima.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 - academic

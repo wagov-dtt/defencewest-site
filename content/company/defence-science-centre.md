@@ -1,6 +1,6 @@
 ---
 name: Defence Science Centre
-date: '2025-01-29'
+date: '2025-02-04'
 overview: 'The Defence Science Centre exists to transform defence science challenges into tangible capabilities for both Defence and local industry.  '
 website: https://www.jtsi.wa.gov.au/economic-development/defence-west/defence-science-centre
 contact_name: Michele Clement
@@ -8,7 +8,10 @@ contact_title: Director
 address: Level 11, 1 William Street, Perth WA 6000
 phone: +61 8 6277 3000
 email: dsc@jtsi.wa.gov.au
-is_prime: true
+company_types:
+- government
+- research
+- prime
 stakeholders:
 - defence-science
 regions:

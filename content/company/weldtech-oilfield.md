@@ -1,6 +1,6 @@
 ---
 name: Weldtech Oilfield Services
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Weldtech oilfield services is a mutli-disciplined maintenance and construction contractor specialising in providng the highest level of fabrication services to the oil & gas, marine and mining industries throughout australia.
 website: https://www.weldtechos.com.au
 contact_name: Josie Travia
@@ -8,7 +8,8 @@ contact_title: Administration and accounts
 address: 54 Zedora Turn, Henderson WA 6163
 phone: 08 64989958
 email: info@weldtechos.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 capability_domains:

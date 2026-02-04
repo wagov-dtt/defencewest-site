@@ -1,6 +1,6 @@
 ---
 name: ARA Marine Pty Ltd
-date: '2025-01-29'
+date: '2025-02-04'
 overview: 'With well-established and documented work practices, ARA Marine project manages complex fit outs, tests, services and rectifications to the standards expected by the Department of Defence.
 
 
@@ -14,7 +14,8 @@ contact_title: Manager
 address: 42 Zedora Turn, Henderson WA 6166
 phone: '1800003473'
 email: mgartside@aramarine.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 - defence-west

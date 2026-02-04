@@ -1,6 +1,6 @@
 ---
 name: Alltools WA Pty Ltd
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Alltools WA is your trusted sourcing expert for industrial supplies and tooling, delivering hard-to-find equipment and custom solutions with reliability, speed, and industry expertise.
 website: https://www.alltools.com.au
 contact_name: justin iemma
@@ -8,7 +8,8 @@ contact_title: CEO
 address: 204 collier rd, Bayswater WA 6053
 phone: '+61892727611'
 email: justin@alltools.com.au
-is_sme: true
+company_types:
+- sme
 industrial_capabilities:
 - electronics
 - mechanical

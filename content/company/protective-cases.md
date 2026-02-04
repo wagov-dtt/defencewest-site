@@ -1,6 +1,6 @@
 ---
 name: Protective Cases
-date: '2025-01-29'
+date: '2025-02-04'
 overview: 'Protective Cases produces in-house design and the manufacture of cases and foam inserts, and also prototype to large scale production.
 
   '
@@ -10,7 +10,8 @@ contact_title: Technical Director
 address: Unit 3, 15 May Holman Drive, Bassendean WA 6054
 phone: +61 8 6161 0295
 email: greg@protectivecases.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 capability_domains:

@@ -1,6 +1,6 @@
 ---
 name: CyberCX
-date: '2025-01-29'
+date: '2025-02-04'
 overview: 'We partner with enterprise and government organisations to defend against cyber threats and embrace the opportunities of cloud.
 
 
@@ -11,7 +11,8 @@ contact_title: Director - Customer WA
 address: 28 The Esplanade, Perth WA 6000
 phone: 0407 840 735
 email: david.keller@cybercx.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 - academic

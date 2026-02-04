@@ -1,6 +1,6 @@
 ---
 name: BRE Engineering
-date: '2025-01-29'
+date: '2025-02-04'
 overview: BRE Engineering commenced operations in Western Australia in 2016 and set out to create solutions for engineering problems where others could not, whilst creating an atmosphere for engineers to learn and see a project through from concept to finished product.
 website: https://www.bre.engineering
 contact_name: Steven Thomson
@@ -8,7 +8,8 @@ contact_title: General Manager
 address: 98 Discovery Drive, Bibra Lake WA 6163
 phone: 08 9410 0787
 email: steven.thomson@bre.engineering
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 capability_domains:

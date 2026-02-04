@@ -1,6 +1,6 @@
 ---
 name: Cullys
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Cullys is a highly-reputable electrical specialist supplying, installing, integrating and commissioning a range of solutions for the Defence and marine sectors.
 website: https://cullys.com.au
 contact_name: Tom Cull
@@ -8,7 +8,8 @@ contact_title: Director
 address: 20 Egmont Road, Henderson WA 6166
 phone: 08 9410 5000
 email: service@cullys.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 - defence-west

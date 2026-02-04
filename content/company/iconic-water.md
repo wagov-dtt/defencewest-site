@@ -1,6 +1,6 @@
 ---
 name: Iconic Water Solutions
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Specialists in water and wastewater treatment systems, delivering modular solutions and support services for clients requiring dependable and compliant water infrastructure.
 website: https://iconicwater.com.au
 contact_name: Nigell Lee
@@ -8,7 +8,8 @@ contact_title: Managing Director
 address: 30 Wildfire Road, Maddington WA 6109
 phone: +61 8 9459 6280
 email: info@iconicwater.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 - academic

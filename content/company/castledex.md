@@ -1,6 +1,6 @@
 ---
 name: Castledex
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Castledex is an Australian full-service provider of FFE (furniture, fit-out and equipment) for workplace productivity solutions. We understand how workplaces function, how people collaborate and that no two organisations function in quite the same way. Our product offering lends itself to office fitouts, accommodation camps through to armoury and weapons storage
 website: https://castledex.com.au
 contact_name: Mat Vaughan
@@ -8,7 +8,8 @@ contact_title: Business Development Manager - Major Projects
 address: 17 Ruse Street, Osborne Park WA 6017
 phone: 0437 692 022
 email: mathew@castledex.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 - academic

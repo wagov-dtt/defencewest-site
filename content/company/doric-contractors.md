@@ -1,6 +1,6 @@
 ---
 name: Doric Contractors Pty Ltd
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Doric Contractors primary capabilities are in construction, project management, design management, cost estimation, programming, time and cost scheduling and building.
 website: https://www.doricgroup.com.au
 contact_name: Justin Taylor
@@ -8,7 +8,8 @@ contact_title: Manager - STrategy and Defence
 address: Level 1, 420 Hay Street, Subiaco WA 6008
 phone: +61 8 93882655
 email: doric@doricgroup.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 capability_domains:

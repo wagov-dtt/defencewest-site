@@ -1,6 +1,6 @@
 ---
 name: Sitep Australia
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Sitep Australia is a small defence and telecommunications company established in Australia 1999 as a branch of its Italian parent company.  Sitep has a long-standing reputation for designing, developing and supplying telecommunications, navigation, and maritime surveillance to more than 20 navies around the globe.
 website: https://www.sitepaustralia.com
 contact_name: Raffaele Iannizzotto
@@ -8,7 +8,8 @@ contact_title: Business Development Director
 address: Unit 13/50, Bibra Lake WA 6163
 phone: 0439164413
 email: r.iannizzotto@sitepaustralia.com
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 - academic

@@ -1,6 +1,6 @@
 ---
 name: Tetra Tech Coffey Pty Ltd
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Coffey operates as a professional services company with expertise in engineering, geoservices, environmental and project management.
 website: https://www.coffey.com
 contact_name: Wayne McFerran
@@ -8,7 +8,8 @@ contact_title: General Manager WA/NT
 address: Level 1, 235 St Georges Terrace, Perth WA 6000
 phone: +61 8 6218 2100
 email: perthtenders@tetratech.com
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 capability_domains:

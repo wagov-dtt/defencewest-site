@@ -1,6 +1,6 @@
 ---
 name: SIMPEC Pty Ltd
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Australian owned and operated, SIMPEC deliver specialised capabilities in Electrical and Instrumentation (E&I), Civil and Structural, Mechanical, and Piping (SMP) services.
 website: https://www.simpec.com.au
 contact_name: Mark Dimasi
@@ -8,7 +8,8 @@ contact_title: Managing Director
 address: 3/ 21 Kintail Rd, Applecross WA 6153
 phone: 1300 351 888
 email: mark.dimasi@simpec.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 - defence-west

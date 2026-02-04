@@ -1,6 +1,6 @@
 ---
 name: Taylor Marine
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Taylor Marine is a leading specialist marine electronics supplier, integrator and service provider of world leading brands of navigation and communication marine electronics to Australia's extensive maritime industry.
 website: https://www.taylormarine.com.au
 contact_name: Jason Barrett
@@ -8,7 +8,8 @@ contact_title: National Technical Manager
 address: 62 Sparks Road, HENDERSON WA 6166
 phone: +61 8 9494 9301
 email: jbarrett@taylormarine.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 capability_domains:

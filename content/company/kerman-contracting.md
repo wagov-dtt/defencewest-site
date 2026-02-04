@@ -1,6 +1,6 @@
 ---
 name: Kerman Contracting
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Kerman is a multi-disciplined Industrial Constructor specialising in bulk storage and materials handling facilities, structural, mechanical & piping (SMP) + building other non-process infrastructure.
 website: https://kerman.com.au
 contact_name: James Rowdon
@@ -8,7 +8,8 @@ contact_title: Business Development Director
 address: 30 Kearns Crescent, Ardross WA 6153
 phone: 0478590705
 email: james.rowdon@kerman.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 - defence-west

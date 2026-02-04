@@ -1,14 +1,15 @@
 ---
 name: DXN
-date: '2025-01-29'
+date: '2025-02-04'
 overview: 'DXN: Australian leaders in modular data centre solutions, delivering secure, scalable, and efficient infrastructure tailored for defence and critical industries.'
-website: https://dxn.solutions
+website: http://dxn.solutions
 contact_name: Anthony Auld
 contact_title: Infrastructure and Colocation Specialist
 address: 3 Dampier Rd,, Welshpool WA 6106
 phone: 0449 744 577
 email: anthony.auld@dxn.solutions
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 - defence-west
@@ -47,8 +48,8 @@ capability_streams:
 - land
 - research
 - space
-latitude: -31.9908415
-longitude: 115.9670596
+latitude: -31.992166182954
+longitude: 115.96771350874
 ---
 
 ## Overview

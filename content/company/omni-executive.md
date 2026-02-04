@@ -1,6 +1,6 @@
 ---
 name: Omni Executive Pty Ltd
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Omni is a 100% sovereign Australian company working across the Defence, national security, emergency management, and critical infrastructure sectors. Omni provides professional and managed services across the land, air, maritime, space and cyber domains that deliver cost-effective and agile solutions to meet our clients' needs.
 website: https://www.omniexe.com
 contact_name: Frank Sear
@@ -8,7 +8,8 @@ contact_title: Manager Business Development - West
 address: Level 2, 28 The Esplanade, Perth WA 6000
 phone: 0455497849
 email: Strategy@omniexe.com
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 capability_domains:

@@ -1,6 +1,6 @@
 ---
 name: Pinnacle QM
-date: '2025-01-29'
+date: '2025-02-04'
 overview: 'PinnacleQM is a Quality Management and Testing Services organisation delivering advanced testing services and solutions across the Asia-Pacific region. '
 website: https://www.pinnacleqm.com.au
 contact_name: Ian Charlton
@@ -8,7 +8,8 @@ contact_title: Director
 address: Ground Floor, 191 St George's Terrace,, Perth WA 6000
 phone: +61 425 417 668
 email: ian.charlton@pinnacleqm.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 capability_domains:

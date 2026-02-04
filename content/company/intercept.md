@@ -1,6 +1,6 @@
 ---
 name: Intercept Australia
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Intercept Australia provides top to bottom asset preservation.  Intercept Technology focuses on reusable anti-corrosion, anti-static and shielding packaging for long and short-term protection.
 website: https://www.interceptaustralia.com
 contact_name: Warwick Richards
@@ -8,7 +8,8 @@ contact_title: Managing Director
 address: Unit 18, Quarimor Rd, Bibra Lake WA 6163
 phone: 9418 7200
 email: info@interceptaustralia.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 - defence-west

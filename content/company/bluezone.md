@@ -1,6 +1,6 @@
 ---
 name: BlueZone Group
-date: '2025-01-29'
+date: '2025-02-04'
 overview: BlueZone Group is an experienced Defence SME and a capable supplier to customers operating in the harsh conditions of deep oceans, coastal seas, rivers and water infrastructure.
 website: https://bluezonegroup.com.au
 contact_name: Mark Musarra
@@ -8,7 +8,8 @@ contact_title: General Manager West Coast
 address: Unit 1, 41 Discovery Drive, Bibra Lake WA 6163
 phone: +61 8 6595 1500
 email: mark.musarra@bzg.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 capability_domains:

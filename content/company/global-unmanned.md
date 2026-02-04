@@ -1,6 +1,6 @@
 ---
 name: Global Unmanned Systems
-date: '2025-01-29'
+date: '2025-02-04'
 overview: 'Global Unmanned Systems provides organisational capacity building and data acquisition with an emphasis on Remotely Piloted Aircraft Systems (RPAS) and related media processing and analysis technologies. '
 website: https://www.gus-uav.com
 contact_name: Robert Lednor
@@ -8,7 +8,8 @@ contact_title: Operations Manager
 address: 2/153 Rockingham Road, Hamilton Hill WA 6163
 phone: +61 8 6188 1226
 email: robert.lednor@gus-uav.com
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 capability_domains:

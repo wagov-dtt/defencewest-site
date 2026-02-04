@@ -1,6 +1,6 @@
 ---
 name: Tradesales
-date: '2025-01-29'
+date: '2025-02-04'
 overview: "Tradesales designs, manufactures and delivers heavy-duty storage, workshop equipment, and relocatable site solutions. \n\nThese products are developed in close collaboration with Australia's heavy industries to meet the exact requirements of their operations. \n\nWe started as a modest company supplying the mining sector in WA in the 1970s and have grown to form critical partnerships with the construction, manufacturing, oil & gas, and defence sectors. \n\nMost of our products are designed and fabricated in-house at our 12,000-square-metre factory in regional WA."
 website: https://www.tradesales.com.au
 contact_name: Jonathon Bradford
@@ -8,7 +8,8 @@ contact_title: Marketing & Growth Manager
 address: 42 Adams Drive, RIVERVALE WA 6103
 phone: '+61409553497'
 email: jonathon.bradford@tradesales.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 - defence-west

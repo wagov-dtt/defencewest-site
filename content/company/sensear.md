@@ -1,6 +1,6 @@
 ---
 name: Sensear Pty Ltd
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Sensear Pty Ltd is a global leader in developing and manufacturing best-in-class digital over-the-ear and in-the-ear industrial and military communication headsets for use with two-way radios and Bluetooth devices.
 website: https://www.sensear.com
 contact_name: Marek Cieslakiewicz
@@ -8,7 +8,8 @@ contact_title: CFO
 address: 4 Hehir Street, Belmont WA 6104
 phone: +61 456 615 643
 email: marek.cieslakiewicz@sensear.com
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 capability_domains:

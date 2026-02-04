@@ -1,6 +1,6 @@
 ---
 name: Airobotics
-date: '2025-01-29'
+date: '2025-02-04'
 overview: 'Airobotics has developed a pilotless drone solution, the first of its kind in the global market. '
 website: https://www.airoboticsdrones.com.au
 contact_name: Christine Jarvis
@@ -8,7 +8,8 @@ contact_title: 'Market Research and Document Lead '
 address: 20 Weatherburn Way, Kardinya WA 6163
 phone: +61 418 575 915
 email: ChristineJ@airoboticsdrones.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 capability_domains:

@@ -1,6 +1,6 @@
 ---
 name: Sirius Geopolitics Pty Ltd
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Sirius Geopolitics is a boutique research and advisory service dedicated to helping organisations navigate geopolitics. Sirius delivers sharp analysis, strategic foresight, and informed engagement.
 website: https://www.siriusgeopolitics.au
 contact_name: Alana Ford
@@ -8,7 +8,8 @@ contact_title: Founder & Managing Director
 address: Withheld, Rockingham WA 6169
 phone: 0402027683
 email: hello@siriusgeopolitics.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 - academic

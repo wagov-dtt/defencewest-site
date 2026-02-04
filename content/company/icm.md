@@ -1,6 +1,6 @@
 ---
 name: ICM Group
-date: '2025-01-29'
+date: '2025-02-04'
 overview: ICM Group WA is committed to optimising productivity in materials handling.
 website: https://icmgroup.com.au
 contact_name: Julian Hughes
@@ -8,7 +8,8 @@ contact_title: General Manager
 address: 79 Bannister Road, Canning Vale WA 6155
 phone: +61 8 9311 5311
 email: julian.hughes@icmgroup.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 capability_domains:

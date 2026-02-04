@@ -1,6 +1,6 @@
 ---
 name: Digital Matter
-date: '2025-01-29'
+date: '2025-02-04'
 overview: 'Digital Matter is an innovative Australian technology company that designs and develops embedded electronic solutions along with software platforms required to manage
 
   and report asset activities and events.'
@@ -10,7 +10,8 @@ contact_title: Technical Account Manager
 address: 9/100 Railway Road, Subiaco WA 6008
 phone: +61 8 6280 1217
 email: stuart@digitalmatter.com
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 capability_domains:

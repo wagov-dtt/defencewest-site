@@ -1,6 +1,6 @@
 ---
 name: Meneghello Industrial Group
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Meneghello Industrial Group is an integrated, multi-disciplinary Steel Industry service supplier. We provide galvanizing, abrasive blasting, industrial painting, rubber lining, and custom bolts.
 website: https://www.meneghello.com
 contact_name: Dale Drazevich
@@ -8,7 +8,8 @@ contact_title: Chief Sales Officer
 address: 46 Rogers Way, Landsdale WA 6065
 phone: 0431456183
 email: dale@meneghello.com
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 - defence-west

@@ -11,7 +11,6 @@ overview: Specializes in building robots that chase blue hedgehogs. 30+ years of
 email: robotnik@example.test
 contact_name: Dr. Ivo Robotnik
 website: https://eggman.empire/example
-is_prime: true
 stakeholders:
 - defence
 capability_streams:

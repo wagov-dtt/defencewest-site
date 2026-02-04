@@ -1,6 +1,6 @@
 ---
 name: Total Marine Technology Pty Ltd (TMT)
-date: '2025-01-29'
+date: '2025-02-04'
 overview: 'Total Marine Technology (TMT) is unique as the only company designing and building Work Class Remotely Operated Underwater Vehicles (ROVs) in Australia. '
 website: https://www.tmtrov.com
 contact_name: Paul Colley
@@ -8,7 +8,8 @@ contact_title: 'CEO '
 address: 1 Ambitious Link, Bibra Lake WA 6163
 phone: +61 8 9411 6500
 email: defence@tmtrov.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 capability_domains:

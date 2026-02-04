@@ -1,6 +1,6 @@
 ---
 name: Franmarine
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Franmarine is an Australian owned, diversified marine and underwater service provider that predominantly supports the Defence, infrastructure, shipping and oil and gas industries.
 website: https://www.franmarine.com.au
 contact_name: Adam Falconer-West
@@ -8,7 +8,8 @@ contact_title: CEO
 address: 13 Possner Way, Henderson WA 6166
 phone: +61 427 430 001
 email: adam@franmarine.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 - defence-west

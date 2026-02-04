@@ -1,6 +1,6 @@
 ---
 name: GHD
-date: '2025-01-29'
+date: '2025-02-04'
 overview: GHD is one of the world's leading professional services companies operating in the global markets of water, energy and resources, environment, property and buildings, and transportation.
 website: https://www.ghd.com
 contact_name: Cameron Owen
@@ -8,7 +8,8 @@ contact_title: Technical Director - Project Management
 address: 999 Hay Street, Perth WA 6000
 phone: +61 8 6222 8222
 email: cameron.owen@ghd.com
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 capability_domains:

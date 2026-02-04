@@ -104,6 +104,7 @@
           {{- with $company.industrial_capabilities }} data-industrial_capabilities="{{ delimit . "|" }}"{{ end }}
           {{- with $company.regions }} data-regions="{{ delimit . "|" }}"{{ end }}
           {{- with $company.ownerships }} data-ownerships="{{ delimit . "|" }}"{{ end }}
+          {{- with $company.company_types }} data-company_types="{{ delimit . "|" }}"{{ end }}
         >{{ partial "company-card.html" (dict "company" $companyWithSlug "mode" "popup") }}</template>
       {{- end -}}
       {{- end -}}
@@ -116,7 +117,7 @@
     "use strict";
 
     const TAXONOMIES = ['stakeholders', 'capability_streams', 'capability_domains', 
-                        'industrial_capabilities', 'regions', 'ownerships'];
+                        'industrial_capabilities', 'regions', 'ownerships', 'company_types'];
     const PERTH = [115.8605, -31.9505];
     const MAP_STYLE = "{{ $mapStyleUrl }}";
 

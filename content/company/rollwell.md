@@ -1,6 +1,6 @@
 ---
 name: Rollwell Engineering
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Rollwell Engineering is a proudly Australian-owned company specialising in fabrication and engineered manufacturing solutions for WA's mining, oil and gas, construction, infrastructure sectors
 website: https://www.rollwell.com.au
 contact_name: Tyler Keeping
@@ -8,7 +8,8 @@ contact_title: Managing Director
 address: 1 Yeates Rd, Kwinana Beach WA 6167
 phone: 0408911520
 email: tyler@rollwell.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 capability_domains:

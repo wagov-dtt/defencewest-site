@@ -1,6 +1,6 @@
 ---
 name: TL Engineering
-date: '2025-01-29'
+date: '2025-02-04'
 overview: TL Engineering provide design, construction and fitting services for all types of vehicle fleets in Perth/Western Australia.
 website: https://tleng.com.au
 contact_name: Dan Oldham
@@ -8,7 +8,8 @@ contact_title: Managing Director
 address: 463 Bushmead Road, Hazelmere WA 6055
 phone: 0408717333
 email: doldham@tleng.com.au
-is_sme: true
+company_types:
+- sme
 capability_domains:
 - armour
 industrial_capabilities:

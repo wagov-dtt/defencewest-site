@@ -1,6 +1,6 @@
 ---
 name: Spartan First
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Spartan First is a majority owned Indigenous health provider, offering a full complement of occupational, primary and allied healthcare, with a strong focus on mental health and wellbeing and the social determinants of health.
 website: https://www.spartanfirst.com.au
 contact_name: Des Headland
@@ -8,7 +8,8 @@ contact_title: CEO
 address: 1/54 Kewdale Road, Welshpool WA 6106
 phone: 0418 286 084
 email: des@spartanfirst.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 industrial_capabilities:

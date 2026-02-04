@@ -1,6 +1,6 @@
 ---
 name: Constructive Media
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Constructive Media is a well-established WA business specialising in 3D visualisation, CG renders, digital animations, and interactive touchscreens and kiosks to help its clients to communicate.
 website: https://www.constructivemedia.com.au
 contact_name: Darren Kam
@@ -8,7 +8,8 @@ contact_title: CEO
 address: 131 Hasler Road, Osborne Park WA 6017
 phone: 0411 242 591
 email: darren.kam@constructivemedia.com.au
-is_sme: true
+company_types:
+- sme
 capability_domains:
 - air
 - amphibious

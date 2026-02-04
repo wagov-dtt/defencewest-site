@@ -1,6 +1,6 @@
 ---
 name: Pacific Industrial Company
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Pacific Industrial Company is WA owned and is one of Australia's leading fabrication and construction organisations with operations covering all aspects of steel fabrication and construction.
 website: https://www.pacind.com.au
 contact_name: Zeno Tessarin
@@ -8,7 +8,8 @@ contact_title: Business Development Manager
 address: 42 Hope Valley Road, Naval Base WA 6165
 phone: +61 8 9410 2566
 email: zeno.tessarin@pacind.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 capability_domains:

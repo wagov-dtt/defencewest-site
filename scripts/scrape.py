@@ -41,6 +41,16 @@ from config import (
 # URLs from hugo.toml
 BASE_URL = params["scrapeBaseUrl"]
 
+# Company Types display names (key -> display name)
+COMPANY_TYPE_DISPLAY_NAMES = {
+    "educational": "Educational and Training Institution",
+    "government": "Government Body",
+    "large-enterprise": "Large Enterprise",
+    "prime": "Prime Contractor",
+    "research": "Research Organisation",
+    "sme": "Small and Medium Enterprises",
+}
+
 # Initialize ArcGIS geolocator for geocoding (free, address-level accuracy)
 geolocator = ArcGIS(timeout=30)
 
@@ -234,6 +244,7 @@ def download_image(
     """Download and optimize an image.
 
     Skips if file already exists - to re-download, manually delete the file first.
+    Supports both PNG and JPG source images, always outputs PNG.
     Returns True if freshly downloaded.
 
     Args:
@@ -250,7 +261,17 @@ def download_image(
         r = client.get(url, timeout=30)
         r.raise_for_status()
         output_path.parent.mkdir(parents=True, exist_ok=True)
-        output_path.write_bytes(r.content)
+
+        # Determine extension from URL or content type
+        url_lower = url.lower()
+        if url_lower.endswith(".jpg") or url_lower.endswith(".jpeg"):
+            temp_ext = ".jpg"
+        else:
+            temp_ext = ".png"
+
+        # Save with appropriate extension for mogrify to handle
+        temp_path = output_path.with_suffix(temp_ext)
+        temp_path.write_bytes(r.content)
 
         if HAS_MOGRIFY:
             try:
@@ -262,13 +283,23 @@ def download_image(
                         "-resize",
                         resize,
                         "-trim",
-                        str(output_path),
+                        str(temp_path),
                     ],
                     check=True,
                     capture_output=True,
                 )
+                # Clean up temp file if it still exists (mogrify creates .png)
+                if temp_path.exists() and temp_path != output_path:
+                    temp_path.unlink()
             except Exception as e:
                 log.warning(f"Image optimize failed for {output_path}: {e}")  # nosec: Error logging for debugging
+                # If mogrify fails, rename temp file to final name
+                if temp_path.exists() and not output_path.exists():
+                    temp_path.rename(output_path)
+        else:
+            # No ImageMagick, just rename to .png
+            if temp_path != output_path:
+                temp_path.rename(output_path)
         return True
     except Exception as e:
         log.warning(f"Image download failed for {url}: {e}")  # nosec: Error logging for debugging
@@ -355,11 +386,80 @@ def extract_companies(html: str) -> list[dict]:
                 if icon_url := ownerships[0].get("IconUrl"):
                     company["_ownership_icons"] = {title: icon_url}
 
-        # SME/Prime flags (1=true, 2=false)
-        if (sme := tile.css_first(".filter-sme")) and sme.text() == "1":
-            company["is_sme"] = True
-        if (prime := tile.css_first(".filter-prime")) and prime.text() == "1":
-            company["is_prime"] = True
+        # Company Type taxonomy - pattern matching + SME/Prime from filters
+        company_types = []
+
+        # Pattern matching based on domain, name, and content
+        company_name = data.get("CompanyName", "")
+        website = (data.get("Website") or "").lower()
+        email = (data.get("Email") or "").lower()
+        name_lower = company_name.lower()
+        streams = [
+            s.get("Title", "").lower() for s in data.get("CapabilityStreams", [])
+        ]
+
+        # Educational: .edu.au domain or educational keywords
+        if ".edu.au" in website or ".edu.au" in email:
+            company_types.append("educational")
+        elif any(
+            term in name_lower for term in ["university", "tafe", "college", "school"]
+        ):
+            company_types.append("educational")
+
+        # Government: .gov.au domain or government keywords
+        if ".gov.au" in website or ".gov.au" in email:
+            company_types.append("government")
+        elif any(
+            term in name_lower
+            for term in ["department", "government", "authority", "office", "centre"]
+        ):
+            # Additional check - must look like a government org
+            if not any(
+                term in name_lower
+                for term in ["group", "services", "solutions", "company"]
+            ):
+                company_types.append("government")
+
+        # Research: research stream or science-related name
+        if "research" in streams:
+            company_types.append("research")
+        elif any(
+            term in name_lower
+            for term in ["research", "science centre", "laboratory", "chemcentre"]
+        ):
+            company_types.append("research")
+
+        # Industry Body: association/chamber/council or not-for-profit industry org
+        if any(term in name_lower for term in ["association", "chamber", "council"]):
+            company_types.append("industry-body")
+
+        # Large Enterprise: known large companies or non-SME with broad capabilities
+        known_large = [
+            "thales",
+            "bae systems",
+            "raytheon",
+            "ventia",
+            "babcock",
+            "boening",
+            "lockheed",
+            "northrop",
+            "general dynamics",
+            "safran",
+        ]
+        if any(term in name_lower for term in known_large):
+            company_types.append("large-enterprise")
+
+        # SME/Prime from filter classes
+        is_sme = (sme := tile.css_first(".filter-sme")) and sme.text() == "1"
+        is_prime = (prime := tile.css_first(".filter-prime")) and prime.text() == "1"
+
+        if is_sme:
+            company_types.append("sme")
+        if is_prime:
+            company_types.append("prime")
+
+        if company_types:
+            company["company_types"] = company_types
 
         companies.append(company)
 
@@ -454,10 +554,8 @@ def normalize_company(
         company["phone"] = v
     if v := d.get("Email", "").strip():
         company["email"] = v
-    if d.get("is_sme"):
-        company["is_sme"] = True
-    if d.get("is_prime"):
-        company["is_prime"] = True
+    if company_types := d.get("company_types"):
+        company["company_types"] = company_types
 
     # Taxonomies (convert display names to keys)
     for tax in [
@@ -537,6 +635,10 @@ def normalize_company(
 
     # Download logo
     if logo_url := d.get("companyLogoUrl"):
+        # Make URL absolute if relative
+        base_url = params["scrapeBaseUrl"].rsplit("/", 1)[0]
+        if logo_url.startswith("/"):
+            logo_url = base_url + logo_url
         download_image(client, logo_url, LOGOS_DIR, f"{slug}.png")
 
     # Content fields for markdown body
@@ -643,22 +745,29 @@ def main():
                 if not found and value:
                     canonical_stream_values.append(value)
 
-            # Build capability_streams taxonomy from canonical values
+            # Build taxonomies from extracted values
+            # Skip capability_streams (uses canonical mapping) and company_types (uses predefined display names)
             taxonomies = {
                 tax: build_taxonomy_keys(list(all_values[tax]))
                 for tax in all_values
-                if tax != "capability_streams"
+                if tax not in ["capability_streams", "company_types"]
             }
             taxonomies["capability_streams"] = {
                 key: CANONICAL_CAPABILITY_STREAMS[key]
                 for key in canonical_stream_values
                 if key in CANONICAL_CAPABILITY_STREAMS
             }
+            # Add company_types with predefined display names
+            taxonomies["company_types"] = COMPANY_TYPE_DISPLAY_NAMES
         else:
             # Fallback to original logic if capability_streams not found
             taxonomies = {
-                tax: build_taxonomy_keys(list(all_values[tax])) for tax in all_values
+                tax: build_taxonomy_keys(list(all_values[tax]))
+                for tax in all_values
+                if tax != "company_types"
             }
+            # Add company_types with predefined display names
+            taxonomies["company_types"] = COMPANY_TYPE_DISPLAY_NAMES
 
         # Build reverse lookup: {taxonomy: {display_name: key}}
         name_to_key = {

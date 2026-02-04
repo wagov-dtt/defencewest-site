@@ -1,6 +1,6 @@
 ---
 name: Precision Technic Defence
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Precision Technic Defence brings together world leading products to design and deliver custom tactical solutions to the warfighter, and to first responders around the globe.
 website: https://ptdefence.com/event/ausa-2024
 contact_name: Greg Whitehouse
@@ -8,7 +8,8 @@ contact_title: Managing Director
 address: 15/25 Rawlinson St, O'Connor WA 6163
 phone: +61 8 9316 1798
 email: gw@ptdefence.com
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 capability_domains:

@@ -1,6 +1,6 @@
 ---
 name: Ausco Products
-date: '2025-01-29'
+date: '2025-02-04'
 overview: 'Ausco Products is a Western Australian owned company that has been in operation for over 70 years specialising in engineering design and machining services. '
 website: https://auscoproducts.com.au
 contact_name: 'Robert Murphy '
@@ -8,7 +8,8 @@ contact_title: Managing  Director
 address: 273 Camboon Road, Malaga WA 6090
 phone: +61 8 9248 5077
 email: rob@auscoproducts.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 capability_domains:

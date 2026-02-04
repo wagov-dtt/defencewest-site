@@ -1,6 +1,6 @@
 ---
 name: Indigenous Managed Services Pty Ltd
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Majority owned Aboriginal Company established in 2017. Supply Nation certified and ABDWA registered. Labour Hire, Commercial cleaning, Land and Grounds Maintenance, ICT hardware & Dry ice blasting
 website: https://www.indigenousmanagedservices.com
 contact_name: Terry Collier
@@ -8,7 +8,8 @@ contact_title: Director
 address: 7-9 Ventnor Avenue, West Perth WA 6005
 phone: 0417989495
 email: terry.ac@bigpond.net.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 - defence-west

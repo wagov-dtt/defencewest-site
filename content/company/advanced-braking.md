@@ -1,13 +1,14 @@
 ---
 name: Advanced Braking Technology
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Advanced Braking Technology focuses on the development, manufacturing and marketing of industrial products to the automotive, transport and mining industry.
 website: https://www.advancedbraking.com
 contact_name: Ben Weetman
 address: 73 Inspiration Drive, Wangara WA 6065
 phone: 0436 308 866
 email: ben.weetman@advancedbraking.com
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 capability_domains:

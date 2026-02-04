@@ -1,6 +1,6 @@
 ---
 name: 'Ethan Indigenous Pty Ltd '
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Ethan Indigenous, IT company with extensive capability that is Indigenous Certified through Supply Nation and Noongar Chamber of Commerce.
 website: https://ethanindigenous.com.au/Home
 contact_name: Jessica Craig-Raymond
@@ -8,7 +8,8 @@ contact_title: 'Account Executive '
 address: 108 St Georges Terrace, Perth WA 6000
 phone: 0420286242
 email: jessica.craig-raymond@ethan.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 - academic
@@ -38,8 +39,8 @@ capability_streams:
 - electronic
 - logistics
 - research
-latitude: -31.9544414
-longitude: 115.8571838
+latitude: -31.954445816555
+longitude: 115.857061155074
 ---
 
 ## Overview

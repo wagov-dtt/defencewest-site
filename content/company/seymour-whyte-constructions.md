@@ -1,6 +1,6 @@
 ---
 name: Seymour Whyte Constructions
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Seymour Whyte, an Australian infrastructure contractor providing construction works to Defence across all contract types.
 website: https://seymourwhyte.com.au
 contact_name: Andrew Cosgrove
@@ -8,7 +8,8 @@ contact_title: Director
 address: Level 1, 100 Havelock Street, West Perth, West Perth WA 6005
 phone: 0409540231
 email: defence@seymourwhyte.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 - academic

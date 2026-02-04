@@ -1,6 +1,6 @@
 ---
 name: Austal
-date: '2025-01-29'
+date: '2025-02-04'
 overview: 'Austal is ''The Australian Shipbuilder'': a defence prime contractor and maritime technology partner of choice; designing, constructing and supporting revolutionary defence and commercial vessels.
 
   '
@@ -10,7 +10,8 @@ contact_title: Market Development manager
 address: 100 Clarence Beach Road, Henderson WA 6166
 phone: +61 8 9410 1111
 email: tims@austal.com
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 capability_domains:

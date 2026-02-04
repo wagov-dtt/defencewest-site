@@ -1,6 +1,6 @@
 ---
 name: Western Australian Specialty Alloys
-date: '2025-01-29'
+date: '2025-02-04'
 overview: WA Speciality Alloys provides nickel, cobalt and iron-based superalloy products for the aerospace and defence industry in the form of specialty steel forgings, billets and bars.
 website: https://www.wasa.com.au
 contact_name: Sandy Pelc
@@ -8,7 +8,8 @@ contact_title: PA to General Manager
 address: 2-4 Hopewell Street, Canning Vale WA 6155
 phone: +61 8 9455 4111
 email: wasa@wasa.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 - defence-west

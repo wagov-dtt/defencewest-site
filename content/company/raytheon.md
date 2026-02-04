@@ -1,6 +1,6 @@
 ---
 name: Raytheon Australia
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Raytheon Australia is the Australian arm of the Raytheon Company, a major US defence contractor and industrial corporation with core manufacturing concentrations in weapons and military and commercial electronics.
 website: https://www.raytheonaustralia.com.au
 contact_name: John Farrington
@@ -8,7 +8,9 @@ contact_title: Combat Systems Management Director
 address: 1 McGrath Road, Henderson WA 6166
 phone: +61 8 9494 8600
 email: john.farrington@raytheon.com.au
-is_prime: true
+company_types:
+- large-enterprise
+- prime
 stakeholders:
 - defence
 capability_domains:

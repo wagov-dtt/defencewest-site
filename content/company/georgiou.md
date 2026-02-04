@@ -1,6 +1,6 @@
 ---
 name: Georgiou Group
-date: '2025-01-29'
+date: '2025-02-04'
 overview: The Georgiou Group delivers projects from inception to handover, in a range of disciplines and a variety of industries. We are one of Australia's leading building and civil construction companies.
 website: https://www.georgiou.com.au
 contact_name: Michael Ioannakis
@@ -8,7 +8,8 @@ contact_title: Business Development Manager - Western Region
 address: 68 Hasler Road, Osborne Park WA 6017
 phone: '+61438805079'
 email: michael.ioannakis@georgiou.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 capability_domains:

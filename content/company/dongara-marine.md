@@ -1,6 +1,6 @@
 ---
 name: Dongara Marine
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Dongara Marine have specific expertise in boat building, maintenance (refit, repair, modification),marine services and advice, high tech composites, manufacturing wheelhouses and other structures for both our own and other boatbuilder's projects.
 website: https://dongaramarine.com.au
 contact_name: Rohan Warr
@@ -8,7 +8,8 @@ contact_title: Managing Director
 address: 2 Carrol Street, Port Denison WA 6525
 phone: 0429 383 242
 email: rohan@dongaramarine.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 capability_domains:

@@ -1,6 +1,6 @@
 ---
 name: Energy Power Systems Australia Pty. Ltd.
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Caterpillar (r) engines, generators and power solutions provider in Australia, PNG and the Solomon Islands.
 website: https://www.energypower.com.au
 contact_name: Fred Bkamdin
@@ -8,7 +8,8 @@ contact_title: National Business Growth Manager - Marine Division
 address: EPSA, 5 Wicks Street, Bayswater WA 6053, Perth WA 6053
 phone: 0419916241
 email: Fred.Bkamdin@energypower.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 - academic

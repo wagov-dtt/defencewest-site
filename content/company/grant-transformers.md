@@ -1,6 +1,6 @@
 ---
 name: Grant Transformers
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Grant Transformers are experts in manufacturing and supplying of isolation, power & distribution transformers as well as Industrial DC Power Supplies.
 website: https://grant-transformers.com.au
 contact_name: Marco da Silva
@@ -8,7 +8,8 @@ contact_title: CEO
 address: 89 Beringarra Ave, Malaga WA 6090
 phone: 08 9249 7753
 email: marco@grant-transformers.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 capability_domains:

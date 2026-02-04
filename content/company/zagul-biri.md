@@ -1,6 +1,6 @@
 ---
 name: Zagul Biri
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Zagul Biri is a First Nations-led advisory firm supporting Defence and industry with culturally informed engagement, workforce capability, and practical advisory services.
 website: https://zagulbiri.com.au
 contact_name: Erol Williams
@@ -8,7 +8,8 @@ contact_title: Director
 address: 42 Bishopsgate St, Lathlain WA 6100
 phone: '0431257412'
 email: hello@zagulbiri.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 - academic

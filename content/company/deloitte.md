@@ -1,6 +1,6 @@
 ---
 name: Deloitte
-date: '2025-01-29'
+date: '2025-02-04'
 overview: It's time to connect, build and accelerate the industries of the future.
 website: https://www.deloitte.com/au/en/services/consulting/services/industrial-redesign-innovation.html
 contact_name: Mitch Johnston
@@ -8,7 +8,8 @@ contact_title: Senior Manager
 address: Brookfield Place, Tower 2/123 St Georges Tce, Perth WA 6000
 phone: '0413170700'
 email: mijohnston@deloitte.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 - academic

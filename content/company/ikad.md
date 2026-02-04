@@ -1,6 +1,6 @@
 ---
 name: Ikad Engineering
-date: '2025-01-29'
+date: '2025-02-04'
 overview: 'IKAD Engineering is a highly-specialised mechanical and structural engineering company providing a diverse range of services across Australia and overseas. '
 website: https://ikad.com.au
 contact_name: Paul Hague
@@ -8,7 +8,8 @@ contact_title: Business Development Manager
 address: 82 Sparks Road, Henderson WA 6166
 phone: +61 8 9494 9000
 email: admin@ikad.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 capability_domains:

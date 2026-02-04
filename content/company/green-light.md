@@ -1,6 +1,6 @@
 ---
 name: Green Light
-date: '2025-01-29'
+date: '2025-02-04'
 overview: An Australian IT services company supporting defence primes nationally with security cleared resources and technology services.
 website: https://greenlightworldwide.com
 contact_name: Ron Elliott
@@ -8,7 +8,8 @@ contact_title: General Manager - WA
 address: Exchange Plaza, Level 17, 2 The Esplanade, Perth WA 6000
 phone: 0403855444
 email: rone@greenlightworldwide.com
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 - defence-west
@@ -30,8 +31,8 @@ regions:
 - wheatbelt
 capability_streams:
 - research
-latitude: -31.9562741
-longitude: 115.8586386
+latitude: -31.956439871321
+longitude: 115.858761507952
 ---
 
 ## Overview

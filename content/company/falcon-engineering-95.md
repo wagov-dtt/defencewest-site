@@ -1,6 +1,6 @@
 ---
 name: Falcon Engineering 95 Pty Ltd
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Falcon Engineering has been engaged in steel fabrication services nationally for 60+ years.  ISO 9001, ISO 14001, ISO 45001 & AS5131 CC3 accredited.
 website: https://www.falconeng95.com.au
 contact_name: Andrew Marriott
@@ -8,7 +8,8 @@ contact_title: Office-Coordinator
 address: 42 Cocos Drive, Bibra Lake WA 6163
 phone: 08 9393 0095
 email: sales@falconeng95.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 - academic

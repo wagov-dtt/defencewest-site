@@ -1,6 +1,6 @@
 ---
 name: CADDS Group Pty Ltd
-date: '2025-01-29'
+date: '2025-02-04'
 overview: CADDS Group provides integrated engineering, architectural, sustainability (Emergen), surveying, drafting, product design, and fabrication services across WA.
 website: https://cadds.com.au
 contact_name: Pip Smith
@@ -8,7 +8,8 @@ contact_title: Business Development Manager
 address: 43A Sparks Road Henderson WA 6166, Perth WA 6166
 phone: 0414487565
 email: pip.smith@cadds.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 - academic

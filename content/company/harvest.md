@@ -1,6 +1,6 @@
 ---
 name: Harvest Technology Group
-date: '2025-01-29'
+date: '2025-02-04'
 overview: HTG is a leading provider of secure, high-quality video and data transmission solutions for the defence industry, enabling real-time remote control, communication, and monitoring capabilities.
 website: https://harvest.technology
 contact_name: John Condo
@@ -8,7 +8,8 @@ contact_title: Director, Global Defence
 address: 7 Turner Avenue, Technology Park, Bentley WA 6102
 phone: '0434563717'
 email: john.condo@harvest-tech.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 - academic

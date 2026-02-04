@@ -1,6 +1,6 @@
 ---
 name: Bushcomm Antenna and Tower Systems
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Bushcomm Antenna and Tower Systems specialise in high frequency (HF/VHF) antenna and tower solutions, and are industry innovators of premium quality fixed station  and lightweight tactical antennas and masts.
 website: https://www.bushcomm.com
 contact_name: David Collins
@@ -8,7 +8,8 @@ contact_title: Business Development Manager
 address: 21 River Road, Bayswater WA 6053
 phone: +61 8 6144 3204
 email: sales@bushcommantennas.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 capability_domains:

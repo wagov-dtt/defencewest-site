@@ -1,6 +1,6 @@
 ---
 name: Barrett Communications
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Barrett Communications are an Australian sovereign designer and manufacturer of High Frequency (HF) and Very High Frequency (VHF) radio communications systems and subsystems.
 website: https://www.barrettcommunications.com.au
 contact_name: Martin Johnson
@@ -8,7 +8,8 @@ contact_title: Director of Business Development
 address: 47 Discovery Drive, Bibra Lake WA 6163
 phone: 08 9434 1700
 email: martin_johnson@barrettcommunications.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 capability_domains:

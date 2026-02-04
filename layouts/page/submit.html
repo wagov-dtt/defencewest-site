@@ -39,13 +39,13 @@
           <textarea id="field-overview" name="overview" maxlength="500" rows="3" placeholder="Brief description of your company..."></textarea>
           <label for="field-website">Website</label>
           <input type="url" id="field-website" name="website" placeholder="https://example.com">
+          <label>Company Type <small>(select all that apply)</small></label>
           <div class="grid">
-            <div class="col-6 col-md-6">
-              <label><input type="checkbox" id="field-is_sme" name="is_sme"> SME</label>
+            {{ range $key, $name := $taxonomies.company_types }}
+            <div class="col-6 col-md-4">
+              <label><input type="checkbox" id="field-company_types-{{ $key }}" name="company_types" value="{{ $key }}"> {{ $name }}</label>
             </div>
-            <div class="col-6 col-md-6">
-              <label><input type="checkbox" id="field-is_prime" name="is_prime"> Prime Contractor</label>
-            </div>
+            {{ end }}
           </div>
         </div>
       </div>
@@ -151,7 +151,7 @@ import Squire from 'https://esm.sh/squire-rte@2';
 import DOMPurify from 'https://esm.sh/dompurify@3';
 
 const TAXONOMIES = ['stakeholders', 'capability_streams', 'capability_domains', 
-                    'industrial_capabilities', 'regions', 'ownerships'];
+                    'industrial_capabilities', 'regions', 'ownerships', 'company_types'];
 
 const $ = id => document.getElementById(id);
 const form = document.getElementById('submit-form');
@@ -367,11 +367,6 @@ function buildSubmission() {
   TAXONOMIES.forEach(tax => {
     const vals = fd.getAll(tax);
     if (vals.length) submission[tax] = vals;
-  });
-
-  // Booleans (explicit false for unchecked)
-  ['is_sme', 'is_prime'].forEach(f => {
-    submission[f] = form.elements[f]?.checked ?? false;
   });
 
   submission.content_html = editor.getHTML();

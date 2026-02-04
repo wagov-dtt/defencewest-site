@@ -1,6 +1,6 @@
 ---
 name: Wood
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Wood is a global leader in the delivery of project, engineering and technical services to energy and industrial markets.
 website: https://www.woodplc.com
 contact_name: Andrew Houghton
@@ -8,7 +8,8 @@ contact_title: Business Development Manager
 address: 432 Murray St, Perth WA 6000
 phone: +61 409 143 193
 email: andrew.houghton@woodplc.com
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 capability_domains:

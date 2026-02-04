@@ -1,6 +1,6 @@
 ---
 name: Echo Marine Group Pty Ltd
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Echo Marine Group is an Australian owned and operated shipbuilder and defence sustainment solutions provider, specialising in Maritime vessel construction, Fitout, Flooring, Electrical, Fabrication, FRP and Engineering Services. As a defence maritime solutions provider and luxury and commercial shipbuilder, quality and care for Commonwealth assets is our core focus.
 website: https://www.echomarinegroup.com
 contact_name: Dave Mearns
@@ -8,7 +8,8 @@ contact_title: Chief Operating Officer
 address: 49 Clarence Beach Rd, Henderson WA 6166
 phone: 0427396726
 email: dave@echomarinegroup.com
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 - academic

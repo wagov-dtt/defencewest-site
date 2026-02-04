@@ -1,6 +1,6 @@
 ---
 name: ASC
-date: '2025-01-29'
+date: '2025-02-04'
 overview: ASC is owned by the Commonwealth of Australia, and exists to serve the frontline of Australia's naval defence capabilities.
 website: https://www.asc.com.au
 contact_name: Simon Rusiti
@@ -8,7 +8,8 @@ contact_title: Submarine Capability Development Manager WA
 address: 20 Nautical Drive, Henderson WA 6166
 phone: +61 8 9410 4356
 email: simon.rusiti@asc.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 capability_domains:

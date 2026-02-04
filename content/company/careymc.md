@@ -1,6 +1,6 @@
 ---
 name: CareyMC Pty Ltd
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Indigenous Civil and General Contractor for roads, bridges, drainage, marine, structural, concrete building construction and renovation. Registered Architects, builders, Class A demolition, Asbestos
 website: https://careygroupholdings.com.au
 contact_name: David Cann
@@ -8,7 +8,8 @@ contact_title: Architect
 address: 312 Victoria Rd, Malaga WA 6090
 phone: 0439889983
 email: david.cann@careygroupholdings.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 - defence-west

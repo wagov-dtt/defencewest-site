@@ -1,6 +1,6 @@
 ---
 name: Fremantle Steel
-date: '2025-01-29'
+date: '2025-02-04'
 overview: 'Fremantle Steel Fabrication is part of the Fremantle Steel Group, which includes Park Engineers and combined has over 100 years of experience in fabricating structural steel components. '
 website: https://www.fremantlesteel.com.au
 contact_name: Laurie D'Amato
@@ -8,7 +8,8 @@ contact_title: General Manager
 address: 115 Prinsep Road, Jandakot WA 6164
 phone: +61 8 9417 9111
 email: laurie.damato@fremantlesteel.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 capability_domains:

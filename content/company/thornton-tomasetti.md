@@ -1,6 +1,6 @@
 ---
 name: Thornton Tomasetti
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Engineering consultancy specialising in testing and design & analysis of equipment and structures under extreme loading (blast, shock, fire, seismic, etc..) as well as risk management.
 website: https://www.thorntontomasetti.com/location/perth
 contact_name: Ian Leaver
@@ -8,7 +8,8 @@ contact_title: Defence Business Lead
 address: Level 1, 11 Mounts Bay Road, Perth WA 6000
 phone: '0402725235'
 email: ILeaver@ThorntonTomasetti.com
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 - academic

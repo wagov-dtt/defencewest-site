@@ -1,6 +1,6 @@
 ---
 name: HoseCo
-date: '2025-01-29'
+date: '2025-02-04'
 overview: 'HoseCo Australia specialise in the supply, maintenance and management of Flexible Hose Assemblies for a wide range of applications. '
 website: https://hoseco.com.au
 contact_name: John McGill
@@ -8,7 +8,8 @@ contact_title: Group Sales & Product Manager
 address: 37 Magnet Road, Canning Vale WA 6155
 phone: 0408 922 371
 email: john.mcgill@hoseco.com.au
-is_prime: true
+company_types:
+- prime
 stakeholders:
 - defence
 capability_domains:

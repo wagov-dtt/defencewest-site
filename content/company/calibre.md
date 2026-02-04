@@ -1,13 +1,14 @@
 ---
 name: Calibre Group
-date: '2025-01-29'
+date: '2025-02-04'
 overview: 'Calibre Group comprises a diverse group of capabilities including: engineering design services; consulting services; technology, communications and control systems; urban development; project management and EPCM; maintenance and shutdown services. '
 website: https://www.calibregroup.com
 contact_name: Andrew Partington
 contact_title: Defence Sector Lead (West)
 address: 50 St Georges Terrace, Perth WA 6000
 email: andrew.partington@calibregroup.com
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 capability_domains:

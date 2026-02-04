@@ -1,6 +1,6 @@
 ---
 name: CDMS Consulting Engineers
-date: '2025-01-29'
+date: '2025-02-04'
 overview: CDMS Consulting Engineers provides engineering services specialising in innovative product development.
 website: https://cdmsengineering.com
 contact_name: Damian Connelly
@@ -8,7 +8,8 @@ contact_title: Director, Principal Consulting Engineer
 address: Level 3, 44 Parliament Place, West Perth WA 6005
 phone: +61 8 9421 9060
 email: damian.connelly@cdmsengineering.com
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 capability_domains:

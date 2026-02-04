@@ -174,8 +174,8 @@ nav .logo {
 }
 
 .stream-icon img {
-  width: 36px;
-  height: 36px;
+  width: 48px;
+  height: 48px;
   border-radius: var(--pico-border-radius);
   object-fit: cover;
   opacity: 0.5;
@@ -510,11 +510,21 @@ nav .logo {
   margin: -0.5rem 0 1rem 0;
 }
 
+.company-page .company-badges-inline .badge-link {
+  text-decoration: none;
+}
+
 .company-page .company-badges-inline small {
   padding: 0.15rem 0.5rem;
   background: var(--pico-muted-border-color);
   border-radius: var(--pico-border-radius);
   font-size: 0.75rem;
+  transition: all 0.15s ease;
+}
+
+.company-page .company-badges-inline .badge-link:hover small {
+  background: var(--pico-primary);
+  color: var(--pico-primary-inverse);
 }
 
 /* Content Column */
@@ -584,30 +594,49 @@ nav .logo {
   filter: brightness(0.9);
 }
 
-/* Taxonomy Section in Sidebar */
-.company-page .taxonomy-section .stream-icons {
+/* Taxonomy icons (Capability Streams and Ownership) - unified styling */
+.company-page .taxonomy-section .stream-icons,
+.company-page .taxonomy-section .ownership-icons {
   display: flex;
   gap: 0.35rem;
   flex-wrap: wrap;
   margin-bottom: 0.5rem;
 }
 
-.company-page .taxonomy-section .stream-icons a {
+.company-page .taxonomy-section .stream-icons a,
+.company-page .taxonomy-section .ownership-icons a {
   display: block;
   padding: 0;
 }
 
-.company-page .taxonomy-section .stream-icons img {
-  width: 36px;
-  height: 36px;
+.company-page .taxonomy-section .stream-icons img,
+.company-page .taxonomy-section .ownership-icons img {
+  width: 48px;
+  height: 48px;
   border-radius: var(--pico-border-radius);
   object-fit: cover;
   transition: all 0.15s ease;
   border: 2px solid transparent;
 }
 
-.company-page .taxonomy-section .stream-icons a:hover img {
+.company-page .taxonomy-section .stream-icons a:hover img,
+.company-page .taxonomy-section .ownership-icons a:hover img {
   border-color: var(--pico-primary);
+}
+
+/* Taxonomy row layout (streams + ownerships side by side) */
+.company-page .taxonomy-section .taxonomy-row {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.company-page .taxonomy-section .taxonomy-row .taxonomy-column {
+  flex: 1;
+}
+
+.company-page .taxonomy-section .taxonomy-row .taxonomy-column:first-child {
+  flex: 2;
 }
 
 .company-page .taxonomy-section ul {

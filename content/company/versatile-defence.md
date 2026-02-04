@@ -1,6 +1,6 @@
 ---
 name: Versatile Defence
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Versatile Defence provides expert consulting, trusted defence product supply, and durable Australian-made poly boats -- delivering practical, mission-ready solutions across maritime and defence sectors
 website: https://versatile-defence.com.au
 contact_name: Kim Bakker
@@ -8,7 +8,8 @@ contact_title: Sales & Marketing
 address: 20 Egmont Rd, Henderson WA 6166
 phone: '0451507504'
 email: sales@versatile-defence.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 - defence-west

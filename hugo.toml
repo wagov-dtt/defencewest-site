@@ -20,6 +20,7 @@ uglyURLs = false
   industrial_capability = "industrial_capabilities"
   region = "regions"
   ownership = "ownerships"
+  company_type = "company_types"
 
 # Output formats
 [outputs]

@@ -1,6 +1,6 @@
 ---
 name: Babcock Australia Pty Ltd
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Babcock is an international defence and aerospace business. We support and enhance our customers' defence capabilities and critical assets and we meet our customers' requirements of value for money, increased availability, modernisation and flexibility.
 website: https://www.babcock.com.au
 contact_name: Jeremy Antao
@@ -8,7 +8,9 @@ contact_title: Operations Manager (WA)
 address: 27 Quill Way, Henderson WA 6166
 phone: +61 8 8440 9691
 email: jeremy.antao@babcock.com.au
-is_sme: true
+company_types:
+- large-enterprise
+- sme
 stakeholders:
 - defence
 - academic

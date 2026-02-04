@@ -1,6 +1,6 @@
 ---
 name: Global Spill & Safety
-date: '2025-01-29'
+date: '2025-02-04'
 overview: 'Global Spill & Safety is Australia''s only manufacturer of Environmental clean-up polypropylene absorbents, wipes, spill bunds and DG Cabinets.
 
   Our high production capacity and scale results in a lower cost of production, which is passed on to our customers.
@@ -18,7 +18,8 @@ contact_title: WA State Manager
 address: 21 Glassford Rd, Kewdale WA 6105
 phone: 0478 729 078
 email: dgrigg@globalspill.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 - academic

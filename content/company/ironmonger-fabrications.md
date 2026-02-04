@@ -1,14 +1,15 @@
 ---
 name: Ironmonger Fabrications
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Ironmonger Fabrications provide fabrication, site installation and maintenance services to the water, infrastructure, mining, oil and gas, resources, power, utility and petrochemical industries.
-website: https://www.ironmongerfabrications.com.au
+website: https://ironmongerfabrications.com.au
 contact_name: Glenn Ironmonger
 contact_title: Managing Director
 address: 16 Milly Court, Malaga WA 6090
 phone: +61 416 244 727
 email: ironfab@bigpond.com
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 capability_domains:

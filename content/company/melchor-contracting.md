@@ -1,6 +1,6 @@
 ---
 name: Melchor Contracting Pty Ltd
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Melchor is a civil construction company. We offer safe, productive and high-quality services to deliver large and complex projects in remote, regional and metro locations.
 website: https://www.monadelphous.com.au/what-we-do/our-operations/engineering-construction/civils
 contact_name: Martin Headd
@@ -8,7 +8,8 @@ contact_title: General Manager - Precontracts
 address: 1/3 McDonald Street West, Osborne Park WA 6017
 phone: 0419 602 787
 email: martin.headd@melchor.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 - academic

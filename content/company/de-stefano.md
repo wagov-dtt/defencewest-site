@@ -1,6 +1,6 @@
 ---
 name: De Stefano & Co
-date: '2025-01-29'
+date: '2025-02-04'
 overview: De Stefano & Co is a defence-focused management and security consultancy that assists organisations to navigate the complex Australian defence industry environment and other highly regulated sectors.
 website: https://www.destefanoandco.com.au
 contact_name: Emilio De Stefano
@@ -8,7 +8,8 @@ contact_title: Director & Principal
 address: PO Box 507, Fremantle WA 6959
 phone: 1300 438 347
 email: enquiry@destefanoandco.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 capability_domains:

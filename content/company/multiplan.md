@@ -1,6 +1,6 @@
 ---
 name: Multiplan
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Our aim at Multiplan is to be seen as the solution, stopping potential issues in their track, all while adding constructability insights, production intelligence and skilled resourcing along the way.
 website: https://www.multiplan.com.au
 contact_name: Kane Nitschke
@@ -8,7 +8,8 @@ contact_title: Managing Director
 address: Unit 6, 66 Belgrava Street, Belmont WA 6104
 phone: 0418 671 098
 email: knitschke@multiplan.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 - defence-west

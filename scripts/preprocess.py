@@ -177,6 +177,16 @@ def export_json(companies: list[dict], output: Path) -> None:
         entry = {k: v for k, v in c.items() if not k.startswith("_")}
         if c.get("_content"):
             entry["content_html"] = md.render(c["_content"].strip())
+
+        # Convert is_sme/is_prime to company_types taxonomy
+        company_types = entry.get("company_types", [])
+        if entry.get("is_sme") and "sme" not in company_types:
+            company_types.append("sme")
+        if entry.get("is_prime") and "prime" not in company_types:
+            company_types.append("prime")
+        if company_types:
+            entry["company_types"] = company_types
+
         data.append(entry)
     data.sort(key=lambda x: (x.get("name") or "").lower())
     output.write_text(json.dumps(data, indent=2))

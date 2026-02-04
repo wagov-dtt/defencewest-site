@@ -1,6 +1,6 @@
 ---
 name: Wittenbaker Engineering Services PTY LTD
-date: '2025-01-29'
+date: '2025-02-04'
 overview: "Wittenbaker Engineering Services PTY LTD is a manufacturing and mechanical engineering company, providing substantial services such as:\n\nCNC-Machining (Turning, Milling & Wire Cutting)\nInsitu-Machining\nMetal Fabrication & Welding\nLaser Cladding\nMechanical Fitting & Rebuilds\nGear Reducer Rebuilds & Load Testing \nSpare Parts\nMechanical & Reverse Engineering"
 website: https://www.weservices.com.au
 contact_name: Wayne Wittenbaker
@@ -8,7 +8,8 @@ contact_title: Managing Director
 address: 7 Egmont Road, Henderson WA 6166
 phone: '+61894376530'
 email: accounts@weservices.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 - defence-west

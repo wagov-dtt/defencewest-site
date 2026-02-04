@@ -1,6 +1,6 @@
 ---
 name: Calytrix Technologies Pty Ltd
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Calytrix is a leading Australian Training Systems Integrator, blending military training expertise and exercise delivery experience with cutting-edge simulation technologies.
 website: https://www.calytrix.com
 contact_name: Shawn Parr
@@ -8,7 +8,8 @@ contact_title: CEO
 address: U19 162 Colin Street,, West Perth WA 6007
 phone: 0402466292
 email: shawn.parr@calytrix.com
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 - defence-west

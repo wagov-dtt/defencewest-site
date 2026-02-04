@@ -1,6 +1,6 @@
 ---
 name: Asset Reliability Inspections Pty Ltd
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Asset Reliability Inspections (ARI) provides non-destructive testing (NDT), engineering and inspection services to a range of industry sectors, Australia wide
 website: https://ari.com.au
 contact_name: Colm Kinsella
@@ -8,7 +8,8 @@ contact_title: Chief Commercial Officer
 address: 5/437 Yangebup Rd, Cockburn Central WA 6164
 phone: 0414858197
 email: colm.kinsella@ari.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 capability_domains:

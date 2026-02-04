@@ -1,6 +1,6 @@
 ---
 name: Bend-tech Group
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Bend-tech specialises in providing innovative, engineered and certified solutions for safety and efficiency problems to industry.
 website: https://www.bendtechdefence.com.au
 contact_name: Andrew Fawkes
@@ -8,7 +8,8 @@ contact_title: Defence Lead
 address: 2-10 Kewdale Road, Welshpool WA 6160
 phone: 08 9459 8600
 email: andrew@bendtechgroup.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 capability_domains:

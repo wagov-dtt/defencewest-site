@@ -1,6 +1,6 @@
 ---
 name: Vescient
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Vescient, is an Australian company with offices in Perth (HQ), Melbourne, Sydney, Brisbane, Canberra and London. We are a veteran owned professional services consulting business, incorporated in 2016.
 website: https://www.vescient.com
 contact_name: Rod Greedy
@@ -8,7 +8,8 @@ contact_title: Managing Director
 address: Level 16, 111 St Georges Terrace, Perth WA 6000
 phone: (08) 6270 6395
 email: services@vescient.com
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 - academic

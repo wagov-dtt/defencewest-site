@@ -1,6 +1,6 @@
 ---
 name: Matrix Composites & Engineering
-date: '2025-01-29'
+date: '2025-02-04'
 overview: 'Matrix Composites and Engineering Ltd produces engineered products, functional additives and advanced materials for the mining, energy, infrastructure and Defence industries. '
 website: https://matrixengineered.com
 contact_name: Jim Kingston
@@ -8,7 +8,8 @@ contact_title: Technical Lead - Defence
 address: 150 Quill Way, Henderson WA 6166
 phone: +61 408 950 652
 email: jim.kingston@matrixengineered.com
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 capability_domains:

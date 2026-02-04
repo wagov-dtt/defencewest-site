@@ -1,13 +1,14 @@
 ---
 name: Business Innovation Services
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Providing business development and preparedness services to SME's within the WA defence industry
 website: https://johntedesco.com.au
 contact_name: John Tedesco
 address: 9 Karijini Close, BIBRA LAKE WA 6163
 phone: 0402843314
 email: john@johntedesco.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 capability_domains:

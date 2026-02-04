@@ -1,6 +1,6 @@
 ---
 name: Edith Cowan University
-date: '2025-01-29'
+date: '2025-02-04'
 overview: ECU has supported Defence on a number of projects in areas of cyber security, simulation, human computer interface, biometrics, reconnaissance/ surveillance and cognitive psychology.
 website: https://www.ecu.edu.au/research/defence
 contact_name: Ms Michele Clement
@@ -8,6 +8,8 @@ contact_title: Director Defence Engagement
 address: 270 Joondalup Drive, Joondalup WA 6027
 phone: +61 418857824
 email: Defence.Research@ecu.edu.au
+company_types:
+- educational
 stakeholders:
 - defence
 - academic

@@ -1,6 +1,6 @@
 ---
 name: Orontide Group Ltd
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Orontide Group Limited is a WA owned and operated company providing specialist engineering, maintenance, fabrication, machining, welding, painting, blasting and preservation services.
 website: https://www.orontide.com.au
 contact_name: Fazl Bolar Soharab
@@ -8,7 +8,8 @@ contact_title: General Manager
 address: 54 Sparks Rd, Henderson WA 6166
 phone: +61 8 9236 2566
 email: industrial.services@orontide.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 capability_domains:

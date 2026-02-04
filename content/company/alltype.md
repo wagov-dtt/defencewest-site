@@ -1,6 +1,6 @@
 ---
 name: Alltype Engineering
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Australian owned Alltype Engineering has delivered fabrication, installation, construction and maintenance services nationwide for over 40 years with proven multidiscipline expertise.
 website: https://www.alltypeengineering.com.au
 contact_name: Kelvin Andrijich
@@ -8,7 +8,8 @@ contact_title: Managing Director
 address: 52 Hope Valley Road, Naval Base WA 6165
 phone: 0403606902
 email: kandrijich@alltypeengineering.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 capability_domains:

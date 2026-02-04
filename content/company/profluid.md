@@ -1,6 +1,6 @@
 ---
 name: PROFLUID PTY LTD
-date: '2025-01-29'
+date: '2025-02-04'
 overview: PROFLUID deliver high end customized flow solutions to the Air Force & Navy onshore establishments as well as Ships & Submarines.
 website: https://www.profluid.com.au
 contact_name: Jerome MONTEIRO
@@ -8,7 +8,8 @@ contact_title: Managing Director
 address: Unit 44, 110 Inspiration Drive, Wangara WA 6065
 phone: 08 6102 0312
 email: j.monteiro@profluid.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 capability_domains:

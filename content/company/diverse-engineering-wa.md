@@ -1,6 +1,6 @@
 ---
 name: Diverse Engineering (WA)
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Diverse Engineering is a multi-disciplined engineering company that provides an array of services to the energy, industrial, marine and transport sectors.
 website: https://diversewa.com.au
 contact_name: Michael Giles
@@ -8,7 +8,8 @@ contact_title: Managing Director
 address: 66 Stebbing Road, Maddington WA 6109
 phone: +61 8 9493 0855
 email: mgiles@diversewa.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 capability_domains:

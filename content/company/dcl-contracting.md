@@ -1,6 +1,6 @@
 ---
 name: DCL Contracting
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Established in 2014, DCL is a highly capable concrete fabrication firm able to support Defence industry though the delivery of complex construction and maintenance solutions.
 website: https://dclcontracting.com.au
 contact_name: Shane Drew
@@ -8,7 +8,8 @@ contact_title: Business Development Manager
 address: U4/ 106 Robinson Ave, Belmont WA 6104
 phone: 0417 943 956
 email: shane.drew@dclcontracting.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 capability_domains:

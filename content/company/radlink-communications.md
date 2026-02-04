@@ -1,6 +1,6 @@
 ---
 name: Radlink Communications
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Radlink Communications has years of experience in designing, supplying, installing, commissioning, integrating, supporting and maintaining communications networks.
 website: https://radlink.com.au
 contact_name: Greig Hutton
@@ -8,7 +8,8 @@ contact_title: Business Development
 address: 22 Oxleigh Drive, Malaga WA 6090
 phone: 0408 784 673
 email: greig.hutton@radlink.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 capability_domains:

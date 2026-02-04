@@ -1,6 +1,6 @@
 ---
 name: Aerospace NDI
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Aerospace NDI is involved in aircraft component maintenance and aircraft specialist maintenance.
 website: https://www.aerospacendi.com
 contact_name: Anthony Mark Collier
@@ -8,7 +8,8 @@ contact_title: 'Accountable Manager '
 address: 68 May Holman Drive, Bassendean WA 6054
 phone: +61 418 943 285
 email: tony@aerospacendi.com
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 capability_domains:

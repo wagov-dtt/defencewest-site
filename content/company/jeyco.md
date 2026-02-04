@@ -1,6 +1,6 @@
 ---
 name: Jeyco Australia
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Jeyco Australia is an Australian family owned and operated business that specialises in synthetic solutions the Marine, Mining, Agriculture and Defence industries.
 website: https://www.jeyco.com.au
 contact_name: Joel Bowen
@@ -8,7 +8,8 @@ contact_title: BDM
 address: 5-7 Katanning st, Bayswater WA 6053
 phone: 0448185879
 email: joel@jeycoaustralia.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 - academic

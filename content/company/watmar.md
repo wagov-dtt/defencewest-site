@@ -1,6 +1,6 @@
 ---
 name: Watmar
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Watmarine provides manufacturing, general engineering, maintenance and equipment sales services to the Marine and Defence sectors.
 website: https://www.watmar.com.au
 contact_name: Simon Watson
@@ -8,7 +8,8 @@ contact_title: General Manager
 address: 34 Hope Valley Road, Naval Base WA 6165
 phone: +61 8 9437 1305
 email: enquires@watmar.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 capability_domains:

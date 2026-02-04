@@ -1,6 +1,6 @@
 ---
 name: NGIS Australia
-date: '2025-01-29'
+date: '2025-02-04'
 overview: 'NGIS Australia has provided government agencies and private enterprises across a broad range of industries with technology strategies and solutions in business operations. '
 website: https://www.ngis.com.au
 contact_name: Richard Bentley
@@ -8,7 +8,8 @@ contact_title: Executive Director
 address: Suite 1a, 53 Burswood Road, Burswood WA 6100
 phone: +61 8 9355 6000
 email: richard.bentley@ngis.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 capability_domains:

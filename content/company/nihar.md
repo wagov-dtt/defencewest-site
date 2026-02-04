@@ -1,6 +1,6 @@
 ---
 name: Nihar
-date: '2025-01-29'
+date: '2025-02-04'
 overview: 'Nihar is a Western Australian owned and operated company, managed by a team of passionate and experienced Engineers. Nihar was established in 2003, with the vision of being the leading service provider of Asset Maintenance Management solutions in the industry. '
 website: https://www.nihar.com.au
 contact_name: Matheesha Jayasekera
@@ -8,7 +8,8 @@ contact_title: Chief Operating Officer
 address: Unit 5, 256 Adelaide Terrace, Perth WA 6000
 phone: 0433095795
 email: matheesha.jayasekera@nihar.com.au
-is_sme: true
+company_types:
+- sme
 capability_domains:
 - air
 - armour

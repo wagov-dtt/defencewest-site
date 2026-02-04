@@ -1,6 +1,6 @@
 ---
 name: Zellabox
-date: '2025-01-29'
+date: '2025-02-04'
 overview: 'Zellabox has been a world leader and specialist in the provision of micro data centres. '
 website: https://www.zellabox.com
 contact_name: Clinton Keeler
@@ -8,7 +8,8 @@ contact_title: Chief Technology Officer
 address: 67 Howe Street, Osborne Park WA 6017
 phone: 1300 117 644
 email: clinton@zellabox.com
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 capability_domains:

@@ -1,6 +1,6 @@
 ---
 name: NAUTIC Technologies
-date: '2025-01-29'
+date: '2025-02-04'
 overview: NAUTIC Technologies delivers innovative underwater solutions, advancing safety, control, and sustainability to enhance defence, commercial, and recreational capabilities.
 website: https://www.nautictechnologies.com.au
 contact_name: Robert Lee
@@ -8,7 +8,8 @@ contact_title: CO- Founder. Engineering Lead
 address: 24 Powis Way, Warnbro WA 6169
 phone: 0437862698
 email: robert.lee@nautictechnologies.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 - academic

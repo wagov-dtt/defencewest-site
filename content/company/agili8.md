@@ -1,6 +1,6 @@
 ---
 name: Agili8
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Agili8's award winning XRAI Vision connects frontline workforce to offsite experts with 3D live hands-on eyes-on guidance and AI assistance using smart glasses hands-free mission critical work
 website: https://agili8.com
 contact_name: Esther Oh
@@ -8,7 +8,8 @@ contact_title: Chief Executive Officer
 address: 140 St Georges Terrace, Perth WA 6000
 phone: 0459097087
 email: esther@agili8.com
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 capability_domains:

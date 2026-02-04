@@ -1,6 +1,6 @@
 ---
 name: St John Ambulance WA
-date: '2025-01-29'
+date: '2025-02-04'
 overview: St John WA is a leading social enterprise delivering emergency services, health education, and community programs across Western Australia, supported by over 8,500 volunteers and staff.
 website: https://www.stjohnwa.com.au
 contact_name: David John Waters
@@ -8,7 +8,8 @@ contact_title: Manager, Growth and Innovation
 address: 209 Great Eastern Highway, Belmont WA 6104
 phone: 0476897839
 email: David.Waters@stjohnwa.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - academic
 - defence-west

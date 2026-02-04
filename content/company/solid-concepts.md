@@ -1,6 +1,6 @@
 ---
 name: Solid Concepts
-date: '2025-01-29'
+date: '2025-02-04'
 overview: 'Solid Concepts uses 3D printing and rapid prototyping technologies including selective laser sintering, stereo lithography, fused deposition modelling, Computer Numeric Control (CNC) machining and vacuum casting for short run production. '
 website: https://www.solid-concepts.com.au
 contact_name: 'Francois Primon '
@@ -8,7 +8,8 @@ contact_title: Owner
 address: Unit 17, 64-66 Bannister Road, Canning Vale WA 6155
 phone: +61 8 9455 5377
 email: prototype@solid-concepts.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 capability_domains:

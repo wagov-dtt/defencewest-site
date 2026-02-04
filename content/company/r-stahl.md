@@ -1,6 +1,6 @@
 ---
 name: R Stahl Australia Pty Ltd
-date: '2025-01-29'
+date: '2025-02-04'
 overview: R. Stahl Australia designs and manufactures electrical products for the defence, aviation, marine and manufacturing industries.
 website: https://www.stahl.com.au
 contact_name: John Zagame
@@ -8,7 +8,8 @@ contact_title: Managing Director
 address: Level 1, 100 Havelock Street, West Perth WA 6005
 phone: +61 477 295 111
 email: john.zagame@stahl.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 capability_domains:

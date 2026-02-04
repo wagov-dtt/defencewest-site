@@ -1,6 +1,6 @@
 ---
 name: PMV ENGINEERING
-date: '2025-01-29'
+date: '2025-02-04'
 overview: We are an Indigenous-owned company specialising in hazardous areas, electrical instrumentation, and asset management, servicing clients across major industries with deep technical expertise.
 website: https://pmvengineering.com.au
 contact_name: Nitin Ahuja
@@ -8,7 +8,8 @@ contact_title: General Manager
 address: 10/22 Shields Crescent, Booragoon WA 6154
 phone: 08 9317 2146
 email: nitin@pmv.net.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 - academic

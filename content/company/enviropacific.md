@@ -1,6 +1,6 @@
 ---
 name: Enviropacific Services
-date: '2025-01-29'
+date: '2025-02-04'
 overview: 'Founded in 2001, Enviropacific is an environmentally-focused service business delivering specialist engineering and applied science solutions for remediation, water and waste. We make environments safer and communities sustainable by leveraging our knowledge and expertise to help prevent, stop and reverse environmental damage.
 
   We are a privately owned Australian Company with a strong footprint in W.A. in both Remediation and Water Treatment. We have a strong ties with the WA indigenous community through our partnership with indigenous companies.'
@@ -10,7 +10,8 @@ contact_title: Operations Manager WA/NT
 address: Unit 3/ 20 Twickenham Rd, Burswood WA 6100
 phone: 0487 082 490
 email: David.Wilson@enviropacific.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 - defence-west

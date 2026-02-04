@@ -1,6 +1,6 @@
 ---
 name: SME Gateway Pty Ltd
-date: '2025-01-29'
+date: '2025-02-04'
 overview: 'SME Gateway has a proven heritage of over 15 years in the support of Australian Small to Medium Enterprises and the low-risk facilitation of their introduction to a wide range of work opportunities in the provision of Professional and Technical Services. '
 website: https://www.smegateway.com.au
 contact_name: Andy Stephens
@@ -8,7 +8,8 @@ contact_title: Business Development Executive
 address: 28 The Esplanade, Perth WA 6000
 phone: 0401 004 266
 email: andy.stephens@smegateway.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 capability_domains:

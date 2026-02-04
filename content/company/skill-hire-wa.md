@@ -1,6 +1,6 @@
 ---
 name: Skill Hire WA PTY LTD
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Workforce training and employment solutions in construction and defence industries
 website: https://skillhire.com.au
 contact_name: Ben Dahlstrom
@@ -8,7 +8,8 @@ contact_title: CEO
 address: 51-53 Kewdale Rd, Welshpool WA 6106
 phone: 0484 060 344
 email: ben.dahlstrom@skillhire.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - academic
 capability_domains:

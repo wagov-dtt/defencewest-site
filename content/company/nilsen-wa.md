@@ -1,6 +1,6 @@
 ---
 name: 'Nilsen WA '
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Our vision is to be a leading electro-technology company operating throughout Australia to deliver installation, maintenance and manufacturing services from inception to replacement.
 website: https://nilsen.com.au
 contact_name: Katrina Jacovic
@@ -8,7 +8,8 @@ contact_title: PA to General Manager
 address: 12 Efficiency Way, Bibra Lake WA 6163
 phone: 08 9434 8901
 email: nilsenwa@nilsen.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 capability_domains:

@@ -1,6 +1,6 @@
 ---
 name: Engine Protection Equipment Pty Ltd
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Suppliers of Filtration, Instrumentation, Silicone and Rubber Hose, Clamps, Thermal Insolation, Vibration Isolation, exhaust components & Custom exhaust systems & Gaskets fabricated in house.
 website: https://epe.net.au
 contact_name: Mason Deetman
@@ -8,7 +8,8 @@ contact_title: Managing Director
 address: 70 Horus Bend, Bibra Lake WA 6163
 phone: 08 9395 6500
 email: sales@epe.net.au
-is_sme: true
+company_types:
+- sme
 capability_domains:
 - amphibious
 - destroyers

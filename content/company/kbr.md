@@ -1,6 +1,6 @@
 ---
 name: KBR
-date: '2025-01-29'
+date: '2025-02-04'
 overview: At KBR, we partner with government and industry clients to provide technology, engineering and mission-critical solutions.
 website: https://www.kbr.com/en
 contact_name: Robert Sutton
@@ -8,7 +8,8 @@ contact_title: Manager Defence WA
 address: Level 7, 2 Mill Street, Perth WA 6000
 phone: 0434871959
 email: robert.sutton@kbr.com
-is_sme: true
+company_types:
+- sme
 capability_domains:
 - air
 - barracks

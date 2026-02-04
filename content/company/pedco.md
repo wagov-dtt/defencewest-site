@@ -1,6 +1,6 @@
 ---
 name: Pedco Engineering
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Pedco Engineering provides metal forming and fabrication/welding services for mild, stainless, exotic steels and alloys.
 website: https://www.pedco.com.au
 contact_name: Deryck Ethelston
@@ -8,7 +8,8 @@ contact_title: Managing Director
 address: 118 Dowd Street, Welshpool WA 6106
 phone: +61 8 9351 9463
 email: deryck@pedco.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 - defence-west

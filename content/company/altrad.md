@@ -1,6 +1,6 @@
 ---
 name: Altrad Services
-date: '2025-01-29'
+date: '2025-02-04'
 overview: 'Altrad Services is a global multi-services provider working in partnership with our clients to build, protect and extend the life of their assets. '
 website: https://www.altradservices-apac.com
 contact_name: Lee Thompson
@@ -8,7 +8,8 @@ contact_title: Strategy & Growth Director
 address: London House, Level 17, 216 St Georges Terrace, Perth WA 6000
 phone: +61 8 9235 9500
 email: Au.tenders@altrad.com
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 capability_domains:

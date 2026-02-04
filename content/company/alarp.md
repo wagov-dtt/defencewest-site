@@ -1,6 +1,6 @@
 ---
 name: ALARP Solutions Pty Ltd
-date: '2025-01-29'
+date: '2025-02-04'
 overview: ALARP Solutions is a specialist Risk and Safety Management consultancy committed to supporting private and government organisations in developing credible robust and complex Safety, Risk and Assurance Cases, and the development of supporting analysis artefacts.
 website: https://www.alarpsolutions.com.au
 contact_name: Rod Brown
@@ -8,7 +8,8 @@ contact_title: WA Manager
 address: U6/7 Cessnock Way, Rockingham WA 6168
 phone: +61 (0)447 738 113
 email: rod.brown@alarpsolutions.com.au
-is_sme: true
+company_types:
+- sme
 capability_domains:
 - air
 - air-traffic

@@ -1,6 +1,6 @@
 ---
 name: BELUX Engineering
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Belux is the largest abrasive water-jet cutting business in Western Australia.
 website: https://www.belux.com.au
 contact_name: Greg Kowalczyk
@@ -8,7 +8,8 @@ contact_title: Managing Director
 address: 35 Shanahan Rd, Davenport, Bunbury WA 6230
 phone: 08 97254411
 email: 247@belux.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 capability_domains:

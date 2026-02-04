@@ -1,6 +1,6 @@
 ---
 name: Scope Engineering
-date: '2025-01-29'
+date: '2025-02-04'
 overview: 'Scope Engineering has extensive experience in the oil and gas, marine, refineries and mining sectors providing welding and fabrication services. '
 website: https://www.scopeengineering.com
 contact_name: Luke Roughan
@@ -8,7 +8,8 @@ contact_title: Managing Director
 address: 35 Stuart Drive, Henderson WA 6166
 phone: +61 438 197 545
 email: luke@scopeengineering.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 capability_domains:

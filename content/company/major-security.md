@@ -1,6 +1,6 @@
 ---
 name: Major Security Services
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Major Security is a leading security company with over 16 years of experience. We specialise in providing security guards, CCTV surveillance cameras and solar powered surveillance solutions. Our expert team also handles alarm system installation and maintenance. We are also an RTO that offers nationally recognised courses.
 website: https://majorsecurity.com.au
 contact_name: Narinder Banvait
@@ -8,7 +8,8 @@ contact_title: Director
 address: Unit 4, 168 Guildford Rd, Maylands WA 6051
 phone: '0400006702'
 email: narinder@majorsecurity.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 - academic

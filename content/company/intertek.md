@@ -1,6 +1,6 @@
 ---
 name: Intertek
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Intertek supports the QA efforts of customers across their operations including research and development, raw materials sourcing, components suppliers, manufacturing, transportation, distribution and retail channels, and consumer management.
 website: https://www.intertek.com
 contact_name: Konrad Drogemuller
@@ -8,7 +8,8 @@ contact_title: Regional Director
 address: Level 3, 235 St Georges Terrace, Perth WA 6000
 phone: +61 8 9263 0300
 email: korad.drogemullare@intertek.com
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 capability_domains:

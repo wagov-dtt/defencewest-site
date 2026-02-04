@@ -1,6 +1,6 @@
 ---
 name: Trident Australia PTY LTD
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Trident Australia offers design and manufacturing of pneumatic & fluid systems, DNV hose assemblies, precision fabrication, and NATA-accredited calibration services for industrial and defence sectors
 website: https://www.tridentaustralia.com.au
 contact_name: Davide Sirolli
@@ -8,7 +8,8 @@ contact_title: 'Corporate Account Manager '
 address: 15 Magnet Road, Canning Vale WA 6155
 phone: 0448 985 888
 email: dsirolli@tridentaustralia.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 - defence-west

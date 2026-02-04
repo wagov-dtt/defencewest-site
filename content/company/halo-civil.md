@@ -1,6 +1,6 @@
 ---
 name: Halo Civil Engineering Pty Ltd
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Halo Civil Engineering is a  Western Australian-owned company equipped with in-house expertise to efficiently construct, upgrade and maintain defence infrastructure in metropolitan, remote, and regional areas
 website: https://www.halocivil.com
 contact_name: Peter Breen
@@ -8,7 +8,8 @@ contact_title: Managing Director
 address: 33a Forrest Street, Mt Lawley WA 6050
 phone: 0405338118
 email: peter.breen@halocivil.com
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 capability_domains:

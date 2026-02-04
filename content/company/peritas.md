@@ -1,6 +1,6 @@
 ---
 name: Peritas Consulting Pty Ltd
-date: '2025-01-29'
+date: '2025-02-04'
 overview: We provide all forms of civil, structural, construction engineering & high-performance floor design across sectors - industrial, commercial, defense, mixed-use, land development and infrastructure.
 website: https://peritas.au
 contact_name: Matt Waring
@@ -8,7 +8,8 @@ contact_title: National Business Development Manager
 address: 74 Goodwood Parade, Burswood WA 6100
 phone: (08) 6336 9299
 email: mwaring@peritas.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 - academic

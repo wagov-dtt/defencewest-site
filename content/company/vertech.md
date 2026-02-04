@@ -1,6 +1,6 @@
 ---
 name: Vertech Group Pty Ltd
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Established in 2008, The Vertech Group has built a strong reputation as a leading provider of Non-Destructive Testing (NDT), Inspection, and Specialised access solutions.
 website: https://www.vertechgroup.com.au
 contact_name: Craig Davies
@@ -8,7 +8,8 @@ contact_title: Group Development Manager
 address: 19 Walters Drive, Perth WA 6017
 phone: 0417855573
 email: craig.davies@vertechgroup.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 - defence-west

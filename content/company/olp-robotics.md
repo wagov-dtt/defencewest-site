@@ -1,6 +1,6 @@
 ---
 name: OLP Robotics
-date: '2025-01-29'
+date: '2025-02-04'
 overview: OLP Robotics is a local robot integrator based in O'Connor, WA. We support Australian businesses to adopt automation into their operations, in the best way possible for their unique application. It's important to us to spend time with the customer understanding their needs and goals, so that we can deliver a successful turnkey solution. We hope to engage with businesses in the Defence industry and help them to overcome some of the pressures on production, such as skills shortages and reduced capacity.
 website: https://www.olp-robotics.com.au
 contact_name: Russ Melville
@@ -8,7 +8,8 @@ contact_title: Director
 address: 6/101 Garling Street, O'Connor WA 6163
 phone: 0862609301
 email: info@olp-robotics.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 - academic

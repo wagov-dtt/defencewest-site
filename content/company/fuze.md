@@ -1,6 +1,6 @@
 ---
 name: Fuze
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Fuze is a composite materials technology business which delivers in-field composite manufacturing to replace welding, bolting and steel loss, minimising downtime and delivering long-term durability.
 website: https://fuze.solutions
 contact_name: Jason LeCoultre
@@ -8,7 +8,8 @@ contact_title: Managing Director
 address: 10 Marchesi Street, Kewdale WA 6105
 phone: +61 405 660 786
 email: jason.lecoultre@fuze.solutions
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 - academic

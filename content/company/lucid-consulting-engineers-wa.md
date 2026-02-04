@@ -1,6 +1,6 @@
 ---
 name: 'Lucid Consulting Engineers (WA) '
-date: '2025-01-29'
+date: '2025-02-04'
 overview: 'Lucid is an established national engineering consultancy founded in year 2000 that employs 250 professionals across Australia. '
 website: https://www.lucidconsulting.com.au
 contact_name: Guy Page
@@ -8,7 +8,8 @@ contact_title: Defence Industry Portfolio Manager
 address: Level 2, 23 Railway Road, Subiaco WA 6008
 phone: 0411 864 674
 email: guy.page@lucidconsulting.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 capability_domains:

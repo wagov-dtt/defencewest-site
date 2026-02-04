@@ -1,6 +1,6 @@
 ---
 name: Hofmann Engineering
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Hofmann Engineering is a globally recognised engineering solutions provider to the defence industry.
 website: https://www.hofmannengineering.com
 contact_name: Erich J Hofmann
@@ -8,7 +8,8 @@ contact_title: Managing Director
 address: 3 Alice Street, Bassendean WA 6054
 phone: +61 8 9279 5522
 email: erich.j.hofmann@hofmannengineering.com
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 capability_domains:

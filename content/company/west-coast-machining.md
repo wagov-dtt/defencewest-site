@@ -1,6 +1,6 @@
 ---
 name: WEST COAST MACHINING SERVICES
-date: '2025-01-29'
+date: '2025-02-04'
 overview: West Coast Machining Services offers high quality, fast turnaround, low cost machining and fabrication services.
 website: https://wcmsperth.com.au
 contact_name: Andre Verbiesen
@@ -8,7 +8,8 @@ contact_title: Managing Director
 address: Unit 2, 55  John Street, Bentley WA 6102
 phone: 08 6113 1164
 email: defence@wcmsperth.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 capability_domains:

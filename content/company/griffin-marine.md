@@ -1,6 +1,6 @@
 ---
 name: Griffin Marine Services Pty Ltd
-date: '2025-01-29'
+date: '2025-02-04'
 overview: 'Griffin Marine Services provides multi-disciplinary industrial services and project management to
 
   Prime Contractors, Shipbuilders and maintenance companies in the defence and commercial sectors.'
@@ -10,7 +10,8 @@ contact_title: General Manager
 address: 72 Erceg Road, Yangebup WA 6164
 phone: 0411 143 337
 email: info@griffinmarineservices.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 - academic

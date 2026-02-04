@@ -1,6 +1,6 @@
 ---
 name: RPS Group
-date: '2025-01-29'
+date: '2025-02-04'
 overview: RPS delivers complex projects across the defence, energy, water, commercial, residential, masterplanned communities, education, health, aged care, industrial and social infrastructure sectors.
 website: https://www.rpsgroup.com
 contact_name: Mr David Humphry
@@ -8,7 +8,8 @@ contact_title: General Manager, Buildings and Property, Australia Asia Pacific
 address: Level 3, 500 Hay Street, Subiaco WA 6008
 phone: +61 8 9211 1111
 email: david.humphry@rpspm.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 capability_domains:

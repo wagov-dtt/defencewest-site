@@ -1,6 +1,6 @@
 ---
 name: Mainz Pty Ltd
-date: '2025-01-29'
+date: '2025-02-04'
 overview: We make stainless steel cable assemblies to any size or length required. Suppliers of stainless hardware and tools.
 website: https://www.wirebalustrades.com.au
 contact_name: Graeme Eastman
@@ -8,7 +8,8 @@ contact_title: Managing Director
 address: 209 Shaftesbury Ave, Bedford WA 6052
 phone: '92756246'
 email: sales@wirebalustrades.com.au
-is_sme: true
+company_types:
+- sme
 capability_domains:
 - air
 - amphibious

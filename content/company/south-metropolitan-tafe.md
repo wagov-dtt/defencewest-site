@@ -1,12 +1,14 @@
 ---
 name: South Metropolitan TAFE
-date: '2025-01-29'
+date: '2025-02-04'
 overview: South Metropolitan TAFE delivers a range of qualifications and courses to all arms of the defence industry, throughout the state and nationally.
 website: https://www.southmetrotafe.wa.edu.au
 contact_name: South Metropolitan TAFE
 address: 1 Fleet Street, Fremantle WA 6160
 phone: 1800 001 001
 email: info@smtafe.wa.edu.au
+company_types:
+- educational
 stakeholders:
 - academic
 - defence-west

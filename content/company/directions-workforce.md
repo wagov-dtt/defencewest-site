@@ -1,6 +1,6 @@
 ---
 name: Directions Workforce Solutions
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Directions Workforce Solutions provides personalised apprenticeship and GTO management, recruitment, training and employer support--building skilled, sustainable workforces.
 website: https://www.directionswa.com.au
 contact_name: Kristim Lim
@@ -8,7 +8,8 @@ contact_title: Chief Executive Officer
 address: 7 Sayer St, Midland WA 6056
 phone: 0448048792
 email: kristin@directionswa.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 - academic

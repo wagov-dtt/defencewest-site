@@ -1,6 +1,6 @@
 ---
 name: Renewable.bio Pty Ltd
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Bioenergy and biofuels company producing renewable fuels from sustainable resources
 website: https://renewable.bio
 contact_name: Angelo Dabala
@@ -8,7 +8,8 @@ contact_title: CEO
 address: Level 2 Wentworth Building, 300 Murray Street, Perth WA 6000
 phone: 0409681316
 email: angelo.dabala@renewable.bio
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 - defence-west

@@ -1,6 +1,6 @@
 ---
 name: Volz Australia Pty Ltd
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Volz Australia was founded in 2005 with a vision to provide Superior Stainless Steel Hydraulic Components by combining quality products with decades of experience & expertise & incorporating outstanding customer service at the forefront of everything we do.
 website: https://www.volz.com.au
 contact_name: Rhys Jones
@@ -8,7 +8,8 @@ contact_title: WA Sales & Product Manager
 address: 8/50 Sustainable Ave, Bibra Lake WA 6163
 phone: 0439 426 653
 email: rhys@volz.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 capability_domains:

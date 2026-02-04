@@ -1,6 +1,6 @@
 ---
 name: Qube
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Qube is Australia's largest integrated provider of import and export logistics services, covering the complete supply chain from beginning to end.
 website: https://www.qube.com.au
 contact_name: 'Teneille Semple '
@@ -8,7 +8,8 @@ contact_title: Recruitment Manager
 address: 15 Outram St, West Perth WA 6005
 phone: 0428660176
 email: teneille.semple@qube.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 capability_domains:

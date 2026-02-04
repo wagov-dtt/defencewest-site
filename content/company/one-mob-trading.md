@@ -1,6 +1,6 @@
 ---
 name: One Mob - Trading as Mob Contracting and Event Personnel Australia
-date: '2025-01-29'
+date: '2025-02-04'
 overview: One Mob is a one stop shop for people solutions in the Events, Resources and Labour Hire sector for Western Australia and South Australia
 website: https://onemob.com.au
 contact_name: Maera Paki
@@ -8,7 +8,8 @@ contact_title: Recruitment and Business Improvement Officer
 address: 146 Francisco Street, Belmont WA 6104
 phone: 0476 025 770
 email: maera@mobcontracting.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence-west
 industrial_capabilities:

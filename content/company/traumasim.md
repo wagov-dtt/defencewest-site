@@ -1,14 +1,15 @@
 ---
 name: TraumaSim
-date: '2025-01-29'
+date: '2025-02-04'
 overview: TraumaSim deliver medically accurate products designed to simulate realistic traumatic injuries and medical conditions as well as providing training, workshops, part-task trainers and moulage technicians & supplies to industries and professionals around the world.
-website: https://www.traumasim.com.au
+website: https://traumasim.com.au
 contact_name: Nola Pearce
 contact_title: Managing Director
 address: Unit 7/21 McDonald Crescent, Bassendean WA 6054
 phone: +61 409 678 056
 email: info@traumasim.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 capability_domains:

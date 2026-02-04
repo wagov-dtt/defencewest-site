@@ -1,6 +1,6 @@
 ---
 name: Uni Power
-date: '2025-01-29'
+date: '2025-02-04'
 overview: 'Uni-Power International manufactures welder generators,  high charge alternators and NATO 28V DC jet and turbo prop aircrafts.
 
   '
@@ -10,7 +10,8 @@ contact_title: General Manager
 address: Unit 4, Christable Way, Landsdale WA 6065
 phone: +61 8 9302 4058
 email: defence@unipower.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 capability_domains:

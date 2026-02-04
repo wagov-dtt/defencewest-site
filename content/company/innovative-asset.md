@@ -1,6 +1,6 @@
 ---
 name: Innovative Asset Solutions
-date: '2025-01-29'
+date: '2025-02-04'
 overview: IAS leads innovation in the preservation, repair and decommissioning of assets for the oil and gas, mining, public infrastructure and industrial sectors.
 website: https://www.ias-group.com.au
 contact_name: Neil Pickwell
@@ -8,7 +8,8 @@ contact_title: IAS Business Manager
 address: 17-19 Ilda Road, Canning Vale WA 6155
 phone: +61 8 9334 9444
 email: neil.pickwell@ugllimited.com
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 capability_domains:

@@ -1,6 +1,6 @@
 ---
 name: L3Harris IMSA
-date: '2025-01-29'
+date: '2025-02-04'
 overview: L3Harris Integrated Mission Systems Australia is a leading provider of maritime systems and solutions in the surface, undersea, geospatial and network centric spheres of operation for both defence and commercial applications.
 website: https://www.l3harris.com/en-au/australia
 contact_name: Scott Elson
@@ -8,7 +8,8 @@ contact_title: Chief Technology Officer
 address: 4 Mews Road, Fremantle WA 6160
 phone: 08 9431 0000
 email: Scott.Elson@L3Harris.com
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 capability_domains:

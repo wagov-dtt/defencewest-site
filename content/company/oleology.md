@@ -1,6 +1,6 @@
 ---
 name: OLEOLOGY Pty Ltd
-date: '2025-01-29'
+date: '2025-02-04'
 overview: OLEOLOGY's expertise in water treatment systems includes advanced solutions to recycle and decontaminate water quicker, simpler, and more cost-effective.
 website: https://oleology.com.au
 contact_name: Ben Cammack
@@ -8,7 +8,8 @@ contact_title: Technical Strategy & Development
 address: 50 Zedora Turn, Henderson WA 6166
 phone: 1300 692 359
 email: sales@oleology.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 - defence-west
@@ -37,8 +38,8 @@ regions:
 capability_streams:
 - base
 - research
-latitude: -32.1522847
-longitude: 115.7829296
+latitude: -32.15187312204
+longitude: 115.780301278355
 ---
 
 ## Overview

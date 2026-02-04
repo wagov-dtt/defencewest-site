@@ -1,6 +1,6 @@
 ---
 name: Allship Engineering
-date: '2025-01-29'
+date: '2025-02-04'
 overview: 'Allship Engineering is a medium sized enterprise organisation working in a supply chain with larger Defence and marine industry companies. Allship maintains contractual relationships with repair agents throughout Australia and abroad in the manufacturing, installation, and repair of Defence parts and components.
 
 
@@ -14,7 +14,8 @@ contact_title: Managing Director
 address: 19 Success Way, Henderson WA 6166
 phone: +61 457 759 697
 email: aneaves@allship.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 capability_domains:

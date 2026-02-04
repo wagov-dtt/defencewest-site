@@ -1,6 +1,6 @@
 ---
 name: KAW Engineering Pty Ltd
-date: '2025-01-29'
+date: '2025-02-04'
 overview: 'KAW Engineering is a wholly, locally, Karratha owned and operated company that has been providing engineering and project support services across the Pilbara region for over 38 years. '
 website: https://kaw.com.au
 contact_name: Yatinder (Yudi) Shekhawat
@@ -8,7 +8,8 @@ contact_title: Business Manager
 address: Lot 2889 Pemberton Way, Karratha Industrial Estate WA 6714
 phone: 0488 112 428
 email: yudi@kawengineering.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 capability_domains:

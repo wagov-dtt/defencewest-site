@@ -1,6 +1,6 @@
 ---
 name: Chillflow Solutions
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Chillflow is a defence contractor specialising in end to- end marine HVAC & Refrigeration engineering solutions. From design, supply, and installation to service, maintenance, and life-cycle support
 website: https://chillflowsolutions.com.au
 contact_name: Gareth Halliday
@@ -8,7 +8,8 @@ contact_title: Operations Director
 address: 3/1 pusey road, Cockburn Central WA 6164
 phone: 0406159009
 email: gareth.halliday@chillflowsolutions.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 capability_domains:

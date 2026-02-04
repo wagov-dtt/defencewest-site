@@ -1,6 +1,6 @@
 ---
 name: RSM Australia Pty Ltd
-date: '2025-01-29'
+date: '2025-02-04'
 overview: 'RSM provide cyber security, assurance, tax and consulting services globally. As an integrated team of more than 1,900 staff, we share skills, insight and
 
   resources with a client-centric approach'
@@ -10,7 +10,8 @@ contact_title: Partner, Cyber Security & Privacy Risk Services
 address: Level 32 Exchange Tower, 2 The Esplanade, Perth WA 6000
 phone: +61 (0) 8 9261 9272
 email: riaan.bronkhorst@rsm.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 - defence-west

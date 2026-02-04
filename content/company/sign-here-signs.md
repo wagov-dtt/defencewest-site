@@ -1,6 +1,6 @@
 ---
 name: Sign Here Signs
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Signhere Signs are ISO 9001 Quality Accredited and currently service the mining & all defence industries.
 website: https://www.signheresigns.com.au
 contact_name: Russell Friedman
@@ -8,7 +8,8 @@ contact_title: Managing Director
 address: 22 Weir Road, Malaga WA 6090
 phone: 08 9248 1184
 email: russell@signheresigns.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 capability_domains:

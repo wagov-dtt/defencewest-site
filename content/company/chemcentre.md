@@ -1,6 +1,6 @@
 ---
 name: ChemCentre
-date: '2025-01-29'
+date: '2025-02-04'
 overview: ChemCentre is a Western Australian statutory authority providing chemical and forensic science services to the people and government of Western Australia to help keep the state safe and prosperous.
 website: https://www.chemcentre.wa.gov.au
 contact_name: Nigel West
@@ -8,7 +8,10 @@ contact_title: Director Scientific Services Division
 address: Resources and Chemistry Precinct, Curtin University, Manning Road, Bentley WA 6102
 phone: +61 8 9422 9800
 email: nwest@chemcentre.wa.gov.au
-is_sme: true
+company_types:
+- government
+- research
+- sme
 stakeholders:
 - defence
 capability_domains:

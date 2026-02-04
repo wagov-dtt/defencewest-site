@@ -1,6 +1,6 @@
 ---
 name: Exgroup Pty Ltd
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Exgroup is a specialised mechanical, valve and instrumentation services that uses innovative technologies to help their customers
 website: https://www.exgroup.com.au
 contact_name: Jon Orange
@@ -8,7 +8,8 @@ contact_title: 'Client Manager '
 address: 21 Alex Wood Drive, Forrestdale WA 6112
 phone: 0406 733 782
 email: jorange@exgroup.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 capability_domains:

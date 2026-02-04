@@ -1,6 +1,6 @@
 ---
 name: Geo Oceans Pty Ltd
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Geo Oceans is an innovative subsea inspection, survey and marine science company.
 website: https://www.geooceans.com
 contact_name: Nick Veitch
@@ -8,7 +8,8 @@ contact_title: Managing Director
 address: 8 Gould Street, Osborne Park WA 6017
 phone: '0400352134'
 email: nick.veitch@geooceans.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence-west
 - defence-science

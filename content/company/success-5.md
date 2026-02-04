@@ -1,6 +1,6 @@
 ---
 name: Success 5 Engineering
-date: '2025-01-29'
+date: '2025-02-04'
 overview: 'Locally owned and operated, Success 5 is an engineering manufacturing company with over 20 years experience in the design and manufacture of high quality, cost effective components.
 
 
@@ -11,7 +11,8 @@ contact_title: Managing Director
 address: 231 Mars Street, Welshpool WA 6106
 phone: 08 9467 9557
 email: robin@success5.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 - academic

@@ -1,6 +1,6 @@
 ---
 name: Engineering Institute of Technology
-date: '2025-01-29'
+date: '2025-02-04'
 overview: We are a leading engineering and technology education and training provider, offering online and on-campus programs. Our wide range of courses is driven by industry experts.
 website: https://www.eit.edu.au
 contact_name: Caroline Mackay
@@ -8,7 +8,9 @@ contact_title: Marketing and Business Manager
 address: 6 Thelma Street, West Perth WA 6005
 phone: +61 8 9321 1702
 email: caroline.mackay@eit.edu.au
-is_sme: true
+company_types:
+- educational
+- sme
 stakeholders:
 - defence
 - academic

@@ -1,6 +1,6 @@
 ---
 name: Thomas Fabrication Pty Ltd
-date: '2025-01-29'
+date: '2025-02-04'
 overview: 'Thomas Fabrication provides Cold Forming services for Industrial Thickness Plate steel (mild steel, impact resistant, stainless, exotics, titanium) for Mining, Civil, Defence and Oil & Gas applications, completed to millimetre tolerances.
 
 
@@ -11,7 +11,8 @@ contact_title: Business Development Manager
 address: Unit 3, 7 Pearson Street, Bayswater WA 6053
 phone: 0403389420
 email: reece@thomasfabrication.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 - defence-west

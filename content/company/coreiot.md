@@ -1,6 +1,6 @@
 ---
 name: COREIOT PTY LTD
-date: '2025-01-29'
+date: '2025-02-04'
 overview: COREIoT is an Australian based global technology provider specialising in Industry 4.0 based products and services. COREIoT has a deep technology strength in sensing, algorithms, and cyber security.
 website: https://smartshopfloor.com
 contact_name: Nisarg Shah
@@ -8,7 +8,8 @@ contact_title: Managing Director
 address: 1/294-296 Newcastle St, Perth WA 6000
 phone: 0451092411
 email: nisarg.shah@coreiot.com
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 - defence-west

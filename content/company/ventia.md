@@ -1,6 +1,6 @@
 ---
 name: Ventia
-date: '2025-01-29'
+date: '2025-02-04'
 overview: We are a leading Australian Prime services integrator working at the heart of Defence capability to support those that serve our country.
 website: https://www.ventia.com
 contact_name: Tracey Glenny
@@ -8,7 +8,9 @@ contact_title: People and Capability Business Partner
 address: 181 Adelaide Terrace, Level 5, East Perth WA 6004
 phone: '0456310401'
 email: tracey.glenny@ventia.com
-is_prime: true
+company_types:
+- large-enterprise
+- prime
 stakeholders:
 - defence
 capability_domains:

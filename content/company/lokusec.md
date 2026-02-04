@@ -1,6 +1,6 @@
 ---
 name: LokuSec Pty Ltd
-date: '2025-01-29'
+date: '2025-02-04'
 overview: 'We are a Cyber Security Consultancy providing a range of expertise from supply chain security through to security assessments and cloud architecture support.
 
 
@@ -23,7 +23,8 @@ contact_title: Co-Founder/Director
 address: 123B Colin Street, West Perth WA 6005
 phone: 0428155677
 email: Sudesh@lokusec.com
-is_prime: true
+company_types:
+- prime
 latitude: -31.9454884
 longitude: 115.8427873
 ---

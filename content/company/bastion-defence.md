@@ -1,6 +1,6 @@
 ---
 name: Bastion Defence Consulting
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Bastion Defence Consulting is a premier maritime consulting firm providing a broad range of services across Australia to a number of clients in the defence industry.
 website: https://bastiondefence.com.au
 contact_name: John Oldridge
@@ -8,7 +8,8 @@ contact_title: Regional Manager
 address: 1/4 McGrath Road, Henderson WA 6166
 phone: +61 414 199 485
 email: John.oldridge@bastiondefence.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 - academic

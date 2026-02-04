@@ -1,6 +1,6 @@
 ---
 name: BMD Constructions Pty Ltd
-date: '2025-01-29'
+date: '2025-02-04'
 overview: BMD is a national group of companies engaged in engineering design, construction and land development for clients and partners in the defence, urban development, transport infrastructure and resources and energy sectors.
 website: https://www.bmdgroup.global
 contact_name: Bennet Fowler
@@ -8,7 +8,8 @@ contact_title: Business Development Manager
 address: Unit1/175 Campbell Street, Belmont WA 6104
 phone: 0467 731 650
 email: Bennet.Fowler@bmd.com.au
-is_sme: true
+company_types:
+- sme
 capability_domains:
 - barracks
 - base

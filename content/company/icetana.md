@@ -1,6 +1,6 @@
 ---
 name: iCetana
-date: '2025-01-29'
+date: '2025-02-04'
 overview: iCetana is a world leader in the provision of real-time artificial intelligence (AI) assisted video monitoring to service the demands of a complex world.
 website: https://www.icetana.ai
 contact_name: Kevin Brown
@@ -8,7 +8,8 @@ contact_title: Chief Executive Officer
 address: Level 36, 152 St Georges Terrace, Perth WA 6000
 phone: +61 410 485 889
 email: kevin.brown@icetana.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 capability_domains:

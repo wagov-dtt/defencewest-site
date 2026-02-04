@@ -1,6 +1,6 @@
 ---
 name: Fugro Remote Systems Technology
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Fugro is a world-leading, independent provider of geo-intelligence and asset integrity solutions for large constructions, infrastructure and natural resources.
 website: https://www.fugro.com
 contact_name: Sam Forbes
@@ -8,7 +8,8 @@ contact_title: Service Line Manager
 address: 24 Geddes Street, Balcatta WA 6024
 phone: +61 407 478 121
 email: s.forbes@fugro.com
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 capability_domains:

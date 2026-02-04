@@ -1,6 +1,6 @@
 ---
 name: Onetide Modular Systems Pty Ltd
-date: '2025-01-29'
+date: '2025-02-04'
 overview: 'Onetide is a 100% Australian owned and operated Engineering Innovation Company. Designing and delivering novel engineering solutions for efficiency and safety optimization across a broad range of industry sectors. '
 website: https://onetide.com.au
 contact_name: Roy Mitchell
@@ -8,7 +8,8 @@ contact_title: Director and Principal Systems Engineer
 address: Unit 1, 9 Kalmia Road, Bibra Lake WA 6063
 phone: 0409 366 814
 email: roy.mitchell@onetide.com.au
-is_sme: true
+company_types:
+- sme
 capability_domains:
 - air
 - amphibious

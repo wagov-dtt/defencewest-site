@@ -1,6 +1,6 @@
 ---
 name: 'MKA Electrical Design Consultants '
-date: '2025-01-29'
+date: '2025-02-04'
 overview: MKA Electrical Design Consultants Pty Ltd (MKA) is an independent, indigenously owned Western Australian company with extensive experience in delivering expert electrical engineering services to a broad range of industries.
 website: https://mkadesign.com.au
 contact_name: Mark Armanasco
@@ -8,7 +8,8 @@ contact_title: General Manager
 address: 26 Carbon Court, Osborne Park WA 6017
 phone: 08 9244 1142
 email: marka@mkadesign.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 capability_domains:

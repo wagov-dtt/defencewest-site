@@ -1,6 +1,6 @@
 ---
 name: WireAid Pty Ltd
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Wire Aid is a dynamic, customer focused company specialising in the design, manufacture and supply of hose restraints, cable stockings and cam buckles to clients both domestic and abroad We create specialised wire safety products for all kinds of industries, all over the world. Our hose restraints, cable stockings and cam buckles are manufactured in Australia and get sent around the globe. You can find our products in use anywhere from a mine site in the Pilbara to a renewable energy company in Scandinavia. Our team always goes above and beyond to deliver reliable safety solutions. We are ISO 9001 certified for quality management systems and hold ourselves to the highest standards across every part of our service. Driven to exceed expectations, we're always growing our workforce and optimising our processes to build even more capacity.
 website: https://wireaid.com.au
 contact_name: Sam Hosier
@@ -8,7 +8,8 @@ contact_title: General Manager
 address: 4 Bannick Court, Canning Vale WA 6155
 phone: 08 6258 5078
 email: sales@wireaid.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 - defence-west

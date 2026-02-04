@@ -1,6 +1,6 @@
 ---
 name: Otonoma
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Autonomous orchestration of IT/OT, workflow, people, robotics and systems using an actorised agentic ai overlay network known as the Paranet.
 website: https://www.otonoma.com
 contact_name: Peta Chirgwin
@@ -8,7 +8,8 @@ contact_title: VP Global Industrial Markets
 address: Carey pl, Cooloongup WA 6168
 phone: 0404871014
 email: peta.chirgwin@otonoma.com
-is_sme: true
+company_types:
+- sme
 capability_domains:
 - air-traffic
 - airborne

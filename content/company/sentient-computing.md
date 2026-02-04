@@ -1,6 +1,6 @@
 ---
 name: Sentient Computing
-date: '2025-01-29'
+date: '2025-02-04'
 overview: 'Sentient is a 100% Australian owned software development company founded in 2007 and based in Western Australia.
 
   We specialise in creating powerful and immersive virtual environments to deliver:
@@ -20,7 +20,8 @@ contact_title: Training Lead and Product Manager
 address: L1, 30 The Esplanade, Perth WA 6000
 phone: '+61892407888'
 email: info@sencom.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 - academic

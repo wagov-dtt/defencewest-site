@@ -1,6 +1,6 @@
 ---
 name: Secure Systems Limited
-date: '2025-01-29'
+date: '2025-02-04'
 overview: 'Secure Systems Limited specialises in the design and manufacture of secure portable storage technology for high assurance applications. '
 website: https://www.securesystems.com.au
 contact_name: Peter James
@@ -8,7 +8,8 @@ contact_title: Managing Director
 address: Unit 3, 128 Main Street, Osborne Park WA 6018
 phone: +61 8 9240 8708
 email: pjames@securesystems.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 capability_domains:

@@ -1,6 +1,6 @@
 ---
 name: Epichemistry Pty Limited
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Epichem is Australia's leading CRO specialising in Medicinal, Synthetic & Analytical Chemistry
 website: https://www.epichem.com
 contact_name: James Rixson
@@ -8,7 +8,8 @@ contact_title: General Manager
 address: Suite 11, 3 Brodie-Hall Drive, Bentley WA 6102
 phone: '+61893637888'
 email: admin@epichem.com
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 - academic

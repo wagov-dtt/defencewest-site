@@ -1,6 +1,6 @@
 ---
 name: ABS PTY LTD
-date: '2025-01-29'
+date: '2025-02-04'
 overview: ABS Welding has been in business for over 19 years and specializes in the Supply & Install of structural steel.
 website: http://www.abswelding.com.au
 contact_name: Rob Abbey
@@ -8,7 +8,8 @@ contact_title: Managing Director
 address: 32 Hurrell Way, Rockingham WA 6168
 phone: 0418914360
 email: rob@abswelding.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 - defence-west

@@ -1,6 +1,6 @@
 ---
 name: Mig-Co Engineering
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Mig-Co Engineering is a trusted project partner to many in the sector. Capabilities include machining, mechanical fitting, fabrication, hydraulic components, piping, and maintenance & field services.
 website: https://www.migco.com.au
 contact_name: Adam Miguel
@@ -8,7 +8,8 @@ contact_title: Director
 address: 30 Lionel Street, Naval Base WA 6165
 phone: 0418952708
 email: adam@migco.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 capability_domains:

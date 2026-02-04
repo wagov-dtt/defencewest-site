@@ -1,6 +1,6 @@
 ---
 name: Geng
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Geng provide design engineers within the product, mechanical and manufacturing sector focused on Defence force training facilities and equipment requirements around Australia.
 website: https://www.geng.com
 contact_name: Cliff Green FIEAust, CPEng, NER, APEC Engineer, IntPE(Aust), Past MDIA
@@ -8,7 +8,8 @@ contact_title: Principal & CEO
 address: 223 Walnut Rd, Bickley WA 6076
 phone: +61 414 823 065
 email: Cliff.Green@geng.com
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 capability_domains:

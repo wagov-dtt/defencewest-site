@@ -1,6 +1,6 @@
 ---
 name: Civmec
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Civmec is an integrated, multi-disciplinary construction and engineering services provider to the oil and gas, metals and minerals, infrastructure, marine and defence sectors.
 website: https://www.civmec.com.au
 contact_name: Pat Tallon
@@ -8,7 +8,8 @@ contact_title: Chief Executive Officer
 address: 16 Nautical Drive, Henderson WA 6166
 phone: +61 8 9437 6288
 email: civmec@civmec.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 capability_domains:

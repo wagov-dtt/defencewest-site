@@ -1,6 +1,6 @@
 ---
 name: Specialty Metals
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Specialty Metals is a leading distributor of quality titanium, stainless steel and exotic alloys.
 website: https://www.specialtymetals.com.au
 contact_name: Grant Sinnott
@@ -8,7 +8,8 @@ contact_title: General Manager
 address: Unit 2, 14 Moriarty Road, Welshpool WA 6106
 phone: +61 8 9353 5588
 email: grant.sinnott@specialtymetals.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 capability_domains:

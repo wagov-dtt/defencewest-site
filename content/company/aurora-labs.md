@@ -1,6 +1,6 @@
 ---
 name: Aurora Labs Ltd
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Aurora Labs Limited (Aurora) is a developer of metal 3D printing, or Additive Manufacturing (AM) technology based in Perth, Western Australia.
 website: https://www.auroralabs3d.com
 contact_name: Tim Barker
@@ -8,7 +8,8 @@ contact_title: Business Development Manager
 address: 41-43 Wittenberg Drive, Canning Vale WA 6155
 phone: 08 9434 1934
 email: enquiries@auroralabs3d.com
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 capability_domains:

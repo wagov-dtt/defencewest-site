@@ -1,6 +1,6 @@
 ---
 name: Alcolizer Pty Ltd
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Australian-owned provider of drug and alcohol testing solutions, with over 35 years of experience supporting Australian Police, Defence, government agencies, and heavy industry leaders.
 website: https://alcolizer.com
 contact_name: Nigel Burr
@@ -8,7 +8,8 @@ contact_title: CEO
 address: 36 Mumford Place, Balcatta WA 6021
 phone: +61 439204010
 email: nigel.burr@alcolizer.com
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 - defence-west

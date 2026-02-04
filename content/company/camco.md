@@ -1,6 +1,6 @@
 ---
 name: Camco Engineering
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Camco Engineering is one one of Australia's largest mechanical engineering firms.
 website: https://camcoeng.com.au
 contact_name: Greg Carson
@@ -8,7 +8,8 @@ contact_title: Business Development Manager
 address: 1 Bell Street, Canning Vale WA 6155
 phone: +61 417 185 428
 email: greg.carson@camcoeng.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 capability_domains:

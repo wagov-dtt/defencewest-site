@@ -1,6 +1,6 @@
 ---
 name: Western Advance
-date: '2025-01-29'
+date: '2025-02-04'
 overview: 'Western Advance is a security, safety and surveillance integration specialist providing solutions to Army, Navy and Air Force. '
 website: https://www.westernadvance.com
 contact_name: Jarrad Warwick
@@ -8,7 +8,8 @@ contact_title: Business Manager - Defence
 address: 130 Mulgul Road, Malaga WA 6090
 phone: +61 417 170 043
 email: j.warwick@westernadvance.com
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 capability_domains:

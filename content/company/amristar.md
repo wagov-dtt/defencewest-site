@@ -1,6 +1,6 @@
 ---
 name: Amristar Solutions
-date: '2025-01-29'
+date: '2025-02-04'
 overview: 'Our team of ICT and software engineering professionals helps organisations develop IT strategy, architect effective technology systems and build high-quality, cloud scale business applications. '
 website: https://amristar.com
 contact_name: Daniel Harvey
@@ -8,7 +8,8 @@ contact_title: Director and Chief Operations Officer
 address: Level 4, 76 Kings Park Road, West Perth WA 6005
 phone: +61 8 6365 9680
 email: daniel@amristar.com
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 capability_domains:

@@ -1,6 +1,6 @@
 ---
 name: Cambridge Gulf Limited
-date: '2025-01-29'
+date: '2025-02-04'
 overview: 'CGL has Cambridge Gulf Limited (CGL) is a public unlisted company established in 1964 (Kununurra was established in 1963).
 
   69 shareholders who live or have lived in Kununurra.
@@ -12,7 +12,8 @@ contact_title: CEO
 address: 12 Cotton Tree Avenue, KUNUNURRA WA 6743
 phone: 0408097832
 email: tony@cgltd.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 capability_domains:

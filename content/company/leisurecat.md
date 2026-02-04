@@ -1,6 +1,6 @@
 ---
 name: Leisurecat Australia
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Leisurecat Australia supplies fibreglass patrol vessels to 12 metres, high-speed interceptors and powered catamaran search and rescue vessels to 12.5 metres
 website: https://www.leisurecat.com.au
 contact_name: Kevin Horsley
@@ -8,7 +8,8 @@ contact_title: General Manager
 address: 2 Egmont Road, Henderson WA 6166
 phone: +61 8 9437 6477
 email: kevin@leisurecat.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 capability_domains:

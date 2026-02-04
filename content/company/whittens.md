@@ -1,6 +1,6 @@
 ---
 name: Whittens Pty Limited
-date: '2025-01-29'
+date: '2025-02-04'
 overview: Whittens partners with clients to deliver safe, reliable earthworks and concrete solutions for complex mining, oil & gas, defence, and infrastructure projects across Australia.
 website: https://www.whittensgroup.com.au
 contact_name: Dario Amara
@@ -8,7 +8,8 @@ contact_title: Head of Delivery and Development | West
 address: Level 2, 302 Selby Street North, Osborne Park WA 6017
 phone: 1300 911 535
 email: tenders@whittensgroup.com.au
-is_sme: true
+company_types:
+- sme
 stakeholders:
 - defence
 - academic
