@@ -6,6 +6,7 @@ Imports hugo.toml and exports common paths and constants.
 import logging
 import os
 import shutil
+import subprocess
 import sys
 from pathlib import Path
 import tomllib
@@ -48,6 +49,25 @@ def is_in_wa(lat: float, lng: float) -> bool:
     )
 
 
+def html_to_markdown(html: str, *, strip_tables: bool = False) -> str:
+    """Convert HTML to clean markdown.
+
+    Args:
+        html: HTML string to convert.
+        strip_tables: If True, strip table elements (used when tables are layout wrappers).
+    """
+    from markdownify import markdownify as md_convert
+
+    if not html:
+        return ""
+
+    strip_tags = ["script", "style"]
+    if strip_tables:
+        strip_tags.extend(["table", "tr", "td", "th", "tbody", "thead"])
+
+    return md_convert(html, heading_style="ATX", bullets="-", strip=strip_tags).strip()
+
+
 def make_progress() -> Progress:
     """Create a standard progress bar."""
     return Progress(
@@ -62,6 +82,58 @@ USER_AGENT = f"{params['githubRepo']} (+https://github.com/{params['githubRepo']
 
 # Check if mogrify (ImageMagick) is available for image optimization
 HAS_MOGRIFY = shutil.which("mogrify") is not None
+
+
+def optimize_image(
+    input_path: Path, output_path: Path, resize: str = "520x120>"
+) -> bool:
+    """Optimize an image using mogrify, converting to PNG with resize and trim.
+
+    Falls back to renaming the input file if mogrify is unavailable or fails.
+    Returns True if the output file exists after processing.
+
+    Args:
+        input_path: Source image file (any format mogrify supports).
+        output_path: Destination path (must end in .png).
+        resize: ImageMagick resize geometry (default for logos, use "72x72>" for icons).
+    """
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+
+    if HAS_MOGRIFY:
+        try:
+            subprocess.run(
+                [
+                    "mogrify",
+                    "-format",
+                    "PNG",
+                    "-resize",
+                    resize,
+                    "-trim",
+                    str(input_path),
+                ],
+                check=True,
+                capture_output=True,
+            )
+            # mogrify -format PNG creates a .PNG file alongside the original
+            mogrified = input_path.with_suffix(".PNG")
+            if mogrified.exists() and mogrified != output_path:
+                mogrified.rename(output_path)
+            # Also check lowercase .png (mogrify behavior varies)
+            mogrified_lower = input_path.with_suffix(".png")
+            if mogrified_lower.exists() and mogrified_lower != output_path:
+                mogrified_lower.rename(output_path)
+            # Clean up original if different from output
+            if input_path.exists() and input_path != output_path:
+                input_path.unlink()
+            return output_path.exists()
+        except Exception as e:
+            log.warning(f"Image optimize failed for {output_path}: {e}")
+
+    # No mogrify or mogrify failed: just rename to output
+    if input_path.exists() and not output_path.exists():
+        input_path.rename(output_path)
+    return output_path.exists()
+
 
 # Disk cache for HTTP responses
 cache = diskcache.Cache(CACHE_DIR / "diskcache")
@@ -112,10 +184,12 @@ MAP_MARKER_LAYERS = [
 ]
 
 
-def load_taxonomies() -> dict[str, list[str]]:
-    """Load valid taxonomy keys from taxonomies.yaml.
+def load_taxonomies(*, raw: bool = False) -> dict:
+    """Load taxonomy data from taxonomies.yaml.
 
-    Returns dict of taxonomy_name -> list of valid keys.
+    Args:
+        raw: If True, return full dict of {taxonomy: {key: display_name}}.
+             If False (default), return {taxonomy: [list of valid keys]}.
     """
     taxonomies_path = DATA_DIR / "taxonomies.yaml"
     if not taxonomies_path.exists():
@@ -124,7 +198,10 @@ def load_taxonomies() -> dict[str, list[str]]:
     with open(taxonomies_path) as f:
         import yaml
 
-        data = yaml.safe_load(f)
+        data = yaml.safe_load(f) or {}
+
+    if raw:
+        return data
 
     # Return dict of taxonomy_name -> list of valid keys
     return {tax: list(data.get(tax, {}).keys()) for tax in TAXONOMIES if tax in data}
@@ -177,17 +254,6 @@ SLUG_REMOVE_SUFFIXES = [
 ]
 
 
-# Capability stream acronym prefixes to remove (e.g., "AASL - Air and Sea Lift" -> "Air and Sea Lift")
-CAPABILITY_STREAM_ACRONYMS = [
-    "AASL - ",
-    "ISCW - ",
-    "KEYN - ",
-    "LCAW - ",
-    "MASW - ",
-    "SAAC - ",
-]
-
-
 # Canonical capability streams from source HTML (filter dropdown values and display names)
 # These are the 10 valid streams as defined in the source DOM
 CANONICAL_CAPABILITY_STREAMS = {
@@ -228,19 +294,12 @@ def clean_capability_stream(name: str) -> str:
         if name.startswith(old_name):
             return canonical_key
 
-    # For new streams, normalize to canonical key
-    # Remove acronyms if present (shouldn't be needed for new streams)
-    cleaned = name
-    for old_name in old_to_canonical_mapping.keys():
-        if cleaned.startswith(old_name):
-            cleaned = cleaned[len(old_name) :]
-
-    # Map cleaned name to canonical key by matching display names
+    # Map name to canonical key by matching display names
     for key, display_name in CANONICAL_CAPABILITY_STREAMS.items():
-        if cleaned == display_name or cleaned == display_name.lower():
+        if name == display_name or name == display_name.lower():
             return key
 
-    return cleaned
+    return name
 
 
 # Slug/key generation functions

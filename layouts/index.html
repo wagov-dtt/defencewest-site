@@ -94,12 +94,11 @@ $companies | append $company -}} {{- end -}} {{- end -}} {{- $companies = sort $
   </style>
 </noscript>
 
+<script>var TAXONOMIES = {{ .Site.Params.taxonomyOrder | jsonify | safeJS }};</script>
+<script src="{{ "filter-utils.js" | relURL }}"></script>
 <script>
   (function() {
     "use strict";
-
-    const TAXONOMIES = ['stakeholders', 'capability_streams', 'capability_domains', 
-                        'industrial_capabilities', 'regions', 'ownerships', 'company_types'];
 
     // === DOM ===
     const $ = (s) => document.querySelector(s);
@@ -117,34 +116,6 @@ $companies | append $company -}} {{- end -}} {{- end -}} {{- $companies = sort $
 
     let mapLoaded = false;
     let isSubmitting = false;
-
-    // === Get Filters from URL ===
-    function getFiltersFromURL() {
-      const params = new URLSearchParams(location.search);
-      const filters = { search: (params.get("q") || "").trim().toLowerCase() };
-      TAXONOMIES.forEach(tax => {
-        const vals = params.getAll(tax);
-        if (vals.length) filters[tax] = vals;
-      });
-      return filters;
-    }
-
-    // === Match Card Against Filters ===
-    function matchesFilters(dataset, filters) {
-      if (filters.search) {
-        const text = (dataset.search || "").toLowerCase();
-        if (!text.includes(filters.search)) return false;
-      }
-
-      for (const tax of TAXONOMIES) {
-        const required = filters[tax];
-        if (!required?.length) continue;
-        const has = (dataset[tax] || "").split("|");
-        if (!required.every(v => has.includes(v))) return false;
-      }
-
-      return true;
-    }
 
     // === Handle Form Submit ===
     function handleFormSubmit(e) {

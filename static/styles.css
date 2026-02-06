@@ -1094,12 +1094,6 @@ nav .logo {
   color: var(--pico-primary);
 }
 
-/* === SlimSelect PicoCSS Colors === */
-:root {
-  --ss-primary-color: var(--pico-primary);
-  --ss-border-color: var(--pico-form-element-border-color);
-}
-
 /* Responsive: small screens */
 @media (max-width: 767px) {
   .submit-page .actions {

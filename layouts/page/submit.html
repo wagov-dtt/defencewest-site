@@ -150,8 +150,7 @@
 import Squire from 'https://esm.sh/squire-rte@2';
 import DOMPurify from 'https://esm.sh/dompurify@3';
 
-const TAXONOMIES = ['stakeholders', 'capability_streams', 'capability_domains', 
-                    'industrial_capabilities', 'regions', 'ownerships', 'company_types'];
+const TAXONOMIES = {{ .Site.Params.taxonomyOrder | jsonify | safeJS }};
 
 const $ = id => document.getElementById(id);
 const form = document.getElementById('submit-form');

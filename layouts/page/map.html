@@ -112,12 +112,12 @@
   </div>
 
   <script src="{{ $cdn }}/maplibre-gl@5/dist/maplibre-gl.js"></script>
+  <script>var TAXONOMIES = {{ .Site.Params.taxonomyOrder | jsonify | safeJS }};</script>
+  <script src="{{ "filter-utils.js" | relURL }}"></script>
   <script>
   (function() {
     "use strict";
 
-    const TAXONOMIES = ['stakeholders', 'capability_streams', 'capability_domains', 
-                        'industrial_capabilities', 'regions', 'ownerships', 'company_types'];
     const PERTH = [115.8605, -31.9505];
     const MAP_STYLE = "{{ $mapStyleUrl }}";
 
@@ -132,28 +132,6 @@
       TAXONOMIES.forEach(tax => { data[tax] = t.dataset[tax] || ""; });
       return data;
     });
-
-    // Filter matching
-    function matchesFilters(c, filters) {
-      if (filters.search && !c.search.includes(filters.search)) return false;
-      for (const tax of TAXONOMIES) {
-        const required = filters[tax];
-        if (!required?.length) continue;
-        const has = (c[tax] || "").split("|");
-        if (!required.every(v => has.includes(v))) return false;
-      }
-      return true;
-    }
-
-    function getFiltersFromURL() {
-      const params = new URLSearchParams(window.location.search);
-      const filters = { search: (params.get("q") || "").toLowerCase() };
-      TAXONOMIES.forEach(tax => {
-        const vals = params.getAll(tax);
-        if (vals.length) filters[tax] = vals;
-      });
-      return filters;
-    }
 
     const map = new maplibregl.Map({
       container: "map",

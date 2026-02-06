@@ -18,7 +18,6 @@ from pathlib import Path
 import httpx
 import frontmatter
 import pandas as pd
-import yaml
 import markdown_it
 from openpyxl.utils import get_column_letter
 from mlnative import Map, from_latlng
@@ -34,6 +33,7 @@ from config import (
     MAP_WIDTH,
     MAP_HEIGHT,
     MAP_MARKER_LAYERS,
+    load_taxonomies,
     make_progress,
 )
 
@@ -89,15 +89,6 @@ def render_map(
 # --- Export functions ---
 
 
-def load_taxonomies() -> dict:
-    """Load taxonomy definitions."""
-    tax_file = DATA_DIR / "taxonomies.yaml"
-    if not tax_file.exists():
-        return {}
-    with open(tax_file) as f:
-        return yaml.safe_load(f) or {}
-
-
 def _build_export_rows(companies: list[dict], taxonomies: dict) -> list[dict]:
     """Build export rows with display names for taxonomies."""
 
@@ -134,17 +125,13 @@ def _build_export_rows(companies: list[dict], taxonomies: dict) -> list[dict]:
     ]
 
 
-def export_csv(companies: list[dict], taxonomies: dict, output: Path) -> None:
-    """Export to CSV with display names."""
-    rows = _build_export_rows(companies, taxonomies)
-    df = pd.DataFrame(rows).sort_values("name", ignore_index=True)
+def export_csv(df: pd.DataFrame, output: Path) -> None:
+    """Export DataFrame to CSV."""
     df.to_csv(output, index=False)
 
 
-def export_xlsx(companies: list[dict], taxonomies: dict, output: Path) -> None:
-    """Export to XLSX with formatting."""
-    rows = _build_export_rows(companies, taxonomies)
-    df = pd.DataFrame(rows).sort_values("name", ignore_index=True)
+def export_xlsx(df: pd.DataFrame, output: Path) -> None:
+    """Export DataFrame to XLSX with formatting."""
 
     with pd.ExcelWriter(output, engine="openpyxl") as writer:
         df.to_excel(writer, index=False, sheet_name="Companies")
@@ -230,10 +217,12 @@ def main():
     print(f"Processed {len(companies)} companies")
 
     # Export files
-    taxonomies = load_taxonomies()
+    taxonomies = load_taxonomies(raw=True)
     STATIC_DIR.mkdir(parents=True, exist_ok=True)
-    export_csv(companies, taxonomies, STATIC_DIR / "companies.csv")
-    export_xlsx(companies, taxonomies, STATIC_DIR / "companies.xlsx")
+    rows = _build_export_rows(companies, taxonomies)
+    df = pd.DataFrame(rows).sort_values("name", ignore_index=True)
+    export_csv(df, STATIC_DIR / "companies.csv")
+    export_xlsx(df, STATIC_DIR / "companies.xlsx")
     export_json(companies, STATIC_DIR / "companies.json")
     print("Exported to CSV, XLSX, JSON")
 

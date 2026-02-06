@@ -73,6 +73,12 @@ uglyURLs = false
   adminEmail = "defencewest@dpc.wa.gov.au"
   githubIssuesUrl = "https://github.com/wagov-dtt/defencewest-site/issues/new?template=submission.md"
 
+  # Canonical taxonomy order (used by JS filter logic)
+  taxonomyOrder = [
+    "stakeholders", "capability_streams", "capability_domains",
+    "industrial_capabilities", "regions", "ownerships", "company_types"
+  ]
+
   # Pico CSS theme (azure, slate, zinc, sand, etc.)
   picoTheme = "slate"
   

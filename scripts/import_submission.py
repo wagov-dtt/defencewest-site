@@ -22,13 +22,11 @@ Exit codes:
 import base64
 import json
 import re
-import subprocess
 import sys
 from pathlib import Path
 
 import validators
 import yaml
-from markdownify import markdownify as md
 
 from config import (
     COMPANY_DIR,
@@ -37,17 +35,13 @@ from config import (
     SCALAR_FIELDS,
     BOOLEAN_FIELDS,
     clean_slug,
+    html_to_markdown,
     is_in_wa,
+    optimize_image,
     set_output,
-    HAS_MOGRIFY,
     load_taxonomies,
     validate_taxonomies,
 )
-
-
-def html_to_markdown(html: str) -> str:
-    """Convert HTML to clean markdown."""
-    return md(html, heading_style="ATX", bullets="-", strip=["script", "style"]).strip()
 
 
 def save_logo_from_base64(slug: str, base64_data: str | None) -> bool:
@@ -76,48 +70,16 @@ def save_logo_from_base64(slug: str, base64_data: str | None) -> bool:
         else:
             ext = "png"  # Default to PNG
 
-        # Save to temporary file first
+        # Save to temporary file, then optimize
         temp_path = LOGOS_DIR / f"{slug}_temp.{ext}"
         LOGOS_DIR.mkdir(parents=True, exist_ok=True)
         temp_path.write_bytes(image_data)
 
-        # Apply mogrify optimization (same as scrape.py)
-        if HAS_MOGRIFY:
-            try:
-                subprocess.run(
-                    [
-                        "mogrify",
-                        "-format",
-                        "PNG",
-                        "-resize",
-                        "520x120>",  # Max 520x120, only shrink
-                        "-trim",
-                        str(temp_path),
-                    ],
-                    check=True,
-                    capture_output=True,
-                )
-                # mogrify creates {slug}_temp.png
-                optimized_path = LOGOS_DIR / f"{slug}_temp.png"
-                if optimized_path.exists():
-                    # Rename to final name
-                    final_path = LOGOS_DIR / f"{slug}.png"
-                    optimized_path.rename(final_path)
-                    print(f"Saved logo: {final_path}", file=sys.stderr)
-                    return True
-            except Exception as e:
-                print(f"Warning: Image optimization failed: {e}", file=sys.stderr)
-                # Fall back to unoptimized
-                final_path = LOGOS_DIR / f"{slug}.png"
-                temp_path.rename(final_path)
-                print(f"Saved logo (unoptimized): {final_path}", file=sys.stderr)
-                return True
-        else:
-            # No mogrify, just rename
-            final_path = LOGOS_DIR / f"{slug}.png"
-            temp_path.rename(final_path)
+        final_path = LOGOS_DIR / f"{slug}.png"
+        result = optimize_image(temp_path, final_path)
+        if result:
             print(f"Saved logo: {final_path}", file=sys.stderr)
-            return True
+        return result
 
     except Exception as e:
         print(f"Error saving logo: {e}", file=sys.stderr)

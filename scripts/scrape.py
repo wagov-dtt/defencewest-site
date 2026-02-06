@@ -16,7 +16,6 @@ import httpx
 import mdformat
 import yaml
 from geopy.geocoders import ArcGIS
-from markdownify import markdownify as md
 from selectolax.parser import HTMLParser
 from unidecode import unidecode
 
@@ -32,7 +31,9 @@ from config import (
     build_taxonomy_keys,
     clean_capability_stream,
     clean_slug,
+    html_to_markdown,
     is_in_wa,
+    optimize_image,
     CANONICAL_CAPABILITY_STREAMS,
     log,
     make_progress,
@@ -135,13 +136,7 @@ def html_to_md(html: str) -> str:
     """Convert HTML to clean markdown compatible with Hugo/Goldmark."""
     if not html:
         return ""
-    # Strip tables (used as layout wrappers), keep links and images
-    text = md(
-        html,
-        heading_style="ATX",
-        bullets="-",
-        strip=["table", "tr", "td", "th", "tbody", "thead"],
-    )
+    text = html_to_markdown(html, strip_tables=True)
     text = normalize_text(text)
 
     # Use mdformat to normalize whitespace and ensure proper blank lines before lists
@@ -260,49 +255,19 @@ def download_image(
     try:
         r = client.get(url, timeout=30)
         r.raise_for_status()
-        output_path.parent.mkdir(parents=True, exist_ok=True)
 
-        # Determine extension from URL or content type
+        # Determine extension from URL
         url_lower = url.lower()
-        if url_lower.endswith(".jpg") or url_lower.endswith(".jpeg"):
-            temp_ext = ".jpg"
-        else:
-            temp_ext = ".png"
+        temp_ext = ".jpg" if url_lower.endswith((".jpg", ".jpeg")) else ".png"
 
-        # Save with appropriate extension for mogrify to handle
+        # Save to temp file, then optimize
         temp_path = output_path.with_suffix(temp_ext)
+        temp_path.parent.mkdir(parents=True, exist_ok=True)
         temp_path.write_bytes(r.content)
 
-        if HAS_MOGRIFY:
-            try:
-                subprocess.run(
-                    [
-                        "mogrify",
-                        "-format",
-                        "PNG",
-                        "-resize",
-                        resize,
-                        "-trim",
-                        str(temp_path),
-                    ],
-                    check=True,
-                    capture_output=True,
-                )
-                # Clean up temp file if it still exists (mogrify creates .png)
-                if temp_path.exists() and temp_path != output_path:
-                    temp_path.unlink()
-            except Exception as e:
-                log.warning(f"Image optimize failed for {output_path}: {e}")  # nosec: Error logging for debugging
-                # If mogrify fails, rename temp file to final name
-                if temp_path.exists() and not output_path.exists():
-                    temp_path.rename(output_path)
-        else:
-            # No ImageMagick, just rename to .png
-            if temp_path != output_path:
-                temp_path.rename(output_path)
-        return True
+        return optimize_image(temp_path, output_path, resize=resize)
     except Exception as e:
-        log.warning(f"Image download failed for {url}: {e}")  # nosec: Error logging for debugging
+        log.warning(f"Image download failed for {url}: {e}")
         return False
 
 
@@ -440,7 +405,7 @@ def extract_companies(html: str) -> list[dict]:
             "raytheon",
             "ventia",
             "babcock",
-            "boening",
+            "boeing",
             "lockheed",
             "northrop",
             "general dynamics",
@@ -575,46 +540,7 @@ def normalize_company(
 
     # Capability streams use canonical mapping from source DOM
     if stream_values := d.get("capability_streams", []):
-        # Convert each stream value to canonical key
-        canonical_keys = []
-        for value in stream_values:
-            # Direct match with canonical display names
-            if value in CANONICAL_CAPABILITY_STREAMS.values():
-                # Find key by display name
-                canonical_key = next(
-                    k for k, v in CANONICAL_CAPABILITY_STREAMS.items() if v == value
-                )
-                if canonical_key:
-                    canonical_keys.append(canonical_key)
-            # Check for old prefixed names (ISCW, KEYN, etc.)
-            elif any(
-                old_prefix in value
-                for old_prefix in [
-                    "ISCW - ",
-                    "KEYN - ",
-                    "LCAW - ",
-                    "MASW - ",
-                    "SAAC - ",
-                    "AASL - ",
-                ]
-            ):
-                # Map to canonical key based on old stream name
-                if "ISCW" in value:
-                    canonical_keys.append("electronic")
-                elif "KEYN" in value:
-                    canonical_keys.append("research")
-                elif "LCAW" in value:
-                    canonical_keys.append("land")
-                elif "MASW" in value:
-                    canonical_keys.append("maritime")
-                elif "SAAC" in value:
-                    canonical_keys.append("aerial")
-                elif "AASL" in value:
-                    canonical_keys.append("logistics")
-            else:
-                # Use cleaned value as-is for any other streams
-                canonical_keys.append(value)
-
+        canonical_keys = [clean_capability_stream(v) for v in stream_values]
         if canonical_keys:
             company["capability_streams"] = canonical_keys
 

@@ -13,13 +13,8 @@
 {{- $picoTheme := .Site.Params.picoTheme | default "slate" -}}
 {{- $cdn := .Site.Params.cdnUrl -}}
 <link rel="stylesheet" href="{{ printf "pico.%s.min.css" $picoTheme | relURL }}">
-<link rel="stylesheet" href="{{ $cdn }}/slim-select@3/dist/slimselect.css">
 <link rel="stylesheet" href="{{ "styles.css" | relURL }}">
 <script src="{{ $cdn }}/lucide@latest/dist/umd/lucide.min.js" defer></script>
-<script type="module" data-src="slimselect">
-  import SlimSelect from '{{ $cdn }}/slim-select@3/dist/slimselect.es.js';
-  window.SlimSelect = SlimSelect;
-</script>
 
 {{/* Page title - handle different page types */}}
 {{- $pageTitle := .Site.Title -}}
