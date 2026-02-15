@@ -49,9 +49,10 @@
       </div>
       <div class="name" title="{{ $company.name }}">{{ $company.name }}</div>
       <div class="badges">
+        {{- $typeLabels := dict "sme" "SME" "prime" "Prime" "large-enterprise" "Large Enterprise" "government" "Government" "educational" "Educational" "research" "Research" -}}
         {{- with $company.company_types }}
           {{- range . }}
-            <small>{{ . }}</small>
+            <small>{{ index $typeLabels . | default (title .) }}</small>
           {{- end }}
         {{- end }}
         {{- with $company.ownerships }}
@@ -102,9 +103,10 @@
       <div class="name" title="{{ $company.name }}">{{ $company.name }}</div>
 
       <div class="badges">
+        {{- $typeLabels := dict "sme" "SME" "prime" "Prime" "large-enterprise" "Large Enterprise" "government" "Government" "educational" "Educational" "research" "Research" -}}
         {{- with $company.company_types }}
           {{- range . }}
-            <small>{{ . }}</small>
+            <small>{{ index $typeLabels . | default (title .) }}</small>
           {{- end }}
         {{- end }}
         {{- with $company.ownerships }}
