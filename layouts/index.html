@@ -237,6 +237,7 @@ $companies | append $company -}} {{- end -}} {{- end -}} {{- $companies = sort $
     }
 
     window.addEventListener("message", (e) => {
+      if (e.origin !== window.location.origin) return;
       if (e.data?.type === "markerCount" && isMapView()) {
         if (countEl) countEl.textContent = e.data.count;
         if (noResults) noResults.style.display = e.data.count === 0 ? "block" : "none";
