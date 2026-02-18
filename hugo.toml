@@ -67,7 +67,7 @@ uglyURLs = false
 # Site parameters
 [params]
   description = "Western Australia's Defence Industry and Science Capability Directory"
-  siteUrl = "https://wagov-dtt.github.io/defencewest-site"
+  siteUrl = "https://directory.defencewest.wa.gov.au"
   githubRepo = "wagov-dtt/defencewest-site"
   githubBranch = "main"
   adminEmail = "defencewest@dpc.wa.gov.au"
