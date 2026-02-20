@@ -158,21 +158,40 @@ def export_xlsx(df: pd.DataFrame, output: Path) -> None:
 
 
 def export_json(companies: list[dict], output: Path) -> None:
-    """Export to JSON - all frontmatter fields plus HTML content."""
+    """Export to JSON - all frontmatter fields plus computed fields for map."""
     data = []
     for c in companies:
         entry = {k: v for k, v in c.items() if not k.startswith("_")}
-        if c.get("_content"):
-            entry["content_html"] = md.render(c["_content"].strip())
 
         # Convert is_sme/is_prime to company_types taxonomy
-        company_types = entry.get("company_types", [])
+        company_types = list(entry.get("company_types", []))
         if entry.get("is_sme") and "sme" not in company_types:
             company_types.append("sme")
         if entry.get("is_prime") and "prime" not in company_types:
             company_types.append("prime")
         if company_types:
             entry["company_types"] = company_types
+
+        # Add search text (lowercase name + overview)
+        search_text = (
+            entry.get("name", "") + " " + (entry.get("overview") or "")
+        ).lower()
+        entry["search"] = search_text.strip()
+
+        # Add logo URL
+        slug = entry.get("slug", "")
+        logo_path = STATIC_DIR / "logos" / f"{slug}.png"
+        entry["logo_url"] = f"/logos/{slug}.png" if logo_path.exists() else ""
+
+        # Add truncated overview (150 chars)
+        overview = entry.get("overview") or ""
+        entry["overview_short"] = overview[:150] + (
+            "..." if len(overview) > 150 else ""
+        )
+
+        # Add HTML content if present
+        if c.get("_content"):
+            entry["content_html"] = md.render(c["_content"].strip())
 
         data.append(entry)
     data.sort(key=lambda x: (x.get("name") or "").lower())

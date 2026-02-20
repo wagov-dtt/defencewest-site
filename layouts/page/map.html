@@ -84,54 +84,52 @@
   <!-- Announce selected company to screen readers (a11y) -->
   <div id="map-status" class="visually-hidden" aria-live="polite" aria-atomic="true"></div>
 
-  <!-- Pre-rendered company cards (hidden, used by JS for popups) -->
-  <div id="company-cards" hidden>
-    {{- range where .Site.RegularPages "Section" "company" -}}
-      {{- if ne .File.BaseFileName "_template" -}}
-      {{- $company := .Params -}}
-      {{- if and $company.latitude $company.longitude -}}
-        {{- $slug := .File.BaseFileName -}}
-        {{- $companyWithSlug := merge $company (dict "slug" $slug) -}}
-        {{- $search_text := printf "%s %s" $company.name ($company.overview | default "") | lower -}}
-        <template
-          data-slug="{{ $slug }}"
-          data-lat="{{ $company.latitude }}"
-          data-lng="{{ $company.longitude }}"
-          data-search="{{ $search_text }}"
-          {{- with $company.stakeholders }} data-stakeholders="{{ delimit . "|" }}"{{ end }}
-          {{- with $company.capability_streams }} data-capability_streams="{{ delimit . "|" }}"{{ end }}
-          {{- with $company.capability_domains }} data-capability_domains="{{ delimit . "|" }}"{{ end }}
-          {{- with $company.industrial_capabilities }} data-industrial_capabilities="{{ delimit . "|" }}"{{ end }}
-          {{- with $company.regions }} data-regions="{{ delimit . "|" }}"{{ end }}
-          {{- with $company.ownerships }} data-ownerships="{{ delimit . "|" }}"{{ end }}
-          {{- with $company.company_types }} data-company_types="{{ delimit . "|" }}"{{ end }}
-        >{{ partial "company-card.html" (dict "company" $companyWithSlug "mode" "popup") }}</template>
-      {{- end -}}
-      {{- end -}}
-    {{- end -}}
-  </div>
+
 
   <script src="{{ $cdn }}/maplibre-gl@5/dist/maplibre-gl.js"></script>
   <script>var TAXONOMIES = {{ .Site.Params.taxonomyOrder | jsonify | safeJS }};</script>
   <script src="{{ "filter-utils.js" | relURL }}"></script>
   <script>
-  (function() {
+  (async function() {
     "use strict";
 
     const PERTH = [115.8605, -31.9505];
     const MAP_STYLE = "{{ $mapStyleUrl }}";
+    const TYPE_LABELS = {
+      "sme": "SME", "prime": "Prime", "large-enterprise": "Large Enterprise",
+      "government": "Government", "educational": "Educational", "research": "Research"
+    };
 
-    // Build company data from DOM templates
-    const companies = [...document.querySelectorAll("#company-cards template")].map(t => {
-      const data = {
-        lat: parseFloat(t.dataset.lat),
-        lng: parseFloat(t.dataset.lng),
-        search: t.dataset.search,
-        popup: t.innerHTML,
-      };
-      TAXONOMIES.forEach(tax => { data[tax] = t.dataset[tax] || ""; });
-      return data;
-    });
+    async function loadCompanies() {
+      const res = await fetch("{{ "companies.json" | relURL }}");
+      const companies = await res.json();
+      companies.forEach(c => {
+        TAXONOMIES.forEach(tax => { c[tax] = (c[tax] || []).join("|"); });
+      });
+      return companies;
+    }
+
+    function popupHTML(c) {
+      const logo = c.logo_url
+        ? `<img src="${c.logo_url}" alt="">`
+        : `<span class="initials">${c.name.slice(0,2).toUpperCase()}</span>`;
+      const types = (c.company_types || "").split("|").filter(Boolean);
+      const badges = types.map(t => `<small>${TYPE_LABELS[t] || t}</small>`).join("");
+      const indigenous = (c.ownerships || "").includes("indigenous")
+        ? `<small class="highlight">Indigenous</small>` : "";
+      const veteran = (c.ownerships || "").includes("veteran")
+        ? `<small class="highlight">Veteran</small>` : "";
+      const overview = c.overview_short
+        ? `<p class="overview"><small title="${c.overview || ""}">${c.overview_short}</small></p>` : "";
+      return `<div class="pico"><a href="../company/${c.slug}/" class="company-card"><article>
+        <div class="logo-area">${logo}</div>
+        <div class="name">${c.name}</div>
+        <div class="badges">${badges}${indigenous}${veteran}</div>
+        ${overview}
+      </article></a></div>`;
+    }
+
+    const companies = await loadCompanies();
 
     const map = new maplibregl.Map({
       container: "map",
@@ -144,7 +142,6 @@
       map.setProjection({ type: "globe" });
     });
 
-    // Add navigation controls for accessibility (zoom buttons, compass)
     map.addControl(new maplibregl.NavigationControl({
       showZoom: true,
       showCompass: true,
@@ -155,40 +152,37 @@
     const mapStatus = document.getElementById("map-status");
     const markers = [];
 
-    // Announce selection to screen readers (a11y)
     function announceSelection(name) {
       if (mapStatus) mapStatus.textContent = "Selected: " + name;
     }
 
-    // Create markers
     let activePopup = null;
 
     companies.forEach(c => {
+      if (!c.latitude || !c.longitude) return;
+
       const dot = document.createElement("div");
       dot.className = "marker-dot";
 
       const popup = new maplibregl.Popup({ offset: 10, closeButton: false })
-        .setHTML(c.popup);
+        .setHTML(popupHTML(c));
 
       const marker = new maplibregl.Marker({ element: dot })
-        .setLngLat([c.lng, c.lat])
+        .setLngLat([c.longitude, c.latitude])
         .setPopup(popup)
         .addTo(map);
 
-      // Show popup on hover (stays open until another marker or map leave)
       dot.addEventListener("mouseenter", () => {
         if (activePopup && activePopup !== popup) activePopup.remove();
         if (!popup.isOpen()) marker.togglePopup();
         activePopup = popup;
       });
 
-      // Also support click/tap for touch devices
       dot.addEventListener("click", (e) => {
         e.stopPropagation();
         if (activePopup && activePopup !== popup) activePopup.remove();
         if (!popup.isOpen()) marker.togglePopup();
         activePopup = popup;
-        // Announce to screen readers
         const nameEl = popup.getElement()?.querySelector(".name");
         if (nameEl) announceSelection(nameEl.textContent);
       });
@@ -196,7 +190,6 @@
       markers.push({ marker, data: c });
     });
 
-    // Close popup when mouse leaves map
     document.getElementById("map").addEventListener("mouseleave", () => {
       if (activePopup) {
         activePopup.remove();
@@ -204,20 +197,15 @@
       }
     });
 
-    // Tap outside to close popup (for touch devices)
     map.on("click", (e) => {
-      // Check if click was on a marker (handled by marker click event)
       const target = e.originalEvent.target;
       if (target.classList.contains("marker-dot")) return;
-      
-      // Close any open popup
       if (activePopup) {
         activePopup.remove();
         activePopup = null;
       }
     });
 
-    // Filter markers
     let fitBoundsTimeout = null;
 
     function updateMarkers() {
@@ -230,7 +218,7 @@
         marker.getElement().style.display = visible ? "" : "none";
         if (visible) {
           visibleCount++;
-          bounds.extend([data.lng, data.lat]);
+          bounds.extend([data.longitude, data.latitude]);
         }
       });
 
@@ -248,7 +236,6 @@
     updateMarkers();
 
     window.addEventListener("message", (e) => {
-      // Only accept messages from same origin (parent page)
       if (e.origin !== window.location.origin) return;
       if (e.data?.type === "updateFilters") {
         const url = new URL(window.location);
@@ -258,7 +245,6 @@
       }
     });
 
-    // Handle map errors gracefully
     map.on("error", (e) => {
       console.error("Map error:", e);
     });
