@@ -37,9 +37,7 @@ industrial_capabilities: [steel]
 regions: [perth]
 ownerships: [indigenous]
 stakeholders: [defence]
-
-is_sme: true
-is_prime: false
+company_types: [sme]
 ---
 
 ## Overview

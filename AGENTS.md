@@ -82,10 +82,7 @@ capability_domains: [cyber]
 industrial_capabilities: [steel]
 regions: [perth]
 ownerships: [indigenous]
-
-# Flags
-is_prime: false
-is_sme: true
+company_types: [sme]
 ---
 ## Overview
 

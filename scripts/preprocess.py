@@ -90,39 +90,62 @@ def render_map(
 
 
 def _build_export_rows(companies: list[dict], taxonomies: dict) -> list[dict]:
-    """Build export rows with display names for taxonomies."""
+    """Build export rows with display names for taxonomies (for CSV/XLSX readability)."""
 
     def keys_to_names(keys: list | None, tax: str) -> str:
         mapping = taxonomies.get(tax, {})
         return "; ".join(mapping.get(k, k) for k in (keys or []))
 
-    return [
-        {
-            "name": c.get("name", ""),
-            "website": c.get("website", ""),
-            "regions": keys_to_names(c.get("regions"), "regions"),
-            "address": c.get("address", ""),
-            "capability_streams": keys_to_names(
-                c.get("capability_streams"), "capability_streams"
-            ),
-            "capability_domains": keys_to_names(
-                c.get("capability_domains"), "capability_domains"
-            ),
-            "industrial_capabilities": keys_to_names(
-                c.get("industrial_capabilities"), "industrial_capabilities"
-            ),
-            "stakeholders": keys_to_names(c.get("stakeholders"), "stakeholders"),
-            "is_sme": c.get("is_sme", False),
-            "is_prime": c.get("is_prime", False),
-            "phone": c.get("phone", ""),
-            "email": c.get("email", ""),
-            "latitude": c.get("latitude"),
-            "longitude": c.get("longitude"),
-            "content_html": md.render(c.get("_content", "").strip()),
-            "slug": c.get("slug", ""),
-        }
-        for c in companies
-    ]
+    rows = []
+    for c in companies:
+        slug = c.get("slug", "")
+
+        # Compute logo_url
+        logo_path = STATIC_DIR / "logos" / f"{slug}.png"
+        logo_url = f"/logos/{slug}.png" if logo_path.exists() else ""
+
+        # Compute overview_short
+        overview = c.get("overview") or ""
+        overview_short = overview[:150] + ("..." if len(overview) > 150 else "")
+
+        # Compute search text
+        search_text = (c.get("name", "") + " " + overview).lower().strip()
+
+        rows.append(
+            {
+                "name": c.get("name", ""),
+                "date": c.get("date", ""),
+                "overview": overview,
+                "overview_short": overview_short,
+                "website": c.get("website", ""),
+                "contact_name": c.get("contact_name", ""),
+                "contact_title": c.get("contact_title", ""),
+                "address": c.get("address", ""),
+                "phone": c.get("phone", ""),
+                "email": c.get("email", ""),
+                "latitude": c.get("latitude"),
+                "longitude": c.get("longitude"),
+                "slug": slug,
+                "logo_url": logo_url,
+                "search": search_text,
+                "company_types": keys_to_names(c.get("company_types"), "company_types"),
+                "stakeholders": keys_to_names(c.get("stakeholders"), "stakeholders"),
+                "capability_streams": keys_to_names(
+                    c.get("capability_streams"), "capability_streams"
+                ),
+                "capability_domains": keys_to_names(
+                    c.get("capability_domains"), "capability_domains"
+                ),
+                "industrial_capabilities": keys_to_names(
+                    c.get("industrial_capabilities"), "industrial_capabilities"
+                ),
+                "regions": keys_to_names(c.get("regions"), "regions"),
+                "ownerships": keys_to_names(c.get("ownerships"), "ownerships"),
+                "content_html": md.render(c.get("_content", "").strip()),
+            }
+        )
+
+    return rows
 
 
 def export_csv(df: pd.DataFrame, output: Path) -> None:
@@ -162,15 +185,6 @@ def export_json(companies: list[dict], output: Path) -> None:
     data = []
     for c in companies:
         entry = {k: v for k, v in c.items() if not k.startswith("_")}
-
-        # Convert is_sme/is_prime to company_types taxonomy
-        company_types = list(entry.get("company_types", []))
-        if entry.get("is_sme") and "sme" not in company_types:
-            company_types.append("sme")
-        if entry.get("is_prime") and "prime" not in company_types:
-            company_types.append("prime")
-        if company_types:
-            entry["company_types"] = company_types
 
         # Add search text (lowercase name + overview)
         search_text = (
