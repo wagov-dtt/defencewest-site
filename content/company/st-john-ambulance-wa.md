@@ -1,6 +1,6 @@
 ---
 name: St John Ambulance WA
-date: '2025-02-04'
+date: '2025-02-20'
 overview: St John WA is a leading social enterprise delivering emergency services, health education, and community programs across Western Australia, supported by over 8,500 volunteers and staff.
 website: https://www.stjohnwa.com.au
 contact_name: David John Waters

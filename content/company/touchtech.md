@@ -1,6 +1,6 @@
 ---
 name: 'Touchtech Australia '
-date: '2025-02-04'
+date: '2025-02-20'
 overview: 'Touchtech Australia Pty Ltd (Touchtech) is a locally owned Bunbury based company that focuses on software and product development to solve business concerns for our clients. '
 website: https://touchtech.com.au
 contact_name: Chris Dickie

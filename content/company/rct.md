@@ -1,6 +1,6 @@
 ---
 name: RCT
-date: '2025-02-04'
+date: '2025-02-20'
 overview: RCT has the expertise and technologies that transform the way the mining and industrial sectors operate.
 website: https://rct-global.com
 contact_name: Ryan Noden

@@ -1,6 +1,6 @@
 ---
 name: SAGE Automation Pty Ltd
-date: '2025-02-04'
+date: '2025-02-20'
 overview: SAGE is a global group with a team of 550 people across three continents, 13 offices and five companies. Every one of us shares the same commitment to making our world smarter, safer and more sustainable.  Our people are a performance-driven extension of our clients' teams, driven to solve complex problems and create previously unimaginable opportunities.
 website: https://www.sageautomation.com
 contact_name: Daniel Morris

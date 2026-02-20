@@ -1,6 +1,6 @@
 ---
 name: CADDS Group Pty Ltd
-date: '2025-02-04'
+date: '2025-02-20'
 overview: CADDS Group provides integrated engineering, architectural, sustainability (Emergen), surveying, drafting, product design, and fabrication services across WA.
 website: https://cadds.com.au
 contact_name: Pip Smith

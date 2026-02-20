@@ -1,6 +1,6 @@
 ---
 name: APEX Utilities Pty Ltd
-date: '2025-02-04'
+date: '2025-02-20'
 overview: Apex Utilities is a WA utilities and civil contractor delivering specialist trenchless works with a proven strike-free record and strong workforce development focus.
 website: https://apexutilities.com.au
 contact_name: Tracey Daly

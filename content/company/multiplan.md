@@ -1,6 +1,6 @@
 ---
 name: Multiplan
-date: '2025-02-04'
+date: '2025-02-20'
 overview: Our aim at Multiplan is to be seen as the solution, stopping potential issues in their track, all while adding constructability insights, production intelligence and skilled resourcing along the way.
 website: https://www.multiplan.com.au
 contact_name: Kane Nitschke

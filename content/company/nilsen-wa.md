@@ -1,6 +1,6 @@
 ---
 name: 'Nilsen WA '
-date: '2025-02-04'
+date: '2025-02-20'
 overview: Our vision is to be a leading electro-technology company operating throughout Australia to deliver installation, maintenance and manufacturing services from inception to replacement.
 website: https://nilsen.com.au
 contact_name: Katrina Jacovic

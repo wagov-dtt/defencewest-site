@@ -1,6 +1,6 @@
 ---
 name: Electro Base Pty Ltd
-date: '2025-02-04'
+date: '2025-02-20'
 overview: Electro Base is a Western Australian renewable energy technology company providing off-grid power needs for commercial and industrial needs and fast e-mobility charging.
 website: https://electrobase.au
 contact_name: Sylvia Tokic

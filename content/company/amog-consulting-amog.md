@@ -1,6 +1,6 @@
 ---
 name: AMOG Consulting (AMOG Pty Ltd)
-date: '2025-02-04'
+date: '2025-02-20'
 overview: AMOG is a leading global solutions provider to the Defence, maritime construction, energy, transport, and resource industries and we have been solving complex engineering problems since 1991. Our engineers have worked with submarines, naval ships, landing craft, aircraft, defence vehicles and land-based assets.
 website: https://amog.consulting
 contact_name: Kevan Young

@@ -1,6 +1,6 @@
 ---
 name: Enviropacific Services
-date: '2025-02-04'
+date: '2025-02-20'
 overview: 'Founded in 2001, Enviropacific is an environmentally-focused service business delivering specialist engineering and applied science solutions for remediation, water and waste. We make environments safer and communities sustainable by leveraging our knowledge and expertise to help prevent, stop and reverse environmental damage.
 
   We are a privately owned Australian Company with a strong footprint in W.A. in both Remediation and Water Treatment. We have a strong ties with the WA indigenous community through our partnership with indigenous companies.'

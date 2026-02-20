@@ -1,6 +1,6 @@
 ---
 name: Austal
-date: '2025-02-04'
+date: '2025-02-20'
 overview: 'Austal is ''The Australian Shipbuilder'': a defence prime contractor and maritime technology partner of choice; designing, constructing and supporting revolutionary defence and commercial vessels.
 
   '

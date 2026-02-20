@@ -1,6 +1,6 @@
 ---
 name: Engineering Institute of Technology
-date: '2025-02-04'
+date: '2025-02-20'
 overview: We are a leading engineering and technology education and training provider, offering online and on-campus programs. Our wide range of courses is driven by industry experts.
 website: https://www.eit.edu.au
 contact_name: Caroline Mackay

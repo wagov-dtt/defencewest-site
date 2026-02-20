@@ -1,6 +1,6 @@
 ---
 name: Ausco Products
-date: '2025-02-04'
+date: '2025-02-20'
 overview: 'Ausco Products is a Western Australian owned company that has been in operation for over 70 years specialising in engineering design and machining services. '
 website: https://auscoproducts.com.au
 contact_name: 'Robert Murphy '

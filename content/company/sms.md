@@ -1,6 +1,6 @@
 ---
 name: SMS Group Services
-date: '2025-02-04'
+date: '2025-02-20'
 overview: SMS Group Services is a proudly West Australian-owned company. Specialising in Scaffolding, Rope Access, Blast and Paint, Confined space and other Industrial Services.
 website: https://smsgroup.com.au
 contact_name: Alex Hazell

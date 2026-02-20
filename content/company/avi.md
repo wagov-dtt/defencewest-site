@@ -1,6 +1,6 @@
 ---
 name: AVI
-date: '2025-02-04'
+date: '2025-02-20'
 overview: AVI designs, engineers and manufactures complex communications systems, delivering data and capability to key industries in challenging environments.1
 website: https://avi.com.au
 contact_name: Tony Routledge

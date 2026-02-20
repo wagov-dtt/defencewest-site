@@ -1,6 +1,6 @@
 ---
 name: Capability X
-date: '2025-02-04'
+date: '2025-02-20'
 overview: Capability X delivers sovereign AI, automation, and robotics solutions engineered in Perth, supporting defence, subsea, and critical industrial operations with advanced remote-operation capability.
 website: https://www.capabilityx.com
 contact_name: Lex Simons

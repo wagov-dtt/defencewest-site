@@ -1,6 +1,6 @@
 ---
 name: South Metropolitan TAFE
-date: '2025-02-04'
+date: '2025-02-20'
 overview: South Metropolitan TAFE delivers a range of qualifications and courses to all arms of the defence industry, throughout the state and nationally.
 website: https://www.southmetrotafe.wa.edu.au
 contact_name: South Metropolitan TAFE

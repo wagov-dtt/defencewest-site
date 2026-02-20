@@ -1,6 +1,6 @@
 ---
 name: Spartan First
-date: '2025-02-04'
+date: '2025-02-20'
 overview: Spartan First is a majority owned Indigenous health provider, offering a full complement of occupational, primary and allied healthcare, with a strong focus on mental health and wellbeing and the social determinants of health.
 website: https://www.spartanfirst.com.au
 contact_name: Des Headland

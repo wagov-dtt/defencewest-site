@@ -1,6 +1,6 @@
 ---
 name: Kinetic IT
-date: '2025-02-04'
+date: '2025-02-20'
 overview: 'We''re a leading Australian-owned IT service provider of adaptive technology solutions that harness human intelligence, enhance the user experience and drive meaningful change across organisations.
 
 

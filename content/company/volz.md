@@ -1,6 +1,6 @@
 ---
 name: Volz Australia Pty Ltd
-date: '2025-02-04'
+date: '2025-02-20'
 overview: Volz Australia was founded in 2005 with a vision to provide Superior Stainless Steel Hydraulic Components by combining quality products with decades of experience & expertise & incorporating outstanding customer service at the forefront of everything we do.
 website: https://www.volz.com.au
 contact_name: Rhys Jones

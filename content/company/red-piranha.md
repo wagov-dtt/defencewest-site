@@ -1,6 +1,6 @@
 ---
 name: Red Piranha Limited
-date: '2025-02-04'
+date: '2025-02-20'
 overview: Established in 2015 in Perth, Red Piranha is an ISO 27001 certified Australian enterprise that engineers and manufactures advanced security solutions and products for organisations of all sizes across the globe.
 website: https://redpiranha.net
 contact_name: Adam Bennett

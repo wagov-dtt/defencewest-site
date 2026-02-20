@@ -1,6 +1,6 @@
 ---
 name: 'Bhagwan Marine Limited '
-date: '2025-02-04'
+date: '2025-02-20'
 overview: Bhagwan Marine are the leading Australian marine and sub sea solutions provider offering and delivering bespoke solutions to our customers in the Energy, Defence and Ports and Inshore space.
 website: https://www.bhagwanmarine.com
 contact_name: Peter Carmichael

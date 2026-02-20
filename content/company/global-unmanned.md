@@ -1,6 +1,6 @@
 ---
 name: Global Unmanned Systems
-date: '2025-02-04'
+date: '2025-02-20'
 overview: 'Global Unmanned Systems provides organisational capacity building and data acquisition with an emphasis on Remotely Piloted Aircraft Systems (RPAS) and related media processing and analysis technologies. '
 website: https://www.gus-uav.com
 contact_name: Robert Lednor

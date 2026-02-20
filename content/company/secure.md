@@ -1,6 +1,6 @@
 ---
 name: Secure Systems Limited
-date: '2025-02-04'
+date: '2025-02-20'
 overview: 'Secure Systems Limited specialises in the design and manufacture of secure portable storage technology for high assurance applications. '
 website: https://www.securesystems.com.au
 contact_name: Peter James

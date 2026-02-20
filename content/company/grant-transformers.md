@@ -1,6 +1,6 @@
 ---
 name: Grant Transformers
-date: '2025-02-04'
+date: '2025-02-20'
 overview: Grant Transformers are experts in manufacturing and supplying of isolation, power & distribution transformers as well as Industrial DC Power Supplies.
 website: https://grant-transformers.com.au
 contact_name: Marco da Silva

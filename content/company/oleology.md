@@ -1,6 +1,6 @@
 ---
 name: OLEOLOGY Pty Ltd
-date: '2025-02-04'
+date: '2025-02-20'
 overview: OLEOLOGY's expertise in water treatment systems includes advanced solutions to recycle and decontaminate water quicker, simpler, and more cost-effective.
 website: https://oleology.com.au
 contact_name: Ben Cammack

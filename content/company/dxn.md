@@ -1,6 +1,6 @@
 ---
 name: DXN
-date: '2025-02-04'
+date: '2025-02-20'
 overview: 'DXN: Australian leaders in modular data centre solutions, delivering secure, scalable, and efficient infrastructure tailored for defence and critical industries.'
 website: http://dxn.solutions
 contact_name: Anthony Auld

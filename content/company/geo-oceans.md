@@ -1,6 +1,6 @@
 ---
 name: Geo Oceans Pty Ltd
-date: '2025-02-04'
+date: '2025-02-20'
 overview: Geo Oceans is an innovative subsea inspection, survey and marine science company.
 website: https://www.geooceans.com
 contact_name: Nick Veitch

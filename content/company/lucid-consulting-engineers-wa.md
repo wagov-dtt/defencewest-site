@@ -1,6 +1,6 @@
 ---
 name: 'Lucid Consulting Engineers (WA) '
-date: '2025-02-04'
+date: '2025-02-20'
 overview: 'Lucid is an established national engineering consultancy founded in year 2000 that employs 250 professionals across Australia. '
 website: https://www.lucidconsulting.com.au
 contact_name: Guy Page

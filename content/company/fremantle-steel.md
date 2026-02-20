@@ -1,6 +1,6 @@
 ---
 name: Fremantle Steel
-date: '2025-02-04'
+date: '2025-02-20'
 overview: 'Fremantle Steel Fabrication is part of the Fremantle Steel Group, which includes Park Engineers and combined has over 100 years of experience in fabricating structural steel components. '
 website: https://www.fremantlesteel.com.au
 contact_name: Laurie D'Amato

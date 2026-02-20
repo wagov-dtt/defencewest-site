@@ -1,6 +1,6 @@
 ---
 name: Innovative Asset Solutions
-date: '2025-02-04'
+date: '2025-02-20'
 overview: IAS leads innovation in the preservation, repair and decommissioning of assets for the oil and gas, mining, public infrastructure and industrial sectors.
 website: https://www.ias-group.com.au
 contact_name: Neil Pickwell

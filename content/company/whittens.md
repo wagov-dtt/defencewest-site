@@ -1,6 +1,6 @@
 ---
 name: Whittens Pty Limited
-date: '2025-02-04'
+date: '2025-02-20'
 overview: Whittens partners with clients to deliver safe, reliable earthworks and concrete solutions for complex mining, oil & gas, defence, and infrastructure projects across Australia.
 website: https://www.whittensgroup.com.au
 contact_name: Dario Amara

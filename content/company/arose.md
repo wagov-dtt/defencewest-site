@@ -1,6 +1,6 @@
 ---
 name: AROSE
-date: '2025-02-04'
+date: '2025-02-20'
 overview: AROSE is an industry-led, not-for-profit organisation establishing Australia as the trusted leader in Remote Operations, Science, Technology and Service - on Earth and in Space.
 website: https://www.arose.org.au
 contact_name: Leanne Cunnold

@@ -1,6 +1,6 @@
 ---
 name: Onetide Modular Systems Pty Ltd
-date: '2025-02-04'
+date: '2025-02-20'
 overview: 'Onetide is a 100% Australian owned and operated Engineering Innovation Company. Designing and delivering novel engineering solutions for efficiency and safety optimization across a broad range of industry sectors. '
 website: https://onetide.com.au
 contact_name: Roy Mitchell

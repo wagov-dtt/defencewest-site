@@ -1,6 +1,6 @@
 ---
 name: Amristar Solutions
-date: '2025-02-04'
+date: '2025-02-20'
 overview: 'Our team of ICT and software engineering professionals helps organisations develop IT strategy, architect effective technology systems and build high-quality, cloud scale business applications. '
 website: https://amristar.com
 contact_name: Daniel Harvey

@@ -1,6 +1,6 @@
 ---
 name: Castledex
-date: '2025-02-04'
+date: '2025-02-20'
 overview: Castledex is an Australian full-service provider of FFE (furniture, fit-out and equipment) for workplace productivity solutions. We understand how workplaces function, how people collaborate and that no two organisations function in quite the same way. Our product offering lends itself to office fitouts, accommodation camps through to armoury and weapons storage
 website: https://castledex.com.au
 contact_name: Mat Vaughan

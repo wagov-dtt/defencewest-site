@@ -1,6 +1,6 @@
 ---
 name: Watmar
-date: '2025-02-04'
+date: '2025-02-20'
 overview: Watmarine provides manufacturing, general engineering, maintenance and equipment sales services to the Marine and Defence sectors.
 website: https://www.watmar.com.au
 contact_name: Simon Watson

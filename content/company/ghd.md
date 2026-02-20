@@ -1,6 +1,6 @@
 ---
 name: GHD
-date: '2025-02-04'
+date: '2025-02-20'
 overview: GHD is one of the world's leading professional services companies operating in the global markets of water, energy and resources, environment, property and buildings, and transportation.
 website: https://www.ghd.com
 contact_name: Cameron Owen

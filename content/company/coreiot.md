@@ -1,6 +1,6 @@
 ---
 name: COREIOT PTY LTD
-date: '2025-02-04'
+date: '2025-02-20'
 overview: COREIoT is an Australian based global technology provider specialising in Industry 4.0 based products and services. COREIoT has a deep technology strength in sensing, algorithms, and cyber security.
 website: https://smartshopfloor.com
 contact_name: Nisarg Shah

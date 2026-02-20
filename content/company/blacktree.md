@@ -1,6 +1,6 @@
 ---
 name: Blacktree Technology
-date: '2025-02-04'
+date: '2025-02-20'
 overview: 'Blacktree Technology is an innovative solutions integrator working with leading edge radio and satellite communications technology to connect people and organisations across the globe. '
 website: https://www.blacktree.com.au
 contact_name: Joel Nevin

@@ -1,6 +1,6 @@
 ---
 name: Energy Power Systems Australia Pty. Ltd.
-date: '2025-02-04'
+date: '2025-02-20'
 overview: Caterpillar (r) engines, generators and power solutions provider in Australia, PNG and the Solomon Islands.
 website: https://www.energypower.com.au
 contact_name: Fred Bkamdin

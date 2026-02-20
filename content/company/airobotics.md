@@ -1,6 +1,6 @@
 ---
 name: Airobotics
-date: '2025-02-04'
+date: '2025-02-20'
 overview: 'Airobotics has developed a pilotless drone solution, the first of its kind in the global market. '
 website: https://www.airoboticsdrones.com.au
 contact_name: Christine Jarvis

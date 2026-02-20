@@ -1,6 +1,6 @@
 ---
 name: Garli Group
-date: '2025-02-04'
+date: '2025-02-20'
 overview: Garli is majority Aboriginal owned and has developed into a thriving business within the civil construction and contracting industry operating across multiple industry segments.
 website: https://garli.com.au
 contact_name: Terry Delane

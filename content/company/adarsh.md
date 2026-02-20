@@ -1,6 +1,6 @@
 ---
 name: Adarsh Australia
-date: '2025-02-04'
+date: '2025-02-20'
 overview: Adarsh Australia provides services to clients who require precision machined components manufactured in a range of materials from plastic to titanium. We've been delivering Precision Engineering Services since 1993. Our ability to appreciate your needs comes from a lifetime of experience in the manufacturing industry. Unlike many other businesses Adarsh Australia has direct CNC machine programming available in house to ensure rapid and accurate interpretation of your drawings into finished parts at a reduced component cost.
 website: https://www.adarsh.com.au
 contact_name: Faz Pollard

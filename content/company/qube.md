@@ -1,6 +1,6 @@
 ---
 name: Qube
-date: '2025-02-04'
+date: '2025-02-20'
 overview: Qube is Australia's largest integrated provider of import and export logistics services, covering the complete supply chain from beginning to end.
 website: https://www.qube.com.au
 contact_name: 'Teneille Semple '

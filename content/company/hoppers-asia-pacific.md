@@ -1,6 +1,6 @@
 ---
 name: Hoppers Asia Pacific Solutions Pty Ltd
-date: '2025-02-04'
+date: '2025-02-20'
 overview: Stainless Steel Fluid Connectors & related products for safe reliable fluid transfer across All industry. Servicing Australia & Asia Pacific
 website: https://hapsaus.com
 contact_name: Tim Poidevin

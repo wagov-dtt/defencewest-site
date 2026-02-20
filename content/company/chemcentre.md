@@ -1,6 +1,6 @@
 ---
 name: ChemCentre
-date: '2025-02-04'
+date: '2025-02-20'
 overview: ChemCentre is a Western Australian statutory authority providing chemical and forensic science services to the people and government of Western Australia to help keep the state safe and prosperous.
 website: https://www.chemcentre.wa.gov.au
 contact_name: Nigel West

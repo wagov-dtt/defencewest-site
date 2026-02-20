@@ -1,6 +1,6 @@
 ---
 name: 'Chess Engineering '
-date: '2025-02-04'
+date: '2025-02-20'
 overview: WA-based engineering and fabrication company delivering ISO-certified steel and modular solutions for defence, mining, and infrastructure projects.
 website: https://chessindustries.com.au
 contact_name: Lachlan Kelly

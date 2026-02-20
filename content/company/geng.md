@@ -1,6 +1,6 @@
 ---
 name: Geng
-date: '2025-02-04'
+date: '2025-02-20'
 overview: Geng provide design engineers within the product, mechanical and manufacturing sector focused on Defence force training facilities and equipment requirements around Australia.
 website: https://www.geng.com
 contact_name: Cliff Green FIEAust, CPEng, NER, APEC Engineer, IntPE(Aust), Past MDIA

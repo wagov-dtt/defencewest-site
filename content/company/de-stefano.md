@@ -1,6 +1,6 @@
 ---
 name: De Stefano & Co
-date: '2025-02-04'
+date: '2025-02-20'
 overview: De Stefano & Co is a defence-focused management and security consultancy that assists organisations to navigate the complex Australian defence industry environment and other highly regulated sectors.
 website: https://www.destefanoandco.com.au
 contact_name: Emilio De Stefano

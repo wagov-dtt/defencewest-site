@@ -1,6 +1,6 @@
 ---
 name: Diverse Engineering (WA)
-date: '2025-02-04'
+date: '2025-02-20'
 overview: Diverse Engineering is a multi-disciplined engineering company that provides an array of services to the energy, industrial, marine and transport sectors.
 website: https://diversewa.com.au
 contact_name: Michael Giles

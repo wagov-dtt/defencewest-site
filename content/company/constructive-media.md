@@ -1,6 +1,6 @@
 ---
 name: Constructive Media
-date: '2025-02-04'
+date: '2025-02-20'
 overview: Constructive Media is a well-established WA business specialising in 3D visualisation, CG renders, digital animations, and interactive touchscreens and kiosks to help its clients to communicate.
 website: https://www.constructivemedia.com.au
 contact_name: Darren Kam

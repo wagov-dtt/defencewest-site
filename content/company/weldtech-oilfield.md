@@ -1,6 +1,6 @@
 ---
 name: Weldtech Oilfield Services
-date: '2025-02-04'
+date: '2025-02-20'
 overview: Weldtech oilfield services is a mutli-disciplined maintenance and construction contractor specialising in providng the highest level of fabrication services to the oil & gas, marine and mining industries throughout australia.
 website: https://www.weldtechos.com.au
 contact_name: Josie Travia

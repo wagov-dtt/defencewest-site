@@ -1,6 +1,6 @@
 ---
 name: Wood
-date: '2025-02-04'
+date: '2025-02-20'
 overview: Wood is a global leader in the delivery of project, engineering and technical services to energy and industrial markets.
 website: https://www.woodplc.com
 contact_name: Andrew Houghton

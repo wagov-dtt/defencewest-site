@@ -1,6 +1,6 @@
 ---
 name: Decmil
-date: '2025-02-04'
+date: '2025-02-20'
 overview: Decmil is a leading Australian construction and engineering company providing services across a range of industry sectors.
 website: https://decmil.com
 contact_name: Drew Wilson

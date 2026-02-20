@@ -1,6 +1,6 @@
 ---
 name: iCetana
-date: '2025-02-04'
+date: '2025-02-20'
 overview: iCetana is a world leader in the provision of real-time artificial intelligence (AI) assisted video monitoring to service the demands of a complex world.
 website: https://www.icetana.ai
 contact_name: Kevin Brown

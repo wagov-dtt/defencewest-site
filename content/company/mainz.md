@@ -1,6 +1,6 @@
 ---
 name: Mainz Pty Ltd
-date: '2025-02-04'
+date: '2025-02-20'
 overview: We make stainless steel cable assemblies to any size or length required. Suppliers of stainless hardware and tools.
 website: https://www.wirebalustrades.com.au
 contact_name: Graeme Eastman

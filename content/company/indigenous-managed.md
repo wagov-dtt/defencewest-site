@@ -1,6 +1,6 @@
 ---
 name: Indigenous Managed Services Pty Ltd
-date: '2025-02-04'
+date: '2025-02-20'
 overview: Majority owned Aboriginal Company established in 2017. Supply Nation certified and ABDWA registered. Labour Hire, Commercial cleaning, Land and Grounds Maintenance, ICT hardware & Dry ice blasting
 website: https://www.indigenousmanagedservices.com
 contact_name: Terry Collier

@@ -1,6 +1,6 @@
 ---
 name: 'BAE Systems Australia - Henderson Facility '
-date: '2025-02-04'
+date: '2025-02-20'
 overview: BAE Systems is a global company delivering products and services for clients in more than 100 countries across the resources and energy, defence and commercial maritime sectors.
 website: https://www.baesystems.com/australia
 contact_name: Luke Simmons

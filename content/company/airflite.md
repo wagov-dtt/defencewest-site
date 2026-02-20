@@ -1,6 +1,6 @@
 ---
 name: Airflite
-date: '2025-02-04'
+date: '2025-02-20'
 overview: Airflite has significant involvement with the Australian Defence Forces and other worldwide Defence agencies, offering a broad range of capabilities and vast experience to support military operations on a global scale.
 website: https://www.airflite.com.au
 contact_name: 'Kris Constantinides '

@@ -1,6 +1,6 @@
 ---
 name: Bennett + Co
-date: '2025-02-04'
+date: '2025-02-20'
 overview: Bennett + Co is a full service commercial law firm in Perth, Western Australia.
 website: https://bennettlaw.com.au
 contact_name: Mark MacLennan

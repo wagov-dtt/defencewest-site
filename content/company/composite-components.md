@@ -1,6 +1,6 @@
 ---
 name: Composite Components
-date: '2025-02-04'
+date: '2025-02-20'
 overview: Composite Components is an advanced composite manufacturer and research and development business utilising material processes such as compression moulding, closed moulding and pre-impregnated moulding.
 website: https://www.compositecomponents.com.au
 contact_name: Josh Fugill

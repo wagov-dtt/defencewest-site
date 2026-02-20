@@ -1,6 +1,6 @@
 ---
 name: Nihar
-date: '2025-02-04'
+date: '2025-02-20'
 overview: 'Nihar is a Western Australian owned and operated company, managed by a team of passionate and experienced Engineers. Nihar was established in 2003, with the vision of being the leading service provider of Asset Maintenance Management solutions in the industry. '
 website: https://www.nihar.com.au
 contact_name: Matheesha Jayasekera

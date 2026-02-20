@@ -1,6 +1,6 @@
 ---
 name: Wedgetail Aerospace
-date: '2025-02-04'
+date: '2025-02-20'
 overview: Wedgetail Aerospace is an agnostic drone service provider focused on air freight and data acquisition.
 website: https://www.wedgetailaerospace.com
 contact_name: Tom Symes

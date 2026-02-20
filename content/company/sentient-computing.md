@@ -1,6 +1,6 @@
 ---
 name: Sentient Computing
-date: '2025-02-04'
+date: '2025-02-20'
 overview: 'Sentient is a 100% Australian owned software development company founded in 2007 and based in Western Australia.
 
   We specialise in creating powerful and immersive virtual environments to deliver:

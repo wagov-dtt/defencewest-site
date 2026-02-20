@@ -1,6 +1,6 @@
 ---
 name: Ventia
-date: '2025-02-04'
+date: '2025-02-20'
 overview: We are a leading Australian Prime services integrator working at the heart of Defence capability to support those that serve our country.
 website: https://www.ventia.com
 contact_name: Tracey Glenny

@@ -1,6 +1,6 @@
 ---
 name: Matrix Composites & Engineering
-date: '2025-02-04'
+date: '2025-02-20'
 overview: 'Matrix Composites and Engineering Ltd produces engineered products, functional additives and advanced materials for the mining, energy, infrastructure and Defence industries. '
 website: https://matrixengineered.com
 contact_name: Jim Kingston

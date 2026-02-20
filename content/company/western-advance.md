@@ -1,6 +1,6 @@
 ---
 name: Western Advance
-date: '2025-02-04'
+date: '2025-02-20'
 overview: 'Western Advance is a security, safety and surveillance integration specialist providing solutions to Army, Navy and Air Force. '
 website: https://www.westernadvance.com
 contact_name: Jarrad Warwick

@@ -1,6 +1,6 @@
 ---
 name: Sofraco Engineering Services
-date: '2025-02-04'
+date: '2025-02-20'
 overview: 'Sofraco''s specialist engineering services consist of Electrical, Mechanical and Marine engineers as well as Naval Architects and AMSA-accredited Surveyors. We service the full design scope alongside other services such as feasibility studies and commissioning.
 
   Our field service department delivers comprehensive support for marine systems. Delivered by skilled professionals who can handle a wide range of tasks from fault finding, repair and system servicing, to installation and upgrades.'

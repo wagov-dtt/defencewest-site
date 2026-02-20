@@ -1,6 +1,6 @@
 ---
 name: HIFraser
-date: '2025-02-04'
+date: '2025-02-20'
 overview: HIFraser provide manufacturing and engineering solutions to a number of pivotal national projects.
 website: https://www.hifraser.com.au
 contact_name: Chris Williams

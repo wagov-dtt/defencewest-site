@@ -1,6 +1,6 @@
 ---
 name: Thomas Fabrication Pty Ltd
-date: '2025-02-04'
+date: '2025-02-20'
 overview: 'Thomas Fabrication provides Cold Forming services for Industrial Thickness Plate steel (mild steel, impact resistant, stainless, exotics, titanium) for Mining, Civil, Defence and Oil & Gas applications, completed to millimetre tolerances.
 
 

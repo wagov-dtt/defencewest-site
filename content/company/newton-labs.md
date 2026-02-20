@@ -1,6 +1,6 @@
 ---
 name: Newton Labs
-date: '2025-02-04'
+date: '2025-02-20'
 overview: The prime focus of Newton Labs is on the Internet of Things (IoT), machine learning and real-time data analytics for heavy industry applications.
 website: http://staging.newtonlabs.com.au/index-fullscreen-countdown-video.html
 contact_name: Simon Vincent

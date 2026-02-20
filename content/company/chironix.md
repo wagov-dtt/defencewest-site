@@ -1,6 +1,6 @@
 ---
 name: Chironix
-date: '2025-02-04'
+date: '2025-02-20'
 overview: Chironix are specialists in software engineering and robotics systems integration.
 website: https://www.chironix.com
 contact_name: Daniel Milford

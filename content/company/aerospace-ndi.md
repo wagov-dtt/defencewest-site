@@ -1,6 +1,6 @@
 ---
 name: Aerospace NDI
-date: '2025-02-04'
+date: '2025-02-20'
 overview: Aerospace NDI is involved in aircraft component maintenance and aircraft specialist maintenance.
 website: https://www.aerospacendi.com
 contact_name: Anthony Mark Collier

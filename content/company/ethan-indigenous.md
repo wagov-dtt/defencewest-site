@@ -1,6 +1,6 @@
 ---
 name: 'Ethan Indigenous Pty Ltd '
-date: '2025-02-04'
+date: '2025-02-20'
 overview: Ethan Indigenous, IT company with extensive capability that is Indigenous Certified through Supply Nation and Noongar Chamber of Commerce.
 website: https://ethanindigenous.com.au/Home
 contact_name: Jessica Craig-Raymond

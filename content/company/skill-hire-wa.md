@@ -1,6 +1,6 @@
 ---
 name: Skill Hire WA PTY LTD
-date: '2025-02-04'
+date: '2025-02-20'
 overview: Workforce training and employment solutions in construction and defence industries
 website: https://skillhire.com.au
 contact_name: Ben Dahlstrom

@@ -1,6 +1,6 @@
 ---
 name: L3Harris IMSA
-date: '2025-02-04'
+date: '2025-02-20'
 overview: L3Harris Integrated Mission Systems Australia is a leading provider of maritime systems and solutions in the surface, undersea, geospatial and network centric spheres of operation for both defence and commercial applications.
 website: https://www.l3harris.com/en-au/australia
 contact_name: Scott Elson

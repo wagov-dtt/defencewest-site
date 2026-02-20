@@ -1,6 +1,6 @@
 ---
 name: Pedco Engineering
-date: '2025-02-04'
+date: '2025-02-20'
 overview: Pedco Engineering provides metal forming and fabrication/welding services for mild, stainless, exotic steels and alloys.
 website: https://www.pedco.com.au
 contact_name: Deryck Ethelston

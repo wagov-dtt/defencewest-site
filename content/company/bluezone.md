@@ -1,6 +1,6 @@
 ---
 name: BlueZone Group
-date: '2025-02-04'
+date: '2025-02-20'
 overview: BlueZone Group is an experienced Defence SME and a capable supplier to customers operating in the harsh conditions of deep oceans, coastal seas, rivers and water infrastructure.
 website: https://bluezonegroup.com.au
 contact_name: Mark Musarra

@@ -1,6 +1,6 @@
 ---
 name: Zellabox
-date: '2025-02-04'
+date: '2025-02-20'
 overview: 'Zellabox has been a world leader and specialist in the provision of micro data centres. '
 website: https://www.zellabox.com
 contact_name: Clinton Keeler

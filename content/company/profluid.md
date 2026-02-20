@@ -1,6 +1,6 @@
 ---
 name: PROFLUID PTY LTD
-date: '2025-02-04'
+date: '2025-02-20'
 overview: PROFLUID deliver high end customized flow solutions to the Air Force & Navy onshore establishments as well as Ships & Submarines.
 website: https://www.profluid.com.au
 contact_name: Jerome MONTEIRO

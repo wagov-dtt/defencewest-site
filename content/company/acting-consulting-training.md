@@ -1,6 +1,6 @@
 ---
 name: Acting Consulting Training Australia and New Zealand Pty Ltd
-date: '2025-02-04'
+date: '2025-02-20'
 overview: ACT delivers extraordinary engagement and capability development for your Safety Leadership, Communications, Cyber Security, Safety Culture training needs, in Australia this has been utilised at conferences, symposiums and Safety and Risk Training through industrial theatre workshops. Industrial theatre is premium training with impact, allowing people to experience an incident without actually being in one, the actors bringing the reality, to life. We are the answer to encouraging teams to attend and benefit from the unique and impactful workshops and productions with the outcomes of specific capability development in safety culture, cyber safety culture, and leadership.
 website: https://www.actaustralia.net.au
 contact_name: Susan Fleming

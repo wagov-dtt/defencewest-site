@@ -1,6 +1,6 @@
 ---
 name: Thales Australia
-date: '2025-02-04'
+date: '2025-02-20'
 overview: Thales is a global technology leader in the aerospace, transport, defence and security markets.
 website: https://www.thalesgroup.com/en/countries/asia-pacific/australia
 contact_name: Gregg Bohan

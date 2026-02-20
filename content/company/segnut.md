@@ -1,6 +1,6 @@
 ---
 name: Segnut
-date: '2025-02-04'
+date: '2025-02-20'
 overview: 'Segnut Pty Ltd has developed an innovative direct replacement for a traditional threaded nut. '
 website: https://www.segnut.com
 contact_name: Tom Baskovich

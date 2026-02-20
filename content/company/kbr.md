@@ -1,6 +1,6 @@
 ---
 name: KBR
-date: '2025-02-04'
+date: '2025-02-20'
 overview: At KBR, we partner with government and industry clients to provide technology, engineering and mission-critical solutions.
 website: https://www.kbr.com/en
 contact_name: Robert Sutton

@@ -1,6 +1,6 @@
 ---
 name: Ghost Fire Systems
-date: '2025-02-04'
+date: '2025-02-20'
 overview: Developing electronic battlefield simulators to enhance training the Warfighter.
 website: https://www.ghostfiresystems.com
 contact_name: Brett Harrex

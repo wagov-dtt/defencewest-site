@@ -1,6 +1,6 @@
 ---
 name: PRF Industries Pty Ltd
-date: '2025-02-04'
+date: '2025-02-20'
 overview: Electrical Service company providing a licenced workforce to supply and install electrical, data comms, and security cabling and systems
 website: https://prfelectrical.com.au
 contact_name: Phil Fraser

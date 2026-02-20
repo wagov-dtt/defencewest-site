@@ -1,6 +1,6 @@
 ---
 name: Clough Projects Australia
-date: '2025-02-04'
+date: '2025-02-20'
 overview: Clough Projects Australia works with some of the world's largest companies to engineer, construct, commission and maintain a comprehensive range of facilities for oil and gas and petrochemicals, metals and mineral, infrastructure and marine projects.
 website: https://www.cloughgroup.com/home
 contact_name: Carl Titchmarsh

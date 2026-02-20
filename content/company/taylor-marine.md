@@ -1,6 +1,6 @@
 ---
 name: Taylor Marine
-date: '2025-02-04'
+date: '2025-02-20'
 overview: Taylor Marine is a leading specialist marine electronics supplier, integrator and service provider of world leading brands of navigation and communication marine electronics to Australia's extensive maritime industry.
 website: https://www.taylormarine.com.au
 contact_name: Jason Barrett

@@ -1,6 +1,6 @@
 ---
 name: BG&E Pty Limited
-date: '2025-02-04'
+date: '2025-02-20'
 overview: BG&E is a globally renowned civil and structural engineering consultancy celebrated for its innovative, cost-effective, and award-winning designs that prioritise practicality and constructability.
 website: https://bgeeng.com
 contact_name: Luke Murphy

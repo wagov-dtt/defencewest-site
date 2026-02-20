@@ -1,6 +1,6 @@
 ---
 name: Scope Engineering
-date: '2025-02-04'
+date: '2025-02-20'
 overview: 'Scope Engineering has extensive experience in the oil and gas, marine, refineries and mining sectors providing welding and fabrication services. '
 website: https://www.scopeengineering.com
 contact_name: Luke Roughan

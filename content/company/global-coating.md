@@ -1,6 +1,6 @@
 ---
 name: Global Coating Systems Pty Ltd
-date: '2025-02-04'
+date: '2025-02-20'
 overview: Australian SME delivering next-gen protective coatings backed by R&D, enhancing defence asset durability and increased survivability in extreme environments.
 website: https://globalcoatingsystems.com
 contact_name: Darren Gibbon

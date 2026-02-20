@@ -1,6 +1,6 @@
 ---
 name: Capital Equipment
-date: '2025-02-04'
+date: '2025-02-20'
 overview: 'Capital Equipment Machinery Sales has a team of professional staff with extensive knowledge in the sales and service of: Machine Tools, Fabrication Equipment, Cleaning Equipment, Marking Machines'
 website: https://www.capitalequipment.net.au
 contact_name: Jim Harding

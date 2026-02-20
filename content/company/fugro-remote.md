@@ -1,6 +1,6 @@
 ---
 name: Fugro Remote Systems Technology
-date: '2025-02-04'
+date: '2025-02-20'
 overview: Fugro is a world-leading, independent provider of geo-intelligence and asset integrity solutions for large constructions, infrastructure and natural resources.
 website: https://www.fugro.com
 contact_name: Sam Forbes

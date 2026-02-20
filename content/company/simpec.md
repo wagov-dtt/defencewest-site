@@ -1,6 +1,6 @@
 ---
 name: SIMPEC Pty Ltd
-date: '2025-02-04'
+date: '2025-02-20'
 overview: Australian owned and operated, SIMPEC deliver specialised capabilities in Electrical and Instrumentation (E&I), Civil and Structural, Mechanical, and Piping (SMP) services.
 website: https://www.simpec.com.au
 contact_name: Mark Dimasi

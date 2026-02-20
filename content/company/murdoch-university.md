@@ -1,6 +1,6 @@
 ---
 name: Murdoch University
-date: '2025-02-04'
+date: '2025-02-20'
 overview: Murdoch University has, from its foundation in 1974, been a university of difference. Established as the second university in WA, Murdoch has always been associated building a brighter future.
 website: https://www.murdoch.edu.au
 contact_name: Alasdair Macdonald

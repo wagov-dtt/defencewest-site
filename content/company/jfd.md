@@ -1,6 +1,6 @@
 ---
 name: JFD Australia
-date: '2025-02-04'
+date: '2025-02-20'
 overview: JFD Australia  provides world leading undersea products, systems and capabilities to the Australian Defence Force and the Australian Commercial offshore sector.
 website: https://jfdglobal.com
 contact_name: Cathy Falkiner

@@ -1,6 +1,6 @@
 ---
 name: Winya Indigenous Office Furniture Pty Ltd
-date: '2025-02-04'
+date: '2025-02-20'
 overview: WINYA is a majority Indigenous owned and controlled business and is the only company in Australia awarded by the UNITED NATIONS for Leadership in Sustainable Development Goals (SDG).
 website: https://winya.com.au
 contact_name: Ben Jacka

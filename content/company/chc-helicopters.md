@@ -1,6 +1,6 @@
 ---
 name: CHC Helicopters (Australia)
-date: '2025-02-04'
+date: '2025-02-20'
 overview: 'CHC Helicopters (Australia) started operations in 1969 and grew to become the largest commercial helicopter operator in the country. '
 website: https://www.chcheli.com
 contact_name: David Irvine

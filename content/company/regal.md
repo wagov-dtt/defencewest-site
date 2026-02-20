@@ -1,6 +1,6 @@
 ---
 name: Regal Engineering
-date: '2025-02-04'
+date: '2025-02-20'
 overview: 'Regal Engineering is a locally owned and operated heavy engineering and fabrication provider, with over 20 years experience in the fabrication of components for the Mining and Oil & Gas industry in Australia. '
 website: https://www.regaleng.com.au
 contact_name: Jamie Crofts

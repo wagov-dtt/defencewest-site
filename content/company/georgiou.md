@@ -1,6 +1,6 @@
 ---
 name: Georgiou Group
-date: '2025-02-04'
+date: '2025-02-20'
 overview: The Georgiou Group delivers projects from inception to handover, in a range of disciplines and a variety of industries. We are one of Australia's leading building and civil construction companies.
 website: https://www.georgiou.com.au
 contact_name: Michael Ioannakis

@@ -1,6 +1,6 @@
 ---
 name: Ikad Engineering
-date: '2025-02-04'
+date: '2025-02-20'
 overview: 'IKAD Engineering is a highly-specialised mechanical and structural engineering company providing a diverse range of services across Australia and overseas. '
 website: https://ikad.com.au
 contact_name: Paul Hague

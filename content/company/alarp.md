@@ -1,6 +1,6 @@
 ---
 name: ALARP Solutions Pty Ltd
-date: '2025-02-04'
+date: '2025-02-20'
 overview: ALARP Solutions is a specialist Risk and Safety Management consultancy committed to supporting private and government organisations in developing credible robust and complex Safety, Risk and Assurance Cases, and the development of supporting analysis artefacts.
 website: https://www.alarpsolutions.com.au
 contact_name: Rod Brown

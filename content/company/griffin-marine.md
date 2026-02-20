@@ -1,6 +1,6 @@
 ---
 name: Griffin Marine Services Pty Ltd
-date: '2025-02-04'
+date: '2025-02-20'
 overview: 'Griffin Marine Services provides multi-disciplinary industrial services and project management to
 
   Prime Contractors, Shipbuilders and maintenance companies in the defence and commercial sectors.'

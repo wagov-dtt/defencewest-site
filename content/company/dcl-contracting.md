@@ -1,6 +1,6 @@
 ---
 name: DCL Contracting
-date: '2025-02-04'
+date: '2025-02-20'
 overview: Established in 2014, DCL is a highly capable concrete fabrication firm able to support Defence industry though the delivery of complex construction and maintenance solutions.
 website: https://dclcontracting.com.au
 contact_name: Shane Drew

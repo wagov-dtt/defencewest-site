@@ -1,6 +1,6 @@
 ---
 name: NGIS Australia
-date: '2025-02-04'
+date: '2025-02-20'
 overview: 'NGIS Australia has provided government agencies and private enterprises across a broad range of industries with technology strategies and solutions in business operations. '
 website: https://www.ngis.com.au
 contact_name: Richard Bentley

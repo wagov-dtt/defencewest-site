@@ -1,6 +1,6 @@
 ---
 name: Barrett Communications
-date: '2025-02-04'
+date: '2025-02-20'
 overview: Barrett Communications are an Australian sovereign designer and manufacturer of High Frequency (HF) and Very High Frequency (VHF) radio communications systems and subsystems.
 website: https://www.barrettcommunications.com.au
 contact_name: Martin Johnson

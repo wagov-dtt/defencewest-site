@@ -1,6 +1,6 @@
 ---
 name: Fuze
-date: '2025-02-04'
+date: '2025-02-20'
 overview: Fuze is a composite materials technology business which delivers in-field composite manufacturing to replace welding, bolting and steel loss, minimising downtime and delivering long-term durability.
 website: https://fuze.solutions
 contact_name: Jason LeCoultre

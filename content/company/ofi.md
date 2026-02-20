@@ -1,6 +1,6 @@
 ---
 name: OFI Group Holdings Pty Ltd
-date: '2025-02-04'
+date: '2025-02-20'
 overview: Powering Innovation. OFI is an industry leader in electrical innovation and integration with the persistence, agility and commitment to always deliver.
 website: https://ofigroup.com.au
 contact_name: Cobey Mills

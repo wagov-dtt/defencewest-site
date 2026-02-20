@@ -1,6 +1,6 @@
 ---
 name: 'Consolidated Group '
-date: '2025-02-04'
+date: '2025-02-20'
 overview: Consolidated Group is a WA owned and operated company with a client focused approach to civil earth works and plant hire services
 website: https://consolidatedgroup.com.au
 contact_name: 'Theo Tsorvas '

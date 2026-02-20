@@ -1,6 +1,6 @@
 ---
 name: Infinitum Technologies
-date: '2025-02-04'
+date: '2025-02-20'
 overview: Providing certified and secure ICT solutions to critical infrastructure and business nation wide.
 website: https://www.infinitum.net.au
 contact_name: Lachlan Britt

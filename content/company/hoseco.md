@@ -1,6 +1,6 @@
 ---
 name: HoseCo
-date: '2025-02-04'
+date: '2025-02-20'
 overview: 'HoseCo Australia specialise in the supply, maintenance and management of Flexible Hose Assemblies for a wide range of applications. '
 website: https://hoseco.com.au
 contact_name: John McGill

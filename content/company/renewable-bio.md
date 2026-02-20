@@ -1,6 +1,6 @@
 ---
 name: Renewable.bio Pty Ltd
-date: '2025-02-04'
+date: '2025-02-20'
 overview: Bioenergy and biofuels company producing renewable fuels from sustainable resources
 website: https://renewable.bio
 contact_name: Angelo Dabala

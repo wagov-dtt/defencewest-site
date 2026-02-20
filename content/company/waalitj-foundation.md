@@ -1,6 +1,6 @@
 ---
 name: Waalitj Foundation
-date: '2025-02-04'
+date: '2025-02-20'
 overview: The Waalitj Foundation employs and develops local Aboriginal people in its areas of operation with a vested interest in the sustainable success of our programs. The Foundation celebrates Aboriginal culture as one of the longest surviving in the world and continues with an unwavering commitment to increase opportunities for Aboriginal and Torres Strait Islander people across Perth and regional Western Australia.
 website: https://www.wf.org.au
 contact_name: Samuel Evans

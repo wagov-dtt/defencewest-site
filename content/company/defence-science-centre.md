@@ -1,6 +1,6 @@
 ---
 name: Defence Science Centre
-date: '2025-02-04'
+date: '2025-02-20'
 overview: 'The Defence Science Centre exists to transform defence science challenges into tangible capabilities for both Defence and local industry.  '
 website: https://www.jtsi.wa.gov.au/economic-development/defence-west/defence-science-centre
 contact_name: Michele Clement

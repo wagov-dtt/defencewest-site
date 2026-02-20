@@ -1,6 +1,6 @@
 ---
 name: Solid Concepts
-date: '2025-02-04'
+date: '2025-02-20'
 overview: 'Solid Concepts uses 3D printing and rapid prototyping technologies including selective laser sintering, stereo lithography, fused deposition modelling, Computer Numeric Control (CNC) machining and vacuum casting for short run production. '
 website: https://www.solid-concepts.com.au
 contact_name: 'Francois Primon '

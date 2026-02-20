@@ -1,6 +1,6 @@
 ---
 name: TraumaSim
-date: '2025-02-04'
+date: '2025-02-20'
 overview: TraumaSim deliver medically accurate products designed to simulate realistic traumatic injuries and medical conditions as well as providing training, workshops, part-task trainers and moulage technicians & supplies to industries and professionals around the world.
 website: https://traumasim.com.au
 contact_name: Nola Pearce

@@ -1,6 +1,6 @@
 ---
 name: PMV ENGINEERING
-date: '2025-02-04'
+date: '2025-02-20'
 overview: We are an Indigenous-owned company specialising in hazardous areas, electrical instrumentation, and asset management, servicing clients across major industries with deep technical expertise.
 website: https://pmvengineering.com.au
 contact_name: Nitin Ahuja

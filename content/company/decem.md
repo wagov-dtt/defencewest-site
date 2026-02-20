@@ -1,6 +1,6 @@
 ---
 name: Decem
-date: '2025-02-04'
+date: '2025-02-20'
 overview: Decem was established in 2019 as an Australian veteran owned and managed company to provide transparent outcome focused solutions to Defence and Defence Industry. Our vision is to deliver genuine Australian capability through empowering good people and fostering a culture of innovation.
 website: https://www.decem.com.au
 contact_name: Andrew Davies

@@ -1,6 +1,6 @@
 ---
 name: Pinnacle QM
-date: '2025-02-04'
+date: '2025-02-20'
 overview: 'PinnacleQM is a Quality Management and Testing Services organisation delivering advanced testing services and solutions across the Asia-Pacific region. '
 website: https://www.pinnacleqm.com.au
 contact_name: Ian Charlton

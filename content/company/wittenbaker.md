@@ -1,6 +1,6 @@
 ---
 name: Wittenbaker Engineering Services PTY LTD
-date: '2025-02-04'
+date: '2025-02-20'
 overview: "Wittenbaker Engineering Services PTY LTD is a manufacturing and mechanical engineering company, providing substantial services such as:\n\nCNC-Machining (Turning, Milling & Wire Cutting)\nInsitu-Machining\nMetal Fabrication & Welding\nLaser Cladding\nMechanical Fitting & Rebuilds\nGear Reducer Rebuilds & Load Testing \nSpare Parts\nMechanical & Reverse Engineering"
 website: https://www.weservices.com.au
 contact_name: Wayne Wittenbaker

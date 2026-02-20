@@ -1,6 +1,6 @@
 ---
 name: Oropesa Port Management
-date: '2025-02-04'
+date: '2025-02-20'
 overview: Oropesa Port Management provides specialist services in the maritime and defence sectors.
 website: https://www.oropesa.com.au
 contact_name: Adam McPhail

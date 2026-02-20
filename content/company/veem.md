@@ -1,6 +1,6 @@
 ---
 name: Veem
-date: '2025-02-04'
+date: '2025-02-20'
 overview: VEEM is a West Australian manufacturer of sophisticated equipment for the defence, marine, aerospace and oil and gas industries.
 website: https://www.veem.com.au
 contact_name: Dave Johnston

@@ -1,6 +1,6 @@
 ---
 name: ADENCO
-date: '2025-02-04'
+date: '2025-02-20'
 overview: ADENCO provides services in the design and construction of Civil and Electrical infrastructure for the Defence, Mining and Renewables sectors
 website: https://www.adenco.com.au
 contact_name: Christoff van der Schyff

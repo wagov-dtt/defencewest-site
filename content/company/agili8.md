@@ -1,6 +1,6 @@
 ---
 name: Agili8
-date: '2025-02-04'
+date: '2025-02-20'
 overview: Agili8's award winning XRAI Vision connects frontline workforce to offsite experts with 3D live hands-on eyes-on guidance and AI assistance using smart glasses hands-free mission critical work
 website: https://agili8.com
 contact_name: Esther Oh

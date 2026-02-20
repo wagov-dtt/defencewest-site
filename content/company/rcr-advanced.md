@@ -1,6 +1,6 @@
 ---
 name: RCR Advanced Technologies
-date: '2025-02-04'
+date: '2025-02-20'
 overview: RCR Advanced Technologies is a market leader in the design and manufacture of innovative, award-winning solutions as well as the development of materials handling solutions for rail and ore wagons through strategic partnerships.
 website: https://www.rcradvancedtech.com.au
 contact_name: Neville Kelly

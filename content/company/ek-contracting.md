@@ -1,6 +1,6 @@
 ---
 name: EK Contracting
-date: '2025-02-04'
+date: '2025-02-20'
 overview: EK Contracting is a majority Indigenous owned company with a strong focus on Indigenous employment and ongoing career development through our award winning training division. We cater for all your civil and transport needs and can mobilise heavy earth moving equipment, skilled operators and transportation anywhere in WA at short notice.
 website: https://www.ekcontracting.com.au
 contact_name: Kate Tsorvas

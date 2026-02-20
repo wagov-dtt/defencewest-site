@@ -1,6 +1,6 @@
 ---
 name: MI Plumbers
-date: '2025-02-04'
+date: '2025-02-20'
 overview: MI Plumbers delivers industry leading plumbing construction, fit-out, maintenance and surveying services to the mining, defence, civil, industrial and commercial sectors in Western Australia.
 website: https://www.miplumbers.com.au
 contact_name: Daniel MacPherson

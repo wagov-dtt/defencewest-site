@@ -1,6 +1,6 @@
 ---
 name: John Morris Scientific Pty Ltd
-date: '2025-02-04'
+date: '2025-02-20'
 overview: 'Since our founding in 1952, the John Morris Group has steadily expanded, guided by a policy which excluded all products except those of the highest quality. Our commitment to quality extends to our recruitment process & team, our state-of-art nationwide facilities and the service we provide to our customers. '
 website: https://www.johnmorrisgroup.com
 contact_name: Lav Deshpande

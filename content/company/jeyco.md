@@ -1,6 +1,6 @@
 ---
 name: Jeyco Australia
-date: '2025-02-04'
+date: '2025-02-20'
 overview: Jeyco Australia is an Australian family owned and operated business that specialises in synthetic solutions the Marine, Mining, Agriculture and Defence industries.
 website: https://www.jeyco.com.au
 contact_name: Joel Bowen

@@ -1,6 +1,6 @@
 ---
 name: Vertech Group Pty Ltd
-date: '2025-02-04'
+date: '2025-02-20'
 overview: Established in 2008, The Vertech Group has built a strong reputation as a leading provider of Non-Destructive Testing (NDT), Inspection, and Specialised access solutions.
 website: https://www.vertechgroup.com.au
 contact_name: Craig Davies

@@ -93,16 +93,16 @@ ownerships:
   indigenous: Indigenous Owned
   veteran: Veteran Owned
 capability_streams:
-  aerial: Aerial; Strike and Air Combat
-  intelligence: Intelligence; Surveillance and Reconnaissance
-  land: Land Forces
-  space: Space
-  logistics: Logistics and Supply Chain
-  maritime: Maritime and Sub-Sea Forces
   research: Research and Technology Development
+  land: Land Forces
   base: Base Support
-  education: Education and Training
+  space: Space
+  aerial: Aerial; Strike and Air Combat
   electronic: Electronic Warfare and Cyber
+  intelligence: Intelligence; Surveillance and Reconnaissance
+  education: Education and Training
+  maritime: Maritime and Sub-Sea Forces
+  logistics: Logistics and Supply Chain
 company_types:
   educational: Educational and Training Institution
   government: Government Body

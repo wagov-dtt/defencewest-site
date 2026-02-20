@@ -1,6 +1,6 @@
 ---
 name: RSM Australia Pty Ltd
-date: '2025-02-04'
+date: '2025-02-20'
 overview: 'RSM provide cyber security, assurance, tax and consulting services globally. As an integrated team of more than 1,900 staff, we share skills, insight and
 
   resources with a client-centric approach'

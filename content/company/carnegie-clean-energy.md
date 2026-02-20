@@ -1,6 +1,6 @@
 ---
 name: Carnegie Clean Energy Limited
-date: '2025-02-04'
+date: '2025-02-20'
 overview: Carnegie Clean Energy Limited is focused on the development of solar energy, battery energy storage and wave energy technology.
 website: http://www.carnegiece.com
 contact_name: Brighid Jay

@@ -1,6 +1,6 @@
 ---
 name: Beachhead Logistics
-date: '2025-02-04'
+date: '2025-02-20'
 overview: Logistics over the Shore (LOTS) and Temporary Ports
 website: https://beachheadlogistics.com.au
 contact_name: Jarod Monaghan

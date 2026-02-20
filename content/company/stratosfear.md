@@ -1,6 +1,6 @@
 ---
 name: Stratosfear
-date: '2025-02-04'
+date: '2025-02-20'
 overview: Stratosfear is a fully integrated finance, strategic management and corporate advisory firm, purpose-built to support companies facing rapid scale, complex structure and growth.
 website: https://www.stratosfear.com.au
 contact_name: Brodie Stewart

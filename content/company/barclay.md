@@ -1,6 +1,6 @@
 ---
 name: Barclay Engineering
-date: '2025-02-04'
+date: '2025-02-20'
 overview: Barclay Engineering delivers valued solutions worldwide and since 1977. They cater to a diverse range of sectors including Construction, Infrastructure, Power Generation, Defence, Marine and HVAC.
 website: https://www.barclayeng.com.au
 contact_name: Caroline Sampson

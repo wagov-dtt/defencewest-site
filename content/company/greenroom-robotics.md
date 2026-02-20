@@ -1,6 +1,6 @@
 ---
 name: Greenroom Robotics
-date: '2025-02-04'
+date: '2025-02-20'
 overview: Deep-tech company building modular, hardware-agnostic autonomy and perception software to modernise maritime operations across defence, offshore, and commercial sectors
 website: https://greenroomrobotics.com
 contact_name: Peter Baker

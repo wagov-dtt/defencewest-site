@@ -1,6 +1,6 @@
 ---
 name: ICM Group
-date: '2025-02-04'
+date: '2025-02-20'
 overview: ICM Group WA is committed to optimising productivity in materials handling.
 website: https://icmgroup.com.au
 contact_name: Julian Hughes

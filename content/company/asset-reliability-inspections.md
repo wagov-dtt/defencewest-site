@@ -1,6 +1,6 @@
 ---
 name: Asset Reliability Inspections Pty Ltd
-date: '2025-02-04'
+date: '2025-02-20'
 overview: Asset Reliability Inspections (ARI) provides non-destructive testing (NDT), engineering and inspection services to a range of industry sectors, Australia wide
 website: https://ari.com.au
 contact_name: Colm Kinsella

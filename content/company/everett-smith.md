@@ -1,6 +1,6 @@
 ---
 name: EVERETT SMITH & CO. PTY. LTD.
-date: '2025-02-04'
+date: '2025-02-20'
 overview: Everett Smith is a WA based electrical contracting and engineering company, with 60 years' experience delivering quality,solutions across sectors, including defence, data, and critical infrastructure
 website: https://everettsmith.com.au
 contact_name: Matthew Conte

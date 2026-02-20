@@ -1,6 +1,6 @@
 ---
 name: Curtin University
-date: '2025-02-04'
+date: '2025-02-20'
 overview: Curtin University is a trusted partner and fundamental part of the Australian defence industry sector.
 website: https://www.curtin.edu.au
 contact_name: Gary Hale

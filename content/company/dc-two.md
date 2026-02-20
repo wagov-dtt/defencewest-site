@@ -1,6 +1,6 @@
 ---
 name: DC Two Limited
-date: '2025-02-04'
+date: '2025-02-20'
 overview: DC Two is an Australian public company listed on the Australian Stock Exchange (ASX) which conducts a vertically integrated data centre and cloud services hosting business with multiple offerings based around physical data centre colocation, modular data centres, managed cloud computing platforms and software systems to manage and control the automation and self-service of the entire data centre systems
 website: https://www.dctwo.com.au
 contact_name: David May

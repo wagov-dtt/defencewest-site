@@ -1,6 +1,6 @@
 ---
 name: SME Gateway Pty Ltd
-date: '2025-02-04'
+date: '2025-02-20'
 overview: 'SME Gateway has a proven heritage of over 15 years in the support of Australian Small to Medium Enterprises and the low-risk facilitation of their introduction to a wide range of work opportunities in the provision of Professional and Technical Services. '
 website: https://www.smegateway.com.au
 contact_name: Andy Stephens

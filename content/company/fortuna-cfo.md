@@ -1,6 +1,6 @@
 ---
 name: Fortuna CFO Services Pty Ltd
-date: '2025-02-04'
+date: '2025-02-20'
 overview: Fortuna CFO Services is the result of the merging of a traditional accounting public practice and a Virtual CFO services provider. We provide part time senior financial management expertise to the small business sector at a cost a fraction of that of a full time resource.
 website: https://www.fortunaadvisors.com.au
 contact_name: Simon Turner

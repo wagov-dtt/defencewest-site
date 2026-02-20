@@ -1,6 +1,6 @@
 ---
 name: Dongara Marine
-date: '2025-02-04'
+date: '2025-02-20'
 overview: Dongara Marine have specific expertise in boat building, maintenance (refit, repair, modification),marine services and advice, high tech composites, manufacturing wheelhouses and other structures for both our own and other boatbuilder's projects.
 website: https://dongaramarine.com.au
 contact_name: Rohan Warr

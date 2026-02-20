@@ -1,6 +1,6 @@
 ---
 name: H-E Parts Engineering
-date: '2025-02-04'
+date: '2025-02-20'
 overview: H-E Parts Engineering carries out machining works for the marine, mining, oil and gas, defence and  rail industries.
 website: https://www.h-eparts.com/mobile-mining/enhancements
 contact_name: Alan Law

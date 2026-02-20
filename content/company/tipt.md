@@ -1,8 +1,8 @@
 ---
 name: TIPT
-date: '2025-02-04'
+date: '2025-02-20'
 overview: TIPT provides psychosocial safety, trauma and metal health solutions to organisations.
-website: http://www.tipt.com.au
+website: https://tipt.com.au
 contact_name: Tanya Hallett
 contact_title: Founder
 address: 12 Windich Rd, Bull Creek WA 6149

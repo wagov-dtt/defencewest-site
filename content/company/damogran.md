@@ -1,6 +1,6 @@
 ---
 name: Damogran
-date: '2025-02-04'
+date: '2025-02-20'
 overview: Automated robotic painting and blasting of ships, both land-based ship surface treatment using robotics and future independent floating dock
 website: https://damogran.com.au
 contact_name: Dale Jordan

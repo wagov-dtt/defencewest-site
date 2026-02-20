@@ -1,6 +1,6 @@
 ---
 name: Altrad Services
-date: '2025-02-04'
+date: '2025-02-20'
 overview: 'Altrad Services is a global multi-services provider working in partnership with our clients to build, protect and extend the life of their assets. '
 website: https://www.altradservices-apac.com
 contact_name: Lee Thompson

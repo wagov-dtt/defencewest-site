@@ -1,6 +1,6 @@
 ---
 name: Lalli Consulting Engineers
-date: '2025-02-04'
+date: '2025-02-20'
 overview: We provide practical and cost-effective structural design solutions for Defence infrastructure as well as investigative services for asset management.
 website: https://www.lalli.com.au
 contact_name: Brett Walker

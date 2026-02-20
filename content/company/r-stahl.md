@@ -1,6 +1,6 @@
 ---
 name: R Stahl Australia Pty Ltd
-date: '2025-02-04'
+date: '2025-02-20'
 overview: R. Stahl Australia designs and manufactures electrical products for the defence, aviation, marine and manufacturing industries.
 website: https://www.stahl.com.au
 contact_name: John Zagame

@@ -1,6 +1,6 @@
 ---
 name: Engine Protection Equipment Pty Ltd
-date: '2025-02-04'
+date: '2025-02-20'
 overview: Suppliers of Filtration, Instrumentation, Silicone and Rubber Hose, Clamps, Thermal Insolation, Vibration Isolation, exhaust components & Custom exhaust systems & Gaskets fabricated in house.
 website: https://epe.net.au
 contact_name: Mason Deetman

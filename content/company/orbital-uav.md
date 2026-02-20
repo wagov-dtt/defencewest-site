@@ -1,6 +1,6 @@
 ---
 name: Orbital UAV
-date: '2025-02-04'
+date: '2025-02-20'
 overview: 'Orbital UAV is a world leader in the design, development and manufacture of propulsion systems and flight critical components for unmanned aerial vehicles (UAVs). '
 website: https://www.orbitaluav.com
 contact_name: Todd Alder

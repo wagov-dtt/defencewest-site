@@ -1,6 +1,6 @@
 ---
 name: Mining & Hydraulic Supplies
-date: '2025-02-04'
+date: '2025-02-20'
 overview: 'Mining and Hydraulic Supplies specialise in the development of technical polymers, coupled with the design and manufacture of products that utilise these polymers.  '
 website: https://mhs.com.au
 contact_name: Steve Wells

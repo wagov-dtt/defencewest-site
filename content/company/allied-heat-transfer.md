@@ -1,6 +1,6 @@
 ---
 name: Allied Heat Transfer
-date: '2025-02-04'
+date: '2025-02-20'
 overview: Allied Heat Transfer designs, manufactures, services and repairs all types of heat exchangers for the marine, mining, drilling, industrial and power generation sectors.
 website: https://www.alliedheattransfer.com.au
 contact_name: Michael O'Brien

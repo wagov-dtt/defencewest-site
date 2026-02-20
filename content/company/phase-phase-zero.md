@@ -1,6 +1,6 @@
 ---
 name: Phase 'Phase Zero Aus Pty Ltd'
-date: '2025-02-04'
+date: '2025-02-20'
 overview: Phase (Phase Zero Aus Pty Ltd), a veteran owned company, was established in Western Australia May 2022, with a vision to improve the collaboration between Defence, the NIC, Industry and Academia, its purpose to deliver critical technology into the hands of users at the speed of relevance. Our team has successfully delivered programs in support of Federal Government Departments, and successfully executed contracts for Defence and several Australian Universities (including two WA based universities). We pride ourselves as a values led and outcomes focused company.
 website: https://www.phase.au
 contact_name: Anthony Bamford

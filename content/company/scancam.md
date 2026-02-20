@@ -1,6 +1,6 @@
 ---
 name: Scancam
-date: '2025-02-04'
+date: '2025-02-20'
 overview: 'Scancam specialises in vehicle licence plate recognition and CCTV Security surveillance. '
 website: https://www.scancam.com.au
 contact_name: Eoin Byrne

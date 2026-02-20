@@ -1,6 +1,6 @@
 ---
 name: Cleard Life Vetting Agency
-date: '2025-02-04'
+date: '2025-02-20'
 overview: Having your candidates "Clearance Ready", "Defence Ready" is essential. If you need cleared staff as you aspire or prepare for DISP Membership, then we can help. If you have just been DISO audited and need to beef up your Personnel Security, then we can help. Our goal is to create trusted and vetted workforces and we have been providing security clearance processing, advice and recommendations to various commonwealth government agencies since 2010. We are a Level 3 DISP Member.
 website: https://www.cleard.life/cleard-plus
 contact_name: Edward Barker

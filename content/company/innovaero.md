@@ -1,6 +1,6 @@
 ---
 name: Innovaero Pty Ltd
-date: '2025-02-04'
+date: '2025-02-20'
 overview: "Innovaero is a multi-disciplinary, aeronautical product design, certification and manufacturing organisation with \nsignificant experience in the development of large dual-use remotely piloted aircraft systems."
 website: https://innov.aero
 contact_name: Dave Tomkinson

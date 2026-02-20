@@ -1,6 +1,6 @@
 ---
 name: WEST COAST MACHINING SERVICES
-date: '2025-02-04'
+date: '2025-02-20'
 overview: West Coast Machining Services offers high quality, fast turnaround, low cost machining and fabrication services.
 website: https://wcmsperth.com.au
 contact_name: Andre Verbiesen

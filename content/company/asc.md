@@ -1,6 +1,6 @@
 ---
 name: ASC
-date: '2025-02-04'
+date: '2025-02-20'
 overview: ASC is owned by the Commonwealth of Australia, and exists to serve the frontline of Australia's naval defence capabilities.
 website: https://www.asc.com.au
 contact_name: Simon Rusiti

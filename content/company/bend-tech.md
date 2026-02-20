@@ -1,6 +1,6 @@
 ---
 name: Bend-tech Group
-date: '2025-02-04'
+date: '2025-02-20'
 overview: Bend-tech specialises in providing innovative, engineered and certified solutions for safety and efficiency problems to industry.
 website: https://www.bendtechdefence.com.au
 contact_name: Andrew Fawkes

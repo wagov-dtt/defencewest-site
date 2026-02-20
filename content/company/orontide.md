@@ -1,6 +1,6 @@
 ---
 name: Orontide Group Ltd
-date: '2025-02-04'
+date: '2025-02-20'
 overview: Orontide Group Limited is a WA owned and operated company providing specialist engineering, maintenance, fabrication, machining, welding, painting, blasting and preservation services.
 website: https://www.orontide.com.au
 contact_name: Fazl Bolar Soharab

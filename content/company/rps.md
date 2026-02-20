@@ -1,6 +1,6 @@
 ---
 name: RPS Group
-date: '2025-02-04'
+date: '2025-02-20'
 overview: RPS delivers complex projects across the defence, energy, water, commercial, residential, masterplanned communities, education, health, aged care, industrial and social infrastructure sectors.
 website: https://www.rpsgroup.com
 contact_name: Mr David Humphry

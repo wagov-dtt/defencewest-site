@@ -1,8 +1,8 @@
 ---
 name: Matera Electrical Services
-date: '2025-02-04'
+date: '2025-02-20'
 overview: Matera Electrical is an Indigenous owned electrical contracting company servicing the oil and gas, commercial construction, heavy industrial, and resource sectors across metropolitan and regional Western Australia.
-website: https://www.materaelectrical.com.au
+website: https://materaelectrical.com.au
 contact_name: Phillip Matera
 contact_title: Director
 address: 26 Carbon Court, Osborne Park WA 6017

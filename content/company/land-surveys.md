@@ -1,6 +1,6 @@
 ---
 name: Land Surveys
-date: '2025-02-04'
+date: '2025-02-20'
 overview: Land Surveys was established in 1997 and provides specialist Geospatial Services to all Private and Public Sector Clients. Being a National Surveying and Geospatial Business with over 500 Staff .
 website: https://www.landsurveys.net.au
 contact_name: Philip Jonath

@@ -1,6 +1,6 @@
 ---
 name: Pixelcase Group
-date: '2025-02-04'
+date: '2025-02-20'
 overview: The Pixelcase Group is a production studio specialising in the ground-breaking use of virtual reality, live capture 360 production, aerial technology and photogrammetry.
 website: https://pixelcase.com
 contact_name: John Colebrook

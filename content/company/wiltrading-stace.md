@@ -1,6 +1,6 @@
 ---
 name: Wiltrading STACE
-date: '2025-02-04'
+date: '2025-02-20'
 overview: 'Wiltrading STACE has extensive experience in the Defence industry, undertaking large maintenance contracts and projects. '
 website: https://aramarine.com.au/who-we-are/wiltrading-stace
 contact_name: Jason M King

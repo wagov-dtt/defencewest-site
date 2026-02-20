@@ -1,6 +1,6 @@
 ---
 name: Intercept Australia
-date: '2025-02-04'
+date: '2025-02-20'
 overview: Intercept Australia provides top to bottom asset preservation.  Intercept Technology focuses on reusable anti-corrosion, anti-static and shielding packaging for long and short-term protection.
 website: https://www.interceptaustralia.com
 contact_name: Warwick Richards

@@ -1,6 +1,6 @@
 ---
 name: Vection Technologies
-date: '2025-02-04'
+date: '2025-02-20'
 overview: Vection Australia Pty Ltd (Vection) is a company wholly owned and controlled by Vection Technologies Ltd, a company listed on the ASX (Australian Securities Exchange) with headquarters in Perth (WA) and global presence in Asia Pacific, Europe, Middle East and Africa (EMEA) and the US, and can boast collaborations and partnerships with some of the most important players on the world market. We specialise in creating solutions with 3D technologies, with a personalised approach to developing software and platforms such as virtual reality experiences, augmented reality tools, real-time 3D configurators and rendered images and videos. Attention to detail, clean and elegant visual impact, easy of use and effectiveness are some of the strengths on which we carry out each project. We proudly work for well-known national and international brands, in many industrial sectors.
 website: https://vection-technologies.com
 contact_name: Neil Armstrong

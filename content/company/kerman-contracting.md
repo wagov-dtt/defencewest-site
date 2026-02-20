@@ -1,6 +1,6 @@
 ---
 name: Kerman Contracting
-date: '2025-02-04'
+date: '2025-02-20'
 overview: Kerman is a multi-disciplined Industrial Constructor specialising in bulk storage and materials handling facilities, structural, mechanical & piping (SMP) + building other non-process infrastructure.
 website: https://kerman.com.au
 contact_name: James Rowdon

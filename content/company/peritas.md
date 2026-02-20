@@ -1,6 +1,6 @@
 ---
 name: Peritas Consulting Pty Ltd
-date: '2025-02-04'
+date: '2025-02-20'
 overview: We provide all forms of civil, structural, construction engineering & high-performance floor design across sectors - industrial, commercial, defense, mixed-use, land development and infrastructure.
 website: https://peritas.au
 contact_name: Matt Waring

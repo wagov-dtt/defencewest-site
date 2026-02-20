@@ -1,6 +1,6 @@
 ---
 name: Intertek
-date: '2025-02-04'
+date: '2025-02-20'
 overview: Intertek supports the QA efforts of customers across their operations including research and development, raw materials sourcing, components suppliers, manufacturing, transportation, distribution and retail channels, and consumer management.
 website: https://www.intertek.com
 contact_name: Konrad Drogemuller

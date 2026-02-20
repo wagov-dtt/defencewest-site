@@ -1,6 +1,6 @@
 ---
 name: UXMachines Pty Ltd
-date: '2025-02-04'
+date: '2025-02-20'
 overview: 'UXMachines Pty Ltd commenced operations in Perth, Western Australia in 2019 with the vision to build innovative high-quality IT software products, autonomous aerial drones, and data science solutions. '
 website: https://uxmachines.com
 contact_name: Dr. Artur Lugmayr

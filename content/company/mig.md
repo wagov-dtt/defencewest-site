@@ -1,6 +1,6 @@
 ---
 name: Mig-Co Engineering
-date: '2025-02-04'
+date: '2025-02-20'
 overview: Mig-Co Engineering is a trusted project partner to many in the sector. Capabilities include machining, mechanical fitting, fabrication, hydraulic components, piping, and maintenance & field services.
 website: https://www.migco.com.au
 contact_name: Adam Miguel

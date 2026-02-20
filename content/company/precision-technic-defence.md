@@ -1,6 +1,6 @@
 ---
 name: Precision Technic Defence
-date: '2025-02-04'
+date: '2025-02-20'
 overview: Precision Technic Defence brings together world leading products to design and deliver custom tactical solutions to the warfighter, and to first responders around the globe.
 website: https://ptdefence.com/event/ausa-2024
 contact_name: Greg Whitehouse

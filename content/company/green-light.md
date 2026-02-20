@@ -1,6 +1,6 @@
 ---
 name: Green Light
-date: '2025-02-04'
+date: '2025-02-20'
 overview: An Australian IT services company supporting defence primes nationally with security cleared resources and technology services.
 website: https://greenlightworldwide.com
 contact_name: Ron Elliott

@@ -1,6 +1,6 @@
 ---
 name: Directions Workforce Solutions
-date: '2025-02-04'
+date: '2025-02-20'
 overview: Directions Workforce Solutions provides personalised apprenticeship and GTO management, recruitment, training and employer support--building skilled, sustainable workforces.
 website: https://www.directionswa.com.au
 contact_name: Kristim Lim

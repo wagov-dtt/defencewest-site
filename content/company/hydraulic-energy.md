@@ -1,6 +1,6 @@
 ---
 name: Hydraulic Energy Australia
-date: '2025-02-04'
+date: '2025-02-20'
 overview: Company commenced operations in Western Australia in 2009 with a vision to be the recognised leader within the fluid power industry through responsiveness, operational excellence and continuous improvement to achieve the highest level of customer satisfaction.
 website: https://www.hydraulicenergy.com.au
 contact_name: Marco Cozza

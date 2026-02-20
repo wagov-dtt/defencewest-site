@@ -1,6 +1,6 @@
 ---
 name: Dobbie
-date: '2025-02-04'
+date: '2025-02-20'
 overview: 'Dobbie is an engineering company that offers capabilites in: 3D design and prototyping, pattern making and ferrous and non-ferrous foundry. '
 website: https://www.dobbie.com.au
 contact_name: Rod Martin

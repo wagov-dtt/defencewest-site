@@ -1,6 +1,6 @@
 ---
 name: Kanyana Engineering Pty Ltd
-date: '2025-02-04'
+date: '2025-02-20'
 overview: Kanyana Engineering Pty Ltd is a reputable business specialising in metal laser cutting, bending, and fabrication for over 25 years. With a dedicated team of highly skilled professionals, we provide high-quality precision metalworking solutions to various industries.
 website: https://kanyanaengineering.com.au
 contact_name: Sharon Dawe

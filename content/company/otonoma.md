@@ -1,6 +1,6 @@
 ---
 name: Otonoma
-date: '2025-02-04'
+date: '2025-02-20'
 overview: Autonomous orchestration of IT/OT, workflow, people, robotics and systems using an actorised agentic ai overlay network known as the Paranet.
 website: https://www.otonoma.com
 contact_name: Peta Chirgwin

@@ -1,6 +1,6 @@
 ---
 name: Alltype Engineering
-date: '2025-02-04'
+date: '2025-02-20'
 overview: Australian owned Alltype Engineering has delivered fabrication, installation, construction and maintenance services nationwide for over 40 years with proven multidiscipline expertise.
 website: https://www.alltypeengineering.com.au
 contact_name: Kelvin Andrijich

@@ -1,6 +1,6 @@
 ---
 name: A.D. Coote & Co. Sheet Metal PTY LTD
-date: '2025-02-04'
+date: '2025-02-20'
 overview: Australian-owned, ISO-certified WA manufacturer delivering sheet metal and heavy fabrication services to infrastructure, mining, oil and gas, and commercial sectors.
 website: https://adcoote.com.au
 contact_name: Charles De Vos

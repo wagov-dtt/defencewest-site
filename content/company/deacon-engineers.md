@@ -1,6 +1,6 @@
 ---
 name: Deacon Engineers
-date: '2025-02-04'
+date: '2025-02-20'
 overview: "Deacon Engineers undertakes a broad range of projects in mining, water and waste water, industrial, recycling and sustainability and mineral processing. \n"
 website: https://www.deaconengineers.com.au
 contact_name: Mal Cook

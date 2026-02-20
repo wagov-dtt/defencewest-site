@@ -1,6 +1,6 @@
 ---
 name: KAEFER
-date: '2025-02-04'
+date: '2025-02-20'
 overview: Since 1918, KAEFER has successfully delivered its unique products and services to the international defence sector in new-build and sustainment projects for surface and sub-surface vessels.
 website: https://www.kaefer.com.au
 contact_name: Barry Punter

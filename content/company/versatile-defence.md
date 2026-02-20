@@ -1,6 +1,6 @@
 ---
 name: Versatile Defence
-date: '2025-02-04'
+date: '2025-02-20'
 overview: Versatile Defence provides expert consulting, trusted defence product supply, and durable Australian-made poly boats -- delivering practical, mission-ready solutions across maritime and defence sectors
 website: https://versatile-defence.com.au
 contact_name: Kim Bakker

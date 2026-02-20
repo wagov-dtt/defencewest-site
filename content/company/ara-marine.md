@@ -1,6 +1,6 @@
 ---
 name: ARA Marine Pty Ltd
-date: '2025-02-04'
+date: '2025-02-20'
 overview: 'With well-established and documented work practices, ARA Marine project manages complex fit outs, tests, services and rectifications to the standards expected by the Department of Defence.
 
 

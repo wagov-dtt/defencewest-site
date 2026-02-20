@@ -1,6 +1,6 @@
 ---
 name: Cullys
-date: '2025-02-04'
+date: '2025-02-20'
 overview: Cullys is a highly-reputable electrical specialist supplying, installing, integrating and commissioning a range of solutions for the Defence and marine sectors.
 website: https://cullys.com.au
 contact_name: Tom Cull

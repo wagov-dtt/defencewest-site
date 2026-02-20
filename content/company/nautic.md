@@ -1,6 +1,6 @@
 ---
 name: NAUTIC Technologies
-date: '2025-02-04'
+date: '2025-02-20'
 overview: NAUTIC Technologies delivers innovative underwater solutions, advancing safety, control, and sustainability to enhance defence, commercial, and recreational capabilities.
 website: https://www.nautictechnologies.com.au
 contact_name: Robert Lee

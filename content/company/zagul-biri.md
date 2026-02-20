@@ -1,6 +1,6 @@
 ---
 name: Zagul Biri
-date: '2025-02-04'
+date: '2025-02-20'
 overview: Zagul Biri is a First Nations-led advisory firm supporting Defence and industry with culturally informed engagement, workforce capability, and practical advisory services.
 website: https://zagulbiri.com.au
 contact_name: Erol Williams

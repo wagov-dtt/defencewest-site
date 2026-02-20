@@ -1,6 +1,6 @@
 ---
 name: Malcolm Thompson Pumps
-date: '2025-02-04'
+date: '2025-02-20'
 overview: Malcolm Thompson Pumps provides wide range of sales and service to support capability delivery to the WA pump industry, covering the commercial, industrial and mining sectors.
 website: https://mtp.com.au
 contact_name: Chris Hogg

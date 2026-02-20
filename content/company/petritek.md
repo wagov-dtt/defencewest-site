@@ -1,6 +1,6 @@
 ---
 name: Petritek
-date: '2025-02-04'
+date: '2025-02-20'
 overview: 'Petritek: Innovating R&D-driven solutions across Oil & Gas, Mining, Space, and expanding into Defence, specializing in precision technologies for challenging environments.'
 website: https://petritek.com
 contact_name: Ben Fowler

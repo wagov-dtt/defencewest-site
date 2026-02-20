@@ -1,6 +1,6 @@
 ---
 name: DUG Technology Ltd
-date: '2025-02-04'
+date: '2025-02-20'
 overview: DUG Technology combines scientific excellence with sustainable computing innovation. Its patented immersion cooling technology is the foundation of DUG's mobile edge-computing solution, DUG Nomad.
 website: https://dug.com
 contact_name: Ron Schop

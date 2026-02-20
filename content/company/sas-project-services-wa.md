@@ -1,6 +1,6 @@
 ---
 name: SAS Project Services WA
-date: '2025-02-04'
+date: '2025-02-20'
 overview: "SAS Project Services is proudly WA family owned and has been operating in the fabrication and construction industry all over WA and beyond since 2001. \nWe believe our people are our biggest asset."
 website: https://sasprojectservices.com.au
 contact_name: Murray Middleton

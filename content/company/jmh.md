@@ -1,6 +1,6 @@
 ---
 name: JMH Group
-date: '2025-02-04'
+date: '2025-02-20'
 overview: For all your mobile plant and equipment mechanical repairs & maintenance, labour hire support, parts supply, specialised tooling hire, component exchange and undercarriage repairs.
 website: https://jmhgroup.net.au
 contact_name: Jaydon Hirst

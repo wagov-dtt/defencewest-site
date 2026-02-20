@@ -1,6 +1,6 @@
 ---
 name: Andvare VI Defence Industries
-date: '2025-02-04'
+date: '2025-02-20'
 overview: Focussing on survivability, specialists in the design and manufacture of advanced armour systems and thermal and radio frequency camouflaging, including fragmentation and rifle rated modular ballistic
 website: https://www.andvarevi.com
 contact_name: Justin Willis

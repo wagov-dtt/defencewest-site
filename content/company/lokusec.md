@@ -1,6 +1,6 @@
 ---
 name: LokuSec Pty Ltd
-date: '2025-02-04'
+date: '2025-02-20'
 overview: 'We are a Cyber Security Consultancy providing a range of expertise from supply chain security through to security assessments and cloud architecture support.
 
 

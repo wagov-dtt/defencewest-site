@@ -1,6 +1,6 @@
 ---
 name: Deloitte
-date: '2025-02-04'
+date: '2025-02-20'
 overview: It's time to connect, build and accelerate the industries of the future.
 website: https://www.deloitte.com/au/en/services/consulting/services/industrial-redesign-innovation.html
 contact_name: Mitch Johnston

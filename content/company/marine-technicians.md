@@ -1,6 +1,6 @@
 ---
 name: Marine Technicians Australia
-date: '2025-02-04'
+date: '2025-02-20'
 overview: 'Marine Technicians Australia is an Australian owned and operated marine-electrical company, with a major focus on defence platforms and shore-based infrastructure. '
 website: https://marinetechniciansaustralia.com.au
 contact_name: Mark Brown

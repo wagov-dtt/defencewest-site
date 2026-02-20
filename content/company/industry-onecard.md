@@ -1,6 +1,6 @@
 ---
 name: Industry OneCARD
-date: '2025-02-04'
+date: '2025-02-20'
 overview: Industry OneCARD(tm) provides small and medium enterprises (SME), a range of customised solution for workforce compliance.
 website: https://www.industryonecard.com
 contact_name: Kareena Waters

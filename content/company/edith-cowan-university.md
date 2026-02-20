@@ -1,6 +1,6 @@
 ---
 name: Edith Cowan University
-date: '2025-02-04'
+date: '2025-02-20'
 overview: ECU has supported Defence on a number of projects in areas of cyber security, simulation, human computer interface, biometrics, reconnaissance/ surveillance and cognitive psychology.
 website: https://www.ecu.edu.au/research/defence
 contact_name: Ms Michele Clement

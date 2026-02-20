@@ -1,6 +1,6 @@
 ---
 name: Rare Care - Clinical Centre of Expertise for Rare and Undiagnosed Diseases, Perth Children's Hospital
-date: '2025-02-04'
+date: '2025-02-20'
 overview: The Rare Care Centre was launched in to address the challenges faced children and families living with Rare and Undiagnosed Disease
 website: https://pch.health.wa.gov.au/Our-services/Rare-Care-Centre
 contact_name: Gareth S Baynam

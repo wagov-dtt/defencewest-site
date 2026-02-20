@@ -1,6 +1,6 @@
 ---
 name: Epichemistry Pty Limited
-date: '2025-02-04'
+date: '2025-02-20'
 overview: Epichem is Australia's leading CRO specialising in Medicinal, Synthetic & Analytical Chemistry
 website: https://www.epichem.com
 contact_name: James Rixson

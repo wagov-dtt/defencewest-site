@@ -1,6 +1,6 @@
 ---
 name: EXTAG Pty Ltd
-date: '2025-02-04'
+date: '2025-02-20'
 overview: EXTAG(r) is a software platform that ensures asset-intensive organisations are compliant, safe & ready for use.
 website: https://www.extag.com.au
 contact_name: Lan Tran

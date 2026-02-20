@@ -1,6 +1,6 @@
 ---
 name: ABS PTY LTD
-date: '2025-02-04'
+date: '2025-02-20'
 overview: ABS Welding has been in business for over 19 years and specializes in the Supply & Install of structural steel.
 website: http://www.abswelding.com.au
 contact_name: Rob Abbey

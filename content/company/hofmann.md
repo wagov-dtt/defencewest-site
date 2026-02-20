@@ -1,6 +1,6 @@
 ---
 name: Hofmann Engineering
-date: '2025-02-04'
+date: '2025-02-20'
 overview: Hofmann Engineering is a globally recognised engineering solutions provider to the defence industry.
 website: https://www.hofmannengineering.com
 contact_name: Erich J Hofmann

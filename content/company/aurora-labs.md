@@ -1,6 +1,6 @@
 ---
 name: Aurora Labs Ltd
-date: '2025-02-04'
+date: '2025-02-20'
 overview: Aurora Labs Limited (Aurora) is a developer of metal 3D printing, or Additive Manufacturing (AM) technology based in Perth, Western Australia.
 website: https://www.auroralabs3d.com
 contact_name: Tim Barker

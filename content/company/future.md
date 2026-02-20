@@ -1,6 +1,6 @@
 ---
 name: Future Engineering
-date: '2025-02-04'
+date: '2025-02-20'
 overview: Future Engineering specialises in the end-to- end project management and manufacture of precision components and the assembly of designs using a range of materials from plastics through to high-strength alloys.
 website: https://futureeng.com.au
 contact_name: Joanne Ardizzone
