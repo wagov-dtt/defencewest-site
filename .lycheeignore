@@ -3,3 +3,6 @@ github.com.*edit
 
 # Template file reference (not a real company)
 file://.*_template
+
+# Google Maps URLs (work in browsers, just redirect)
+google\.com/maps

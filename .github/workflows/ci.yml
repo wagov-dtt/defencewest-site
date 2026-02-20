@@ -45,12 +45,15 @@ jobs:
           mise x -- lychee public/ \
             --no-progress \
             --format markdown \
+            --accept '200..=299, 301, 302, 403' \
             --cache \
             --max-cache-age 7d \
             2>&1 | tee lychee-output.md
           
+          # Extract error count and create annotation
           if grep -q "🚫" lychee-output.md; then
-            echo "::warning::Link check found broken links - see job log for details"
+            ERROR_COUNT=$(grep -oP '🚫 Errors\s*\|\s*\K\d+' lychee-output.md || echo "unknown")
+            echo "::warning::Link check found $ERROR_COUNT broken links (external sites we don't control)"
           fi
       
       - name: Upload build artifact

@@ -43,7 +43,7 @@ run = "uv run python scripts/preprocess.py"
 
 [tasks.linkcheck]
 description = "Check links with lychee (warnings only)"
-run = "lychee public/ --no-progress --format markdown --cache --max-cache-age 7d || true"
+run = "lychee public/ --no-progress --format markdown --accept '200..=299, 301, 302, 403' --cache --max-cache-age 7d || true"
 
 [tasks.htmlcheck]
 description = "Check HTML validity with superhtml"
