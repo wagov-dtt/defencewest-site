@@ -9,18 +9,7 @@
 
 ## Adding Companies
 
-### Option 1: Submission Form (Recommended)
-
-1. Visit [/submit/](https://wagov-dtt.github.io/defencewest-site/submit/)
-2. Fill out details and upload logo
-3. Download JSON file
-4. Either:
-   - Email to defencewest@dpc.wa.gov.au, or
-   - Create a [GitHub issue](https://github.com/wagov-dtt/defencewest-site/issues/new), attach the JSON file, and add the `approved` label (maintainers only)
-
-Issues with the `approved` label are automatically imported via CI.
-
-### Option 2: Direct Edit
+### Direct Edit
 
 1. Copy `content/company/_template.md` to `content/company/your-company.md`
 2. Edit frontmatter and content

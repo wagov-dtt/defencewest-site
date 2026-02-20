@@ -22,7 +22,36 @@ jobs:
         run: mise run setup-ci
 
       - name: Build
-        run: mise run build
+        id: hugo
+        run: |
+          # Run Hugo with warnings
+          mise x -- hugo --cleanDestinationDir --printPathWarnings --printUnusedTemplates 2>&1 | tee hugo.log
+          
+          # Surface warnings as GitHub annotations
+          grep -E "^WARN" hugo.log | while read line; do echo "::warning::$line"; done || true
+          
+          # Check for errors and fail
+          if grep -q "^ERROR" hugo.log; then
+            grep "^ERROR" hugo.log | while read line; do echo "::error::$line"; done
+            exit 1
+          fi
+      
+      - name: Check HTML
+        run: mise run htmlcheck
+
+      - name: Check Links
+        continue-on-error: true
+        run: |
+          mise x -- lychee public/ \
+            --no-progress \
+            --format markdown \
+            --cache \
+            --max-cache-age 7d \
+            2>&1 | tee lychee-output.md
+          
+          if grep -q "🚫" lychee-output.md; then
+            echo "::warning::Link check found broken links - see job log for details"
+          fi
       
       - name: Upload build artifact
         uses: actions/upload-pages-artifact@7b1f4a764d45c48632c6b24a0339c27f5614fb0b # v4.0.0

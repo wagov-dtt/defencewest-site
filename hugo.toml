@@ -70,8 +70,6 @@ uglyURLs = false
   siteUrl = "https://directory.defencewest.wa.gov.au"
   githubRepo = "wagov-dtt/defencewest-site"
   githubBranch = "main"
-  adminEmail = "defencewest@dpc.wa.gov.au"
-  githubIssuesUrl = "https://github.com/wagov-dtt/defencewest-site/issues/new?template=submission.md"
 
   # Canonical taxonomy order (used by JS filter logic)
   taxonomyOrder = [

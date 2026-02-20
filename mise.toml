@@ -30,13 +30,20 @@ run = "hugo server -D --disableFastRender"
 
 [tasks.build]
 description = "Full build: preprocess, hugo, validate HTML, check links"
-run = ["uv sync", "mise run preprocess", "hugo --cleanDestinationDir", "mise run htmlcheck", "mise run linkcheck"]
+run = [
+  "uv sync",
+  "mise run preprocess",
+  "hugo --cleanDestinationDir --printPathWarnings --printUnusedTemplates",
+  "mise run htmlcheck",
+  "mise run linkcheck",
+]
 
 [tasks.preprocess]
 run = "uv run python scripts/preprocess.py"
 
 [tasks.linkcheck]
-run = "lychee public/ --no-progress --cache --max-cache-age 7d || true"
+description = "Check links with lychee (warnings only)"
+run = "lychee public/ --no-progress --format markdown --cache --max-cache-age 7d || true"
 
 [tasks.htmlcheck]
 description = "Check HTML validity with superhtml"

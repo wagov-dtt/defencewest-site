@@ -4,10 +4,8 @@ Imports hugo.toml and exports common paths and constants.
 """
 
 import logging
-import os
 import shutil
 import subprocess
-import sys
 from pathlib import Path
 import tomllib
 
@@ -149,21 +147,6 @@ TAXONOMIES = [
     "company_types",
 ]
 
-# Field categories for form/import handling
-SCALAR_FIELDS = {
-    "name",
-    "overview",
-    "website",
-    "phone",
-    "email",
-    "address",
-    "latitude",
-    "longitude",
-    "contact_name",
-    "contact_title",
-}
-BOOLEAN_FIELDS = {"is_sme", "is_prime"}
-
 # Map rendering settings
 # Logical display size 420x240, pixel_ratio=2 generates 840x480 for HiDPI
 MAP_WIDTH = 420
@@ -205,20 +188,6 @@ def load_taxonomies(*, raw: bool = False) -> dict:
 
     # Return dict of taxonomy_name -> list of valid keys
     return {tax: list(data.get(tax, {}).keys()) for tax in TAXONOMIES if tax in data}
-
-
-def validate_taxonomies(company: dict, valid_taxonomies: dict) -> list[str]:
-    """Validate taxonomy values against allowed keys. Returns list of warnings."""
-    warnings = []
-
-    for taxonomy in TAXONOMIES:
-        if values := company.get(taxonomy):
-            valid_keys = valid_taxonomies.get(taxonomy, [])
-            invalid = [v for v in values if v not in valid_keys]
-            if invalid:
-                warnings.append(f"Invalid {taxonomy}: {', '.join(invalid)}")
-
-    return warnings
 
 
 # Slug generation - suffixes to remove from company names
@@ -368,15 +337,3 @@ def clean_slug(name: str) -> str:
         slug = "invalid-name"
 
     return slug
-
-
-def set_output(name: str, value: str):
-    """Set GitHub Actions output variable."""
-    output_file = os.environ.get("GITHUB_OUTPUT")
-    if output_file:
-        with open(output_file, "a") as f:  # nosec: GitHub Actions output mechanism
-            if "\n" in value:
-                f.write(f"{name}<<EOF\n{value}\nEOF\n")
-            else:
-                f.write(f"{name}={value}\n")
-    print(f"{name}: {value}", file=sys.stderr)  # nosec: GitHub Actions output mechanism

@@ -21,7 +21,6 @@ scripts/
   config.py            # Shared config, paths, constants, slug utilities
   preprocess.py        # Generates computed.yaml, maps, exports (CSV/XLSX/JSON)
   scrape.py            # Scrapes data from source website
-  import_submission.py # Imports submissions from local JSON files
 layouts/               # Hugo templates
 layouts/partials/      # Shared components
 static/logos/          # Company logos
@@ -51,11 +50,6 @@ All external libraries use **jsdelivr** CDN with **major version pinning**:
 - `https://cdn.jsdelivr.net/npm/@picocss/pico@2/...` - CSS framework
 - `https://cdn.jsdelivr.net/npm/maplibre-gl@5/...` - Map rendering
 - `https://cdn.jsdelivr.net/npm/lucide@latest/...` - Icons (rendered via JS)
-
-The submit page also uses **esm.sh** for ES modules:
-- `squire-rte@2` - WYSIWYG editor
-- `dompurify@3` - HTML sanitization
-- `marked@17` - Markdown parser (for edit mode)
 
 ## Relative Links
 
@@ -104,7 +98,6 @@ Taxonomy keys map to display names via `data/taxonomies.yaml`.
 
 - `layouts/index.html` - Directory page with filterable company cards
 - `layouts/page/map.html` - MapLibre GL map (standalone iframe, uses OSM vector tiles)
-- `layouts/page/submit.html` - Company submission form (Squire editor, JSON download)
 - `layouts/partials/company-card.html` - Shared card component (directory + map)
 - `layouts/partials/filters.html` - Shared filter sidebar
 - `layouts/company/single.html` - Company detail page
@@ -251,8 +244,7 @@ uv run python scripts/preprocess.py --dry-run  # Preview changes
 **Generates:**
 - `static/maps/*.png` - Static minimap images for companies
 - `static/maps/terms/*.png` - Static map images for taxonomy terms
-- `static/companies.json` - All company data for submit page
-- `static/companies.csv`, `.xlsx` - Export files
+- `static/companies.json`, `.csv`, `.xlsx` - Export files
 
 Static minimaps are generated using `mlnative` with OSM Shortbread vector tiles.
 
@@ -273,26 +265,6 @@ uv run python scripts/scrape.py --fresh   # Re-fetch from source website
 - Cleans up markdown (normalizes lists, removes artifacts)
 - Regenerates `data/taxonomies.yaml` from scraped data
 
-### import_submission.py
-
-Imports company submissions from local JSON files:
-
-```bash
-uv run python scripts/import_submission.py path/to/submission.json
-```
-
-**Creates/updates:**
-- `content/company/{slug}.md` - Company markdown file
-- `static/logos/{slug}.png` - Logo image (if included in submission)
-
-**Features:**
-- Extracts base64-encoded logo from submission JSON and saves with ImageMagick optimization
-- Validates taxonomy values against `data/taxonomies.yaml`
-- Detects potential duplicate companies by name similarity
-- Sanitizes user input for git commit messages
-- Prevents path traversal attacks using `pathvalidate` library
-- Validates URLs and emails using `validators` library
-
 ### config.py
 
 Shared configuration used by all scripts:
@@ -307,14 +279,6 @@ Shared configuration used by all scripts:
 - `pathvalidate` - Cross-platform filename/path sanitization (prevents path traversal)
 - `validators` - URL and email validation
 - `python-slugify` - Unicode-aware slug generation
-
-## Submission Flow
-
-1. User fills form at `/submit/` (or `/submit/?edit=company-slug` for edits)
-2. User downloads JSON and emails to defencewest@dpc.wa.gov.au
-3. Admin runs `uv run python scripts/import_submission.py submission.json`
-
-GitHub issues with `approved` label also trigger automatic import via CI.
 
 ## Adding/Editing Companies
 
