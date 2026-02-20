@@ -38,6 +38,34 @@ run = [
   "mise run linkcheck",
 ]
 
+[tasks.ci-build]
+description = "CI build with GitHub annotations"
+run = """
+#!/bin/bash
+set -o pipefail
+
+# Run full build and capture output
+mise run build 2>&1 | tee build.log
+BUILD_EXIT=${PIPESTATUS[0]}
+
+# Surface Hugo warnings as GitHub annotations
+grep -E "^WARN" build.log | while read -r line; do echo "::warning::$line"; done || true
+
+# Surface Hugo errors as GitHub annotations  
+if grep -q "^ERROR" build.log; then
+  grep "^ERROR" build.log | while read -r line; do echo "::error::$line"; done
+  exit 1
+fi
+
+# Create annotation for link errors
+if grep -q "🚫" build.log; then
+  ERROR_COUNT=$(grep -oP '🚫 Errors\\s*\\|\\s*\\K\\d+' build.log || echo "unknown")
+  echo "::warning::Link check found $ERROR_COUNT broken links (external sites we don't control)"
+fi
+
+exit $BUILD_EXIT
+"""
+
 [tasks.preprocess]
 run = "uv run python scripts/preprocess.py"
 
