@@ -9,7 +9,7 @@ address: 108 Marine Terrace, Fremantle WA 6160
 phone: +61 8 9431 0043
 email: scott.elson@L3T.com
 company_types:
-- sme
+- large enterprise
 stakeholders:
 - defence
 capability_domains:
