@@ -9,7 +9,6 @@ address: 41 St Georges Terrace, Perth WA 6000
 phone: '1300184799'
 email: Info@winya.com.au
 company_types:
-- government
 - sme
 stakeholders:
 - defence
