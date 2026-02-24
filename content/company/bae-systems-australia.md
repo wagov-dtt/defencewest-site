@@ -9,7 +9,6 @@ address: 42 Quill Way, Henderson WA 6166
 phone: +61 8 6399 3000
 email: luke.simmons@baesystems.com
 company_types:
-- large-enterprise
 - prime
 stakeholders:
 - defence
