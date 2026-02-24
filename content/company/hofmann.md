@@ -9,7 +9,7 @@ address: 3 Alice Street, Bassendean WA 6054
 phone: +61 8 9279 5522
 email: erich.j.hofmann@hofmannengineering.com
 company_types:
-- sme
+- large enterprise
 stakeholders:
 - defence
 capability_domains:
