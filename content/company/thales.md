@@ -9,7 +9,6 @@ address: 7 Pickard Avenue, Rockingham WA 6168
 phone: +61 8 9550 7513
 email: Gregg.Bohan@thalesgroup.com.au
 company_types:
-- large-enterprise
 - prime
 stakeholders:
 - defence
