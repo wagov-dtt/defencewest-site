@@ -9,7 +9,7 @@ address: 16 Nautical Drive, Henderson WA 6166
 phone: +61 8 9437 6288
 email: civmec@civmec.com.au
 company_types:
-- sme
+- large enterprise
 stakeholders:
 - defence
 capability_domains:
