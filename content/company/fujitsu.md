@@ -9,7 +9,7 @@ address: Level 9, Exchange Tower, 2 The Esplanade, Perth WA 6000
 phone: +61 408 097 910
 email: ron.costanzo@au.fujitsu.com
 company_types:
-- sme
+- large enterprise
 stakeholders:
 - defence
 capability_domains:
