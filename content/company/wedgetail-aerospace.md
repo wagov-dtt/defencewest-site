@@ -9,7 +9,7 @@ address: 5 Lindsay St, Perth WA 6000
 phone: 0401184933
 email: info@wedgetailaerospace.com
 company_types:
-- prime
+- sme
 stakeholders:
 - defence
 - defence-west
