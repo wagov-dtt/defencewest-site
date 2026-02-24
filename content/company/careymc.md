@@ -9,7 +9,7 @@ address: 312 Victoria Rd, Malaga WA 6090
 phone: 0439889983
 email: david.cann@careygroupholdings.com.au
 company_types:
-- sme
+- large enterprise
 stakeholders:
 - defence
 - defence-west
