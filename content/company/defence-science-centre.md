@@ -3,21 +3,19 @@ name: Defence Science Centre
 date: '2025-02-20'
 overview: 'The Defence Science Centre exists to transform defence science challenges into tangible capabilities for both Defence and local industry.  '
 website: https://www.jtsi.wa.gov.au/economic-development/defence-west/defence-science-centre
-contact_name: Michele Clement
+contact_name: Nadine Hannaby
 contact_title: Director
-address: Level 11, 1 William Street, Perth WA 6000
-phone: +61 8 6277 3000
-email: dsc@jtsi.wa.gov.au
+address: 2 Havlock Street, Perth WA 6005
+phone: 6552 5982
+email: dsc@dpc.wa.gov.au
 company_types:
 - government
-- research
-- prime
 stakeholders:
 - defence-science
 regions:
 - perth-metropolitan
-latitude: -31.9556883
-longitude: 115.8553785
+latitude: -31.9532100
+longitude: 115.8438600
 ---
 
 ## Overview
