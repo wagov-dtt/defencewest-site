@@ -11,7 +11,7 @@ address: 100 Clarence Beach Road, Henderson WA 6166
 phone: +61 8 9410 1111
 email: tims@austal.com
 company_types:
-- sme
+- Prime
 stakeholders:
 - defence
 capability_domains:
