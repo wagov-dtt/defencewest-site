@@ -9,7 +9,7 @@ address: 37 Magnet Road, Canning Vale WA 6155
 phone: 0408 922 371
 email: john.mcgill@hoseco.com.au
 company_types:
-- prime
+- sme
 stakeholders:
 - defence
 capability_domains:
