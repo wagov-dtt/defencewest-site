@@ -8,6 +8,8 @@ contact_title: Managing Director
 address: 39 Dilkara Way, City Beach WA 6015
 phone: +61 8 9381 3802
 email: susan.fleming@actaustralia.net.au
+company type:
+- Education and Training
 stakeholders:
 - defence
 - academic
