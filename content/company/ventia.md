@@ -10,7 +10,6 @@ phone: '0456310401'
 email: tracey.glenny@ventia.com
 company_types:
 - large-enterprise
-- prime
 stakeholders:
 - defence
 capability_domains:
