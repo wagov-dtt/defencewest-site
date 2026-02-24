@@ -24,7 +24,7 @@ address: 123B Colin Street, West Perth WA 6005
 phone: 0428155677
 email: Sudesh@lokusec.com
 company_types:
-- prime
+- sme
 latitude: -31.9454884
 longitude: 115.8427873
 ---
