@@ -9,7 +9,7 @@ address: 75 Farrall Road, Midvale WA 6056
 phone: 0431695986
 email: ben@petritek.com
 company_types:
-- prime
+- sme
 capability_domains:
 - science
 - training
