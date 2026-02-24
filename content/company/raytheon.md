@@ -9,7 +9,6 @@ address: 1 McGrath Road, Henderson WA 6166
 phone: +61 8 9494 8600
 email: john.farrington@raytheon.com.au
 company_types:
-- large-enterprise
 - prime
 stakeholders:
 - defence
