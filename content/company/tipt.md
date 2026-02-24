@@ -9,7 +9,7 @@ address: 12 Windich Rd, Bull Creek WA 6149
 phone: 0424988052
 email: tanya@tipt.com.au
 company_types:
-- sme
+- education and training institution
 stakeholders:
 - defence
 - academic
