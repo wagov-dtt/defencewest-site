@@ -9,7 +9,7 @@ address: 24 Geddes Street, Balcatta WA 6024
 phone: +61 407 478 121
 email: s.forbes@fugro.com
 company_types:
-- sme
+- large enterprise
 stakeholders:
 - defence
 capability_domains:
