@@ -9,7 +9,7 @@ address: 58 Howe Street, Perth WA 6017
 phone: '+61411736114'
 email: matt.conte@everettsmith.com.au
 company_types:
-- prime
+- sme
 stakeholders:
 - defence
 capability_domains:
