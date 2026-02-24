@@ -9,8 +9,7 @@ address: 27 Quill Way, Henderson WA 6166
 phone: +61 8 8440 9691
 email: jeremy.antao@babcock.com.au
 company_types:
-- large-enterprise
-- sme
+- Prime
 stakeholders:
 - defence
 - academic
