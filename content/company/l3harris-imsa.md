@@ -9,7 +9,7 @@ address: 4 Mews Road, Fremantle WA 6160
 phone: 08 9431 0000
 email: Scott.Elson@L3Harris.com
 company_types:
-- sme
+- large enterprise
 stakeholders:
 - defence
 capability_domains:
