@@ -9,7 +9,7 @@ address: Unit 7/21 McDonald Crescent, Bassendean WA 6054
 phone: +61 409 678 056
 email: info@traumasim.com.au
 company_types:
-- sme
+- educational and training institution
 stakeholders:
 - defence
 capability_domains:
