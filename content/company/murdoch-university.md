@@ -9,7 +9,7 @@ address: 90 South Street, Murdoch WA 6150
 phone: +61 8 9360 6466
 email: a.macdonald@murdoch.edu.au
 company_types:
-- educational
+- educational and training institution
 stakeholders:
 - academic
 - defence-science
