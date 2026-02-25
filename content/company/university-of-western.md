@@ -9,7 +9,7 @@ address: 35 Stirling Highway, Perth WA 6009
 phone: +61 8 6488 3390
 email: giacinta.parish@uwa.edu.au
 company_types:
-- educational
+- educational and training institution
 stakeholders:
 - academic
 - defence-science
