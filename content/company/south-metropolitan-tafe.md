@@ -8,7 +8,7 @@ address: 1 Fleet Street, Fremantle WA 6160
 phone: 1800 001 001
 email: info@smtafe.wa.edu.au
 company_types:
-- educational
+- educational and training institution
 stakeholders:
 - academic
 - defence-west
