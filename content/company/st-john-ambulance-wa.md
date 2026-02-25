@@ -9,7 +9,7 @@ address: 209 Great Eastern Highway, Belmont WA 6104
 phone: 0476897839
 email: David.Waters@stjohnwa.com.au
 company_types:
-- sme
+- large enterprise
 stakeholders:
 - academic
 - defence-west
