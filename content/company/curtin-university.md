@@ -9,7 +9,7 @@ address: Kent Street, Bentley WA 6102
 phone: +61 8 9266 1448
 email: directorNRAS@curtin.edu.au
 company_types:
-- educational
+- educational and training institution
 stakeholders:
 - academic
 - defence-science
