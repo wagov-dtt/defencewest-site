@@ -1,56 +1,99 @@
----
+"---
 name: Bee Sting Robotics Pty Ltd
-date: '2025-02-20'
-overview: West Australia's first China-free supply chain FPV drone manufacturer, who's entire supply chain is within Australia or Allied country's.
-website: https://beestingrobotics.com
-contact_name: Callum Gillespie Misich
-contact_title: Director
-address: 10/30 deviation way, Neerabup WA 6031
-phone: '0420767550'
-email: info@beestingrobotics.com
+date: '2026-02-27'
+overview: An engineering and manufacturing company with established experience in the assembly, integration, and supply of unmanned aerial platforms (UAP) for industrial and specialized applications.
+website: www.beestingrobotics.com
+contact_name: Calloum Misich
+contact_title: Managinf Director
+address: 30 deviation Way, Neerabup WA 6031
+phone: 0420767550
+email: misich@beestingrobotics.com
 company_types:
+- educational
 - sme
+stakeholders:
+- defence
 capability_domains:
-- air
-- intelligence
-- reconnaissance
-- search
-- special
-- surveillance
-- training
-- training-platforms
-- uncrewed
-- ai
 - robotics
+- uncrewed
 industrial_capabilities:
-- cnc
-- composites
-- design
-- welding
 - adaptive
+- design
 regions:
+- great
+- kimberley
+- mid
+- naval
+- north
+- peel
 - perth
+- perth-metropolitan
+- pilbara
+- south
+- wheatbelt
+- south-west
+- goldfields
+- australian
+- gascoyne
+ownerships:
+- [delete section]
 capability_streams:
 - aerial
-- base
-- education
-- intelligence
-- logistics
 - research
-latitude: -31.6788774
-longitude: 115.782672
+latitude: [-31.67888]
+longitude: [115.78265]
 ---
+
 
 ## Overview
 
-Bee Sting Robotics major shareholder Andrii Biletskyi was a medium level supplier of drones to the Ukrainian military for over 3 years, initially manufacturing in China, we have brought the technology and know-how over to Australia. Our drones are NATO-specification, Front line battle tested units.
+Bee Sting Robotics is an engineering and manufacturing company with established experience in the assembly, integration, and supply of unmanned aerial platforms (UAP) for industrial and specialized applications.
+
+The company has a proven operational background in:
+
+• UAV assembly and system integration
+
+• delivery of complete unmanned platforms
+
+• mechanical, propulsion, and system-level design
+
+• practical operation and deployment of UAP platforms
+
+This experience forms the technical and operational foundation of Bee Sting Robotics today.
 ## Capabilities
 
-- Manufacturing 7 inch, 10 inch, 12 inch, 15 inch FPV drones using Australian and allied country supply chains.
-- FPV and line of sight drone training with radio and fiber-optic
-- War-time system set up
+
+Design Authority & Technical Capability
+
+Bee Sting Robotics holds design authority over key UAV subsystems, including:
+
+• proprietary airframe designs
+
+• brushless motor geometry and performance concepts
+
+• power and stack architecture
+
+• production tooling and assembly processes
+
+The company has prior experience in motor manufacturing, stack development, and UAV system engineering, enabling a transition from mixed-supply production to fully controlled, compliant manufacturing environments.
+Compliance-Oriented Manufacturing
+
+All current and future development is structured around:
+
+• controlled supply-chain selection
+
+• elimination of non-compliant or jurisdictionally restricted components
+
+• certification-ready production processes
+
+• traceable manufacturing and testing workflows
+
+Compliance is treated as a core engineering requirement, not a post-production adjustment.
+
 ## Discriminators
 
-- CASA registration
-- Begun Defense Industry Security Program (DISP) membership requirements
-- ISO implementation
+
+DISP Application 
+ISO27001 Application
+Extensive experience
+European and American networks."
