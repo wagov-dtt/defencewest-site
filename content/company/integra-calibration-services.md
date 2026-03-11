@@ -1,0 +1,50 @@
+---
+name: Integra Calibration Services
+date: '2026-03-06'
+overview: We provide lab based and mobile calibration services for Pressure, electrical, temperature, torque and dimensional equipment
+website: https://integracal.com.au/
+contact_name: Alex Dunn
+contact_title: Director
+address: Unit 2, 1 Watt Link, Forrestdale WA 6112
+phone: 0410196651
+email: admin@integracal.com.au
+company_types:
+- sme
+stakeholders:
+- defence
+capability_domains:
+- maritime
+- science
+- sustainment
+industrial_capabilities:
+- electronics
+- mechanical
+regions:
+- australian
+- naval
+- perth
+- perth-metropolitan
+- south-west
+ownerships: []
+capability_streams:
+- space
+- land
+- electronic
+- research
+- maritime
+- base
+latitude: -32.13765
+longitude: 115.96784
+---
+
+## Overview
+
+Founded in 2016 as a mobile calibration facility, we have since established a fixed laboratory in Forrestdale, WA to best serve our diverse clientele. With over 30 years of combined calibration experience, we are well positioned to provide calibrations for most equipment used by today's engineers, technicians and trades people. Our technical qualifications include industrial and aircraft instrumentation. Our incessant desire for precision and integrity ensure you get the highest quality calibration possible. We understand the criticality of calibration and its role in ensuring maximum confidence in the equipment and tooling used to maintain critical assets, which ties in well with the requirements of the Defence Sector. We support Tier 2 and 3 businesses serving Australia's Airforce and Naval assets.
+
+## Capabilities
+
+Defence requirements include calibration of instrumentation and pressure systems used within naval surface fleet sustainment environments, as well as electrical, torque, dimensional, temperature and pressure calibrations for equipment used in aviation and base operations. Integra services align with the requirements of the Sovereign Defence Industrial Priorities, particularly those relating to test, evaluation, certification and systems assurance alongside maritime and land platform sustainment.
+
+## Discriminators
+
+Integra Calibration Services is a NATA accredited organisation. We have been active members of the Henderson Alliance for approximately 18 months
