@@ -1,4 +1,4 @@
-"---
+---
 name: Bee Sting Robotics Pty Ltd
 date: '2026-02-27'
 overview: An engineering and manufacturing company with established experience in the assembly, integration, and supply of unmanned aerial platforms (UAP) for industrial and specialized applications.
@@ -96,4 +96,4 @@ Compliance is treated as a core engineering requirement, not a post-production a
 DISP Application 
 ISO27001 Application
 Extensive experience
-European and American networks."
+European and American networks.
