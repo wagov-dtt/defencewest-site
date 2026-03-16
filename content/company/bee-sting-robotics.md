@@ -40,8 +40,8 @@ ownerships:
 capability_streams:
 - aerial
 - research
-latitude: [replace with latitude]
-longitude: [replace with longitude]
+latitude: [-31.67888]
+longitude: [115.78267]
 ---
 
 
