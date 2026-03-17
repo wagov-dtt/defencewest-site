@@ -3,8 +3,8 @@ name: Bee Sting Robotics Pty Ltd
 date: '2026-02-27'
 overview: An engineering and manufacturing company with established experience in the assembly, integration, and supply of unmanned aerial platforms (UAP) for industrial and specialized applications.
 website: www.beestingrobotics.com
-contact_name: Calloum Misich
-contact_title: Managinf Director
+contact_name: Callum Misich
+contact_title: Managing Director
 address: 30 deviation Way, Neerabup WA 6031
 phone: 0420767550
 email: misich@beestingrobotics.com

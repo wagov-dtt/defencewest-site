@@ -37,13 +37,13 @@ regions:
 - south-west
 - wheatbelt
 ownerships:
-- [delete section]
+
 capability_streams:
 - maritime
 - base
 - logistics
-latitude: [-32.19690]
-longitude: [115.78447]
+latitude: -32.19691
+longitude: 115.78447
 ---
 
 
