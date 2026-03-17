@@ -96,4 +96,4 @@ Compliance is treated as a core engineering requirement, not a post-production a
 DISP Application 
 ISO27001 Application
 Extensive experience
-European and American networks.
+European and American networks
