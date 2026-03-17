@@ -35,8 +35,6 @@ regions:
 - goldfields
 - australian
 - gascoyne
-ownerships:
-- [delete section]
 capability_streams:
 - aerial
 - research
