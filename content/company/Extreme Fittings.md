@@ -36,7 +36,6 @@ regions:
 - south
 - south-west
 - wheatbelt
-ownerships:
 
 capability_streams:
 - maritime
