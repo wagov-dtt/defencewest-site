@@ -38,8 +38,8 @@ regions:
 capability_streams:
 - aerial
 - research
-latitude: [-31.67888]
-longitude: [115.78267]
+latitude: -31.67888
+longitude: 115.78267
 ---
 
 
