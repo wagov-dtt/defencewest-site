@@ -9,7 +9,7 @@ address: 30 deviation Way, Neerabup WA 6031
 phone: 0420767550
 email: misich@beestingrobotics.com
 company_types:
-- educational
+
 - sme
 stakeholders:
 - defence
