@@ -40,14 +40,13 @@ regions:
 - south
 - south-west
 - wheatbelt
-ownerships:
-- [delete section]
+
 capability_streams:
 - space
 - land
 - maritime
-latitude: [-31.78960]
-longitude: [115.82951]
+latitude: -31.78957
+longitude: 115.82952
 ---
 
 
