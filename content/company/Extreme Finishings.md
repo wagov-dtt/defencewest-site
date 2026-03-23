@@ -42,7 +42,7 @@ capability_streams:
 - base
 - logistics
 latitude: -32.19691
-longitude: 115.78447
+longitude: 115.78449
 ---
 
 
