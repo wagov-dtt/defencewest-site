@@ -29,10 +29,11 @@ depends = ["preprocess"]
 run = "hugo server -D --disableFastRender"
 
 [tasks.build]
-description = "Full build: preprocess, hugo, validate HTML, check links"
+description = "Full build: preprocess, validate Hugo content, hugo, validate HTML, check links"
 run = [
   "uv sync",
   "mise run preprocess",
+  "mise run validate-hugo-content",
   "hugo --cleanDestinationDir --printPathWarnings --printUnusedTemplates",
   "mise run htmlcheck",
   "mise run linkcheck",
@@ -68,6 +69,10 @@ exit $BUILD_EXIT
 
 [tasks.preprocess]
 run = "uv run python scripts/preprocess.py"
+
+[tasks.validate-hugo-content]
+description = "Fail on company/logos naming mismatches that Hugo treats as broken internal links"
+run = "uv run python scripts/validate_hugo_content.py"
 
 [tasks.linkcheck]
 description = "Check links with lychee (warnings only)"
