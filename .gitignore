@@ -37,3 +37,6 @@ Thumbs.db
 
 # Logs
 *.log
+
+# CI reports
+.ci-reports/

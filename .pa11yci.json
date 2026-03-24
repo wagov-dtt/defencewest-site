@@ -6,12 +6,16 @@
       "args": ["--no-sandbox", "--disable-setuid-sandbox", "--headless=new"]
     },
     "timeout": 30000,
-    "useIncognitoBrowserContext": false
+    "useIncognitoBrowserContext": false,
+    "reporters": [
+      "cli",
+      ["json", { "fileName": "./.ci-reports/a11y/pa11y-report.json" }]
+    ]
   },
   "urls": [
-    "http://localhost:1313/",
-    "http://localhost:1313/map/",
-    "http://localhost:1313/regions/",
-    "http://localhost:1313/capability_streams/"
+    "http://127.0.0.1:1313/",
+    "http://127.0.0.1:1313/map/",
+    "http://127.0.0.1:1313/regions/",
+    "http://127.0.0.1:1313/capability_streams/"
   ]
 }

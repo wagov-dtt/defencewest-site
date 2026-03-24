@@ -29,7 +29,7 @@ depends = ["preprocess"]
 run = "hugo server -D --disableFastRender"
 
 [tasks.build]
-description = "Full build: preprocess, validate Hugo content, hugo, validate HTML, check links"
+description = "Full local build: preprocess, validate Hugo content, hugo, validate HTML, check links"
 run = [
   "uv sync",
   "mise run preprocess",
@@ -39,33 +39,16 @@ run = [
   "mise run linkcheck",
 ]
 
-[tasks.ci-build]
-description = "CI build with GitHub annotations"
-run = """
-#!/bin/bash
-set -o pipefail
-
-# Run full build and capture output
-mise run build 2>&1 | tee build.log
-BUILD_EXIT=${PIPESTATUS[0]}
-
-# Surface Hugo warnings as GitHub annotations
-grep -E "^WARN" build.log | while read -r line; do echo "::warning::$line"; done || true
-
-# Surface Hugo errors as GitHub annotations  
-if grep -q "^ERROR" build.log; then
-  grep "^ERROR" build.log | while read -r line; do echo "::error::$line"; done
-  exit 1
-fi
-
-# Create annotation for link errors
-if grep -q "🚫" build.log; then
-  ERROR_COUNT=$(grep -oP '🚫 Errors\\s*\\|\\s*\\K\\d+' build.log || echo "unknown")
-  echo "::warning::Link check found $ERROR_COUNT broken links (external sites we don't control)"
-fi
-
-exit $BUILD_EXIT
-"""
+[tasks.build-ci]
+description = "CI build: preprocess, validate Hugo content, hugo, validate HTML, then write machine-readable link diagnostics"
+run = [
+  "uv sync",
+  "mise run preprocess",
+  "mise run validate-hugo-content",
+  "hugo --cleanDestinationDir --printPathWarnings --printUnusedTemplates",
+  "mise run htmlcheck",
+  "mise run linkcheck-json",
+]
 
 [tasks.preprocess]
 run = "uv run python scripts/preprocess.py"
@@ -77,6 +60,10 @@ run = "uv run python scripts/validate_hugo_content.py"
 [tasks.linkcheck]
 description = "Check links with lychee (warnings only)"
 run = "lychee public/ --no-progress --format markdown --accept '200..=299, 301, 302, 403' --cache --max-cache-age 7d || true"
+
+[tasks.linkcheck-json]
+description = "Check links with lychee and write a JSON report for CI summaries/artifacts"
+run = "mkdir -p .ci-reports/linkcheck && lychee public/ --no-progress --format json --output .ci-reports/linkcheck/lychee-report.json --accept '200..=299, 301, 302, 403' --cache --max-cache-age 7d || true"
 
 [tasks.htmlcheck]
 description = "Check HTML validity with superhtml"
@@ -94,4 +81,4 @@ run = "scc --exclude-dir data,content --format table"
 
 [tasks.a11ycheck]
 description = "Run accessibility tests (CI only - requires pnpm install + Chromium)"
-run = "pnpm exec pa11y-ci"
+run = "pnpm exec pa11y-ci --config .pa11yci.json"

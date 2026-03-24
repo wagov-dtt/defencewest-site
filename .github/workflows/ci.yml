@@ -11,62 +11,119 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: read
-    
+
     steps:
       - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
-      
+
       - name: Install mise
         uses: jdx/mise-action@c1ecc8f748cd28cdeabf76dab3cccde4ce692fe4 # v4.0.0
-      
+
       - name: Install system dependencies
         run: mise run setup-ci
 
-      - name: Build
-        run: mise run ci-build
-      
+      - name: Run CI build
+        id: build_step
+        continue-on-error: true
+        run: |
+          mkdir -p .ci-reports/linkcheck
+          set -o pipefail
+          mise run build-ci 2>&1 | tee build.log
+
+      - name: Summarize build diagnostics
+        if: always()
+        env:
+          BUILD_OUTCOME: ${{ steps.build_step.outcome }}
+        run: uv run python scripts/ci_report.py build
+
+      - name: Summarize link check diagnostics
+        if: always()
+        run: uv run python scripts/ci_report.py linkcheck
+
+      - name: Upload CI diagnostics
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: ci-diagnostics-build
+          path: |
+            build.log
+            .ci-reports/
+          if-no-files-found: warn
+
       - name: Upload build artifact
+        if: steps.build_step.outcome == 'success'
         uses: actions/upload-pages-artifact@7b1f4a764d45c48632c6b24a0339c27f5614fb0b # v4.0.0
         with:
           path: public/
+
+      - name: Fail job if build failed
+        if: steps.build_step.outcome != 'success'
+        run: |
+          echo '::error::Build step failed. See the Build diagnostics and Link check sections above, then download the ci-diagnostics-build artifact for full logs.'
+          exit 1
 
   a11y:
     runs-on: ubuntu-latest
     continue-on-error: true
     permissions:
       contents: read
-    
+
     steps:
       - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
-      
+
       - name: Install mise
         uses: jdx/mise-action@c1ecc8f748cd28cdeabf76dab3cccde4ce692fe4 # v4.0.0
         with:
           experimental: true
-      
+
       - name: Install a11y tools and run tests
+        id: a11y_step
+        continue-on-error: true
         run: |
+          mkdir -p .ci-reports/a11y
           mise use pnpm@latest node@22
           pnpm install
           mise run setup-ci
           mise run preprocess
-          hugo server &
+          mise x -- hugo server --bind 127.0.0.1 --baseURL http://127.0.0.1:1313/ &
+          HUGO_PID=$!
+          trap 'kill "$HUGO_PID"' EXIT
           sleep 5
           export PUPPETEER_EXECUTABLE_PATH=/usr/bin/google-chrome-stable
-          mise run a11ycheck
+          set -o pipefail
+          mise run a11ycheck 2>&1 | tee .ci-reports/a11y/a11y.log
+
+      - name: Summarize accessibility output
+        if: always()
+        env:
+          A11Y_OUTCOME: ${{ steps.a11y_step.outcome }}
+        run: uv run python scripts/ci_report.py a11y
+
+      - name: Upload accessibility diagnostics
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: ci-diagnostics-a11y
+          path: |
+            .ci-reports/a11y/
+          if-no-files-found: warn
+
+      - name: Add a11y job notice
+        if: steps.a11y_step.outcome != 'success'
+        run: echo '::notice::Accessibility checks failed. See the Accessibility section above and download the ci-diagnostics-a11y artifact for the full report.'
 
   deploy:
     needs: build
     if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
-    
+
     permissions:
       pages: write
       id-token: write
-    
+
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    
+
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
