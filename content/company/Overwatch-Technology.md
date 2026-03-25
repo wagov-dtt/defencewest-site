@@ -26,12 +26,13 @@ industrial_capabilities:
 - electronics
 regions:
 - perth
-
+ownerships:
+- [delete section]
 capability_streams:
 - electronic
 - intelligence
 latitude: -31.95386
-longitude: 115.85252
+longitude: 115.85250
 ---
 
 
