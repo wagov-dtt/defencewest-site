@@ -6,7 +6,7 @@ website: https://extremefinishings.com.au/
 contact_name: Kellie Galati
 contact_title: Director
 address: 33 Dooley Street, Naval Base WA 6165
-phone: 08 61705499
+phone: 0861705499
 email: info@extremefinishings.com.au
 company_types:
 - sme
