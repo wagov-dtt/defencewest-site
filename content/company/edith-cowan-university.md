@@ -9,7 +9,7 @@ address: 270 Joondalup Drive, Joondalup WA 6027
 phone: +61 418857824
 email: Defence.Research@ecu.edu.au
 company_types:
-- educational and training institution
+- educational
 stakeholders:
 - defence
 - academic
