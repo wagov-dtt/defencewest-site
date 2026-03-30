@@ -26,18 +26,19 @@ industrial_capabilities:
 - electronics
 regions:
 - perth
-
+ownerships:
+- [delete section]
 capability_streams:
 - electronic
 - intelligence
 latitude: -31.95386
-longitude: 115.85250
+longitude: 115.85252
 ---
 
 
 ## Overview
 
-Aspiring to make a difference and add value to Defence, Primero is an established and highly regarded national multidisciplinary engineering, procurement, and construction company specialising in delivering comprehensive, fully integrated solutions to the mining, energy and Defence sectors. From feasibility studies and early-stage design to construction, operations and ongoing maintenance and sustaining capital services, Primero’s expertise spans the entire project lifecycle. By leveraging our extensive industry knowledge and resources, we provide tailored solutions that meet the unique challenges of our clients, ensuring success from concept through to operations.
+Overwatch is an Australian technology company focused on autonomy and intelligence systems. It is commercialising its intellectual property across AI-enabled hardware, software, sensors, and data platforms. The company’s core objective is to deliver autonomous capability and actionable intelligence in environments where traditional infrastructure is limited, compromised, or unavailable.
 
 Overwatch’s systems are designed for rapid deployment and can be established using both ground-based solutions and fully autonomous aerial platforms. These capabilities enable users to detect, locate, and analyse critical information in real time, supporting decision-making in complex and dynamic environments.
 
@@ -45,7 +46,7 @@ The technology is particularly suited to mission-critical applications, includin
 
 ## Capabilities
 
-• In-house vertically integrated, self-performing full lifecycle: Design, Engineering, Production, Construction, Operational Control and Asset Management • End-to-end customised solutions including Power Generation, Fuel Facilities, Water Management, Warehousing/Storage, Sustainable/Hybrid Renewable Energy, Structural Steelwork, Electrical, Instrumentation, Control Systems • In-house Sustainment capability: Access, Coatings, Electrical and Instrumentation, Mechanical, Piping and Civil works. • In house multidisciplinary team including 200+ Engineers, 2000+ Blue Collar Trades and Labour construction personnel and advanced Project Managers for safe, seamless, efficient, consistent and high quality, cost-effective delivery • Henderson based advanced manufacturing workshop facilities • Full-service Project Lifecycle support, utilising NRW’s extensive capabilities, Primero is ISO 9001 Quality, ISO 45001 Health and Safety and ISO 19443 (Stage 1) Nuclear certified. 
+Autonomous systems with capability to collect signals of interest with applications in border security, maritime domain awareness and law enforcement.
 ## Discriminators
 
 Non-ITARS technology
