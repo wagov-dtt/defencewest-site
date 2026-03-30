@@ -26,8 +26,7 @@ industrial_capabilities:
 - electronics
 regions:
 - perth
-ownerships:
-- [delete section]
+
 capability_streams:
 - electronic
 - intelligence
