@@ -10,8 +10,7 @@ phone: 0407486157
 email: william.sharpe@sqpengineering.com.au
 company_types:
 - sme
-- prime
-- government
+
 stakeholders:
 - defence
 - defence-west
