@@ -7,7 +7,7 @@ contact_name: Neil Bartlett
 contact_title: Defence Engagement Lead
 address: 1 Pearson Way, Osborne Park WA 6017
 phone: 0434 832 336
-email: neil.bartlett@primero.com.au
+email: defence@primero.com.au
 company_types:
 - large-enterprise
 stakeholders:
