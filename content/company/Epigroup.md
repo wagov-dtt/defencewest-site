@@ -1,5 +1,5 @@
 ---
-name: Epigroup
+name: Episafe Pty Ltd - trading as Epigroup
 date: '2026-04-01'
 overview: Perth WHS consultancy delivering safety systems, auditing, risk assessment, digital and VR training, and specialist labour hire across defence, construction and resources.
 website: www.epigroup.com.au
@@ -43,7 +43,7 @@ capability_streams:
 - logistics
 - research
 latitude: -31.95483
-longitude: 155.85028
+longitude: 115.85028
 ---
 
 
