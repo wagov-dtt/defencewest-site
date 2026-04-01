@@ -36,7 +36,6 @@ regions:
 - south
 - south-west
 - wheatbelt
-
 capability_streams:
 - education
 - base
@@ -45,6 +44,7 @@ capability_streams:
 latitude: -31.95483
 longitude: 115.85028
 ---
+
 ## Overview
 
 Epigroup is a Perth-based work health and safety firm established to make WHS practical, people-centred and performance-driven. While formally entering the defence sector in 2022 working with ASC, Epigroup brings extensive experience from industries that mirror defence's operational complexity and contractor governance demands including resources, heavy construction, maritime, and critical infrastructure.
