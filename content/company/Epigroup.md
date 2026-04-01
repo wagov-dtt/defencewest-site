@@ -5,8 +5,8 @@ overview: Perth WHS consultancy delivering safety systems, auditing, risk assess
 website: www.epigroup.com.au
 contact_name: Jake Cole
 contact_title: Managing Director
-address: Level 9, 1 Spring Street, Perth WA 6000
-phone: 0437499306
+address: Level 9, 1 Spring Street, , Perth WA 6000
+phone: 0437 499 306 
 email: jake@epigroup.com.au
 company_types:
 - sme
@@ -45,8 +45,6 @@ capability_streams:
 latitude: -31.95483
 longitude: 115.85028
 ---
-
-
 ## Overview
 
 Epigroup is a Perth-based work health and safety firm established to make WHS practical, people-centred and performance-driven. While formally entering the defence sector in 2022 working with ASC, Epigroup brings extensive experience from industries that mirror defence's operational complexity and contractor governance demands including resources, heavy construction, maritime, and critical infrastructure.
