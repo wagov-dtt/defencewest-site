@@ -51,7 +51,7 @@ SHEQ Management demonstrates strong capability in supporting the defence industr
 
 ## Discriminators
 
-- Proven, accredited systems: Commitment to achieving triple ISO certification (Quality, Safety, and Environment) aligned with standards from the International Organization for Standardization by Q3, demonstrating robust, audit-ready systems and a strong culture of continuous improvement.
+- Proven, accredited systems: Commitment to achieving triple ISO certification (Quality, Safety, and Environment) aligned with ISO standards 9001, 14001, 45001, demonstrating robust, audit-ready systems and a strong culture of continuous improvement. We have a 10-year proven track record of providing full HSEQ support, including contractor assessments, tendering, project execution, and HSEQ systems development for ISO certification, through our 12-week program.
 - Defence-aligned capability: Experience operating in high-risk, regulated environments with the ability to meet defence-specific requirements, including appropriate personnel clearances and secure, compliant processes.
 - Strong industry integration: Active membership within the Henderson Alliance, enabling collaboration, local supply chain engagement, and alignment with key defence initiatives.
 - Recognised performance: A growing track record of industry recognition and awards, reflecting commitment to excellence, innovation, and client outcomes.
