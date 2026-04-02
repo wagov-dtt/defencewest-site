@@ -9,7 +9,7 @@
   
   2. Data Attributes for JS: Filter data embedded in data-* attributes
      enables client-side filtering without API calls:
-     - data-search: lowercase text for search matching
+     - data-search: precomputed lowercase text for search matching
      - data-{taxonomy}: pipe-separated values for filter matching
   
   3. Lazy Loading: Images use loading="lazy" for performance
@@ -23,17 +23,12 @@
 */}}
 {{- $company := .company -}}
 {{- $mode := .mode | default "directory" -}}
-
-{{/* Compute search text and truncated overview inline */}}
-{{- $search_text := printf "%s %s" $company.name ($company.overview | default "") | lower -}}
-{{- $overview_short := $company.overview | default "" | plainify | truncate 300 -}}
+{{- $searchText := $company.search | default "" -}}
+{{- $overviewShort := $company.overview_short | default "" -}}
+{{- $logoUrl := $company.logo_url | default "" -}}
 {{- $isMap := eq $mode "map" -}}
 {{- $isPopup := eq $mode "popup" -}}
 {{- $isDirectory := eq $mode "directory" -}}
-
-{{/* Simple derivations stay in Hugo */}}
-{{- $logoPath := printf "/logos/%s.png" $company.slug -}}
-{{- $logoUrl := cond (fileExists (printf "static%s" $logoPath)) $logoPath "" -}}
 
 {{- if $isPopup -}}
 {{/* Popup mode: wrapped in .pico for conditional CSS */}}
@@ -62,7 +57,7 @@
           {{- end }}
         {{- end }}
       </div>
-      {{- with $overview_short }}
+      {{- with $overviewShort }}
       <p class="overview"><small title="{{ $company.overview }}">{{ . }}</small></p>
       {{- end }}
     </article>
@@ -74,7 +69,7 @@
 {{- $wrapperClass := cond $isMap "map-marker" "company-item col-12 col-md-4" -}}
 <div class="{{ $wrapperClass }}"
      data-slug="{{ $company.slug }}"
-     data-search="{{ $search_text }}"
+     data-search="{{ $searchText }}"
      {{- with $company.stakeholders }} data-stakeholders="{{ delimit . "|" }}"{{ end }}
      {{- with $company.capability_streams }} data-capability_streams="{{ delimit . "|" }}"{{ end }}
      {{- with $company.capability_domains }} data-capability_domains="{{ delimit . "|" }}"{{ end }}
@@ -117,8 +112,8 @@
         {{- end }}
       </div>
 
-      {{- if and $overview_short (not $isMap) }}
-      <p class="overview"><small title="{{ $company.overview }}">{{ $overview_short }}</small></p>
+      {{- if and $overviewShort (not $isMap) }}
+      <p class="overview"><small title="{{ $company.overview }}">{{ $overviewShort }}</small></p>
       {{- end }}
     </article>
   </a>

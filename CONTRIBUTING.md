@@ -270,6 +270,7 @@ mise run preprocess
 
 Outputs include:
 
+- `data/generated/companies.json` (derived fields consumed by Hugo templates)
 - `static/maps/*.png` plus `static/maps/*.sha256` cache sidecars
 - `static/maps/terms/*.png` plus `static/maps/terms/*.sha256` cache sidecars
 - `static/companies.json`

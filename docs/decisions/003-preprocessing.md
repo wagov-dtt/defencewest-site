@@ -20,7 +20,7 @@ Pre-generate static assets in Python before Hugo build:
 - **`static/companies-map.json`**: Slim runtime payload for the interactive map
 - **No runtime computation**: All data ready in HTML
 
-Note: Search text and truncated overviews are now computed inline by Hugo templates using built-in `lower` and `truncate` functions.
+Note: Search text, truncated overviews, and logo URLs are computed once during preprocessing and reused by Hugo templates and public exports.
 
 ## Consequences
 

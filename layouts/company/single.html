@@ -2,10 +2,10 @@
 {{- $company := .Params -}}
 {{- $slug := .File.BaseFileName -}}
 {{- $taxonomies := hugo.Data.taxonomies -}}
-
-{{/* Simple derivations stay in Hugo */}}
-{{- $logoPath := printf "/logos/%s.png" $slug -}}
-{{- $logoUrl := cond (fileExists (printf "static%s" $logoPath)) $logoPath "" -}}
+{{- $generatedData := index .Site.Data "generated" | default dict -}}
+{{- $derivedCompanies := index $generatedData "companies" | default dict -}}
+{{- $company = merge $company (index $derivedCompanies $slug | default dict) -}}
+{{- $logoUrl := $company.logo_url | default "" -}}
 {{- $websiteDisplay := $company.website | default "" | replaceRE "^https?://" "" | replaceRE "/$" "" -}}
 {{- $mapUrl := "" -}}
 {{- if and $company.latitude $company.longitude -}}

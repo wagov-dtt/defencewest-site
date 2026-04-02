@@ -5,6 +5,8 @@
   Two-column layout: company cards + map embed
 */}}
 {{- $taxonomies := hugo.Data.taxonomies -}}
+{{- $generatedData := index .Site.Data "generated" | default dict -}}
+{{- $derivedCompanies := index $generatedData "companies" | default dict -}}
 {{- $taxonomyName := .Data.Plural -}}
 {{- $termKey := .Data.Term -}}
 {{- $taxonomyMap := index $taxonomies $taxonomyName -}}
@@ -36,7 +38,7 @@
     <div class="grid">
       {{- range .Pages.ByParam "name" }}
       {{- $slug := .File.BaseFileName -}}
-      {{- $companyData := merge .Params (dict "slug" $slug) }}
+      {{- $companyData := merge .Params (dict "slug" $slug) (index $derivedCompanies $slug | default dict) }}
       {{- partial "company-card.html" (dict "company" $companyData "mode" "directory") }}
       {{- end }}
     </div>

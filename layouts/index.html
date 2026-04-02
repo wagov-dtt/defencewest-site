@@ -1,9 +1,17 @@
-{{ define "main" }} {{/* Load all company pages */}} {{- $companies := slice -}} {{- range where
-.Site.RegularPages "Section" "company" -}} {{- if ne .File.BaseFileName "_template" -}}
-{{- $company := .Params -}} {{-
-$company = merge $company (dict "slug" .File.BaseFileName) -}} {{- $companies =
-$companies | append $company -}} {{- end -}} {{- end -}} {{- $companies = sort $companies
-"name" -}} {{- $taxonomies := hugo.Data.taxonomies -}}
+{{ define "main" }}
+{{/* Load all company pages */}}
+{{- $companies := slice -}}
+{{- $generatedData := index .Site.Data "generated" | default dict -}}
+{{- $derivedCompanies := index $generatedData "companies" | default dict -}}
+{{- range where .Site.RegularPages "Section" "company" -}}
+  {{- if ne .File.BaseFileName "_template" -}}
+    {{- $slug := .File.BaseFileName -}}
+    {{- $company := merge .Params (dict "slug" $slug) (index $derivedCompanies $slug | default dict) -}}
+    {{- $companies = $companies | append $company -}}
+  {{- end -}}
+{{- end -}}
+{{- $companies = sort $companies "name" -}}
+{{- $taxonomies := hugo.Data.taxonomies -}}
 
 <div class="grid directory-header">
   <nav aria-label="breadcrumb" class="col-8 col-md-6 directory-breadcrumb">

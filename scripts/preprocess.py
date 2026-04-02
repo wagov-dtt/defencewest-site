@@ -3,6 +3,7 @@
 Preprocess company data for directory site.
 
 Generates:
+  - data/generated/companies.json: Derived fields for Hugo templates
   - static/maps/*.png: Static minimap images for companies
   - static/maps/terms/*.png: Static map images for taxonomy terms
   - static/companies.csv, .xlsx, .json: Export files
@@ -13,6 +14,7 @@ Usage:
 
 import hashlib
 import json
+import re
 from typing import Any
 from pathlib import Path
 
@@ -41,6 +43,42 @@ from config import (
 
 # Initialize markdown-it for HTML conversion
 md = markdown_it.MarkdownIt()
+
+OVERVIEW_SHORT_LENGTH = 300
+WHITESPACE_RE = re.compile(r"\s+")
+
+
+def normalize_text(value: Any) -> str:
+    """Return a stripped single-line string."""
+    if value is None:
+        return ""
+    return WHITESPACE_RE.sub(" ", str(value)).strip()
+
+
+def derive_company_fields(company: dict[str, Any]) -> dict[str, str]:
+    """Return derived fields shared by exports and Hugo templates."""
+    slug = normalize_text(company.get("slug"))
+    name = normalize_text(company.get("name"))
+    overview = normalize_text(company.get("overview"))
+    logo_path = STATIC_DIR / "logos" / f"{slug}.png"
+    return {
+        "search": f"{name} {overview}".strip().lower(),
+        "overview_short": overview[:OVERVIEW_SHORT_LENGTH]
+        + ("..." if len(overview) > OVERVIEW_SHORT_LENGTH else ""),
+        "logo_url": f"/logos/{slug}.png" if slug and logo_path.exists() else "",
+    }
+
+
+def export_template_data(companies: list[dict], output: Path) -> None:
+    """Export derived company fields for Hugo templates."""
+    data = {
+        c.get("slug", ""): derive_company_fields(c)
+        for c in companies
+        if c.get("slug")
+    }
+    output.parent.mkdir(parents=True, exist_ok=True)
+    output.write_text(json.dumps(data, indent=2, sort_keys=True))
+
 
 # --- Map rendering ---
 
@@ -172,24 +210,15 @@ def _build_export_rows(companies: list[dict], taxonomies: dict) -> list[dict]:
     rows = []
     for c in companies:
         slug = c.get("slug", "")
-
-        # Compute logo_url
-        logo_path = STATIC_DIR / "logos" / f"{slug}.png"
-        logo_url = f"/logos/{slug}.png" if logo_path.exists() else ""
-
-        # Compute overview_short
         overview = c.get("overview") or ""
-        overview_short = overview[:150] + ("..." if len(overview) > 150 else "")
-
-        # Compute search text
-        search_text = (c.get("name", "") + " " + overview).lower().strip()
+        derived = derive_company_fields(c)
 
         rows.append(
             {
                 "name": c.get("name", ""),
                 "date": c.get("date", ""),
                 "overview": overview,
-                "overview_short": overview_short,
+                "overview_short": derived["overview_short"],
                 "website": c.get("website", ""),
                 "contact_name": c.get("contact_name", ""),
                 "contact_title": c.get("contact_title", ""),
@@ -199,8 +228,8 @@ def _build_export_rows(companies: list[dict], taxonomies: dict) -> list[dict]:
                 "latitude": c.get("latitude"),
                 "longitude": c.get("longitude"),
                 "slug": slug,
-                "logo_url": logo_url,
-                "search": search_text,
+                "logo_url": derived["logo_url"],
+                "search": derived["search"],
                 "company_types": keys_to_names(c.get("company_types"), "company_types"),
                 "stakeholders": keys_to_names(c.get("stakeholders"), "stakeholders"),
                 "capability_streams": keys_to_names(
@@ -270,27 +299,11 @@ def export_xlsx(df: pd.DataFrame, output: Path) -> None:
 
 
 def export_json(companies: list[dict], output: Path) -> None:
-    """Export full JSON - all frontmatter fields plus computed fields."""
+    """Export full JSON - all frontmatter fields plus derived fields."""
     data = []
     for c in companies:
         entry = {k: v for k, v in c.items() if not k.startswith("_")}
-
-        # Add search text (lowercase name + overview)
-        search_text = (
-            entry.get("name", "") + " " + (entry.get("overview") or "")
-        ).lower()
-        entry["search"] = search_text.strip()
-
-        # Add logo URL
-        slug = entry.get("slug", "")
-        logo_path = STATIC_DIR / "logos" / f"{slug}.png"
-        entry["logo_url"] = f"/logos/{slug}.png" if logo_path.exists() else ""
-
-        # Add truncated overview (150 chars)
-        overview = entry.get("overview") or ""
-        entry["overview_short"] = overview[:150] + (
-            "..." if len(overview) > 150 else ""
-        )
+        entry.update(derive_company_fields(entry))
 
         # Add HTML content if present
         if c.get("_content"):
@@ -306,19 +319,16 @@ def export_map_json(companies: list[dict], output: Path) -> None:
     data = []
     for c in companies:
         slug = c.get("slug", "")
-        logo_path = STATIC_DIR / "logos" / f"{slug}.png"
         overview = c.get("overview") or ""
-        search_text = (c.get("name", "") + " " + overview).lower().strip()
+        derived = derive_company_fields(c)
         data.append(
             {
                 "slug": slug,
                 "name": c.get("name", ""),
                 "overview": overview,
-                "overview_short": overview[:150] + (
-                    "..." if len(overview) > 150 else ""
-                ),
-                "logo_url": f"/logos/{slug}.png" if logo_path.exists() else "",
-                "search": search_text,
+                "overview_short": derived["overview_short"],
+                "logo_url": derived["logo_url"],
+                "search": derived["search"],
                 "latitude": c.get("latitude"),
                 "longitude": c.get("longitude"),
                 "stakeholders": c.get("stakeholders", []),
@@ -376,11 +386,12 @@ def main():
     STATIC_DIR.mkdir(parents=True, exist_ok=True)
     rows = _build_export_rows(companies, taxonomies)
     df = pd.DataFrame(rows).sort_values("name", ignore_index=True)
+    export_template_data(companies, DATA_DIR / "generated" / "companies.json")
     export_csv(df, STATIC_DIR / "companies.csv")
     export_xlsx(df, STATIC_DIR / "companies.xlsx")
     export_json(companies, STATIC_DIR / "companies.json")
     export_map_json(companies, STATIC_DIR / "companies-map.json")
-    print("Exported to CSV, XLSX, JSON, map JSON")
+    print("Exported template data, CSV, XLSX, JSON, map JSON")
 
     # Generate maps
     if not company_locations:
