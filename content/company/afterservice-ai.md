@@ -13,7 +13,6 @@ company_types:
 - educational
 - government
 - large-enterprise
-- prime
 - research
 stakeholders:
 - defence-west
