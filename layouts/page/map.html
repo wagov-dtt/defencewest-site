@@ -5,6 +5,10 @@
 {{- $picoTheme := .Site.Params.picoTheme -}}
 {{- $cdn := .Site.Params.cdnUrl -}}
 {{- $mapStyleUrl := .Site.Params.mapStyleUrl -}}
+{{- $picoIntegrity := "" -}}
+{{- if eq $picoTheme "slate" -}}
+  {{- $picoIntegrity = "sha384-J+X7LzreX1Q5wCeVJ+CEPEQ5HIs+nDl93Zs+iowCSvQwUpzl7F0XwvIVS6gycKnD" -}}
+{{- end -}}
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
 <head>
@@ -12,8 +16,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Map</title>
   <base target="_top">
-  <link rel="stylesheet" href="{{ $cdn }}/maplibre-gl@5/dist/maplibre-gl.css">
-  <link rel="stylesheet" href="{{ $cdn }}/@picocss/pico@2/css/pico.conditional.{{ $picoTheme }}.min.css">
+  <link rel="stylesheet" href="{{ $cdn }}/maplibre-gl@5.21.1/dist/maplibre-gl.css" integrity="sha384-MGCxhspF/+ufueUgol3FDkiAYQbpSNRhBT0VWHJt64U8qIy9qlnXWx8LAbj6niPH" crossorigin="anonymous">
+  <link rel="stylesheet" href="{{ $cdn }}/@picocss/pico@2.1.1/css/pico.conditional.{{ $picoTheme }}.min.css"{{ with $picoIntegrity }} integrity="{{ . }}" crossorigin="anonymous"{{ end }}>
   <link rel="stylesheet" href="{{ "styles.css" | relURL }}">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -86,7 +90,7 @@
 
 
 
-  <script src="{{ $cdn }}/maplibre-gl@5/dist/maplibre-gl.js"></script>
+  <script src="{{ $cdn }}/maplibre-gl@5.21.1/dist/maplibre-gl.js" integrity="sha384-vbG0lp4a0ruKpgj9NCNl23DiFSS04ePeadthqzXUJxhJAOlOqZ69BjLeFXCFn0b8" crossorigin="anonymous"></script>
   <script>var TAXONOMIES = {{ .Site.Params.taxonomyOrder | jsonify | safeJS }};</script>
   <script src="{{ "filter-utils.js" | relURL }}"></script>
   <script>
@@ -101,7 +105,7 @@
     };
 
     async function loadCompanies() {
-      const res = await fetch("{{ "companies.json" | relURL }}");
+      const res = await fetch("{{ "companies-map.json" | relURL }}");
       const companies = await res.json();
       companies.forEach(c => {
         TAXONOMIES.forEach(tax => { c[tax] = (c[tax] || []).join("|"); });

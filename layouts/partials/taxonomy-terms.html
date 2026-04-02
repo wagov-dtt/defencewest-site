@@ -2,7 +2,7 @@
 {{- $page := .page -}}
 {{- $taxonomy := .taxonomy -}}
 {{- $title := .title -}}
-{{- $taxonomies := $page.Site.Data.taxonomies -}}
+{{- $taxonomies := hugo.Data.taxonomies -}}
 {{- $taxonomyMap := index $taxonomies $taxonomy -}}
 {{- with $page.GetTerms $taxonomy }}
 <strong class="sidebar-section">{{ $title }}</strong>

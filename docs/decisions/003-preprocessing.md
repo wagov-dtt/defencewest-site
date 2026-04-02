@@ -13,7 +13,8 @@ Directory has 300+ companies with search, filtering, and maps. Pre-rendering map
 Pre-generate static assets in Python before Hugo build:
 
 - **`static/maps/*.png`**: Pre-rendered minimap images
-- **`static/companies.json`**: Export file for data access
+- **`static/companies.json`**: Full export file for data access
+- **`static/companies-map.json`**: Slim runtime payload for the interactive map
 - **No runtime computation**: All data ready in HTML
 
 Note: Search text and truncated overviews are now computed inline by Hugo templates using built-in `lower` and `truncate` functions.

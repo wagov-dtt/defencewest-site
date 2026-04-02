@@ -13,6 +13,7 @@ Usage:
 
 import json
 from datetime import datetime, timedelta
+from typing import Any
 from pathlib import Path
 
 import httpx
@@ -23,6 +24,7 @@ from openpyxl.utils import get_column_letter
 from mlnative import Map, from_latlng
 
 from config import (
+    cache,
     params,
     COMPANY_DIR,
     DATA_DIR,
@@ -43,11 +45,22 @@ md = markdown_it.MarkdownIt()
 # --- Map rendering ---
 
 
-def setup_map(width: int = MAP_WIDTH, height: int = MAP_HEIGHT) -> tuple[Map, dict]:
-    """Create a Map instance and load style with marker layers."""
-    response = httpx.get(params["mapStyleUrl"])
+def fetch_map_style() -> dict:
+    """Fetch map style JSON with cache and short timeout."""
+    cache_key = f"map-style:{params['mapStyleUrl']}"
+    if cache_key in cache:
+        return cache[cache_key]
+
+    response = httpx.get(params["mapStyleUrl"], follow_redirects=True, timeout=10.0)
     response.raise_for_status()
     style = response.json()
+    cache[cache_key] = style
+    return style
+
+
+def setup_map(width: int = MAP_WIDTH, height: int = MAP_HEIGHT) -> tuple[Map, dict]:
+    """Create a Map instance and load style with marker layers."""
+    style = fetch_map_style()
     style["sources"]["markers"] = {
         "type": "geojson",
         "data": {"type": "FeatureCollection", "features": []},
@@ -148,20 +161,36 @@ def _build_export_rows(companies: list[dict], taxonomies: dict) -> list[dict]:
     return rows
 
 
+def sanitize_spreadsheet_cell(value: Any) -> Any:
+    """Escape spreadsheet formula prefixes in text cells."""
+    if not isinstance(value, str) or not value:
+        return value
+    if value[0] in ("=", "+", "-", "@", "	") or value[0] == "\0":
+        return "'" + value
+    return value
+
+
+def sanitize_spreadsheet_df(df: pd.DataFrame) -> pd.DataFrame:
+    """Return a copy with spreadsheet-dangerous string cells escaped."""
+    return df.map(sanitize_spreadsheet_cell)
+
+
 def export_csv(df: pd.DataFrame, output: Path) -> None:
     """Export DataFrame to CSV."""
-    df.to_csv(output, index=False)
+    sanitize_spreadsheet_df(df).to_csv(output, index=False)
 
 
 def export_xlsx(df: pd.DataFrame, output: Path) -> None:
     """Export DataFrame to XLSX with formatting."""
 
+    safe_df = sanitize_spreadsheet_df(df)
+
     with pd.ExcelWriter(output, engine="openpyxl") as writer:
-        df.to_excel(writer, index=False, sheet_name="Companies")
+        safe_df.to_excel(writer, index=False, sheet_name="Companies")
         ws = writer.sheets["Companies"]
 
         # Hyperlinks for website column
-        website_col = list(df.columns).index("website") + 1
+        website_col = list(safe_df.columns).index("website") + 1
         for row_idx, url in enumerate(df["website"], start=2):
             if url and isinstance(url, str) and url.startswith("http"):
                 cell = ws.cell(row=row_idx, column=website_col)
@@ -169,8 +198,8 @@ def export_xlsx(df: pd.DataFrame, output: Path) -> None:
                 cell.style = "Hyperlink"
 
         # Auto-width columns
-        for idx, col in enumerate(df.columns):
-            col_data = df[col].fillna("").astype(str)
+        for idx, col in enumerate(safe_df.columns):
+            col_data = safe_df[col].fillna("").astype(str)
             width = min(
                 max(col_data.map(len).max(), len(col)) + 2,
                 80 if col == "markdown" else 50,
@@ -181,7 +210,7 @@ def export_xlsx(df: pd.DataFrame, output: Path) -> None:
 
 
 def export_json(companies: list[dict], output: Path) -> None:
-    """Export to JSON - all frontmatter fields plus computed fields for map."""
+    """Export full JSON - all frontmatter fields plus computed fields."""
     data = []
     for c in companies:
         entry = {k: v for k, v in c.items() if not k.startswith("_")}
@@ -208,6 +237,39 @@ def export_json(companies: list[dict], output: Path) -> None:
             entry["content_html"] = md.render(c["_content"].strip())
 
         data.append(entry)
+    data.sort(key=lambda x: (x.get("name") or "").lower())
+    output.write_text(json.dumps(data, indent=2))
+
+
+def export_map_json(companies: list[dict], output: Path) -> None:
+    """Export slim JSON for the interactive map only."""
+    data = []
+    for c in companies:
+        slug = c.get("slug", "")
+        logo_path = STATIC_DIR / "logos" / f"{slug}.png"
+        overview = c.get("overview") or ""
+        search_text = (c.get("name", "") + " " + overview).lower().strip()
+        data.append(
+            {
+                "slug": slug,
+                "name": c.get("name", ""),
+                "overview": overview,
+                "overview_short": overview[:150] + (
+                    "..." if len(overview) > 150 else ""
+                ),
+                "logo_url": f"/logos/{slug}.png" if logo_path.exists() else "",
+                "search": search_text,
+                "latitude": c.get("latitude"),
+                "longitude": c.get("longitude"),
+                "stakeholders": c.get("stakeholders", []),
+                "capability_streams": c.get("capability_streams", []),
+                "capability_domains": c.get("capability_domains", []),
+                "industrial_capabilities": c.get("industrial_capabilities", []),
+                "regions": c.get("regions", []),
+                "ownerships": c.get("ownerships", []),
+                "company_types": c.get("company_types", []),
+            }
+        )
     data.sort(key=lambda x: (x.get("name") or "").lower())
     output.write_text(json.dumps(data, indent=2))
 
@@ -257,7 +319,8 @@ def main():
     export_csv(df, STATIC_DIR / "companies.csv")
     export_xlsx(df, STATIC_DIR / "companies.xlsx")
     export_json(companies, STATIC_DIR / "companies.json")
-    print("Exported to CSV, XLSX, JSON")
+    export_map_json(companies, STATIC_DIR / "companies-map.json")
+    print("Exported to CSV, XLSX, JSON, map JSON")
 
     # Generate maps
     if not company_locations:

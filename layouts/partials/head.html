@@ -14,7 +14,7 @@
 {{- $cdn := .Site.Params.cdnUrl -}}
 <link rel="stylesheet" href="{{ printf "pico.%s.min.css" $picoTheme | relURL }}">
 <link rel="stylesheet" href="{{ "styles.css" | relURL }}">
-<script src="{{ $cdn }}/lucide@latest/dist/umd/lucide.min.js" defer></script>
+<script src="{{ $cdn }}/lucide@1.7.0/dist/umd/lucide.min.js" integrity="sha384-CykfT8/c0napBs4OEPBYSNzMhNhJUvjNEulxWZVAK+p2D3vEfYGg9zyOd8bzqyNO" crossorigin="anonymous" defer></script>
 
 {{/* Page title - handle different page types */}}
 {{- $pageTitle := .Site.Title -}}
@@ -26,7 +26,7 @@
   {{- $pageTitle = printf "%s | %s" .Params.name .Site.Title -}}
 {{- else if eq .Kind "term" -}}
   {{/* Term page: e.g., "Perth - Regions | Site Title" */}}
-  {{- $taxonomies := .Site.Data.taxonomies -}}
+  {{- $taxonomies := hugo.Data.taxonomies -}}
   {{- $taxonomyMap := index $taxonomies .Data.Plural -}}
   {{- $displayName := index $taxonomyMap .Data.Term | default .Data.Term -}}
   {{- $taxonomyTitle := index $taxonomyTitles .Data.Plural | default (.Data.Plural | humanize | title) -}}

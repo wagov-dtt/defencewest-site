@@ -7,7 +7,7 @@ Western Australia's Defence Industry and Science Capability Directory - a static
 ## Quick Links
 
 - **Contribute code** -> [CONTRIBUTING.md](CONTRIBUTING.md) (for developers and admins)
-- **AI agent guide** -> [AGENTS.md](AGENTS.md) (for AI assistants)
+- **AI agent guide** -> [CONTRIBUTING.md#ai-agents](CONTRIBUTING.md#ai-agents)
 
 ## Tech Stack
 
@@ -19,7 +19,7 @@ Western Australia's Defence Industry and Science Capability Directory - a static
 ## Documentation
 
 - [CONTRIBUTING.md](CONTRIBUTING.md) - Contributing guide, development setup, admin tasks
-- [AGENTS.md](AGENTS.md) - AI agent development guide
+- [CONTRIBUTING.md#ai-agents](CONTRIBUTING.md#ai-agents) - AI agent guidance
 - [ACCESSIBILITY.md](ACCESSIBILITY.md) - Accessibility statement and testing approach
 - [docs/decisions/](docs/decisions/) - Architecture Decision Records
 

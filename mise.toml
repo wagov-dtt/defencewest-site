@@ -1,10 +1,10 @@
 [tools]
 python = "3.12"
-uv = "latest"
-hugo = "latest"
-lychee = "latest"
-"github:kristoff-it/superhtml" = "latest"
-"github:boyter/scc" = "latest"
+uv = "0.11.3"
+hugo = "0.159.2"
+lychee = "0.23.0"
+"github:kristoff-it/superhtml" = "0.6.2"
+"github:boyter/scc" = "3.7.0"
 
 [env]
 PYTHONDONTWRITEBYTECODE = "1"

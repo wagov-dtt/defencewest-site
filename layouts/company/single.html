@@ -1,7 +1,7 @@
 {{ define "main" }}
 {{- $company := .Params -}}
 {{- $slug := .File.BaseFileName -}}
-{{- $taxonomies := .Site.Data.taxonomies -}}
+{{- $taxonomies := hugo.Data.taxonomies -}}
 
 {{/* Simple derivations stay in Hugo */}}
 {{- $logoPath := printf "/logos/%s.png" $slug -}}
@@ -98,7 +98,7 @@
           {{- if or $hasStreams $hasOwnerships }}
           <div class="grid taxonomy-row">
             {{- with $hasStreams }}
-            {{- $taxonomies := $.Site.Data.taxonomies -}}
+            {{- $taxonomies := hugo.Data.taxonomies -}}
             <div class="taxonomy-column">
               <strong class="sidebar-section">Capability Streams</strong>
               <div class="stream-icons">
@@ -112,7 +112,7 @@
             </div>
             {{- end }}
             {{- with $hasOwnerships }}
-            {{- $taxonomies := $.Site.Data.taxonomies -}}
+            {{- $taxonomies := hugo.Data.taxonomies -}}
             <div class="taxonomy-column">
               <strong class="sidebar-section">Ownership</strong>
               <div class="ownership-icons">

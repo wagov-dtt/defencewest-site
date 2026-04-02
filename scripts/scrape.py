@@ -182,10 +182,7 @@ def resolve_url(url: str) -> str:
         url = f"https://{url}"
 
     try:
-        # verify=False: Intentionally disabled for URL resolution. Source sites often
-        # have outdated/invalid certificates. We only do HEAD requests to check redirects,
-        # no sensitive data is transmitted.
-        with httpx.Client(timeout=3, verify=False, follow_redirects=True) as client:  # nosec: B501
+        with httpx.Client(timeout=3, follow_redirects=True) as client:
             r = client.head(url)
             if r.status_code < 400:
                 return str(r.url).rstrip("/")

@@ -20,6 +20,7 @@ static/maps
 static/companies.csv
 static/companies.xlsx
 static/companies.json
+static/companies-map.json
 
 # IDE
 .idea/

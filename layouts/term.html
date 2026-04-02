@@ -4,7 +4,7 @@
   e.g., /regions/perth/ shows all companies in Perth
   Two-column layout: company cards + map embed
 */}}
-{{- $taxonomies := .Site.Data.taxonomies -}}
+{{- $taxonomies := hugo.Data.taxonomies -}}
 {{- $taxonomyName := .Data.Plural -}}
 {{- $termKey := .Data.Term -}}
 {{- $taxonomyMap := index $taxonomies $taxonomyName -}}
@@ -34,7 +34,7 @@
   {{/* Cards column */}}
   <div class="col-12 col-md-6">
     <div class="grid">
-      {{- range .Pages.ByTitle }}
+      {{- range .Pages.ByParam "name" }}
       {{- $slug := .File.BaseFileName -}}
       {{- $companyData := merge .Params (dict "slug" $slug) }}
       {{- partial "company-card.html" (dict "company" $companyData "mode" "directory") }}

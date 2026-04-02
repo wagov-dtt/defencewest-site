@@ -3,7 +3,7 @@
 {{- $company := .Params -}} {{-
 $company = merge $company (dict "slug" .File.BaseFileName) -}} {{- $companies =
 $companies | append $company -}} {{- end -}} {{- end -}} {{- $companies = sort $companies
-"name" -}} {{- $taxonomies := .Site.Data.taxonomies -}}
+"name" -}} {{- $taxonomies := hugo.Data.taxonomies -}}
 
 <div class="grid directory-header">
   <nav aria-label="breadcrumb" class="col-8 col-md-6 directory-breadcrumb">
