@@ -32,9 +32,8 @@ data/
 hugo.toml              Site config, CDN URLs, map settings
 
 scripts/
-  config.py            Shared config, paths, constants, slug utilities
+  config.py            Shared config, paths, and constants
   preprocess.py        Generates maps and export files
-  scrape.py            Scrapes data from the source website
 
 layouts/               Hugo templates
 layouts/partials/      Shared components
@@ -214,12 +213,9 @@ Use `uv run` for Python scripts.
 ```bash
 # Correct
 uv run python scripts/preprocess.py
-uv run python scripts/scrape.py
-uv run python scripts/import_submission.py path/to/submission.json
 
 # Wrong
 python scripts/preprocess.py
-python3 scripts/scrape.py
 ```
 
 `uv` manages the virtual environment and dependencies defined in `pyproject.toml`.
@@ -266,7 +262,7 @@ Requirements:
 
 ### preprocess.py
 
-Generates maps and export files.
+Generates maps and export files. Map outputs are invalidated by content changes and stale map files are removed automatically.
 
 ```bash
 mise run preprocess
@@ -274,30 +270,13 @@ mise run preprocess
 
 Outputs include:
 
-- `static/maps/*.png`
-- `static/maps/terms/*.png`
+- `static/maps/*.png` plus `static/maps/*.sha256` cache sidecars
+- `static/maps/terms/*.png` plus `static/maps/terms/*.sha256` cache sidecars
 - `static/companies.json`
 - `static/companies-map.json`
 - `static/*.csv`
 - `static/*.xlsx`
 
-### scrape.py
-
-Re-scrapes company data from the source directory.
-
-```bash
-uv run python scripts/scrape.py
-uv run python scripts/scrape.py --fresh
-```
-
-Features:
-
-- caches HTML and images in `.cache/diskcache/`
-- resolves website URLs
-- geocodes addresses
-- optimizes logos and icons
-- cleans markdown
-- regenerates `data/taxonomies.yaml`
 
 ### config.py
 
@@ -306,11 +285,7 @@ Shared configuration for scripts, including:
 - project paths
 - Hugo config loading
 - taxonomy constants
-- slug generation utilities
 - progress helpers
-- taxonomy validation helpers
-
-Security-related libraries used here include `pathvalidate`, `validators`, and `python-slugify`.
 
 ## Accessibility
 

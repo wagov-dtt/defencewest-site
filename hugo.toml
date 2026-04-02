@@ -86,9 +86,6 @@ uglyURLs = false
   # Map settings (OpenFreeMap Liberty)
   mapStyleUrl = "https://tiles.openfreemap.org/styles/liberty"
 
-  # Scraping URLs
-  scrapeBaseUrl = "https://www.deed.wa.gov.au/wa-defence-industry-and-science-capability-directory"
-  scrapeMapUrl = "https://www.deed.wa.gov.au/defence-map"
 
   # External URLs
   mapsUrl = "https://www.google.com/maps"

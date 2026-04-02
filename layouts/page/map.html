@@ -113,24 +113,94 @@
       return companies;
     }
 
-    function popupHTML(c) {
-      const logo = c.logo_url
-        ? `<img src="${c.logo_url}" alt="">`
-        : `<span class="initials">${c.name.slice(0,2).toUpperCase()}</span>`;
-      const types = (c.company_types || "").split("|").filter(Boolean);
-      const badges = types.map(t => `<small>${TYPE_LABELS[t] || t}</small>`).join("");
-      const indigenous = (c.ownerships || "").includes("indigenous")
-        ? `<small class="highlight">Indigenous</small>` : "";
-      const veteran = (c.ownerships || "").includes("veteran")
-        ? `<small class="highlight">Veteran</small>` : "";
-      const overview = c.overview_short
-        ? `<p class="overview"><small title="${c.overview || ""}">${c.overview_short}</small></p>` : "";
-      return `<div class="pico"><a href="../company/${c.slug}/" class="company-card"><article>
-        <div class="logo-area">${logo}</div>
-        <div class="name">${c.name}</div>
-        <div class="badges">${badges}${indigenous}${veteran}</div>
-        ${overview}
-      </article></a></div>`;
+    const SAFE_SLUG_RE = /^[a-z0-9][a-z0-9-]*$/;
+    const SAFE_LOGO_RE = /^\/logos\/[a-z0-9][a-z0-9-]*\.png$/;
+
+    function asText(value) {
+      return typeof value === "string" ? value : "";
+    }
+
+    function buildCompanyHref(slug) {
+      return SAFE_SLUG_RE.test(slug) ? `../company/${slug}/` : null;
+    }
+
+    function buildLogoUrl(logoUrl) {
+      return SAFE_LOGO_RE.test(logoUrl) ? logoUrl : null;
+    }
+
+    function popupContent(c) {
+      const name = asText(c.name);
+      const slug = asText(c.slug);
+      const overview = asText(c.overview);
+      const overviewShort = asText(c.overview_short);
+      const companyHref = buildCompanyHref(slug);
+      const logoUrl = buildLogoUrl(asText(c.logo_url));
+      const companyTypes = asText(c.company_types).split("|").filter(Boolean);
+      const ownerships = asText(c.ownerships).split("|").filter(Boolean);
+
+      const wrapper = document.createElement("div");
+      wrapper.className = "pico";
+
+      const card = document.createElement(companyHref ? "a" : "div");
+      card.className = "company-card";
+      if (companyHref) card.href = companyHref;
+
+      const article = document.createElement("article");
+
+      const logoArea = document.createElement("div");
+      logoArea.className = "logo-area";
+      if (logoUrl) {
+        const img = document.createElement("img");
+        img.src = logoUrl;
+        img.alt = "";
+        logoArea.appendChild(img);
+      } else {
+        const initials = document.createElement("span");
+        initials.className = "initials";
+        initials.textContent = name.slice(0, 2).toUpperCase();
+        logoArea.appendChild(initials);
+      }
+      article.appendChild(logoArea);
+
+      const nameEl = document.createElement("div");
+      nameEl.className = "name";
+      nameEl.textContent = name;
+      article.appendChild(nameEl);
+
+      const badges = document.createElement("div");
+      badges.className = "badges";
+      companyTypes.forEach(type => {
+        const badge = document.createElement("small");
+        badge.textContent = TYPE_LABELS[type] || type;
+        badges.appendChild(badge);
+      });
+      if (ownerships.includes("indigenous")) {
+        const badge = document.createElement("small");
+        badge.className = "highlight";
+        badge.textContent = "Indigenous";
+        badges.appendChild(badge);
+      }
+      if (ownerships.includes("veteran")) {
+        const badge = document.createElement("small");
+        badge.className = "highlight";
+        badge.textContent = "Veteran";
+        badges.appendChild(badge);
+      }
+      article.appendChild(badges);
+
+      if (overviewShort) {
+        const overviewEl = document.createElement("p");
+        overviewEl.className = "overview";
+        const small = document.createElement("small");
+        if (overview) small.title = overview;
+        small.textContent = overviewShort;
+        overviewEl.appendChild(small);
+        article.appendChild(overviewEl);
+      }
+
+      card.appendChild(article);
+      wrapper.appendChild(card);
+      return wrapper;
     }
 
     const companies = await loadCompanies();
@@ -169,7 +239,7 @@
       dot.className = "marker-dot";
 
       const popup = new maplibregl.Popup({ offset: 10, closeButton: false })
-        .setHTML(popupHTML(c));
+        .setDOMContent(popupContent(c));
 
       const marker = new maplibregl.Marker({ element: dot })
         .setLngLat([c.longitude, c.latitude])

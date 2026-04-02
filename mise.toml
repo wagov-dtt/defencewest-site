@@ -69,11 +69,6 @@ run = "mkdir -p .ci-reports/linkcheck && lychee public/ --no-progress --format j
 description = "Check HTML validity with superhtml"
 run = "find public -name '*.html' | xargs superhtml check"
 
-[tasks.scrape]
-run = "uv run python scripts/scrape.py"
-
-[tasks.scrape-fresh]
-run = "uv run python scripts/scrape.py --fresh"
 
 [tasks.scc]
 description = "Count lines of code with SCC"

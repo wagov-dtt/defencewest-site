@@ -11,8 +11,8 @@ Usage:
     uv run python scripts/preprocess.py
 """
 
+import hashlib
 import json
-from datetime import datetime, timedelta
 from typing import Any
 from pathlib import Path
 
@@ -69,6 +69,67 @@ def setup_map(width: int = MAP_WIDTH, height: int = MAP_HEIGHT) -> tuple[Map, di
     return Map(width, height, pixel_ratio=2), style
 
 
+def map_input_digest(
+    locations: list[tuple[float, float]],
+    *,
+    max_zoom: float,
+    zoom_out: float,
+) -> str:
+    """Return a stable digest for rendered map inputs."""
+    payload = {
+        "locations": sorted((round(lat, 6), round(lng, 6)) for lat, lng in locations),
+        "max_zoom": max_zoom,
+        "zoom_out": zoom_out,
+        "style_url": params["mapStyleUrl"],
+        "marker_layers": MAP_MARKER_LAYERS,
+        "width": MAP_WIDTH,
+        "height": MAP_HEIGHT,
+        "pixel_ratio": 2,
+    }
+    encoded = json.dumps(payload, sort_keys=True, separators=(",", ":")).encode()
+    return hashlib.sha256(encoded).hexdigest()
+
+
+def sidecar_path(output: Path) -> Path:
+    """Return sidecar path storing the last rendered input digest."""
+    return output.with_suffix(".sha256")
+
+
+def needs_render(output: Path, digest: str) -> bool:
+    """Return True when map output is missing or input digest changed."""
+    sidecar = sidecar_path(output)
+    if not output.exists() or not sidecar.exists():
+        return True
+    return sidecar.read_text().strip() != digest
+
+
+def write_digest(output: Path, digest: str) -> None:
+    """Write sidecar digest for a rendered map."""
+    sidecar_path(output).write_text(digest + "\n")
+
+
+def cleanup_orphan_maps(output_dir: Path, expected_stems: set[str]) -> int:
+    """Delete orphaned PNGs and digest sidecars not backed by current inputs."""
+    removed = 0
+    if not output_dir.exists():
+        return removed
+
+    expected_names = {f"{stem}.png" for stem in expected_stems}
+    expected_sidecars = {f"{stem}.sha256" for stem in expected_stems}
+
+    for path in output_dir.iterdir():
+        if not path.is_file():
+            continue
+        if path.suffix == ".png" and path.name not in expected_names:
+            path.unlink()
+            removed += 1
+        elif path.suffix == ".sha256" and path.name not in expected_sidecars:
+            path.unlink()
+            removed += 1
+
+    return removed
+
+
 def render_map(
     m: Map,
     style: dict,
@@ -76,13 +137,11 @@ def render_map(
     output: Path,
     max_zoom: float = 13,
     zoom_out: float = 0.2,
-    max_age_days: float = 1,
 ) -> bool:
     """Render map with markers. Returns True if rendered, False if cached."""
-    if output.exists():
-        mtime = datetime.fromtimestamp(output.stat().st_mtime)
-        if datetime.now() - mtime < timedelta(days=max_age_days):
-            return False
+    digest = map_input_digest(locations, max_zoom=max_zoom, zoom_out=zoom_out)
+    if not needs_render(output, digest):
+        return False
 
     geom = from_latlng(locations)
 
@@ -96,6 +155,7 @@ def render_map(
     center, zoom = m.fit_bounds(bounds, max_zoom=max_zoom)
     png = m.render(center=center, zoom=zoom - zoom_out)
     output.write_bytes(png)
+    write_digest(output, digest)
     return True
 
 
@@ -332,6 +392,18 @@ def main():
     MAPS_DIR.mkdir(parents=True, exist_ok=True)
     TERM_MAPS_DIR.mkdir(parents=True, exist_ok=True)
 
+    company_map_stems = {slug for slug, _lat, _lng in company_locations}
+    removed_company = cleanup_orphan_maps(MAPS_DIR, company_map_stems)
+
+    term_maps = [
+        (f"{tax}-{key}", locs)
+        for tax, terms in term_locations.items()
+        for key, locs in terms.items()
+        if locs
+    ]
+    term_map_stems = {key for key, _locs in term_maps}
+    removed_term = cleanup_orphan_maps(TERM_MAPS_DIR, term_map_stems)
+
     with m:
         # Company maps
         count = 0
@@ -342,16 +414,10 @@ def main():
                     count += 1
                 progress.update(task, advance=1)
         print(
-            f"Generated {count} company maps ({len(company_locations) - count} cached)"
+            f"Generated {count} company maps ({len(company_locations) - count} cached, {removed_company} orphan files removed)"
         )
 
         # Term maps
-        term_maps = [
-            (f"{tax}-{key}", locs)
-            for tax, terms in term_locations.items()
-            for key, locs in terms.items()
-            if locs
-        ]
         count = 0
         with make_progress() as progress:
             task = progress.add_task("Term maps...", total=len(term_maps))
@@ -359,7 +425,9 @@ def main():
                 if render_map(m, style, locs, TERM_MAPS_DIR / f"{key}.png"):
                     count += 1
                 progress.update(task, advance=1)
-        print(f"Generated {count} term maps ({len(term_maps) - count} cached)")
+        print(
+            f"Generated {count} term maps ({len(term_maps) - count} cached, {removed_term} orphan files removed)"
+        )
 
 
 if __name__ == "__main__":
