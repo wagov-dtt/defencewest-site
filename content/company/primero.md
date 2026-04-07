@@ -63,7 +63,7 @@ longitude: 115.80096
 
 ## Overview
 
-Aspiring to make a difference and add value to Defence, Primero is an established and highly regarded multidisciplinary engineering, procurement, and construction company currently specialising in delivering comprehensive, fully integrated solutions to the mining, energy and resource sectors.
+Aspiring to make a difference and add value to Defence, Primero is an established and highly regarded national multidisciplinary engineering, procurement, and construction company specialising in delivering comprehensive, fully integrated solutions to the mining, energy and defence sectors.
 From feasibility studies and early-stage design to construction, operations and ongoing maintenance and sustaining capital services, Primero's expertise spans the entire project lifecycle.
 By leveraging our extensive industry knowledge and resources, we provide tailored solutions that meet the unique challenges of our clients, ensuring success from concept through to operations.
 ## Capabilities
@@ -71,9 +71,9 @@ By leveraging our extensive industry knowledge and resources, we provide tailore
 •	In-house vertically integrated, self-performing full lifecycle: Design, Engineering, Production, Construction, Operational Control and Asset Management
 •	End-to-end customised solutions including Power Generation, Fuel Facilities, Water Management, Warehousing/Storage, Sustainable/Hybrid Renewable Energy, Structural Steelwork, Electrical, Instrumentation, Control Systems
 •	In-house Sustainment capability: Access, Coatings, Electrical and Instrumentation, Mechanical, Piping and Civil works.
-•	In house multidisciplinary team including 200+  Engineers and advanced Project Managers for safe, seamless, efficient, consistent  and high quality, cost-effective delivery
+•	In house multidisciplinary team including 200+ Engineers, 2000+ Blue Collar Trades and Labour construction personnel and advanced Project Managers for safe, seamless, efficient, consistent  and high quality, cost-effective delivery
 •	Henderson based advanced manufacturing workshop facilities
-•	Full-service Project Lifecycle support, utilising NRW’s extensive capabilities
+•	Full-service Project Lifecycle support, utilising NRW’s extensive capabilities, Primero is ISO 9001 Quality, ISO 45001 Health and Safety and ISO 19443 stage 1 Nuclear certified
 ## Discriminators
 
 •	Australian owned
