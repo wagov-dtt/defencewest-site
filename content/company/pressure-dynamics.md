@@ -5,11 +5,11 @@ overview: 'Pressure Dynamics International
 
   An engineering and services contractor specialising in hydraulic and lifting solutions operating across multiple sectors'
 website: https://www.pressuredynamics.com
-contact_name: Davide Sirolli
-contact_title: National Sales Manager
+contact_name: Simon Helm
+contact_title: Commercial and Strategy Manager
 address: 234 Barrington Street, Bibra Lake WA 6163
-phone: 08 9473 7277
-email: davide.sirolli@pressuredynamics.com
+phone: 0419 764 323
+email: simon.helm@pressuredynamics.com
 company_types:
 - sme
 stakeholders:
