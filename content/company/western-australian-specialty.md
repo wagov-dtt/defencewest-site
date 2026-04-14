@@ -1,67 +1,57 @@
 ---
-name: Western Australian Specialty Alloys
-date: '2025-02-20'
-overview: WA Speciality Alloys provides nickel, cobalt and iron-based superalloy products for the aerospace and defence industry in the form of specialty steel forgings, billets and bars.
-website: https://www.wasa.com.au
-contact_name: Sandy Pelc
-contact_title: PA to General Manager
+name: Western Australian Specialty Alloys Pty. Ltd. 
+date: '2026-04-13'
+overview: WASA is a manufacturer of nickel, cobalt and steel superalloys for aerospace (military and civil), oil and gas and industrial gas turbine applications. 
+website: www.wasa.com.au
+contact_name: Anthony Mostyn
+contact_title: SOX Coordinator and Facility Compliance Officer
 address: 2-4 Hopewell Street, Canning Vale WA 6155
-phone: +61 8 9455 4111
-email: wasa@wasa.com.au
+phone: 0404994490
+email: anthony.mostyn@wasa.com.au
 company_types:
-- sme
+- large-enterprise
 stakeholders:
 - defence
-- defence-west
 capability_domains:
-- armour
 - fighter
-- light
-- maritime
-- reconnaissance
-- refuelling
-- science
+- missile
+- space
 - submarines
+- under
+- light
 - transport
 - utility
+- destroyers
+- frigates
 industrial_capabilities:
 - cnc
 - propulsion
 - steel
+- composites
+- adaptive
+regions:
+- perth-metropolitan
 capability_streams:
-- aerial
-- land
-- logistics
-- maritime
 - space
-latitude: -32.0559826
-longitude: 115.9187139
+- maritime
+- aerial
+latitude: -32.05618
+longitude: 115.91979
 ---
+
 
 ## Overview
 
-Western Australian Speciality Alloys (WASA) operates specialist melting and forging facilities at sites in Perth, Western Australia and Albury, New South Wales.
-
-WASA first opened its doors in Canning Vale, Western Australia in 1993 and over the next decade, established strategic customer relationships with Pratt & Whitney (1995), Rolls Royce (1999) and GE Aviation (2000).
-
-WASA started its F-35 journey by becoming qualified for the melting of the powder alloy IN100 for Pratt & Whitney in 1998. WASA now supplies half of the master remelt IN100 for the F-135 engine globally. IN100 is a critical alloy used in engine disc manufacture for the F-35, and WASA has supplied this material to Pratt & Whitney continuously since inception. WASA also supplies ME16 ingot for the powder atomisation process used to produce critical components for the Pratt & Whitney F-135 engine.
-
-In early 2002, Precision Castparts Corporation (PCC) acquired the balance of independent WASA shareholdings. The acquisition of WASA by PCC complemented its own strategy of a vertically integrated supply chain whereby the PCC group facilities manufacture all critical jet engine components. WASA's ability to manufacture rotating grade alloys gave PCC the opportunity to increase alloy sales to engine primes.
-
-As part of the PCC strategy, Overall Forge near Albury, New South Wales, was acquired by PCC. WASA has since taken over the management and transition of Overall Forge into the supply chain of PCC globally.
-
-As a super alloy production company, WASA is part of the critical supply chain for its customers who, in turn, directly support Defence capability worldwide. WASA's melting capabilities have ensured that military propulsion systems developed by engine manufactures are able to meet the challenging demands of their customers.
+WASA produces aerospace grade alloy for use in a range of military aerospace engine airframe and landing gear components, missiles and nuclear applications. Our Albury site also manufactures components for ASC submarine programs.
 ## Capabilities
 
-Double vacuum melted VIM & VAR and VIM & ESR ingots are produced in solid solution strengthened nickel base and precipitation hardened Superalloys, Maraging and PH stainless steels. Triple melted VIM/ESR/VAR alloys are also produced for premium rotating applications.
-
-VIM remelt Superalloy barstock is a major product line, produced in a range of sizes for investment casting and powder applications.
-
-Our fully integrated facility covers the forging process from raw material receipts through to finished bar and near shape sizes. All production including sawing, forging, heat treatment, machining, testing and certification is done in-house.
-
-We are the only vacuum induction melting facility of its kind in the southern hemisphere. As such, we aim to provide the highest quality alloys for the most stringent physical applications.
+WASA produces superalloy ingots and billet for forging and ring rolling applications for a range of aerospace, power generation and oil & gas applications. The major alloy purchased by our customers is alloy IN718 produced in either double melt (VIM/VAR) or premium rotating grade triple melt (VIM/ESR/VAR) form. Other alloys produced include Waspaloy, IN625, X750, 13/8, U500, IN725, IN925, R41, IN945, IN945X.
+WASA also produces VIM superalloy ingots either for use in casting applications or input stock for powder material for aerospace and power generation applications. The remelt ingot is produced in a variety of diameters. The major alloys produced are alloys IN738, IN100, RR1000, M002, GTD111, C1023, IN713, MM247, R77, R88, IN718, PWA1455, PWA475LS
+WASA’s vacuum induction furnace has a melting capacity of 5 tonnes (11,000 lbs), 10 tonnes (22,000 lbs) or 15 tonnes (33,000 lbs) and can produce input stock for master melts or secondary and tertiary melting.
+The forge consists of a 2300mT press, a ring mill and blanking press, Manipulators, associated heat treatment facilities and finishing equipment.
+At WASA, a highly regarded team of professionals which includes chemists, metallurgists, engineers and technicians, applies the highest standard of process control using the very latest in analytical equipment and ensures that the most exacting requirements are achieved.
 ## Discriminators
 
-- Manufacture nickel, cobalt and iron based superalloys for aerospace, power generation and oil & gas applications.
-- Alloys for forging applications.
-- Alloys for casting and powder atomisation applications.
+Main customers include Roll-Royce plc, Pratt & Whitney and GE Aerospace.
+Quality accreditations include S1000 (GEAE), S400 (GEAE), SABRe 9000 (RR), AS9100D, ISO9001:2015, AC7101 (Nadcap).
+Memberships include DISP, Trusted Trader, Known Consignor and Australian Made.
