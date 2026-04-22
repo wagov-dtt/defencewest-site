@@ -3,11 +3,11 @@ name: Rubicon Associates Pty Ltd
 date: '2026-04-09'
 overview: Australian-owned maritime engineering firm providing naval architecture, systems design and integration for naval and commercial vessels via integrated, safe and sustainable services.
 website: www.rubiconassociates.com.au
-contact_name: Tara Jumpponen
-contact_title: Executive Assistant to the Director
+contact_name: Josh Coombes
+contact_title: General Manager
 address: Office 9, Level 1, 135 High Street, Fremantle WA 6160
-phone: 0398672522
-email: tara.jumpponen@rubiconassociates.com.au
+phone: 0460680497
+email: joshua.coombes@rubiconassociates.com.au
 company_types:
 - sme
 stakeholders:
