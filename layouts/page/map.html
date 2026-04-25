@@ -1,23 +1,18 @@
 {{/*
   Standalone map embed - loaded in iframe
-  Uses PicoCSS conditional for popup styling
+  Uses Bootstrap 5 CDN for popup styling
 */}}
-{{- $picoTheme := .Site.Params.picoTheme -}}
 {{- $cdn := .Site.Params.cdnUrl -}}
 {{- $mapStyleUrl := .Site.Params.mapStyleUrl -}}
-{{- $picoIntegrity := "" -}}
-{{- if eq $picoTheme "slate" -}}
-  {{- $picoIntegrity = "sha384-J+X7LzreX1Q5wCeVJ+CEPEQ5HIs+nDl93Zs+iowCSvQwUpzl7F0XwvIVS6gycKnD" -}}
-{{- end -}}
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en" data-bs-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Map</title>
   <base target="_top">
   <link rel="stylesheet" href="{{ $cdn }}/maplibre-gl@5.21.1/dist/maplibre-gl.css" integrity="sha384-MGCxhspF/+ufueUgol3FDkiAYQbpSNRhBT0VWHJt64U8qIy9qlnXWx8LAbj6niPH" crossorigin="anonymous">
-  <link rel="stylesheet" href="{{ $cdn }}/@picocss/pico@2.1.1/css/pico.conditional.{{ $picoTheme }}.min.css"{{ with $picoIntegrity }} integrity="{{ . }}" crossorigin="anonymous"{{ end }}>
+  <link rel="stylesheet" href="{{ $cdn }}/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="stylesheet" href="{{ "styles.css" | relURL }}">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -50,7 +45,7 @@
     /* Popup styling */
     .maplibregl-popup-content {
       padding: 0;
-      border-radius: var(--pico-border-radius);
+      border-radius: var(--bs-border-radius);
       overflow: hidden;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
     }
@@ -139,13 +134,14 @@
       const ownerships = asText(c.ownerships).split("|").filter(Boolean);
 
       const wrapper = document.createElement("div");
-      wrapper.className = "pico";
+      wrapper.className = "bs-popup";
 
       const card = document.createElement(companyHref ? "a" : "div");
-      card.className = "company-card";
+      card.className = "company-card text-decoration-none text-reset";
       if (companyHref) card.href = companyHref;
 
       const article = document.createElement("article");
+      article.className = "card h-100";
 
       const logoArea = document.createElement("div");
       logoArea.className = "logo-area";

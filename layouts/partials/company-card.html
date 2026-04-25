@@ -31,10 +31,10 @@
 {{- $isDirectory := eq $mode "directory" -}}
 
 {{- if $isPopup -}}
-{{/* Popup mode: wrapped in .pico for conditional CSS */}}
-<div class="pico">
-  <a href="{{ printf "company/%s/" $company.slug | relURL }}" class="company-card">
-    <article>
+{{/* Popup mode: Bootstrap-styled card wrapper */}}
+<div class="bs-popup">
+  <a href="{{ printf "company/%s/" $company.slug | relURL }}" class="company-card text-decoration-none text-reset">
+    <article class="card h-100">
       <div class="logo-area">
         {{- if $logoUrl -}}
         <img src="{{ $logoUrl | relURL }}" alt="">
@@ -85,8 +85,8 @@
   <div class="marker-popup">
   {{- end }}
 
-  <a href="{{ printf "company/%s/" $company.slug | relURL }}" class="company-card{{ if $isMap }} compact{{ end }}">
-    <article>
+  <a href="{{ printf "company/%s/" $company.slug | relURL }}" class="company-card{{ if $isMap }} compact{{ end }} text-decoration-none text-reset">
+    <article class="card h-100">
       <div class="logo-area">
         {{- if $logoUrl }}
         <img src="{{ $logoUrl | relURL }}" alt="" loading="lazy">

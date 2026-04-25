@@ -2,7 +2,7 @@
 {{- $company := .Params -}}
 {{- $slug := .File.BaseFileName -}}
 {{- $taxonomies := hugo.Data.taxonomies -}}
-{{- $generatedData := index .Site.Data "generated" | default dict -}}
+{{- $generatedData := index hugo.Data "generated" | default dict -}}
 {{- $derivedCompanies := index $generatedData "companies" | default dict -}}
 {{- $company = merge $company (index $derivedCompanies $slug | default dict) -}}
 {{- $logoUrl := $company.logo_url | default "" -}}
@@ -23,18 +23,18 @@
   {{- $addressSearchUrl = printf "%s/search/?api=1&query=%s" $.Site.Params.mapsUrl (. | urlquery) -}}
 {{- end -}}
 
-<nav aria-label="breadcrumb">
-  <ul>
-    <li><a href="{{ "/" | relURL }}">Directory</a></li>
-    <li>{{ $company.name }}</li>
-  </ul>
+<nav aria-label="breadcrumb" class="company-breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="{{ "/" | relURL }}">Directory</a></li>
+    <li class="breadcrumb-item active" aria-current="page">{{ $company.name }}</li>
+  </ol>
 </nav>
 
 <div class="company-page">
   <!-- ===== VIEW MODE ===== -->
   <div id="view-mode">
     <!-- Main Content Area - Two Column Layout -->
-    <div class="grid">
+    <div class="row g-4">
       <!-- Left Column: Content -->
       <div class="col-12 col-md-8 content-column">
         <h1>{{ $company.name }}</h1>
@@ -52,11 +52,11 @@
       <!-- Right Column: Company Info -->
       <aside class="col-12 col-md-4 info-column">
         {{- if $logoUrl }}
-        <article class="company-logo">
+        <div class="company-logo">
           <a href="{{ $company.website }}" title="{{ $company.name }}" target="_blank" rel="noopener">
             <img src="{{ $logoUrl | relURL }}" alt="{{ $company.name }}">
           </a>
-        </article>
+        </div>
         {{- end }}
 
         {{- if or $company.contact_name $company.contact_title }}
@@ -96,7 +96,7 @@
           {{- $hasStreams := .GetTerms "capability_streams" }}
           {{- $hasOwnerships := .GetTerms "ownerships" }}
           {{- if or $hasStreams $hasOwnerships }}
-          <div class="grid taxonomy-row">
+          <div class="row g-3 taxonomy-row">
             {{- with $hasStreams }}
             {{- $taxonomies := hugo.Data.taxonomies -}}
             <div class="taxonomy-column">

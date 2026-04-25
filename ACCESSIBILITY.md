@@ -45,7 +45,7 @@ The same techniques that support accessibility also benefit SEO:
 
 ### Visual Accessibility
 
-- **Color contrast**: Text meets WCAG AA contrast requirements (via PicoCSS)
+- **Color contrast**: Text meets WCAG AA contrast requirements (via Bootstrap 5 and custom styles)
 - **Reduced motion**: Animations disabled when `prefers-reduced-motion` is set
 - **Responsive design**: Content accessible at all viewport sizes
 - **Print styles**: Optimized layout for printing

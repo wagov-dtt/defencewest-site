@@ -10,12 +10,12 @@
 
   <div class="filters-scroll">
     <!-- Capability Streams -->
-    <details class="filter-details" open>
+    <details class="filter-details border-bottom py-2" open>
       <summary>Capability Streams</summary>
       <div class="stream-icons">
         {{- range $key, $name := $taxonomies.capability_streams }}
         <label class="stream-icon" title="{{ $name }} ({{ with index $streamCounts $key }}{{ .Count }}{{ else }}0{{ end }})">
-          <input type="checkbox" name="capability_streams" value="{{ $key }}">
+          <input class="form-check-input" type="checkbox" name="capability_streams" value="{{ $key }}">
           <img src="{{ printf "icons/streams/%s.png" $key | relURL }}" alt="{{ $name }}" loading="lazy">
         </label>
         {{- end }}
@@ -23,12 +23,12 @@
     </details>
 
     <!-- Ownership -->
-    <details class="filter-details" open>
+    <details class="filter-details border-bottom py-2" open>
       <summary>Ownership</summary>
       <div class="stream-icons">
         {{- range $key, $name := $taxonomies.ownerships }}
         <label class="stream-icon" title="{{ $name }} ({{ with index $ownershipCounts $key }}{{ .Count }}{{ else }}0{{ end }})">
-          <input type="checkbox" name="ownerships" value="{{ $key }}">
+          <input class="form-check-input" type="checkbox" name="ownerships" value="{{ $key }}">
           <img src="{{ printf "icons/ownerships/%s.png" $key | relURL }}" alt="{{ $name }}" loading="lazy">
         </label>
         {{- end }}
@@ -36,13 +36,13 @@
     </details>
 
     <!-- Company Type -->
-    <details class="filter-details" open>
+    <details class="filter-details border-bottom py-2" open>
       <summary>Company Type</summary>
       <div class="filter-options">
         {{- range $key, $name := $taxonomies.company_types }}
         <label class="filter-item">
-          <input type="checkbox" name="company_types" value="{{ $key }}">
-          <span>{{ $name }}</span>
+          <input class="form-check-input" type="checkbox" name="company_types" value="{{ $key }}">
+          <span class="filter-label">{{ $name }}</span>
           <small class="filter-count">{{ with index $companyTypeCounts $key }}{{ .Count }}{{ else }}0{{ end }}</small>
         </label>
         {{- end }}
@@ -50,13 +50,13 @@
     </details>
 
     <!-- Stakeholders -->
-    <details class="filter-details" open>
+    <details class="filter-details border-bottom py-2" open>
       <summary>Stakeholders</summary>
       <div class="filter-options">
         {{- range $key, $name := $taxonomies.stakeholders }}
         <label class="filter-item">
-          <input type="checkbox" name="stakeholders" value="{{ $key }}">
-          <span>{{ $name }}</span>
+          <input class="form-check-input" type="checkbox" name="stakeholders" value="{{ $key }}">
+          <span class="filter-label">{{ $name }}</span>
           <small class="filter-count">{{ with index $stakeholderCounts $key }}{{ .Count }}{{ else }}0{{ end }}</small>
         </label>
         {{- end }}
@@ -64,13 +64,13 @@
     </details>
 
     <!-- Regions -->
-    <details class="filter-details">
+    <details class="filter-details border-bottom py-2">
       <summary>Regions</summary>
       <div class="filter-options">
         {{- range $key, $name := $taxonomies.regions }}
         <label class="filter-item">
-          <input type="checkbox" name="regions" value="{{ $key }}">
-          <span>{{ $name }}</span>
+          <input class="form-check-input" type="checkbox" name="regions" value="{{ $key }}">
+          <span class="filter-label">{{ $name }}</span>
           <small class="filter-count">{{ with index $regionCounts $key }}{{ .Count }}{{ else }}0{{ end }}</small>
         </label>
         {{- end }}
@@ -78,13 +78,13 @@
     </details>
 
     <!-- Capability Domains -->
-    <details class="filter-details">
+    <details class="filter-details border-bottom py-2">
       <summary>Capability Domains</summary>
       <div class="filter-options">
         {{- range $key, $name := $taxonomies.capability_domains }}
         <label class="filter-item">
-          <input type="checkbox" name="capability_domains" value="{{ $key }}">
-          <span>{{ $name }}</span>
+          <input class="form-check-input" type="checkbox" name="capability_domains" value="{{ $key }}">
+          <span class="filter-label">{{ $name }}</span>
           <small class="filter-count">{{ with index $domainCounts $key }}{{ .Count }}{{ else }}0{{ end }}</small>
         </label>
         {{- end }}
@@ -92,13 +92,13 @@
     </details>
 
     <!-- Industrial Capabilities -->
-    <details class="filter-details">
+    <details class="filter-details border-bottom py-2">
       <summary>Industrial Capabilities</summary>
       <div class="filter-options">
         {{- range $key, $name := $taxonomies.industrial_capabilities }}
         <label class="filter-item">
-          <input type="checkbox" name="industrial_capabilities" value="{{ $key }}">
-          <span>{{ $name }}</span>
+          <input class="form-check-input" type="checkbox" name="industrial_capabilities" value="{{ $key }}">
+          <span class="filter-label">{{ $name }}</span>
           <small class="filter-count">{{ with index $industrialCounts $key }}{{ .Count }}{{ else }}0{{ end }}</small>
         </label>
         {{- end }}

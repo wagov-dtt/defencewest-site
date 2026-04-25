@@ -18,7 +18,7 @@ mise run build
 
 ## Project Overview
 
-This is a static site built with Hugo + PicoCSS.
+This is a static site built with Hugo + Bootstrap 5.
 
 ### Project Structure
 
@@ -49,7 +49,6 @@ All site configuration lives in `hugo.toml` under `[params]`.
 
 ```toml
 [params]
-  picoTheme = "slate"
   cdnUrl = "https://cdn.jsdelivr.net/npm"
   mapStyleUrl = "https://tiles.openfreemap.org/styles/liberty"
   mapsUrl = "https://www.google.com/maps"
@@ -61,7 +60,7 @@ Python scripts read this via `tomllib` in `scripts/config.py`.
 
 External libraries use jsDelivr with exact version pinning. Fixed assets should use SRI.
 
-- PicoCSS: `@picocss/pico@2.1.1`
+- Bootstrap: `bootstrap@5.3.3`
 - MapLibre GL JS: `maplibre-gl@5.21.1`
 - Lucide: `lucide@1.7.0`
 
@@ -131,20 +130,21 @@ Key templates:
 
 ### Grid System
 
-The site uses a custom PicoCSS build with 12-column grid support.
+The site uses the Bootstrap 5 grid.
 
 ```html
-<div class="grid">
-  <aside class="col-3 col-md-4">Sidebar</aside>
-  <main class="col-9 col-md-8">Content</main>
+<div class="row g-3">
+  <aside class="col-12 col-md-4">Sidebar</aside>
+  <main class="col-12 col-md-8">Content</main>
 </div>
 ```
 
 Classes:
 
-- `.grid` - grid container
-- `.col-1` to `.col-12` - default column spans
-- `.col-md-1` to `.col-md-12` - medium-screen spans
+- `.row` - grid container
+- `.col-*` - default column spans
+- `.col-md-*` - medium-screen spans
+- `.g-*` - gutter spacing
 
 ### Filtering
 

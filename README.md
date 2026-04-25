@@ -12,7 +12,7 @@ Western Australia's Defence Industry and Science Capability Directory - a static
 ## Tech Stack
 
 - [Hugo](https://gohugo.io) - Static site generator
-- [PicoCSS](https://picocss.com) - CSS framework
+- [Bootstrap 5](https://getbootstrap.com) - CSS framework loaded from CDN
 - [MapLibre GL JS](https://maplibre.org) - Interactive maps
 - Tools: [mise](https://mise.jdx.dev), [uv](https://docs.astral.sh/uv/)
 

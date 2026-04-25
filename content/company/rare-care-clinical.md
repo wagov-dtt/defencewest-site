@@ -9,7 +9,7 @@ address: Hospital Avenue Nedlands, Perth WA 6009
 phone: 6456 2222
 email: gareth.baynam@health.wa.gov.au
 company_types:
-- research organisation
+- research
 stakeholders:
 - academic
 capability_domains:

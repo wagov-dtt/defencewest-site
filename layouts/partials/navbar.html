@@ -1,32 +1,37 @@
-<nav class="container-fluid" data-theme="dark">
-  <ul>
-    <li>
-      <a href="https://www.wa.gov.au/organisation/department-of-the-premier-and-cabinet/defence-west">
-        <img src="{{ "defence-west-logo.svg" | relURL }}" alt="Defence West" class="logo">
-      </a>
-    </li>
-  </ul>
-  <ul>
-    <li>
-      <details class="dropdown">
-        <summary>Directory</summary>
-        <ul dir="rtl">
-          <li><a href="{{ "/" | relURL }}">All Companies</a></li>
-          <li><a href="{{ "capability_streams/" | relURL }}">Capability Streams</a></li>
-          <li><a href="{{ "ownerships/" | relURL }}">Ownership</a></li>
-          <li><a href="{{ "company_types/" | relURL }}">Company Types</a></li>
-          <li><a href="{{ "stakeholders/" | relURL }}">Stakeholders</a></li>
-          <li><a href="{{ "regions/" | relURL }}">Regions</a></li>
-          <li><a href="{{ "capability_domains/" | relURL }}">Capability Domains</a></li>
-          <li><a href="{{ "industrial_capabilities/" | relURL }}">Industrial Capabilities</a></li>
-        </ul>
-      </details>
-    </li>
-    <li><a href="{{ "contact/" | relURL }}" {{ if hasPrefix .RelPermalink "/contact" }}aria-current="page"{{ end }}>Register / Update</a></li>
-    <li class="desktop-only">
-      <a href="https://www.wa.gov.au/organisation/department-of-the-premier-and-cabinet">
-        <img src="{{ "wa-gov-logo.png" | relURL }}" alt="Government of Western Australia" class="logo">
-      </a>
-    </li>
-  </ul>
+<nav class="navbar navbar-expand-md navbar-dark site-navbar">
+  <div class="container-fluid">
+    <a class="navbar-brand d-flex align-items-center" href="https://www.wa.gov.au/organisation/department-of-the-premier-and-cabinet/defence-west">
+      <img src="{{ "defence-west-logo.svg" | relURL }}" alt="Defence West" class="logo">
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#site-navbar-menu" aria-controls="site-navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="site-navbar-menu">
+      <ul class="navbar-nav align-items-md-center gap-md-2">
+        <li class="nav-item dropdown">
+          <button class="nav-link dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Directory
+          </button>
+          <ul class="dropdown-menu dropdown-menu-md-end">
+            <li><a class="dropdown-item" href="{{ "/" | relURL }}">All Companies</a></li>
+            <li><a class="dropdown-item" href="{{ "capability_streams/" | relURL }}">Capability Streams</a></li>
+            <li><a class="dropdown-item" href="{{ "ownerships/" | relURL }}">Ownership</a></li>
+            <li><a class="dropdown-item" href="{{ "company_types/" | relURL }}">Company Types</a></li>
+            <li><a class="dropdown-item" href="{{ "stakeholders/" | relURL }}">Stakeholders</a></li>
+            <li><a class="dropdown-item" href="{{ "regions/" | relURL }}">Regions</a></li>
+            <li><a class="dropdown-item" href="{{ "capability_domains/" | relURL }}">Capability Domains</a></li>
+            <li><a class="dropdown-item" href="{{ "industrial_capabilities/" | relURL }}">Industrial Capabilities</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="{{ "contact/" | relURL }}" {{ if hasPrefix .RelPermalink "/contact" }}aria-current="page"{{ end }}>Register / Update</a></li>
+        <li class="nav-item desktop-only">
+          <a class="nav-link" href="https://www.wa.gov.au/organisation/department-of-the-premier-and-cabinet">
+            <img src="{{ "wa-gov-logo.png" | relURL }}" alt="Government of Western Australia" class="logo">
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
 </nav>

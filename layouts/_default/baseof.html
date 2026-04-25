@@ -12,14 +12,10 @@
      - <nav> in navbar.html partial
      - <article>, <aside>, <section> used within pages
   
-  3. Theme Support: data-theme="light" enables PicoCSS theming
-     - Can be toggled via JavaScript for dark mode
-     - System preference respected via CSS media queries
-  
   See also: ACCESSIBILITY.md for full accessibility documentation
 */}}
 <!doctype html>
-<html lang="en" data-theme="light">
+<html lang="en" data-bs-theme="light">
   <head>
     {{- partial "head.html" . -}}
   </head>
@@ -30,9 +26,11 @@
     {{- partial "navbar.html" . -}}
 
     {{/* Main landmark - target of skip link, contains primary page content */}}
-    <main id="main-content" class="container-fluid">
+    <main id="main-content" class="container-fluid py-3">
       {{- block "main" . }}{{- end }}
     </main>
+    {{- $cdn := .Site.Params.cdnUrl -}}
+    <script src="{{ $cdn }}/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script>document.addEventListener("DOMContentLoaded",()=>lucide.createIcons())</script>
   </body>
 </html>

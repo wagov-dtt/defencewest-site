@@ -5,7 +5,7 @@
   Two-column layout: company cards + map embed
 */}}
 {{- $taxonomies := hugo.Data.taxonomies -}}
-{{- $generatedData := index .Site.Data "generated" | default dict -}}
+{{- $generatedData := index hugo.Data "generated" | default dict -}}
 {{- $derivedCompanies := index $generatedData "companies" | default dict -}}
 {{- $taxonomyName := .Data.Plural -}}
 {{- $termKey := .Data.Term -}}
@@ -15,27 +15,27 @@
 {{- $taxonomyTitle := index $taxonomyTitles $taxonomyName | default ($taxonomyName | humanize | title) -}}
 
 <nav aria-label="breadcrumb">
-  <ul>
-    <li><a href="{{ "/" | relURL }}">Directory</a></li>
-    <li><a href="{{ printf "/%s/" $taxonomyName | relURL }}">{{ $taxonomyTitle }}</a></li>
-    <li>{{ $displayName }}</li>
-  </ul>
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="{{ "/" | relURL }}">Directory</a></li>
+    <li class="breadcrumb-item"><a href="{{ printf "/%s/" $taxonomyName | relURL }}">{{ $taxonomyTitle }}</a></li>
+    <li class="breadcrumb-item active" aria-current="page">{{ $displayName }}</li>
+  </ol>
 </nav>
 
-<hgroup>
+<div class="mb-3">
   <h1>{{ $displayName }}</h1>
   <p>
     {{ len .Pages }} {{ if eq (len .Pages) 1 }}company{{ else }}companies{{ end }}
     · <a href="{{ printf "/?%s=%s" $taxonomyName $termKey | relURL }}">View with filters</a>
   </p>
-</hgroup>
+</div>
 
 {{- with .Content }}{{ . }}{{ end }}
 
-<div class="grid">
+<div class="row g-3">
   {{/* Cards column */}}
   <div class="col-12 col-md-6">
-    <div class="grid">
+    <div class="row g-3">
       {{- range .Pages.ByParam "name" }}
       {{- $slug := .File.BaseFileName -}}
       {{- $companyData := merge .Params (dict "slug" $slug) (index $derivedCompanies $slug | default dict) }}

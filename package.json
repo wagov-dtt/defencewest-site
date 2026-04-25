@@ -3,6 +3,7 @@
   "private": true,
   "description": "Optional a11y testing - used in CI, see ACCESSIBILITY.md for local testing",
   "devDependencies": {
-    "pa11y-ci": "^4.0.0"
+    "pa11y-ci": "^4.0.0",
+    "playwright": "1.56.1"
   }
 }

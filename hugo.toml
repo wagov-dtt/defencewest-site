@@ -77,10 +77,7 @@ uglyURLs = false
     "industrial_capabilities", "regions", "ownerships", "company_types"
   ]
 
-  # Pico CSS theme (azure, slate, zinc, sand, etc.)
-  picoTheme = "slate"
-  
-  # CDN for external libraries (MapLibre, PicoCSS, Lucide icons)
+  # CDN for external libraries (Bootstrap, MapLibre, Lucide icons)
   cdnUrl = "https://cdn.jsdelivr.net/npm"
   
   # Map settings (OpenFreeMap Liberty)

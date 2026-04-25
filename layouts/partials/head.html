@@ -10,9 +10,8 @@
 
 <link rel="icon" href="{{ "favicon.ico" | relURL }}">
 
-{{- $picoTheme := .Site.Params.picoTheme | default "slate" -}}
 {{- $cdn := .Site.Params.cdnUrl -}}
-<link rel="stylesheet" href="{{ printf "pico.%s.min.css" $picoTheme | relURL }}">
+<link rel="stylesheet" href="{{ $cdn }}/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 <link rel="stylesheet" href="{{ "styles.css" | relURL }}">
 <script src="{{ $cdn }}/lucide@1.7.0/dist/umd/lucide.min.js" integrity="sha384-CykfT8/c0napBs4OEPBYSNzMhNhJUvjNEulxWZVAK+p2D3vEfYGg9zyOd8bzqyNO" crossorigin="anonymous" defer></script>
 

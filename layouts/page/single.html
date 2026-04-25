@@ -1,6 +1,6 @@
 {{ define "main" }}
-<div class="container">
-  <article class="page-content">
+<div class="page-shell">
+  <article class="page-content page-{{ .File.BaseFileName | urlize }}">
     <header>
       <h1>{{ .Title }}</h1>
     </header>

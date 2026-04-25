@@ -9,7 +9,7 @@ address: 6 Thelma Street, West Perth WA 6005
 phone: +61 8 9321 1702
 email: caroline.mackay@eit.edu.au
 company_types:
-- educational and training institution
+- educational
 stakeholders:
 - defence
 - academic

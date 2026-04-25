@@ -43,14 +43,14 @@ capability_domains:
   stable: Stable Defence ICT
   submarines: Submarines
   surveillance: Surveillance
-  sustainment: Sustainment and maintenance
+  sustainment: Sustainment and Maintenance
   testing: Testing Ranges
   training: Training & Simulation
   training-platforms: Training Platforms
   training-ranges: Training Ranges
   transport: Transport Aircraft
   us: US Force Posture Initiative
-  uncrewed: Uncrewed/Autonomous vehicles
+  uncrewed: Uncrewed/Autonomous Vehicles
   under: Under Sea Capabilities
   utility: Utility Helicopters
 industrial_capabilities:

@@ -1,7 +1,7 @@
 {{ define "main" }}
 {{/* Load all company pages */}}
 {{- $companies := slice -}}
-{{- $generatedData := index .Site.Data "generated" | default dict -}}
+{{- $generatedData := index hugo.Data "generated" | default dict -}}
 {{- $derivedCompanies := index $generatedData "companies" | default dict -}}
 {{- range where .Site.RegularPages "Section" "company" -}}
   {{- if ne .File.BaseFileName "_template" -}}
@@ -13,25 +13,25 @@
 {{- $companies = sort $companies "name" -}}
 {{- $taxonomies := hugo.Data.taxonomies -}}
 
-<div class="grid directory-header">
-  <nav aria-label="breadcrumb" class="col-8 col-md-6 directory-breadcrumb">
-    <ul>
-      <li>Directory</li>
-      <li id="breadcrumb-filters" class="hidden">
+<div class="row align-items-center g-3 directory-header">
+  <nav aria-label="breadcrumb" class="col-12 col-md-6 directory-breadcrumb">
+    <ol class="breadcrumb mb-0">
+      <li class="breadcrumb-item">Directory</li>
+      <li id="breadcrumb-filters" class="breadcrumb-item hidden">
         <button type="button" class="filter-badge" id="clear-filters">
           <span class="filter-count">0</span> filters x
         </button>
       </li>
-      <li>
+      <li class="breadcrumb-item active" aria-current="page">
         {{/* aria-live announces count changes to screen readers */}}
         <output id="results-status" aria-live="polite" aria-atomic="true">
           <span class="visible-count">{{ len $companies }}</span> of {{ len $companies }}
         </output>
       </li>
-    </ul>
+    </ol>
   </nav>
-  <div class="col-4 col-md-6">
-    <fieldset role="group" class="search-group">
+  <div class="col-12 col-md-6">
+    <fieldset class="search-group input-group">
       <legend class="visually-hidden">Search and view options</legend>
       <input
         type="search"
@@ -40,8 +40,9 @@
         placeholder="Search companies..."
         autocomplete="off"
         aria-label="Search companies"
+        class="form-control"
       >
-      <label class="map-toggle" title="Show map">
+      <label class="map-toggle btn btn-outline-secondary" title="Show map">
         <input type="checkbox" id="map-toggle" name="view" value="map" form="filters">
         {{ partial "icon.html" (dict "name" "map" "size" 20) }}
       </label>
@@ -56,9 +57,9 @@
   WA Defence Industry and Science Capability Directory
 </h1>
 
-<div class="grid" id="directory">
+<div class="row g-3" id="directory">
   <!-- Mobile filter toggle button -->
-  <button type="button" class="mobile-filter-toggle" aria-expanded="false" aria-controls="filters-sidebar">
+  <button type="button" class="mobile-filter-toggle btn btn-primary" aria-expanded="false" aria-controls="filters-sidebar">
     {{ partial "icon.html" (dict "name" "filter" "size" 18) }}
     Filters
   </button>
@@ -66,7 +67,7 @@
   <!-- Main Content (first in DOM for better tab order: search → results) -->
   <section class="col-12 col-md-9 directory-results">
     <!-- Cards Grid -->
-    <div class="grid" id="company-grid" tabindex="-1">
+    <div class="row g-3" id="company-grid" tabindex="-1">
       {{- range $companies }}
       {{ partial "company-card.html" (dict "company" . "mode" "directory") }}
       {{- end }}
@@ -81,7 +82,7 @@
   
   <!-- Filters Sidebar (after results in DOM, positioned left via CSS) -->
   <aside class="col-12 col-md-3 filters-sidebar" id="filters-sidebar">
-    <button type="button" class="mobile-filter-close" aria-label="Close filters">
+    <button type="button" class="mobile-filter-close btn btn-link" aria-label="Close filters">
       {{ partial "icon.html" (dict "name" "x" "size" 24) }}
     </button>
     <form class="filters" id="filters" method="get">
