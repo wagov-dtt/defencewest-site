@@ -119,7 +119,7 @@ Taxonomy keys map to display names via `data/taxonomies.yaml`.
 Key templates:
 
 - `layouts/index.html` - directory page with filterable company cards
-- `layouts/page/map.html` - standalone map iframe using MapLibre GL
+- `layouts/page/map.html` - standalone/inline map renderer using MapLibre GL
 - `layouts/partials/company-card.html` - shared company card component
 - `layouts/partials/filters.html` - shared filter sidebar
 - `layouts/company/single.html` - company detail page

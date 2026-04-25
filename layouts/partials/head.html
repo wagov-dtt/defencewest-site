@@ -15,6 +15,14 @@
 <link rel="stylesheet" href="{{ "styles.css" | relURL }}">
 <script src="{{ $cdn }}/lucide@1.7.0/dist/umd/lucide.min.js" integrity="sha384-CykfT8/c0napBs4OEPBYSNzMhNhJUvjNEulxWZVAK+p2D3vEfYGg9zyOd8bzqyNO" crossorigin="anonymous" defer></script>
 
+{{- if or .IsHome (eq .Kind "term") }}
+<link rel="stylesheet" href="{{ $cdn }}/maplibre-gl@5.21.1/dist/maplibre-gl.css" integrity="sha384-MGCxhspF/+ufueUgol3FDkiAYQbpSNRhBT0VWHJt64U8qIy9qlnXWx8LAbj6niPH" crossorigin="anonymous">
+<script>window.TAXONOMIES = {{ .Site.Params.taxonomyOrder | jsonify | safeJS }};</script>
+<script src="{{ "filter-utils.js" | relURL }}"></script>
+<script src="{{ $cdn }}/maplibre-gl@5.21.1/dist/maplibre-gl.js" integrity="sha384-vbG0lp4a0ruKpgj9NCNl23DiFSS04ePeadthqzXUJxhJAOlOqZ69BjLeFXCFn0b8" crossorigin="anonymous" defer></script>
+<script src="{{ "map-embed.js" | relURL }}" defer></script>
+{{- end }}
+
 {{/* Page title - handle different page types */}}
 {{- $pageTitle := .Site.Title -}}
 {{- $taxonomyTitles := .Site.Params.taxonomyTitles -}}

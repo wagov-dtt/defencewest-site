@@ -46,9 +46,8 @@
 
   {{/* Map column */}}
   <div class="col-12 col-md-6">
-    <div class="taxonomy-map">
-      <iframe src="{{ printf "map/?%s=%s" $taxonomyName $termKey | relURL }}" title="Map of {{ $displayName }} companies"></iframe>
-    </div>
+    {{- $mapParams := printf "%s=%s" $taxonomyName $termKey -}}
+    {{ partial "map-embed.html" (dict "page" . "id" "term-map" "classes" "map-embed taxonomy-map" "initialParams" $mapParams) }}
   </div>
 </div>
 

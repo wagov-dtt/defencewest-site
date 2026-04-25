@@ -1,0 +1,8 @@
+{{- $id := .id | default "map" -}}
+{{- $classes := .classes | default "map-embed" -}}
+{{- $initialParams := .initialParams | default "" -}}
+<div id="{{ $id }}" class="{{ $classes }}" data-initial-params="{{ $initialParams }}">
+  <div class="map-canvas" role="region" aria-label="Company map"></div>
+  <p class="no-results map-no-results" hidden>No companies match your filters.</p>
+  <div class="map-status visually-hidden" aria-live="polite" aria-atomic="true"></div>
+</div>

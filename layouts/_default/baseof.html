@@ -15,7 +15,7 @@
   See also: ACCESSIBILITY.md for full accessibility documentation
 */}}
 <!doctype html>
-<html lang="en" data-bs-theme="light">
+<html lang="en" data-bs-theme="light" data-base-url="{{ "/" | relURL }}" data-map-style-url="{{ .Site.Params.mapStyleUrl }}">
   <head>
     {{- partial "head.html" . -}}
   </head>

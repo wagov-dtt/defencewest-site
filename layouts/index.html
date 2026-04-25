@@ -73,8 +73,8 @@
       {{- end }}
     </div>
 
-    <!-- Map iframe (hidden by default) -->
-    <iframe id="map-iframe" class="hidden" title="Map"></iframe>
+    <!-- Map (hidden by default) -->
+    {{ partial "map-embed.html" (dict "page" . "id" "directory-map" "classes" "map-embed hidden") }}
 
     <!-- No results message -->
     <p class="no-results">No companies match your filters.</p>
@@ -103,8 +103,6 @@
   </style>
 </noscript>
 
-<script>var TAXONOMIES = {{ .Site.Params.taxonomyOrder | jsonify | safeJS }};</script>
-<script src="{{ "filter-utils.js" | relURL }}"></script>
 <script>
   (function() {
     "use strict";
@@ -115,7 +113,7 @@
     const form = $("#filters");
     const cards = $$(".company-item");
     const gridEl = $("#company-grid");
-    const mapIframe = $("#map-iframe");
+    const mapEmbed = $("#directory-map");
     const countEl = $(".visible-count");
     const filterCountEl = $(".filter-count");
     const breadcrumbFilters = $("#breadcrumb-filters");
@@ -123,7 +121,6 @@
     const mapToggle = $("#map-toggle");
     const totalCount = cards.length;
 
-    let mapLoaded = false;
     let isSubmitting = false;
 
     // === Handle Form Submit ===
@@ -160,12 +157,7 @@
 
     function setView(showMap) {
       gridEl.classList.toggle("hidden", showMap);
-      mapIframe.classList.toggle("hidden", !showMap);
-
-      if (showMap && !mapLoaded) {
-        mapIframe.src = "./map/";
-        mapLoaded = true;
-      }
+      mapEmbed.classList.toggle("hidden", !showMap);
 
       showMap ? updateMap() : updateCards();
       if (showMap && noResults) noResults.style.display = "none";
@@ -240,20 +232,16 @@
 
     // === Map Communication ===
     function updateMap() {
-      if (!isMapView() || !mapLoaded) return;
-      const params = new URLSearchParams(location.search).toString();
-      mapIframe.contentWindow?.postMessage({ type: "updateFilters", params }, "*");
+      if (!isMapView()) return;
+      const params = new URLSearchParams(location.search);
+      window.updateEmbeddedMap?.("directory-map", params);
     }
 
-    window.addEventListener("message", (e) => {
-      if (e.origin !== window.location.origin) return;
-      if (e.data?.type === "markerCount" && isMapView()) {
-        if (countEl) countEl.textContent = e.data.count;
-        if (noResults) noResults.style.display = e.data.count === 0 ? "block" : "none";
-      }
+    mapEmbed?.addEventListener("mapMarkerCount", (e) => {
+      if (!isMapView()) return;
+      if (countEl) countEl.textContent = e.detail.count;
+      if (noResults) noResults.style.display = e.detail.count === 0 ? "block" : "none";
     });
-
-    mapIframe.addEventListener("load", updateMap);
 
     // === Handle Back/Forward Browser Navigation ===
     window.addEventListener("popstate", () => {
