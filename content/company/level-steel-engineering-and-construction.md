@@ -84,23 +84,15 @@ consistent delivery across SMP, infrastructure, and civil construction projects.
 
 ## Capabilities
 
-Level Steel Engineering and Construction Pty Ltd is a proudly Western Australian–
-owned and operated engineering and construction company, headquartered in Perth and established in 
-2021.
-We specialise in Structural, Mechanical and Piping (SMP) works, delivering high-quality, reliable, 
-and safe solutions across civil, infrastructure, industrial, resources, mining, oil & gas, and 
-public-sector projects throughout Western Australia.
-With strong capability across both permanent and temporary works, Level Steel
-provides end-to-end, turnkey project delivery—from engineering support and design coordination 
-through to fabrication, construction, installation, and commissioning.
-Our integrated approach enables us to deliver complex, high-risk, and high-tolerance works with 
-precision, safety, and accountability.
-All works are delivered under ISO 9001-compliant systems, supported by robust QA/QC controls, 
-certified welding procedures, and disciplined project governance. This ensures every asset is 
-compliant, fully traceable, and fit-for-purpose.
-Level Steel maintains a strong and stable commercial position, with an average annual turnover in 
-the order of $3–4 million, reflecting sustained growth and
-consistent delivery across SMP, infrastructure, and civil construction projects.
+Level Steel supports many of Western Australia’s largest resources, energy, industrial, infrastructure, and government organisations, providing proven engineering and construction capability across a wide range of environments. 
+Our expertise spans permanent and temporary works, including: 
+•	Structural, Mechanical & Piping (SMP) 
+•	Bridge construction and associated steelwork 
+•	Piling, formwork, reinforcement and concrete (FRP) 
+•	Tank fabrication and installation 
+•	General and bespoke steel fabrication 
+
+Backed by ISO 9001-certified systems, certified weld procedures, and a strong safety culture, Level Steel ensures every project is delivered on time, on budget,
 
 ## Discriminators
 
