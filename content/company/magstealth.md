@@ -9,7 +9,6 @@ address: 5 Murphy St, O'Connor WA 6163
 phone: 0414345210
 email: simon.avenell@magstealth.com
 company_types:
-- prime
 - government
 stakeholders:
 - academic
