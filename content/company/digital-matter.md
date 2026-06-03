@@ -9,7 +9,7 @@ contact_name: Cameron Eiszele
 contact_title: Technical Account Manager
 address: 9/100 Railway Road, Subiaco WA 6008
 phone: +61 8 6280 1217
-email: stuart@digitalmatter.com
+email: cameron.eiszele@digitalmatter.com
 company_types:
 - sme
 stakeholders:

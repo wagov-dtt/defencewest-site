@@ -7,7 +7,7 @@ contact_name: Greg Kowalczyk
 contact_title: Managing Director
 address: 35 Shanahan Rd, Davenport, Bunbury WA 6230
 phone: 08 97254411
-email: 247@belux.com.au
+email: greg@belux.com.au
 company_types:
 - sme
 stakeholders:

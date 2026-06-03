@@ -10,7 +10,7 @@ contact_name: Tahlia Collica
 contact_title: Executive Assistant
 address: 12 Oban Link, Canning Vale WA 6155
 phone: '62542635'
-email: tahlia@eigaustralia.com
+email: tahlia.collica@eigaustralia.com.au
 company_types:
 - sme
 capability_domains:

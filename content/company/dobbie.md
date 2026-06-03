@@ -3,11 +3,11 @@ name: Dobbie
 date: '2025-02-20'
 overview: 'Dobbie is an engineering company that offers capabilites in: 3D design and prototyping, pattern making and ferrous and non-ferrous foundry. '
 website: https://www.dobbie.com.au
-contact_name: Rod Martin
-contact_title: Defence Business Development Manager
+contact_name: Bruce Swan
+contact_title: General Manager
 address: 430 Victoria Road, Malaga WA 6090
 phone: +61 8 9249 7000
-email: rodm@dobbie.com.au
+email: bruces@dobbie.com.au
 company_types:
 - sme
 stakeholders:

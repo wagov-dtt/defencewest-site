@@ -3,11 +3,11 @@ name: RCT
 date: '2025-02-20'
 overview: RCT has the expertise and technologies that transform the way the mining and industrial sectors operate.
 website: https://rct-global.com
-contact_name: Ryan Noden
-contact_title: Global Business Development Manager
+contact_name: Steve Appleton
+contact_title: Perth Branch Manager
 address: Unit 1-6, 511 Abernethy Road, Kewdale WA 6105
 phone: 9352 3147
-email: Ryan.Noden@rct-global.com
+email: Steve.appleton@rct-global.com
 company_types:
 - sme
 stakeholders:

@@ -3,11 +3,11 @@ name: Intertek
 date: '2025-02-20'
 overview: Intertek supports the QA efforts of customers across their operations including research and development, raw materials sourcing, components suppliers, manufacturing, transportation, distribution and retail channels, and consumer management.
 website: https://www.intertek.com
-contact_name: Konrad Drogemuller
-contact_title: Regional Director
+contact_name: Tyrone Cowland
+contact_title: Vice President for Australasia Minerals and Envirolab
 address: Level 3, 235 St Georges Terrace, Perth WA 6000
-phone: +61 8 9263 0300
-email: korad.drogemullare@intertek.com
+phone: +61 8 9263 0100
+email: tyrone.cowland@intertek.com
 company_types:
 - sme
 stakeholders:
