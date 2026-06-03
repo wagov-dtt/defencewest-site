@@ -5,7 +5,7 @@ overview: DISP-qualified WA sovereign manufacturer of advanced composites and sy
 website: www.matrixengineered.com
 contact_name: Jim Kingston
 contact_title: Product Line Manager, Advanced Materials
-address: 150 Quill Way, Henderson WA WA
+address: 150 Quill Way, Henderson WA
 phone: +61 408 950 652
 email: jim.kingston@matrixengineered.com
 company_types:
@@ -30,6 +30,7 @@ industrial_capabilities:
 - adaptive
 regions:
 - australian
+
 capability_streams:
 - maritime
 - land
