@@ -3,11 +3,11 @@ name: Composite Components
 date: '2025-02-20'
 overview: Composite Components is an advanced composite manufacturer and research and development business utilising material processes such as compression moulding, closed moulding and pre-impregnated moulding.
 website: https://www.compositecomponents.com.au
-contact_name: Josh Fugill
-contact_title: Director of Operations
+contact_name: Glen Oldfield
+contact_title: Director
 address: 1/30 Barberry Way, Bibra Lake WA 6163
-phone: +61 420 239 660
-email: josh@compositecomponents.com.au
+phone: 6191 0346
+email: Glen@compositecomponents.com.au
 company_types:
 - sme
 stakeholders:
