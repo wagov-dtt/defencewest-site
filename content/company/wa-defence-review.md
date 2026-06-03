@@ -10,9 +10,7 @@ phone: 0422635518
 email: videochannel@wadefencereview.com.au
 company_types:
 - educational
-- government
 - large-enterprise
-- prime
 - research
 - sme
 stakeholders:
