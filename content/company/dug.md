@@ -3,11 +3,11 @@ name: DUG Technology Ltd
 date: '2025-02-20'
 overview: DUG Technology combines scientific excellence with sustainable computing innovation. Its patented immersion cooling technology is the foundation of DUG's mobile edge-computing solution, DUG Nomad.
 website: https://dug.com
-contact_name: Ron Schop
-contact_title: Executive Vice President
+contact_name: Margarita Kongawoin
+contact_title: Senior Vice President of software and HPC
 address: 76 Kings Park Road, WEST PERTH WA 6005
 phone: 0417 696 674
-email: rons@dug.com
+email: margk@dug.com
 company_types:
 - sme
 stakeholders:
