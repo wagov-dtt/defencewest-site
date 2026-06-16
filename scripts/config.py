@@ -1,9 +1,9 @@
 """Shared configuration for Python scripts."""
 
 from pathlib import Path
+import json
 import tomllib
 
-import diskcache
 from rich.progress import BarColumn, Progress, TaskProgressColumn, TextColumn
 
 ROOT_DIR = Path(__file__).parent.parent
@@ -30,7 +30,33 @@ def make_progress() -> Progress:
     )
 
 
-cache = diskcache.Cache(CACHE_DIR / "diskcache")
+class JsonFileCache:
+    """Small JSON-only file cache for trusted build-time data."""
+
+    def __init__(self, path: Path) -> None:
+        self.path = path
+        self.path.mkdir(parents=True, exist_ok=True)
+
+    def _path_for_key(self, key: str) -> Path:
+        import hashlib
+
+        digest = hashlib.sha256(key.encode("utf-8")).hexdigest()
+        return self.path / f"{digest}.json"
+
+    def __contains__(self, key: str) -> bool:
+        return self._path_for_key(key).exists()
+
+    def __getitem__(self, key: str):
+        return json.loads(self._path_for_key(key).read_text())
+
+    def __setitem__(self, key: str, value) -> None:
+        path = self._path_for_key(key)
+        tmp = path.with_suffix(".tmp")
+        tmp.write_text(json.dumps(value, separators=(",", ":")))
+        tmp.replace(path)
+
+
+cache = JsonFileCache(CACHE_DIR / "json")
 
 TAXONOMIES = [
     "stakeholders",
