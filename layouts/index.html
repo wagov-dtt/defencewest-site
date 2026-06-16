@@ -121,33 +121,42 @@
     const mapToggle = $("#map-toggle");
     const totalCount = cards.length;
 
-    let isSubmitting = false;
-
-    // === Handle Form Submit ===
-    function handleFormSubmit(e) {
-      e.preventDefault();
-
-      if (isSubmitting) return;
-      isSubmitting = true;
-
+    function writeURLFromForm() {
       const params = new URLSearchParams(new FormData(form));
-
       const url = params.toString() ? "?" + params : location.pathname;
       history.replaceState({}, "", url);
+    }
+
+    function syncFormFromURL() {
+      const params = new URLSearchParams(location.search);
+
+      form.q.value = params.get("q") || "";
+      TAXONOMIES.forEach(tax => {
+        const values = params.getAll(tax);
+        form.querySelectorAll(`input[name="${tax}"]`).forEach(cb => {
+          cb.checked = values.includes(cb.value);
+        });
+      });
+
+      if (mapToggle) mapToggle.checked = params.get("view") === "map";
+    }
+
+    function applyFilters({ updateURL = true } = {}) {
+      if (updateURL) writeURLFromForm();
 
       updateCards();
       updateMap();
-
-      isSubmitting = false;
     }
 
-    form.addEventListener("submit", handleFormSubmit);
+    // === Handle Form Submit ===
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      applyFilters();
+    });
 
-    // Checkbox changes trigger form submit
+    // Filter changes apply in place without a browser page reload.
     form.addEventListener("change", (e) => {
-      if (e.target.type === "checkbox" && e.target.id !== "map-toggle") {
-        form.dispatchEvent(new Event('submit'));
-      }
+      if (e.target.type === "checkbox" && e.target.id !== "map-toggle") applyFilters();
     });
 
     // === Map Toggle ===
@@ -165,16 +174,14 @@
 
     mapToggle?.addEventListener("change", () => {
       setView(mapToggle.checked);
-      form.dispatchEvent(new Event('submit'));
+      applyFilters();
     });
 
     // Debounced search (auto-submit form)
     let searchTimeout;
     form.q?.addEventListener("input", () => {
       clearTimeout(searchTimeout);
-      searchTimeout = setTimeout(() => {
-        form.dispatchEvent(new Event('submit'));
-      }, 150);
+      searchTimeout = setTimeout(() => applyFilters(), 150);
     });
 
     // === Search Highlighting ===
@@ -245,8 +252,9 @@
 
     // === Handle Back/Forward Browser Navigation ===
     window.addEventListener("popstate", () => {
-      updateCards();
-      updateMap();
+      syncFormFromURL();
+      setView(isMapView());
+      applyFilters({ updateURL: false });
     });
 
     // === Mobile Filter Toggle (with focus trap for a11y) ===
@@ -301,7 +309,7 @@
     const clearFiltersBtn = $("#clear-filters");
     clearFiltersBtn?.addEventListener("click", () => {
       form.reset();
-      form.dispatchEvent(new Event('submit'));
+      applyFilters();
     });
 
     // === Keyboard Shortcuts (a11y) ===
@@ -315,31 +323,15 @@
           closeFilters();
         } else if (form.q?.value) {
           form.q.value = "";
-          form.submit();
+          applyFilters();
         }
       }
     });
 
     // === Init ===
-    // Populate checkboxes from URL params
-    const params = new URLSearchParams(location.search);
-    TAXONOMIES.forEach(tax => {
-      const values = params.getAll(tax);
-      form.querySelectorAll(`input[name="${tax}"]`).forEach(cb => {
-        cb.checked = values.includes(cb.value);
-      });
-    });
-
-    // Handle map toggle state
-    if (mapToggle) {
-      const initialMapState = params.get("view") === "map";
-      if (initialMapState !== mapToggle.checked) {
-        mapToggle.checked = initialMapState;
-        setView(initialMapState);
-      }
-    }
-
-    updateCards();
+    syncFormFromURL();
+    setView(isMapView());
+    applyFilters({ updateURL: false });
   })();
 </script>
 

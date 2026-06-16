@@ -20,6 +20,7 @@ sudo apt-get update && sudo apt-get install -y \
   mesa-vulkan-drivers \
   libcurl4 \
   libglfw3 \
+  libicu74 \
   libuv1 \
   zlib1g
 """

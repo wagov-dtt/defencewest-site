@@ -54,7 +54,7 @@ requires-dist = [
     { name = "diskcache", specifier = ">=5.6.3" },
     { name = "httpx", specifier = ">=0.28.1" },
     { name = "markdown-it-py", specifier = ">=4.0.0" },
-    { name = "mlnative", specifier = ">=0.3.8" },
+    { name = "mlnative", specifier = ">=0.3.13" },
     { name = "openpyxl", specifier = ">=3.1.5" },
     { name = "pandas", specifier = ">=3.0.0" },
     { name = "python-frontmatter", specifier = ">=1.1.0" },
@@ -79,27 +79,6 @@ source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/d3/38/af70d7ab1ae9d4da450eeec1fa3918940a5fafb9055e934af8d6eb0c2313/et_xmlfile-2.0.0.tar.gz", hash = "sha256:dab3f4764309081ce75662649be815c4c9081e88f0837825f90fd28317d4da54", size = 17234, upload-time = "2024-10-25T17:25:40.039Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/c1/8b/5fe2cc11fee489817272089c4203e679c63b570a5aaeb18d852ae3cbba6a/et_xmlfile-2.0.0-py3-none-any.whl", hash = "sha256:7a91720bc756843502c3b7504c77b8fe44217c85c537d85037f0f536151b2caa", size = 18059, upload-time = "2024-10-25T17:25:39.051Z" },
-]
-
-[[package]]
-name = "geographiclib"
-version = "2.1"
-source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/df/78/4892343230a9d29faa1364564e525307a37e54ad776ea62c12129dbba704/geographiclib-2.1.tar.gz", hash = "sha256:6a6545e6262d0ed3522e13c515713718797e37ed8c672c31ad7b249f372ef108", size = 37004, upload-time = "2025-08-21T21:34:26Z" }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/31/b3/802576f2ea5dcb48501bb162e4c7b7b3ca5654a42b2c968ef98a797a4c79/geographiclib-2.1-py3-none-any.whl", hash = "sha256:e2a873b9b9e7fc38721ad73d5f4e6c9ed140d428a339970f505c07056997d40b", size = 40740, upload-time = "2025-08-21T21:34:24.955Z" },
-]
-
-[[package]]
-name = "geopy"
-version = "2.4.1"
-source = { registry = "https://pypi.org/simple" }
-dependencies = [
-    { name = "geographiclib" },
-]
-sdist = { url = "https://files.pythonhosted.org/packages/0e/fd/ef6d53875ceab72c1fad22dbed5ec1ad04eb378c2251a6a8024bad890c3b/geopy-2.4.1.tar.gz", hash = "sha256:50283d8e7ad07d89be5cb027338c6365a32044df3ae2556ad3f52f4840b3d0d1", size = 117625, upload-time = "2023-11-23T21:49:32.734Z" }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/e5/15/cf2a69ade4b194aa524ac75112d5caac37414b20a3a03e6865dfe0bd1539/geopy-2.4.1-py3-none-any.whl", hash = "sha256:ae8b4bc5c1131820f4d75fce9d4aaaca0c85189b3aa5d64c3dcaf5e3b7b882a7", size = 125437, upload-time = "2023-11-23T21:49:30.421Z" },
 ]
 
 [[package]]
@@ -171,16 +150,15 @@ wheels = [
 
 [[package]]
 name = "mlnative"
-version = "0.3.9"
+version = "0.3.13"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "geopy" },
     { name = "shapely" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/a2/c4/2fdf597aa5f021f700bc67ca4a8a59a22445a73331ef4d8126d72f0af64b/mlnative-0.3.9.tar.gz", hash = "sha256:d471a9ad4c40f465c8580c43effe283d674effc7b33254863a8db150ce8d9538", size = 73421, upload-time = "2026-02-14T21:21:13.349Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/22/98/68e1eca4622c1f3d97f466187d50a8178f9a212865cc5691647512e19834/mlnative-0.3.13.tar.gz", hash = "sha256:7e35af0722e09481aa5ce327e8fc32b0ab00970d2a3734c8aa9920b0f9cd8a0b", size = 47158, upload-time = "2026-06-09T21:35:09.781Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/4a/1d/d5d1e397b30f9db8cc97bdaf86a543993f6480c877bcb27453f712ab369a/mlnative-0.3.9-py3-none-manylinux_2_28_aarch64.whl", hash = "sha256:7f9d9a00f3b19b52ac702feff03539f9bad20c5782a02933d5244a2b02e6f4c2", size = 20528662, upload-time = "2026-02-14T21:21:08.908Z" },
-    { url = "https://files.pythonhosted.org/packages/a0/f4/9f3bd0eae02bb30fcf30401cacdaf6d2a38ea5f6e40896bc3c124c769980/mlnative-0.3.9-py3-none-manylinux_2_28_x86_64.whl", hash = "sha256:50c922ade91a554af0bbcfd9209c017e5c8b1df8921ee5be2a8c8841c1786d1e", size = 20898544, upload-time = "2026-02-14T21:21:11.362Z" },
+    { url = "https://files.pythonhosted.org/packages/df/5c/14e5a08aa9dd8988c5c83b3c00fd10246759591c589ae2e4a9a4dc28dba3/mlnative-0.3.13-py3-none-manylinux_2_28_aarch64.whl", hash = "sha256:353d6f23a40a7433684128a26b7e0c259c379bc38eb585873048b071a24b5df7", size = 8205892, upload-time = "2026-06-09T21:35:05.969Z" },
+    { url = "https://files.pythonhosted.org/packages/84/84/079a8f494a0cd0d49fc58081aa80908ff01c46e222dd33a4c8b2a1ce724f/mlnative-0.3.13-py3-none-manylinux_2_28_x86_64.whl", hash = "sha256:57bf11fbb474c2430ed38505d814647ce8d297de53f2227d1054dacfa7e31d23", size = 8793824, upload-time = "2026-06-09T21:35:08.003Z" },
 ]
 
 [[package]]
