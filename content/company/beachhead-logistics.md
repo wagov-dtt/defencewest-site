@@ -2,7 +2,7 @@
 name: Beachhead Logistics
 date: '2025-02-20'
 overview: Logistics over the Shore (LOTS) and Temporary Ports
-website: https://beachheadlogistics.com.au
+website: https://www.beachheadlogistics.com.au/
 contact_name: Jarod Monaghan
 contact_title: Director
 address: 76 Hasler Road, Osborne Park WA 6017
