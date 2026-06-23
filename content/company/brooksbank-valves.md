@@ -26,7 +26,7 @@ regions:
 capability_streams:
 - maritime
 latitude: -32.020549
-longitude: 115/950437
+longitude: 115.950437
 ---
 
 
