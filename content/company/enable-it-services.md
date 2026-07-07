@@ -1,17 +1,17 @@
 ---
 name: Enable Technology Pty Ltd
-date: '2026-06-23'
+date: '2026-06-30'
 overview: Enable Technology are a Managed Service Provider (MSP) which supply support and helpdesk services to SME's that require additional security.  We design, supply, implement and support IT solutions.
 website: https://www.enabletech.com.au
 contact_name: Kim Sinclair
 contact_title: Director
 address: 224 Stirling St, Perth WA 6000
-phone: 0417 912 301
+phone: 0417912301
 email: kim@enabletech.com.au
 company_types:
+- sme
 - educational
 - government
-- sme
 - research
 stakeholders:
 - academic
@@ -20,6 +20,9 @@ stakeholders:
 - defence-west
 capability_domains:
 - ai
+- communications
+- cyber
+- cyber-and
 - ict
 - science
 industrial_capabilities:
@@ -27,9 +30,9 @@ industrial_capabilities:
 - electronics
 - high
 regions:
-- perth
 - australian
 - naval
+- perth
 
 capability_streams:
 - research
