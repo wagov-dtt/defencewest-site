@@ -1,7 +1,7 @@
 ---
 name: Forward Logic Pty Ltd
 date: '2026-07-13'
-overview: Forward Logic is an Australian consultancy focused on delivering technology outcomes in complex operational environments and are the trusted integration partner of Lumana (www.lumana.ai). 
+overview: Forward Logic is an Australian consultancy focused on delivering technology outcomes in complex operational environments and are the trusted integration partner of Lumana (www.lumana.ai) 
 website: www.forward-logic.com.au
 contact_name: Alison Neal
 contact_title: General Manager
