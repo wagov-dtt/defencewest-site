@@ -55,30 +55,37 @@ longitude: 115.785664
 
 ## Overview
 
-HESED is an independent, Western Australian-owned advisory practice established in 2026 to provide principal-led support across Defence infrastructure, from market entry and procurement through to delivery and assurance.
+HESED is a Western Australian–owned SME providing independent, principal-led Defence infrastructure advisory
+across market entry, procurement, delivery and assurance. We bring the experience to support Commonwealth and State
+Defence clients, infrastructure owners, primes and delivery teams in improving project outcomes, combining direct
+client-side and contractor-side experience of how Defence infrastructure is positioned, procured, evaluated and
+delivered. Our value sits at the intersection of Defence, procurement, contractor management and infrastructure delivery
+— a combination rarely found within a single adviser and uncommon in the Western Australian market.
 
-The practice was founded on more than 18 years of major Defence project delivery by its principal, Alex Gilliland CPEng. That record spans the RAAF Base Tindal Airfield Redevelopment Program, a national multi-base RAAF airfields portfolio delivered across several states and Australia's external territories, and Defence estate programs nationally, including aircraft pavements, airfield ground lighting, base infrastructure and PFAS and contamination management within live operational environments.
-
-It covers both sides of Defence procurement. Alex has developed, evaluated and awarded major infrastructure packages, and has delivered them under Managing Contractor and head contract arrangements while operational continuity was maintained. He has also led a tier-one civil contractor's entry into and growth within the Defence market, covering governance and DISP uplift, ISO 19443 alignment, panel positioning, capture and pursuit development.
-
-HESED was established to make that combined experience available directly to Commonwealth and State clients, infrastructure owners, primes and contractors, as an independent practice rather than through a delivery contractor with its own commercial position in the outcome.
+HESED provides independent, senior, principal-led advice and leadership informed by direct experience developing,
+procuring, evaluating and delivering major infrastructure packages, the same insight applied from either side of the
+table.
 ## Capabilities
 
-HESED provides principal-led advisory across the Defence infrastructure lifecycle.
-
-Project definition and package structuring. Defining scope, interfaces and procurement pathways. Applied on the Tindal redevelopment, developing scope, bills of quantities and staging for major airside civil packages ahead of procurement.
-
-Procurement, evaluation and contractor selection. Tender development, evaluation and award. Applied on Defence programs including development and evaluation of civil works tenders and subcontract award across aircraft pavements, airfield ground lighting, drainage and bulk earthworks.
-
-Technical and design assurance. Independent design review and constructability, including specialist airfield assurance across aircraft pavements and airfield ground lighting. Applied through construction trials on rigid and flexible pavements conducted with Defence and design consultants, and through peer review of major Defence civil works.
-
-Contractor management and delivery assurance. Governance, commercial and claims management and contractor performance oversight. Applied across Defence packages from procurement through construction, commissioning and handover, including progress claim assessment against verified physical progress.
-
-Operational environment and stakeholder management. Delivery within live, secure Defence environments. Applied through Method of Work Plans and staging approved with Defence and PMCA representatives, achieving nil airside incidents, and through CHOTO and operational handover with base operations maintained throughout.
-
-Defence market entry and capture. Governance and DISP uplift, ISO 19443 alignment, panel positioning and bid leadership. Applied in leading a tier-one civil contractor's Defence market entry, securing infrastructure packages at RAAF Darwin.
-
-PFAS and contamination management. Strategy development and implementation within live Defence delivery.
+Defence Market Entry, Capture & Bid Leadership — enabling contractors and new entrants to establish and
+scale within the Defence sector through governance and DISP uplift, panel positioning and pursuit development, and
+leading capture strategy, win themes and bid leadership, informed by direct experience of how the Commonwealth
+structures, evaluates and assesses tenders.
+Procurement, Evaluation & Contractor Selection — supporting clients with procurement and package strategy,
+tender development, evaluation and contractor assessment, drawing on both structured governance and practical
+contractor-side insight into delivery capability, commercial behaviour and the realities of execution.
+ECI & Project Development — leading Early Contractor Involvement and project development to keep client
+objectives central, mature scope, design and constructability, and establish cost and delivery certainty before
+commitment.
+Technical & Design Assurance — independent design review, constructability and technical assurance, including
+specialist airfield assurance across aircraft pavements and airfield ground lighting (AGL), to confirm solutions are
+deliverable, compliant and fit for purpose.
+Delivery Leadership & Assurance — owner-side and contractor-side leadership through mobilisation,
+construction, commissioning and handover: governance, commercial and claims management, contractor
+performance oversight and delivery assurance.
+Operational Environment & Stakeholder Management — delivery within live, secure Defence and maritime
+environments where DISP-aligned security, operational continuity, SIMOPS and stakeholder and Commonwealth
+interface management are critical to success.
 ## Discriminators
 
 Both sides of the table. Direct experience developing, evaluating and awarding major Defence infrastructure packages, and delivering them. Advice is grounded in having done the work, not observed it.
