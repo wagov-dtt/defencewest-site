@@ -1,13 +1,13 @@
 ---
-name: Harvest Technology Group
+name: Nodestram Technology
 date: '2025-02-20'
-overview: HTG is a leading provider of secure, high-quality video and data transmission solutions for the defence industry, enabling real-time remote control, communication, and monitoring capabilities.
-website: https://harvest.technology
-contact_name: John Condo
-contact_title: Director, Global Defence
+overview: Nodestream is a leading provider of secure, high-quality video and data transmission solutions for the defence industry, enabling real-time remote control, communication, and monitoring capabilities.
+website: https://nodestream.tech
+contact_name: Heather Bewsher
+contact_title: Director, Customer and Accounts
 address: 7 Turner Avenue, Technology Park, Bentley WA 6102
-phone: '0434563717'
-email: john.condo@harvest-tech.com.au
+phone: '0421977725'
+email: heather.bewsher@nodestream.tech
 company_types:
 - sme
 stakeholders:
@@ -61,10 +61,10 @@ longitude: 115.8878678
 
 ## Overview
 
-Harvest Technology Group has been a trusted partner to the defence industry, delivering secure and innovative communication solutions for over a decade. Our expertise in high-quality video and data transmission has supported critical defence operations, enabling real-time remote control, communication, and monitoring capabilities. We have established strong relationships with key defence contractors, government agencies, and prime contractors, providing tailored solutions that meet the unique challenges of defence environments. Our commitment to innovation, security, and collaboration has made us a valued partner in the defence sector, supporting the safety and effectiveness of defence personnel worldwide.
+Nodestream Technology has been a trusted partner to the defence industry, delivering secure and innovative communication solutions for over a decade. Our expertise in high-quality video and data transmission has supported critical defence operations, enabling real-time remote control, communication, and monitoring capabilities. We have established strong relationships with key defence contractors, government agencies, and prime contractors, providing tailored solutions that meet the unique challenges of defence environments. Our commitment to innovation, security, and collaboration has made us a valued partner in the defence sector, supporting the safety and effectiveness of defence personnel worldwide.
 ## Capabilities
 
-Harvest Technology Group's capabilities are specifically designed to support the defence industry, focusing on secure, high-quality video and data transmission solutions. Our expertise includes:\
+Nodestream Technology's capabilities are specifically designed to support the defence industry, focusing on secure, high-quality video and data transmission solutions. Our expertise includes:\
 **- Secure Data Transmission:** Nodestream technology provides military-grade security, 384-bit encrypted connections, and high-quality video, audio, and data transmission without significant bandwidth requirements.\
 **- Real-time Remote Control:** Enables remote operation and monitoring of systems, reducing risks to personnel and enhancing operational efficiency.\
 **- Internet of Military Things (IoMT):** Integrates devices, sensors, and platforms for heightened situational awareness, command and control, and operational effectiveness.
