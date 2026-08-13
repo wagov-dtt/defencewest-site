@@ -1,5 +1,5 @@
 ---
-name: Nodestram Technology
+name: Nodestream Technology
 date: '2025-02-20'
 overview: Nodestream is a leading provider of secure, high-quality video and data transmission solutions for the defence industry, enabling real-time remote control, communication, and monitoring capabilities.
 website: https://nodestream.tech
