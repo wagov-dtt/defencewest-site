@@ -55,8 +55,8 @@ longitude: 115.793229
 
 Bravo Electrical & HVAC is an Australian Veteran owned company with operations across New South Wales, South Australia, Western Australia, and Queensland, delivering specialised electrical, mechanical, HVAC and refrigeration engineering services nationwide.
 
-Our experienced team supports naval platforms, commercial vessels, defence facilities, industrial operations, and marine infrastructure projects across Australia, providing end-to-end solutions built onquality, precision, and technical excellence.
-Founded on military values, Bravo’s culture is defined by discipline, accountability,and high standards of service—principles that guide every project and ensure dependable results and long-term partnerships with our clients.
+Our experienced team supports naval platforms, commercial vessels, defence facilities, industrial operations, and marine infrastructure projects across Australia, providing end-to-end solutions built unquality, precision, and technical excellence.
+Founded on military values, BRAVO’s culture is defined by discipline, accountability and high standards of service, principles that guide every project and ensure dependable results and long-term partnerships with our clients.
 
 ## Capabilities
 
@@ -70,7 +70,7 @@ UPS & Data Room Cooling – Resilient power and cooling solutions for Australia�
 
 ## Discriminators
 
-We are a veteran-led team serving Australia’s defence, industrial & commercial sectors nationwide. Our core values of safety, quality, service & leadership guide everything we do & underpin long-term relationships with government agencies & Defence Prime Contractors.
+We are a veteran owned team serving Australia’s defence, industrial & commercial sectors nationwide. Our core values of safety, quality, service & leadership guide everything we do & underpin long-term relationships with government agencies & Defence Prime Contractors.
 Our team includes licensed electricians, chiller technicians, HVAC-refrigeration specialists & experienced project managers, with expertise across defence, marine & industrial environments. Technicians are certified across leading OEM platforms, including Daikin/McQuay & York, & trained to operate in compliance-intensive, mission-critical settings. We invest in accredited training to keep our team capable, current & prepared for evolving challenges.
 BRAVO brings over 20 yrs experience across naval engineering, industrial mechanical services, electrical contracting, HVAC & refrigeration. Our leadership team has operated at senior levels with the Department of Defence & Defence Prime Contractors. Our experience spans sustainment, upgrades, installation, commissioning, diagnostics & long-term operational support across naval vessels, marine platforms & critical infrastructure.
 We tailor our approach to each environment rather than applying generic solutions. Many of our technicians have served in the ADF, bringing operational discipline, situational awareness, strong systems thinking & a commitment to safety & compliance.
