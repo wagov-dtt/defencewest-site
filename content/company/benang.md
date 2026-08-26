@@ -9,12 +9,8 @@ address: Godfrey House, 1 Roberts Road, Subiaco WA 6008
 phone: +61 401 342 423
 email: jasmine.kadic@benang.com.au
 company_types:
-- government
 - large-enterprise
-- prime
 - sme
-- research
-- educational
 stakeholders:
 - defence
 - defence-west
