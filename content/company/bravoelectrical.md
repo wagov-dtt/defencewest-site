@@ -55,8 +55,8 @@ longitude: 115.793229
 
 Bravo Electrical & HVAC is an Australian Veteran owned company with operations across New South Wales, South Australia, Western Australia, and Queensland, delivering specialised electrical, mechanical, HVAC and refrigeration engineering services nationwide.
 
-Our experienced team supports naval platforms, commercial vessels, defence facilities, industrial operations, and marine infrastructure projects across Australia, providing end-to-end solutions built unquality, precision, and technical excellence.
-Founded on military values, BRAVO’s culture is defined by discipline, accountability and high standards of service, principles that guide every project and ensure dependable results and long-term partnerships with our clients.
+Our experienced team supports naval platforms, commercial vessels, defence facilities, industrial operations, and marine infrastructure projects across Australia, providing end-to-end solutions built on quality, precision, and technical excellence.
+Founded on military values, BRAVO’s culture is defined by discipline, accountability and high standards of service - principles that guide every project and ensure dependable results and long-term partnerships with our clients.
 
 ## Capabilities
 
