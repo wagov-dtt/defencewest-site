@@ -6,7 +6,7 @@ website: https://nodestream.tech
 contact_name: Heather Bewsher
 contact_title: Director, Customer and Accounts
 address: 7 Turner Avenue, Technology Park, Bentley WA 6102
-phone: '0421977725'
+phone: '+61 421 977 735'
 email: heather.bewsher@nodestream.tech
 company_types:
 - sme
@@ -61,31 +61,34 @@ longitude: 115.8878678
 
 ## Overview
 
-Nodestream Technology has been a trusted partner to the defence industry, delivering secure and innovative communication solutions for over a decade. Our expertise in high-quality video and data transmission has supported critical defence operations, enabling real-time remote control, communication, and monitoring capabilities. We have established strong relationships with key defence contractors, government agencies, and prime contractors, providing tailored solutions that meet the unique challenges of defence environments. Our commitment to innovation, security, and collaboration has made us a valued partner in the defence sector, supporting the safety and effectiveness of defence personnel worldwide.
+Nodestream Technology is an Australian technology company delivering secure, ultra-resilient communications for mission-critical operations. Defence operations can involve distributed personnel, remote commanders and multiple assets operating across different locations. Each participant needs access to the same live operational information, even when communications must pass through bandwidth-constrained, high-latency, degraded or contested networks.
+
+Nodestream transmits and integrates live video, audio, telemetry, and control data within a single operational environment. Distributed teams can maintain situational awareness, communicate across locations and retain control of remote and autonomous assets as network conditions deteriorate. The platform has been developed through more than a decade of experience supporting remote operations. It works with existing networks, platforms and operational systems across Defence, government, prime contractor and technology partner environments.
+
 ## Capabilities
 
-Nodestream Technology's capabilities are specifically designed to support the defence industry, focusing on secure, high-quality video and data transmission solutions. Our expertise includes:\
-**- Secure Data Transmission:** Nodestream technology provides military-grade security, 384-bit encrypted connections, and high-quality video, audio, and data transmission without significant bandwidth requirements.\
-**- Real-time Remote Control:** Enables remote operation and monitoring of systems, reducing risks to personnel and enhancing operational efficiency.\
-**- Internet of Military Things (IoMT):** Integrates devices, sensors, and platforms for heightened situational awareness, command and control, and operational effectiveness.
+•	Communications across constrained and contested networks: Nodestream maintains secure video, audio, telemetry and control data across low-bandwidth, high-latency and variable network conditions. Transmission automatically recovers and resumes when a viable connection returns.
+•	Orchestration and aggregation: Live information from disparate assets, sensors and data sources is brought into a single synchronised operational view.
+•	Remote command and control: Commanders can maintain persistent situational awareness from a remote location and exercise secure control over remote or autonomous assets.
+•	Distributed ISR: Access to intelligence, surveillance and reconnaissance feeds can be maintained across dispersed operations as network conditions deteriorate.
+•	Teaming and collaboration: Remote personnel can see the same operational information, communicate with deployed teams and contribute to decisions in real time.
+•	Remote expert support: Technical, operational and medical specialists can observe conditions and provide guidance without travelling into the operational environment.
+•	Integration with existing systems: Nodestream operates across satellite, cellular, radio, mesh and other IP-based networks. It can integrate with existing C2, ISR and mission systems.
+•	Controlled deployment: End-to-end encryption, role-based access, on-premises infrastructure and air-gap-capable deployment support operations with sensitive data and access requirements.
 
-Recent examples of our work (unclassified) in the defence industry include:\
-**- Partnership with AST Networks and Guerrilla Technologies:** A strategic partnership to deliver a future-proof connectivity backbone for all-domain connected operations in defence, leveraging Nodestream technology, global satellite connectivity, and innovative robotics.\
-**- Five-Eyes Defence Customer Partnership:** A significant deal in 2023 with a major Five-Eyes defence customer, showcasing our growing presence in the global defence sector.\
-**- European Union Defence Force Partnership:** Another notable partnership in 2023, demonstrating our commitment to supporting defence operations.
+Unclassified examples of Nodestream’s Defence activity include:
+•	Guerrilla Technologies: Collaboration that combines Nodestream communications technology with satellite connectivity and robotic platforms for connected, all-domain operations.
+•	Five Eyes Defence environment: Deployment and evaluation of Nodestream technology within a Five Eyes Defence context.
+•	EU Naval force: Nodestream connects vessel-based medical facilities with specialist personnel at hospitals ashore. Medical teams can share decision-quality video and audio over constrained or degraded networks during time-critical consultations.
 
-Our capabilities support defence forces in enhancing situational awareness, command and control, and operational effectiveness, while reducing risks to personnel and improving efficiency.
 ## Discriminators
 
-Harvest Technology Group's discriminators include:
+•	Interface, Network, and Asset-Agnostic: The platform is not tied to any particular sensor, platform, vehicle, network, or connectivity provider. It can bring information from different sources into the same operational environment.
+•	Proprietary communications protocol: Nodestream’s patented protocol is engineered for network conditions where high latency, packet loss and intermittent connectivity are expected.
+•	Ultra-low-bandwidth performance: The platform can reduce bandwidth consumption by up to 90% compared with conventional streaming technologies.
+•	Resilient transmission: Nodestream is engineered to maintain communications under sustained packet loss of up to 40%.
+•	One operational view: Video, audio, telemetry, and control data from multiple assets can be accessed through a single synchronised interface.
+•	Proven capability: Nodestream is TRL9-certified and has accumulated more than 500,000 operational hours.
+•	Australian-developed capability: The technology is designed, developed and delivered in Perth, Western Australia.
 
-**- Unique Nodestream Technology:** Patented technology enabling secure, high-quality video and data transmission over low-bandwidth networks\
-**- Military-Grade Security:** 384-bit encrypted connections and DISP (Defence Industry Security Program) accreditation\
-**- Australian Ownership and Operation:** Ensuring local control and expertise\
-**- Proven Defence Industry Experience:** Over a decade of supporting defence forces and prime contractors\
-**- Strategic Partnerships:** Collaborations with AST Networks, Guerrilla Technologies, and other key industry players\
-**- Clearances and Memberships:** DISP accreditation and membership with Defence West\
-**- Awards and Recognition:** Notable partnerships and deals, such as the Five-Eyes defence customer partnership and European Union defence force partnership\
-**- Key Customers and Partners:** Defence forces, prime contractors, and government agencies in Australia and internationally, including BAE Systems Australia, Lockheed Martin Australia, and Raytheon Australia
-
-These discriminators demonstrate our commitment to delivering secure, innovative, and effective solutions for the defence industry.
+These capabilities keep distributed teams and assets connected to the same operational picture. Commanders retain situational awareness and control, while personnel in other locations can contribute expertise when network conditions are difficult.
