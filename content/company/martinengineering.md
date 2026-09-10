@@ -1,7 +1,7 @@
 ---
 name: Martin Engineering WA
 date: '2026-09-09'
-overview: Martin Engineering WA: 40+ years' precision machining, line boring, welding and fabrication. On-site and workshop capability across Perth metro and regional WA. Trusted by Tier 1 miners and OEMs.
+overview: Martin Engineering WA 40+ years' precision machining, line boring, welding and fabrication. On-site and workshop capability across Perth metro and regional WA. Trusted by Tier 1 miners and OEMs.
 website: https://www.martinengineeringwa.com.au/
 contact_name: Luke Mateljan
 contact_title: COO
@@ -79,7 +79,7 @@ Distinguishing attributes:
 Highly adaptable and solution-focused: our team is relentless in finding a way through a problem, including unconventional or first-principles approaches when standard methods won't work
 Genuine, tested 24/7 response capacity across Western Australia, not just an advertised service level
 Rare combination of a fully equipped fixed workshop with a mobile fleet of 8 purpose-built line boring trucks, enabling true in-situ repair on client sites rather than requiring assets to be freighted out
-Broad in-house capability under one roof: line boring (22mm–1m+), slew milling to 5m, CNC and manual machining, multi-process welding and fabrication, and 3D laser scanning/metrology to 0.02mm/m
+Broad in-house capability under one roof: line boring (22mm-1m+), slew milling to 5m, CNC and manual machining, multi-process welding and fabrication, and 3D laser scanning/metrology to 0.02mm/m
 40+ years of precision engineering experience, trusted by Tier 1 miners and equipment OEMs where tolerance requirements and the cost of downtime are comparably severe to defence sustainment work
 Trade-qualified, apprentice-trained workforce with a hands-on, practical problem-solving culture
 
