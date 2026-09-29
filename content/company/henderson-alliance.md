@@ -3,11 +3,11 @@ name: The Henderson Alliance Inc
 date: '2026-06-27'
 overview: The Henderson Alliance is WA’s peak defence industry body, connecting over 500 SMEs and primes to collaboration, procurement pathways and opportunities across Australia.
 website: https://www.hendersonalliance.org.au/
-contact_name: Dee Poole
-contact_title: Executive Officer
+contact_name: sarah tartakowski
+contact_title: Chief Executive Officer
 address: 36 Arden Street, East Perth WA 6004
-phone: 0412689601
-email: admin@hendersonalliance.org.au
+phone: 0422747373
+email: sarah.tartakowski@hendersonalliance.org.au
 company_types:
 - sme
 stakeholders:
