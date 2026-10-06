@@ -3,11 +3,11 @@ name: Defence West
 date: '2025-02-20'
 overview: Defence West is the State Government office responsible for championing the interests of the Western Australian defence industry.
 website: https://www.wa.gov.au/organisation/department-of-the-premier-and-cabinet/defence-west
-contact_name: Greg Blycha
+contact_name: Nick Berry
 contact_title: Director - Defence Industry Development
 address: 2 Havlock Street, Perth WA 6005
 phone: 6552 5037
-email: defencewest@dpc.wa.gov.au
+email: defencewestindustrydevelopment@dpc.wa.gov.au
 company_types:
 - government
 stakeholders:
