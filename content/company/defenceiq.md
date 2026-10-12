@@ -9,9 +9,7 @@ address: 125 Saint Georges Terrace, Perth WA 6000
 phone: 0417445813
 email: dean@defenciq.com.au
 company_types:
-- prime
 - large-enterprise
-- government
 stakeholders:
 - defence
 - defence-west
