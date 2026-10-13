@@ -3,8 +3,8 @@ name: DefencIQ Pty Ltd
 date: '2026-10-06'
 overview: DefencIQ Pty Ltd is an Australian independent cybersecurity and Defence compliance consultancy that helps small and medium-sized enterprises (SMEs) navigate the Australian Defence supply chain
 website: https://defenciq.com.au
-contact_name: https://defenciq.com.au/
-contact_title: Dean Broers
+contact_name: Dean Broers
+contact_title: 
 address: 125 Saint Georges Terrace, Perth WA 6000
 phone: 0417445813
 email: dean@defenciq.com.au
