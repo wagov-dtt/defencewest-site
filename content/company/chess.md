@@ -4,10 +4,10 @@ date: '2025-02-20'
 overview: WA-based engineering and fabrication company delivering ISO-certified steel and modular solutions for defence, mining, and infrastructure projects.
 website: https://chessindustries.com.au
 contact_name: Harley Thomas-Garcia
-contact_title: 'WA Business Development Manager '
+contact_title: 'Business Development Manager and Security Officer '
 address: 100 Dowd St, Welshpool WA 6106
-phone: 0448 748 981
-email: l.kelly@chesseng.com.au
+phone: 63506400
+email: enquiries@chesseng.com.au
 company_types:
 - sme
 capability_domains:
