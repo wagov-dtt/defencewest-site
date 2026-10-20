@@ -28,8 +28,7 @@ industrial_capabilities:
 - design
 regions:
 - perth
-ownerships:
-- [delete section]
+
 capability_streams:
 - intelligence
 - maritime
