@@ -46,4 +46,4 @@ INFIN Robotics is redefining ocean intelligence with a new class of nomadic, per
 Our solar-powered autonomous underwater vehicle (AUV) enables months-long operation, surfacing to recharge and transmit data and diving to sit on the seafloor to wait out any storm.
 ## Discriminators
 
-Australian SME, 100% sovereign onshore IP. Designed and built in Australia. Low-cost systems supporting mass deployment."
+Australian SME, 100% sovereign onshore IP. Designed and built in Australia. Low-cost systems supporting mass deployment.
