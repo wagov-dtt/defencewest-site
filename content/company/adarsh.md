@@ -6,7 +6,7 @@ website: www.adarsh.com.au
 contact_name: Zach Riordan
 contact_title: Communications
 address: 6 Crocker Drive, Malaga WA 6090
-phone: 92093866
+phone: 08 9209 3866
 email: info@adarsh.com.au
 company_types:
 
