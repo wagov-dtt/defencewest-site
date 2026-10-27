@@ -6,7 +6,7 @@ website: http://www.lrygroup.com
 contact_name: Lavin Raja-Yogam
 contact_title: Managing Director
 address: Unit 8,15 Bonner Drive, Malaga WA 6090
-phone: 0450 280 098
+phone: 0450280098
 email: Lavin@LRYGroup.com.au
 company_types:
 - sme
