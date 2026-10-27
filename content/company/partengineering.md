@@ -59,6 +59,6 @@ Recent examples (customer names withheld):
 - Takes on the jobs others turn down, including oversized, thick and unusual parts, and gives practical process feedback to reach the client's end goal.
 - Fast turnaround: most waterjet jobs are quoted within 24 hours.
 - One supplier from drawing or worn sample to finished part: waterjet, CNC machining, wire EDM, fabrication, reverse engineering and drafting.
-- Large format waterjet, 4,064 x 2,032 mm table, steel up to 200 mm, accuracy down to ±0.02 mm where the job calls for it.
+- Large format waterjet, 4,064 x 2,032 mm table, steel up to 200 mm, accuracy down to 0.02 mm where the job calls for it.
 - Perth metropolitan location (Osborne Park).
 - Registered on ICN Gateway. Public liability $10M and workers compensation insurance current.
