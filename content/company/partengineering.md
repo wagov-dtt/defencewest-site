@@ -1,7 +1,7 @@
 ---
 name: Part Engineering
 date: '2026-10-26'
-overview: Osborne Park manufacturer of parts and components: abrasive waterjet cutting of steel up to 200 mm, 5-axis CNC machining, wire EDM and welded fabrication.
+overview: 'Osborne Park manufacturer of parts and components: abrasive waterjet cutting of steel up to 200 mm, 5-axis CNC machining, wire EDM and welded fabrication.'
 website: https://partengineering.com.au
 contact_name: Kasra Parvareshkho
 contact_title: Director
