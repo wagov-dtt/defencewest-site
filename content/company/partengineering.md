@@ -6,7 +6,7 @@ website: https://partengineering.com.au
 contact_name: Kasra Parvareshkho
 contact_title: Director
 address: 52 King Edward Road, Osborne Park WA 6017
-phone: 08 6245 5543
+phone: 62455543
 email: info@partengineering.com.au
 company_types:
 - sme
