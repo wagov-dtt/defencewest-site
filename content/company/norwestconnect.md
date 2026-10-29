@@ -1,7 +1,7 @@
 ---
 name: Norwest Connect Mungalalu North Kimberley Airport
 date: '2026-10-29'
-overview: Norwest Connect brings together three operations that keep Australia's remote north moving: Mungalalu North Kimberley Airport, Norwest Marine Operations, and Troughton Island.
+overview: "Norwest Connect brings together three operations that keep Australia's remote north moving: Mungalalu North Kimberley Airport, Norwest Marine Operations, and Troughton Island."
 website: https://norwestconnect.com.au/airport
 contact_name: Luke Gleeson
 contact_title: Managing Director
