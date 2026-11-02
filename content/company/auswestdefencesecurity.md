@@ -1,5 +1,5 @@
 ---
-name: AusWest Defence Security Pty Ltd
+name: AusWest Defence Security
 date: '2026-10-31'
 overview: Veteran owned advisory helping WA small and medium businesses become trusted Defence suppliers through DISP, personnel security and defence industry advice.
 website: https://www.auswestdefence.com.au
@@ -29,7 +29,7 @@ longitude: 115.876114
 
 ## Overview
 
-AusWest Defence Security Pty Ltd is a Western Australian, veteran owned advisory business established in 2026 to help small and medium enterprises enter and grow within the Defence sector.
+AusWest Defence Security is a Western Australian, veteran owned advisory business established in 2026 to help small and medium enterprises enter and grow within the Defence sector.
 
 The business was founded by an Australian Army veteran and former aircraft technician with more than 25 years' experience across defence, veterans affairs, not for profit and aviation. That experience shapes a practical approach. Many capable WA businesses have exactly what Defence needs but find the security and compliance requirements difficult to navigate.
 
