@@ -5,7 +5,7 @@ overview: Veteran owned advisory helping WA small and medium businesses become t
 website: https://www.auswestdefence.com.au
 contact_name: Kelly Bradley
 contact_title: Director
-address: TBA, Perth  WA 6000
+address: TBA, East Perth  WA 6000
 phone: 0473 637 353
 email: info@auswestdefence.com.au
 company_types:
@@ -22,8 +22,8 @@ ownerships:
 - veteran
 capability_streams:
 - education
-latitude: -31.954663
-longitude: 115.860260
+latitude: -31.957212
+longitude: 115.876114
 ---
 
 
