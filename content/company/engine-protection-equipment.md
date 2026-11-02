@@ -5,7 +5,7 @@ overview: Australian fabricator and supplier of exhaust, hose and filtration for
 website: https://www.epe.net.au
 contact_name: Mason Deetman
 contact_title: Managing Director
-address: 70 Horus Bend , Bibra Lake WA 6163
+address: 70 Horus Bend, Bibra Lake WA 6163
 phone: 0481463201
 email: mason@epe.net.au
 company_types:
@@ -57,8 +57,8 @@ capability_streams:
 - land
 - maritime
 - logistics
-latitude: [replace with latitude]
-longitude: [replace with longitude]
+latitude: -32.097834
+longitude: 115.808378
 ---
 
 
