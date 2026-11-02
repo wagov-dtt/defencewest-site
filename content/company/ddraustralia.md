@@ -9,9 +9,9 @@ address: 1 Whipple Street, Balcatta WA 6021
 phone: 0473 803 482 
 email: info@ddr.com.au
 company_types:
-- government
+
 - large-enterprise
-- prime
+
 - research
 - sme
 - educational
