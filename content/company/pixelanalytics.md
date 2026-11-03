@@ -1,7 +1,7 @@
 ---
 name: Earth Observation Pixel Analytics
 date: '2026-11-02'
-overview: Independent Earth observation and spatial advice: EO data quality, calibration and validation, fitness-for-purpose review and user requirements for government, space and industry.
+overview: "Independent Earth observation and spatial advice: EO data quality, calibration and validation, fitness-for-purpose review and user requirements for government, space and industry."
 website: https://www.pixelanalytics.org/
 contact_name: Jasmine Muir
 contact_title: Principal Consultant and Founder
