@@ -18,8 +18,7 @@ industrial_capabilities:
 - none
 regions:
 - perth
-ownerships:
-- [delete section]
+
 capability_streams:
 - research
 - intelligence
