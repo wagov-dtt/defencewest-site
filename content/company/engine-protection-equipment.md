@@ -64,18 +64,29 @@ longitude: 115.808378
 
 ## Overview
 
-WA family owned and operated business established 50 years. Heavily involved in the mining, marine and commercial transport industries. Situated a 10 minute drive from the AMC at Henderson, we are well placed to support the shipbuilding and repair industries with custom exhausts, tube fabrication, filtration, instrumentation, Vibration Isolation, Thermal insulation and gasket manufacturing.
+Engine Protection Equipment (EPE) is a WA family-owned, veteran co-owned engine systems supplier and fabricator, operating since 1970. From our 4,700 m² site in Bibra Lake, a 10 minute drive from the Australian Marine Complex at Henderson, we supply and manufacture exhaust systems, DNV type approved hydraulic hose assemblies, filtration, instrumentation, vibration isolation, thermal insulation and gaskets. Defence is an established and ongoing part of our business, alongside marine, mining, power generation, oil and gas and transport. We support Defence primes, OEMs and contractors from new equipment production through to sustainment, with delivery Australia wide.
 ## Capabilities
 
-We can supply off the shelf filtration, Instrumentation, Vibration Isolation products to support engines and equipment on any Vessel or piece of machinery/equipment using an internal combustion engine. We can custom manufacture bespoke exhaust systems and also provide thermal insulation. Our workshop can also provide custom tube work in Stainless, Aluminium and mild steel. We have yet to break into the defense industry in a major way, only minor jobs. However, we have provided exhaust and cooling packages for 16 brand new Rolls Royce Bergen engines which run the Solomon mine power station in WA.
+Fabrication: custom exhaust systems, silencers, pipework, tube assemblies, ducting, brackets, guards and frames in stainless steel, mild steel and aluminium. Processes include CAD drawing, reverse engineering, CNC plasma cutting, tube bending, press brake forming, pipe rolling, TIG, MIG and stick welding, and pressure testing.
+
+Hydraulic hose: Parker hydraulic hose assemblies manufactured, pressure tested and recorded in house under DNV type approval (certificate AMT00000WW, DNV CP 0183, valid to April 2029), for marine and naval systems such as steering, winches, cranes and deck machinery.
+
+Supply: air, fuel, oil, hydraulic and crankcase filtration, instrumentation, vibration isolation mounts, removable thermal exhaust blankets, gaskets and hazardous area engine protection, through manufacturer partnerships including Parker, Baldwin, Murphy, WIKA, Woodward and Gates.
+
+Sustainment: repeat supply to controlled drawings, replacement of obsolete or unavailable parts, and repair and refurbishment of suitable components.
+
+Project experience: exhaust and cooling packages for the 15 Bergen engines at the 165 MW Solomon Gas-Fired Power Station in the Pilbara.
+
 ## Discriminators
 
-ISO:9001,45001 & 14001 accredited as of Dec 2024
-JOSCAR Member, AIDN Member, Henderson Alliance Member
-Family owned and operated, established 50 years - Third Generation ownership.
-Suppliers to: Rivtow Marine, Westug, Kotug (Iron ore tugs). Pacific Energy, Mineral Resources, Penske, Cummins, Westrac/EPSA, Paccar (Kenworth Trucks), BHP Iron Ore
-Already supply small items direct to Dept of Defence
-Here for the life of the asset not just the tender
-Close proximity to the Marine Complex
-Custom made solutions
-Modern facility
+•	ISO 9001, ISO 14001 and ISO 45001 certified
+•	DNV type approved hydraulic hose assemblies (certificate AMT00000WW, valid to April 2029)
+•	Supplying multi-year Australian Defence programs
+•	Veteran co-owned, family owned and operated since 1970, third generation
+•	JOSCAR, AIDN and Henderson Alliance member
+•	Uplifting to Defence Industry Security Program (DISP) requirements
+•	10 minutes from the Australian Marine Complex, Henderson
+•	In house fabrication and pressure testing at our 4,700 m² Bibra Lake site
+•	Suppliers to: Rivtow Marine, Westug, Kotug, Pacific Energy, Mineral Resources, Penske, Cummins, Westrac/EPSA, Paccar (Kenworth), BHP Iron Ore
+•	Here for the life of the asset, not just the tender
+
