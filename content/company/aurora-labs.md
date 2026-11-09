@@ -6,7 +6,7 @@ website: https://www.auroralabs3d.com
 contact_name: Henry Kidawalime
 contact_title: Marketing Coordinator
 address: 41-43 Wittenberg Drive, Canning Vale WA 6155
-phone: +61 452 568 341
+phone: 0452 568 341
 email: henry.kidawalime@auroralabs3d.com
 company_types:
 - sme
