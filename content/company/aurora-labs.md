@@ -33,7 +33,7 @@ longitude: 115.924180
 
 ## Overview
 
-Aurora Labs Ltd (ASX: A3D) is a Perth-based advanced manufacturing company founded in 2014 and listed on the ASX in 2016. Built on a decade of metal additive manufacturing (AM) expertise, the company has focused that capability on defence and aerospace, specialising in sovereign propulsion for uncrewed and attritable platforms.
+Aurora Labs Ltd "(ASX: A3D)" is a Perth-based advanced manufacturing company founded in 2014 and listed on the ASX in 2016. Built on a decade of metal additive manufacturing (AM) expertise, the company has focused that capability on defence and aerospace, specialising in sovereign propulsion for uncrewed and attritable platforms.
 
 In 2024 Aurora Labs designed, built and test-fired a 200N-class micro gas turbine (MGT) with 3D-printed metal components, followed by a successful maiden flight. That year it was also contracted by Defence to advance additively manufactured propulsion technology and signed an MoU with Australian UAS developer Innovaero. In 2025 it completed the design, build and test of the AU4, a 40 kg-thrust MGT whose printed casing integrates the exhaust nozzle, engine mounts and gas seal, removing 23 parts compared with a conventionally made engine.
 
@@ -51,12 +51,12 @@ Rapid design-to-test: in-house design, printing, post-processing and engine test
 Scalable sovereign production: Defence Industry Development Grant funding is expanding our Perth facility with additional metal printing, multi-axis CNC machining and thermal control systems, increasing our capacity to deliver propulsion systems at volume.
 ## Discriminators
 
-- Sovereign Australian propulsion: engines designed, manufactured, assembled and tested in Perth, WA, with Australian IP
-- Additively manufactured MGTs: printed casings consolidate parts (23 fewer on the AU4), reducing weight, cost and lead time
-- Proven delivery: first production AU4 systems delivered to Sovereign Propulsion Systems
-- Quality: AS9100D aerospace quality management certification
-- Multi-fuel capability: turbines compatible with liquid fuels and natural gas, suited to varied operating environments
-- Rapid iteration: concept to test fire in months, backed by in-house design, AM and test facilities
-- Key partners and customers: Department of Defence (repeat purchase orders), MBDA (three-year teaming agreement), Sovereign Propulsion Systems, QinetiQ, Innovaero
-- Government backing: Defence Industry Development Grant recipient
+- Sovereign Australian propulsion":" engines designed, manufactured, assembled and tested in Perth, WA, with Australian IP
+- Additively manufactured MGTs":" printed casings consolidate parts (23 fewer on the AU4), reducing weight, cost and lead time
+- Proven delivery":" first production AU4 systems delivered to Sovereign Propulsion Systems
+- Quality":" AS9100D aerospace quality management certification
+- Multi-fuel capability":" turbines compatible with liquid fuels and natural gas, suited to varied operating environments
+- Rapid iteration":" concept to test fire in months, backed by in-house design, AM and test facilities
+- Key partners and customers":" Department of Defence (repeat purchase orders), MBDA (three-year teaming agreement), Sovereign Propulsion Systems, QinetiQ, Innovaero
+- Government backing":" Defence Industry Development Grant recipient
 - ASX-listed (A3D), with public reporting and governance
