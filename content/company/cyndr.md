@@ -2,7 +2,7 @@
 name: Cyndr
 date: '2026-11-05'
 overview: Cyndr helps defence and national security organisations discover emerging technologies, evaluate capability options and monitor developments through capability intelligence.
-website: cyndr.ai
+website: www.cyndr.au
 contact_name: Tom Marchant
 contact_title: Co-Founder
 address: 202/37 Barrack St, Perth WA 6000
@@ -34,8 +34,8 @@ capability_streams:
 - intelligence
 - aerial
 - logistics
-latitude: -31.954963
-longitude: 115.859823
+latitude: -31.954954
+longitude: 115.859802
 ---
 
 
