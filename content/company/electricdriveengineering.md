@@ -53,7 +53,6 @@ regions:
 - south
 - south-west
 - wheatbelt
-
 capability_streams:
 - land
 - electronic
@@ -69,7 +68,7 @@ longitude: 115.926027
 ## Overview
 
 Electrification Engineering for Mobile Machines & Industrial Applications
-Manufacturers come to us when they need electrification that works first time, integrates cleanly with existing systems, and can be supported long‑term. We design, supply and support complete battery-electric drive systems built around proven motor controllers, batteries and integration expertise.
+Manufacturers come to us when they need electrification that works first time, integrates cleanly with existing systems, and can be supported longterm. We design, supply and support complete battery-electric drive systems built around proven motor controllers, batteries and integration expertise.
 ## Capabilities
 
 From drive system design through to on-site commissioning, we help you build electric machinery that is reliable, repeatable and commercially viable.
